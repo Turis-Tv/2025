@@ -1,0 +1,301 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="NOW ",NOW
+http://stream.tvcdn.net/ulusal/now-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="SHOW TV",SHOW TV
+http://stream.tvcdn.net/ulusal/show-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="BEYAZ TV",BEYAZ TV
+http://stream.tvcdn.net/ulusal/beyaz-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="KANAL 7",KANAL 7
+http://stream.tvcdn.net/ulusal/kanal-7.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TV8",TV8 
+http://hw1.jemtv.com/app/tv8/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="STAR TV",STAR TV 
+http://stream.tvcdn.net/ulusal/star-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="360",360 
+http://stream.tvcdn.net/ulusal/360-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TV 100",TV 100 
+http://stream.tvcdn.net/ulusal/tv-100.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT TÛRK",TRT TÛRK
+http://stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="EURO D",EURO D
+http://stream.tvcdn.net/ulusal-yurt-disi/euro-d.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TGRT EU",TGRT EU
+http://stream.tvcdn.net/ulusal-yurt-disi/tgrt-eu.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="SHOW TÛRK",SHOW TÛRK
+http://stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="KANA 7 EU",KANA 7 EU
+https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 2",TRT 2
+http://stream.tvcdn.net/eglence/trt-2.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TEVE2",TEVE2
+http://stream.tvcdn.net/eglence/teve2.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="A2",A2
+http://stream.tvcdn.net/eglence/a2.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT HABER",TRT HABER
+http://stream.tvcdn.net/haber/trt-haber.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="A HABER",A HABER 
+http://stream.tvcdn.net/haber/a-haber.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="CNN ",CNN  
+http://stream.tvcdn.net/haber/cnn-turk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TGRT HABER ",TGRT HABER  
+https://tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="HABER TÛRK",HABER TÛRK
+http://stream.tvcdn.net/haber/haberturk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="HABER GL",HABER GL
+http://stream.tvcdn.net/haber/haber-global.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="ULKE TV",ULKE TV
+http://stream.tvcdn.net/haber/ulke-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="HALK TV",HALK TV
+http://stream.tvcdn.net/haber/halk-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="NTV ",NTV  
+https://tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="24 TV",24 TV
+http://stream.tvcdn.net/haber/24-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="AKIT TV",AKIT TV
+http://stream.tvcdn.net/haber/akit-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TELE 1",TELE 1
+http://stream.tvcdn.net/haber/tele-1.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="SÔZCÛ",SÔZCÛ 
+https://trn03.tulix.tv/gt-sozcutv/index.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TVNET",TVNET 
+http://stream.tvcdn.net/haber/tvnet.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="FLASH TV",FLASH TV
+https://tgn.bozztv.com/dvrfl05/gin-flashtv/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="ULUSAL",ULUSAL
+https://yayin2.canlitv.fun/livetv/ulusalkanal.stream/master.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="BENGU",BENGU 
+http://stream.tvcdn.net/haber/benguturk-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="YOL TV",YOL TV 
+https://trn03.tulix.tv/gt-yoltv/index.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TBMM",TBMM 
+http://stream.tvcdn.net/haber/tbmm-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DHA ",DHA 
+http://stream.tvcdn.net/haber/dha-canli-1.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DHA 1",DHA 1
+http://stream.tvcdn.net/haber/dha-canli-2.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="BLOOMBERG",BLOOMBERG
+http://stream.tvcdn.net/ekonomi/bloomberg-ht.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="EKOTÛRK",EKOTÛRK 
+http://stream.tvcdn.net/ekonomi/ekoturk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="EXPO VIZYON",EXPO VIZYON 
+http://stream.tvcdn.net/ekonomi/expo-vizyon.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DMAX",DMAX
+http://stream.tvcdn.net/eglence/dmax.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="SAGLIK TV",SAGLIK TV
+http://stream.tvcdn.net/eglence/saglikli-gunler-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TARIH TV",TARIH TV 
+http://stream.tvcdn.net/eglence/tarih-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="BELGESEL",BELGESEL 
+http://stream.tvcdn.net/eglence/belgesel-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TLC",TLC
+http://stream.tvcdn.net/eglence/tlc.m3u8
+
+
+
+
+
+
+#EXTINF:-1 tvg-logo="  " group-title="TV 4",TV 4 
+http://stream.tvcdn.net/eglence/tv-4.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DIZI FILM",DIZI FILM 
+http://stream.tvcdn.net/eglence/dizi-film-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="SANAT TV",SANAT TV 
+http://stream.tvcdn.net/eglence/kultur-sanat-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT YILDIZ",TRT YILDIZ
+http://stream.tvcdn.net/spor/trt-spor-yildiz.m3u8
+
+
+
+
+
+
+
+
+
+
+
+#EXTINF:-1 tvg-logo="  " group-title="A SPOR",A SPOR
+http://stream.tvcdn.net/spor/a-spor.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TV SPOR",TV SPOR 
+http://stream.tvcdn.net/spor/sports-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="BEIN SPOR",BEIN SPOR 
+http://stream.tvcdn.net/spor/bein-sports-haber.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TIVUBU",TIVUBU
+http://stream.tvcdn.net/spor/tivibu-spor.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="FB ",FB  
+http://stream.tvcdn.net/spor/fb-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TAY",TAY 
+http://stream.tvcdn.net/spor/tay-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="FIT YASA",FIT YASA 
+http://stream.tvcdn.net/spor/fit-yasa-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="ZIRAAT TR",ZIRAAT TR 
+http://stream.tvcdn.net/spor/ziraat-turkiye-kupasi-tv.m3u8
+
+
+
+
+
+
+
+
+
+
+
+
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT MUZIK",TRT MUZIK
+http://stream.tvcdn.net/muzik/trt-muzik.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER T",POWER T 
+http://stream.tvcdn.net/muzik/powerturk-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DREAM TÛRK",DREAM TÛRK 
+http://stream.tvcdn.net/muzik/dream-turk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER",POWER
+http://stream.tvcdn.net/muzik/power-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="KRAL POP",KRAL POP 
+http://stream.tvcdn.net/muzik/kral-pop-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="NR 1",NR 1
+http://stream.tvcdn.net/muzik/number-one-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="NR1 T",NR1 T 
+http://stream.tvcdn.net/muzik/number-one-turk.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="MILYON",MILYON 
+http://stream.tvcdn.net/muzik/milyon-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TATLISES",TATLISES
+http://stream.tvcdn.net/muzik/tatlises-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TBM",TBM 
+http://stream.tvcdn.net/muzik/tmb.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER D",POWER D 
+http://stream.tvcdn.net/muzik/power-dance.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER L",POWER L 
+http://stream.tvcdn.net/muzik/power-love.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER A",POWER A 
+http://stream.tvcdn.net/muzik/powerturk-akustik.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="POWER S",POWER S 
+http://stream.tvcdn.net/muzik/powerturk-slow.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TAPTAZE",TAPTAZE 
+http://stream.tvcdn.net/muzik/powerturk-taptaze.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="AKUSTIK",AKUSTIK 
+http://stream.tvcdn.net/muzik/number-1-ask.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="DAMAR",DAMAR 
+http://stream.tvcdn.net/muzik/number-1-damar.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="CHIL ",CHIL 
+http://stream.tvcdn.net/muzik/chill-tv.m3u8
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+
+#EXTINF:-1 tvg-logo="  " group-title="TRT 1",TRT 1 
+

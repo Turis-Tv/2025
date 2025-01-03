@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+  position: fixed;
+  top: max(40px, 4vh);
+  left: 50%;
+  transform: translateX(-50%) perspective(500px) rotateX(10deg);
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(16px, 3vw, 32px);
+  color: #ff00ff;
+  text-align: center;
+  will-change: filter, transform;
+  animation: title-animation 4s infinite linear;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+@keyframes title-animation {
+  0% {
+    filter: hue-rotate(0deg) brightness(1) drop-shadow(3px 0 0 #00ffff)
+      drop-shadow(-3px 0 0 #ff00ff) drop-shadow(0 3px 0 #00ffff);
+    transform: translateX(-50%) translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    filter: hue-rotate(180deg) brightness(1.5) drop-shadow(3px 0 0 #00ffff)
+      drop-shadow(-3px 0 0 #ff00ff) drop-shadow(0 3px 0 #00ffff);
+    transform: translateX(-50%) translate3d(0, 0, 0) scale(1.1);
+  }
+  100% {
+    filter: hue-rotate(360deg) brightness(1) drop-shadow(3px 0 0 #00ffff)
+      drop-shadow(-3px 0 0 #ff00ff) drop-shadow(0 3px 0 #00ffff);
+    transform: translateX(-50%) translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -20px, 0);
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 2px 0 #b700b7)
+      drop-shadow(0 4px 0 #8a008a);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    filter: drop-shadow(0 0 20px #ff00ff) drop-shadow(0 0 30px #ff00ff)
+      drop-shadow(0 2px 0 #b700b7) drop-shadow(0 4px 0 #8a008a);
+    transform: translate3d(0, 0, 0) scale(1.1);
+  }
+}
+
+@keyframes chromatic-aberration {
+  0%,
+  100% {
+    filter: drop-shadow(2px 0 0 #ff0000) drop-shadow(-2px 0 0 #00ff00)
+      drop-shadow(0 2px 0 #0000ff);
+  }
+  50% {
+    filter: drop-shadow(-2px 0 0 #ff0000) drop-shadow(2px 0 0 #00ff00)
+      drop-shadow(0 -2px 0 #0000ff);
+  }
+}
+
+.button-3d {
+  position: fixed;
+  bottom: max(20px, 2vh);
+  left: max(20px, 2vw);
+  padding: clamp(10px, 2vw, 30px) clamp(20px, 4vw, 60px);
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  border: none;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(12px, 1.5vw, 16px);
+  text-decoration: none;
+  will-change: transform;
+  transform: perspective(500px) rotateX(10deg);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 4px 0 #b700b7, 0 8px 0 #8a008a,
+    0 12px 20px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+
+.button-3d:hover {
+  transform: perspective(500px) rotateX(0deg) scale(1.1) translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 8px 0 #b700b7, 0 12px 0 #8a008a,
+    0 16px 25px rgba(0, 0, 0, 0.4);
+}
+.button-3d:active {
+  transform: perspective(500px) rotateX(0deg) scale(1.05) translateY(2px);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.8), 0 2px 0 #b700b7, 0 4px 0 #8a008a,
+    0 8px 15px rgba(0, 0, 0, 0.4);
+}
+.credits {
+  position: fixed;
+  bottom: max(20px, 2vh);
+  right: max(20px, 2vw);
+  color: #ff00ff;
+  font-family: "Press Start 2P", cursive;
+  font-size: clamp(12px, 1.5vw, 16px);
+  will-change: filter, transform;
+  animation: glow 2s infinite alternate;
+  transform: perspective(500px) rotateX(10deg);
+  transform-style: preserve-3d;
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  touch-action: none;
+}
