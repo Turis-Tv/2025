@@ -1,0 +1,61 @@
+.loading-bar {
+  background-color: #e2e2e2;
+  height: 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  .indicator {
+    width: 0%;
+    height: 16px;
+    background-color: black;
+    background: linear-gradient(45deg, black, #f16d3a);
+    animation: app-loading-bar 9s linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.splash-logo {
+  padding: 0 30px;
+  img {
+    max-width: 420px;
+    width: 100%;
+  }
+}
+
+.app-loading {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: Black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes app-loading-bar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
