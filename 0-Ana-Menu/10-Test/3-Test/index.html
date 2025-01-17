@@ -21,7 +21,7 @@ body, html {
   cursor: pointer;;
   font-size: 15px;
   margin-bottom:10px;
-  width: 180px;
+  width: 100px;
   transition: 0.4s;
   border-radius: 15px;
 }
@@ -65,7 +65,7 @@ div.scrollmenu {
 div.scrollmenu a {
   display: inline-block;
   text-align: center;
-  padding: 14px;
+  padding: 10px;
 }
 
 .title{
@@ -128,27 +128,27 @@ div.scrollmenu a {
 
  
   <div class="scrollmenu" style="margin-top:20px">
-  <a class="tablink" onclick="openPage('beIN SPORTS HD', this, 'black', 'white')" id="defaultOpen">beIN SPORTS</a>
-    <a class="tablink" onclick="openPage('AD SPORTS', this, 'black', 'white')">beIN entertainment</a>
-    <a class="tablink" onclick="openPage('EGYPT SPORT TV', this, 'black', 'white')">ARABIC SPORT TV</a>
-    <a class="tablink" onclick="openPage('ARABIC SPORT TV', this, 'black', 'white')">SPORT TV</a>
-    <a class="tablink" onclick="openPage('OSN', this, 'black', 'white')">OSN</a>
-  <a class="tablink" onclick="openPage('ARABIC', this, 'black', 'white')">ARABIC</a>
-  <a class="tablink" onclick="openPage('ITALY', this, 'black', 'white')">ITALY</a>
-  <a class="tablink" onclick="openPage('UK', this, 'black', 'white')">UK</a> 
-   <a class="tablink" onclick="openPage('USA', this, 'black', 'white')">USA</a>
+  <a class="tablink" onclick="openPage('Ulusal', this, 'black', 'white')" id="defaultOpen">Ulusal</a>
+    <a class="tablink" onclick="openPage('Haber', this, 'black', 'white')">Haber</a>
+    <a class="tablink" onclick="openPage('Belgesel', this, 'black', 'white')">Belgesel</a>
+    <a class="tablink" onclick="openPage('Muzik', this, 'black', 'white')">Muzik</a>
+    <a class="tablink" onclick="openPage('Spor', this, 'black', 'white')">Spor</a>
+  <a class="tablink" onclick="openPage('Dini', this, 'black', 'white')">Dini</a>
+  <a class="tablink" onclick="openPage('Çocuk', this, 'black', 'white')">Çocuk</a>
+  <a class="tablink" onclick="openPage('Film', this, 'black', 'white')">Film</a> 
+   <a class="tablink" onclick="openPage('Yerel', this, 'black', 'white')">Yerel</a>
    <a class="tablink" onclick="openPage('KIDS', this, 'black', 'white')">KIDS</a>
     <a class="tablink" onclick="openPage('TURKEY', this, 'black', 'white')">TURKEY</a>
 	<!--
 		1° package name:
-		غير اسم الباكدج
+		Paketin adını değiştirin
 		<a class="tablink" onclick="openPage('EXAMPLE', this, 'black')">EXAMPLE</a>
 	-->
   </div>
 
-  <div id="beIN SPORTS HD" class="tabcontent text-center">
+  <div id="Ulusal" class="tabcontent text-center">
   
-  <input  autocomplete="off" type="text" id="mySearch" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <input  autocomplete="off" type="text" id="mySearch" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="beIN SPORTS HD" class="padding text-center myMenu">
   
    
@@ -352,8 +352,8 @@ div.scrollmenu a {
 
 
   
-  <div id="AD SPORTS" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch4" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Haber" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch4" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="AD SPORTS" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=BeinMovies1")>
@@ -377,8 +377,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="EGYPT SPORT TV" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch5" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Belgesel" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch5" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="EGYPT SPORT TV" class="padding text-center myMenu">
     
      <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=zamalek")>
@@ -438,8 +438,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="ARABIC SPORT TV" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch6" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Muzik" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch6" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="ARABIC SPORT TV" class="padding text-center myMenu">  
   <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=wwe")>
       <a class=" tablink-text-movies"  id="defaultOpen">WWE</a>
@@ -590,8 +590,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="OSN" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch7" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Spor" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch7" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="OSN" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("www.msftv.ga/MSFtv.m3u8?ch=osnyahala")>
@@ -626,8 +626,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="ARABIC" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch8" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Dini" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch8" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="ARABIC" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("www.msftv.ga/MSFtv.m3u8?ch=mbc1")>
@@ -656,8 +656,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="ITALY" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch9" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Çocuk" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch9" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="ITALY" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("www.msftv.ga/MSFtv.m3u8?ch=skcl1")>
@@ -691,8 +691,8 @@ div.scrollmenu a {
   </ul>
   </div>
   
-  <div id="UK" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch10" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  <div id="Film" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch10" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="UK" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=skysportme")>
@@ -737,8 +737,8 @@ div.scrollmenu a {
     </li>
     
   </ul>
-  </div>  <div id="USA" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch11" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+  </div>  <div id="Yerel" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch11" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="USA" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=nbcsn")>
@@ -755,7 +755,7 @@ div.scrollmenu a {
    </div> 
 
    <div id="KIDS" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="KIDS" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=nbcsn")>
@@ -771,7 +771,7 @@ div.scrollmenu a {
   </div>
   
   <div id="TURKEY" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch2" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+    <input  autocomplete="off" type="text" id="mySearch2" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="TURKEY" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("http://stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8")>
@@ -818,9 +818,9 @@ div.scrollmenu a {
   
 <!--
 	2° channel:
-	id="mySearch12"غير اسم القنوات واللينكات و
+	id="mySearch12"Kanalların ve bağlantıların adını değiştirme
 	<div id="KIDS" class=" tabcontent text-center">
-    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Search" title="Type in a category" class="text-center mySearch">
+    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
   <ul id="KIDS" class="padding text-center myMenu">
     
     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=nbcsn")>
@@ -837,8 +837,8 @@ div.scrollmenu a {
 -->
 
 <script>
-//3°: input filter ul li هتضيف 
-//ضيفهم باسامى غير اللى مستعلينها قبل كدا
+//3°: input filter ul li ekleyeceksin
+//Daha önce kullandığınızın dışında bir ad ekleyin
 var input, input2, input3, input4, input5, input6, input7, input8, input9, input10, input11, input12;
 var filter, filter2, filter3, filter4, filter5, filter6, filter7, filter8, filter9, filter10, filter11, filter12;
 var ul, al, bl, cl, dl, el, fl, gl, il, jl, tl, kl; 
@@ -857,7 +857,7 @@ function search() {
   input11 = document.getElementById("mySearch11");
   input12 = document.getElementById("mySearch12");
   
-  // 4°: input12 = document.getElementById("mySearch12"); هتضيف الانبوت الجديد اللى عملته باسم السيرش الجديد
+  // 4°: input12 = document.getElementById("mySearch12"); Yeni aramanın adı ile oluşturduğunuz yeni robotu ekleyeceksiniz.
   
   filter = input.value.toUpperCase();
   filter2 = input2.value.toUpperCase();
