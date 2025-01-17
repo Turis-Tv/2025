@@ -79,22 +79,22 @@
 </head>
 <body>
     <div class="sidebar">
-        <h2>القنوات</h2>
+        <h2>Kanallar</h2>
         <ul id="channel-list">
-            <!-- سيتم تحميل القنوات هنا -->
+            <!-- Kanallar buraya yüklenecek ->
         </ul>
     </div>
     <div class="content">
         <video id="player" controls>
-            <!-- سيتم تشغيل الفيديو هنا -->
+            <!-- Video burada oynatılacak -->
         </video>
     </div>
 
     <script>
-        // المسار إلى ملف m3u
+        // Dosyanın yolu m3u
         const m3uUrl = 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/iq.m3u';
 
-        // جلب ملف m3u وتحليل البيانات
+        // M3u dosyasını getir ve verileri analiz et
         fetch(m3uUrl)
             .then(response => response.text())
             .then(data => {
@@ -102,7 +102,7 @@
                 displayChannels(channels);
             });
 
-        // تحليل محتوى ملف m3u
+        // M3u dosya içeriğini analiz edin
         function parseM3U(data) {
             const lines = data.split('\n');
             const channels = [];
@@ -124,7 +124,7 @@
             return channels;
         }
 
-        // عرض قائمة القنوات
+        // Kanal listesini görüntüle
         function displayChannels(channels) {
             const channelList = document.getElementById('channel-list');
 
@@ -142,7 +142,7 @@
             });
         }
 
-        // تشغيل القناة المختارة
+        // Seçilen kanalı oynat
         function playChannel(url) {
             const player = document.getElementById('player');
             player.src = url;
