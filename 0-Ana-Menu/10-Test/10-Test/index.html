@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Player</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: #fff;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #202020;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: #ff0000;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #333;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #444;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-width: 1000px;
+            border: 2px solid #444;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>القنوات</h2>
+        <ul id="channel-list">
+            <!-- سيتم تحميل القنوات هنا -->
+        </ul>
+    </div>
+    <div class="content">
+        <video id="player" controls>
+            <!-- سيتم تشغيل الفيديو هنا -->
+        </video>
+    </div>
+
+    <script>
+        // المسار إلى ملف m3u
+        const m3uUrl = 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/iq.m3u';
+
+        // جلب ملف m3u وتحليل البيانات
+        fetch(m3uUrl)
+            .then(response => response.text())
+            .then(data => {
+                const channels = parseM3U(data);
+                displayChannels(channels);
+            });
+
+        // تحليل محتوى ملف m3u
+        function parseM3U(data) {
+            const lines = data.split('\n');
+            const channels = [];
+
+            let currentChannel = {};
+
+            lines.forEach(line => {
+                line = line.trim();
+                if (line.startsWith('#EXTINF:')) {
+                    const info = line.split(',');
+                    currentChannel.name = info[1];
+                } else if (line && !line.startsWith('#')) {
+                    currentChannel.url = line;
+                    channels.push(currentChannel);
+                    currentChannel = {};
+                }
+            });
+
+            return channels;
+        }
+
+        // عرض قائمة القنوات
+        function displayChannels(channels) {
+            const channelList = document.getElementById('channel-list');
+
+            channels.forEach(channel => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = '#';
+                a.textContent = channel.name;
+                a.addEventListener('click', () => {
+                    playChannel(channel.url);
+                });
+
+                li.appendChild(a);
+                channelList.appendChild(li);
+            });
+        }
+
+        // تشغيل القناة المختارة
+        function playChannel(url) {
+            const player = document.getElementById('player');
+            player.src = url;
+            player.play();
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

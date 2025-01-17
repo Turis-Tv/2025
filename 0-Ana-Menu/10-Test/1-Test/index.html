@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>html m3u playlist player</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Playlist Player</title>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 topbar">
+                <form onsubmit="return loadCustomPlaylist();" class="form-container">
+                    <h5>Insira o URL da playlist M3U:</h5>
+                    <div class="form-group mb-0">
+                        <input type="text" id="playlistUrl" class="form-control form-input" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Carregar</button>
+                    <button onclick="loadExamplePlaylist()" class="btn btn-secondary">Carregar playlist gratuita de exemplo</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2 sidebar" id="channelList">
+                <h5>Canais:</h5>
+                <ul id="channelListItems"></ul>
+            </div>
+            <div class="col-lg-10 player-container" id="playerContainer">
+                <!-- O player Clappr será inserido aqui -->
+                <video controls playsinline></video>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

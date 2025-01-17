@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Farnsisco</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbol maçlarını izlemek için başvuru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dil değiştirme düğmesi -->
+    <button class="language-switch" id="language-switch">Turkce</button>
+
+    <!-- Karşılama penceresi -->
+    <div class="popup">
+        <h1>Futbol maçlarını izlemek için uygulamaya hoş geldiniz</h1>
+    </div>
+
+    <!-- Aktivasyon ekranı-->
+    <div class="activation-screen">
+        <h1>Aktivasyon kodunu girin</h1>
+        <input type="text" id="activation-code" placeholder="Aktivasyon kodunu girin">
+        <button id="activate-button">giriş</button>
+        <p id="error-message" style="display: none;">Etkinleştirme kodu geçersiz. Tekrar deneyin.</p>
+    </div>
+
+    <!-- Ev -->
+    <div class="container">
+        <h1>Futbol maçlarını izle</h1>
+
+        <!-- Kanal listesi -->
+        <h2>Kanallar</h2>
+        <div class="channels">
+            <div class="channel" id="max1">Bein Sport Max 1</div>
+            <div class="channel" id="max2">Bein Sport Max 2</div>
+            <div class="channel" id="max1">Bein Sport Max 3</div>
+            <div class="channel" id="max2">Bein Sport Max 4</div>
+        </div>
+
+        <!-- Video kontrolleri-->
+        <div class="controls">
+            <button id="zoom-in">Yakınlaştır</button>
+            <button id="zoom-out">Küçült</button>
+            <button id="fullscreen">Tam ekran</button>
+        </div>
+
+        <!-- Video oynatıcı-->
+        <div id="video-player" class="video-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

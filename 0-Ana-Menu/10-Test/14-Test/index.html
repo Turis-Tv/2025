@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Ruddy Feliz</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html><head><base href="https://eilik-tv-max.com/" ></base><title></title><style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .tv-container {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+  }
+  .logo {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  }
+  .logo span:first-child {
+    color: white;
+  }
+  .logo span:last-child {
+    color: #FF69B4;
+  }
+  .screen {
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  #video-player {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .channel-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF69B4;
+
+  }
+  .channel-menu {
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+  .country-selector {
+    margin-bottom: 20px;
+  }
+  .country-selector select {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF69B4;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .country-selector select:hover {
+    background-color: #FF1493;
+  }
+  .country-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FF69B4;
+  }
+  .channel-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+  }
+  .channel-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  .channel-list li:hover {
+    background-color: #3a3a3a;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head><body>
+  <div class="main-content">
+    <div class="tv-container">
+ 
+      <div class="screen">
+        <video id="video-player" controls></video>
+      </div>
+      <div class="controls">
+        <div class="channel-name" id="current-channel">Hiçbir kanal seçilmedi</div>
+
+            <path d="M1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11zm20-7H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="channel-menu">
+      <div class="country-selector">
+        <select id="country-select" onchange="loadChannels()">
+          <option value="Ulusal">Ulusal</option>
+          <option value="Haber">Haber</option>
+          <option value="Belgesel">Belgesel</option>
+        </select>
+      </div>
+      <ul id="channel-list" class="channel-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    const channels = {
+      Ulusal: [
+
+
+
+        {name: "ATV | a", url: "https://tgn.bozztv.com/trn03/gt-atv-tv/tracks-v1a1/mono.m3u8"},
+        {name: "ATV | b", url: "http://116.202.238.88/ATV_TR/index.m3u8"},
+        {name: "ATV | c", url: "http://50.7.144.122:1935/livetv/atv.stream/sec-f5-v1-a1.m3u8"},
+        {name: "ATV | d", url: "https://yayin2.canlitv.fun/livetv/atv.stream/master.m3u8"},
+        {name: "ATV | e", url: "https://c.fulltvizle.com/aytv/index.m3u8"},
+        {name: "ATV | f", url: "https://c.fulltvizle.com/aytv/index.m3u8"},
+        {name: "ATV | g", url: "https://yayin2.canlitv.fun/livetv/atv.stream/master.m3u8"},
+        {name: "ATV | h", url: "http://50.7.144.122:1935/livetv/atv.stream/sec-f5-v1-a1.m3u8"},
+        {name: "ATV | i", url: "http://116.202.238.88/ATV_TR/index.m3u8"},
+        {name: "ATV | j", url: "https://tgn.bozztv.com/trn03/gt-atv-tv/tracks-v1a1/mono.m3u8"},
+        {name: "Atv eu", url: "https://tgn.bozztv.com/dvrfl05/gin-atvavrupa/tracks-v1a1/mono.m3u8"},
+        {name: "Atv eu | a", url: "https://trn03.tulix.tv/gt-atvavrupa/index.m3u8"},
+
+
+        {name: "Kanal D", url: "https://trn03.tulix.tv/gt-kanald/index.m3u8"},
+        {name: "Kanal D | a", url: "http://116.202.238.88/KANALD_TR/index.m3u8"},
+        {name: "Kanal D | b", url: "http://50.7.144.122:1935/livetv/kanald.stream/sec-f5-v1-a1.m3u8"},
+        {name: "Kanal D | c", url: "https://yayin2.canlitv.fun/livetv/kanald.stream/master.m3u8"},
+        {name: "Kanal D | d", url: "https://c.fulltvizle.com/kanald/index.m3u8"},
+        {name: "Kanal D | e", url: "https://helga.iptv2022.com/kanal_d/index.m3u8"},
+        {name: "Kanal D | f", url: "https://live.duhnet.tv/S2/HLS_LIVE/kanalddainp/playlist.m3u8"},
+        {name: "Euro D", url: "https://tgn.bozztv.com/dvrfl05/gin-eurod/tracks-v1a1/mono.m3u8"},
+        {name: "Euro D | a", url: "https://live.duhnet.tv/S2/HLS_LIVE/eurodnp/playlist.m3u8"},
+
+        {name: "Show Tv", url: "https://trn03.tulix.tv/gt-show-tv/index.m3u8"},
+        {name: "Show Tv | a", url: "https://tgn.bozztv.com/trn03/gt-show-tv/tracks-v1a1/mono.m3u8"},
+        {name: "Show Tv | b", url: "http://116.202.238.88/SHOWTV_TR/index.m3u8"},
+        {name: "Show Tv | c", url: "http://50.7.144.122:1935/livetv/showtv.stream/sec-f5-v1-a1.m3u8"},
+        {name: "Show Tv | d", url: "https://yayin2.canlitv.fun/livetv/showtv.stream/master.m3u8"},
+        {name: "Show Tv | e", url: "https://c.fulltvizle.com/show/index.m3u8"},
+        {name: "Show Tv | f", url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8"},
+        {name: "Show Tv | g", url: "http://66.160.192.241/showtv/index.m3u8"},
+        {name: "Show Türk", url: "https://tgn.bozztv.com/dvrfl05/gin-showtvturk/tracks-v1a1/mono.m3u8"},
+        {name: "Show Türk | a", url: "https://helga.iptv2022.com/show_turk/index.m3u8"},
+
+        {name: "Show Max", url: "https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/tur/shmax.m3u8"},
+
+        {name: "Star", url: "https://trn03.tulix.tv/gt-startv/index.m3u8"},
+        {name: "Star | a", url: "http://116.202.238.88/STARTV_TR/index.m3u8"},
+        {name: "Star | b", url: "http://50.7.144.122:1935/livetv/startv.stream/sec-f5-v1-a1.m3u8"},
+        {name: "Star | c", url: "https://yayin2.canlitv.fun/livetv/startv.stream/master.m3u8"},
+        {name: "Star | d", url: "https://c.fulltvizle.com/star/index.m3u8"},
+        {name: "Star | e", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8"},
+        {name: "Star | f", url: "http://tna6.tulix.tv/live/83a4128e87fca734c959aa37b03c8a4d/6737a153/ovair1-starttv.m3u8"},
+        {name: "Star | g", url: "https://live-fi.tvkaista.net/star-channel/live.m3u8"},
+        {name: "Star | h", url: "http://66.160.192.241/startvturk/index.m3u8"},
+        {name: "Euro Star", url: "https://tgn.bozztv.com/trn03/gt-eurostar/tracks-v1a1/mono.m3u8"},
+
+        {name: "Beyaztv", url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8"},
+        {name: "Beyaztv | a", url: "https://helga.iptv2022.com/beyaz_tv/index.m3u8"},
+        {name: "Beyaztv | b", url: "https://yayin2.canlitv.fun/livetv/beyaztv.stream/master.m3u8"},
+        {name: "Beyaztv | b", url: "http://50.7.144.122:1935/livetv/beyaztv.stream/sec-f5-v1-a1.m3u8"},
+        {name: "Beyaztv | c", url: "http://116.202.238.88/BEYAZTV_TR/index.m3u8"},
+        {name: "Beyaztv | d", url: "https://tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8"},
+        {name: "Beyaztv | e", url: "https://trn03.tulix.tv/gt-beyaztv/index.m3u8"},
+
+        {name: "Kanal7", url: "https://trn03.tulix.tv/gt-kanal7/index.m3u8"},
+        {name: "Kanal7 | a", url: "https://tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8"},
+        {name: "Kanal7 | b", url: "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8"},
+        {name: "Kanal7 | c", url: "http://149.13.0.66:4003/kanal7"},
+        {name: "Kanal7 | d", url: "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8"},
+        {name: "Kanal7 | e", url: "http://149.13.0.66:4003/kanal7"},
+        {name: "Kanal7 | f", url: "https://c.fulltvizle.com/kanal7/index.m3u8"},
+        {name: "Kanal7 | g", url: "https://tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8"},
+        {name: "Kanal7 | h", url: "https://trn03.tulix.tv/gt-kanal7/index.m3u8"},
+        {name: "Kanal 7 Eu", url: "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8"},
+
+        {name: "Canal 4 RD", url: "https://protvradiostream.com:1936/canal4rd-1/ngrp:canal4rd-1_all/playlist.m3u8"}
+
+      ],
+      Haber: [
+        {name: "La 1", url: "https://ztnr.rtve.es/ztnr/1688877.m3u8"},
+        {name: "La 2", url: "https://rtvelivestream.akamaized.net/rtvesec/la2/la2_main_dvr.m3u8"},
+        {name: "Antena 3", url: "https://live3vox.antenaplay.ro/a3free/a3free.m3u8"},
+        {name: "Cuatro", url: "https://linear01-i.akamaihd.net/hls/live/837810/cuatro/01.m3u8"},
+        {name: "Telecinco", url: "https://linear01-i.akamaihd.net/hls/live/837811/telecinco/01.m3u8"},
+        {name: "La Sexta", url: "https://spa-ha-p005.cdn.masmediatv.es/SVoriginOperatorEdge2/smil:11_HD.smil/index.m3u8"},
+        {name: "24h", url: "https://ztnr.rtve.es/ztnr/1694255.m3u8"},
+        {name: "Telemadrid", url: "https://telemadridhls2-live-hls.secure2.footprint.net/egress/chandler/telemadrid/telemadrid_1/index.m3u8"},
+        {name: "Canal Sur", url: "https://spa-ha-p005.cdn.masmediatv.es/SVoriginOperatorEdge2/smil:11_HD.smil/index.m3u8"},
+        {name: "TV3", url: "https://directes-tv-int.ccma.cat/int/ngrp:tv3_web/playlist.m3u8"},
+        {name: "ETB 2", url: "https://multimedia.eitb.eus/live-content/etb2hd-hls/master.m3u8"},
+        {name: "Aragón TV", url: "https://cartv.streaming.aranova.es/hls/live/aragontv_canal1.m3u8"},
+        {name: "7TV Región de Murcia", url: "https://elche7tv.gestec-video.com/hls/canal2.m3u8"},
+        {name: "Castilla-La Mancha Media", url: "https://cdnapi.kaltura.com/p/2288691/sp/228869100/playManifest/entryId/1_01fn4ycl/format/applehttp/.m3u8"},
+        {name: "TV Galicia", url: "https://europa-crtvg.flumotion.com/playlist.m3u8"},
+        {name: "IB3", url: "https://ibsatiphone.ib3tv.com/iphoneliveIB3/IB3/bitrate_2.m3u8"},
+        {name: "Extremadura TV", url: "https://cdnlive.shooowit.net/canalextremaduralive/smil:channel1.smil/playlist.m3u8"},
+        {name: "La 7", url: "https://cdnlive.shooowit.net/la7live/smil:channel1.smil/playlist.m3u8"},
+        {name: "TPA", url: "https://cdnlive.codev8.net/rtpalive/smil:directo.smil/playlist.m3u8"},
+        {name: "Canal Parlamento", url: "https://congresodirecto-f.akamaihd.net/i/congreso6_1@54665/master.m3u8"}
+      ],
+      Belgesel: [
+        {name: "ABC News", url: "https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8"},
+        {name: "DW Español", url: "https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8"},
+        {name: "CBS News", url: "https://cbsn-us-cedexis.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8"},
+        {name: "Fox News", url: "https://foxnews-foxnews-01.visionip.tv/live/foxnews-foxnews-01.stream/playlist.m3u8"},
+        {name: "CNN", url: "https://cnn-cnninternational-1-de.samsung.wurl.com/manifest/playlist.m3u8"},
+        {name: "MSNBC", url: "https://tvemsnbc-lh.akamaihd.net/i/nbcmsnbc_1@122532/master.m3u8"},
+        {name: "Bloomberg TV", url: "https://liveproduseast.global.ssl.fastly.net/us/Channel-USTV-AWS-virginia-1/Source-USTV-1000-1_live.m3u8"},
+        {name: "CNBC", url: "https://cnbctv18-lh.akamaihd.net/i/cnbctv18_1@174868/index_5_av-p.m3u8"},
+        {name: "NASA TV", url: "https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8"},
+        {name: "The Weather Channel", url: "https://weather-lh.akamaihd.net/i/twc_1@92006/master.m3u8"},
+        {name: "Cheddar", url: "https://cheddar.samsung.wurl.com/manifest/playlist.m3u8"},
+        {name: "Newsmax", url: "https://nmxlive.akamaized.net/hls/live/529965/Live_1/index.m3u8"},
+        {name: "OAN", url: "https://oneamericanews-roku-us.amagi.tv/playlist.m3u8"},
+        {name: "PBS", url: "https://pbs-kids-2.roku.wurl.com/manifest/playlist.m3u8"},
+        {name: "C-SPAN", url: "https://skystreams-lh.akamaihd.net/i/SkyC1_1@500806/master.m3u8"},
+        {name: "Buzzr", url: "https://buzzr-samsungus.amagi.tv/playlist.m3u8"},
+        {name: "Comet", url: "https://usgeowall.sinclairstoryline.com/channel/3e45c6b5354a40f787e0b2aadb0f5d6a.m3u8"},
+        {name: "TBD", url: "https://content.uplynk.com/channel/1831163f97674328ad9f4b4814ed39c5.m3u8"},
+        {name: "Stadium", url: "https://stadiumlivein-i.akamaihd.net/hls/live/522512/mux_4/master.m3u8"},
+        {name: "Charge!", url: "https://usgeowall.sinclairstoryline.com/channel/37eb732888614810b512fdd82604244e.m3u8"}
+      ]
+    };
+
+    const video = document.getElementById('video-player');
+    const hls = new Hls();
+    const currentChannelElement = document.getElementById('current-channel');
+
+    function loadChannels() {
+      const country = document.getElementById('country-select').value;
+      const channelList = document.getElementById('channel-list');
+      channelList.innerHTML = '';
+      channels[country].forEach((channel, index) => {
+        const li = document.createElement('li');
+        li.textContent = channel.name;
+        li.onclick = () => changeChannel(channel.name, channel.url);
+        channelList.appendChild(li);
+      });
+    }
+
+    function changeChannel(name, url) {
+      currentChannelElement.textContent = name;
+      if (Hls.isSupported()) {
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.addEventListener('loadedmetadata', function() {
+          video.play();
+        });
+      }
+    }
+
+    function startChromecast() {
+      if (window.chrome && window.chrome.cast && window.chrome.cast.isAvailable) {
+        console.log('Starting Chromecast...');
+        console.log('Chromecast iniciado (simulación)');
+        alert('Iniciando transmisión a Chromecast...');
+      } else {
+        console.log('Chromecast no está disponible');
+        alert('Chromecast no está disponible en este dispositivo');
+      }
+    }
+
+    // Initialize with the first country's channels
+    loadChannels();
+  </script>
+</body></html>
+<!-- partial -->
+  
+</body>
+</html>

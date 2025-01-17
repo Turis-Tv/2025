@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by hasan</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turis Tv</title>
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/video.js/dist/video-js.css" />
+    <style>
+        body {
+            background-color: #000;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #tv-container {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            padding-top: 60px;
+        }
+
+        #tv-screen {
+            background-color: #000;
+            padding-top: 56.25%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        #controls {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #tv-icon {
+            font-size: 40px;
+            color: #e50914;
+            margin-bottom: 10px;
+        }
+
+        #channel-list-button {
+            background-color: #e50914;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        #channel-list {
+            display: none;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            z-index: 1;
+        }
+
+        #channel-list button {
+            background-color: #666;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin: 5px 0;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        #channel-list button:hover {
+            background-color: #555;
+        }
+
+        #separator {
+            border-top: 2px solid #555;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #external-player {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #external-player input {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #e50914;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #external-player button {
+            background-color: #e50914;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        #video-player {
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="tv-container">
+        <div id="tv-screen">
+            <video id="video-player" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%">
+                <!-- Video seçeneklerini buraya ekleyebilirsiniz-->
+                <source src="" type="application/x-mpegURL">
+            </video>
+            <div id="controls">
+                <i id="tv-icon" class="fas fa-tv"></i>
+                <button id="channel-list-button" onclick="toggleChannelList()">Kanal listesi</button>
+                <div id="channel-list">
+                    <button onclick="playChannel('https://tgn.bozztv.com/dvrfl05/gt-ulketv/tracks-v1a1/mono.m3u8'); closeChannelList()">Al Iraqia</button>
+                    <button onclick="playChannel('https://cdn.catiacast.video/abr/78054972db7708422595bc96c6e024ac/playlist.m3u8'); closeChannelList()">Al Iraqia News</button>
+                    <!-- يBuraya daha fazla kanal ekleyebilirsiniz -->
+                </div>
+            </div>
+        </div>
+        <div id="separator"></div>
+        <div id="external-player">
+            <input id="external-player-input" type="text" placeholder="Kanal bağlantısını girin">
+            <button onclick="playExternalChannel()">istihdam</button>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        // için kodları kullanabilirsiniz.Video.js Burada
+        var player = videojs('video-player');
+        
+        function playChannel(channelURL) {
+            player.src({
+                src: channelURL,
+                type: 'application/x-mpegURL'
+            });
+            player.play();
+        }
+
+        function playExternalChannel() {
+            var externalURL = document.getElementById('external-player-input').value;
+            playChannel(externalURL);
+        }
+
+        function toggleChannelList() {
+            var channelList = document.getElementById('channel-list');
+            channelList.style.display = (channelList.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function closeChannelList() {
+            var channelList = document.getElementById('channel-list');
+            channelList.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Eilik TV Max ultimo 6/9/24</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html><head><base href="https://eilik-tv-max.com/" ></base><title>Eilik TV Max</title><style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tv-container {
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+
+  }
+  .screen {
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  #video-player {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .channel-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF5900;
+  }
+  .chromecast-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .chromecast-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+  .chromecast-button:hover svg {
+    fill: #FF5900;
+  }
+  .channel-menu {
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .country-selector {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .country-selector select {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: #FF5900;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .country-selector::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  .country-selector[data-country="Ulusal"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');
+  }
+  .country-selector[data-country="Haber"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');
+  }
+  .country-selector[data-country="Muzik"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');
+  }
+  .country-selector[data-country="Spor"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');
+  }
+  .country-selector[data-country="Belgesel"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');  
+  }
+  .country-selector[data-country="Dini"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');  
+  }
+  .country-selector[data-country="Çocuk"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');  
+  }
+  .country-selector[data-country="Film"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png');  
+  }
+  .country-selector[data-country="Yerel"]::before {
+    background-image: url('https://flagcdn.com/w40/tr.png'); 
+
+
+
+  }
+  .country-selector select:hover {
+    background-color: #FF1493;
+  }
+  .country-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FF5900;
+  }
+  .channel-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .channel-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+  .channel-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    object-fit: contain;
+  }
+  .channel-list li:hover .channel-list li:focus {
+    background-color: #3a3a3a;
+    outline: none;
+   outline: none; 
+  }
+  .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #FF69B4;
+    margin-right: 10px;
+  }
+  .search-container input {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  .search-container input:focus {
+    outline: none;
+  }
+
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .main-content {
+      flex-direction: row;
+    }
+    .tv-container {
+      flex: 2;
+    }
+    .channel-menu {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .main-content {
+      padding: 10px;
+    }
+    .tv-container, .channel-menu {
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .logo {
+      font-size: 1.2em;
+    }
+    .controls {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .channel-name {
+      font-size: 16px;
+    }
+    .country-selector select {
+      font-size: 14px;
+    }
+    .channel-list li {
+      padding: 8px;
+    }
+    .search-container input {
+      font-size: 14px;
+    }
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head><body>
+  <div class="main-content">
+    <div class="tv-container">
+      <div class="logo"><span></span> <span></span></div>
+      <div id="clock"></div>
+      <div class="screen">
+        <video id="video-player" controls></video>
+      </div>
+      <div class="controls">
+        <div class="channel-name" id="current-channel">Hiçbir kanal seçilmedi</div>
+
+            <path d="M1 18v3h3c0-1.66-1.34-3-3-3zm0-4v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0-4v2c4.97 0 9 4.03 9 9h2c0-6.08-4.93-11-11-11zm20-7H3c-1.1 0-2 .9-2 2v3h2V5h18v14h-7v2h7c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="channel-menu">
+      <div class="country-selector" data-country="dominican">
+        <select id="country-select" onchange="loadChannels()">
+          <option value="Ulusal">Ulusal</option>
+          <option value="Haber">Haber</option>
+          <option value="Muzik">Muzik</option>
+          <option value="Spor">Spor</option>
+          <option value="Belgesel">Belgesel</option>
+          <option value="Dini">Dini</option>
+          <option value="Çocuk">Çocuk</option>
+          <option value="Film">Film</option>
+          <option value="Yerel">Yerel</option>
+        </select>
+      </div>
+      <div class="search-container">
+        <svg class="search-icon" viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+        </svg>
+        <input type="text" id="search-input" placeholder="Kanallar Ara ..." oninput="searchChannels()">
+      </div>
+      <ul id="channel-list" class="channel-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    const channels = {
+      Ulusal: [
+
+
+
+        {name: "Trt 1", url: "https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/d6c87Km/trt122.png"},
+        {name: "ATV", url: "https://c.fulltvizle.com/aytv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | b", url: "http://116.202.238.88/ATV_TR/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | c", url: "http://50.7.144.122:1935/livetv/atv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | d", url: "https://yayin2.canlitv.fun/livetv/atv.stream/master.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | e", url: "https://c.fulltvizle.com/aytv/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | f", url: "https://c.fulltvizle.com/aytv/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | g", url: "https://yayin2.canlitv.fun/livetv/atv.stream/master.m3u8?start=LIVE&end=END", logo: " https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png"},
+        {name: "ATV | h", url: "http://50.7.144.122:1935/livetv/atv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "ATV | i", url: "http://116.202.238.88/ATV_TR/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png "},
+        {name: "Atv eu", url: "https://tgn.bozztv.com/dvrfl05/gin-atvavrupa/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUk0AdkpKqBSM6b7cfk05DZo4evBHDjjBbQ&s "},
+        {name: "Atv eu | a", url: "https://trn03.tulix.tv/gt-atvavrupa/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUk0AdkpKqBSM6b7cfk05DZo4evBHDjjBbQ&s "},
+
+
+
+       
+        {name: "Kanal D | a", url: "http://116.202.238.88/KANALD_TR/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/K/kanal-d-logo-49EC3A6D7F-seeklogo.com.png "},
+        {name: "Kanal D | b", url: "http://50.7.144.122:1935/livetv/kanald.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/K/kanal-d-logo-49EC3A6D7F-seeklogo.com.png "},
+        {name: "Kanal D | c", url: "https://yayin2.canlitv.fun/livetv/kanald.stream/master.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/K/kanal-d-logo-49EC3A6D7F-seeklogo.com.png"},
+        {name: "Kanal D | d", url: "https://c.fulltvizle.com/kanald/index.m3u8?start=LIVE&end=END", logo: "https://seeklogo.com/images/K/kanal-d-logo-49EC3A6D7F-seeklogo.com.png"},       
+        {name: "Euro D", url: "https://tgn.bozztv.com/dvrfl05/gin-eurod/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNzVf/Euro%20D.png"},
+       
+
+       
+        
+        {name: "Show Tv | b", url: "http://116.202.238.88/SHOWTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},        
+        {name: "Show Tv | d", url: "https://yayin2.canlitv.fun/livetv/showtv.stream/master.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},
+        {name: "Show Tv | e", url: "https://c.fulltvizle.com/show/index.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},
+        {name: "Show Tv | f", url: "https://ciner-live.daioncdn.net/showtv/showtv.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},
+        {name: "Show Tv | g", url: "http://66.160.192.241/showtv/index.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},
+        {name: "Show Türk", url: "https://tgn.bozztv.com/dvrfl05/gin-showtvturk/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png "},
+       
+
+        {name: "Show Max", url: "https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/tur/shmax.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxODRf/SHOW%20MAX.png"},
+
+        {name: "Star", url: "https://trn03.tulix.tv/gt-startv/index.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | a", url: "http://116.202.238.88/STARTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | b", url: "http://50.7.144.122:1935/livetv/startv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | c", url: "https://yayin2.canlitv.fun/livetv/startv.stream/master.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | d", url: "https://c.fulltvizle.com/star/index.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | e", url: "https://dogus-live.daioncdn.net/startv/startv.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | f", url: "http://tna6.tulix.tv/live/83a4128e87fca734c959aa37b03c8a4d/6737a153/ovair1-starttv.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | g", url: "https://live-fi.tvkaista.net/star-channel/live.m3u8?src=opengraph?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Star | h", url: "http://66.160.192.241/startvturk/index.m3u8?start=LIVE&end=END", logo: "https://logowik.com/content/uploads/images/346_startv.jpg"},
+        {name: "Euro Star", url: "https://tgn.bozztv.com/trn03/gt-eurostar/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR68Cmp7VbjledIRHpyA3haRpvrCOcE-_AlJQ&usqp=CAU"},
+
+        {name: "Beyaztv", url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | a", url: "https://helga.iptv2022.com/beyaz_tv/index.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | b", url: "https://yayin2.canlitv.fun/livetv/beyaztv.stream/master.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | b", url: "http://50.7.144.122:1935/livetv/beyaztv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | c", url: "http://116.202.238.88/BEYAZTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | d", url: "https://tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+        {name: "Beyaztv | e", url: "https://trn03.tulix.tv/gt-beyaztv/index.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY"},
+
+        {name: "Kanal7", url: "https://trn03.tulix.tv/gt-kanal7/index.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | a", url: "https://tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | b", url: "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | c", url: "http://149.13.0.66:4003/kanal7?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | d", url: "https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | e", url: "http://149.13.0.66:4003/kanal7?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | f", url: "https://c.fulltvizle.com/kanal7/index.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | g", url: "https://tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal7 | h", url: "https://trn03.tulix.tv/gt-kanal7/index.m3u8?start=LIVE&end=END", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png"},
+        {name: "Kanal 7 Eu", url: "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNzhf/KANAL%207%20EUR.png"},
+
+
+        {name: "TV 8,5", url: "http://50.7.144.122:1935/livetv/tv8-5.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxOTZf/TV%208%2C5.png"},
+        {name: "TV 8  ", url: "https://tv8-live.daioncdn.net/tv8/tv8.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxOThf/Tv8.png"},
+        {name: "TV 8 Int ", url: "https://tgn.bozztv.com/dvrfl05/gin-tv8int/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxOTVf/TV%208%20INT.png"},
+
+
+
+
+
+
+
+        {name: " Trt 1  📺", url: "http://stream.tvcdn.net/ulusal/trt-1.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/d6c87Km/trt122.png"},
+        {name: " Trt 1  📺", url: "https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/d6c87Km/trt122.png"},
+        {name: " Kanal D  📺", url: "http://stream.tvcdn.net/ulusal/kanal-d.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/a06096dc-fd5e-4103-bfb4-83e612df23ec.png"},
+        {name: " Now TV  📺", url: "http://stream.tvcdn.net/ulusal/now-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/80eb8816-1855-41f5-9002-7a05cc93fe4f.png"},
+        {name: " Show TV  📺", url: "http://stream.tvcdn.net/ulusal/show-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9d873881-bb5e-40f0-88db-8c47aa215e5a.png"},
+        {name: " Beyaz TV  📺", url: "http://stream.tvcdn.net/ulusal/beyaz-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/60d7aaf4-817b-46be-bbab-68f8b30de8fb.png"},
+        {name: " Kanal 7  📺", url: "http://stream.tvcdn.net/ulusal/tv8.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/1125734c-3525-4390-b8ed-c50380c70e4d.png"},
+        {name: " TV 8  📺", url: "https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f91342d2-bcae-4ee0-a6f8-76a8d32b891b.png"},
+        {name: " TV 8  📺", url: "http://stream.tvcdn.net/ulusal/tv8.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f91342d2-bcae-4ee0-a6f8-76a8d32b891b.png"},
+        {name: " Star TV  📺", url: "http://stream.tvcdn.net/ulusal/star-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0c5204fb-e613-4084-b300-8cdcc46309f9.png"},
+        {name: " 360 TV  📺", url: "http://stream.tvcdn.net/ulusal/360-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1c3f150-4f79-4ac4-a893-4cc1144eb2d5.png"},
+        {name: " TV 100  📺", url: "http://stream.tvcdn.net/ulusal/tv-100.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/d7741078-ccce-47d8-ba1c-a041b659bad6.png"},
+        {name: " TRT Türk  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fbaaa75c-0a2d-4ed6-b498-d32a59ddb899.png"},
+        {name: " Euro D  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/euro-d.m3u?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f4a83153-48c6-4ece-8082-1b370768f88a.png"},
+        {name: " Euro D  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/euro-d.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f4a83153-48c6-4ece-8082-1b370768f88a.png"},
+        {name: " TGRT EU  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/tgrt-eu.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/01032651-eac6-48ea-b6ef-78acf8e95daa.png"},
+        {name: " Show Türk  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/d4d340ec-891e-4601-9776-e979a750b7e3.png"},
+        {name: " Beyaz TV  📺", url: "http://stream.tvcdn.net/ulusal/beyaz-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/60d7aaf4-817b-46be-bbab-68f8b30de8fb.png"},
+        {name: " 360 TV  📺", url: "http://stream.tvcdn.net/ulusal/360-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1c3f150-4f79-4ac4-a893-4cc1144eb2d5.png"},
+        {name: " TRT Türk  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fbaaa75c-0a2d-4ed6-b498-d32a59ddb899.png"},
+        {name: " TRT Avaz  📺", url: "http://stream.tvcdn.net/ulusal-yurt-disi/trt-avaz.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/53dd1d5f-aa72-4bea-91d0-8c2d00783367.png"},
+        {name: " Show Max  📺", url: "http://stream.tvcdn.net/eglence/show-max.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ec1c55f6-b525-4466-b41c-a935915a6962.png"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+],
+Haber: [
+
+
+        {name: "TRT 1", url: "https://tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8?start=LIVE&end=END",  logo:  "https://i.ibb.co/d6c87Km/trt122.png"},
+        {name: "CNN | a", url: "https://tgn.bozztv.com/dvrfl05/gin-cnnturk/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU"},
+        {name: "CNN | b", url: "http://50.7.144.122:1935/livetv/cnnturk.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU"},
+        {name: "CNN | c", url: "https://c.fulltvizle.com/cnn/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU"},
+        {name: "CNN | d", url: "https://helga.iptv2022.com/cnn_turk/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "A HABER", url: "https://tgn.bozztv.com/dvrfl05/gin-ahaber/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "NTV", url: "https://tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "24 TV", url: "https://turkmedya-live.ercdn.net/tv24/tv24_360p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "ÜLKE TV", url: "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "HABER TÛRK", url: "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "BEYAZ TV", url: "https://tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TEVE 2", url: "https://demiroren-live.daioncdn.net/teve2/teve2.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "AKIT TV", url: "http://akittv-live.ercdn.net/akittv/akittv_360p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "FLASH HABER", url: "http://50.7.144.122:1935/livetv/flashtv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT HABER", url: "https://tv-trthaber.medya.trt.com.tr/master_360.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "HABERTURK TV", url: "https://tgn.bozztv.com/dvrfl05/gin-haberturk/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TGRT HABER", url: "https://tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "HABER GLOBAL", url: "https://trn03.tulix.tv/gt-haberglobal/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TÜRK HABER", url: "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT-TURK", url: "https://tv-trtturk.medya.trt.com.tr/master_360.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "BENGÜTÜRK", url: "https://trn03.tulix.tv/gt-benguturk/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "MECLİS TV", url: "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TV100", url: "https://trn03.tulix.tv/gt-tv100/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "ULUSAL KANAL", url: "http://50.7.144.122:1935/livetv/ulusalkanal.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TVNET", url: "https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "BLOOMBERG", url: "https://bloomberght-live.daioncdn.net/bloomberght/bloomberght.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TGRT HABER", url: "https://tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "FLASH TV", url: "https://tgn.bozztv.com/dvrfl05/gin-flashtv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "HALKT TV", url: "https://tgn.bozztv.com/dvrfl05/gin-halktv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "SÔZCÛ TV", url: "https://trn03.tulix.tv/gt-sozcutv/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "YOL TV", url: "https://trn03.tulix.tv/gt-yoltv/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+
+
+        {name: "Cnn Türk | a", url: "https://hdirecttna100-2.tulix.tv/hdirect_live/hd-cnnint/83a4128e87fca734c959aa37b03c8a4d/6737a153/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | b", url: "https://helga.iptv2022.com/cnn_turk/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | b", url: "https://c.fulltvizle.com/cnn/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | c", url: "https://yayin2.canlitv.fun/livetv/cnnturk.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | d", url: "http://50.7.144.122:1935/livetv/cnnturk.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | e", url: "http://116.202.238.88/CNNTURK_TR/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | f", url: "https://cnnint.blutv.com/blutv_cnnint/smil:cnnint.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+        {name: "Cnn Türk | g", url: "https://tgn.bozztv.com/dvrfl05/gin-cnnturk/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU "},
+
+        {name: "A haber", url: "https://tgn.bozztv.com/dvrfl05/gin-ahaber/playlist.m3u8?start=LIVE&end=END", logo: "https://gbzeottvsc19.tvplus.com.tr:33207/CPS/images/universal/film/poster/20140406/001300/001300000008526514/e815ff70-dcad-419b-a01d-7643db080bed.png "},
+
+        {name: "Ülke tv | a", url: "https://tgn.bozztv.com/dvrfl05/gt-ulketv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://egitim.tossfed.gov.tr/storage/2017/07/indir.png "},
+        {name: "Ülke tv | b", url: "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8?start=LIVE&end=END", logo: "https://egitim.tossfed.gov.tr/storage/2017/07/indir.png "},
+        {name: "Ülke tv | c", url: "https://c.fulltvizle.com/ulke/index.m3u8?start=LIVE&end=END", logo: "https://egitim.tossfed.gov.tr/storage/2017/07/indir.png "},
+
+        {name: "24 | a", url: "https://c.fulltvizle.com/kanal24/index.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjNf/24%20TV.png "},
+        {name: "24 | b", url: "https://turkmedya-live.ercdn.net/tv24/tv24.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjNf/24%20TV.png "},
+        {name: "24 | c", url: "https://mn-nl.mncdn.com/kanal24/kanal24.smil/chunklist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjNf/24%20TV.png "},
+        {name: "24 | d", url: "https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjNf/24%20TV.png "},
+
+        {name: "A haber | a", url: "https://c.fulltvizle.com/ahaber/index.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/edyMHlU_afKwurSN75-1IyslgA2eDSVgW6z145CLey_lLnapvDnVw9PKbxJei1V2aLA "},
+        {name: "A haber | b", url: "https://yayin2.canlitv.fun/livetv/ahaber.stream/master.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/edyMHlU_afKwurSN75-1IyslgA2eDSVgW6z145CLey_lLnapvDnVw9PKbxJei1V2aLA "},
+        {name: "A haber | c", url: "http://50.7.144.122:1935/livetv/ahaber.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/edyMHlU_afKwurSN75-1IyslgA2eDSVgW6z145CLey_lLnapvDnVw9PKbxJei1V2aLA "},
+        {name: "A haber | d", url: "https://tgn.bozztv.com/dvrfl05/gin-ahaber/playlist.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/edyMHlU_afKwurSN75-1IyslgA2eDSVgW6z145CLey_lLnapvDnVw9PKbxJei1V2aLA "},
+        {name: "A haber | e", url: "https://trn03.tulix.tv/gt-ahaber/index.m3u8?start=LIVE&end=END", logo: "https://play-lh.googleusercontent.com/edyMHlU_afKwurSN75-1IyslgA2eDSVgW6z145CLey_lLnapvDnVw9PKbxJei1V2aLA "},
+
+
+
+        {name: "Flash Tv | a", url: "https://c.fulltvizle.com/flash/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+        {name: "Flash Tv | b", url: "https://yayin2.canlitv.fun/livetv/flashtv.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+        {name: "Flash Tv | c", url: "http://50.7.144.122:1935/livetv/flashtv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+        {name: "Flash Tv | d", url: "http://116.202.238.88/FLASHTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+        {name: "Flash Tv | e", url: "https://flashtvdvr.blutv.com/blutv_flashtv_dvr/live.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+        {name: "Flash Tv | f", url: "https://tgn.bozztv.com/dvrfl05/gin-flashtv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s "},
+
+        {name: "Tgrt Haber | a", url: "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+        {name: "Tgrt Haber | b", url: "https://canli.tgrthaber.com/tgrt.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+        {name: "Tgrt Haber | b", url: "https://yayin2.canlitv.fun/livetv/tgrthaber.stream/master.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+        {name: "Tgrt Haber | c", url: "http://50.7.144.122:1935/livetv/tgrthaber.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+        {name: "Tgrt Haber | d", url: "https://tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+        {name: "Tgrt Haber | e", url: "https://tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://i.turkiyegazetesi.com.tr/images/haberler/2018_12/buyuk/tgrt-haber-altin-zambak-odulu-aldi-1544045314.jpg "},
+
+        {name: "Tgrt eu | a", url: "https://tgn.bozztv.com/dvrfl05/gin-tgrteu/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lABEz__rNNQssvdLnudafoVyBNQTDhwuuA&s "},
+        {name: "Tgrt eu | b", url: "https://canli.tgrteu.com/tgrteu.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lABEz__rNNQssvdLnudafoVyBNQTDhwuuA&s "},
+
+
+
+
+        {name: "Ntv | a", url: "http://api.ntv.com.tr/rss/LiveStream?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+        {name: "Ntv | b", url: "https://yayin2.canlitv.fun/livetv/ntv.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+        {name: "Ntv | c", url: "http://50.7.144.122:1935/livetv/ntv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+        {name: "Ntv | d", url: "http://116.202.238.88/NTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+        {name: "Ntv | e", url: "https://trn03.tulix.tv/gt-ntvtv/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+        {name: "Ntv | e", url: "https://tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlf4GLdASIaepIpfpljSJSQoDZJCWycVNtfA&s "},
+
+
+
+        {name: "Haber Türk | a", url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | b", url: "https://helga.iptv2022.com/haber_turk/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | c", url: "https://c.fulltvizle.com/haberturk/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | d", url: "https://yayin2.canlitv.fun/livetv/haberturk.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | e", url: "http://50.7.144.122:1935/livetv/haberturk.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | f", url: "https://mnorigin-cmn-5.mncdn.com/haberturk_testt_dvr/live.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+        {name: "Haber Türk | g", url: "https://tgn.bozztv.com/dvrfl05/gin-haberturk/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s"},
+        {name: "Haber Türk | h", url: "https://trn03.tulix.tv/gt-haberturk/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5N7IhxP1wpeMJ3xpesPQsXKwiEZQZzw_5SQ&s "},
+
+
+
+        {name: "Halk tv | a", url: "https://c.fulltvizle.com/halk/index.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | b", url: "https://yayin2.canlitv.fun/livetv/halktv.stream/master.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | c", url: "http://50.7.144.122:1935/livetv/halktv.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | d", url: "http://116.202.238.88/HALKTV_TR/index.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | e", url: "https://halktvdvr.blutv.com/blutv_halktv2_dvr/live.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | f", url: "https://tgn.bozztv.com/dvrfl05/gin-halktv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+        {name: "Halk tv | g", url: "https://trn03.tulix.tv/gt-halktv/index.m3u8?start=LIVE&end=END", logo: "https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg "},
+
+        {name: "Akit Tv | a", url: "https://akittv-live.ercdn.net/akittv/akittv.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjVf/AKIT%20TV.png "},
+        {name: "Akit Tv | b", url: "https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwNjVf/AKIT%20TV.png "},
+
+        {name: "Tele1 | a", url: "https://yayin2.canlitv.fun/livetv/tele1.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXViGyxWfrWCk0GY0-c17ikUc67f_wUg6Lw& "},
+        {name: "Tele1 | b", url: "https://tgn.bozztv.com/dvrfl05/gin-tele1/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXViGyxWfrWCk0GY0-c17ikUc67f_wUg6Lw& "},
+        {name: "Tele1 | c", url: "https://c.fulltvizle.com/tele1/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXViGyxWfrWCk0GY0-c17ikUc67f_wUg6Lw& "},
+
+
+        {name: "Sözcü Tv | a", url: "https://yayin2.canlitv.fun/livetv/sozcutv.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJajY8dNhROUmyXPN42RMHAx1e3CjGmwEIA&s "},
+        {name: "Sözcü Tv | b", url: "https://szctvdvr.blutv.com/blutv_szctv_dvr/live.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJajY8dNhROUmyXPN42RMHAx1e3CjGmwEIA&s "},
+        {name: "Sözcü Tv | c", url: "https://trn03.tulix.tv/gt-sozcutv/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJajY8dNhROUmyXPN42RMHAx1e3CjGmwEIA&s "},
+
+        {name: "Tv100 | a", url: "https://helga.iptv2022.com/tv_100/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlcM-GnmUYZ_IyVAx5Mc-QX8M4xlFPgRneKw&sff-no-rj "},
+        {name: "Tv100 | b", url: "https://yayin2.canlitv.fun/livetv/tv100.stream/master.m3u8?start=LIVE&end=END", logo: " https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlcM-GnmUYZ_IyVAx5Mc-QX8M4xlFPgRneKw&sff-no-rj"},
+        {name: "Tv100 | c", url: "http://50.7.144.122:1935/livetv/tv100.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlcM-GnmUYZ_IyVAx5Mc-QX8M4xlFPgRneKw&sff-no-rj "},
+        {name: "Tv100 | d", url: "https://tv100dvr.blutv.com/blutv_tv1002_dvr/live.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlcM-GnmUYZ_IyVAx5Mc-QX8M4xlFPgRneKw&sff-no-rj "},
+        {name: "Tv100 | e", url: "https://trn03.tulix.tv/gt-tv100/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlcM-GnmUYZ_IyVAx5Mc-QX8M4xlFPgRneKw&sff-no-rj "},
+
+        {name: "Bengü Türk | a", url: "https://ensonhaber-live.ercdn.net/benguturk/benguturk.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFfHLUt8QE-qHkpHLTGC-jrhntG5npxRlZA&s "},
+        {name: "Bengü Türk | b", url: "https://yayin2.canlitv.fun/livetv/benguturk.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFfHLUt8QE-qHkpHLTGC-jrhntG5npxRlZA&s "},
+        {name: "Bengü Türk | c", url: "http://50.7.144.122:1935/livetv/benguturk.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFfHLUt8QE-qHkpHLTGC-jrhntG5npxRlZA&s "},
+        {name: "Bengü Türk | d", url: "https://trn03.tulix.tv/gt-benguturk/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFfHLUt8QE-qHkpHLTGC-jrhntG5npxRlZA&s "},
+
+        {name: "Haber global | a", url: "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjWVwfvW-3gfugPzJs3j_5N4CReHqcxGGbw&s "},
+        {name: "Haber global | b", url: "https://helga.iptv2022.com/haber_global/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjWVwfvW-3gfugPzJs3j_5N4CReHqcxGGbw&s "},
+        {name: "Haber global | c", url: "https://yayin2.canlitv.fun/livetv/haberglobal.stream/master.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjWVwfvW-3gfugPzJs3j_5N4CReHqcxGGbw&s "},
+        {name: "Haber global | d", url: "http://50.7.144.122:1935/livetv/haberglobal.stream/sec-f5-v1-a1.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjWVwfvW-3gfugPzJs3j_5N4CReHqcxGGbw&s "},
+
+        {name: "Tbmm | a", url: "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/BN9tk1q/tbmm22.png "},
+
+        {name: "Beyaz Tv | a", url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNTlf/5277f06b-9eb9-4678-b377-48cb69417e83.png "},
+        {name: "Beyaz Tv | b", url: "https://tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNTlf/5277f06b-9eb9-4678-b377-48cb69417e83.png "},
+        {name: "Beyaz Tv | c", url: "https://helga.iptv2022.com/beyaz_tv/index.m3u8 ?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNTlf/5277f06b-9eb9-4678-b377-48cb69417e83.png "},
+        {name: "Beyaz Tv | d", url: "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxNTlf/5277f06b-9eb9-4678-b377-48cb69417e83.png "},
+
+        {name: "A2 | a", url: "https://tgn.bozztv.com/dvrfl05/gin-atva2/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7RrFU73imLmT37YEFTog1FdmkE_pcnJwurw&s "},
+        {name: "A2 | b", url: "https://c.fulltvizle.com/a2/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7RrFU73imLmT37YEFTog1FdmkE_pcnJwurw&s "},
+
+        {name: "Trt haber | a", url: "https://tv-trthaber.medya.trt.com.tr/master.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/Bt6frts/trthaber.png "},
+        {name: "Trt haber | b", url: "https://helga.iptv2022.com/trt_haber/index.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/Bt6frts/trthaber.png "},
+        {name: "Trt haber | c", url: "https://edge1.socialsmart.tv/turkhaber/bant1/chunks.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/Bt6frts/trthaber.png "},
+        {name: "Trt haber | d", url: "https://tgn.bozztv.com/dvrfl05/gin-trthaber/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/Bt6frts/trthaber.png "},
+
+        {name: "Trt Türk | a", url: "https://tv-trtturk.medya.trt.com.tr/master.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wdwm0fn/haberturk.png "},
+        {name: "Trt Türk | b", url: "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wdwm0fn/haberturk.png "},
+        {name: "Trt Türk | c", url: "https://helga.iptv2022.com/haber_turk/index.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wdwm0fn/haberturk.png "}, 
+        {name: "Trt Türk | d", url: "https://ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wdwm0fn/haberturk.png "},
+
+        {name: "Dha Tv", url: "https://603c568fccdf5.streamlock.net/live/dhaweb1_C5efC/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/K6BKFqY/dha.png  "},
+
+        {name: "Olay türk", url: "https://helga.iptv2022.com/OlayTurk_TV/index.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9d7G0iv8qAmZuMVL0WEpoGgRj1hFg_GtfuA&s "},
+
+        {name: "Brt1 | a", url: "https://trn03.tulix.tv/gt-brt1/index.m3u8?start=LIVE&end=END", logo: "https://cdn-radiotime-logos.tunein.com/s55224q.png "},
+        {name: "Brt1 | b", url: "https://sc-kuzeykibrissmarttv.ercdn.net/brt1hd/bant1/chunklist.m3u8?start=LIVE&end=END", logo: "https://cdn-radiotime-logos.tunein.com/s55224q.png "},
+
+
+        {name: "Brt2 | a", url: "https://trn03.tulix.tv/gt-brt2/index.m3u8?start=LIVE&end=END", logo: "https://cdn-radiotime-logos.tunein.com/s55224q.png "},
+        {name: "Brt2 | b", url: "https://sc-kuzeykibrissmarttv.ercdn.net/brt2hd/bant1/chunklist.m3u8?start=LIVE&end=END", logo: "https://cdn-radiotime-logos.tunein.com/s55224q.png "},
+ 
+        {name: "Anadolu Tv", url: "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8?start=LIVE&end=END", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzKc4ltA3Fpr0luS64Efg8Vta-QtXnHNOjyA&s "},
+
+        {name: "Dünya", url: "https://tgn.bozztv.com/dvrfl05/gin-dunya/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://yt3.googleusercontent.com/ytc/AIdro_kwYCeXoJyjxNxgHYHeLXSWQrFFCaLb_9-vrQbhyPGkAk0=s900-c-k-c0x00ffffff-no-rj "},
+
+        {name: "Eko türk", url: "https://ekoturkdvr.blutv.com/blutv_ekoturk_dvr/live.m3u8?start=LIVE&end=END", logo: "https://www.ekoturk.com/wp-content/uploads/2021/06/ekoturk-logo-400.png "},
+
+
+
+
+
+
+
+
+
+
+
+
+        {name: "TRT Haber 📰", url: "http://stream.tvcdn.net/haber/trt-haber.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/ecbd3154-e8e7-44d7-bcbd-a9bcac9df4de.png"},
+        {name: "A Haber 📰", url: "http://stream.tvcdn.net/haber/a-haber.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/06e7abd9-0fbb-441f-af63-b895513d3aaa.png"},
+        {name: "Habertürk 📰", url: "http://stream.tvcdn.net/haber/haberturk.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/9fbfa842-0fff-488a-aab7-d534dbbfe8a9.png"},
+        {name: "Haber Global 📰", url: "http://stream.tvcdn.net/haber/haber-global.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/d7e11245-3318-4cfd-bd1c-bdbb03d4c76a.png"},
+        {name: "Halk TV 📰", url: "http://stream.tvcdn.net/haber/halk-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/f0bcd016-8730-4700-9156-d6b678f8e554.png"},
+        {name: "24 TV 📰", url: "http://stream.tvcdn.net/haber/24-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/49267a8f-6313-43f9-bab4-9d5f109bad1b.png"},
+        {name: "Akit TV 📰", url: "http://stream.tvcdn.net/haber/akit-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/bf736fbe-8a9d-4444-adfd-99f3e7593ef9.png"},
+        {name: "Sözcü TV 📰", url: "http://stream.tvcdn.net/haber/sozcu-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/491384df-7154-4404-8f97-2e7847655441.png"},
+        {name: "TVNET 📰", url: "http://stream.tvcdn.net/haber/tvnet.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/542d8afd-1bf7-44bd-8dfe-0b8e9ea2d3ec.png"},
+        {name: "Bengütürk 📰", url: "http://stream.tvcdn.net/haber/benguturk-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/a8fd43de-872a-4e58-9f07-ff22d21a6c24.png"},
+        {name: "TBMM TV 📰", url: "http://stream.tvcdn.net/haber/tbmm-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/370c4e6f-8d30-400c-b298-c6a37b19e5dd.png"},
+        {name: "DHA 1 📰", url: "http://stream.tvcdn.net/haber/dha-canli-1.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/773ca7a4-b658-4d6d-8836-e13e582c4229.png"},
+        {name: "Bloomberg HT 📰", url: "http://stream.tvcdn.net/ekonomi/bloomberg-ht.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/2a1808ad-733e-4223-a8b3-34be18ef21f9.png"},
+
+        {name: "TV 100 📰", url: "http://stream.tvcdn.net/ulusal/tv-100.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/d7741078-ccce-47d8-ba1c-a041b659bad6.png"},
+        {name: "TRT Haber 📰", url: "http://stream.tvcdn.net/haber/trt-haber.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/06e7abd9-0fbb-441f-af63-b895513d3aaa.png"},
+        {name: "A Haber 📰", url: "http://stream.tvcdn.net/haber/a-haber.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/06e7abd9-0fbb-441f-af63-b895513d3aaa.png"},
+        {name: "Habertürk 📰", url: "http://stream.tvcdn.net/haber/haberturk.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/9fbfa842-0fff-488a-aab7-d534dbbfe8a9.png"},
+        {name: "Haber Global  📰", url: "http://stream.tvcdn.net/haber/haber-global.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/d7e11245-3318-4cfd-bd1c-bdbb03d4c76a.png"},
+        {name: "Halk TV  📰", url: "http://stream.tvcdn.net/haber/halk-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/49267a8f-6313-43f9-bab4-9d5f109bad1b.png"},
+        {name: "24 TV  📰", url: "http://stream.tvcdn.net/haber/24-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/2a1808ad-733e-4223-a8b3-34be18ef21f9.png"},
+        {name: "Akit TV  📰", url: "http://stream.tvcdn.net/haber/akit-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/bf736fbe-8a9d-4444-adfd-99f3e7593ef9.png"},
+        {name: "Sözcü TV  📰", url: "http://stream.tvcdn.net/haber/sozcu-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/491384df-7154-4404-8f97-2e7847655441.png"},
+        {name: "TVNET  📰", url: "http://stream.tvcdn.net/haber/tvnet.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/542d8afd-1bf7-44bd-8dfe-0b8e9ea2d3ec.png"},
+        {name: "Bengütürk TV  📰", url: "http://stream.tvcdn.net/haber/benguturk-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/a8fd43de-872a-4e58-9f07-ff22d21a6c24.png"},
+        {name: "TBMM TV  📰", url: "http://stream.tvcdn.net/haber/tbmm-tv.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/370c4e6f-8d30-400c-b298-c6a37b19e5dd.png"},
+        {name: "DHA 1  📰", url: "http://stream.tvcdn.net/haber/dha-canli-1.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/773ca7a4-b658-4d6d-8836-e13e582c4229.png"},
+        {name: "DHA 2 📰", url: "http://stream.tvcdn.net/haber/dha-canli-2.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/773ca7a4-b658-4d6d-8836-e13e582c4229.png"},
+        {name: "Bloomberg HT  📰", url: "http://stream.tvcdn.net/ekonomi/bloomberg-ht.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/2a1808ad-733e-4223-a8b3-34be18ef21f9.png"},
+        {name: "a2 📰", url: "http://stream.tvcdn.net/eglence/a2.m3u8?start=LIVE&end=END",  logo:  "http://assets.tvcdn.net/9db055df-4bc8-4a68-b0fd-766a5a3113bc.png"},
+
+
+
+
+
+
+
+],
+Muzik: [
+
+
+        {name: "Vostok TV", url: "http://911play.ru:3456/live/VostokSite/cdnVostaoc911tv123456/489.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Tatlıses Tv", url: "http://d3opspehgd3862dmfdp3sdf.siauliairsavlt.org/iptv/3ERH8M38H92TK4/6872/index.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"}, 
+        {name: "KRALPOP TV", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_360p.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT MUZiK", url: "https://tv-trtmuzik.medya.trt.com.tr/master_360.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TMB TR", url: "http://213.172.73.170:8081/nimble_live/1026__TMB/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+
+        {name: "POWER TURK EN YENiLER", url: "https://listen.powerapp.com.tr/pturkeniyiler/eniyiler.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER TURK SLOW", url: "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER TURK TAPTAZE", url: "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "DREAM TURK", url: "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+
+        {name: "ARABESK TV", url: "https://yayin.santraltr.com/hls/arabeskyeni.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "SUPER TV", url: "http://90.84.231.156:8000/play/a001/index.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "М2 HD", url: "http://live.m2.tv/hls3/720/stream.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Power TV", url: "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "PowerTürk TV", url: "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Power +", url: "https://listen.powerapp.com.tr/pplustv/pplustv.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Power Dance", url: "https://listen.powerapp.com.tr/dance/dance.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Power Love", url: "https://listen.powerapp.com.tr/plove/love.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "PowerTürk Slow", url: "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "PowerTürk Taptaze", url: "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "PowerTürk Akustik", url: "https://listen.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+  
+        {name: "FiNEST TV", url: "http://media.finest.tv/hls/live.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TATLISES TV", url: "https://live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "KRALPOP", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_360p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "KRAL", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_720p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT MUZiK", url: "https://tv-trtmuzik.medya.trt.com.tr/master_360.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER TURK", url: "https://tgn.bozztv.com/dvrfl05/gin-powerhd/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER SLOW", url: "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER TURK TAPTAZE", url: "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "DREAM TURK", url: "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Aşk", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Damar", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Dance", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Türk", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Dance", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1 Türk", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Powerlove", url: "https://listen.powerapp.com.tr/plove/love.smil/master.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Sılatv", url: "https://tvsms.club/tv.php?kanal=silatv&file=.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Tempo tv", url: "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT MÜZİK 🎧", url: "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/d6Zfm2P/trtmuzik21c.png"},
+        {name: "TRLIST 👤", url: "https://github.com/ipstreet312/freeiptv/raw/master/ressources/infos/barkers/sptr.ts?start=LIVE&end=END", logo: "https://i.ibb.co/gdbyhx2/spotify.png"},
+        {name: "SPOTIFY TURKEY • 2024 🎧", url: "https://github.com/ipstreet312/freeiptv/raw/master/ressources/infos/barkers/spb24.ts?start=LIVE&end=END", logo: "https://i.ibb.co/gdbyhx2/spotify.png "},
+        {name: "KRAL POP 🎧", url: "http://dygvideo.dygdigital.com/live/hls/kralpop?m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/6401NQw/kraltv.png"},
+        {name: "KRAL POP  🎧", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/6401NQw/kraltv.png"},
+        {name: "DREAM TÜRK 🎧", url: "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/4SsJS4R/dreamturk.png"},
+        {name: "POWER TÜRK 🎧", url: "http://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/B6N9KsN/powerturk22.png"},
+        {name: "POWER TÜRK 🎧 ", url: "https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/B6N9KsN/powerturk22.png "},
+        {name: "POWER TÜRK TAPTAZE 🎧", url: "http://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wy1H8jM/pturkttaze.png "},
+        {name: "POWER TÜRK AKUSTIK TV 🎧", url: "https://listen.powerapp.com.tr/pturkakustik/akustik.smil/.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "CINE 5 TV 🎧", url: "https://cdn-cine5tv.yayin.com.tr/cine5tv/cine5tv/.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+
+
+        {name: "POWER TÜRK SLOW 🎧", url: "http://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/BN9tk1q/tbmm22.png "},
+        {name: "POWER TÜRK AKUSTİK 🎧", url: "http://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8?start=LIVE&end=END", logo: "http://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8?start=LIVE&end=END"},
+        {name: "TATLISES 🎧", url: "https://live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/cQfPfgR/tatlises.png"},
+        {name: "MİLYON TV 🎧", url: "https://sosyoapp-live.cdnnew.com/sosyo/buraya-bir-isim-verin.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/Jqzzby7/milyontv.png"},
+        {name: "NUMBER ONE TÜRK 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wSPFds2/nr1turk.png"},
+        {name: "NUMBER ONE TÜRK ASK 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/wSPFds2/nr1turk.png"},
+        {name: "NUMBER ONE TÜRK ASK 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e18f9c54e6.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/jJWLsCQ/nr1ask.jpg"},
+        {name: "NUMBER ONE TÜRK DAMAR 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/824MwJ6/nr1damar.jpg "},
+        {name: "NUMBER ONE TÜRK DAMAR 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e19877b340.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/824MwJ6/nr1damar.jpg "},
+        {name: "NUMBER ONE TÜRK DANCE 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/LR5v10B/nr1dance.jpg"},
+        {name: "NUMBER ONE TÜRK DANCE 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2aa89e721.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/LR5v10B/nr1dance.jpg "},
+        {name: "NUMBER ONE 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/bQHyST5/nr1tv.png "},
+        {name: "FASHION ONE 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e2ee690051.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/9grLJCS/fone22.png"},
+        {name: "POWER TV 🎧", url: "http://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/xhfcTC7/powertv.png"},
+        {name: "POWER TV 🎧", url: "https://live.artidijitalmedya.com/artidijital_powertv/powertv/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/xhfcTC7/powertv.png"},
+        {name: "POWER DANCE 🎧", url: "http://livetv.powerapp.com.tr/dance/dance.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/FVNL477/pdance.png"},
+        {name: "POWER LOVE 🎧", url: "http://livetv.powerapp.com.tr/plove/love.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/VLQ6cmV/plove.png "},
+        {name: "NUMBER ONE 🎧 ", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e17cd6360b_1/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/bQHyST5/nr1tv.png"},
+        {name: "KRAL POP 🎧", url: "http://dygvideo.dygdigital.com/live/hls/puhukralpopdai?m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/6401NQw/kraltv.png "},
+        {name: "KRAL POP 🎧", url: "https://dogus.daioncdn.net/kralpoptv/kralpoptv.m3u8?app=f38a38b4-ce55-4040-8676-9826937d6128?start=LIVE&end=END", logo: "https://i.ibb.co/6401NQw/kraltv.png"},
+        {name: "DÜĞÜN TV ÇİNE 🎧", url: "https://cdn-duguntvmedya.yayin.com.tr/duguntvmedya/duguntvmedya/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "KANAL 19 ÇORUM 🎧", url: "https://live.euromediacenter.com/kanal19/index.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png "},
+        {name: "RİZE TÜRK TV 🎧", url: "https://yayin.rizeturk.com:3777/hybrid/play.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png "},
+        {name: "SLOW KARADENİZ TV 🎧", url: "https://yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "TEMPO TV 🎧", url: "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "TV 1 ADANA 🎧", url: "https://live.artidijitalmedya.com/artidijital_tva/tva/chunks.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png "},
+        {name: "TİVİ TURK 🎧", url: "https://stream.tiviturk.de/live/tiviturk.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "DAMAR TV 🎧", url: "https://tvsms.club/tv.php?kanal=damar&file=.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "ERCIYES TV 🎧", url: "https://cdn1-ercistv.yayin.com.tr/ercistv/amlst:ercistv/chunklist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "ZEYNO TV 🎧", url: "https://tvsms.club/tv.php?kanal=zeynotv&file=.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "TOP POP TV 🎧", url: "https://tvsms.club/tvz.php?kanal=toppop&file=.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "TEMPO TV 🎧", url: "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "Demo TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/demo-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/139a7fd3-7e5a-4bef-90f4-73d8500794c0.png"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {name: "Vostok TV 🎧", url: "http://911play.ru:3456/live/VostokSite/cdnVostaoc911tv123456/489.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT Müzik 🎧", url: "http://stream.tvcdn.net/muzik/trt-muzik.m3u8", logo: "http://assets.tvcdn.net/e9efa31e-106b-40e0-ab4e-a760061c7ad6.png"},
+        {name: "Dream Türk 🎧", url: "http://stream.tvcdn.net/muzik/dream-turk.m3u8", logo: "http://assets.tvcdn.net/b7ff7221-f255-439d-9ee9-0f73348005b8.png"},
+        {name: "Powertürk TV 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-tv.m3u8", logo: "http://assets.tvcdn.net/c866b6f0-00bd-40b9-9583-8cbdbe6a503e.png"},
+        {name: "Power TV 🎧", url: "http://stream.tvcdn.net/muzik/power-tv.m3u8", logo: "http://assets.tvcdn.net/ccb54b98-472f-4c36-a48f-46431c84ab6a.png"},
+        {name: "Kral Pop TV 🎧", url: "http://stream.tvcdn.net/muzik/kral-pop-tv.m3u8", logo: "http://assets.tvcdn.net/61431fea-4103-46a3-9f8c-aad1504b9776.png"},
+        {name: "Number One TV 🎧", url: "http://stream.tvcdn.net/muzik/number-one-tv.m3u8", logo: "http://assets.tvcdn.net/c46cb81f-8075-442a-be24-d77a05f57921.png"},
+        {name: "Number One Türk 🎧", url: "http://stream.tvcdn.net/muzik/number-one-turk.m3u8", logo: "http://assets.tvcdn.net/8fdc5969-a87a-4067-a74a-65d88c131166.png"},
+        {name: "Milyon TV 🎧", url: "http://stream.tvcdn.net/muzik/milyon-tv.m3u8", logo: "http://assets.tvcdn.net/ade59000-47db-4695-ab72-d26658094ec8.png"},
+        {name: "Tatlıses TV 🎧", url: "http://stream.tvcdn.net/muzik/tatlises-tv.m3u8", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TMB 🎧", url: "http://stream.tvcdn.net/muzik/tmb.m3u8", logo: "http://assets.tvcdn.net/bff30a45-6e50-456c-af0e-62c62191c837.png"},
+        {name: "Power Dance 🎧", url: "http://stream.tvcdn.net/muzik/power-dance.m3u8", logo: "http://assets.tvcdn.net/aca9e643-a4b0-4f01-abd5-66a5a2fc1042.png"},
+        {name: "Power Love 🎧", url: "http://stream.tvcdn.net/muzik/power-love.m3u8", logo: "http://assets.tvcdn.net/f755a1c1-097f-4692-a7a8-c804da8d1ed5.png"},
+        {name: "Powertürk Akustik 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-akustik.m3u8", logo: "http://assets.tvcdn.net/2005fd7a-ffe1-497a-a56b-ac60bcb3a2a2.png"},
+        {name: "Powertürk Slow 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-slow.m3u8", logo: "http://assets.tvcdn.net/fcec79e5-9d47-4812-86ac-00728538ad7f.png"},
+        {name: "Powertürk Taptaze 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-taptaze.m3u8", logo: "http://assets.tvcdn.net/ebb82c5c-86ac-4dc5-ba78-b26e536cebf7.png"},
+        {name: "Number 1 Aşk 🎧", url: "http://stream.tvcdn.net/muzik/number-1-ask.m3u8", logo: "http://assets.tvcdn.net/a93b01d9-2c8f-4406-b5f9-abdf2f600e79.png"},
+        {name: "Number 1 Damar 🎧", url: "http://stream.tvcdn.net/muzik/number-1-damar.m3u8", logo: "http://assets.tvcdn.net/2330eb6b-5e83-44ed-a2c5-028417f4cb67.png"},
+        {name: "Number 1 Dance 🎧", url: "http://stream.tvcdn.net/muzik/number-1-dance.m3u8", logo: "http://assets.tvcdn.net/45eb173b-8b68-4caa-a5d3-65dc044b08e9.png"},
+        {name: "Müzik TV 🎧", url: "http://stream.tvcdn.net/muzik/muzik-tv.m3u8", logo: "http://assets.tvcdn.net/f50d76a9-885f-4659-8dae-ea125469d25a.png"},
+        {name: "Chill TV 🎧", url: "http://stream.tvcdn.net/muzik/chill-tv.m3u8", logo: "http://assets.tvcdn.net/972fe810-96d7-4cad-8918-fe0c28a45e7d.png"},
+        {name: "FiNEST TV 🎧", url: "http://media.finest.tv/hls/live.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TATLISES TV 🎧", url: "https://live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "KRALPOP 🎧", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_360p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "KRAL 🎧", url: "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_720p.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT MUZiKL 🎧", url: "https://tv-trtmuzik.medya.trt.com.tr/master_360.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "TRT MUZiK 🎧", url: "https://tgn.bozztv.com/dvrfl05/gin-powerhd/tracks-v1a1/mono.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER SLOW 🎧", url: "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "POWER TURK TAPTAZE 🎧", url: "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "DREAM TURK 🎧", url: "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1aşk 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1damar 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1dance 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1türk 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1dance 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Nr1türk 🎧", url: "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Powerlove 🎧", url: "https://listen.powerapp.com.tr/plove/love.smil/master.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Sılatv 🎧", url: "https://tvsms.club/tv.php?kanal=silatv&file=.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Tempo tv 🎧", url: "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/OTFfMjg1MDIyMTRf/Turis1.jpg"},
+        {name: "Finest TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/finest-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/63a00e4e-eb16-4c55-9917-d1d2053f8b8b.png"},
+        {name: "Tempo TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/tempo-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/09eddd54-7c9e-4036-8f9f-07d3c60c867c.png"},
+        {name: "Fora Müzik 🎧", url: "http://stream.tvcdn.net/diger-muzik/fora-muzik.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9e0d7b87-1ba4-4b1f-b769-4406a38a9851.jpeg"},
+        {name: "Mega TV İskenderun 🎧", url: "http://stream.tvcdn.net/diger-muzik/mega-tv-iskenderun.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/caaac704-e0c2-4e8a-ada7-565e4a68a46e.jpg"},
+        {name: "Demo TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/demo-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/139a7fd3-7e5a-4bef-90f4-73d8500794c0.png"},
+        {name: "Ceyhan TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/ceyhan-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c998c2a7-19e2-4363-af98-e6e7b40774d7.png"},
+        {name: "Yağmurlu TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/yagmurlu-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b013c3ce-79f1-4a67-b960-6f6f34b363e5.jpeg"},
+        {name: "Kardeş TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/kardes-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e167f3b3-b68b-46a2-ab53-a56a7e2b7ab6.png"},
+        {name: "Just Vogue TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/just-vogue-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b8a8f825-a737-4dc1-b429-5fa2ce9460f5.png"},
+        {name: "Nef TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/nef-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1779c8e-b1e4-48c8-a205-161811d2b034.png"},
+        {name: "Pala TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/pala-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/559756c0-d9b8-4ff6-8ff9-d4bb087b6167.png"},
+        {name: "Ayz TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/ayz-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0c036e8f-a671-446a-9224-ba0aad2d692d.png"},
+        {name: "Sönmez TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/sonmez-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e7578e04-aeb6-494f-bef5-672c6efef128.png"},
+
+        {name: "TRT Müzik 🎧", url: "http://stream.tvcdn.net/muzik/trt-muzik.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e9efa31e-106b-40e0-ab4e-a760061c7ad6.png"},
+        {name: "Dream Türk 🎧", url: "http://stream.tvcdn.net/muzik/dream-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b7ff7221-f255-439d-9ee9-0f73348005b8.png"},
+        {name: "Powertürk TV 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c866b6f0-00bd-40b9-9583-8cbdbe6a503e.png"},
+        {name: "Power TV 🎧", url: "http://stream.tvcdn.net/muzik/power-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ccb54b98-472f-4c36-a48f-46431c84ab6a.png"},
+        {name: "Kral Pop TV 🎧", url: "http://stream.tvcdn.net/muzik/kral-pop-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/61431fea-4103-46a3-9f8c-aad1504b9776.png"},
+        {name: "Number One TV 🎧", url: "http://stream.tvcdn.net/muzik/number-one-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c46cb81f-8075-442a-be24-d77a05f57921.png"},
+        {name: "Number One Türk 🎧", url: "http://stream.tvcdn.net/muzik/number-one-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8fdc5969-a87a-4067-a74a-65d88c131166.png"},
+        {name: "Milyon TV 🎧", url: "http://stream.tvcdn.net/muzik/milyon-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ade59000-47db-4695-ab72-d26658094ec8.png"},
+        {name: "Tatlıses TV 🎧", url: "http://stream.tvcdn.net/muzik/tatlises-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c65a05ac-96c4-4e80-b232-d27e88fc70c6.png"},
+        {name: "TMB 🎧", url: "http://stream.tvcdn.net/muzik/tmb.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bff30a45-6e50-456c-af0e-62c62191c837.png"},
+        {name: "Power Dance 🎧", url: "http://stream.tvcdn.net/muzik/power-dance.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/aca9e643-a4b0-4f01-abd5-66a5a2fc1042.png"},
+        {name: "Power Love 🎧", url: "http://stream.tvcdn.net/muzik/power-love.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f755a1c1-097f-4692-a7a8-c804da8d1ed5.png"},
+        {name: "Powertürk Akustik 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-akustik.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2005fd7a-ffe1-497a-a56b-ac60bcb3a2a2.png"},
+        {name: "Powertürk Slow 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-slow.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fcec79e5-9d47-4812-86ac-00728538ad7f.png"},
+        {name: "Powertürk Taptaze 🎧", url: "http://stream.tvcdn.net/muzik/powerturk-taptaze.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ebb82c5c-86ac-4dc5-ba78-b26e536cebf7.png"},
+        {name: "Number 1 Damar 🎧", url: "http://stream.tvcdn.net/muzik/number-1-damar.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2330eb6b-5e83-44ed-a2c5-028417f4cb67.png"},
+        {name: "Number 1 Dance 🎧", url: "http://stream.tvcdn.net/muzik/number-1-dance.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/45eb173b-8b68-4caa-a5d3-65dc044b08e9.png"},
+        {name: "Mega TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/mega-tv-iskenderun.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/caaac704-e0c2-4e8a-ada7-565e4a68a46e.jpg"},
+        {name: "Fora Müzik 🎧", url: "http://stream.tvcdn.net/diger-muzik/fora-muzik.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9e0d7b87-1ba4-4b1f-b769-4406a38a9851.jpeg"},
+
+ 
+        {name: "Damar Web TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/damar-web-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ff9bad51-26ca-40cb-8c05-071f1c775546.png"},
+        {name: "Arabesk Web 🎧", url: "http://stream.tvcdn.net/diger-muzik/arabesk-web-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/372149bf-3045-43ea-9794-dfea243bfb0e.png"},
+        {name: "Sıla TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/sila-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/92b15cce-55df-4138-a88e-e1c222eab7c9.png"},
+        {name: "Zeyno 🎧", url: "http://stream.tvcdn.net/diger-muzik/zeyno.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/21718aa9-5ff3-4620-acd8-68fbc544508d.png"},
+        {name: "Dost Web TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/dost-web-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f8af5ed8-4d05-4c2f-aa71-7d8e45ec19c2.png"},
+        {name: "Toppop TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/toppop-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4a8468ec-c134-4db1-93ef-699f15e1522b.png"},
+        {name: "Ezo TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/ezo-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/5b807bfa-5808-4af2-8a4b-4212e6d3d132.png"},
+        {name: "Arma TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/arma-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4ed2a8ac-fd7f-4379-84cc-af1473c3fa72.png"},
+        {name: "Genç SMS 🎧", url: "http://stream.tvcdn.net/diger-muzik/genc-sms-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fc1e5546-cc3e-4c7e-b379-f16052c81901.png"},
+        {name: "Aviva 🎧", url: "http://stream.tvcdn.net/diger-muzik/aviva.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8c8a9c78-0e9a-456c-8427-a727f81c8ca8.png"},
+        {name: "Finest TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/finest-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/63a00e4e-eb16-4c55-9917-d1d2053f8b8b.png"},
+        {name: "Tempo TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/tempo-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/09eddd54-7c9e-4036-8f9f-07d3c60c867c.png"},
+        {name: "Slow Karadeniz TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/slow-karadeniz-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c8bba93e-76e5-426a-8d4a-8b545559be59.png"},
+        {name: "Yansıma Müzik TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/yansima-muzik-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e3cebccd-85e4-4837-9ab4-425cd3cd4c17.jpeg"},
+        {name: "Yağmurlu TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/yagmurlu-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b013c3ce-79f1-4a67-b960-6f6f34b363e5.jpeg"},
+        {name: "Kardeş TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/kardes-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e167f3b3-b68b-46a2-ab53-a56a7e2b7ab6.png"},
+        {name: "Just Vogue TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/just-vogue-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b8a8f825-a737-4dc1-b429-5fa2ce9460f5.png"},
+        {name: "Nef TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/nef-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1779c8e-b1e4-48c8-a205-161811d2b034.png"},
+        {name: "Pala TV 🎧", url: "http://stream.tvcdn.net/diger-muzik/pala-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/559756c0-d9b8-4ff6-8ff9-d4bb087b6167.png"},
+
+
+
+
+
+
+
+
+
+
+
+],
+Spor: [
+
+
+
+        {name: "Bein Haber ⚽", url: "https://ancient-shape-c20a.yedekbirkankam.workers.dev/https://sei.5f6456ac9bb69c44.click/p/mactanmaca3523.shop/601/a.cf-worker-fb2aa8d086469859.workers.dev/chunklist_hd.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQxMTFf/BEIN%20SPORT%20HABER.png"},
+        {name: "Bein 1 ⚽", url: "https://due.7cbd07151f7a2d82.click/itis/8c1437d28413db5112720e3ce0579154/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwNTM2ODdf/Bein1.jpg"},
+        {name: "Bein 2 ⚽", url: "https://ancient-shape-c20a.yedekbirkankam.workers.dev/https://sei.5f6456ac9bb69c44.click/p/mactanmaca3523.shop/602/a.cf-worker-fb2aa8d086469859.workers.dev/chunklist_hd.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwNTM2ODZf/Bein2.jpg"},
+        {name: "Bein 3 ⚽", url: "https://9.zirvedeyim49.cfd/yayinb2.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwNTM2ODVf/Bein3.jpg"},
+        {name: "Spor ⚽", url: "https://tprpr.cxn.genwcdn.live/e/3030.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwNTM2ODVf/Bein3.jpg"},
+        {name: "Spor1 ⚽", url: "https://9.zirvedeyim49.cfd/yayinb3.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwNTM2ODVf/Bein3.jpg"},
+
+
+
+
+
+        {name: "TRT Spor Yıldız ⚽", url: "http://stream.tvcdn.net/spor/trt-spor-yildiz.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/27f74187-ef2a-4928-9515-77422081119c.png"},
+        {name: "A Spor ⚽", url: "http://stream.tvcdn.net/spor/a-spor.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/14f4941c-00e7-4662-9a21-8203dc37b51a.png"},
+        {name: "Sports TV ⚽", url: "http://stream.tvcdn.net/spor/sports-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/96bc5554-741b-4e91-8b4f-7b3bcc1e4c1d.png"},
+        {name: "Tivibu Spor ⚽", url: "http://stream.tvcdn.net/spor/tivibu-spor.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f771bddf-7354-4857-8d33-51be11bc7bdd.png"},
+        {name: "FB TV ⚽", url: "http://stream.tvcdn.net/spor/fb-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bf46ecf5-390b-42d0-8599-8b48b23f3bc8.png"},
+        {name: "GS TV ⚽", url: "http://stream.tvcdn.net/spor/gs-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/777501f0-ebb0-450b-913e-a3c1e2e977fe.png"},
+        {name: "Briç ve Satranç TV ⚽", url: "http://stream.tvcdn.net/spor/bric-ve-satranc-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2bc82127-7e38-496b-9854-10e6b4c1a9b2.png"},
+        {name: "Fit Yaşa TV ⚽", url: "http://stream.tvcdn.net/spor/fit-yasa-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/639df808-f325-4b05-8cdb-9ed151338087.png"},
+        {name: "Ziraat Türkiye Kupası TV ⚽", url: "http://stream.tvcdn.net/spor/ziraat-turkiye-kupasi-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6f73f66b-d2d3-451d-9f56-5d1b27172abc.png"},
+
+
+        {name: "TRT Spor Yıldız  ⚽", url: "http://stream.tvcdn.net/spor/trt-spor-yildiz.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/27f74187-ef2a-4928-9515-77422081119c.png"},
+        {name: "A Spor  ⚽", url: "http://stream.tvcdn.net/spor/a-spor.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/14f4941c-00e7-4662-9a21-8203dc37b51a.png"},
+        {name: "Sports TV  ⚽", url: "http://stream.tvcdn.net/spor/sports-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/96bc5554-741b-4e91-8b4f-7b3bcc1e4c1d.png"},
+        {name: "Tivibu Spor  ⚽", url: "http://stream.tvcdn.net/spor/tivibu-spor.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f771bddf-7354-4857-8d33-51be11bc7bdd.png"},
+        {name: "FB TV  ⚽", url: "http://stream.tvcdn.net/spor/fb-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bf46ecf5-390b-42d0-8599-8b48b23f3bc8.png"},
+        {name: "GS TV  ⚽", url: "http://stream.tvcdn.net/spor/gs-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/777501f0-ebb0-450b-913e-a3c1e2e977fe.png"},
+        {name: "Briç ve Satranç TV  ⚽", url: "http://stream.tvcdn.net/spor/bric-ve-satranc-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2bc82127-7e38-496b-9854-10e6b4c1a9b2.png"},
+
+
+
+
+
+
+
+
+
+
+],
+Belgesel: [
+
+        {name: "DMAX 🦏", url: "https://tvsms.club/tvz.php?kanal=toppop&file=.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwMTJf/SMAX.png"},
+        {name: "TEVE 2", url: "https://teve2.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8?start=LIVE&end=END", logo: "https://od.lk/s/NzJfNDYwMjQwMTVf/TEVE%202.png"},
+        {name: "TRT Belgesel 🦏", url: "http://stream.tvcdn.net/belgesel/trt-belgesel.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/1da7293b-5598-4e00-a5f8-3bd327af9467.png"},
+        {name: "TGRT Belgesel 🦏", url: "http://stream.tvcdn.net/belgesel/tgrt-belgesel.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c6c727a2-b2be-4d9b-a32c-48ffa778cbb6.png"},
+        {name: "Yaban TV 🦏", url: "http://stream.tvcdn.net/belgesel/yaban-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/808e5d06-f9a6-4989-ac8c-63f686e61ea0.png"},
+        {name: "Çiftçi TV 🦏", url: "http://stream.tvcdn.net/belgesel/ciftci-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0ddba95e-9ad0-4d8a-9527-b562e173da80.png"},
+        {name: "Tarım TV 🦏", url: "http://stream.tvcdn.net/belgesel/tarim-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2038e897-1bbf-4744-8028-975e32561396.png"},
+        {name: "Köy TV 🦏", url: "http://stream.tvcdn.net/belgesel/koy-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6014fb29-bf4c-4e83-8982-949179e6bd8e.png"},
+        {name: "DMAX 🦏", url: "http://stream.tvcdn.net/eglence/dmax.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/32da9e04-0514-4e3c-b8e1-854f1fc175ed.png"},
+        {name: "TLC 🦏", url: "http://stream.tvcdn.net/eglence/tlc.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9871d781-b961-45cc-a287-c304f02bef1d.png"},
+        {name: "Kültür Sanat TV 🦏", url: "http://stream.tvcdn.net/eglence/kultur-sanat-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/871add1b-5165-4aa1-9799-c93185f8841d.png"},
+        {name: "Belgesel TV 🦏", url: "http://stream.tvcdn.net/eglence/belgesel-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6982e864-f429-4e6e-b3ba-d064ae84ff13.png"},
+        {name: "Sağlıklı Günler TV 🦏", url: "http://stream.tvcdn.net/eglence/saglikli-gunler-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b46f11bf-bd55-4203-974c-ac36d14dc7d3.png"},
+        {name: "Tarih TV 🦏", url: "http://stream.tvcdn.net/eglence/tarih-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f438ceb7-c0a8-4b3c-9415-aea43a02b93e.png"},
+        {name: "CNBC-e 🦏", url: "http://stream.tvcdn.net/ekonomi/cnbc-e.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4371c426-66c5-4452-ba3e-439a0718a997.png"},
+        {name: "Belem Türk TV 🦏", url: "http://stream.tvcdn.net/yerel/belem-turk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/82ea9645-e22d-4968-a544-659ca6b88eb8.png"},
+        {name: "Teve 2 🦏", url: "http://stream.tvcdn.net/eglence/teve2.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4cad68c0-fa2c-4b84-a1c2-1f0704eca7a4.png"},
+        {name: "Teve 2 🦏", url: "http://stream.tvcdn.net/eglence/teve2.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4cad68c0-fa2c-4b84-a1c2-1f0704eca7a4.png"},
+        {name: "Teve 2 🦏", url: "http://stream.tvcdn.net/eglence/teve2.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4cad68c0-fa2c-4b84-a1c2-1f0704eca7a4.png"},
+        {name: "TLC 🦏", url: "http://stream.tvcdn.net/eglence/tlc.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9871d781-b961-45cc-a287-c304f02bef1d.png"},
+        {name: "TGRT Belgesel 🦏", url: "http://stream.tvcdn.net/belgesel/tgrt-belgesel.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c6c727a2-b2be-4d9b-a32c-48ffa778cbb6.png"},
+        {name: "Çiftçi TV 🦏", url: "http://stream.tvcdn.net/belgesel/ciftci-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0ddba95e-9ad0-4d8a-9527-b562e173da80.png"},
+        {name: "Tarım TV 🦏", url: "http://stream.tvcdn.net/belgesel/tarim-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2038e897-1bbf-4744-8028-975e32561396.png"},
+
+
+
+],
+Dini: [
+
+        {name: "Dost TV 🕋", url: "http://stream.tvcdn.net/dini/dost-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/95e2b9a5-991b-4eda-bd0f-ec3c570d9147.png"},
+        {name: "Meltem TV 🕋", url: "http://stream.tvcdn.net/dini/meltem-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/61b5c17b-e0dd-4702-bb9b-689097e4648f.png"},
+        {name: "TV 5 🕋", url: "http://stream.tvcdn.net/dini/tv-5.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/3df2642a-042c-45b6-b292-01600c5590cd.png"},
+        {name: "Diyar TV 🕋", url: "http://stream.tvcdn.net/dini/diyar-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ea4fe219-8fe0-4476-b636-3242ae8d2bf5.png"},
+        {name: "Gonca TV 🕋", url: "http://stream.tvcdn.net/dini/gonca-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/1e57f122-68ae-4bd2-8aa1-ad5cdd7e5000.png"},
+        {name: "İLK TV 🕋", url: "http://stream.tvcdn.net/dini/ilk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/58500568-8b50-4b69-8b43-d303c933ca61.png"},
+        {name: "Kudüs TV 🕋", url: "http://stream.tvcdn.net/dini/kudus-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2c5ca955-eefe-4c69-81fa-007da1d9d18f.png"},
+        {name: "Lalegül TV 🕋", url: "http://stream.tvcdn.net/dini/lalegul-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/97578c5d-493f-4a99-ab6b-aedc02609cf0.png"},
+        {name: "On4 TV 🕋", url: "http://stream.tvcdn.net/dini/on4-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6023b7ab-402a-4f5f-aefa-210d9f97b562.png"},
+        {name: "Kanal 12 🕋", url: "http://stream.tvcdn.net/dini/kanal-12.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6e6dcb66-3dd2-4ef8-9b2b-9c470844c047.png"},
+        {name: "Aile TV 🕋", url: "http://stream.tvcdn.net/dini/aile-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4ca28592-03c0-44cb-85c5-29216afb1bf4.png"},
+        {name: "Aşr-ı Şerif TV 🕋", url: "http://stream.tvcdn.net/dini/asr-i-serif-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8d763e76-e879-4e05-a451-8d39b77838e0.png"},
+        {name: "Kuran-ı Kerim Dersleri 🕋", url: "http://stream.tvcdn.net/dini/kuran-i-kerim-dersleri.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/425981cf-189f-45c1-ad8d-6b0ccd2a12d5.png"},
+        {name: "İslam TV 🕋", url: "http://stream.tvcdn.net/dini/islam-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0a36c783-1a76-448d-b0d9-98add4aeab2d.png"},
+        {name: "İlmihal TV 🕋", url: "http://stream.tvcdn.net/dini/ilmihal-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/62afff37-79e9-441b-a63e-f1fba2c22182.png"},
+        {name: "Asr-ı Saadet TV 🕋", url: "http://stream.tvcdn.net/dini/asr-i-saadet-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/cfd07412-b7c1-4a85-84f5-ac743f8f1a84.png"},
+        {name: "İlahiler TV 🕋", url: "http://stream.tvcdn.net/dini/ilahiler-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/51a438e2-9c50-45fc-afd3-2764cc8714a8.png"},
+        {name: "Vaaz TV 🕋", url: "http://stream.tvcdn.net/dini/vaaz-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/19a58ffe-437d-4272-9ccc-34bb839634e1.png"},
+        {name: "Sat 7 Türk 🕋", url: "http://stream.tvcdn.net/dini/sat-7-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ca0a924f-a0ee-44a4-b590-b500ceb3e42b.png"},
+        {name: "Kanal Hayat 🕋", url: "http://stream.tvcdn.net/dini/kanal-hayat.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f0ca3918-8cbd-4607-b9d0-6a27d6f29425.png"},
+        {name: "ABN Turkey 🕋", url: "http://stream.tvcdn.net/dini/abn-turkey.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/19146761-32ae-46ad-a0f0-2862c2f887e9.png"},
+        {name: "Mukabele TV 🕋", url: "http://stream.tvcdn.net/dini/mukabele-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/23b391ac-5edb-4e37-8664-27da64fb0785.png"},
+        {name: "SÜPER TÜRK TV 🕋", url: "http://75.119.144.48/SUPERTURK_TV_STREAM/index.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "Dizi Film TV 🕋", url: "http://stream.tvcdn.net/eglence/dizi-film-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2b0e5b6e-3c75-4d34-b392-90330b629bbb.png"},
+
+
+        {name: "Semerkand Way  🕋", url: "http://stream.tvcdn.net/dini/semerkand-way.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/01b74bf2-a065-4d30-9ad6-a4213eb88cfa.png"},
+        {name: "Dost TV  🕋", url: "http://stream.tvcdn.net/dini/dost-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/95e2b9a5-991b-4eda-bd0f-ec3c570d9147.png"},
+        {name: "Meltem TV  🕋", url: "http://stream.tvcdn.net/dini/meltem-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/61b5c17b-e0dd-4702-bb9b-689097e4648f.png"},
+        {name: "Diyar TV  🕋", url: "http://stream.tvcdn.net/dini/diyar-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ea4fe219-8fe0-4476-b636-3242ae8d2bf5.png"},
+        {name: "İLK TV  🕋", url: "http://stream.tvcdn.net/dini/ilk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/58500568-8b50-4b69-8b43-d303c933ca61.png"},
+        {name: "Kudüs TV  🕋", url: "http://stream.tvcdn.net/dini/kudus-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2c5ca955-eefe-4c69-81fa-007da1d9d18f.png"},
+        {name: "Lalegül TV  🕋", url: "http://stream.tvcdn.net/dini/lalegul-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/97578c5d-493f-4a99-ab6b-aedc02609cf0.png"},
+        {name: "On4 TV  🕋", url: "http://stream.tvcdn.net/dini/on4-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6023b7ab-402a-4f5f-aefa-210d9f97b562.png"},
+        {name: "Mihrap TV  🕋", url: "http://stream.tvcdn.net/dini/mihrap-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bfe4289b-7785-46f4-ba62-8bbf4a188d45.pngg"},
+        {name: "Sat 7 Türk  🕋", url: "http://stream.tvcdn.net/dini/sat-7-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ca0a924f-a0ee-44a4-b590-b500ceb3e42b.png"},
+        {name: "Kanal Hayat  🕋", url: "http://stream.tvcdn.net/dini/kanal-hayat.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f0ca3918-8cbd-4607-b9d0-6a27d6f29425.png"},
+
+
+
+
+
+
+
+
+
+],
+Çocuk: [
+
+        {name: "TRT Çocuk", url: "http://stream.tvcdn.net/cocuk-egitim/trt-cocuk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/18ae3d9c-711b-40e5-8602-8eada4748df2.png"},
+        {name: "TRT EBA", url: "http://stream.tvcdn.net/cocuk-egitim/trt-eba.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/a80dd610-3836-4d80-9968-70a8f32165bc.png"},
+        {name: "Çocuklara Özel TV", url: "http://stream.tvcdn.net/cocuk-egitim/cocuklara-ozel-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/222d7e52-2895-46a1-92a2-93e2ce1c8317.png"},
+        {name: "Çizgi Film TV", url: "http://stream.tvcdn.net/cocuk-egitim/cizgi-film-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/320542d3-bc8c-4e63-ba97-3b89426dda8c.png"},
+        {name: "Zarok TV Kürtçe ", url: "https://zindikurmanci.zaroktv.com.tr/hls/stream.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/15e32d50-4058-4fa6-a6e2-3e1dbc35c70c.jpeg"},
+        {name: "Ceyhan TV ", url: "http://stream.tvcdn.net/diger-muzik/ceyhan-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c998c2a7-19e2-4363-af98-e6e7b40774d7.png"},
+
+
+
+        {name: "TRT Çocuk ", url: "http://stream.tvcdn.net/cocuk-egitim/trt-cocuk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/18ae3d9c-711b-40e5-8602-8eada4748df2.png"},
+        {name: "TRT EBA", url: "http://stream.tvcdn.net/cocuk-egitim/trt-eba.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/a80dd610-3836-4d80-9968-70a8f32165bc.png"},
+
+
+
+
+
+
+],
+Film: [
+
+        {name: "SÜPER TÜRK TV 🎧", url: "http://75.119.144.48/SUPERTURK_TV_STREAM/index.m3u8?start=LIVE&end=END", logo: "https://i.ibb.co/mHt7rQf/Tryerel.png"},
+        {name: "Tivi Türk", url: "http://stream.tvcdn.net/diger-eglence/tivi-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/917ae8e7-cebb-4647-9fe7-8e9529088d73.png"},
+        {name: "TV 4", url: "http://stream.tvcdn.net/eglence/tv-4.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8b16e995-ddb6-4201-8ba1-b33f7536ca50.png"},
+        {name: "Cine 1", url: "http://stream.tvcdn.net/diger-eglence/cine-1.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f9cd2889-605a-4f77-ab14-9425570a8bac.png"},
+        {name: "TV 4", url: "http://stream.tvcdn.net/diger-eglence/cine-1.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8b16e995-ddb6-4201-8ba1-b33f7536ca50.png"},
+
+
+
+
+
+
+
+
+],
+Yerel: [
+
+
+        {name: "5 Ocak TV", url: "http://stream.tvcdn.net/yerel/5-ocak-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c66ed7a4-24d2-4c23-aa1e-61e6fc26fa8e.png"},
+        {name: "AGRT", url: "http://stream.tvcdn.net/yerel/agrt.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/33d410a7-764e-405d-8633-4b63dd73790e.png"},
+        {name: "Ahi TV", url: "http://stream.tvcdn.net/yerel/ahi-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/3b96e507-5036-4b92-939a-d5b516d2ddd4.png"},
+        {name: "Aksu TV", url: "http://stream.tvcdn.net/yerel/aksu-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/d81bdb8a-5ba3-4eb9-bbae-f3b323c79f60.png"},
+        {name: "Alanya Posta TV", url: "http://stream.tvcdn.net/yerel/alanya-posta-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1e20ac4-fc50-4c80-87a8-c85f100f5cfb.png"},
+        {name: "Alanya TV", url: "http://stream.tvcdn.net/yerel/alanya-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0b006053-533a-485c-9b31-f159ab832c5e.png"},
+        {name: "Anadolu Net TV", url: "http://stream.tvcdn.net/yerel/anadolu-net-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2befe401-b51c-42f5-b750-a8e4d8b085a4.png"},
+        {name: "As TV", url: "http://stream.tvcdn.net/yerel/as-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/448471a0-f688-4ac5-a279-1771f384b6de.png"},
+        {name: "Bodrum Kent TV", url: "http://stream.tvcdn.net/yerel/bodrum-kent-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f32e47e7-916c-40c7-a8a6-83d9e459e53a.png"},
+        {name: "BRTV Karabük", url: "http://stream.tvcdn.net/yerel/brtv-karabuk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/5702a0f6-7b78-4645-bacf-516f63fed0b7.png"},
+        {name: "Çay TV", url: "http://stream.tvcdn.net/yerel/cay-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0539d847-8740-42dc-be86-8e1fe7bc5aa2.png"},
+        {name: "Deha TV", url: "http://stream.tvcdn.net/yerel/deha-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/7dcf6e33-022d-4b8b-bb71-6a6d31a43c54.png"},
+        {name: "Develi Çağrı TV", url: "http://stream.tvcdn.net/yerel/develi-cagri-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/6ee40646-97e2-41cb-8e8d-d6b422b2954b.jpg"},
+        {name: "Dim TV", url: "http://stream.tvcdn.net/yerel/dim-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ce326dc3-6050-4712-a4cd-d056e835b1c7.png"},
+        {name: "Düzce TV", url: "http://stream.tvcdn.net/yerel/duzce-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/88553157-968b-4284-b82b-f86773c3ef2e.png"},
+        {name: "Edirne TV", url: "http://stream.tvcdn.net/yerel/edirne-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/498a97e1-d327-4478-b243-62c3b20209f6.png"},
+        {name: "Ekol TV", url: "http://stream.tvcdn.net/yerel/ekol-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/647d5a6c-242e-4431-a8b2-9b8ff27c01ae.png"},
+        {name: "Erciş TV", url: "http://stream.tvcdn.net/yerel/ercis-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0611b1aa-aa79-4dcb-ad05-7166dde05c94.png"},
+        {name: "Erciyes TV", url: "http://stream.tvcdn.net/yerel/erciyes-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8cbd6897-e2bd-479d-adbc-dca66071adea.PNG"},
+        {name: "ER TV Malatya", url: "http://stream.tvcdn.net/yerel/er-tv-malatya.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0796ea62-8920-4048-8fea-13f0e029b4a7.png"},
+        {name: "Erzurum Web TV", url: "http://stream.tvcdn.net/yerel/erzurum-web-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/aa47edbe-2f8d-4db2-ba25-cdbe46d6fef8.png"},
+        {name: "ES TV", url: "http://stream.tvcdn.net/yerel/es-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b72fcc30-33ee-4b0f-a941-74a2c3502fb9.png"},
+        {name: "ETV Kayseri", url: "http://stream.tvcdn.net/yerel/etv-kayseri.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/537bd1f7-01d3-4afc-93ea-819a4ee26393.png"},
+        {name: "ETV Manisa", url: "http://stream.tvcdn.net/yerel/etv-manisa.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/215cb110-1ffa-4f64-923f-b3969e482ced.png"},
+        {name: "FRT Fethiye", url: "http://stream.tvcdn.net/yerel/frt-fethiye.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fdd32b72-e1c5-4d16-8530-d6705a2d57b8.png"},
+        {name: "GRT Gaziantep", url: "http://stream.tvcdn.net/yerel/grt-gaziantep.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8364e951-2aa7-4e58-9579-69eac7d56cd2.png"},
+        {name: "Gurbet 24 TV", url: "http://stream.tvcdn.net/yerel/gurbet-24-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b7ecbf31-2fc5-48db-bc59-2fb920c731be.png"},
+        {name: "Haber 61 TV", url: "http://stream.tvcdn.net/yerel/haber-61-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/d1369b16-75de-49dd-893f-8a197d7b1130.png"},
+        {name: "Hunat TV", url: "http://stream.tvcdn.net/yerel/hunat-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/107b5f4f-3336-4d15-8dba-1a4529e40301.webp"},
+        {name: "Hür Türk TV", url: "http://stream.tvcdn.net/yerel/hur-turk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/ac49e4a5-d9c2-435d-a1f2-9e9eb06f86b6.png"},
+        {name: "İçel TV", url: "http://stream.tvcdn.net/yerel/icel-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/7213d1c6-5110-4d15-908a-ae917d76418a.jpg"},
+        {name: "İlke TV", url: "http://stream.tvcdn.net/yerel/ilke-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bb28dc1a-2368-4482-ab3a-020bb953fae9.png"},
+        {name: "İzmir Time 35", url: "http://stream.tvcdn.net/yerel/izmir-time-35.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/557c3d07-ac1f-49ec-95ab-8171f782580f.png"},
+        {name: "Kanal 3k", url: "http://stream.tvcdn.net/yerel/kanal-3.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/56083fc6-468c-4fdd-bb0c-5fbc65316124.png"},
+        {name: "Kanal 15", url: "http://stream.tvcdn.net/yerel/kanal-15.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/906cf95e-e70e-4fb2-b03c-fee6f0d292ad.png"},
+        {name: "Kanal 23", url: "http://stream.tvcdn.net/yerel/kanal-23.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4ef4336c-ddd3-4de6-acda-9ce6f474902a.png"},
+        {name: "Kanal 26", url: "http://stream.tvcdn.net/yerel/kanal-26.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fc74dba3-be84-48bd-a1fc-06a06e7037cc.png"},
+        {name: "Kanal 32", url: "http://stream.tvcdn.net/yerel/kanal-32.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8f937d9e-b63c-4110-b734-fc6cfc11a6e8.png"},
+        {name: "Kanal 33", url: "http://stream.tvcdn.net/yerel/kanal-33.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/3045a8ca-99c6-45ac-835f-44e99e3f0e6b.png"},
+        {name: "Kanal 34", url: "http://stream.tvcdn.net/yerel/kanal-34.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/dd542b6c-6472-4661-90af-016c86db6aca.png"},
+        {name: "Kanal 38", url: "http://stream.tvcdn.net/yerel/kanal-38.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/10f62bce-0a0b-4caa-aa69-8d44a037d731.png"},
+        {name: "Kanal 53", url: "http://stream.tvcdn.net/yerel/kanal-53.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9eb1d0e2-2e57-468d-ae02-c208d98d55d9.png"},
+        {name: "Kanal 58", url: "http://stream.tvcdn.net/yerel/kanal-58.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/61ca9d01-b1cc-4163-8ceb-4e51ad1d4f70.png"},
+        {name: "Kanal Avrupa", url: "http://stream.tvcdn.net/yerel/kanal-avrupa.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/60c8ebf4-c5f6-4cb8-bab7-aae682e074dc.png"},
+        {name: "Kanal Fırat", url: "http://stream.tvcdn.net/yerel/kanal-firat.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f00f1472-e8e7-4f30-b9e3-fb4376a43aac.png"},
+        {name: "Kanal G", url: "http://stream.tvcdn.net/yerel/kanal-g.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/904d01fa-01cb-4f2d-9b8e-784061c29d00.png"},
+        {name: "Kanal Urfa", url: "http://stream.tvcdn.net/yerel/kanal-urfa.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/8ef995b2-0b34-4541-b396-bfe826d4f271.png"},
+        {name: "Kanal V", url: "http://stream.tvcdn.net/yerel/kanal-v.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0c455b18-ce0f-435f-be77-4416d112918e.png"},
+        {name: "Kanal Z", url: "http://stream.tvcdn.net/yerel/kanal-z.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/3d865e9c-e84e-4746-8b87-0ba91eb3af4e.png"},
+        {name: "Kay TV", url: "http://stream.tvcdn.net/yerel/kay-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c9bb4b89-2609-45ca-9f3b-01c66084a559.png"},
+        {name: "Kent Türk", url: "http://stream.tvcdn.net/yerel/kent-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b80ee8ad-5cd5-4a12-885d-0def48c0ebfb.png"},
+        {name: "Kocaeli TV", url: "http://stream.tvcdn.net/yerel/kocaeli-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/af084b20-c036-4884-91ff-3ca3accec3ab.png"},
+        {name: "Konya Olay TV", url: "http://stream.tvcdn.net/yerel/konya-olay-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/fda805fb-82ec-493a-9d92-6b7cc6eaeb48.jpg"},
+        {name: "Konya TV", url: "http://stream.tvcdn.net/yerel/konya-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/a3db9643-bdfc-4287-9c9d-58315d650b0e.jpg"},
+        {name: "Life TV Kayseri", url: "http://stream.tvcdn.net/yerel/life-tv-kayseri.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9a5fc361-21cb-40f8-afa9-bf3ca70a5caf.png"},
+        {name: "Line TV Bursa", url: "http://stream.tvcdn.net/yerel/line-tv-bursa.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bf3f550c-2235-4bb1-a842-6d0a38df0a90.png"},
+        {name: "Marmara TV", url: "http://stream.tvcdn.net/yerel/marmara-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/33a233f4-6fde-4dd4-bc5b-b99d33b3346d.png"},
+        {name: "Mavi Karadeniz", url: "http://stream.tvcdn.net/yerel/mavi-karadeniz.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/5175fea1-0cc0-485d-9b66-01fe886b0f64.png"},
+        {name: "Mercan TV", url: "http://stream.tvcdn.net/yerel/mercan-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/acbd241d-4a57-47b0-997c-d82e6f869e98.png"},
+        {name: "Merkez TV Muğla", url: "http://stream.tvcdn.net/yerel/merkez-tv-mugla.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f704dc84-6442-47d5-ab97-c244c0a25cc0.png"},
+        {name: "Metropol TV", url: "http://stream.tvcdn.net/yerel/metropol-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/4201374b-528e-4f2b-b4ee-5b13091766b6.png"},
+        {name: "Muğla Türk TV", url: "http://stream.tvcdn.net/yerel/mugla-turk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/47deb27a-c05d-42b1-9622-4cfed00f6f9b.png"},
+        {name: "Nora TV", url: "http://stream.tvcdn.net/yerel/nora-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/44997a5b-348d-4116-8be6-107b6535f905.png"},
+        {name: "Olay Türk", url: "http://stream.tvcdn.net/yerel/olay-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/50ce8374-a8fe-477a-8bb0-d9001967148a.png"},
+        {name: "On6", url: "http://stream.tvcdn.net/yerel/on6.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2472316c-0f07-4277-9955-fd81d49e8b9b.png"},
+        {name: "Pazarcık TV", url: "http://stream.tvcdn.net/yerel/pazarcik-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/e1fd5c94-16c7-4e29-a02c-a07378f2edb2.png"},
+        {name: "Sun RTV", url: "http://stream.tvcdn.net/yerel/sun-rtv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/10066a0e-6a6c-460f-a8aa-18dd3605268a.png"},
+        {name: "Süper Kanal", url: "http://stream.tvcdn.net/yerel/super-kanal.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bdc5ba66-e446-4a25-8e5c-e7a7f306abca.png"},
+        {name: "Taş TV", url: "http://stream.tvcdn.net/yerel/tas-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/3d6fdb74-0ee8-4110-af0a-24d461926780.jpg"},
+
+
+       {name: "Tivi6", url: "http://stream.tvcdn.net/yerel/tivi6.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/9c64876c-5e36-402c-86eb-e3b179072d21.png"},
+        {name: "Trakya Türk TV", url: "http://stream.tvcdn.net/yerel/trakya-turk-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/2cab54cd-868f-478a-8c5b-4fb0c4f4fa4c.png"},
+        {name: "Ton TV Çanakkale", url: "http://stream.tvcdn.net/yerel/ton-tv-canakkale.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/783364fa-298e-4a56-a602-ba34f50392e6.png"},
+        {name: "Tokat Web TV", url: "http://stream.tvcdn.net/yerel/tokat-web-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/c54b76b9-1c52-44e1-86b3-86aa44dc6468.png"},
+        {name: "Turhal Süper TV", url: "http://stream.tvcdn.net/yerel/turhal-super-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/27885d5b-6c49-4257-bd09-f20f63489090.png"},
+        {name: "Türk Haber", url: "http://stream.tvcdn.net/yerel/turk-haber.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/7b8dbf43-064f-4458-9c93-71089eaf493b.png"},
+        {name: "TV 1 Kayseri", url: "http://stream.tvcdn.net/yerel/tv-1-kayseri.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/f843631d-b47b-4476-8cad-914f2adc4133.png"},
+        {name: "TV 25", url: "http://stream.tvcdn.net/yerel/tv-25.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/81f002fb-a59f-480e-9aa0-91b096ab491e.png"},
+        {name: "TV 264", url: "http://stream.tvcdn.net/yerel/tv-264.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/d7296b88-706a-423b-85a1-54c09d9197eb.png"},
+        {name: "TV 38", url: "http://stream.tvcdn.net/yerel/tv-38.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/21c47acc-3f31-454c-89b9-abf622b80404.png"},
+        {name: "TV 41", url: "http://stream.tvcdn.net/yerel/tv-41.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/de6c8885-b1ca-41d8-8e96-67e32cc7a881.png"},
+        {name: "TV 48", url: "http://stream.tvcdn.net/yerel/tv-48.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/da621b46-9ced-4d17-90ff-90c116ab0018.png"},
+        {name: "TV 52", url: "http://stream.tvcdn.net/yerel/tv-52.m3u8?start=LIVE&end=END", logo: "TV52.tr  http://assets.tvcdn.net/1c27dd5e-0bd9-4928-8b1e-20c5da6118c3.png"},
+        {name: "TV A", url: "http://stream.tvcdn.net/yerel/tv-a.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0d3de4c3-5086-4917-9b25-969292858a8e.png"},
+        {name: "TV Kayseri", url: "http://stream.tvcdn.net/yerel/tv-kayseri.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/b9fd9a9a-849c-4d83-8f99-34402e15c52a.png"},
+        {name: "Urfanatik TV", url: "http://stream.tvcdn.net/yerel/urfanatik-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/232aa8e5-a3c8-49b3-b54d-2a4a21ef04d1.png"},
+        {name: "Urfa Haber TV", url: "http://stream.tvcdn.net/yerel/urfa-haber-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/0fe5c0ed-a08b-4694-9463-4930505c654c.png"},
+        {name: "Vangölü TV", url: "http://stream.tvcdn.net/yerel/vangolu-tv.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/563b6c56-aa50-4c1b-a202-8024c43d5ed1.png"},
+        {name: "VTV Türk", url: "http://stream.tvcdn.net/yerel/vtv-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/91735481-57ae-4f0e-b03a-6a5734ac447f.png"},
+        {name: "World Türk", url: "http://stream.tvcdn.net/yerel/world-turk.m3u8?start=LIVE&end=END", logo: "http://assets.tvcdn.net/bb19d4f4-1846-451d-ab79-7343e0944590.png"},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      ]
+    };
+
+    const video = document.getElementById('video-player');
+    const hls = new Hls();
+    const currentChannelElement = document.getElementById('current-channel');
+    const countrySelector = document.querySelector('.country-selector');
+    const clockElement = document.getElementById('clock');
+    let selectedChannelIndex = -1;
+    
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display the time immediately
+
+    function loadChannels() {
+      const country = document.getElementById('country-select').value;
+      const channelList = document.getElementById('channel-list');
+      channelList.innerHTML = '';
+      channels[country].forEach((channel, index) => {
+        const li = document.createElement('li');
+        
+        const logo = document.createElement('img');
+        logo.src = channel.logo;
+        logo.alt = `${channel.name} logo`;
+        logo.className = 'channel-logo';
+        
+        const name = document.createElement('span');
+        name.textContent = channel.name;
+        
+        li.appendChild(logo);
+        li.appendChild(name);
+        
+        li.setAttribute('tabindex', '0');
+        li.onclick = () => changeChannel(channel.name, channel.url, index);
+        channelList.appendChild(li);
+        li.onkeydown = (e) => {
+          if (e.key === 'Enter') {
+            changeChannel(channel.name, channel.url, index);
+          }
+       };
+      });
+      
+      // Update the flag
+      countrySelector.setAttribute('data-country', country);
+    }
+
+    function changeChannel(name, url) {
+      currentChannelElement.textContent = name;
+      if (Hls.isSupported()) {
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.addEventListener('loadedmetadata', function() {
+          video.play();
+        });
+      }
+      
+      // Save the current channel to localStorage
+      localStorage.setItem('lastChannel', JSON.stringify({name, url}));
+    }
+
+    function startChromecast() {
+      if (window.chrome && window.chrome.cast && window.chrome.cast.isAvailable) {
+        console.log('Starting Chromecast...');
+        console.log('Chromecast iniciado (simulación)');
+        alert('Iniciando transmisión a Chromecast...');
+      } else {
+        console.log('Chromecast no está disponible');
+        alert('Chromecast no está disponible en este dispositivo');
+      }
+    }
+
+    function searchChannels() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const country = document.getElementById('country-select').value;
+      const channelList = document.getElementById('channel-list');
+      channelList.innerHTML = '';
+      
+      channels[country].forEach((channel) => {
+        if (channel.name.toLowerCase().includes(searchTerm)) {
+          const li = document.createElement('li');
+          li.textContent = channel.name;
+          li.onclick = () => changeChannel(channel.name, channel.url);
+          channelList.appendChild(li);
+        }
+      });
+    }
+
+    // Load the last channel when the page is opened
+    window.addEventListener('load', function() {
+      const lastChannel = JSON.parse(localStorage.getItem('lastChannel'));
+      if (lastChannel) {
+        changeChannel(lastChannel.name, lastChannel.url);
+      }
+      loadChannels();
+    });
+
+    // Initialize with the first country's channels
+    loadChannels();
+
+    // Add event listener for country selection change
+    document.getElementById('country-select').addEventListener('change', loadChannels);
+  </script>
+</body></html>
+<!-- partial -->
+  
+</body>
+</html>
