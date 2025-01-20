@@ -1,61 +1,60 @@
-.loading-bar {
-  background-color: #e2e2e2;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, p, h2, h3, h4, ul, li, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-family: Roboto;
+}
+
+.loading-page {
+  background: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-page .counter {
+  text-align: center;
+}
+.loading-page .counter p {
+  font-size: 40px;
+  font-weight: 100;
+  color: #f60d54;
+}
+.loading-page .counter h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: -10px;
+}
+.loading-page .counter hr {
+  background: #f60d54;
+  border: none;
   height: 1px;
-  position: fixed;
+}
+.loading-page .counter {
+  position: relative;
+  width: 200px;
+}
+.loading-page .counter h1.abs {
+  position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
-  
-  .indicator {
-    width: 0%;
-    height: 16px;
-    background-color: black;
-    background: linear-gradient(45deg, black, #f16d3a);
-    animation: app-loading-bar 9s linear;
-    animation-iteration-count: infinite;
-  }
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.splash-logo {
-  padding: 0 30px;
-  img {
-    max-width: 420px;
-    width: 100%;
-  }
-}
-
-.app-loading {
-  height: 100%;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  background: Black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-@keyframes app-loading-bar {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
+.loading-page .counter .color {
+  width: 0px;
+  overflow: hidden;
+  color: #f60d54;
 }
