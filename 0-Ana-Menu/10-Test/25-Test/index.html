@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P-SPORT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>مشاهدة قنوات كرة القدم</h1>
+        </div>
+    </header>
+
+    <div id="channel-container" class="channel-container">
+        <!-- القنوات ستتم إضافتها هنا ديناميكيًا بواسطة JavaScript -->
+    </div>
+
+    <!-- نافذة التشغيل المدمجة -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">×</button>
+            <div id="video-container" class="video-container">
+                <!-- مشغل الفيديو -->
+                <video id="video-player" controls></video>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.snapchat.com" target="_blank">سناب شات</a>
+            <a href="https://www.instagram.com" target="_blank">إنستقرام</a>
+            <a href="https://www.telegram.org" target="_blank">تليغرام</a>
+        </div>
+        <div class="share-app">
+            <button onclick="shareApp()">مشاركة التطبيق</button>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.19/dist/hls.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
