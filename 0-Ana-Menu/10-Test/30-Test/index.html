@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PALYTV</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Turis Tv</h1>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <script src="https://photocall.tv/js/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    function RemoveAccents(str) {
+      var accents = 'ÀÁÂÃÄÅĄĀāàáâãäåąßÒÓÔÕÕÖØŐòóôőõöøĎďDŽdžÈÉÊËĘèéêëęðÇçČčĆćÐÌÍÎÏĪìíîïīÙÚÛÜŰùűúûüĽĹŁľĺłÑŇŃňñńŔŕŠŚŞšśşŤťŸÝÿýŽŻŹžżźđĢĞģğ';
+      var accentsOut = 'AAAAAAAAaaaaaaaasOOOOOOOOoooooooDdDZdzEEEEEeeeeeeCcCcCcDIIIIIiiiiiUUUUUuuuuuLLLlllNNNnnnRrSSSsssTtYYyyZZZzzzdGGgg';
+      str = str.split('');
+      var strLen = str.length;
+      var i, x;
+      for (i = 0; i < strLen; i++) {
+        if ((x = accents.indexOf(str[i @CCORCH @)) != -1) {
+            str[i @CCORCH @ = accentsOut[x @CCORCH @;
+              }
+            }
+            return str.join('');
+          }
+          $(document).ready(function() {
+            $('#myInput').on('input', function() {
+              var value = $(this).val().toLowerCase();
+              $('.canales > .dropdown').filter(function() {
+                $(this).toggle($(this).find('a').attr('title').toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+  </script>
+  <style type="text/css">
+    body {
+      font: 20px 'Open Sans', sans-serif;
+      font-weight: bold;
+      background: BLACK;
+      user-select: none;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: #bbb;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #bbb;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #444;
+    }
+
+    section {
+      display: none;
+      padding: 0px;
+    }
+
+    input.tab {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      padding: 20px;
+      font-weight: 500;
+      color: rgb(0, 0, 0);
+    }
+
+    label:hover {
+      color: #3EB495;
+      cursor: pointer;
+    }
+
+    input:checked+label {
+      color: #3EB495;
+      /*	border-bottom: 0px solid red;*/
+    }
+
+    #tab1:checked~#content1,
+    #tab2:checked~#content2,
+    #tab3:checked~#content3,
+    #tab4:checked~#content4 #tab5:checked~#content5 #tab6:checked~#content6 {
+      display: block;
+    }
+
+    .canales {
+      text-align: center;
+    }
+
+    .canales .card {
+      display: inline-block;
+      background: rgb(0, 0, 0);
+      width: 145px;
+      height: 110px;
+      margin: 0px;
+      border-radius: 8%;
+      position: relative;
+      box-shadow: 0 10px 70px 0 rgb(255, 25, 25), 0 3px 1px -2px rgba(51, 51, 51, 0.2), 0 1px 5px 0 rgba(51, 51, 51, 0.12);
+    }
+
+    .canales .card img {
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 2;
+      display: none;
+      float: left;
+      min-width: 130px;
+      padding: 5px 0;
+      margin: 0 0 0;
+      font-size: 20px;
+      text-align: left;
+      list-style: none;
+      background-color: #fff;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, .15);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 68, 255, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, .175)
+    }
+
+    .dropdown-menu>li>a {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: 400;
+      line-height: 1.42857143;
+      color: #333;
+      white-space: nowrap
+    }
+
+    .dropdown-menu>li>a:focus,
+    .dropdown-menu>li>a:hover {
+      color: #262626;
+      text-decoration: none;
+      background-color: #f5f5f5
+    }
+
+    .open>.dropdown-menu {
+      display: block
+    }
+  </style>
+</head>
+
+<body ondragstart="return false" ondrop="return false" onselectstart="return false" oncontextmenu="return false"> <input class="tab" id="tab1" type="radio" name="tabs" checked=""> <input class="tab" id="tab2" type="radio" name="tabs"> <input class="tab" id="tab3" type="radio" name="tabs"> <input class="tab" id="tab4" type="radio" name="tabs">
+  <div class="dropdown"> </div> <br>
+  <section id="content1">
+    <div class="canales">
+      <div class="dropdown">
+
+        <div class="dropdown"><a href="go:TIGOPY1" target="_blank" class="card" title="TIGO PARAGUAY"><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" width="90" heigth="90"></a></div>
+
+        <div class="dropdown"><a href="go:TIGOPY2" target="_blank" class="card" title="TIGO PARAGUAY"><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" width="100" heigth="100"></a></div>
+
+        <div class="dropdown"><a href="go:TIGOPY3" target="_blank" class="card" title="TIGO PARAGUAY"><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" width="90" heigth="90"></a></div>
+
+        <div class="dropdown"><a href="go:TIGOPY-3" target="_blank" class="card" title="TIGO PARAGUAY"><img src="http://imgfz.com/i/4E012ZH.png" width="130" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:TELEFUTURO" target="_blank" class="card" title="TELEFUTURO"><img src="https://sfntv.co/webp/logos/optimized/telefuturo.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:SNT" target="_blank" class="card" title="SNT"><img src="https://sfntv.co/webp/logos/optimized/snt.webp" width="100" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:C9N" target="_blank" class="card" title="C9N"><img src="https://canales.online/img/logo_canal/C9N.png" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:PARAVISION" target="_blank" class="card" title="PARAVISION"><img src="https://sfntv.co/webp/logos/optimized/paravision.webp" width="130" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:TRECEPY" target="_blank" class="card" title="TRECE PY"><img src="https://sfntv.co/webp/logos/optimized/trecepy.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:TRECEPY2" target="_blank" class="card" title="TRECE PY 2"><img src="https://sfntv.co/webp/logos/optimized/trecepy.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:LATELE" target="_blank" class="card" title="LA TELE PY"><img src="https://sfntv.co/webp/logos/optimized/latele.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:SURTV" target="_blank" class="card" title="SURTV"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Sur_TV_Itap%C3%BAa_logo_2022.png/150px-Sur_TV_Itap%C3%BAa_logo_2022.png" width="90" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:GENTV" target="_blank" class="card" title="GENTV"><img src="http://imgfz.com/i/kEoZrx3.png" width="100" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:PYTV" target="_blank" class="card" title="PYTV"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Paraguay_TV_logo.png/600px-Paraguay_TV_logo.png?20191103231527" width="100" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:ABC" target="_blank" class="card" title="ABC"><img src="http://imgfz.com/i/vRpx6yt.png" width="140" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:NPY" target="_blank" class="card" title="NPY"><img src="https://canales.online/img/logo_canal/NPY_Noticias_Paraguay-e1634221230637.png" width="140" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:UNICANAL" target="_blank" class="card" title="UNICANAL"><img src="http://imgfz.com/i/m6A8ynT.jpeg" width="130" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:TELEFUTUR2" target="_blank" class="card" title="TELEFUTURO"><img src="https://sfntv.co/webp/logos/optimized/telefuturo.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:SNT2" target="_blank" class="card" title="SNT"><img src="https://sfntv.co/webp/logos/optimized/snt.webp" width="100" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:C9N2" target="_blank" class="card" title="C9N"><img src="https://canales.online/img/logo_canal/C9N.png" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:PARAVI2" target="_blank" class="card" title="PARAVISION"><img src="https://sfntv.co/webp/logos/optimized/paravision.webp" width="130" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:TRECEPY3" target="_blank" class="card" title="TRECE PY"><img src="https://sfntv.co/webp/logos/optimized/trecepy.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:LATELE2" target="_blank" class="card" title="LA TELE PY"><img src="https://sfntv.co/webp/logos/optimized/latele.webp" width="140" heigth="150"></a></div>
+
+        <div class="dropdown"><a href="go:GENTV2" target="_blank" class="card" title="GENTV"><img src="http://imgfz.com/i/kEoZrx3.png" width="100" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:PYTV2" target="_blank" class="card" title="PYTV"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Paraguay_TV_logo.png/600px-Paraguay_TV_logo.png?20191103231527" width="100" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:ABC2" target="_blank" class="card" title="ABC"><img src="http://imgfz.com/i/vRpx6yt.png" width="140" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:NPY2" target="_blank" class="card" title="NPY"><img src="https://canales.online/img/logo_canal/NPY_Noticias_Paraguay-e1634221230637.png" width="140" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:UNICANAL2" target="_blank" class="card" title="UNICANA2"><img src="http://imgfz.com/i/m6A8ynT.jpeg" width="130" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:VENUS2" target="_blank" class="card" title="VENUS TV"><img src="https://directostv.teleame.com/wp-content/uploads/2019/11/Venus-Media-TV-Paraguay-en-vivo-Online.png" width="140" heigth="130"></a></div>
+
+        <div class="dropdown"><a href="go:TVCAM" target="_blank" class="card" title="TV CAMARA DE DIPUTADOS"><img src="https://clarovideocdn6.clarovideo.net/CVPERU/PELICULAS/TVCMARA/EXPORTACION_WEB/SS/TVCMARA_t-290x163.png" width="140" heigth="130"></a></div>
+
+        <div class="dropdown"><a href="go:MITV" target="_blank" class="card" title="MITV"><img src="http://imgfz.com/i/ARtxiTF.png" width="130" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:RCC" target="_blank" class="card" title="RCC"><img src="https://cdn.rcc.com.py/2017/12/logo-mobile-rcc.png" width="130" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:TVA" target="_blank" class="card" title="TV AIRE PY"><img src="https://iptv.com.py/wp-content/uploads/2021/06/tvairepng-300x100.png" width="130" heigth="140"></a></div>
+
+        <div class="dropdown"><a href="go:SOMOSESTE" target="_blank" class="card" title="SOMOS DEL ESTE"><img src="http://imgfz.com/i/uj0mtic.png" width="75" heigth="100"></a></div>
+
+        <div class="dropdown"><a href="go:VENUS" target="_blank" class="card" title="VENUS TV"><img src="https://directostv.teleame.com/wp-content/uploads/2019/11/Venus-Media-TV-Paraguay-en-vivo-Online.png" width="140" heigth="130"></a></div>
+
+        <div class="dropdown"><a href="go:FARRATV" target="_blank" class="card" title="FARRA PLAY"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF6VnF0fHGP3Br6sMyfpKWbjR7S14l4pMpe2hL5Xjb6A&s" width="100" heigth="130"></a></div>
+
+        <div class="dropdown"><a href="go:HEITV" target="_blank" class="card" title="HEI TV PY"><img src="http://imgfz.com/i/tV7cQqR.png" width="150" heigth="150"></a></div <div class="dropdown"><a href="go:SBT" target="_blank" class="card" title="SBT BRASIL"><img src="http://imgfz.com/i/AoayB5I.png" width="130" heigth="130"></a>
+      </div>
+
+      <div class="dropdown"><a href="go:GLOBOBR" target="_blank" class="card" title="REDE GLOBO BRASIL"><img src="https://i.ibb.co/VYW0KHq/GLOBO-BRASIL.jpg" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:RECORD" target="_blank" class="card" title="RECORD BRASIL"><img src="https://static.wikia.nocookie.net/logopedia/images/0/07/Rederecord19982001v2.png" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:TELEFE" target="_blank" class="card" title="TELEFE ARG"><img src="https://sfntv.co/webp/logos/optimized/telefe.webp" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:13ARG" target="_blank" class="card" title="EL TRECE ARG"><img src="https://sfntv.co/webp/logos/optimized/eltrece.webp" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:EL9" target="_blank" class="card" title="EL NUEVE ARG"><img src="https://sfntv.co/webp/logos/optimized/nueve.webp" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:TVP" target="_blank" class="card" title="TV PUBLICA"><img src="https://sfntv.co/webp/logos/optimized/tvpublica.webp" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:AMAERICA" target="_blank" class="card" title="AMERICA TV ARG"><img src="https://sfntv.co/webp/logos/optimized/america.webp" width="100" heigth="130"></a></div>
+
+      <div class="dropdown"><a href="go:FOX12" target="_blank" class="card" title="FOX SPORTS 1"><img src="https://i.postimg.cc/Sn1GxLPf/Fox-Sports.png" width="150" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:FOX13" target="_blank" class="card" title="FOX SPORTS 2"><img src="https://i.postimg.cc/KKKDkkSS/Fox-Sports-2.png" width="150" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:FOX14" target="_blank" class="card" title="FOX SPORTS 3"><img src="https://i.postimg.cc/3yPCg8Yy/Fox-Sports-3.png" width="150" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN16" target="_blank" class="card" title="ESPN 1 ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/espn.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN18" target="_blank" class="card" title="ESPN 2 ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/espn2.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN19" target="_blank" class="card" title="ESPN 3 ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/espn3.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN4" target="_blank" class="card" title="ESPN 4 ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/espn4.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN21" target="_blank" class="card" title="ESPN PREMIUM ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/fsportp.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ESPN22" target="_blank" class="card" title="ESPN EXTRA PLUS ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/espnex.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNTSPOR1" target="_blank" class="card" title="TNT SPORTS ARG"><img src="https://futbolplaytvhd.com/imge/TNTarg.png" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNT23" target="_blank" class="card" title="TNT SPORTS ARG"><img src="https://futbolplaytvhd.com/imge/TNTarg.png" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TYC2" target="_blank" class="card" title="TyC SPORTS ARG"><img src="https://quemirasbobo.surge.sh/webp/logos/tyc.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNTSPOR2" target="_blank" class="card" title="TNT SPORTS CHILE"><img src="https://seeklogo.com/images/T/tnt-sports-chile-logo-B6EA5EA7BC-seeklogo.com.png" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNTSPOR3" target="_blank" class="card" title="TNT SPORTS BRASIL"><img src="https://futbolplaytvhd.com/imge/TNTbra.png" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DTV1" target="_blank" class="card" title="DIRECTV 1"><img src="https://quemirasbobo.surge.sh/webp/logos/dtvsports.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DTV2" target="_blank" class="card" title="DIRECTV 2"><img src="https://quemirasbobo.surge.sh/webp/logos/dtvsports2.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DTVPLUS" target="_blank" class="card" title="DIRECTV PLUS"><img src="https://quemirasbobo.surge.sh/webp/logos/dtvsportsplus.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DTVMOTOR" target="_blank" class="card" title="DIRECTV MOTORS"><img src="https://i.ibb.co/ZzjN3jZ/dmotor.png" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DTVFIGHT" target="_blank" class="card" title="DIRECTV FIGHT"><img src="https://quemirasbobo.surge.sh/webp/logos/dtvfight.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:VTV" target="_blank" class="card" title="VTV URUGUAY"><img src="https://quemirasbobo.surge.sh/webp/logos/vtv.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:VTVPLUS" target="_blank" class="card" title="VTV PLUS URUGUAY"><img src="https://quemirasbobo.surge.sh/webp/logos/vtvplus.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:WINPLUS" target="_blank" class="card" title="WIN SPORTS PLUS"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsv5SUZG-Bd5XziHUplkxJbKe_z4vK8T48k7ooWqPKZQ&s" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:ECDF" target="_blank" class="card" title="ECDF"><img src="https://quemirasbobo.surge.sh/webp/logos/ecdf.webp" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:LIGAMAX" target="_blank" class="card" title="LIGAMAX PERÙ"><img src="https://i.imgur.com/yegv2nc.png" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:GOLPERU" target="_blank" class="card" title="GOL PERÙ"><img src="https://www.futbolplaytvhd.com/imge/golperu.png" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:FM1" target="_blank" class="card" title="FORMULA1"><img src="http://imgfz.com/i/HmtnTFR.jpeg" width="120" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TUDN" target="_blank" class="card" title="TUDN MEXICO"><img src="https://i.postimg.cc/qMdcxk8P/tudn.png" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:AFI" target="_blank" class="card" title="AFIZZIONADOS"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrg_i6d78BfvOgReQx_zIX5Z4R3jgBfV81hQtPTpQ9Pg&s" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:BEIN" target="_blank" class="card" title="BEIN SPORTS"><img src="https://i.postimg.cc/hP9rkJD4/image.png" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DAZN" target="_blank" class="card" title="DAZN ESPAÑA"><img src="https://i.postimg.cc/wx4F5KWH/dazn1.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:PREMIERE" target="_blank" class="card" title="PREMIERE BRASIL"><img src="https://www.futbolplaytvhd.com/imge/premiere.png" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:SPORTV" target="_blank" class="card" title="SPORTV BRASIL"><img src="https://www.futbolplaytvhd.com/imge/sportv.png" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:BANDSPORTS" target="_blank" class="card" title="BAND SPORTS"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2sG01PLF5DT5dk9iPKOk-LOLDK_766yDUWck4z0KelSb9X41Cqt3zcBL5WRo9nc-iAsQ&usqp=CAU" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBO1" target="_blank" class="card" title="HBO 1"><img src="https://sfntv.co/webp/logos/optimized/hbo.webp" width="100" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBO2" target="_blank" class="card" title="HBO 2 "><img src="https://sfntv.co/webp/logos/optimized/hbo2.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBOFAM" target="_blank" class="card" title="HBO FAMILY"><img src="https://sfntv.co/webp/logos/optimized/hbofam.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBOPLUS" target="_blank" class="card" title="HBO PLUS"><img src="https://sfntv.co/webp/logos/optimized/hboplus.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBOPOP" target="_blank" class="card" title="HBO POP"><img src="https://sfntv.co/webp/logos/optimized/hbopop.webp" width="100" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBOSIG" target="_blank" class="card" title="HBO SIGNATURE"><img src="https://sfntv.co/webp/logos/optimized/hbosig.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:HBOEXTR" target="_blank" class="card" title="HBO EXTRENE"><img src="https://sfntv.co/webp/logos/optimized/hboxtreme.webp" width="100" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL1" target="_blank" class="card" title="UNIVERSAL PREMIERE"><img src="https://sfntv.co/webp/logos/optimized/universalpremiere.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL2" target="_blank" class="card" title="UNIVERSAL CINEMA"><img src="https://sfntv.co/webp/logos/optimized/universalcinema.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL3" target="_blank" class="card" title="UNIVERSAL REALITY"><img src="https://sfntv.co/webp/logos/optimized/universalreality.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL4" target="_blank" class="card" title="UNIVERSAL COMEDY"><img src="https://sfntv.co/webp/logos/optimized/universalcomedy.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL5" target="_blank" class="card" title="UNIVERSAL CRIMEN"><img src="https://sfntv.co/webp/logos/optimized/universalcrime.webp" width="130" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:CINEMAX" target="_blank" class="card" title="CINEMAX"><img src="https://sfntv.co/webp/logos/optimized/cinemax.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:SPACE" target="_blank" class="card" title="SPACE"><img src="https://sfntv.co/webp/logos/optimized/space.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:STAR" target="_blank" class="card" title="STARCHANNEL"><img src="https://sfntv.co/webp/logos/optimized/star.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:CINECANAL" target="_blank" class="card" title="CINECANAL"><img src="https://sfntv.co/webp/logos/optimized/cinecanal.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:AXN" target="_blank" class="card" title="AXN"><img src="https://sfntv.co/webp/logos/optimized/axn.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:AMC" target="_blank" class="card" title="AMC"><img src="https://sfntv.co/webp/logos/optimized/amc.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:FX" target="_blank" class="card" title="FX HD"><img src="https://sfntv.co/webp/logos/optimized/fx.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:SYFY" target="_blank" class="card" title="SYFY HD"><img src="https://sfntv.co/webp/logos/optimized/syfy.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNT" target="_blank" class="card" title="TNT HD"><img src="https://sfntv.co/webp/logos/optimized/tnt.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:TNTSERIES" target="_blank" class="card" title="TNT SERIES HD"><img src="https://sfntv.co/webp/logos/optimized/tntseries.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:PARAMOUNT" target="_blank" class="card" title="PARAMOUNT CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/paramount.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:UNIVERSAL" target="_blank" class="card" title="UNIVERSAL TV"><img src="https://sfntv.co/webp/logos/optimized/universal.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:WARNERTV" target="_blank" class="card" title="WARNER TV"><img src="https://sfntv.co/webp/logos/optimized/warner.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:COMEDYCEN" target="_blank" class="card" title="COMEDIA CENTRAL"><img src="https://sfntv.co/webp/logos/optimized/comedy.webp" width="140" heigth="150"></a></div>
+
+      <div class="dropdown"><a href="go:DHE" target="_blank" class="card" title="DHE CHANNEL"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Canal_DHE_logo.svg/2560px-Canal_DHE_logo.svg.png" width="140" heigth="150"></a></div <div class="dropdown"><a href="go:SONY" target="_blank" class="card" title="SONY CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/sony.webp" width="140" heigth="150"></a>
+    </div <div class="dropdown"><a href="go:PASIONES" target="_blank" class="card" title="PASIONES NOVELA"><img src="https://sfntv.co/webp/logos/optimized/pasiones.webp" width="140" heigth="150"></a></div class="dropdown"><a href="go:ESTRELLA" target="_blank" class="card" title="LAS ESTRELLAS"><img src="https://images.ctfassets.net/ack3kcrk3cz6/497SEX3E00SB8TqXhSPnHr/b4402340165e33c360bbf14ae583f7c6/Las_Estrellas.webp" width="140" heigth="150"></a></div <div class="dropdown"><a href="go:CARTOON" target="_blank" class="card" title="CARTOON NETWORK"><img src="https://sfntv.co/webp/logos/optimized/cn.webp" width="100" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:NICK" target="_blank" class="card" title="NIKELODEON"><img src="https://sfntv.co/webp/logos/optimized/nick.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:NICKJR" target="_blank" class="card" title="NICK JUNIOR"><img src="https://sfntv.co/webp/logos/optimized/nickjr.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:DISNEY" target="_blank" class="card" title="DISNEY CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/disney.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:DISNEYJR" target="_blank" class="card" title="DISNEY JUNIOR"><img src="https://sfntv.co/webp/logos/optimized/junior.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:KIDS" target="_blank" class="card" title="DISCOVERY KIDS"><img src="https://sfntv.co/webp/logos/optimized/diskids.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:CARTOONITO" target="_blank" class="card" title="CARTOONITO"><img src="https://sfntv.co/webp/logos/optimized/cnito.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:DISCOVERY" target="_blank" class="card" title="DISCOVERY CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/discovery.webp" width="100" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:WORLD" target="_blank" class="card" title="DISCOVERY WORLD"><img src="https://sfntv.co/webp/logos/optimized/disworld.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:THEATER" target="_blank" class="card" title="DISCOVERY THEATER"><img src="https://sfntv.co/webp/logos/optimized/distheater.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:SCI" target="_blank" class="card" title="DISCOVERY SCI"><img src="https://sfntv.co/webp/logos/optimized/disscience.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:TLC" target="_blank" class="card" title="DISCOVERY TLC"><img src="https://sfntv.co/webp/logos/optimized/tlc.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:TURBO" target="_blank" class="card" title="DISCOVERY TURBO"><img src="https://sfntv.co/webp/logos/optimized/turbo.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:HGTV" target="_blank" class="card" title="DISCOVERY HGTV"><img src="https://sfntv.co/webp/logos/optimized/hgtv.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:HISTORY" target="_blank" class="card" title="HISTORY CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/history.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:HISTORY2" target="_blank" class="card" title="HISTORY2 CHANNEL"><img src="https://sfntv.co/webp/logos/optimized/history2.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:APLANET" target="_blank" class="card" title="ANIMAL PLANET"><img src="https://sfntv.co/webp/logos/optimized/aplanet.webp" width="140" heigth="150"></a></div>
+
+    <div class="dropdown"><a href="go:APLANET" target="_blank" class="card" title="NATIONAL GEOGRAPHIC"><img src="https://sfntv.co/webp/logos/optimized/natgeo.webp" width="140" heigth="150"></a></div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
