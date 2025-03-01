@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by saifpsx</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Search</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .center-content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .search {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    .files-cont {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .file {
+      border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 9px 10px -2px rgba(0,0,0,0.2);
+      width: calc(33.333333% - 20px);
+      background-color: white;
+      
+      border: 1px solid #ddd;
+      transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    }
+
+    .file:hover {
+    transform: translate(0,-4px);
+    box-shadow: 0px 17px 19px -2px rgba(0,0,0,0.2);
+}
+    
+    .file img {
+      width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    }
+
+    .file__info {
+      text-align: center;
+    }
+
+    .file__title {
+      font-size: 16px;
+    margin-bottom: 6px;
+    margin-top: 0px;
+    font-weight: 600;
+    color: #252a3b;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 25px;
+    }
+.file__title:before {
+    width: 16px;
+    position: absolute;
+    left: 14px;
+    top: 22px;
+}
+    .file__date {
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-content">
+    <header class="top-nav">
+      <input class="search search--width" id="searchInput" type="search" placeholder="أبحث هنا...">
+    </header>
+    <div class="files-cont">
+      <!-- بطاقات الملفات -->
+      <div class="file" >
+              <a href="#" class="jolink">
+
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+    <h2 class="file__title">
+      بين سبورت
+    </h2>
+    <span class="file__date">1HD</span>
+  </div></a>
+
+      </div>
+      <div class="file">
+        <a href="#" class="jolink">
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+          <h2 class="file__title"> بين سبورت</h2>
+          <span class="file__date">2HD</span>
+        </div></a>
+      </div>
+    <div class="file" >
+              <a href="#" class="jolink">
+
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+    <h2 class="file__title">
+      بين سبورت
+    </h2>
+    <span class="file__date">3HD</span>
+  </div></a>
+
+      </div>
+      <div class="file">
+        <a href="#" class="jolink">
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+          <h2 class="file__title">بين سبورت</h2>
+          <span class="file__date">4HD</span>
+        </div></a>
+      </div>
+    <div class="file" >
+              <a href="#" class="jolink">
+
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+    <h2 class="file__title">
+      الكأس
+    </h2>
+    <span class="file__date">1HD</span>
+  </div></a>
+
+      </div>
+      <div class="file">
+        <a href="#" class="jolink">
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+          <h2 class="file__title">الكأس</h2>
+          <span class="file__date">2HD</span>
+        </div></a>
+      </div>
+    <div class="file" >
+              <a href="#" class="jolink">
+
+        <img src="https://www.altkia.com/wp-content/uploads/2015/04/beIN-Sports-11-HD-EN.jpg" alt="File Image">
+        <div class="file__info">
+    <h2 class="file__title">
+      الكأس
+    </h2>
+    <span class="file__date">3HD</span>
+  </div></a>
+
+      </div>
+      <div class="file">
+        <a href="#" class="jolink">
+        <img src="https://th.bing.com/th/id/OIP.wuyDZpry5BaptjDNqA1fBQHaHa?w=799&h=800&rs=1&pid=ImgDetMain" alt="File Image">
+        <div class="file__info">
+          <h2 class="file__title">الفجر الجديد</h2>
+          <span class="file__date">3HD</span>
+        </div></a>
+      </div>
+    <div class="file" >
+              <a href="#" class="jolink">
+
+        <img src="https://th.bing.com/th/id/OIP.wuyDZpry5BaptjDNqA1fBQHaHa?w=799&h=800&rs=1&pid=ImgDetMain" alt="File Image">
+        <div class="file__info">
+    <h2 class="file__title">
+      الفجر الجديد
+    </h2>
+    <span class="file__date">4HD</span>
+  </div></a>
+
+      </div>
+      <div class="file">
+        <a href="#" class="jolink">
+        <img src="https://th.bing.com/th/id/OIP.wuyDZpry5BaptjDNqA1fBQHaHa?w=799&h=800&rs=1&pid=ImgDetMain" alt="File Image">
+        <div class="file__info">
+          <h2 class="file__title">الفجر الجديد</h2>
+          <span class="file__date">5HD</span>
+        </div></a>
+      </div>
+    
+
+      <!-- وهكذا -->
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function() {
+      var filter = this.value.toUpperCase();
+      document.querySelectorAll('.file').forEach(function(file) {
+        var title = file.querySelector('.file__title').textContent.toUpperCase();
+        file.style.display = title.includes(filter) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
