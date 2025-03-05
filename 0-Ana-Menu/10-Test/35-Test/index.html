@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belgesel İzleme Sayfası</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20vw; /* Sidebar genişliğini ekranın %20'si olarak ayarla */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebar img {
+    width: 10vw; /* Resim genişliği ekran genişliğinin %10'u olarak ayarla */
+    height: auto; /* Yükseklik orantılı olarak ayarlanacak */
+    display: none; /* Varsayılan olarak gizle */
+}
+#solSidebar {
+    position: relative;
+}
+
+#sagSidebar {
+    position: relative;
+}
+
+.mainContent {
+    width: 65vw; /* Ana içeriğin genişliğini ekran genişliğinin %60'ı olarak ayarla */
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    position: relative;
+}
+
+/* Sağ ve sol reklam alanları */
+.sidebar-ad {
+    width: 15vw; /* Sağ ve sol reklam alanı toplamda 35vw olacak şekilde ayarlandı */
+    height: 200px; /* Reklam yüksekliği ihtiyaca göre ayarlanabilir */
+	    padding: 1vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sol reklam */
+#solAd {
+    left: 3%;
+}
+
+/* Sağ reklam */
+#sagAd {
+    right: -3%;
+}
+
+/* Reklam iframe'leri için stil */
+.sidebar-ad iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#videoContainer {
+    width: 60vw; /* Video container genişliğini ekran genişliğinin %90'ı olarak ayarla */
+    height: 65vh; /* Yüksekliği ekran yüksekliğinin %50'si olarak ayarla */
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1vw;
+    border: 0.2vw solid #007BFF;
+    margin-bottom: 2vw;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+#aciklamaContainer {
+    width: 57vw; /* Açıklama container genişliğini ekran genişliğinin %90'ı olarak ayarla */
+    text-align: center;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 1vw;
+    border-radius: 1vw;
+    border: 0.2vw solid #007BFF;
+    display: none; /* Açıklama varsayılan olarak gizli */
+}
+
+/* Resimlerin konumlandırılması */
+.solUst, .solAlt, .sagUst, .sagAlt {
+    position: absolute;
+    width: 100px; /* Resim genişliği */
+    height: auto; /* Resim yüksekliği otomatik */
+}
+
+.solUst {
+    top: 5px;
+    left: 5px;
+}
+
+.solAlt {
+    bottom: 5px;
+    left: 5px;
+}
+
+.sagUst {
+    top: 5px;
+    right: 5px;
+}
+
+.sagAlt {
+    bottom: 5px;
+    right: 5px;
+}
+
+/* Select bölümleri için stil */
+select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.1vw; /* Genişlik orantılı yazı boyutu */
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    width: 30vw; /* Genişlik viewport genişliğine göre ayarlandı */
+    height: 6vh; /* Yükseklik viewport yüksekliğine göre ayarlandı */
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: bold;
+    box-sizing: border-box; /* Padding ve border'ı genişlik ve yüksekliğe dahil et */
+}
+
+select:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    border: 2px solid #ccc;
+}
+
+    <title>Resim Örnekleri</title>
+.resim-konteyner {
+    width: 10vw; /* Resim konteyner genişliğini ekran genişliğinin %40'ı olarak ayarla */
+    height: 20vh; /* Yüksekliği ekran yüksekliğinin %20'si olarak ayarla */
+    overflow: hidden;
+    position: relative;
+    margin: 1vw;
+    display: inline-block;
+}
+
+.resim-konteyner img {
+    width: 1%;
+    height: 1%;
+    object-fit: cover; /* Resmin konteynere uyum sağlamasını sağlar */
+    display: block;
+}
+
+    </style>	
+</head>
+<body>
+    <div class="container">
+    <div class="sidebar" id="solSidebar">
+        <div class="resim-konteyner">
+            <img id="solUst" src="" class="solUst" alt="">
+            <img id="solAlt" src="" class="solAlt" alt="">
+        </div>
+    </div>
+
+    <div class="mainContent">
+	        <div id="solAd" class="sidebar-ad">
+
+            <a href="https://publisher.linkvertise.com/ac/1204459" target="_blank" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;"></a>
+        </div>
+        <select id="belgeselSelect">
+            <option value="" disabled selected>Belgesel Seçin</option>
+            <option value="ucak_kazasi_raporu">Uçak Kazası Raporu / Mayday - Air Crash Investigation</option>
+            <option value="felaket_anlari">FELAKET ANLARI</option>
+            <option value="kritik_anlar">KRİTİK ANLAR</option>
+            <option value="interpol_arastirmalari">İNTERPOL ARAŞTIRMALARI</option>
+        </select>
+
+        <select id="sezonSelect" disabled>
+            <option value="" disabled selected>Sezon Seçin</option>
+        </select>
+
+        <select id="bolumSelect" disabled>
+            <option value="" disabled selected>Bölüm Seçin</option>
+        </select>
+
+        <div id="videoContainer">
+            <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+        </div>
+
+        <div id="aciklamaContainer">
+            <p id="aciklamaMetni"></p>
+        </div>
+
+
+    </div>
+
+    <div class="sidebar" id="sagSidebar">
+        <div class="resim-konteyner">
+            <img id="sagUst" src="" class="sagUst" alt="">
+            <img id="sagAlt" src="" class="sagAlt" alt="">
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        const belgeselSelect = document.getElementById('belgeselSelect');
+        const sezonSelect = document.getElementById('sezonSelect');
+        const bolumSelect = document.getElementById('bolumSelect');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const aciklamaContainer = document.getElementById('aciklamaContainer');
+        const aciklamaMetni = document.getElementById('aciklamaMetni');
+
+        const solUst = document.getElementById('solUst');
+        const solAlt = document.getElementById('solAlt');
+        const sagUst = document.getElementById('sagUst');
+        const sagAlt = document.getElementById('sagAlt');
+
+        const sezonVerileri = {
+            ucak_kazasi_raporu: [
+                { value: "ucak_kazasi_raporu_sezon1", text: "1. SEZON (2003)" },
+                { value: "ucak_kazasi_raporu_sezon2", text: "2. SEZON (2005)" },
+                { value: "ucak_kazasi_raporu_sezon3", text: "3. SEZON (2005)" },
+                { value: "ucak_kazasi_raporu_sezon4", text: "4. SEZON (2007)" },
+            ],
+            felaket_anlari: [
+                { value: "felaket_anlari_sezon1", text: "1. SEZON" },
+                { value: "felaket_anlari_sezon6", text: "6. SEZON" },
+            ],
+            kritik_anlar: [
+                { value: "kritik_anlar_sezon1", text: "1. SEZON" },
+            ],
+            interpol_arastirmalari: [
+                { value: "interpol_arastirmalari_sezon1", text: "1. SEZON" },
+            ]
+        };
+
+        const bolumVerileri = {
+            ucak_kazasi_raporu_sezon1: [
+               { 
+            value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/589205019152244/', 
+            text: '001-1. Bölüm-(Felakete Açılan Kilit / Unlocking Disaster)',
+            aciklama: '<u><i><font color=red>United Airlines Flight 811</i></font></u> & <b>İlk Vizyona Girişi : 10 Eylül 2003</b><br><br>24 Şubat 1989 tarihinde United Airlinesa ait Boeing 747 tipi uçağın Hawaiiden Yeni Zellandaya uçarken gerçekleşen uçak kazasıdır. Kargo bölümünün kapılarından birinin açılması sonucu uçaktaki 9 kişinin 23000 feette yerinden fırlayıp okyanusa serbest düşmesine neden olmuştur.',
+            resimler: {
+                solUst: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Ntrs.nasa.gov_Flight_811.jpg',
+                solAlt: 'https://i2-prod.mirror.co.uk/incoming/article31863389.ece/ALTERNATES/s1200d/0_AP917426218265.jpg',
+                sagUst: 'https://www.faa.gov/sites/faa.gov/files/images/lessons_learned/N4713U/after_landing.jpg',
+                sagAlt: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*8VlOen4h02Pxs8N3.jpg'
+                }
+                },
+                { value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/225360549453240/',
+ 	        text: '002-2. Bölüm-(Ölümcül İniş / Racing The Storm)',
+ 	        aciklama: '<u><i><font color=red>American Airlines Flight 1420</i></font></u> & <b>İlk Vizyona Girişi : 03 Eylül 2003:</b><br><br>Haziran 1999 tarihinde American Airlinesa ait bir McDonell Douglas MD-82 tipi yolcu uçağının pistte duramayarak pist dışına çıktığı ve 11 kişinin öldüğü kazadır.',
+            resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://miro.medium.com/v2/resize:fit:640/format:webp/0*PEYCeoGSabdNKlqR.JPG'
+                }
+ 	            },
+ 	            {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/2900952230166820/',
+ 	        text: '003-3. Bölüm-(Gökyüzünde Yangın / Fire on Board)',
+ 	        aciklama: '<u><i><font color=red>Swissair Flight 111</i></font></u> & <b>İlk Vizyona Girişi : 22 Ekim 2003</b><br><br>2 Eylül 1998 tarihinde Swiss Aire ait McDonnel Douglas MD-11 tipi yolcu uçağının kokpitinde çıkan yangın sonucu kontrolü kaybedilen uçağın okyanusa düştüğü ve 229 kişinin hayatını kaybettiği kazadır.Yangının business sınıfı eğlence sisteminde ki yeni oyun aletlerinde ki hatalı kablolardan kaynaklandığı ortaya çıktı.',
+            resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                {
+ 	        value:'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/506595880428775',
+ 	        text: '004-4. Bölüm-(Kör Uçuş / Flying Blind)',
+ 	        aciklama: '<u><i><font color=red>Aeroperú Flight 603</i></font></u> & <b>İlk Vizyona Girişi : 17 Eylül 2003</b><br><br>2 Ekim 1996 tarihinde Aeroperuya ait bir Boeing 757-23A tipi yolcu uçağı, Miami havalimanından Comodoro Arturo Merino Benítez Uluslararası Havalimanına uçuşu sırasında kalkıştan yaklaşık yarım saat sonra Aeroperú 603 numaralı mürettebatın hatalı hız ve yükseklik okumaları ve uçağın hava veri sistemindeki çelişkili uyarıları karıştırmaları ve bilinçsizce yanlış okumalarına dayanarak Boeing 757 pasifik okyanusuna düşer ve uçaktaki herkes (70 kişi) ölür.',
+            resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/864989791068787',
+ 	        text: '005-5. Bölüm-(Kestirme Yoldan Halletmek / Cutting Corners)',
+ 	        aciklama: '<u><i><font color=red>Alaska Airlines Flight 261</font></u> & <b>İlk Vizyona Girişi : 15 Ekim 2003</b><br><br>31 Ocak 2000 tarihinde Alaska Airlinesa ait bir McDonell Douglas MD-83 tipi yolcu uçağının 88 kişi ile birlikte pasifiğe düşmesi ile sonuçlanmıştır. Alaska Havayolları Uçuş 261 in düzeltilebilir yatay stabilizörü yanlışlıkla muhafaza edilen kriko-vida tertibatı nedeniyle sıkışıyor ve kontrol sisteminden kopuyor.',
+            resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+            	},
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/2917503095231838',
+ 	        text: '006-6. Bölüm-(Gökyüzünde Süzülmek / Flying on Empty)',
+ 	        aciklama: '<u><i><font color=red>Air Transat Flight 236</font></u> & <b>İlk Vizyona Girişi : 8 Ekim 2003</b><br><br>Air Transat 236 nolu Airbus A330 tipi uçak Toronto-Lizbon uçuşunu gerçekleştirmek için 24 Ağustos 2001 de havalanmış Atlantik Okyanusunda uçarken yakıtı tükenmiştir. Azores adalarına acil iniş yapmak zorunda kalmıştır. Uçakta 293 yolcu ve 13 mürettabat bulunmaktadır. Yakıt bitmesinin nedeni bir hidrolik yağ borusunun ve bir yakıt borusunun birlikte ovulmasına izin veren yanlış yakıt bakım borusunun kırılması ve buna bağlı sızıntının ortaya çıkmasıdır.',
+            resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                ],
+            ucak_kazasi_raporu_sezon2: [
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/4074627935988296',
+ 	        text: '007-1. Bölüm-(Patlama / Blowout)',
+ 	        aciklama: '<u><i><font color=red>British Airways Flight 5390</font></u> & <b>İlk Vizyona Girişi : 23 Ocak 2005</b><br><br>10 Haziran 1990 da British Airways Uçuş 5390 da kokpit penceresinin patlaması sonucu pilotun uçağın dışına fırlaması ve yardımcı mürettebatın bir üyesinin pilotu bacağından tutarken yardımcı pilotun acil inişini herhangi bir ölüm olmadan tamamladığı bir kazadır. Kaptanın kokpit dışında tam 21 dakika kaldıktan sonra hayatta olduğunun tespit edilmesinin yanı sıra pencere patlamasının, bakım çalışmaları sırasında yanlış boyutlarda cıvatalar takan bir bakım çalışanın neden olması ve farkın "mm" kadar küçük olması da diğer enteresan olanlardı.',
+ 	        resimler: {
+                solUst: 'https://samchui.com/wp-content/uploads/2023/03/British-Airways-Flight-5390-.jpg',
+                solAlt: 'https://www.nzherald.co.nz/resizer/v2/SPVNTXZC5GK6HULEUKNYJ7JXG4.jpg?auth=11719a6825ab84f63b2e319e2cb194e6f51648c53d4eedda9881c8021453380f&width=1440&height=909&quality=70&smart=true',
+                sagUst: 'https://www.telegraph.co.uk/content/dam/travel/2020/11/20/244887767_Shutterstock_A-British-Airways-Captain-Investigates-The-Cockpit-Cockpit-Of-A-British-Airwa_trans_NvBQzQNjv4BqnrsX827TA0LIo4g7WeNu3-Ylvpqk1VLM0JgUK-Klqgc.jpg?imwidth=1280',
+                sagAlt: 'https://taketotheskypodcast.com/wp-content/uploads/2022/02/ttts-episode93c.jpg'
+                }
+ 	            },
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/998936500932483',
+ 	        text: '008-2. Bölüm-(Yaralı Kuş / A Wounded Bird)',
+ 	        aciklama: '<u><i><font color=red>Atlantic Southeast Airlines Flight 529</font></u> & <b>İlk Vizyona Girişi : 30 Ocak 2005</b><br><br>21 Ağustos 1995 tarihinde Atlantic Southeast Havayolları Uçuş 529 un pervane bıçağında ki metal yorgunluğu nedeniyle motorunun arızalanmasıyla dönen pervanenin dengesizliği motorun kısmen kendini yırtmasına neden olur. Parçalanan motorla birlikte uçak hızlı bir şekilde irtifa kaybeder ve kısmen düşerek kısmen zorunlu iniş yaparak ormana iner. İlk anda herkes kurtulsa da toplamda dokuz kişi ölür.',
+ 	        resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/993430674793696',
+ 	        text: '009-3. Bölüm-(Uçak Kaçırma-The Killing Machine / Hijacked)',
+ 	        aciklama: '<u><i><font color=red>Air France Flight 8969</font></u> & <b>İlk Vizyona Girişi : 06 Şubat 2005</b><br><br>24 Aralık 1994 tarihinde Air France Uçuş 8969 Cezayir Houari Boumedienne Havalimanından (Armed Islamic Group (GIA)) 4 terörist tarafından kaçırılır. Teröristler uçağın Parise gitmesine izin verilmesini isterler ama Cezayir Ordusu uçağı araçlarla engeller ve uçağın kalkmasına izin vermez. Planlarını yerine getirememekle birlikte, teröristler önümüzdeki iki gün içinde üç yolcuyu öldürürler. Uçak sonra kalkış için hazırlanır ancak mürettebat uçağı yakıtın azalmasından dolayı Marsilya Provence Havaalanına yönlendirir. Fransız Silahlı Kuvvetleri’nin (GIGN) uçağa Marsilya’ya yakıt ikmali yapmak için indiğinde operasyonla rehineleri (uçak içinde ve kabinde çıkan silahlı çatışmadan sonra) korsanları öldürerek herkesi kurtarır.',
+ 	        resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                {
+            value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/527627308310840',
+  	        text: '010-4. Bölüm-(Havadaki Çarpışma-Deadly Crossroads / Mid-Air Collision)',
+ 	        aciklama: '<u><i><font color=red>Bashkirian Airlines Flight 2937 - DHL Flight 611</font></u> & <b>İlk Vizyona Girişi : 13 Şubat 2005</b><br><br>1 Temmuz 2002 de Almanyanın Münih kenti yakınlarındaki Überlingen kenti üzerinde Bashkirian Airlines Uçuş 2937 ile DHL Uçuş 611 havada çarpışırlar. İki uçakta ki toplam 71 kişi öldü. Ailesinin tamamını kaybeden Vitaly Kaloyev, daha sonra çarpışmaya yol açmasa da hava trafik kontrolörünü öldürdü.',
+ 	        resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                {
+ 	        value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/3620459514845097',
+         	text: '011-5. Bölüm-(Kayıp / Dağda Uçak Kazası-Lost / Crash on the Mountain)',
+ 	        aciklama: '<u><i><font color=red>American Airlines Flight 965</font></u> & <b>İlk Vizyona Girişi : 20 Şubat 2005</b><br><br>20 Aralık 1995 te Cali Kolombiyaya giden uçak mürettebattına Caliye doğrudan bir yaklaşım uygulamak isteyip istemedikleri sorulur. Pilotlar teklifi kabul ederler ama uçuş planı üzerinde geçmesi gereken bir noktayı bilgisayara girerken acele edip ne girdiğini görmeden enter a basınca uçak Buga yakınlarındaki bir dağa çarpar. Kazada 159 kişi ölürken 4 kişi ve bir kopek sağ olarak kurtuldu.',
+ 	        resimler: {
+                solUst: 'https://static.wixstatic.com/media/1f2fa5_c3a9cfdc6ab5417380010dac8d2e27f1~mv2.jpg/v1/fill/w_438,h_359,al_c,q_80,enc_auto/1f2fa5_c3a9cfdc6ab5417380010dac8d2e27f1~mv2.jpg',
+                solAlt: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*59LWd_oDLeEIXSBsXgrEMQ.png',
+                sagUst: 'https://miro.medium.com/v2/resize:fit:640/format:webp/0*Kp1LIRIkzbF2kTLg',
+                sagAlt: 'https://static.wixstatic.com/media/1f2fa5_33f34a9ea031453fac93e2908b161455~mv2.jpg/v1/fill/w_350,h_242,al_c,lg_1,q_80,enc_auto/1f2fa5_33f34a9ea031453fac93e2908b161455~mv2.jpg'
+                }
+ 	            },
+                {
+			value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/ferhat.polaterce.9/videos/1359065114508583',
+			text: '012-6. Bölüm-(Ölümcül Gecikme-Missing Over New York / Deadly Delay)',
+ 	        aciklama: '<u><i><font color=red>Avianca Flight 52</font></u> & <b>İlk Vizyona Girişi : 27 Şubat 2005</b><br><br>25 Ocak 1990 da uçağın kötü hava koşulları nedeniyle defalarca ertelenen New York a inişi sırasında yakıtı tehlikeli derecede azalır. Kazanın nedeni ingilizce farklı ifade kullanmaktır. Yardımcı pilot "fuel emergency" ifadesini kullanmak yerine "running out of fuel" ifadesini kullanır. Bunun sonucunda hava trafik kontrolörü olayın ciddiyetini anlayamaz. Uçağa havada bir tur attıktan sonra iniş için izin vereceğini söyler ve nihayetinde uçağın yakıtı biter ve Long Islanda düşer. Kazada, uçakta ki 158 kişilik yolcu ve mürettebattan 85 kişi kurtulurken 73 kişi ölür.',
+ 	        resimler: {
+                solUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                solAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagUst: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png',
+                sagAlt: 'https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png'
+                }
+ 	            },
+                ],
+            ucak_kazasi_raporu_sezon3: [
+                {
+			value: 'https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/352179808842470/',
+			text: '013-1. Bölüm (Pamuk İpliğine Bağlı / Hanging by a Thread)',
+ 	        aciklama: '<u><i><font color=red>Aloha Airlines Flight 243</font></u> & <b>İlk Vizyona Girişi : 14 Eylül 2005</b><br><br>Aloha Hava Yollarının 243 sefer sayılı uçuşu, Hawaii de Hilo ve Honolulu arasında tarifeli bir Aloha Airlines uçuşuydu. 28 Nisan 1988 de, uçuşa hizmet veren bir Boeing 737-297, yetersiz bakım ve metal yorgunluğu nedeniyle uçuş sırasında gövdede yırtılma yaşadı ve bu da kontrolsüz dekompresyon sonucu büyük çaplı hasara sebep oldu. Uçak, mürettebat acil durum ilan ettikten sonra Maui deki Kahului Havalimanına güvenli bir şekilde inmeyi başardı. Uçuştaki tek hayat kaybı, uçuş görevlisi Clarabelle "CB" Lansing in, dekompresyondan anında uçaktan dışarı fırlamasıyla gerçekleşti. Yolcu ve mürettebattan toplamda 65 kişi yaralandı.',
+ 	        resimler: {
+                solUst: 'https://qph.cf2.quoracdn.net/main-qimg-5f5c3a3ec15327959341bff632a0ee85.webp',
+                solAlt: 'http://avstop.com/stories/243b.jpg',
+                sagUst: 'https://static.independent.co.uk/2023/04/27/12/shutterstock_editorial_153924a.jpg?quality=75&width=1250&crop=3%3A2%2Csmart&auto=webp',
+                sagAlt: 'http://avstop.com/stories/243a.jpg'
+                }
+ 	            },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/117152315678555/", text: "2. Bölüm (Bağdat Üzerinde Saldırı-Attack over Baghdad)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/5947053232039468/", text: "3. Bölüm-(Out of Control)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/122191368507983/", text: "4. Bölüm (İntihar Saldırısı-Fight for Your Life)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/131037964289990/", text: "5. Bölüm (Uçakta Bomba-Bomb on Board)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/133639957363124/", text: "6. Bölüm (Yanlış Kimlik-Mistaken Identity)" },
+ 	            { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/876364806423965/", text: "7. Bölüm-(Helicopter Down)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/297908787602906/", text: "8. Bölüm (Death and Denial)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/846678336231688/", text: "9. Bölüm-(Runaway Train)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/136335797093540/", text: "10. Bölüm (Kokpitteki Çocuk-Kid in the Cockpit)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/1025803388189189/", text: "12. Bölüm-(Head On Collision)" },
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/294621911264927/", text: "13. Bölüm (Ocean Landing)" },
+            ],
+            ucak_kazasi_raporu_sezon4: [
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/137365516990568/", text: "1. Bölüm (Desperate Escape)" },
+            ],
+            felaket_anlari_sezon1: [
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/111028349624285/", text: "1. Bölüm (Crash of the Concorde)" }, 
+                // Diğer bölümler...
+            ],
+            felaket_anlari_sezon6: [
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/103730617020725/", text: "3. Bölüm (Kokpitte Yangın-Swiss Air Kazası)" },
+                // Diğer bölümler...
+            ],
+            kritik_anlar_sezon1: [
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/116959865697800/", text: "9. Bölüm (Ugandaya Kaçırılan Uçak)" },
+                // Diğer bölümler...
+            ],
+            interpol_arastirmalari_sezon1: [
+                { value: "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/100021513607216/videos/116231829103937/", text: "10. Bölüm (Göklerdeki Terör)" },
+                // Diğer bölümler...
+            ],
+        };
+
+belgeselSelect.addEventListener('change', function() {
+    sezonSelect.disabled = false;
+    sezonSelect.innerHTML = '<option value="" disabled selected>Sezon Seçin</option>';
+
+    const secilenBelgesel = belgeselSelect.value;
+    if (sezonVerileri[secilenBelgesel]) {
+        sezonVerileri[secilenBelgesel].forEach(sezon => {
+            const option = document.createElement('option');
+            option.value = sezon.value;
+            option.textContent = sezon.text;
+            sezonSelect.appendChild(option);
+        });
+    }
+});
+
+sezonSelect.addEventListener('change', function() {
+    bolumSelect.disabled = false;
+    bolumSelect.innerHTML = '<option value="" disabled selected>Bölüm Seçin</option>';
+
+    const secilenSezon = sezonSelect.value;
+    if (bolumVerileri[secilenSezon]) {
+        bolumVerileri[secilenSezon].forEach(bolum => {
+            const option = document.createElement('option');
+            option.value = bolum.value;
+            option.textContent = bolum.text;
+            bolumSelect.appendChild(option);
+        });
+    }
+});
+
+bolumSelect.addEventListener('change', function() {
+    const bolum = bolumSelect.value;
+    const bolumData = bolumVerileri[sezonSelect.value]?.find(b => b.value === bolum);
+
+    if (bolumData) {
+        videoPlayer.src = bolum;
+        aciklamaContainer.style.display = 'block';
+        aciklamaMetni.innerHTML = bolumData.aciklama;
+
+        if (bolumData.resimler) {
+            solUst.src = bolumData.resimler.solUst;
+            solUst.style.display = 'block';
+            solAlt.src = bolumData.resimler.solAlt;
+            solAlt.style.display = 'block';
+            sagUst.src = bolumData.resimler.sagUst;
+            sagUst.style.display = 'block';
+            sagAlt.src = bolumData.resimler.sagAlt;
+            sagAlt.style.display = 'block';
+        }
+    }
+});
+    </script>
+</body>
+</html>
