@@ -1,0 +1,59 @@
+*{ box-sizing:border-box; margin:0; padding:0;}
+body {margin: 0; padding:0;font-size:14px;font-family: arial; color:#DFEDF4; background-color: #181B23;}
+a{text-decoration: none;color:#333;}
+.flex{display: flex;justify-content: space-between;}
+.flexr{display: flex;justify-content: flex-end;}
+.flexl{display: flex;justify-content: flex-start;}
+.wrap{flex-wrap: wrap;}
+#header{width:100%; background-color: #1D212B; }
+.hic{width:90%; margin: auto; padding: 10px 0;}
+.logo{widtH:300px; height:30px; padding: 5px 0;}
+.ara{width:300px; height: 30px;}
+.arainput{width:300px; height: 30px; border-radius: 8px; background-color: #000;border:0px;font-size:16px; padding: 0 10px;color:#DFEDF4;}
+#cont{width:90%;min-height: 800px; margin: auto; padding: 15px 0;display: flex;justify-content: space-between;}
+#sol{width:72%;}
+.kw{width:100%; border-bottom:1px solid #333; margin-bottom: 10px; padding: 5px;}
+.kw h1{font-size:17px; font-weight:bold;}
+.sagkaydir{width:100%;flex:auto;overflow-x:scroll; padding: 5px 0 10px 0; margin-bottom: 25px;}
+.sagkaydir::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);}
+.sagkaydir::-webkit-scrollbar{height:6px; }
+.sagkaydir::-webkit-scrollbar-track-piece{background-color:#000;border-left:1px solid #252720;}
+.sagkaydir::-webkit-scrollbar-thumb{background-color:#444;}
+
+.img{width:112px; height:72px;border-radius:10px; border:1px solid #333;background-color: #000;margin-right:13px;}
+.img:hover{border-color:#666; background-color: #0b0b0b;}
+.anakat{width:32%; margin-bottom: 25px;}
+.katradyo{height:46px;background-color: #1D212B;border-radius: 5px; padding: 3px 6px;font-size:16px;line-height: 40px;color:#DFEDF4; margin-bottom: 12px;}
+.katradyo:hover{background-color: #222733;color:#EAF8FF;}
+.katno{width:20px; text-align: center;}
+.katlogo{margin:0 10px 0 4px;}
+.katlogo img{height:40px;border-radius:10px;background-color:#000;border:1px solid #333;}
+.dinler{width:18%;}
+.sinirla{overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;}
+.katplay{height:40px;padding: 6px;}
+.aciklama{width:100%;font-size:17px;line-height: 24px; margin-bottom: 20px;}
+.aciklama p{margin-bottom:15px;}
+.aciklama a{color:#cdcdcd;}
+.aciklama a:hover{color:#fff;}
+
+.aradyo{width:49%;background-color: #1D212B;color:#ddd;border:1px solid #333;padding: 3px;border-radius: 10px; margin-bottom:20px;}
+.aradyo:hover{background-color: #222733;color:#EAF8FF;}
+
+#sag{width:25%;display: block; }
+
+.rd{font-size: 18px; margin-bottom: 40px;}
+.rd p{margin-bottom: 20px;}
+#footer{width:100%; height:40px; line-height: 40px; background-color: #1D212B; text-align: center;}
+@media only screen and (max-width:800px){
+.hic{width:100%;flex-wrap: wrap; padding: 5px 0 10px 0;}
+
+.logo{margin:5px auto;}
+.ara{margin:5px auto 0 auto;height: 40px;}
+.arainput{height: 40px;}
+#sol{width:100%;}
+.anakat{width:100%;}
+.aradyo{width:100%;}
+#sag{display: none;}
+.aciklama li{display:block;margin-bottom:10px;}
+.dinler{width:100%;}
+}
