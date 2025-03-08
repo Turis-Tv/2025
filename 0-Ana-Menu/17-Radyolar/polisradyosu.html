@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Polis Radyosu, Ankara merkezli olarak Karışık ağırlıklı yayın yapan Ulusal radyo kanalıdır.">
+<title>Polis Radyosu Dinle Canlı</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="stil.css">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PYKPPN8D02"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYKPPN8D02');
+</script>
+</head>
+<body>
+<div id="header">
+	<div class="hic flex">
+		<div class="logo">
+			<a href="index.htm"><img src="image/logo.webp" width="300" height="20" alt="Canlı Radyo Dinle"></a>
+		</div>
+		<div class="ara">
+			<form action="ara.php" method="post">
+				<input name="aranan" type="text" class="arainput" placeholder="Radyo Ara...">
+			</form>
+		</div>
+	</div>
+</div><div id="cont">
+   <div id="sol">
+
+      <div class="kw flex"><div><h1>Polis Radyosu Dinle </h1></div></div>
+      <div class="flexl" style="border-bottom:1px solid #333; padding-bottom: 10px; margin-bottom: 25px;">
+         <div style="margin-right: 10px;">
+            <img src="logo/polis-radyosu.webp" width="112" height="72" alt="Polis Radyosu Dinle" style="background-color: #000;border:1px solid #333;border-radius: 10px;">
+         </div>
+                  <div id="baslat" style="display:block;width:72px;height:72px;background-color:#000;border:1px solid #333;border-radius:10px;cursor:pointer;">
+         <img src="image/play.webp" width="70" height="70" alt="Polis Radyosu Çal">
+         </div>
+         <div id="durdur" style="display:none;width:72px;height:72px;background-color:#000;border:1px solid #333;border-radius:10px;cursor:pointer;">
+         <img src="image/pause.webp" width="70" height="70" alt="Polis Radyosu Durdur">
+         </div>
+         <script type="text/javascript" src="ajax/libs/howler/2.2.3/howler.min.js"></script>
+         <script type="text/javascript">
+         var yayin = new Howl({
+         src: ['https://m.egm.gov.tr:8093//;?type=http&nocache=1/;stream.mp3'],
+         html5: true,
+         preload: true,
+         autoplay: false,    
+         });
+         var playButton = document.getElementById('baslat');
+         playButton.addEventListener('click',function(){
+         document.getElementById("baslat").style.display = "none";
+         document.getElementById("durdur").style.display = "block";
+         yayin.play();
+         });
+         var pauseButton = document.getElementById('durdur');
+         pauseButton.addEventListener('click',function(){
+         document.getElementById("baslat").style.display = "block";
+         document.getElementById("durdur").style.display = "none";
+         yayin.pause();
+         });
+         </script>
+               </div>
+
+
+      <div class="aciklama" style="margin-bottom: 45px;">
+         <p style="font-size:18px; font-weight: bold;">Radyo Dinle Canlı</p>
+ 
+
+
+         <!--<p><a style="color:#fff;" href="https://www.dijiradyo.com/polisradyosu">Alternatif kanaldan Polis Radyosu dinle.</a></p>-->
+      </div>
+            <div class="flex wrap">
+         <div class="anakat"> 
+            <div style="border-bottom:1px solid #333; margin-bottom: 10px;font-size:15px; padding-bottom: 5px;color:#A3E0FF;">Popüler Karışık Radyo Dinle</div>
+                           <a href="dinardostfm.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">1</div>
+                     <div class="katlogo"><img src="logo/dinar-dost-fm.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Dinar Dost FM</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="radyosrt.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">2</div>
+                     <div class="katlogo"><img src="logo/sungurlu-radyo-srt.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Sungurlu Radyo SRT</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="trtfm.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">3</div>
+                     <div class="katlogo"><img src="logo/trt-fm.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">TRT FM</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="powerplus.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">4</div>
+                     <div class="katlogo"><img src="logo/power-plus.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Power Plus</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="polisradyosu.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">5</div>
+                     <div class="katlogo"><img src="logo/polis-radyosu.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Polis Radyosu</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                     </div>
+         
+         <div class="anakat"> 
+            <div style="border-bottom:1px solid #333;margin-bottom:10px;font-size:15px;padding-bottom:5px;color:#A3E0FF;">Ankara Radyoları Dinle</div>
+                           <a href="trtfm.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">1</div>
+                     <div class="katlogo"><img src="logo/trt-fm.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">TRT FM</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="polisradyosu.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">2</div>
+                     <div class="katlogo"><img src="logo/polis-radyosu.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Polis Radyosu</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="ozgurradyo.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">3</div>
+                     <div class="katlogo"><img src="logo/ozgur-radyo.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Özgür Radyo</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="radyomegasite.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">4</div>
+                     <div class="katlogo"><img src="logo/radyo-megasite.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Radyo Megasite</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="trtradyokurdi.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">5</div>
+                     <div class="katlogo"><img src="logo/trt-radyo-kurdi.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">TRT Radyo Kurdi</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                     </div>
+
+         <div class="anakat"> 
+            <div style="border-bottom:1px solid #333; margin-bottom: 10px;font-size:15px; padding-bottom: 5px;color:#A3E0FF;">Rastgele Radyo Dinle</div>
+                           <a href="elazighitfm.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">1</div>
+                     <div class="katlogo"><img src="logo/elazig-hit-fm-dinle.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Elazığ Hit FM</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="radioone.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">2</div>
+                     <div class="katlogo"><img src="logo/adana-radio-one.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Radio One</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="erzincanfm.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">3</div>
+                     <div class="katlogo"><img src="logo/erzincan-fm-dinle.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Erzincan FM</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="radyocagdas.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">4</div>
+                     <div class="katlogo"><img src="logo/kocaeli-radyo-cagdas-dinle.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">Radyo Çağdaş</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                           <a href="trtradyokurdi.html" class="katradyo flex">
+                  <div class="flexl" style="width:85%;">
+                     <div class="katno">5</div>
+                     <div class="katlogo"><img src="logo/trt-radyo-kurdi.webp" width="60" height="38" alt=" Dinle"></div>
+                     <div class="sinirla">TRT Radyo Kurdi</div>
+                  </div>
+                  <div>
+                     <div class="katplay"><img src="image/katplay.png" width="28" height="28" alt=" Dinle"></div>
+                  </div>
+               </a>
+                     </div>
+      </div>
+   </div>
+   <div id="sag">      
+         </div>
+
+</div>
+<div id="footer">
+	<div class="flexl" style="width:90%; margin: auto;">
+		<div>Tüm Hakları Saklıdır © Turis Tv 2024</div>
+		<div style="margin-left: 25px;">Radyo Dinle</a></div>
+	</div>
+</div></body>
+</html>
