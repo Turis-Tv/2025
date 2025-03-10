@@ -1,0 +1,47 @@
+.playlist-thumbs:before,
+.playlist-thumbs:after {
+  content: "";
+  display: table;
+}
+
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid;
+  padding: 0.5em 1em;
+  background: none;
+  font-size: 1em;
+}
+
+
+
+
+
+
+
+.playlist-thumbs:after {
+  clear: both;
+}
+
+.video-thumb {
+  float: left;
+  margin: 0 0.5rem;
+  border: 2px solid black;
+  padding: 0.5rem;
+}
+.video-thumb.is-active {
+  border-color: blue;
+  background-color: rgba(255,0,255,0.3);
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid;
+  padding: 0.5em 1em;
+  background: none;
+  font-size: 1em;
+}

@@ -1,0 +1,62 @@
+html,body{
+  background-color:black;width:300px; margin:0.5
+}
+img{
+  width:100%;
+  display:block;
+}
+/* portafolio */
+#portfolio {width:300px}
+
+#portfolio li img{
+  margin-bottom:.5px;
+}
+ul#portfolio{
+  float:left;
+  list-style:none;
+  margin-left:0;
+  width:100%;
+}
+ul#portfolio li{
+  font-size:13px;
+  float:left;
+  margin:6px;
+  padding:.8px;
+  width:27%;
+  list-style:none;
+  text-align:center;
+  background:#FFF;
+  color:#5282BE;
+  /*box-shadow*/
+  -webkit-box-shadow:0 1px 2px #292E31;
+  -moz-box-shadow:0 1px 2px #292E31;
+  box-shadow:0 1px 2px #292E31;
+  z-index:10;
+}
+ul#portfolio a{
+  display:block;
+  color:#444444;
+  font-size:20px;
+  font-style:italic;
+  text-decoration:none;
+}
+ul#portfolio a:hover{
+  text-decoration:underline;
+}
+ul#portfolio img{
+  width:100%;
+  display:block;
+  position:relative;
+  overflow:hidden;
+  z-index:3;
+  /*border-radius*/
+  -webkit-border-radius:0px;
+  -moz-border-radius:0px;
+  border-radius:0px;
+}
+ul#portfolio img{
+  /*transition*/
+  -webkit-transition:top 1s ease, left 1s ease;
+  -moz-transition:top 1s ease, left 1s ease;
+  -o-transition:top 1s ease, left 1s ease;
+  transition:top 1s ease, left 1s ease;
