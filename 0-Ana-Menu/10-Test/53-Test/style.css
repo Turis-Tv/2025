@@ -1,0 +1,155 @@
+body {
+  background-color: #111;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  background: url("https://raw.githubusercontent.com/ShadowKnight00/images/master/night_city_lights.jpg");
+  background-size: cover;
+}
+.wrapper {
+  margin-bottom: 30px;
+  //background-image: url("https://media.giphy.com/media/l41Yms24UKyNKN8Oc/giphy.gif1");
+  background-size: 100% 100%;
+}
+a:active, a:focus, a:visited, a:hover {
+  text-decoration: none;
+}
+.title {
+  width: 700px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  color: #41f;
+  font-family: Stalinist One;
+  font-size: 36px;
+}
+.menu {
+  width: 750px;
+  padding: 0px 10px 0px 10px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  font-family: Alegreya Sans SC;
+  font-size: 16px;
+  /font-weight: 600;
+  color: #00e;
+  /background-color: #9bf;
+  background-color: #309;
+  border: solid 1px #00f;
+  border-radius: 5px;
+}
+.bttn {
+  width: 100px;
+  height: 21px;
+  margin: 3px;
+  margin-right: 30px;
+  color: #93f;
+  background-color: #004;
+  font-family: Alegreya Sans SC;
+  font-size: 14px;
+  font-wight: 400;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+.list {
+  width: 750px;
+  margin: 0px auto;
+}
+.returnbtn {
+  display: none;
+  position: relative;
+  width: 400px;
+  height: 50px;
+  overflow: hidden;
+  margin: 0px auto;
+  margin-top: 0px;
+  padding: 10px;
+  background-color: #000;
+  color: #46f;
+  font-family: Alegreya Sans SC;
+  font-size: 18px;
+  font-weight: 600;
+  border: solid 1px #eee;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px 10px rgba(60, 20, 150, 0.7);
+  /box-shadow: 0px 0px 15px 10px rgba(0, 15, 255, 0.7);  
+}
+.channel {
+  position: relative;
+  width: 750px;
+  height: 82px;
+  overflow: hidden;
+  margin: 0px auto;
+  margin-top: 3px;
+  background-color: #000;
+  color: #ccc;
+  border: solid 1px #000;
+  border-radius: 15px;
+  box-shadow: -1px -1px 25px 12px rgba(60, 20, 150, 0.7);
+}
+.tvimg {
+  display: table-cell;
+  vertical-align: middle;
+  margin-top: 7px;
+  margin-left: 5px;
+  border: solid 2px #9bf;
+  border-radius: 10px;
+  width: 110px;
+  height: 63px;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+.vcenter {
+  position: absolute;
+  display: table;
+  width: 100%;
+  border: solid 1px #fff;
+  border-radius: 15px;
+  height: 100%;
+}
+.chTitle {
+  display: table-cell;
+  vertical-align: middle;
+  width: 150px;
+  padding-left: 15px;
+  overflow: hidden;
+  text-align: left;
+  color: #46f;
+  font-family: Alegreya Sans SC;
+  font-size: 18px;
+  font-weight: 800;
+}
+.chDesc {
+  display: table-cell;
+  width: 475px;
+  vertical-align: middle;
+  padding: 3px 8px 0px 10px;
+  text-align: center;
+  font-family: Patrick Hand SC;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+}
+.tvframe {
+  display: none;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #000;
+  border: solid 1px #3a2777;
+}
+.tagline {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: Exo;
+  font-size: 14px;
+  color: #615181;
+}
+.tagline a {
+  //color: #600;
+  color: #76f;
+  text-shadow: 0px 0px 7px #aaa;
+}

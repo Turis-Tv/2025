@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>stream playlist youtube</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Youtube Stream</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form>
+    <select name="channelSelect" id="channelSelect">
+      <option value="select">Select Channel</option>
+      <option value="Entre Linhas">Entre Linhas</option>
+      <option value="Louvores Da IURD">Louvores Da IURD</option>
+      <option value="Meditaçoes Matinais">Meditaçoes Matinais</option>
+      <option value="Eu Recebi o Espirito Santo">Eu Recebi o Espirito Santo</option>
+      <option value="Eu Fui Vitima De Fake News">Eu Fui Vitima De Fake News</option>
+      <option value="Santo Culto">Santo Culto</option>
+      <option value="Palavra Amiga">Palavra Amiga</option>
+      <option value="Terapia do Amor">Terapia do Amor</option>
+      <option value="Em Busca Do Amor">Em Busca Do Amor</option>
+      <option value="Igreja Universal Portugal">Igreja Universal Portugal</option>
+      <option value="Bispo Edir Macedo">Bispo Edir Macedo</option>
+
+      
+    </select>
+  </form>
+<iframe width="800" height="600" src="" id="player" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- partial -->
+  <script>
+var select = document.getElementById("channelSelect");
+var player = document.getElementById("player");
+var p = document.getElementById("p");
+select.addEventListener("change", changeChannel);
+function changeChannel() {
+  if(select.value == "Entre Linhas"){
+    player.src="https://www.youtube.com/watch?v=dAzJvR1bcCM&list=PL_4SrCPxWQl5rc9sy1k-J314OtzkJj2zL&autoplay=1&cc_load_policy=1&enablejsapi=1&modestbranding=1&playsinline=1&color=white";
+  }
+  else if(select.value == "Louvores Da IURD"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLMql2TlNCZkGQokVYHUxoKab3LAnzeWS8&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+  else if(select.value == "oy"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLMql2TlNCZkGQokVYHUxoKab3LAnzeWS8&autoplay=1&cc_load_policy=1&enablejsapi=1&modestbranding=1&playsinline=1&color=white"
+  }
+  else if(select.value == "Eu Recebi o Espirito Santo"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLwPaS2wgyD9aTrOp4_3F5iyhOLazYaVDL&autoplay=1&cc_load_policy=1&enablejsapi=1&modestbranding=1&playsinline=1&color=white"
+  }
+  else if(select.value == "Eu Fui Vitima De Fake News"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLwPaS2wgyD9a79NtxDtGd0H0WqGEO8mSI&autoplay=1&cc_load_policy=1&enablejsapi=1&modestbranding=1&playsinline=1&color=white"
+  }
+  else if(select.value == "Santo Culto"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLwPaS2wgyD9YvJFwNDnDUwW5jOcznKN-F&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+  else if(select.value == "Palavra Amiga"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLwPaS2wgyD9Zg81GIbHem-OAhRHzBaBfI&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+  else if(select.value == "Terapia do Amor"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLuxbmH3zbrQq5tWtia5iknjUuBY_LDuIv&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+else if(select.value == "Em Busca Do Amor"){
+    player.src="https://www.youtube.com/embed/?listType=playlist&list=PLuxbmH3zbrQopyXoNTJ_DdsXfAVufK6fB&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+else if(select.value == "Igreja Universal Portugal"){
+    player.src="https://www.youtube.com/embed/?listType=user_uploads&list=iurdpt&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+  }
+  else if(select.value == "Bispo Edir Macedo"){
+    player.src="https://www.youtube.com/embed/?listType=user_uploads&list=UU4Cdx80wVil5cVCxhAC8V8w&autoplay=1&cc_load_policy=1&disablekb=1&enablejsapi=1&modestbranding=1&autohide=1&amp;hl=en_GB"
+}
+  else player.src=""
+}
+  </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

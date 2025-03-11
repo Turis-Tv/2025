@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+   margin: 0;
+          padding:0;
+          align-items: center
+          justify-content: center
+          transition: background 0.5s linear;
+          background-color:#10729c;
+          background-image: -moz-radial-gradient(50% 50%, ellipse cover, #10729c, #000030 100%);
+          background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #10729c, #000030 100%);
+          background-image: -o-radial-gradient(50% 50%, ellipse cover, #10729c, #000030 100%);
+          background-image: -ms-radial-gradient(50% 50%, ellipse cover, #10729c, #000030 100%);
+          background-image: radial-gradient(50% 50%, ellipse cover, #10729c, #000030 100%);
+          color: #fff;
+          font-family: 'Acme', sans-serif;
+          display:fullscreen;
+}
+
+#hls-player {
+	flex: 1;
+	max-width: 840px;
+	margin-right: 20px;
+	margin-top: 20px;
+  border-radius:10px;
+}
+.player-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 500px;
+  height: 100vh;
+  }
+
+.playlist-wrapper {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:300px;
+  max-width: 1000px;
+}
+
+
+ul {
+	display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 1000px;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  max-width: 1000px;
+	margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.active  {
+  transform: scale(1.1);
+  
+}
+
+li:hover {
+  transform: scale(1.1);
+}
+
+
+
+#playlist {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+  
+}
+
+
+#playlist li {
+	flex: 1 0 100px;
+	margin: 10px;
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#playlist li img {
+  min-width:150px;
+  max-width:200px;
+  min-height:150px;
+  max-height:150px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0px;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+#playlist li.active {
+	background-color: transparent;
+}
+.player-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

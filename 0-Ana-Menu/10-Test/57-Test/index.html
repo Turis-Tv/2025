@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>world tv - auto updated</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טלוויזיה מכל העולם</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.10/hls.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        #sidebar {
+            width: 300px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        #main-content {
+            flex-grow: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        #video-container {
+            width: 100%;
+            height: 60vh;
+            background-color: #34495e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #video-player {
+            width: 100%;
+            height: 100%;
+        }
+        .category {
+            margin-bottom: 10px;
+            background-color: #34495e;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .category-title {
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+            color: #ecf0f1;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .category-title::after {
+            content: '▼';
+            font-size: 12px;
+            transition: transform 0.3s;
+        }
+        .category.open .category-title::after {
+            transform: rotate(180deg);
+        }
+        .channel-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .category.open .channel-list {
+            max-height: 1000px; /* Adjust this value as needed */
+        }
+        .channel {
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .channel:hover {
+            background-color: #3498db;
+            transform: translateX(-5px);
+        }
+        #search-bar {
+            margin-bottom: 20px;
+        }
+        #search-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+        #loading {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #3498db;
+        }
+        #current-channel {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            color: #2c3e50;
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .active-channel {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="חפש ערוץ...">
+        </div>
+        <div id="channel-list"></div>
+    </div>
+    <div id="main-content">
+        <div id="video-container">
+            <video id="video-player" controls autoplay></video>
+        </div>
+        <div id="current-channel"></div>
+        <div id="loading">טוען ערוצים...</div>
+    </div>
+
+    <script>
+        let channels = [];
+        let currentChannel = null;
+
+        async function fetchChannels() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/Turis-Tv/2025/refs/heads/main/10-M3u/%2B18.m3u');
+                const text = await response.text();
+                const lines = text.split('\n');
+                let tempChannel = {};
+
+                for (let line of lines) {
+                    if (line.startsWith('#EXTINF:')) {
+                        const nameMatch = line.match(/,(.+)$/);
+                        const groupMatch = line.match(/group-title="([^"]*)"/);
+                        if (nameMatch) {
+                            tempChannel.name = nameMatch[1].trim();
+                        }
+                        if (groupMatch) {
+                            tempChannel.category = groupMatch[1];
+                        } else {
+                            tempChannel.category = 'כללי';
+                        }
+                    } else if (line.trim() && !line.startsWith('#')) {
+                        tempChannel.url = line.trim();
+                        if (tempChannel.name && tempChannel.url) {
+                            channels.push(tempChannel);
+                        }
+                        tempChannel = {};
+                    }
+                }
+
+                renderChannelList();
+                document.getElementById('loading').style.display = 'none';
+            } catch (error) {
+                console.error('Error fetching channels:', error);
+                document.getElementById('loading').textContent = 'שגיאה בטעינת הערוצים. נסה שוב מאוחר יותר.';
+            }
+        }
+
+        function renderChannelList() {
+            const channelList = document.getElementById('channel-list');
+            const categories = {'הכל': []};
+            
+            channels.forEach(channel => {
+                categories['הכל'].push(channel);
+                if (!categories[channel.category]) {
+                    categories[channel.category] = [];
+                }
+                categories[channel.category].push(channel);
+            });
+
+            for (const category in categories) {
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                categoryDiv.innerHTML = `
+                    <div class="category-title">${category} (${categories[category].length})</div>
+                    <div class="channel-list"></div>
+                `;
+                
+                const channelListDiv = categoryDiv.querySelector('.channel-list');
+                categories[category].forEach(channel => {
+                    const channelDiv = document.createElement('div');
+                    channelDiv.className = 'channel';
+                    channelDiv.textContent = channel.name;
+                    channelDiv.onclick = (event) => {
+                        event.stopPropagation();
+                        playChannel(channel, channelDiv);
+                    };
+                    channelListDiv.appendChild(channelDiv);
+                });
+
+                categoryDiv.querySelector('.category-title').onclick = () => toggleCategory(categoryDiv);
+                channelList.appendChild(categoryDiv);
+            }
+        }
+
+        function toggleCategory(categoryDiv) {
+            categoryDiv.classList.toggle('open');
+        }
+
+        function playChannel(channel, channelDiv) {
+            const videoPlayer = document.getElementById('video-player');
+            const currentChannelDiv = document.getElementById('current-channel');
+            currentChannelDiv.textContent = `ערוץ נוכחי: ${channel.name}`;
+            
+            // Remove active class from previous channel
+            if (currentChannel) {
+                currentChannel.classList.remove('active-channel');
+            }
+            
+            // Add active class to current channel
+            channelDiv.classList.add('active-channel');
+            currentChannel = channelDiv;
+
+            if (Hls.isSupported()) {
+                if (window.hls) {
+                    window.hls.destroy();
+                }
+                const hls = new Hls();
+                window.hls = hls;
+                hls.loadSource(channel.url);
+                hls.attachMedia(videoPlayer);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    videoPlayer.play().catch(e => console.error('Error auto-playing video:', e));
+                });
+            } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                videoPlayer.src = channel.url;
+                videoPlayer.addEventListener('loadedmetadata', function() {
+                    videoPlayer.play().catch(e => console.error('Error auto-playing video:', e));
+                });
+            } else {
+                console.error('This browser does not support HLS');
+                currentChannelDiv.textContent = 'הדפדפן שלך אינו תומך בניגון ערוץ זה';
+            }
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const categories = document.querySelectorAll('.category');
+                categories.forEach(category => {
+                    const channels = category.querySelectorAll('.channel');
+                    let visibleChannels = 0;
+                    channels.forEach(channel => {
+                        const channelName = channel.textContent.toLowerCase();
+                        if (channelName.includes(searchTerm)) {
+                            channel.style.display = 'block';
+                            visibleChannels++;
+                        } else {
+                            channel.style.display = 'none';
+                        }
+                    });
+                    if (visibleChannels > 0) {
+                        category.style.display = 'block';
+                        category.classList.add('open');
+                    } else {
+                        category.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        fetchChannels();
+        setupSearch();
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>interfaz auto</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Radio Player</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="radio-interface">
+      <div class="station-display">
+        <h1 class="station-name">Radio</h1>
+        <img id="playlist-image" src="https://i.gifer.com/1kME.gif" alt="Playlist Image">
+        <p id="station-frequency" class="station-frequency"></p>
+      </div>
+      <div class="controls">
+        <button id="prev-btn" onclick="mostrarImagen()"><i class="material-icons">skip_previous</i></button>
+        <button id="play-btn" onclick="mostrarImagen()"><i class="material-icons">play_arrow</i></button>
+        <button id="stop-btn" onclick="ocultarImagen()"><i class="material-icons">stop</i></button>
+        <button id="next-btn" onclick="mostrarImagen()"><i class="material-icons">skip_next</i></button>  
+        <button id="volume-down-button"><i class="material-icons">volume_down</i></button>
+        <button id="volume-up-button"><i class="material-icons">volume_up</i></button>
+
+      </div>
+       <div class="additional-buttons">
+    <a href="https://www.youtube.com/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/575/original/youtube-logo-youtube-icon-transparent-free-png.png"></a>
+
+    <a href="tel:"><img src="https://www.pngplay.com/wp-content/uploads/8/Telephone-PNG-HD-Quality.png"></a>
+    
+    <button class="gps-btn"><img src="https://www.pngmart.com/files/7/GPS-PNG-Clipart.png"></button>
+  </div>
+      <audio id="audio-player"></audio>
+      <ul class="playlist">
+        <li><a href="#" data-src="https://strm112.1.fm/onelive_mobile_mp3" data-img="https://i.scdn.co/image/ab67616d0000b273aa9782314b17686907c4dc8b">One Baladas Hits</a></li>
+        <li><a href="#" data-src="https://22653.live.streamtheworld.com/LOS40AAC.aac" data-img="https://example.com/playlist1.jpg">Los 40 Principales</a></li>
+        <li><a href="#" data-src="https://cadena100-cope-rrcast.flumotion.com/cope/cadena100-low.mp3" data-img="https://example.com/playlist1.jpg">Cadena 100</a></li>
+<li><a href="#" data-src="https://stream.mediasector.es/radio/8000/activafm.mp3" >Activa Fm<img  src="https://i0.wp.com/www.emisorasmusicales.net/wp-content/uploads/2020/03/ActivaFM.png?fit=1000%2C1000&ssl=1" /></a></li>
+  <li><a href="#" data-src="https://22343.live.streamtheworld.com/SOULRADIO.mp3">Black Music<img src="https://www.staimusic.com/images/genres/black-music.jpg" /></a></li>
+  
+  <li><a href="#" data-src="https://20853.live.streamtheworld.com/CADENADIALAAC_SC">Cadena Dial<img src="https://imgsvr.radiocut.site/get/crop/center/200/200/radio_logos/40/2a/402a1ce1-df3a-4051-92ea-0ab5b32eb363.png" /></a></li>  
+  <li><a href="#" data-src="https://ais-sa2.cdnstream1.com/2210_128.mp3">Dial Baladas<img src="https://static.mytuner.mobi/media/tvos_radios/577d3uekc8yv.jpg" /></a></li>  
+  <li><a href="#" data-src="https://21633.live.streamtheworld.com/CADENADIAL_02AAC_SC">Dial Latino<img src="https://static.mytuner.mobi/media/tvos_radios/jzxzpxpbhsqz.jpg" /></a></li> 
+   <li><a href="#" data-src="https://19983.live.streamtheworld.com/CADENADIAL_01AAC_SC">Dial Esencial<img src="https://static.mytuner.mobi/media/tvos_radios/jqwpydkn2g8g.jpg" /></a></li>
+    
+  <li><a href="#" data-src="https://25453.live.streamtheworld.com/CADENASERAAC.aac">Cadena Ser<img src="https://static.radio.es/images/broadcasts/21/4c/10996/c175.png" /></a></li>
+   
+  <li><a href="#" data-src="https://asturias-copesedes-rrcast.flumotion.com/copesedes/asturias-low.mp3">Cope<img src="https://www.radio.es/images/broadcasts/73/99/19113/1/c300.png" /></a></li>  
+  <li><a href="#" data-src="https://strmreg.1.fm/chilloutlounge_mobile_mp3">Costa Del Mar<img src="https://static.radio.es/images/broadcasts/86/fd/16612/1/c300.png" /></a></li>
+  
+  <li><a href="#" data-src="https://axarquia.emisiononline.es/radio/8080/radio.mp3">Energia Flamenca<img src="https://images.keepone.net/4423-2020-06-07.jpg" /></a></li>  
+  <li><a href="#" data-src="https://one.cloudstreaming.eu/proxy/europa/stream">Europa Fm<img src="https://play-lh.googleusercontent.com/e9xuQ8H6bH1tzOMr7PiLmyU520hrFGh3qG9Mzpo04d0YqU1swdk5cUm_SbS6fORDtxg" /></a></li>    
+  
+ <li><a href="#" data-src="https://listen.radioking.com/radio/109486/stream/148513">Flamenco Fm<img src="https://github.com/Angelusneo/Just-Be-Relax/blob/second/Flamenco.png?raw=true" /></a></li>   
+ <li><a href="#" data-src="https://stream-019.zeno.fm/htzy5rjktfivv?zs=wZHKKzTXTxWt7q-hWCyBbQ">Flamenco Music<img src="https://cdns-images.dzcdn.net/images/cover/0d8578da9c9c620138a8b7227700bbe2/500x500.jpg" /></a></li>      
+ 
+  <li><a href="#" data-src="https://nodo02-cloud01.streaming-pro.com:8003/flaixfm.aacp">Flaix Fm<img src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201712/27/00105112398705____1__640x640.jpg" /></a></li>
+  <li><a href="#" data-src="https://nodo05-cloud01.streaming-pro.com:8005/flaixbac.mp3">Flaixbac<img src="https://yt3.ggpht.com/ytc/AAUvwniEfAVA1SphudtZlnLVSI-bQgo5daGiQ8YCG_CEsA=s900-c-k-c0x00ffffff-no-rj" /></a></li>
+  <li><a href="#" data-src="https://stream.mediasector.es/radio/8050/goldfm.mp3">Gold Fm<img src="https://i2.wp.com/www.emisorasmusicales.net/wp-content/uploads/2020/03/goldFM.png" /> </a></li>
+  <li><a href="#" data-src="https://happyfuerteventura.streaming-pro.com:6003/live">Happy Fm<img src="https://i1.sndcdn.com/artworks-Ivj0xf0znp2AV8lQ-eIffHQ-t500x500.jpg" /></a></li>  
+  <li><a href="#" data-src="https://lonely-heartbreaks.stream.laut.fm/lonely-heartbreaks">Heartbreaks Fm<img src="https://assets.laut.fm/8593d8b2f20efc5844f6355075a5425c?t=_640x640" /></a></li>
+  
+  <li><a href="#" data-src="https://hitfm.ice.infomaniak.ch/hitfm-192.mp3?flux=70304">Hit Fm<img src="https://static-media.streema.com/media/cache/b0/be/b0be5f55bc1ade4c91a75e42e96037b4.jpg" /></a></li>
+  <li><a href="#" data-src="https://26283.live.streamtheworld.com/977_MIX.mp3">Hits Radio<img src="https://static.radio.es/images/broadcasts/8d/76/3600/1/c300.png" /></a></li>
+  <li><a href="#" data-src="https://c4.auracast.net:8020/stream/1/">Hits de los 60´s<img src="https://static.radio.es/images/broadcasts/27/db/35311/c175.png" /></a></li>
+  
+  <li><a href="#" data-src="https://makri.cdnstream.com/1898_128">Hits de los 80´s<img src="https://static.radio.es/images/broadcasts/f4/69/34026/c175.png" /> </a></li>
+  <li><a href="#" data-src="https://c4.auracast.net/radio/8050/radio.mp3">Hits de los 90´s<img src="https://static.radio.es/images/broadcasts/58/d8/37140/c175.png" /> </a></li>
+  
+  <li><a href="#" data-src="https://icecast.ib3radio.com/ib3radio.mp3">IB3 Radio<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/IB3.svg/1200px-IB3.svg.png" /></a></li>  
+  
+  <li><a href="#" data-src="https://kissfm.kissfmradio.cires21.com/kissfm.mp3">Kiss Fm<img src="https://static.radio.es/images/broadcasts/1d/93/9275/c175.png" /></a></li>
+  <li><a href="#" data-src="https://stream.mediasector.es/radio/8070/laflamenca.mp3">La Flamenca<img src="https://admin.auto-messenger.ru/storage/radios/3090/3360/conversions/470-md.webp" /></a></li>  
+ 
+  <li><a href="#" data-src="https://23603.live.streamtheworld.com/LOS40_CLASSICAAC.aac">Los 40 classic<img src="https://recursosweb.prisaradio.com/fotos/original/010002655249.png" /></a></li>
+  <li><a href="#" data-src="https://25453.live.streamtheworld.com/LOS40_DANCEAAC.aac">Los 40 Dance<img src="https://cadenaser00.epimg.net/emisora/imagenes/2019/10/09/radio_valencia/1570628908_804059_1570629521_sumario_normal.jpg" /></a></li>
+  <li><a href="#" data-src="https://23603.live.streamtheworld.com/LOS40_URBANAAC_SC">Los 40 Urban<img src="https://los40es00.epimg.net/los40/imagenes/2020/04/13/los40urban/1586778819_804441_1586863754_sumario_normal.jpg" /></a></li>
+   
+  <li><a href="#" data-src="https://streaming12.elitecomunicacion.es:8268/stream">Megahits<img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/bp5kefdh5brd.jpg" /></a></li>  
+  <li><a href="#" data-src="https://flucast-b02-01.flumotion.com/cope/megastar.mp3">Mega Star Fm<img src="https://myradioonline.es/public/uploads/radio_img/megastarfm/play_250_250.jpg" /></a></li>   
+   <li><a href="#" data-src="https://only-romantic-radio.stream.laut.fm/only-romantic-radio">Melodia 42<img src="https://github.com/Angelusneo/Just-Be-Relax/blob/second/Melodia42.png?raw=true" /></a></li> 
+     
+  <li><a href="#" data-src="https://stream.mediasector.es/radio/8010/muybuena.mp3">Muy Buena Fm<img src="https://static-br.radio.net/images/broadcasts/06/d6/113329/1/c300.png" /></a></li>
+  <li><a href="#" data-src="https://server.spainbroadcast.net/8028/;">Nostalgia Fm<img src="https://yt3.ggpht.com/gjDA97bC6mQy21qnGkPIoLntcaXO4nAAC8f8nx2wl9kjNxj5LRtmKsmjCK8TCtxkFvrxu-7Y=s900-c-k-c0x00ffffff-no-rj" /></a></li>  
+    
+  <li><a href="#" data-src="https://oldoldies.stream.laut.fm/oldoldies">Oldies<img src="https://static.radio.es/images/broadcasts/c8/2a/4663/c175.png" /> </a></li>  
+  <li><a href="#" data-src="https://streaming-audio-1.magentalabs.es:8100/onradio.mp3">On radio<img src="https://www.radio.es/images/broadcasts/68/26/129806/1/c300.png"> </a></li>   
+  <li><a href="#" data-src="https://0n-2010s.radionetz.de/0n-2010s.mp3">On 2010s<img src="https://www.radio.es/images/broadcasts/ce/21/129635/1/c300.png"> </a></li>
+   <li><a href="#" data-src="https://0n-black.radionetz.de/0n-black.mp3">On Black<img src="https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/f8/c4/116231/1/c300.png"> </a></li> 
+  <li><a href="#" data-src="https://0n-dance.radionetz.de/0n-dance.mp3">On Dance<img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/dkxqsnhajxh3.jpg"> </a></li>
+  <li><a href="#" data-src="https://0n-disco.radionetz.de/0n-disco.mp3">On Disco<img src="https://d3kle7qwymxpcy.cloudfront.net/images/broadcasts/09/0f/111891/1/c300.png"> </a></li>
+  <li><a href="#" data-src="https://0n-top40.radionetz.de/0n-top40.mp3">On Top 40<img src="https://static.mytuner.mobi/media/tvos_radios/zznrq9rg27z6.jpg"> </a></li>
+  
+  <li><a href="#" data-src="https://listen.soulradio.eu/eu">Old Soul Music<img src="https://play-lh.googleusercontent.com/x88XD199QNLKYOcOVxZT8avxz-stPSFcMMEi_rigt2F9Sz7iJckJ83IkENQ8c5ZV0BU"> </a></li>
+  
+  <li><a href="#" data-src="https://r4g-mp3-live.flumotion.com/r4g/r4g-mp3-live.mp3">R4G Oficial<img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/4auhdje9bbuw.jpg" /></a></li> 
+  <li><a href="#" data-src="https://25453.live.streamtheworld.com/RADIOLE.mp3">Radiolé<img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/hp9JgkDT82.png" /></a></li>  
+  
+  <li><a href="#" data-src="https://radioplaneta.emitironline.com/radio">Radio Planeta<img src="https://static-media.streema.com/media/cache/a6/bf/a6bf77ed10f551af8d21d59eb03086b0.jpg" /></a></li>   
+  
+  <li><a href="#" data-src="https://stream-36.zeno.fm/0vgy8qv3feruv?zs=ini0vTWCT46TvffnUSm-sw">Rock Español<img src="https://www.radio.es/images/broadcasts/dc/13/126544/1/c300.png" /></a></li>  
+  <li><a href="#" data-src="https://rockfm-cope-rrcast.flumotion.com/cope/rockfm-low.mp3">Rock Fm<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple115/v4/2f/c2/37/2fc23753-378e-4f8f-6d73-af799a4ee58c/AppIcon-1x_U007emarketing-85-220-6.png/246x0w.jpg" /></a></li>
+  <li><a href="#" data-src="https://soulstation.stream.laut.fm/soulstation">Soulstation<img src="https://www.radio.es/images/broadcasts/fe/4b/5145/1/c300.png"></a></li>  
+  <li><a href="#" data-src="https://edge2.audioxi.com/SUN?_=">Sunshine Soul<img src="https://mytuner.global.ssl.fastly.net/media/tvos_radios/xQEMhkAHLy.png" /></a></li>
+  <li><a href="#" data-src="https://live-bauerie.sharp-stream.com/SSOUL">Sunshine Soul<img src="https://pbs.twimg.com/profile_images/1020309430431338497/hHZ7oUMv_400x400.jpg" /></a></li>
+  <li><a href="#" data-src="https://centova01.logicahost.com.br:20038/autodj">Spanish Oldies<img src="https://github.com/Angelusneo/Just-Be-Relax/blob/second/spanish_oldies.jpg?raw=true" /></a></li>  
+  <li><a href="#" data-src="https://eu8.fastcast4u.com/proxy/almeria2?mp=/1">Spectrum Fm<img src="https://static.radio.es/images/broadcasts/81/22/21426/c300.png" /></a></li>    
+  <li><a href="#" data-src="https://media-ssl.musicradio.com/SmoothUK">Smooth Radio<img src="https://static.radio.es/images/broadcasts/4a/d1/3253/c175.png" /></a></li>
+  <li><a href="#" data-src="https://stream.andacast.es/radio/8020/stream">SIE7E Radio<img src="https://cdn-profiles.tunein.com/s145009/images/logog.jpg" /></a></li>  
+  <li><a href="#" data-src="https://streaming.radiostreamlive.com/radiocountrylive_devices">Texas Country<img src="https://pbs.twimg.com/profile_images/925811254505041921/098mAQ_2_400x400.jpg" /></a></li>
+  <li><a href="#" data-src="https://c3.auracast.net/radio/8010/radio.mp3">The Best Oldies <img src="https://cdns-images.dzcdn.net/images/cover/58035e8ab32b6b23683d91b7df7f3820/500x500.jpg" /> </a></li>  
+  
+  <li><a href="#" data-src="https://server10.emitironline.com:10948/">Top 40<img src="https://acupradio.es/wp-content/uploads/2020/02/TOP-40.png"></a></li>  
+  <li><a href="#" data-src="https://strmreg.1.fm/top40_mobile_mp3">Top 40 Radio<img src="https://top-40-songs.com/wp-content/uploads/2020/05/Top-40-Songs-Logo.jpg"></a></li>
+  
+  <li><a href="#" data-src="https://streamssl.eu:1290/usastreams">Usa Radio<img src="https://usaradio.com/wp-content/uploads/2022/04/usa-radio-news.jpg"></a></li>  
+  <li><a href="#" data-src="https://radio.virginradio.co.uk/stream">Virgin Radio<img src="https://www.marklives.com/wp-content/uploads/Virgin-Radio-animated-signature-04.gif" /></a></li>
+    
+  <li><a href="#" data-src="https://vivofm.stream.laut.fm/vivofm">Vivo Fm<img src="https://1.bp.blogspot.com/-UhoZrgHzwo4/YJRb0JQdByI/AAAAAAAAPgg/iOQ1K2qT13gPBQ6ou9TljHN9knjOXWaXQCNcBGAsYHQ/s0/Vivo.png" /> </a></li>
+      </ul>
+      
+    </div>
+    
+    <script>
+function mostrarImagen() {
+  var imagen = document.getElementById("playlist-image");
+  imagen.style.display = "block"; // o "inline-block"
+}
+
+function ocultarImagen() {
+  var imagen = document.getElementById("playlist-image");
+  imagen.style.display = "none";
+}
+</script>
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

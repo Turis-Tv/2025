@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U Player</title>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <link href="https://unpkg.com/videojs-max-quality-selector@0.9.1/dist/videojs-max-quality-selector.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://vsalema.github.io/newiptv/css/newiptv.css" rel="stylesheet" />  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link href="https://vsalema.github.io/tvpt4/css/tresmin.css" rel="stylesheet" />
+    
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/scss/_root.scss
+  " rel="stylesheet" />
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-WND5TJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GTM-WND5TJ');
+</script>
+  
+  <style>
+    /* imports */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+/* colors */
+/* variables */
+/* mixins */
+/* resets and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #000000;
+  color: white;
+  font: normal 12px/1.42857 "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  font-size: 1.2rem;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+/* nav toggle */
+.nav-toggle {
+  cursor: pointer;
+  height: 2.5rem;
+  left: 2rem;
+  position: fixed;
+  top: 1rem;
+  width: 3.5rem;
+  z-index: 2;
+}
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+.nav-toggle .nav-toggle-bar,
+.nav-toggle .nav-toggle-bar::after,
+.nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: #ffffff42;
+  content: "";
+  height: 0.5rem;
+  transition: all 0.5s;
+  width: 100%;
+}
+.nav-toggle .nav-toggle-bar {
+  margin-top: 0;
+}
+.nav-toggle .nav-toggle-bar::after {
+  margin-top: 1rem;
+}
+.nav-toggle .nav-toggle-bar::before {
+  margin-top: -1rem;
+}
+.nav-toggle.expanded .nav-toggle-bar {
+  background: transparent;
+}
+.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+  background: white;
+  margin-top: 0;
+}
+.nav-toggle.expanded .nav-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav-toggle.expanded .nav-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* nav */
+.nav {
+  box-shadow: none;
+  color: white;
+  display: flex;
+  font-size: 0.95rem;
+  height: 100vh;
+  left: -24rem;
+  padding: 6rem 3rem 3rem 3rem;
+  position: fixed;
+  top: 0;
+  transition: box-shadow 0.5s, left 0.5s;
+  width: 27rem;
+  z-index: 1;
+}
+.nav.expanded {
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.125);
+  left: 0;
+}
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: auto 0;
+}
+
+/*   #main {
+	$-background-top: rgba(color(accent), .8);
+	$-background-bottom: rgba(color(primary), .8);
+	$-background-gradient: linear-gradient(to bottom,
+		$-background-top, $-background-bottom);
+	$-background-url: url('https://wallpapers.com/images/featured/plain-black-background-02fh7564l8qq4m6d.jpg');
+
+	background-image: $-background-gradient, $-background-url;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: contrast-color($-background-top,
+		color(text-dark), color(text-light));
+	flex-grow: 1;
+	flex-shrink: 0;
+	padding: 2rem;
+	position: relative;
+}
+*/
+  </style>
+  <style>
+  .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: calc(var(--bs-border-width) * -1);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+  
+  .vjs-modal-dialog .vjs-modal-dialog-content {
+  z-index: -1;
+}
+  
+  #channels {
+   margin-left: -39px;
+   margin-top: -74px;
+    }
+  .form-control {
+  color: darkgray;
+  border: var(--bs-border-width) solid #1d62a6;
+    }
+  .input-group {
+    color: darkgray;
+  }
+  .ch {
+  margin-top: -17px;
+  margin-left: -3px;  
+  color: #ffffff7d; 
+    }
+  
+  </style>
+  
+  </head>
+<body onclick="togglesubmenu();">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+  
+  
+  
+  <div class="nav-toggle"><p class="ch">Menu</p>
+	<div class="nav-toggle-bar"></div>
+</div>
+
+
+  
+  
+  
+  
+  <nav id="nav" class="nav">
+    
+    <div id="channels">
+    
+     <div class="container">
+    <h1 class="mb-3 text-center">Ulusal</h1>
+
+    <div class="input-group mb-3">
+      <select id="sourceSelect" class="form-select">
+        <option value="https://raw.githubusercontent.com/Turis-Tv/Turis-Tv-m3u/refs/heads/main/2-Haberler.m3u">europe</option>
+        <option value="https://raw.githubusercontent.com/Turis-Tv/Turis-Tv-m3u/refs/heads/main/2-Muzik.m3u">Movies</option>
+        <option value="https://raw.githubusercontent.com/Turis-Tv/M3u-Olacak/refs/heads/main/Ulusal.m3u">Turis</option>
+        <option value="https://raw.githubusercontent.com/Turis-Tv/2025/refs/heads/main/10-M3u/%2B18.m3u">language</option>
+        <option value="https://iptv-org.github.io/iptv/index.m3u">iptv Monde</option>
+        <option value="https://tvradiozap.eu/index.php/s/tvrzra.m3u">Radio</option>
+        <option value="https://iptv-org.github.io/iptv/index.country.m3u">country</option>
+        <option value="https://iptv-org.github.io/iptv/index.language.m3u">language</option>
+
+        <option value="custom">Load M3u</option>
+      </select>
+
+      <input type="text" id="m3uLink" class="form-control w-50" placeholder="Entrez le chemin M3U">
+    </div>
+
+    <div class="input-group mb-3">
+  
+    </div>
+
+    <div class=" input-group">
+      <label for="categorySelect" class="form-label text-center w-50 ">Kategori seçin:</label>
+      <span class="form-label text-center w-50">Kanal seçin:</span>
+    </div>
+
+    <div class="input-group mb-3">
+      <select id="categorySelect" class="form-select"></select>&nbsp;&nbsp;
+      <select id="channelSelect" class="form-select"></select>
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" id="channelLink" class="form-control" placeholder="Zincir bağlantısı">
+    </div>
+
+   <div class="imputa">
+    <div class="input-group2 mb-5">
+      <img id="channelLogo" src="" alt="Logo chaîne📺" class="tmd d-block mx-auto" style="max-width:150px;max-height:100px;">
+  </div>
+  </div>
+  </div> 
+  </div>
+</nav>
+
+
+  
+	<video autoplay id="player"   class="js-video video-js vjs-fluid vjs-big-play-centered" controls preload="auto" poster="https://cdn.futura-sciences.com/sources/images/iptv.jpeg" data-setup="{}">
+          <-- <source src="https://fl2.moveonjoy.com/HBO/index.m3u8" type="application/x-mpegURL" /> -->
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+              >supports HTML5 video</a
+            >
+          </p>
+        </video>
+      
+  
+  
+  
+  <main id="main"></main>
+<script src="https://players.brightcove.net/videojs-quality-menu/1/videojs-quality-menu.min.js"></script>
+<script src="https://unpkg.com/videojs-max-quality-selector@0.9.1/dist/videojs-max-quality-selector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.3/video.min.js"></script>
+<script src="https://vsalema.github.io/newiptv/js/newiptv.js"></script>
+<script id="rendered-js" >
+const sidebar = document.getElementById('sidebar');
+const hamburger = document.querySelector('.hamburger');
+const sideLinks = sidebar.querySelectorAll('a');
+
+function toggleSidebar() {
+  sidebar.classList.toggle('sidebaractive');
+
+}
+
+hamburger.addEventListener('click', toggleSidebar);
+
+sideLinks.forEach(link => {
+  link.addEventListener('click', toggleSidebar);
+
+});
+function togglesubmenu() {
+  if (window.matchMedia("(max-width: 1366px)").matches) {
+    const y = document.querySelectorAll("div.hamburger");
+    y[0].classList.toggle("platevisible");
+  }
+}
+var player = videojs('player');
+player.maxQualitySelector({
+  'defaultQuality': 2 // Make the video start playing at the highest quality possible
+});
+  //# sourceURL=pen.js
+    </script>
+  
+  
+  <script>
+  
+  (function(window, videojs) {
+     var player = window.player = videojs('player');
+	  player.ready(function() {
+	  const muteButton = document.querySelector("");
+		  muteButton.click();
+			
+		  var promise = player.play();
+		  if (promise !== undefined) {
+			  promise.then(function() {
+				  const muteButton = document.querySelector("");
+				}).catch(function(error) {
+				});
+			} else {
+			}
+		  });
+player.maxQualitySelector({
+		  displayCurrentQuality: false,
+	  });
+	}(window, window.videojs));
+  
+  </script>
+  
+  <script>
+  (function () {
+
+  let hamburger = {
+    nav: document.querySelector('#nav'),
+    navToggle: document.querySelector('.nav-toggle'),
+
+    initialize() {
+      this.navToggle.addEventListener('click',
+      () => {this.toggle();});
+    },
+
+    toggle() {
+      this.navToggle.classList.toggle('expanded');
+      this.nav.classList.toggle('expanded');
+    } };
+
+
+  hamburger.initialize();
+
+})();
+  </script>
+  
+  
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
