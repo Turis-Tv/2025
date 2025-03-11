@@ -1,0 +1,153 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(https://www.nti-audio.com/portals/0/pics/en/Teaser-Cinema-1200-500.jpg);
+  backdrop-filter: blur(13px);
+    background-attachment: fixed;
+    background-size: auto;
+    font-family: helvetica;
+}
+
+nav{
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 70px;
+}
+
+a{
+    color: #fff;
+}
+
+.nav-links{
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.nav-links:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.box-filmes{
+    text-align: center;
+    border: solid 1px rgb(255, 255, 255, 0.3);
+    width: 230px;
+    margin: 10px;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.box-filmes:hover{
+    border: 1px solid #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px 0px #fff;
+}
+
+
+.div-filmes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p{
+    margin: 0;
+}
+
+h3, h1, p{
+    color: #fff;
+    text-align: center;
+    
+}
+
+.capas-filmes{
+    width: 230px;
+    height: 330px;
+}
+
+iframe{
+    width: 80%;
+    height: 450px;
+    margin: 10px;
+    margin-left: 130px;
+}
+
+
+@media screen and (max-width: 900px){
+    body{
+        background-image: none;
+        background-color: #2a2a2a;
+    }
+
+    nav{
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    .nav-links{
+        border: 1px solid #fff;
+    }
+
+    .div-filmes{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 280px;
+    }
+
+    .box-filmes{
+        border: 1px solid #fff;
+        width: 150px;
+        height: 260px;
+        font-size: 10px;
+    }
+
+    .capas-filmes{
+        width: 150px;
+        height: 230px;
+    }
+
+
+    h3, h1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 310px;
+        margin-bottom: -260px;
+    }
+
+    iframe{
+        height: 250px;
+        margin: 0;
+        margin-top: 300px;
+        margin-left: 35px;
+    }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px){
+    .nav-links, h1, h3{
+        font-size: 50px;
+    }
+
+    .capas-filmes{
+        width: 430px;
+        height: 630px;
+    }
+
+    .box-filmes{
+        width: 430px;
+        height: 730px;
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    iframe{
+        transform: scale(1.9);
+        width: 1000px;
+        margin-top: 200px;
+        margin-left: 458px;
+    }
+}
