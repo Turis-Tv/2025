@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 5px 80px;
+  background-image: url(https://image.freepik.com/free-vector/contact-background-design_1325-76.jpg);
+
+  font-size: 17px;
+  padding: 50px 50px 50px 50px;
+}
+.container {
+  background-image: url(https://i.pinimg.com/originals/fd/bf/6f/fdbf6ffa0de04388810386d9304df89e.jpg);
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightcoral;
+  border-radius: 6px;
+}
+input[type="text"] input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+  margin: 10px;
+}
+.main_heading {
+  text-align: center;
+  color: whitesmoke;
+}
+p {
+  color: mediumaquamarine;
+}
+h5 {
+  color: white;
+}
+input[type="submit"] {
+  background-color: #4daea1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: grabbing;
+  width: 100%;
+}
+input[type="submit"]:hover {
+  background-color: yellowgreen;
+}
