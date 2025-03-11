@@ -8,7 +8,7 @@ https://tv-trt1.medya.trt.com.tr/master.m3u8?hls=1
 https://ecanlitv3.etvserver.com/trt1.m3u8?tkn=RHQh15NCt98h8EqE87VjsQ&tms=1707492619	
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 #EXTINF:-1 tvg-id="2" tvg-name="atv" tvg-logo="https://m.yilmaztv.cc/logo/atv.jpg?t=1702413437" tvg-id2="" group-title="ESKİ USUL",ATV ULUSAL
-https://ecanlitv3.etvserver.com/atv.m3u8?tkn=RHQh15NCt98h8EqE87VjsQ&tms=1707492619	
+https://trkvz-live.daioncdn.net/atv/atv.m3u8	
 #EXTVLCOPT:http-user-agent=Lavf53.32.100
 #EXTINF:-1 tvg-id="3" tvg-name="showtv" tvg-logo="https://m.yilmaztv.cc/logo/show-tv.jpg?t=1702413437" tvg-id2="" group-title="ESKİ USUL",SHOW TV ULUSAL
 https://ciner-live.daioncdn.net/showtv/showtv.m3u8
