@@ -2,43 +2,81 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - A Pen by Vilas8</title>
+  <title>CodePen - Simple email form</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Contact Form</title>
- <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-   <form action="" method="get">
-   <h1 class="main_heading">Get In Touch</h1>
-   <hr>
-   <h5>Fill in the form below, we'll get back to you within 24 hours!</h5>
-   <p>Name*:
-   <input type="text" name="name" placeholder="Vilas Kumar" required></p>
-   <p>Email*:
-    <input type="mulayim_2@hotmail.com" name="email" placeholder="vilas@mail.com" required>
-   </p>
-   <p>Message*:</p>
-    <textarea name="text" id="" cols="30" rows="10">
-     Drop your Message
-     here!
-    </textarea>
-   <input type="submit" value="Send Mail">
-   </form>
-  </div>
-</body>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Send mail</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <div id="content" class="m2">
+                    
+                    <header id="header" class=" pink darken-1">
+                        Verzend nieuwe e-mail
+                    </header>
+
+                    <form id="send-mail" action="" class="col s10 offset-s1">
+                        <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="email">Voor:</label>
+                                    <input id="email" type="email">
+                                </div>
+                                <div class="input-field col s12">
+                                    <label for="subject">Onderwerp:</label>
+                                    <input id="subject" type="text">
+                                </div>
+                        </div>
+
+                        <div class="row">
+                                <div class="input-field col s12">
+                                    <label for="message">bericht: </label>
+                                    <textarea id="message" class="materialize-textarea"></textarea>
+                                </div>
+                        </div>
+                            
+                        <div class="row" id="loaders">
+                                <img id="spinner" src="https://www.dropbox.com/s/wfsji06m6jfe0yl/spinner.gif?raw=1" width="150">
+                        </div>
+                            
+                        <div class="row">
+                                <div class="col s6">
+                                    <button id="send" class="btn waves-effect waves-light  pink darken-2" type="submit" name="action">Verstuur
+                                            <i class="material-icons right">versturen</i>
+                                    </button>
+                                </div>
+                                <div class="col s6">
+                                    <button id="resetBtn" class="btn waves-effect waves-light light-blue darken-2" type="submit">Reset
+                                            <i class="material-icons right">verwijderen</i>
+                                    </button>
+                                </div>
+                        </div>
+                    </form> 
+                    
+                </div> <!--.contenido-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
+  </body>
 </html>
 <!-- partial -->
-  
+  <script  src="./script.js"></script>
+
 </body>
 </html>
