@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PLAYLIST </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Playlist with Glowing Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E90FF; /* Arka plan rengi mavi */
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: #000;
+            padding: 10px;
+            position: relative;
+        }
+
+        .header img {
+            height: 50px;
+            transition: transform 0.5s ease;
+        }
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+        .header .menu-icon {
+            float: right;
+            font-size: 30px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header .menu-icon:hover {
+            color: #ccc;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 15px;
+            margin: auto;
+            background: #000;
+            animation: slideIn 1s ease-in-out;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .video:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+        .playlist-item {
+            background-color: #444;
+            color: white;
+            padding: 16px;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Kırmızı parıltı*/
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .playlist-item:hover {
+            background-color: #555;
+        }
+
+        .playlist-item.active {
+            background-color: #777;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Kırmızı parıltı */
+            }
+            to {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Kırmızı parıltı */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+
+    </div>
+
+    <div class="content">
+
+
+
+  
+        <div class="video" id="video-container">
+            <iframe id="youtube-player" src="https://www.youtube.com/embed/j9-9E-o9xu0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="button-container" id="playlist">
+
+     	    <button class="playlist-item" data-video-id="xepAUvKIxP4"> 1</button>
+            <button class="playlist-item" data-video-id="CgeJgaHZa8c"> 2</button>
+            <button class="playlist-item" data-video-id="7-OiCpQf4Ic"> 3</button>
+            <button class="playlist-item" data-video-id="L3AJYq1BwUA"> 4</button>
+            <button class="playlist-item" data-video-id="e5G-0A-k82Y"> 5</button>
+            <button class="playlist-item" data-video-id="CnOPaUt8H-U"> 6</button>
+            <button class="playlist-item" data-video-id="28UX_Yv6rvQ"> 7</button>
+  <button class="playlist-item" data-video-id="xepAUvKIxP4"> 1</button>
+            <button class="playlist-item" data-video-id="Ae2uE9_m73"> 8</button>
+            <button class="playlist-item" data-video-id="3136_6emjEE"> 9</button>
+            <button class="playlist-item" data-video-id="qUE2jtJIB1c"> 10</button>
+            <button class="playlist-item" data-video-id="9_6LDALFV2g"> 11</button>
+            <button class="playlist-item" data-video-id="CnOPaUt8H-U">Video 6</button>
+            <button class="playlist-item" data-video-id="28UX_Yv6rvQ">Video 7</button>
+
+  <button class="playlist-item" data-video-id="xepAUvKIxP4">Video 1</button>
+            <button class="playlist-item" data-video-id="CgeJgaHZa8c">Video 2</button>
+            <button class="playlist-item" data-video-id="7-OiCpQf4Ic">Video 3</button>
+            <button class="playlist-item" data-video-id="L3AJYq1BwUA">Video 4</button>
+            <button class="playlist-item" data-video-id="e5G-0A-k82Y">Video 5</button>
+            <button class="playlist-item" data-video-id="CnOPaUt8H-U">Video 6</button>
+            <button class="playlist-item" data-video-id="28UX_Yv6rvQ">Video 7</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <button class="playlist-item" data-video-id="I">Video 8</button>
+            <button class="playlist-item" data-video-id="">Video 9</button>
+            <button class="playlist-item" data-video-id="">Video 10</button>
+            <button class="playlist-item" data-video-id="">Video 11</button>
+            <button class="playlist-item" data-video-id="HuYdkB0Q2SQ">Video 12</button>
+            <button class="playlist-item" data-video-id="2y-JFMWP_UQ">Video 13</button>
+            <button class="playlist-item" data-video-id="FzKjPiq44lY">Video 14</button>
+            <button class="playlist-item" data-video-id="cF2Kzjflg9g">Video 15</button>
+            <button class="playlist-item" data-video-id="bbYjyvwAfhU">Video 16</button>
+            <button class="playlist-item" data-video-id="VU1FmU8Lvtw">Video 17</button>
+            <button class="playlist-item" data-video-id="1aTasfADhPY">Video 18</button>
+            <button class="playlist-item" data-video-id="BhXOIdxtclE">Video 19</button>
+            <button class="playlist-item" data-video-id="Bv3GSlGqI4c">Video 20</button>
+        </div>
+
+   </div>
+<br>
+   <button class="button" onclick="window.location.href='../index.html'" class="tacobell">Ana Sayfa!</button>
+</div>
+      
+    </div>
+
+    <script>
+        const youtubePlayer = document.getElementById('youtube-player');
+        const playlistItems = document.querySelectorAll('.playlist-item');
+
+        playlistItems.forEach(item => {
+            item.addEventListener('click', function() {
+                playlistItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                const videoId = this.getAttribute('data-video-id');
+                youtubePlayer.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            });
+        });
+
+        // Set the first video as active
+        playlistItems[0].classList.add('active');
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
