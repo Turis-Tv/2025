@@ -1,0 +1,2674 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Turis Tv</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html</title>
+    <style>
+       /* Estilos generales del cuerpo */
+      body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #5a0b00;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+       /* Estilos del encabezado */
+      header {
+            background-color: #5a0b00;
+            color: white;
+            padding: 10px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Estilos de la navegación */
+      header h1 {
+            margin: 0;
+            font-size: 15px;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 10px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            white-space: nowrap;
+        }
+        nav a:hover {
+            background-color: #e0e0e0;
+        }
+        /* Contenedor del menú */
+      .menu-container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Estilos de los ítems del menú */
+      .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.1); 
+            border-radius: 5px;
+            background-color: #e2f313;
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .menu-item div {
+            flex: 1;
+        }
+        .menu-item h3, .menu-item p {
+            margin: 0;
+        }
+        .menu-item .favorite {
+            font-size: 20px;
+            color: #ffa826;
+            cursor: pointer;
+        }
+        .menu-item .favorite.active {
+            color: red;
+        }
+        .menu-item .favorite::before {
+            content: "\2661";  /* Corazón vacío */
+        }
+        .menu-item .favorite.active::before {
+            content: "\2764";  /* Corazón lleno */
+        }
+        .menu-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+         /* Estilos del pie de página */
+      footer {
+            background-color: #5a0b00;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            flex-shrink: 0;
+        }
+        footer a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            padding: 5px 0;
+        }
+        footer a svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 5px;
+        }
+        footer a p {
+            margin: 0;
+        }
+        footer a.active {
+            background-color: #; /* Color de fondo cuando el enlace está activo */
+            border-radius: 10px; /* Añadir bordes redondeados */
+        }
+        /* Estilos del toast (mensaje emergente) */
+      .toast {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 1000;
+            white-space: nowrap; 
+            width: auto;
+        }
+        .toast.show {
+            opacity: 1;
+        }
+         /* Estilos del popup de búsqueda */
+      .search-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: calc(100% - 60px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #ffa826;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .search-container button:hover {
+            background-color: #ff7d00;
+        }
+        /* Estilos responsivos para orientación paisaje */
+      @media (orientation: landscape) {
+            header {
+                flex-direction: column;
+            }
+            nav {
+                margin-top: 10px;
+            }
+            .menu-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: flex-start;
+            }
+            .menu-item {
+                flex: 1 1 calc(50% - 40px);
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sayfa başlığı -->
+  <header>
+        <h1>Turis Tv</h1>
+        <nav>
+            <a href="#" onclick="filterCategory('Tüm')">Tüm</a>
+            <a href="#" onclick="filterCategory('Filmler')">Filmler</a>
+            <a href="#" onclick="filterCategory('Eğlence')">Eğlence</a>
+            <a href="#" onclick="filterCategory('Spor')">Spor</a>
+            <a href="#" onclick="filterCategory('Animasyonlu')">Animasyonlu</a>
+            <a href="#" onclick="filterCategory('Kültür')">Kültür</a>
+            <a href="#" onclick="filterCategory('Haberler')">Haberler</a>
+            <a href="#" onclick="filterCategory('Çeşitli')">Çeşitli</a>
+           </nav>
+    </header>
+<!-- Video menü taşıyıcısı -->
+<div class="menu-container" id="menu-container">
+    <div class="menu-item" data-id="1" data-category="Eğlence" onclick="reproducirVideo(event, 'https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html')">
+        <img src="https://i.imghippo.com/files/B0EUq1727121547.png" alt="star">
+        <div>
+            <h3>https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html</h3>
+            <p>https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html</p>
+        </div>
+    </div>
+    <!-- Más items del menú -->
+    <div class="menu-item" data-id="2" data-category="Kültür" onclick="reproducirVideo(event, 'https://live.artidijitalmedya.com/artidijital_trakyaturk/trakyaturk/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/qss9x1727120593.png" alt="13 Cultura">
+        <div>
+            <h3>show Turk</h3>
+            <p>Cultura-Chile</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="3" data-category="Eğlence" onclick="reproducirVideo(event, 'https://livetv.powerapp.com.tr/powerTV/powerhd.smil/chunklist_b1428000_sltur.m3u8')">
+        <img src="https://i.imghippo.com/files/Oz6qU1723481229.png" alt="13 Festival">
+        <div>
+            <h3>power</h3>
+            <p>Entretenimiento-Chile</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="4" data-category="Eğlence" onclick="reproducirVideo(event, 'http://dogus-live.daioncdn.net/startv/startv.m3u8')">
+        <img src="https://i.imghippo.com/files/9Iq5L1723481350.png" alt="13 Max">
+        <div>
+            <h3>power1</h3>
+            <p>Entretenimiento-Chile</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="5" data-category="kids" onclick="reproducirVideo(event, 'http://live.artidijitalmedya.com/artidijital_trakyaturk/trakyaturk/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/dLaov1723483330.png" alt="13 Realities">
+        <div>
+            <h3>show turk</h3>
+            <p>Entretenimiento-Chile</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="6" data-category="Eğlence" onclick="reproducirVideo(event, 'http://livetv.powerapp.com.tr/powerTV/powerhd.smil/chunklist_b1428000_sltur.m3u8')">
+        <img src="https://i.imghippo.com/files/DZ8w61723483499.png" alt="13 Teleseries">
+        <div>
+            <h3>dogus</h3>
+            <p>Entretenimiento-Chile</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="7" data-category="Eğlence" onclick="reproducirVideo(event, 'http://dogus-live.daioncdn.net/startv/startv.m3u8')">
+        <img src="https://i.imghippo.com/files/HFhbQ1723486588.png" alt="AFV en Español">
+        <div>
+            <h3>AFV en Español</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <!-- Agregar nuevos items del menú aquí -->
+    <div class="menu-item" data-id="8" data-category="Eğlence" onclick="reproducirVideo(event, 'http://k3.usastreams.com/CableLatino/88stereo/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/LoUYt1723483935.png" alt="88 Stereo">
+        <div>
+            <h3>88 Stereo</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="9" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://dogus-live.daioncdn.net/startv/startv.m3u8')">
+        <img src="https://i.imghippo.com/files/qn2qJ1723484074.png" alt="101 Antequera">
+        <div>
+            <h3>101 Antequera</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="10" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mediacp.us:8081/504tvhn/index.m3u8')">
+        <img src="https://i.imghippo.com/files/Rij8p1723495491.png" alt="504 TV">
+        <div>
+            <h3>504 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="11" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudflare.streamgato.us:3148/live/agenda56tvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/U2AnH1723491054.png" alt="Agenda 56 TV">
+        <div>
+            <h3>Agenda 56 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="12" data-category="Noticias" onclick="reproducirVideo(event, 'https://d2e809bgs49c6y.cloudfront.net/live/d87c2b7b-9ecf-4e6e-b63b-b32772bd7851/live.isml/d87c2b7b-9ecf-4e6e-b63b-b32772bd7851.m3u8')">
+        <img src="https://i.imghippo.com/files/7u8yF1723409990.jpg" alt="ABC TV">
+        <div>
+            <h3>ABC TV</h3>
+            <p>Notocias-Paraguay</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="13" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://5790d294af2dc.streamlock.net/acsnetwork/acsnetwork/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Cf1Hx1723480547.png" alt="ACS NETWORK">
+        <div>
+            <h3>ACS NETWORK</h3>
+            <p>Animado
+        </div>
+    </div>
+    <div class="menu-item" data-id="14" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv.mediasector.es/hls/activatv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/oh1Kw1723484293.png" alt="Activa TV ">
+        <div>
+            <h3>Activa TV </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="15" data-category="Haberler" onclick="reproducirVideo(event, 'https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8')">
+        <img src="https://i.imghippo.com/files/fkXjS1723484503.png" alt="ADN 40">
+        <div>
+            <h3>ADN 40</h3>
+            <p>Noticias México y el Mundo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="16" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8108/index.m3u8')">
+        <img src="https://i.imghippo.com/files/hcKnA1723484651.png" alt="Afortunadas TV">
+        <div>
+            <h3>Afortunadas TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="17" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cp.panelchs.com:1936/8156/8156/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/hSyXJ1723491859.png" alt="Agenda al día TV">
+        <div>
+            <h3>Agenda al día TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="18" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ed21ov.live.opencaster.com/pAtGzcAnwziC/index.m3u8')">
+        <img src="https://i.imghippo.com/files/ZBMBW1723492348.png" alt="Agro Tv">
+        <div>
+            <h3>Agro TV Apurimac</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="19" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/dG1lP1723493074.png" alt="Aguacate TV">
+        <div>
+            <h3>Aguacate TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="20" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamunoapp.com:3149/live/alegretvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/8EZwx1723493553.png" alt="Alegre TV RD">
+        <div>
+            <h3>Alegre TV RD</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="21" data-category="Eğlence" onclick="reproducirVideo(event, 'https://s.emisoras.tv:8081/atv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/iBUpO1723493934.png" alt="Alsacias Television">
+        <div>
+            <h3>Alsacias Televisión</h3>
+            <p>Entretenimiento-Hondura</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="22" data-category="Haberler" onclick="reproducirVideo(event, 'https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/BvskB1723496315.png" alt="AMX Noticias">
+        <div>
+            <h3>AMX Noticias</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="23" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://ssh101-fl.bozztv.com/ssh101/livestreamingtv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/pC3iL1723521081.png" alt="Animastation">
+        <div>
+            <h3>Animastation</h3>
+            <p>Anime</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="24" data-category="Animasyonlu" onclick="reproducirVideo(event, 'http://animezonetv.net/hls/stream.m3u8')">
+        <img src="https://i.imghippo.com/files/ub8Nu1723521590.png" alt="Animazone TV">
+        <div>
+            <h3>Animazone TV</h3>
+            <p>Anime</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="25" data-category="Haberler" onclick="reproducirVideo(event, 'https://redirector.dps.live/hls/atv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/q7v1h1723524697.png" alt="Antofagasta TV">
+        <div>
+            <h3>Antofagasta TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="26" data-category="Eğlence" onclick="reproducirVideo(event, 'https://v2.tustreaming.cl/atacamatv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/3Zdju1723525190.png" alt="Atacama TV">
+        <div>
+            <h3>Atacama TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="27" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://59ef525c24caa.streamlock.net/atntelevision/atntelevision/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/nvMRR1723525794.png" alt="ATN TV">
+        <div>
+            <h3>ATN TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="28" data-category="Haberler" onclick="reproducirVideo(event, 'https://stream.arcast.com.ar/atbargentina/atbargentina/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/25YvD1723526698.png" alt="ATV Argentina">
+        <div>
+            <h3>ATV Argentina</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="29" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8')">
+        <img src="https://i.imghippo.com/files/nZ1JJ1723527209.png" alt="Aurora Media Films">
+        <div>
+            <h3>Aurora Media Films</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="30" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stmv3.voxtvhd.com.br/australtv/australtv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/7cIKH1723528094.png" alt="Austral TV">
+        <div>
+            <h3>Austral TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="31" data-category="Haberler" onclick="reproducirVideo(event, 'https://ssh101.bozztv.com/ssh101/streamavc/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Bddko1723564241.png" alt="AVC HD">
+        <div>
+            <h3>AVC HD</h3>
+            <p>Noticias- Uruguay</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="32" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mgv-awapa.akamaized.net/hls/live/2104282/MGV_CHANNEL15/master.m3u8')">
+        <img src="https://i.imghippo.com/files/otIpl1723565098.png" alt="Awapa sports TV">
+        <div>
+            <h3>Awapa sports TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="33" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mediacp.us:8081/azatvhd/index.m3u8')">
+        <img src="https://i.imghippo.com/files/IC3Wu1723566296.png" alt="AZA TV">
+        <div>
+            <h3>AZA TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="34" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ch1-tva.duin.dev/hls/stream.m3u8')">
+        <img src="https://i.imghippo.com/files/Pa2GR1723566521.png" alt="Azteca Guate">
+        <div>
+            <h3>Azteca Guate</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="35" data-category="Eğlence" onclick="reproducirVideo(event, 'https://azt-mun.otteravision.com/azt/mun/mun.m3u8')">
+        <img src="https://i.imghippo.com/files/x3nCB1723566766.png" alt="Azteca Internacional">
+        <div>
+            <h3>Azteca Internacional</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="36" data-category="Eğlence" onclick="reproducirVideo(event, 'https://s5.mexside.net:1936/envio2/envio2/chunklist_w700317579.m3u8')">
+        <img src="https://i.imghippo.com/files/EN2cq1723568017.png" alt="B15 Zacatecas">
+        <div>
+            <h3>B15 Zacatecas</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="37" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://rdn.essastream.com:3042/live/bajotechotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/QwFfM1723568672.png" alt="Bajo Techo Tv">
+        <div>
+            <h3>Bajo Techo Tv</h3>
+            <p>Misceláneo- RD</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="38" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streaming02.gbasat.com.ar:19360/bayrestv/bayrestv.m3u8')">
+        <img src="https://i.imghippo.com/files/UIHrB1723569175.png" alt="Bayres TV">
+        <div>
+            <h3>Bayres TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="39" data-category="Spor" onclick="reproducirVideo(event, 'https://lnc-bein-espanol.tubi.video/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/8UoA61723572893.png" alt="beIN SPORTS XTRA">
+        <div>
+            <h3>beIN SPORTS XTRA</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="40" data-category="Eğlence" onclick="reproducirVideo(event, 'https://tvdatta.com:3602/stream/play.m3u8')">
+        <img src="https://i.imghippo.com/files/Ntmua1723573369.png" alt="TV Bella  Asunción">
+        <div>
+            <h3>TV Bella  Asunción</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="41" data-category="Haberler" onclick="reproducirVideo(event, 'https://mdstrm.com/live-stream-playlist/58d1921a72e2b22e2905e493.m3u8')">
+        <img src="https://i.imghippo.com/files/GVCAb1723573904.png" alt="Blu Radio">
+        <div>
+            <h3>Blu Radio</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="42" data-category="Eğlence" onclick="reproducirVideo(event, 'https://play.agenciastreaming.com:8081/bnblimalive/tracks-v1a1/mono.m3u8')">
+        <img src="https://i.imghippo.com/files/k55FB1723574655.png" alt="BNB TV">
+        <div>
+            <h3>BNB TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="43" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://spa-ha-p002.cdn.masmediatv.es/SVoriginOperatorEdge/smil:17_HD.smil/index.m3u8')">
+        <img src="https://i.imghippo.com/files/EYDJu1723577029.png" alt="bOING">
+        <div>
+            <h3>Boing</h3>
+            <p>Animados-España</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="44" data-category="Eğlence" onclick="reproducirVideo(event, 'http://boliviatv1.srfms.com:5735/live/livestream/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/oMbq31723577565.png" alt="BTV">
+        <div>
+            <h3>BTV-Bolivia TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="45" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss5.domint.net:3026/btv_str/bonao/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Y9lxC1723577979.png" alt="Bonao TV">
+        <div>
+            <h3>Bonao TV</h3>
+            <p>Entretenimiento-RD</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="46" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.borealtelevision.com:3712/live/borealtelevisionhdlive.m3u8')">
+        <img src="https://i.imghippo.com/files/HWn3t1723578409.png" alt="Boreal TV">
+        <div>
+            <h3>Boreal TV</h3>
+            <p>Entretenimiento-RD</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="47" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://rds3.desdeparaguay.net/brunomasitv/brunomasitv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/KVygi1723578860.png" alt="Bruno Masi TV">
+        <div>
+            <h3>Bruno Masi TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="48" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloud.fastchannel.es/manifiest/hls/prog9/btatv.m3u8')">
+        <img src="https://i.imghippo.com/files/t6q671723579287.png" alt="BTA TV">
+        <div>
+            <h3>BTA TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="49" data-category="Eğlence" onclick="reproducirVideo(event, 'https://59825a54e4454.streamlock.net:8443/papo351/papo351/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/FaJgZ1723579634.png" alt="Buena TV">
+        <div>
+            <h3>Buena TV </h3>
+            <p>Entretenimiento-Puerto Rico</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="50" data-category="Eğlence" onclick="reproducirVideo(event, 'https://fl1002.bozztv.com/ssh101/bigchannel/tracks-v1a1/mono.m3u8')">
+        <img src="https://i.imghippo.com/files/zOtW61723651962.png" alt="Big Channel TV">
+        <div>
+            <h3>Big Channel TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="51" data-category="Eğlence" onclick="reproducirVideo(event, 'https://bst.buin.cl/0.m3u8')">
+        <img src="https://i.imghippo.com/files/EC7lW1723652362.png" alt="Buin Somos Todos">
+        <div>
+            <h3>Buin Somos Todos</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="52" data-category="Haberler" onclick="reproducirVideo(event, 'https://5fe2654d6127d.streamlock.net/cadenaa/videocadenaa/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/HCbp11723654480.png" alt="Cadena A">
+        <div>
+            <h3>Cadena A</h3>
+            <p>Noticias Bolivia</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="53" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://5bf8041cb3fed.streamlock.net/PuertoTV/PuertoTV/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/AuESa1723655026.png" alt="Camino Real TV">
+        <div>
+            <h3>Camino Real TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="54" data-category="Eğlence" onclick="reproducirVideo(event, 'https://59ef525c24caa.streamlock.net/canal1cr/canal1cr/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/ypPzU1723655875.png" alt="Canal 1 TV">
+        <div>
+            <h3>Canal 1 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="55" data-category="Eğlence" onclick="reproducirVideo(event, 'https://nd106.republicaservers.com:4433/hls/c6611/index.m3u8')">
+        <img src="https://i.imghippo.com/files/xGekl1723656531.png" alt="Canal 2 de Ushuaia">
+        <div>
+            <h3>Canal 2 de Ushuaia</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="56" data-category="Eğlence" onclick="reproducirVideo(event, 'https://nd106.republicaservers.com:4433/hls/canal2misioness/index.m3u8')">
+        <img src="https://i.imghippo.com/files/33qxm1723657231.png" alt="Canal 2 Misiones">
+        <div>
+            <h3>Canal 2 Misiones</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="57" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloud2.streaminglivehd.com:1936/8048/8048/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/zC7gv1723657542.png" alt="Canal 3 Impresionante">
+        <div>
+            <h3>Canal 3 Impresionante</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="58" data-category="Filmler" onclick="reproducirVideo(event, 'https://d2jqgm8hyia1n3.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-o8hl8d0bx6aah/index.m3u8')">
+        <img src="https://i.imghippo.com/files/6Xxny1723658087.png" alt="Nuevo Canal 3">
+        <div>
+            <h3>Cini Friki</h3>
+            <p>Películas- España</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="59" data-category="Eğlence" onclick="reproducirVideo(event, 'https://limited35.Tümtreaming.es/live/mitjans-livestream.m3u8')">
+        <img src="https://i.imghippo.com/files/AwyjE1723658664.png" alt="Canal 4 Catalunya">
+        <div>
+            <h3>Canal 4 Catalunya</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="60" data-category="Eğlence" onclick="reproducirVideo(event, 'https://protvradiostream.com:1936/canal4rd-1/ngrp:canal4rd-1_all/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/pU5H11723659158.png" alt="Canal 4 RD">
+        <div>
+            <h3>Canal 4 RD</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="61" data-category="Eğlence" onclick="reproducirVideo(event, 'https://5940924978228.streamlock.net/Directo2/Directo2/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/uxsXD1723659987.png" alt="Canal 4 Tenerife">
+        <div>
+            <h3>Canal 4 Tenerife</h3>
+            <p>Entretenimiento-España</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="62" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream.arcast.com.ar/c5sf/c5sf/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/pCuWg1723660281.png" alt="Canal 5 Santa Fe">
+        <div>
+            <h3>Canal 5 Santa Fe</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="63" data-category="Haberler" onclick="reproducirVideo(event, 'https://mdstrm.com/live-stream-playlist/5f2d9d6ff17144074bd8a284.m3u8')">
+        <img src="https://i.imghippo.com/files/FVTdD1723663718.png" alt="Canal 6 CDMX">
+        <div>
+            <h3>Canal 6 CDMX</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="64" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream.arcast.live/canal7jujuy/ngrp:canal7jujuy_all/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/oEZzT1723664668.png" alt="Canal 7 Jujuy">
+        <div>
+            <h3>Canal 7 Jujuy</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="65" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream.arcast.com.ar/c7nq/ngrp:c7nq_all/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/tDdnU1723665162.png" alt="Canal 7 Neuquén">
+        <div>
+            <h3>Canal 7 Neuquén</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="66" data-category="Haberler" onclick="reproducirVideo(event, 'https://mdstrm.com/live-stream-playlist/5a7b1e63a8da282c34d65445.m3u8')">
+        <img src="https://i.imghippo.com/files/j4qYD1723665551.png" alt="Canal 8 CR">
+        <div>
+            <h3>Canal 8 CR</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="67" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3697/live/canal8starosalive.m3u8')">
+        <img src="https://i.imghippo.com/files/5816a1723666037.png" alt="Canal 8 Santa Rosa">
+        <div>
+            <h3>Canal 8 Santa Rosa</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="68" data-category="Eğlence" onclick="reproducirVideo(event, 'https://movil.ejeserver.com/live/canal8tv.m3u8')">
+        <img src="https://i.imghippo.com/files/zIaO71723666374.png" alt="Canal 8 TV+">
+        <div>
+            <h3>Canal 8 TV+</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="69" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3549/live/barbetvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/8kwML1723666723.png" alt="Canal 9 Barbe TV">
+        <div>
+            <h3>Canal 9 Barbe TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="70" data-category="Eğlence" onclick="reproducirVideo(event, 'https://video2.lhdserver.es/canal9cosespu/live.m3u8')">
+        <img src="https://i.imghippo.com/files/AeXxs1723668267.png" alt="Canal 9 Cosespu">
+        <div>
+            <h3>Canal 9 Cosespu</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="71" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3859/live/ixchiguanlive.m3u8')">
+        <img src="https://i.imghippo.com/files/PVfAE1723668501.png" alt="Canal 9 Ixchiguán">
+        <div>
+            <h3>Canal 9 Ixchiguán</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="72" data-category="Çeşitli" onclick="reproducirVideo(event, 'http://stream2.dynalias.com:1935/live/tvlive1/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/xuucl1723668857.png" alt="Canal 10 Cancún">
+        <div>
+            <h3>Canal 10 Cancún</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="73" data-category="Eğlence" onclick="reproducirVideo(event, 'https://acceso.radiosportstv.online:3430/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/MNxea1723671806.png" alt="Canal 17 TV Nosara">
+        <div>
+            <h3>Canal 17 TV Nosara</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="74" data-category="Haberler" onclick="reproducirVideo(event, 'https://rtvelivestream.akamaized.net/rtvesec/can/24h_can_main_dvr.m3u8')">
+        <img src="https://i.imghippo.com/files/Cn2xr1723672156.png" alt="Canal 24 Horas Canarias">
+        <div>
+            <h3>Canal 24 Horas Canarias</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="75" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3967/live/tvelive.m3u8')">
+        <img src="https://i.imghippo.com/files/jssa11723672676.png" alt="Canal 29 TVA">
+        <div>
+            <h3>Canal 29 TVA</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="76" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamyes.alsolnet.com/canal34hd/live/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/7FFw41723698252.png" alt="Canal 34 San Juan">
+        <div>
+            <h3>Canal 34 San Juan</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="77" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3948/live/yepotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/2AXcl1723698787.png" alt="Canal 35 Yepocapa">
+        <div>
+            <h3>Canal 35 Yepocapa</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="78" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stmv5.voxtvhd.com.br/canal74hd/canal74hd/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Q2WXh1723699281.png" alt="Canal 74 San Antonio">
+        <div>
+            <h3>Canal 74 San Antonio</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="79" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3295/live/canal100chilive.m3u8')">
+        <img src="https://i.imghippo.com/files/Shtk01723699844.png" alt="Canal 100 Chinique">
+        <div>
+            <h3>Canal 100 Chinique</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="80" data-category="Eğlence" onclick="reproducirVideo(event, 'https://movil.ejeserver.com/live/nets.m3u8')">
+        <img src="https://i.imghippo.com/files/kyYli1723702793.png" alt="Canal Nets">
+        <div>
+            <h3>Canal Nets</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="81" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdnlive.codev8.net/rtvalive/smil:channel22.smil/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/OMuTA1723748165.png" alt="Canal Sur Andalucía 2">
+        <div>
+            <h3>Canal Sur Andalucía 2</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="82" data-category="Kültür" onclick="reproducirVideo(event, 'https://liveingesta118.cdnmedia.tv/canaltro2live/smil:live.smil/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/kFTu71723748485.png" alt="Canal TRO">
+        <div>
+            <h3>Canal TRO</h3>
+            <p>Cultura</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="83" data-category="Haberler" onclick="reproducirVideo(event, 'https://vcp.myplaytv.com/moviefe/moviefe/chunklist_w1370182466.m3u8')">
+        <img src="https://i.imghippo.com/files/yOk471723748805.png" alt="Canal TRV ">
+        <div>
+            <h3>Canal TRV </h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="84" data-category="Eğlence" onclick="reproducirVideo(event, 'https://movil.ejeserver.com/live/visiondorada.m3u8')">
+        <img src="https://i.imghippo.com/files/jDR8Z1723749503.png" alt="Bum TV">
+        <div>
+            <h3>Bum TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="85" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp.myplaytv.com/cantinatv/cantinatv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/YVY4r1723750044.png" alt="Cantina TV">
+        <div>
+            <h3>Cantina TV</h3>
+            <p>Entretenimiento-Música</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="86" data-category="Eğlence" onclick="reproducirVideo(event, 'https://video.compuwebecuador.com:3783/live/caprichotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/HAvM11723750345.png" alt="Capricho TV">
+        <div>
+            <h3>Capricho TV</h3>
+            <p>Entretenimiento-Música</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="87" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss3.domint.net:3144/ctv_str/cascaratv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/lZRa51723750950.png" alt="Cáscara TV">
+        <div>
+            <h3>Cáscara TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="88" data-category="Haberler" onclick="reproducirVideo(event, 'https://espanol-livews.cgtn.com/hls/LSveOGBaBw41Ea7ukkVAUdKQ220802LSTexu6xAuFH8VZNBLE1ZNEa220802cd/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/VH98e1723751533.png" alt="CGTN Español">
+        <div>
+            <h3>CGTN Español</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="89" data-category="Eğlence" onclick="reproducirVideo(event, 'https://glb.bozztv.com/glb/ssh101/1234chivacoa/index.m3u8')">
+        <img src="https://i.imghippo.com/files/l0P361723751963.png" alt="Chivacoa TV Internacional">
+        <div>
+            <h3>Chivacoa TV Internacional</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="90" data-category="Filmler" onclick="reproducirVideo(event, 'https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live1/cine_720p/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/5kIxq1723752321.png" alt="Cine Sony">
+        <div>
+            <h3>Cine Sony</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="91" data-category="Filmler" onclick="reproducirVideo(event, 'https://olympusamagi.pc.cdn.bitgravity.com/CineSureno-roku/master.m3u8')">
+        <img src="https://i.imghippo.com/files/tAevE1723752845.png" alt="Cine Sureño">
+        <div>
+            <h3>Cine Sureño</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="92" data-category="Filmler" onclick="reproducirVideo(event, 'https://amg01024-olympusat-cinereallatam-ono-ad-z5.amagi.tv/playlist/amg01024-olympusat-cinereallatam-ono/cb543d177b6c648a9ad43664cef343a7f9591fde1d6988693eb5518975d1073edce2a59caa08ff16388f1ede7f0a66413a3e951fda77118fd87eb141453c5728cfffe729a2c05616b7db083429b56a062a866a68ac39437ed0e21f48a238b6720a5aa82a66443d80b846ac7454db80148b61299bce8c37683f03409a5e5afba358b1ebb05f42dc65f5e01a55912d46e59f43c8814aa6d2d75bcd5e8f27f3119b91a28c854380d09b669376e3301a16236d89bf6a87c64fb3e58f7b35ee3142381641f2b380a4017391505412feedceba71e95dcd8628ce6432ad099b4a976afe01c01cb4de5eb2a4adde41584bc2ae3f301e8ecbfaf2915b32b975b5b7fae2636e90e0157b5ebb0bb2467a01bed39168eead1492a56d868b790f37c484469e8fc0e985d88e439220d8c2f5946735240405069513b78861a945b712aedc1624485b0aae95589ec5b33731665cc8875bda011ecbade1f7f01c32cd69155be465ca1b01698c127e79e019cfc04406e5270e967b3ceb480a8e43f1bd5e9dcdbdc3143eb0eaf118910588b40ec1b806a7794e3a68d2a2762f2f257cd4fd280e3f69d34496b0a0802753488699ccfad31d39172928501985e6eb75e9f8aa5d1e19cc1d296c6d1d078317d77d91265b052bfd2889e1631384023263e2ae3b2f1806d691e7d2838f9f45b17a8499fc6e2b635f35bf6650773d87e6da01ad60482e225fb2e70529cc6fbca768f4b387a9a12ca8ac65a4396f1511bd9a756f2822bee797f9ea05f951f08715f9bac759dee68e133ff75450e492ffa2b75cf9e380ca4e4fb3a3430025eabbce20f14cb5768c51fbe262d7a65c081f354108c68b14cf5eb7de97c661fa7ee927690fab072f90d52e97462f3102d7872b8866b7353c572109aad3d6654f4bedb226eb5cdc2634c34d793c254ed28e0111d3a6275cd402776ea1afdc98ede437509b3eba25922034af595b7aba8c20bcd7fbb3db977f5805eeb3a967b2b5c7d49f818475284b241bb3f572793b982af98702a18a187fe486c2a5f966857aef30f4d5e478aa6cee9bf25eeea39cf8fa651e110f04ab8fa4ac66aed66072b275df423a0bdcdbb48602d5eefc5628a40d9ac66d088931715ac5ae8174eb23aae9342fa7ca296edc7a36cef7ec647bec21b42b2672e1c7e23f6398db6e732c345c46db2aacb5494b33a4f9eb9662e9b4f90234b8/187/1920x1080_6046040/index.m3u8')">
+        <img src="https://i.imghippo.com/files/K8TmT1723753297.png" alt="Cine Drama">
+        <div>
+            <h3>Cine Drama</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="93" data-category="Filmler" onclick="reproducirVideo(event, 'https://amg01024-olympusat-juntos-ono-ad-h5.amagi.tv/playlist/amg01024-olympusat-juntos-ono/cb543d177b6c648a9ad43664cef343a7f9591fde1d6988693eb5518975d1073edce2a59caa08ff16388f1ede7f0a66413a3e951fda77118fd87eb141453c5728cfffe729a2c05616b7db083429b56a062a866a68ac39437ed0e21f48a238b6720a5aa82a66443d80b846ac7454db80148b61299bce8c37683f03409a5e5afba358b1ebe65c13db39a9b54f55912d46e49f43c8814aa6888658cf5ed223f641c9c7a48cd242d1819b42936de3301a162b6ea68c7887bb3edcbbca334df61b3d552145f4aa85ff4d25f4212938a9c6e5913fb279a98821922e33b204ea0dee70d33df90dfeb44fa4a8ec8943163dfcc20d6372f5b4f3deab626bed3ef8f2b1df2934f398157c54876cc832143a85f3cf1881b163fcc2208ab9271234d99c558e8eb397a1969f4f9911fc9d8cf251434a704a03964d9d946cd62caf10c2a835335948709bc02baeefd85a232c48838e4cd1616ad3b4ae8dcb1c3ede651553e569dc5511639643061be429ead4297e855466ef5f3be95d309454b2bb23f8fdb58f613ab1cd8946f17b9dd660b3a658fc074d5806a0bc2d4f55736ec4e174080f6cd1499693a09f7f1d14fce497b18f442f10771140098ef6f13e9881cd661913d75a2565674a67fc6dd76dcc4e4a0f3ed91fa1cf6315d55c594788a63b4e147985f7a1938ec0cb47ac0db5a599681615775155526f570635530f38875a7b5f383bb00e6a42b006283a80f7e7c4e94dea53fe1ec7166d0677cdb0364c0c407a600be1e20024bb60f26fd2abcb52cde28c52668c28ba436df63939ee999fe09f357ca0b8580f6e99d02ec43329c257e42a86d37dd9fa355458542a3983f1c0f369249ebabefd09b11957824d4a32d5bdeeb6c46f55e6de7a323d085816459f17460395d5cf6d0c77edf372a80da6a362a04c503c28549eac341ed7b8394cc7754969abf69fd0edd25544832ed565d96c0691520f05e8d877bfd0e5bda9d12f1c2bf1828660f7e18488c7d38a017b08673fd2817c5d65d72bf5c356b3fb532ca1d9c5b59a5d9673e327b2cbe37db372f39dce7bc4faaaf7f57318494917ad91859d3aeffc5b15f52ba10e477ebb85ebf369fea0cc2470f852ed804723ee097753cda4ec178a4c9ce32a21f3887953b6256692f89ec67d03e816f454968fc3ae9fe633f907d8889016e683da/143/1920x1080_6046040/index.m3u8')">
+        <img src="https://i.imghippo.com/files/IXmEd1723753626.png" alt="Cine Familia">
+        <div>
+            <h3>Cine Familia</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="94" data-category="Filmler" onclick="reproducirVideo(event, 'https://amg01024-olympusat-horrorfy-ono-ad-ky.amagi.tv/playlist/amg01024-olympusat-horrorfy-ono/cb543d177b6c648a9ad43664cef343a7f9591fde1d6988693eb5518975d1073edce2a59caa08ff16388f1ede7f0a66413a3e951fda77118fd87eb141453c5728cfffe729a2c05616b7db083429b56a062a866a68ac39437ed0e21f48a238b6720a5aa82a66443d80b846ac7454db80148b61299bce8c37683f03409a5e5afba358b1ebe35a11db6da6e31a55912d46e49f43c8814aa689dd5ecb5ed370a4109497f783811681839b43936ee3301a162172899078e1aa37d78ac02153f2702c555054f6b3acfc5b32824b462e8e95bfbc6af25dc1853c8c7022a8018c01a2228f6e9e3ffdb424d1acbfcc0c4029b4fb487528b2e09f9fe93941fd0c85aafdc9636fc3b95b6f50de23de302e3d84eb85178bce5a92b3358cb76c0e628dfb229a99a1cdebb98938de4f8a9ea2cb391b1b620007d10ba3cd69832f8b7afd9b4272081d13f5ca0dc7d6815c6a1325ec815ac75d12aae48782cb7c58a0014b00ab0ab05a017f82336972f7288bec5618a63403823c33fa54309302f8bd6cd3b5dee0320defb0ad25fe6bfcfb0edce270ca075d0958c798464a56736dc2e7700c3360b1238eb79bd859275a9b9daaffc44076122b1b2060e188e1629e8bd43f5315ce5e7c181e7e169217987ccc3f591227df1fd0b57b12ef627014c8896525300097cca2cf86c6da7bbb7edeca8f51455d7f71b83631105c3bd7e72895deaefc1b27e23f4501db375b4ceb98c897e1ea0ce0bd1467bcff7619a8de18531d5a3342079e8261d45f98e1754a7e483dbe84bd134b8431a2413397c4c52e85856822cd6ee2cb0f6314a7c128d37a23c41ed56b8cd730e8b15b07113d0a2890ca3c952ef8a00ecb1d076d8d36d5ed77cca31dd0139c0877ea94583a30081a277e5c77210d8217b40e0f56e3a62eea51e7a400e712147b084ed0860f4995a85928dc642e2ef5fb8bbca4c45544912eec239d294387471d22e4fb3de8a8bbe7b5d23c034e8ae0eb049089bcace09a8a2a77006970bcc45c5e789166d38415eea01833bedbddab8a20c73bb2758885b02ff635ef9eef59e0c3cb8c8e1d7d695359f8cee0e9548aec7822954f9b1c7d56ccf0a79e03dcd5b30074ef2790a60f7ca1337b1d84ebcc0dc62fb7f12a6880a36c4ade603dd1ea9c77459c3cc6c053b23a7c5508911fd24b8a94eb6778a923da2e50da6c/194/1920x1080_6046040/index.m3u8')">
+        <img src="https://i.imghippo.com/files/ROFPD1723753867.png" alt="Cine Terror">
+        <div>
+            <h3>Cine Terror</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="95" data-category="Filmler" onclick="reproducirVideo(event, 'https://topcinelatam-freetv.amagi.tv/TopCineLATAMx/master_5.m3u8')">
+        <img src="https://i.imghippo.com/files/XZPK11723783428.png" alt="Cine Accion">
+        <div>
+            <h3>Cine Acción</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="96" data-category="Eğlence" onclick="reproducirVideo(event, 'https://spt-novelas-1-us.samsung.wurl.tv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/IlIjS1723784283.png" alt="Canal Sony Novelas">
+        <div>
+            <h3>Canal Sony Novelas</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="97" data-category="Filmler" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBC2700012RP.m3u8')">
+        <img src="https://i.imghippo.com/files/yTX3B1723785019.png" alt="Cine Feel Good">
+        <div>
+            <h3>Cine Feel Good</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="98" data-category="Filmler" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBC2700011AZ.m3u8')">
+        <img src="https://i.imghippo.com/files/aukbS1723785302.png" alt="Cines Verdi TV">
+        <div>
+            <h3>Cines Verdi TV</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="99" data-category="Filmler" onclick="reproducirVideo(event, 'https://vcp.myplaytv.com/moviefe/moviefe/chunklist_w1370182466.m3u8')">
+        <img src="https://i.imghippo.com/files/OVCl81723786020.png" alt="Cine Español - Rakuten TV">
+        <div>
+            <h3>Cine Español - Rakuten TV</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="100" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ythls.armelin.one/channel/UCv5Oy_TJFvGKXjeNzzJE_PQ.m3u8')">
+        <img src="https://i.imghippo.com/files/7sQUT1723786460.png" alt="Citytv Bogotá">
+        <div>
+            <h3>Citytv Bogotá</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="101" data-category="Eğlence" onclick="reproducirVideo(event, 'https://rtvelivestream.akamaized.net/rtvesec/int/clan_int_main.m3u8')">
+        <img src="https://i.imghippo.com/files/UTrfC1723786785.png" alt="Clan TVE Internacional">
+        <div>
+            <h3>Clan TVE Internacional</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="102" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vsrv2.az-streamingserver.com:3960/live/claroteledomlive.m3u8')">
+        <img src="https://i.imghippo.com/files/sHyxE1723837083.jpg" alt="Claro Televisión Dominican">
+        <div>
+            <h3>Claro Televisión Dominican</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="103" data-category="Eğlence" onclick="reproducirVideo(event, 'https://v2.tustreaming.cl/clicktv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/9esKB1723837867.png" alt="Click TV (Coronel)">
+        <div>
+            <h3>Click TV (Coronel)</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="104" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://wowza.telpin.com.ar:1935/canal3/canal3.stream/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/RbigO1723841801.png" alt="CN3 Pinamar3">
+        <div>
+            <h3>CN3 Pinamar</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="105" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudflare.streamgato.us:3253/live/canalcocotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/JFqpS1723842249.png" alt="COCO TV">
+        <div>
+            <h3>COCO TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="106" data-category="Eğlence" onclick="reproducirVideo(event, 'http://tv.ticosmedia.com:1935/COLOSAL/COLOSAL/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/H5nhC1723842579.png" alt="Colosal TV">
+        <div>
+            <h3>Colosal TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="107" data-category="Eğlence" onclick="reproducirVideo(event, 'https://servilive.com:3114/live/liveulive.m3u8')">
+        <img src="https://i.imghippo.com/files/ku93n1723843032.png" alt="Conecta 2 TV">
+        <div>
+            <h3>Conecta 2 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="108" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream8.mexiserver.com:19360/conectatvx/conectatvx.m3u8')">
+        <img src="https://i.imghippo.com/files/fjvUR1723845729.png" alt="Conecta TV">
+        <div>
+            <h3>Conecta TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="109" data-category="Eğlence" onclick="reproducirVideo(event, 'https://unlimited6-cl.dps.live/cm/cm.smil/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/KPuYb1723846025.png" alt="Contivision">
+        <div>
+            <h3>Contivision</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="110" data-category="Eğlence" onclick="reproducirVideo(event, 'https://live.obslivestream.com/controversiatv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/fG0Rc1723846364.png" alt="Canal Vinilo TV">
+        <div>
+            <h3>Canal Vinilo TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="111" data-category="Eğlence" onclick="reproducirVideo(event, 'https://v1.tustreaming.cl/cosmostv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/hpVg81723846689.png" alt="Cosmos TV">
+        <div>
+            <h3>Cosmos TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="112" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8030/index.m3u8')">
+        <img src="https://i.imghippo.com/files/t8bWD1723847721.png" alt="Coto Brus TV">
+        <div>
+            <h3>Coto Brus TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="113" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://live.obslivestream.com/crtvmux/index.m3u8')">
+        <img src="https://i.imghippo.com/files/Op5f81723862729.png" alt="CR Televisión Moyobamba">
+        <div>
+            <h3>CR Televisión Moyobamba</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="114" data-category="Eğlence" onclick="reproducirVideo(event, 'https://www.televinterserver.com:19360/crtvcholuteca/crtvcholuteca.m3u8')">
+        <img src="https://i.imghippo.com/files/Hb93f1723866016.png" alt="CR Televisión Moyobamba">
+        <div>
+            <h3>CRTV Choluteca</h3>
+            <p>Entretenimiento</p> 
+        </div>
+    </div>
+    <div class="menu-item" data-id="115" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cnn.essastream.com:3333/live/cromtvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/QqQiE1723865747.png" alt="CromTV">
+        <div>
+            <h3>CromTV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="116" data-category="Filmler" onclick="reproducirVideo(event, 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/604928d54a4f730007ff76bc/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c285532-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=ec065848-4bdc-45cb-ad2c-0ef96c23d424')">
+        <img src="https://i.imghippo.com/files/t82qb1723867346.png" alt="CSI en Español">
+        <div>
+            <h3>CSI en Español</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="117" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mediacp.us:8081/ctvhn/index.m3u8')">
+        <img src="https://i.imghippo.com/files/OpJu91723868324.png" alt="CTV Internacional">
+        <div>
+            <h3>CTV Internacional</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="118" data-category="Eğlence" onclick="reproducirVideo(event, 'https://spa-ha-p002.cdn.masmediatv.es/SVoriginOperatorEdge/smil:9_HD.smil/index.m3u8')">
+        <img src="https://i.imghippo.com/files/GQ0No1723869104.png" alt="Cuatro">
+        <div>
+            <h3>Cuatro</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="119" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://cdn.teveo.cu/live/video/A36pWmuWvZBQskuZ/ngrp:gppfydfzpSUn9Udy.stream/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/v4rrg1723869355.png" alt="Cubavisión Internacional">
+        <div>
+            <h3>Cubavisión Internacional</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="120" data-category="Kültür" onclick="reproducirVideo(event, 'https://www.opencaster.com/resources/hls_stream/Kültür24.m3u8')">
+        <img src="https://i.imghippo.com/files/5gScN1723871937.png" alt="Cultura 24">
+        <div>
+            <h3>Cultura 24</h3>
+            <p>Cultura</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="121" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mc.servidor.stream:19360/8256/8256.m3u8')">
+        <img src="https://i.imghippo.com/files/Htkqj1723869835.png" alt="Calu TV">
+        <div>
+            <h3>Calu TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="122" data-category="Eğlence" onclick="reproducirVideo(event, 'https://inliveserver.com:1936/digital809tv/digital809tv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/ZFeOs1723870816.png" alt="Digital809">
+        <div>
+            <h3>Digital809</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="123" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://spa-ha-p005.cdn.masmediatv.es/SVoriginOperatorEdge2/smil:21_HD.smil/manifest.m3u8')">
+        <img src="https://i.imghippo.com/files/SiPZU1723871095.png" alt="Disney Channel-Geo-blocked">
+        <div>
+            <h3>Disney Channel-Geo-blocked</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="124" data-category="Eğlence" onclick="reproducirVideo(event, 'https://nlb2-live.emitstream.com/hls/3mn7wpcv7hbmxmdzaxap/master.m3u8')">
+        <img src="https://i.imghippo.com/files/ul3g51723871542.png" alt="Distrito TV">
+        <div>
+            <h3>Distrito TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="125" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stmv1.voxhdnet.com/dmjsurtv/dmjsurtv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/YmPd31723871807.png" alt="DMJ Cuzco">
+        <div>
+            <h3>DMJ Cuzco</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="126" data-category="Eğlence" onclick="reproducirVideo(event, 'https://videoserver.tmcreativos.com:19360/yvmgbdpqmp/yvmgbdpqmp.m3u8')">
+        <img src="https://i.imghippo.com/files/m5akD1723872532.png" alt="Doble AA">
+        <div>
+            <h3>Doble AA</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="127" data-category="Eğlence" onclick="reproducirVideo(event, 'https://7.innovatestream.pe:19360/cctvchupaca/cctvchupaca.m3u8')">
+        <img src="https://i.imghippo.com/files/9GMOh1723872717.png" alt="Doble C Televisión">
+        <div>
+            <h3>Doble C Televisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="128" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8138/index.m3u8')">
+        <img src="https://i.imghippo.com/files/OIHCI1723872937.png" alt="DreikoTv">
+        <div>
+            <h3>DreikoTv-Panamá</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="129" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8074/index.m3u8')">
+        <img src="https://i.imghippo.com/files/GrdiR1723873353.png" alt="Durán TV">
+        <div>
+            <h3>Durán TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="130" data-category="Haberler" onclick="reproducirVideo(event, 'https://dwamdstream104.akamaized.net/hls/live/2015530/dwstream104/index.m3u8')">
+        <img src="https://i.imghippo.com/files/23zpJ1723873555.png" alt="DW Español">
+        <div>
+            <h3>DW Español</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="131" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streaming.grupomediosdelnorte.com:19360/ecovision/ecovision.m3u8')">
+        <img src="https://i.imghippo.com/files/zfSC61723927287.png" alt="Ecovisión TV">
+        <div>
+            <h3>Ecovisión TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="132" data-category="Eğlence" onclick="reproducirVideo(event, 'https://pacific.direcnode.com:3353/live/ecuamundotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/o2rhJ1723927560.png" alt="EcuaMundo Radio TV">
+        <div>
+            <h3>EcuaMundo Radio TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="133" data-category="Eğlence" onclick="reproducirVideo(event, 'https://60417ddeaf0d9.streamlock.net/edntv/videoedntv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/iQw0M1723927828.png" alt="EDN TV">
+        <div>
+            <h3>EDN TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="134" data-category="Eğlence" onclick="reproducirVideo(event, 'https://wifispeed.trapemn.tv:1936/energeek/canal-1p/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/PdN1v1723928749.png" alt="ENERGEEK">
+        <div>
+            <h3>ENERGEEK</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="135" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://vid2.ecuamedia.net/educatv/live/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/7tOWn1723929085.png" alt="Educa TV">
+        <div>
+            <h3>Educa TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="136" data-category="Haberler" onclick="reproducirVideo(event, 'https://daqnsnf5phf17.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-sde7fypd1420w-prod/fast-channel-elconfidencial/fast-channel-elconfidencial.m3u8')">
+        <img src="https://i.imghippo.com/files/48r0g1723929918.png" alt="El Confidencial TV">
+        <div>
+            <h3>El Confidencial TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="137" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ythls.armelin.one/channel/UCiaePeoCqpU8hBHiNrgkzrA.m3u8')">
+        <img src="https://i.imghippo.com/files/y5Nvy1723930162.png" alt="El Doce">
+        <div>
+            <h3>El Doce</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="138" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ythls.armelin.one/channel/UCYozHHDnLnQs2yc2k3t8cPA.m3u8')">
+        <img src="https://i.imghippo.com/files/7QQuC1723930357.png" alt="El Ocho TV">
+        <div>
+            <h3>El Ocho TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="139" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://d2xqbi89ghm9hh.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-79fx3huimw4xc-ssai-prd/fast-channel-el-pais.m3u8')">
+        <img src="https://i.imghippo.com/files/n1KRV1723930817.png" alt="EL PAÍS TV">
+        <div>
+            <h3>EL PAÍS TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="140" data-category="Eğlence" onclick="reproducirVideo(event, 'http://streaming5.globalhostla.com/rtplive/elsolrad/playlist.m3u')">
+        <img src="https://i.imghippo.com/files/uTqkv1723931190.png" alt="El Sol Radio y Televisión">
+        <div>
+            <h3>El Sol Radio y Televisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="141" data-category="Eğlence" onclick="reproducirVideo(event, 'https://live-01-02-eltrece.vodgc.net/eltrecetv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/EWpNZ1723931457.png" alt="El Trece​ TV">
+        <div>
+            <h3>El Trece​ TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="142" data-category="Spor" onclick="reproducirVideo(event, 'https://vcp13.myplaytv.com/esportsmax/esportsmax/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/5wKq51723932064.png" alt="eSports Max">
+        <div>
+            <h3>eSports Max</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="143" data-category="Haberler" onclick="reproducirVideo(event, 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/60492e6d7f3f560007ab0f62/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c28a354-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=496a9c8b-4a81-4661-ac66-d226a913d5e9')">
+        <img src="https://i.imghippo.com/files/9wMHG1723933934.png" alt="Estrella News">
+        <div>
+            <h3>Estrella News</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="144" data-category="Eğlence" onclick="reproducirVideo(event, 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cf0622da00ca1e2f6fac712/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c28a355-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=73f1f3b5-9aab-48b7-b385-cc16a962802a')">
+        <img src="https://i.imghippo.com/files/mpaur1723934167.png" alt="Estrella TV">
+        <div>
+            <h3>Estrella TV </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="145" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloud.streamingconnect.tv/hls/estutele/estutele.m3u8')">
+        <img src="https://i.imghippo.com/files/ixfMf1723934355.png" alt="Es Tu Tele">
+        <div>
+            <h3>Es Tu Tele</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="146" data-category="Haberler" onclick="reproducirVideo(event, https://rakuten-euronews-4-es.samsung.wurl.tv/manifest/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/44Dac1723934706.png" alt="Euronews en Español">
+        <div>
+            <h3>Euronews en Español</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="147" data-category="Eğlence" onclick="reproducirVideo(event, 'https://5ca9af4645e15.streamlock.net/teleradio/smil:teleradio.smil/playlist.m3u88')">
+        <img src="https://i.imghippo.com/files/vljHi1723935270.png" alt="Expresa TV">
+        <div>
+            <h3>Expresa TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="148" data-category="Eğlence" onclick="reproducirVideo(event, 'https://wifispeed.trapemn.tv:1936/energeek/canal-2p/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/i9tYj1723935673.png" alt="Fanpop TV">
+        <div>
+            <h3>Fanpop TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="149" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv.intervenhosting.net:3754/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/11JAN1723936843.png" alt="Farovisión">
+        <div>
+            <h3>Farovisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="150" data-category="Haberler" onclick="reproducirVideo(event, 'https://ythls.armelin.one/channel/UCUdOoVWuWmgo1wByzcsyKDQ.m3u8')">
+        <img src="https://i.imghippo.com/files/k8Pf91723938098.png" alt="France 24 Español">
+        <div>
+            <h3>France 24 Español</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="151" data-category="Eğlence" onclick="reproducirVideo(event, 'https://amg01024-olympusat-sabermas-ono-ad-d1.amagi.tv/playlist/amg01024-olympusat-sabermas-ono/cb543d177b6c648a9ad43664cef343a7f9591fde1d6988693eb5518975d1073edce2a59caa08ff16388f1ede7f0a66413a3e951fda77118fd87eb141453c5728cfffe729a2c05616b7db083429b56a062a866a68ac39437ed0e21f48a238b6720a5aa82a66443d80b846ac7454db80148b61299bce8c37683f03409a5e5afba358b1ebe35a45da6ea0b21855912d46e39f43c8814aa6d1825acb5e8370f646cb93f783d7118b809b4f9369e3301a16214289927697dc5eb3c8e80353f46229441b47eba280a40d56ef46474fb6f8ceb177fa61b8e351ae723ebc09964e8835992bae0ce7c75ca5a88fe9180953cac55f7269a1f5b0b5f9203db96afed09fb7077f96fb5a774bd060c837383984b3ed0681c621a0ec5befd868192b8e90558ba2bc82e2b5ff22f643ecd5f19d0974140d6e658759b1d469d53daf1bc2af437b112723ac9e468a82d05a422025c6835bd0404eeedd88dadc5b3d9f37495ebc32d80304359f313424bd28a9996b35d35e60eb3439e81620937decaa25e3a6d8fc745ddfba967bd141b5c560bbf706ba233f5612a3f35e3c2f2d2d8a9f0c67317dd00bedc0f5ed761d728f9dacae9a245260381341429ef0eb02f7e4aa2f0f13c447302e771f1acc51bc18de045a4e2fd90eecbf1d7b97031e38f4ab4d1d30129edca591948c850ba268c481fb2b2a3e4d75f3300a2b21d7b39b50fe3d58240e37ea1a777cad155354eb96d097ffea0a9fa54a840a8a7509b498f1a48b3309013abad20ee75fec9210b8e9b236aec1ac628801a1c17b7db0dfce78f0ada0ca4a1d99a9566315ff20c247125fac27d52589df7198935c12057e3d202b6bd69e2dd887e0b41b8823bb460d7de379fb98e6f3e66758e69c4b79535b117f1523375398b4ec482520023a2fba524567d8f5e32c753e3a55d7810111b6e9791d913444adc4cac4a6a2d00a1cc66fbb20873043ee600420e5c32ff9c39cc7bad63f1a5082f69c45b5f7dcda8cce9c72374b4d208bcd5a6272da0df99848b4fe4a32bcdfcbadf146a358ce79fb88bf25e17c87cebf05a1d9ddddf36518535f18ad93a1b44495ec4415fb48da4b2c0a95c5b1a732b589ea750d8037d78c096aa1296d1d98fb8963e61ff8b76964b7fd2a33b3533dcee7f32366b807af323d70f48dcc2e0cc6cd0b9c5a88d7902b499f030aeb575402fd2eac9fde890e5a72a2d437b1a7a1ce3e5d57410c9299825b703457/126/1920x1080_6046040/index.m3u8')">
+        <img src="https://i.imghippo.com/files/Lfrpy1723938644.png" alt="Free tv Saber Más">
+        <div>
+            <h3>Free tv Saber Más</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="152" data-category="Eğlence" onclick="reproducirVideo(event, 'https://59ef525c24caa.streamlock.net/garabitoTV/garabitotv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Bgzt01723938962.png" alt="Garabito TV">
+        <div>
+            <h3>Garabito TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="153" data-category="Spor" onclick="reproducirVideo(event, 'https://stream1.sersat.com/hls/garagetv.m3u8')">
+        <img src="https://i.imghippo.com/files/ZOcGA1724010622.png" alt="Garage TV Latin America">
+        <div>
+            <h3>Garage TV Latin America</h3>
+            <p>Deportes-Motores</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="154" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss2.domint.net:3200/gdm_str/gdmtv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/3LllY1724090718.png" alt="GDMTV">
+        <div>
+            <h3>GDMTV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="155" data-category="Eğlence" onclick="reproducirVideo(event, 'https://live.obslivestream.com/geniostvmux/index.m3u8')">
+        <img src="https://i.imghippo.com/files/jszi91724091063.png" alt="Genios TV">
+        <div>
+            <h3>Genios TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="156" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://unlimited1-us.dps.live/girovisual2/girovisual2.smil/girovisual2/livestream1/chunks.m3u8')">
+        <img src="https://i.imghippo.com/files/E8rhT1724092467.png" alt="Girovisual">
+        <div>
+            <h3>Girovisual</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="157" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp7.myplaytv.com/glowtv/glowtv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/UmtHc1724093121.png" alt="Plous TV">
+        <div>
+            <h3>Plous TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="158" data-category="Filmler" onclick="reproducirVideo(event, 'https://amogonetworx-grjngo-2-eu.plex.wurl.tv/4300.m3u8')">
+        <img src="https://i.imghippo.com/files/XHbVr1724093833.png" alt="Grjngo Español">
+        <div>
+            <h3>Grjngo Español</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="159" data-category="Eğlence" onclick="reproducirVideo(event, 'https://solo.disfrutaenlared.com:1936/guadalupetv/guadalupetv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/4BKao1724096949.png" alt="Guadalupe TV">
+        <div>
+            <h3>Guadalupe TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="160" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv.intervenhosting.net:3061/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/LmVw11724097153.png" alt="Guaro TV ">
+        <div>
+            <h3>Guaro TV </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="161" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamingcpanel.com:3447/live/hainavisionlive.m3u8')">
+        <img src="https://i.imghippo.com/files/kV8iE1724097403.png" alt="Haina Vision TV">
+        <div>
+            <h3>Haina Vision TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="162" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/6095ad97351eb0000754c1e6-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/MvJZL1724097971.png" alt="Hell's Kitchen en español">
+        <div>
+            <h3>Hell's Kitchen en español</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="163" data-category="Haberler" onclick="reproducirVideo(event, 'https://live.presstv.ir/hls/hispantv.m3u8')">
+        <img src="https://i.imghippo.com/files/yt3sS1724098999.png" alt="Hispan TV">
+        <div>
+            <h3>Hispan TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="164" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp8.myplaytv.com:1936/hispaniatv/hispaniatv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/XQXfg1724099192.png" alt="Hispania TV">
+        <div>
+            <h3>Hispania TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="165" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/5f4d3696d938c900072679fd-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/oxSRK1724099494.png" alt="Historias de Ultratumba">
+        <div>
+            <h3>Historias de Ultratumba</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="166" data-category="miscelaneo" onclick="reproducirVideo(event, 'https://stmv.streamingvip.click/hoynet/hoynet/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/TbS7o1724099963.png" alt="Hoynet TV">
+        <div>
+            <h3>Hoynet TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="167" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBA3300028OE.m3u8')">
+        <img src="https://i.imghippo.com/files/FJ86C1724100799.png" alt="iCarly">
+        <div>
+            <h3>iCarly</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="168" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/62154548a2be360007cb02f0-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/eLmRV1724101191.png" alt="Ice Pilots">
+        <div>
+            <h3>Ice Pilots</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="169" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBC3500002PW.m3u8')">
+        <img src="https://i.imghippo.com/files/wu2qk1724102367.png" alt="Ideas en 5 Minutos">
+        <div>
+            <h3>Ideas en 5 Minutos</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="170" data-category="Haberler" onclick="reproducirVideo(event, 'https://cast.stre.live7.la:3322/live/identidadtvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/RxgM91724102654.png" alt="Identidad TV">
+        <div>
+            <h3>Identidad TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="171" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ythls.armelin.one/channel/UCl5JKSQsl-_WSU1rz7_BCJA.m3u8')">
+        <img src="https://i.imghippo.com/files/UKnle1724102880.png" alt="Imagen TV">
+        <div>
+            <h3>Imagen TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="172" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/64e35aff6b1fdb0008ea8441-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/UKnle1724102880.png" alt="Imagen TV +">
+        <div>
+            <h3>Imagen TV +</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="173" data-category="Eğlence" onclick="reproducirVideo(event, 'https://imagenuniversaltv.net:3771/live/iutvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/k3xDf1724103392.png" alt="Imagen Universal TV">
+        <div>
+            <h3>Imagen Universal TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="174" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/impactotv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/jJr3p1724103764.png" alt="Impacto Televisión">
+        <div>
+            <h3>Impacto Televisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="175" data-category="Filmler" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/64ff26233efb5100082eeb2e-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/qMV8I1724104038.png" alt="Infierno Sobre Ruedas">
+        <div>
+            <h3>Infierno Sobre Ruedas</h3>
+            <p>Películas-Serie</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="176" data-category="Eğlence" onclick="reproducirVideo(event, 'https://s2.tvdatta.com:3753/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/oOFVF1724104355.png" alt="Infinita TV">
+        <div>
+            <h3>Infinita TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="177" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv.intervenhosting.net:3175/hybrid/play.m3u8')">
+        <img src="https://i.imghippo.com/files/hTWrx1724104834.png" alt="InterTV">
+        <div>
+            <h3>InterTV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="178" data-category="Eğlence" onclick="reproducirVideo(event, 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5cf96b8f4f1ca3f0629f4bf1/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c293f99-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=28f850bd-0f1c-4ede-b97c-ebd1d9a28126')">
+        <img src="https://i.imghippo.com/files/IGmFh1724105114.png" alt="Investiga">
+        <div>
+            <h3>Investiga</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="179" data-category="Eğlence" onclick="reproducirVideo(event, 'https://rtmp.info/iqtv/envivo/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/nCO0F1724209501.png" alt="IQ Channel">
+        <div>
+            <h3>IQ Channel</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="180" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/615b9855c6b58b000724477f-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/ToLun1724211083.png" alt="Iron Chef">
+        <div>
+            <h3>Iron Chef</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="181" data-category="Spor" onclick="reproducirVideo(event, 'https://thm-it-roku.otteravision.com/thm/it/it.m3u8')">
+        <img src="https://i.imghippo.com/files/JIJFX1724211344.png" alt="ITV Deportes">
+        <div>
+            <h3>ITV Deportes</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="182" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mediacp.us:8081/jbntv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/pFvVO1724211702.png" alt="JBN TV">
+        <div>
+            <h3>JBN TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="183" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mediacp.us:8081/juncotv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/yKVtt1724213319.png" alt="Junco Tv">
+        <div>
+            <h3>Junco Tv</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="184" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBC2700008SK.m3u8')">
+        <img src="https://i.imghippo.com/files/vk6xR1724213906.png" alt="Just For Laughs">
+        <div>
+            <h3>Just For Laughs</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="185" data-category="Eğlence" onclick="reproducirVideo(event, 'https://live-scjn.ovp-vivaro.digital/ovp-origin/638a22b47746d/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/JnwpP1724214135.png" alt="Justicia TV">
+        <div>
+            <h3>Justicia TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="186" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01602-themahqfrance-vivekanald-samsungspain/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/aqebL1724214428.png" alt="Kanal D Drama">
+        <div>
+            <h3>Kanal D Drama</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="187" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://fast-channels.atresmedia.com/648c271d2bfab0e4177a0d61/648c271d2bfab0e4177a0d61.m3u8')">
+        <img src="https://i.imghippo.com/files/rdOYK1724215115.png" alt="Kidz Atresmedia">
+        <div>
+            <h3>Kidz Atresmedia</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="188" data-category="Eğlence" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBC4100001NZ.m3u8')">
+        <img src="https://i.imghippo.com/files/8NmRy1724215567.png" alt="La 1">
+        <div>
+            <h3>La 1</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="189" data-category="Eğlence" onclick="reproducirVideo(event, 'https://rdn.essastream.com:3168/live/lacaletatvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/MxsJb1724216225.png" alt="La Caleta TV">
+        <div>
+            <h3>La Caleta TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="190" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamlov.alsolnet.com/hermandadsalsera/live/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/kqAAr1724216473.png" alt="La Hermandad Salsera">
+        <div>
+            <h3>La Hermandad Salsera</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="191" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream.oursnetworktv.com/latin/encoder82/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/sdqW91724216713.png" alt="La Imagen de Tierra Caliente">
+        <div>
+            <h3>La Imagen de Tierra Caliente</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="192" data-category="Spor" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBD3600001Q1.m3u8')">
+        <img src="https://i.imghippo.com/files/ZVaRG1724217199.png" alt="La Liga Inside">
+        <div>
+            <h3>La Liga Inside</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="193" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss5.domint.net:3184/mia_str/lamiatv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/31Mxl1724217428.png" alt="LA MIA TV">
+        <div>
+            <h3>LA MIA TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="194" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamyes.alsolnet.com/quebuenaatlanta/live/index.m3u8')">
+        <img src="https://i.imghippo.com/files/8vpw21724217648.png" alt="La Que Buena Atlanta">
+        <div>
+            <h3>La Que Buena Atlanta</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="195" data-category="Eğlence" onclick="reproducirVideo(event, 'https://stream.eleden.com/livelax/ngrp:livelax_all/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Slpfk1724218070.png" alt="La-X">
+        <div>
+            <h3>La-X</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="196" data-category="Eğlence" onclick="reproducirVideo(event, 'https://5c0956165db0b.streamlock.net:8090/directo/_definst_/lancelot.television/master.m3u8')">
+        <img src="https://i.imghippo.com/files/kxkjQ1724218228.png" alt="Lancelot TV">
+        <div>
+            <h3>Lancelot TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="197" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vivo.solumedia.com:19360/lapacho/lapacho.m3u8')">
+        <img src="https://i.imghippo.com/files/4Fmqw1724218407.png" alt="Lapacho TV Canal 11">
+        <div>
+            <h3>Lapacho TV Canal 11</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="198" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/5f9996533c9de3000759ccb5-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/xwN6t1724218618.png" alt="Las Pistas de Blue">
+        <div>
+            <h3>Las Pistas de Blue</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="199" data-category="Filmler" onclick="reproducirVideo(event, 'https://jmp2.uk/SamsungTVPlus/ESBA3300027H5.m3u8')">
+        <img src="https://i.imghippo.com/files/6QvZ51724219211.png" alt="Las Reglas del Juego">
+        <div>
+            <h3>Las Reglas del Juego</h3>
+            <p>Películas-Series</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="200" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://jmp2.uk/PlutoTV/63dd5d7a4e83e700088fbca8-alt.m3u8')">
+        <img src="https://i.imghippo.com/files/aPd0W1724300749.png" alt="Las Tortugas Ninja">
+        <div>
+            <h3>Las Tortugas Ninja</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="201" data-category="Eğlence" onclick="reproducirVideo(event, 'https://redirector.rudo.video/hls-video/567ffde3fa319fadf3419efda25619456231dfea/latina/latina.smil/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/CeYyC1724300980.png" alt="Latina">
+        <div>
+            <h3>Latina</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="202" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss3.domint.net:3156/ltv_str/latinatvint/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/xdejk1724301224.png" alt="Latina TV Internacional">
+        <div>
+            <h3>Latina TV Internacional</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="203" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="204" data-category="Eğlence" onclick="reproducirVideo(event, 'https://tv.invasivamedia.com/hls/limtv.m3u88')">
+        <img src="https://i.imghippo.com/files/vN0am1724367804.png" alt="Invasiva Media">
+        <div>
+            <h3>Invasiva Media</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="205" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3245/stream/play.m3u8')">
+        <img src="https://i.imghippo.com/files/9t6Kr1724369363.png" alt="Grupo Lima liv">
+        <div>
+            <h3>Grupo Lima live</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="206" data-category="Eğlence" onclick="reproducirVideo(event, 'http://k4.usastreams.com/limontv1/limontv1/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/3CEPT1724370858.png" alt="Limón TV">
+        <div>
+            <h3>Limón TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="207" data-category="Eğlence" onclick="reproducirVideo(event, 'https://5ca3e84a76d30.streamlock.net/tvlobo/videotvlobo/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/9zL5n1724371976.png" alt="Lobo TV">
+        <div>
+            <h3>Lobo TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="208" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://stream.oursnetworktv.com/latin/encoder1/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/GWbaq1724372493.png" alt="Quiz TV">
+        <div>
+            <h3>Quiz TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="209" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/CbG4O1724384177.png" alt="LTV">
+        <div>
+            <h3>LTV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="210" data-category="Spor" onclick="reproducirVideo(event, 'http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5c01df1759ee03633e7b272c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c29b4c2-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=827dfdd0-3b91-4726-a4ee-e0fff420c780')">
+        <img src="https://i.imghippo.com/files/OSzLO1724472544.png" alt="Lucha Libre AAA">
+        <div>
+            <h3>Lucha Libre AAA</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="211" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://magicstream.ddns.net/magicstream/stream.m3u8')">
+        <img src="https://i.imghippo.com/files/HwoGI1724472909.png" alt="Magic Kids">
+        <div>
+            <h3>Magic Kids</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="212" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp4.myplaytv.com:1936/mas23/mas23/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/YXS4X1724473328.png" alt="Mas 23 TV">
+        <div>
+            <h3>Mas 23 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="213" data-category="Haberler" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3194/live/maticestvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/aaS071724473629.png" alt="Matices TV">
+        <div>
+            <h3>Matices TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="214" data-category="Animasyonlu" onclick="reproducirVideo(event, 'https://vcp14.myplaytv.com/maxanime/maxanime/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/KKg3S1724473992.png" alt="Max Anime TV">
+        <div>
+            <h3>Max Anime TV</h3>
+            <p>Animados</p>
+        </div>
+        <span class="favorite" onclick="toggleFavorite(event, 214)"></span>
+    </div>
+    <div class="menu-item" data-id="215" data-category="Eğlence" onclick="reproducirVideo(event, 'https://video03.logicahost.com.br/maxivisiontv/maxivisiontv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/C5k1J1724474292.png" alt="Maxivisión TV">
+        <div>
+            <h3>Maxivisión TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="216" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp.myplaytv.com/mdatv/mdatv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/yhOia1724474523.png" alt="MDA Televisión">
+        <div>
+            <h3>MDA Televisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="217" data-category="Eğlence" onclick="reproducirVideo(event, 'https://7.innovatestream.pe:19360/megatvjaen/megatvjaen.m3u8')">
+        <img src="https://i.imghippo.com/files/Dv0yv1724474805.png" alt="Mega TV Jaen">
+        <div>
+            <h3>Mega TV Jaen</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="219" data-category="Eğlence" onclick="reproducirVideo(event, 'https://hdbox.chunklistv.com/live?stream=megabox')">
+        <img src="https://i.imghippo.com/files/xnomG1724475007.png" alt="MegaBox">
+        <div>
+            <h3>MegaBox</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="220" data-category="Haberler" onclick="reproducirVideo(event, 'https://pctv-megaHaberler-1-mx.tcl.wurl.tv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/MfRTQ1724475192.png" alt="MegaHaberler MX">
+        <div>
+            <h3>MegaHaberler MX</h3>
+            <p>Noticias</p>
+         </div>
+    </div>
+    <div class="menu-item" data-id="221" data-category="Eğlence" onclick="reproducirVideo(event, 'https://mgv-channel19.akamaized.net/hls/live/2093190/MGV_CHANNEL19/master.m3u8')">
+        <img src="https://i.imghippo.com/files/P5UmT1724475383.png" alt="Megavisión Canal 19">
+        <div>
+            <h3>Megavisión Canal 19</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="222" data-category="Eğlence" onclick="reproducirVideo(event, 'http://server3.prostudionetwork.com:1943/megavision/MV/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/rVoGJ1724475601.png" alt="Megavisión TV">
+        <div>
+            <h3>Megavisión TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="223" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vivo.solumedia.com:19360/metaversus/metaversus.m3u8')">
+        <img src="https://i.imghippo.com/files/OEWS01724475840.png" alt="MetaVersus CR">
+        <div>
+            <h3>MetaVersus CR</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="224" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streamtv12.ddns.net:5443/LiveApp/streams/193945633734205616732920.m3u8')">
+        <img src="https://i.imghippo.com/files/VUtZh1724476652.png" alt="Metro 12 TV">
+        <div>
+            <h3>Metro 12 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="225" data-category="Eğlence" onclick="reproducirVideo(event, 'https://s.emisoras.tv:8081/metrotv/index.m3u8')">
+        <img src="https://i.imghippo.com/files/3o0Th1724476939.png" alt="Metro TV HD">
+        <div>
+            <h3>Metro TV HD</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="226" data-category="Eğlence" onclick="reproducirVideo(event, 'https://5e50264bd6766.streamlock.net/mexiquense/videomexiquense/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/HuXU61724477182.png" alt="Mexiquense TV">
+        <div>
+            <h3>Mexiquense TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="227" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streaming.telecablecentral.com.do/live/MicroHD/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/evMdr1724477434.png" alt="Microvision 10">
+        <div>
+            <h3>Microvision 10</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="228" data-category="Eğlence" onclick="reproducirVideo(event, 'https://streaming004.gestec-video.com/hls/MIJAS.m3u8')">
+        <img src="https://i.imghippo.com/files/OcLrI1724477724.png" alt="mijas 3.40 tv ">
+        <div>
+            <h3>mijas 3.40 tv </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="229" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://www.milenial.news/salida/milenial.m3u8')">
+        <img src="https://i.imghippo.com/files/kaFup1724478220.png" alt="Milenial TV">
+        <div>
+            <h3>Milenial TV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="230" data-category="Haberler" onclick="reproducirVideo(event, 'https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/652e922db4b047000825f975livestitch/master.m3u8?advertisingId=%7BPSID%7D&appVersion=unknown&deviceDNT=%7BTARGETOPT%7D&deviceId=%7BPSID%7D&deviceLat=0&deviceLon=0&deviceMake=samsung&deviceModel=samsung&deviceType=samsung-tvplus&deviceVersion=unknown&embedPartner=samsung-tvplus&profileFloor=&profileLimit=&profilesFromStream=true&samsung_app_domain=%7BAPP_DOMAIN%7D&samsung_app_name=%7BAPP_NAME%7D&us_privacy=1YNY')">
+        <img src="https://i.imghippo.com/files/hiq1F1724643345.png" alt="Milenio Television">
+        <div>
+            <h3>Milenio Television</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="231" data-category="Çeşitli" onclick="reproducirVideo(event, 'https://rds3.desdeparaguay.net/mitv/mitv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/Y3hdS1724643922.png" alt="MiTV">
+        <div>
+            <h3>MiTV</h3>
+            <p>Misceláneo</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="232" data-category="Spor" onclick="reproducirVideo(event, 'https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/motorvision-tv-espanol/mv_es.m3u8?')">
+        <img src="https://i.imghippo.com/files/glPzD1724645575.png" alt="Motorvision TV">
+        <div>
+            <h3>Motorvision TV</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="233" data-category="Spor" onclick="reproducirVideo(event, 'https://stream.digitalgt.com:3605/live/multivisionsportslive.m3u8')">
+        <img src="https://i.imghippo.com/files/CNRmN1724646181.png" alt="Multivisión Sports">
+        <div>
+            <h3>Multivisión Sports</h3>
+            <p>Deportes</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="234" data-category="Filmler" onclick="reproducirVideo(event, 'https://i.imghippo.com/files/x8ZVg1724646942.png')">
+        <img src="https://i.imghippo.com/files/x8ZVg1724646942.png" alt="MyTime Movie Network Mexico">
+        <div>
+            <h3>MyTime Movie Network Mexico</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="235" data-category="Filmler" onclick="reproducirVideo(event, 'https://appletree-mytimespain-rakuten.amagi.tv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/wWliM1724647277.png" alt="MyTime movie network España">
+        <div>
+            <h3>MyTime movie network España</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="236" data-category="Haberler" onclick="reproducirVideo(event, 'https://www.amixtv.com:8081/mntvh/index.m3u8')">
+        <img src="https://i.imghippo.com/files/BpeV21724647840.png" alt="Más Noticias TV">
+        <div>
+            <h3>Más Noticias TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="237" data-category="Eğlence" onclick="reproducirVideo(event, 'https://bit.controlstreams.com:5443/LiveApp/streams/mirametv.m3u8')">
+        <img src="https://i.imghippo.com/files/Ku0Qt1724648132.png" alt="Mírame TV">
+        <div>
+            <h3>Mírame TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="238" data-category="Eğlence" onclick="reproducirVideo(event, 'https://s1.tvdatta.com:3349/live/nacionaltvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/tkQ7t1724648359.png" alt="Nacional Tv Peru">
+        <div>
+            <h3>Nacional Tv Peru</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="239" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamingcpanel.com:3526/live/teleraiceslive.m3u8')">
+        <img src="https://i.imghippo.com/files/86TsG1724648992.png" alt="Naranja TV">
+        <div>
+            <h3>Naranja TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="240" data-category="Haberler" onclick="reproducirVideo(event, 'https://streaming013.gestec-video.com/hls/negociostv.m3u8')">
+        <img src="https://i.imghippo.com/files/aYBDW1724649468.png" alt="Negocios TV">
+        <div>
+            <h3>Negocios TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="241" data-category="Eğlence" onclick="reproducirVideo(event, 'https://tv.streamcasthd.com:3076/live/sonicaargentinalive.m3u8')">
+        <img src="https://i.imghippo.com/files/Tf9qD1724650202.png" alt="Neox TV ">
+        <div>
+            <h3>Neox TV </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="242" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vcp4.myplaytv.com:1936/nextv/nextv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/CCpvZ1724650424.png" alt="Nex TV Canal 21 ">
+        <div>
+            <h3>Nex TV Canal 21 </h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="243" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn3.streamgato.us:3938/live/nexxotvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/xWRow1724650581.png" alt="Nexxo TV">
+        <div>
+            <h3>Nexxo TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="244" data-category="Animasyonlu" onclick="reproducirVideo(event, 'http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/5d8d08395f39465da6fb3ec4/master.m3u8?deviceType=unknown&deviceMake=unknown&deviceModel=unknown&deviceVersion=unknown&appVersion=unknown&deviceLat=90&deviceLon=0&deviceDNT=TARGETOPT&deviceId=PSID&advertisingId=PSID&us_privacy=1YNY&profileLimit=&profileFloor=&embedPartner=')">
+        <img src="https://i.imghippo.com/files/H0fE71724651135.png" alt="Nickelodeon en Español">
+        <div>
+            <h3>Nickelodeon en Español</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="245" data-category="Haberler" onclick="reproducirVideo(event, 'https://cdn.nhkworld.jp/www11/nhkworld-tv/bmcc-live/es/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/NQUB41724733902.png" alt="NHK World News Sub Español">
+        <div>
+            <h3>NHK World News (Sub Español)</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="246" data-category="Animasyonlu" onclick="reproducirVideo(event, 'http://45.181.122.13:8000/play/019')">
+        <img src="https://i.imghippo.com/files/dCfey1724735739.png" alt="Nickelodeon Panregional">
+        <div>
+            <h3>Nickelodeon Panregional</h3>
+            <p>Animados</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="247" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cdn.streamhispanatv.net:3210/live/nimtvgtlive.m3u8')">
+        <img src="https://i.imghippo.com/files/New7C1724735997.png" alt="Nim TV">
+        <div>
+            <h3>Nim TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="248" data-category="Eğlence" onclick="reproducirVideo(event, 'http://amaru.dyndns.org:8870/0.m3u8')">
+        <img src="https://i.imghippo.com/files/pob0T1724736251.png" alt="NORTEvisión">
+        <div>
+            <h3>NORTEvisión</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="249" data-category="Eğlence" onclick="reproducirVideo(event, https://dai.google.com/linear/hls/event/sFuxwI37R9KMTs-KywMcBg/master.m3u8')">
+        <img src="https://i.imghippo.com/files/wkh4p1724736563.png" alt="Novelisima">
+        <div>
+            <h3>Novelisima</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="250" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cp.panelchs.com:1936/8162/8162/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/M2JPD1724736787.png" alt="NSTV">
+        <div>
+            <h3>NSTV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="251" data-category="Haberler" onclick="reproducirVideo(event, 'https://tvlatina.live:1936/8008/8008/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/XKwsZ1724737112.png" alt="Nuevo Mundo TV">
+        <div>
+            <h3>Nuevo Mundo TV</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="252" data-category="Eğlence" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8034/index.m3u8')">
+        <img src="https://i.imghippo.com/files/4Rd551724737446.png" alt="Onda 15 TV">
+        <div>
+            <h3>Onda 15 TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="253" data-category="Eğlence" onclick="reproducirVideo(event, 'https://ss5.domint.net:3176/otv_str/ondatv/playlist.m3u8')">
+        <img src="https://i.imghippo.com/files/eTn6U1724737682.png" alt="Onda TV">
+        <div>
+            <h3>Onda TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="254" data-category="Haberler" onclick="reproducirVideo(event, 'https://cloudvideo.servers10.com:8081/8116/index.m3u8')">
+        <img src="https://i.imghippo.com/files/fH3QO1724738187.png" alt="Onda Valencia">
+        <div>
+            <h3>Onda Valencia</h3>
+            <p>Noticias</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="255" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3045/live/planeatvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/mud5734rM.jpg" alt="Planea TV">
+        <div>
+            <h3>Planea TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="256" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/Bs9805dU.jpg" alt="Planeta TV">
+        <div>
+            <h3>Planeta TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="257" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dcb62e63d4d8f0009f36881/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/phdW4579t.jpg" alt="Pluto Cine Accion">
+        <div>
+            <h3>Pluto Cine Accion"</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="258" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dcdde78f080d900098550e4/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/ubr4886Ss.jpg" alt="Pluto Cine Comedia">
+        <div>
+            <h3>Pluto Cine Comedia</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="259" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dcde437229eff00091b6c30/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/Mqf2675frw.jpg" alt="Pluto Cine Estelar">
+        <div>
+            <h3>Pluto Cine Estelar</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="260" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dcddfcb229eff00091b6bdf/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/WBll1230HGY.jpg" alt="Pluto Cine Drama">
+        <div>
+            <h3>Pluto Cine Drama</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="262" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5ddc4e8bcbb9010009b4e84f/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/tCDa4325x.jpg" alt="Pluto Cine Suspenso">
+        <div>
+            <h3>Pluto Cine Suspenso</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="263" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dd7ea2aeab5230009986735/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/lrJ5446Iu.jpg" alt="Pluto Cine Romance">
+        <div>
+            <h3>Pluto Cine Romance</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="264" data-category="Filmler" onclick="reproducirVideo(event, 'https://stitcher.pluto.tv/stitch/hls/channel/5dd6ddb30a1d8a000908ed4c/master.m3u8?deviceType=web&deviceMake=Chrome&deviceModel=Chrome&sid=b5de4d35-806f-11eb-b224-0242ac110002&deviceId=3fab0050-8b86-11e8-a44b-996a399dacd8&deviceVersion=uknown&appVersion=2.0.0&deviceDNT=0&userId=&advertisingId=&deviceLat=38.8177&deviceLon=-77.1527&app_name=&appName=&appStoreUrl=&serverSideAds=true')">
+        <img src="https://i.imghippo.com/files/hjY8900opg.jpg" alt="Pluto Cine Familia">
+        <div>
+            <h3>Pluto Cine Familia</h3>
+            <p>Películas</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="265" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="266" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="267" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="268" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="269" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="270" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="271" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="272" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="273" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="274" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="275" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="276" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="277" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="278" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="279" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="280" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="281" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="282" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="283" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="284" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="285" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="286" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="287" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="288" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="289" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="290" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="291" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="292" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="293" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="294" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="295" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="296" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="297" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="298" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="299" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="300" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="301" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="302" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="303" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="304" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="305" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="306" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="307" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="308" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="309" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    <</div>
+    <div class="menu-item" data-id="310" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="311" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="312" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="313" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="314" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="315" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="316" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="317" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="318" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="319" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="320" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="321" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="322" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+    <div class="menu-item" data-id="323" data-category="Eğlence" onclick="reproducirVideo(event, 'https://vdo.grupolimalive.com:3618/live/liketvlive.m3u8')">
+        <img src="https://i.imghippo.com/files/vwkjj1724301669.png" alt="Like TV">
+        <div>
+            <h3>Like TV</h3>
+            <p>Entretenimiento</p>
+        </div>
+    </div>
+</div>
+    <footer>
+        <a href="GO:MENU" class="active" onclick="highlightIcon(this)">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.293 3.293a1 1 0 0 1 1.414 0l6 6 2 2a1 1 0 0 1-1.414 1.414L19 12.414V19a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-3h-2v3a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2v-6.586l-.293.293a1 1 0 0 1-1.414-1.414l2-2 6-6Z" clip-rule="evenodd"></path>
+</svg>
+
+         
+            <p>Aramak</p>
+        </a>
+        <a href="http://action_exit" onclick="highlightIcon(this)">
+   <svg 
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="100%"
+   height="100%"
+   viewBox="0 0 10 10"
+   id="svg2">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" ></dc:type>
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" ></defs>
+  <rect
+     width="10"
+     height="10"
+     x="0"
+     y="0"
+     id="canvas"
+     style="fill:none;stroke:none;visibility:hidden" ></rect>
+  <path
+     d="m 0,0 0,10 6.25,0 0,-2.5 -1.25,0 0,1.25 -3.75,0 0,-7.5 3.75,0 0,1.25 1.25,0 L 6.25,0 0,0 z m 7,2.5 0,1.75 -4,0 0,1.5 4,0 L 7,7.5 10,5 7,2.5 z"
+     id="exit"
+     style="fill:#fcfafa;fill-opacity:1;stroke:none" ></path>
+</svg>
+            <p>Dışarı çıkmak</p>
+        </a>
+
+<!-- Simgelerle birlikte altbilgi -->
+  </footer>
+    <div id="toast" class="toast"></div>
+    <div id="search-popup" class="search-popup">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Ara...">
+            <button onclick="performSearch()">Aramak</button>
+            <button onclick="hideSearchPopup()">Iptal</button>
+        </div>
+    </div>
+    <script>
+    function reproducirVideo(event, videoSrc) {
+    event.preventDefault();
+    const menuItem = event.currentTarget;
+    const id = menuItem.getAttribute('data-id');
+    window.open(`go:vid${id}`, '_blank'); // Redirige a go:video seguido del id
+    localStorage.setItem('videoSrc', videoSrc); // Almacena la URL del video en localStorage
+}
+
+
+    function toggleFavorite(event, id) {
+        event.stopPropagation(); // Previene que el evento haga clic en el contenedor
+        event.preventDefault(); // Previene el comportamiento por defecto en dispositivos móviles
+        const favoriteIcon = event.target;
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+        if (favorites.includes(id)) {
+            // Eliminar de favoritos
+            const index = favorites.indexOf(id);
+            if (index > -1) {
+                favorites.splice(index, 1);
+            }
+            favoriteIcon.classList.remove('active');
+            showToast('Se eliminó de favoritos');
+        } else {
+            // Añadir a favoritos
+            favorites.push(id);
+            favoriteIcon.classList.add('active');
+            showToast('Ya se agregó a favoritos');
+        }
+
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    }
+
+    function loadFavorites() {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        favorites.forEach(id => {
+            const favoriteIcon = document.querySelector(`.menu-item[data-id="${id}"] .favorite`);
+            if (favoriteIcon) {
+                favoriteIcon.classList.add('active');
+            }
+        });
+    }
+
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
+    function showSearchPopup() {
+        document.getElementById('search-popup').style.display = 'flex';
+    }
+
+    function hideSearchPopup() {
+        document.getElementById('search-popup').style.display = 'none';
+    }
+
+    function performSearch() {
+        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        const menuItems = document.getElementsByClassName('menu-item');
+
+        Array.from(menuItems).forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        hideSearchPopup();
+    }
+
+    // Filtro por categoría
+    function filterCategory(category) {
+        const menuItems = document.getElementsByClassName('menu-item');
+
+        Array.from(menuItems).forEach(item => {
+            if (category === 'Tüm' || item.getAttribute('data-category') === category) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function highlightIcon(element) {
+        const links = document.querySelectorAll('footer a');
+        links.forEach(link => link.classList.remove('active'));
+        element.classList.add('active');
+    }
+
+    // Añadir la función de actualización de favoritos
+    function updateFavorites() {
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        const favoriteIcons = document.querySelectorAll('.menu-item .favorite');
+        favoriteIcons.forEach(icon => {
+            const id = parseInt(icon.parentElement.getAttribute('data-id'));
+            if (favorites.includes(id)) {
+                icon.classList.add('active');
+            } else {
+                icon.classList.remove('active');
+            }
+        });
+    }
+
+    // Llamar a la función de actualización cada 5 segundos
+    setInterval(updateFavorites, 5000);
+
+    // Llamar a la función loadFavorites al cargar la página
+    window.onload = loadFavorites;
+
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
