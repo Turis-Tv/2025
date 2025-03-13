@@ -1,0 +1,83 @@
+a { color:white; }
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+ /* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to top, #262626, #474747);
+  font-family: 'Permanent Marker', cursive;
+  /* DISPLAY OPTIONS FOR THE BUTTON /
+    / IN YOUR PROYECT DELETE THIS STYLES /
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+  / END DISPLAY OPTIONS FOR THE BUTTON */
+}
+
+/*
+ BUTTON STYLES
+*/
+
+button {
+  position: relative;
+  margin: 8px auto 0;
+  font-size: 40px;
+  padding: 0;
+  font-family: 'Noto Sans Korean', cursive;
+  border: none;
+  padding: 10px 40px;
+  width: 100%;
+  background:#000;
+  color: #fff;
+  font-size: 25px;
+  max-width: 250px;
+  min-width: 100px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .2s;
+  padding: 10px;
+  margin: 10px;
+} button:hover {
+  letter-spacing: 5px;
+} button:active {
+  transform: scale(1.2);
+}
+
+button:before, button:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px; 
+  background: linear-gradient(45deg, #CC00FF, #6E0DD0, #9900FF, #FF6600, #00FF00, #ffff00, #ff0000, #FFFF00, #FFFF33, #ffff00, #FF00FF, #FF00CC, #FF0000, #00FF66, #33FF00, #00FFFF, #099FFF, #0062FF, #ff0000, #F2EA02, #E6FB04, #0033FF, #FF0099, #00FF33, #0000ff, #00ff00, #fb0094, #0000ff, #00ff00, #fb0094, #FD1C03, #FF3300, #CC00FF, #9D00FF, #CC00FF, #6E0DD0, #9900FF);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: linear-shadow 25s linear infinite;
+}
+
+button:before {
+  filter: blur(20px);
+}
+
+@keyframes linear-shadow {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
