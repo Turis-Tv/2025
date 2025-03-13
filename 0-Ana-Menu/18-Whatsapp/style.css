@@ -18,8 +18,8 @@ body {
 .whatsapp {
   position: fixed;
   z-index: 1;
-  bottom: 90px;
-  right: 90px;
+  bottom: 32px;
+  right: 32px;
 }
 
 .whatsapp__status {
