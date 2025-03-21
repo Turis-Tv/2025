@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Practica</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interfaz con 9 botones e imágenes</title>
+  <style>
+    body {
+      background-color: #454545;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
+      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="Busca tu canal favorito" oninput="searchByName(this.value)">
+      </div>
+    <button class="filter-button active" onclick="filterSelection('all')">All</button>
+    <button class="filter-button" onclick="filterSelection('deporte')">DEPORTES</button>
+    <button class="filter-button" onclick="filterSelection('pelicula')">PELICULAS</button>
+    <button class="filter-button" onclick="filterSelection('entretenimiento')">ENTRETENIMIENTO</button>
+    <button class="filter-button" onclick="filterSelection('infantil')">INFANTILES</button>
+    <button class="filter-button" onclick="filterSelection('cultura')">CULTURA</button>
+    <button class="filter-button" onclick="filterSelection('musica')">MUSICA</button>
+    <button class="filter-button" onclick="filterSelection('noticias')">NOTICIAS</button>
+    <button class="filter-button" onclick="filterSelection('nacionales')">NACIONALES</button>
+    <button class="filter-button" onclick="filterSelection('religion')">RELIGION</button>
+    <button class="filter-button" onclick="filterSelection('cine-24/7')">CINE 24/7</button>
+    <button class="filter-button" onclick="filterSelection('24/7')">24/7</button>
+    
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+        
+        <button class="button entretenimiento" onclick="redirectTo('go:a&e')">
+            <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+            <span>A&E</span>
+        </button>
+        <button class="button entretenimiento" onclick="redirectTo('go:amc')">
+          <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+          <span>AMC</span>
+      </button>
+      <button class="button entretenimiento" onclick="redirectTo('go:bitme')">
+        <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+        <span>BitMe</span>
+    </button>
+    <button class="button entretenimiento" onclick="redirectTo('go:ccentral')">
+      <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+      <span>Comedy Central</span>
+  </button>
+  <button class="button entretenimiento" onclick="redirectTo('go:dcomedia')">
+    <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+    <span>Distrito Comedia</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:e!')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>E!</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:scielos')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>El Señor de los Cielos 24/7</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:estv')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>Estrella TV</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:euro')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>Europa Europa</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:food')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>Food Network</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:foxes')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>Fox (ES) HD</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:foxls')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Fox Life Sur</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:fx')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>FX</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:glitz')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Glitz</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:masc')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Más chic</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:miatv')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Miami TV</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:mserie')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Movistar Series HD</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:sony')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Sony</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:stratc')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Star Channel</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:startl')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Star Life</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:tbsvf')">
+  <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+  <span>TBS Very Funny</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:telefor')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>TeleFórmula</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:telem')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Telemax</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:tmundo')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Telemundo</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:tlc')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>TLC</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:tlno')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Tlnovelas</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:tserie')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>TNT Series</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:trutv')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>TruTV</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:unic')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>Unicable</span>
+</button>
+<button class="button entretenimiento" onclick="redirectTo('go:umas')">
+<img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+<span>UniMas</span>
+</button>
+
+        
+
+
+
+        <button class="button cine-24/7" onclick="redirectTo('go:caccion')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Cine Accion</span>
+        </button>
+        <button class="button cine-24/7" onclick="redirectTo('go:caccionhd')">
+          <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+          <span>Cine Accion HD</span>
+      </button>
+      <button class="button cine-24/7" onclick="redirectTo('go:caccions')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cine Accion Sagas</span>
+    </button>  
+    <button class="button cine-24/7" onclick="redirectTo('go:caccionshd')">
+      <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+      <span>Cine Accion Sagas HD</span>
+  </button>
+  <button class="button cine-24/7" onclick="redirectTo('go:ccomedia')">
+    <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+    <span>Cine Comedia</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:ccomedia1hd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Comedia 1HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:ccomedia2')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Comedia 2</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:ccomedia2hd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Comedia 2HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cficcion')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Ficcion/Fantasia</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cficion2')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Ficcion/Fantasia 2</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cficcionhd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Ficcion/Fantasia HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cinfantil')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Infantil</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cinfantilhd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Infantil HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cinfantils')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Infantil Sagas</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cinfantilshd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Infantil Sagas HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cmarvel')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Marvel</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cmarvelhd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine  Marvel HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cromance')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Romance</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cromancehd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Romance HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cterror')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Terror</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cterrorhd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Terror HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:cterorhd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Terror Saga HD</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:czombis')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Zombis</span>
+</button>
+<button class="button cine-24/7" onclick="redirectTo('go:czombishd')">
+  <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+  <span>Cine Zombis HD</span>
+</button>
+
+
+
+
+        <button class="button religion" onclick="redirectTo('go:player')">
+            <img src="https://cielotv.do/wp-content/uploads/2023/06/CTV-500px-150x150.png" alt="Imagen">
+            <span>Cielo TV</span>
+        </button>
+
+
+        <button class="button nacionales" onclick="redirectTo('go:a+')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>A+</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:ametv')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>America TV</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:az7')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Azteca 7</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:azuno')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Azteca Uno</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:c5')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Canal 5</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:cestrella')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Canal de las Estrellas</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:cestrellas')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Canal de las Estrellas Sur</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:conce')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Canal Once</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:caracol')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Caracol</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:chvc')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>CHV Chilevision</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:ecuv')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Ecuavisa</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:cfutbol')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>El Canal Del Futbol</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:elnueve')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>El Nueve</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:eltrece')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>El Trece</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:galav')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Gala TV</span>
+        </button>
+        <button class="button nacionales" onclick="redirectTo('go:gamav')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Gamavision</span>
+        </button>
+
+
+
+        <button class="button noticias" onclick="redirectTo('go:adn40')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>ADN 40</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:adn402')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>ADN 40 opc2</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:forotv')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Foro TV</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:foxn')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Fox News</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:nbchd')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>NBC HD</span>
+        </button>
+
+
+
+        <button class="button 24/7" onclick="redirectTo('go:alf')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Alf 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:animania')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Animaniacs 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:bayblade')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Bayblade 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:bodes')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Bob Esponja 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:breaking')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Breaking Bad 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:czodiaco')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Caballeros del Zodiaco 24/7</span>
+        </button>
+
+
+
+
+
+
+      <button class="button cultura" onclick="redirectTo('go:aplanet')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Animal Planet</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:azteca7')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Azteca 7</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dchanel')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Channel</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dchanels')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Channel Sur</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dcivi')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Civilization</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dthehd')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Theater HD</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dturbo')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Turbo</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:dworld')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery World</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:h2')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>H2</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:hchanel')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>History Channel</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:invedis')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Investigation Discovery</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:ntgeo')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Nat Geo</span>
+      </button>
+      <button class="button cultura" onclick="redirectTo('go:nateild')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Nat Geo Wild</span>
+      </button>
+     
+
+
+
+
+      <button class="button musica" onclick="redirectTo('go:cmusica')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Canal de la Musica</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:dibiza')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Djing Ibiza</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:htv')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HTV</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:mtv')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>MTV</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:mtvl')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>MTV Live</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:mtvww')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>MTV WW</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:musicm')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Much Music</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:qmusica')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Quiero Musica</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:rmusic')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Retro Music</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:rlatino')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Ritmoson Latino</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:teleh')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Telehit</span>
+    </button>
+    <button class="button musica" onclick="redirectTo('go:hv1')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>VH1</span>
+    </button>
+   
+
+
+
+
+      <button class="button pelicula" onclick="redirectTo('go:dpclasico')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>De Pelicula Clasico</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:azcine')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Az Cinema</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:cinel')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cine Latino</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:cinec')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cinecanal</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:cinecs')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cinecanal Sur</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:cinem')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cinemax</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:cinems')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cinemax Sur</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:dpelicul')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>De Pelicula</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:dhe')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>DHE</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:player')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>GRATIS</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:goku')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Dragon Ball Z Kai 24/7</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:fmht')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>FM Hot TV</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:fxm')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>FXM</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:golden')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Golden</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:goldene')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Golden Edge</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:tf247')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Happy Tree Friends 24/7</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbo')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbo2')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO 2</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbof')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Family</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbofhd')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Family HD</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbop')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Plus</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hbopop')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Pop</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hboe')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Xtreme</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:hboehd')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HBO Xtreme HD</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:man247')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>He-Man 24/7</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:movim')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Movie Max</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:lucha247')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Mucha Lucha 24/7</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:player')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Paramount</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:parahdes')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Paramount HD (ES)</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:space')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Space</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:spaces')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Space Sur</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:scinema')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Starz Cinema</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:scinema2')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Starz Cinema 2</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:sef')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Starz Encore Family</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:suni')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Studio Universal</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:sufy')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>SyFy</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:syfyhd')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>SyFy (ES) HD</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:tcm')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>TCM</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:tnt')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>TNT</span>
+    </button>
+    <button class="button pelicula" onclick="redirectTo('go:tnts')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>TNT Sur</span>
+    </button>
+
+    <button class="button pelicula" onclick="redirectTo('go:unic')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Universal Channel</span>
+    </button>
+
+    
+
+
+      
+
+
+      <button class="button deporte" onclick="redirectTo('go:afiz')">
+        <img src="https://x.playerlatino.live//afizzionados.png" alt="Imagen">
+        <span>Afizzionados</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:afizhd')">
+        <img src="https://x.playerlatino.live//afizzionados.png" alt="Imagen">
+        <span>Afizzionados HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:alja')">
+        <img src="http:\/\/x.playerlatino.live\/aljazeera.png" alt="Imagen">
+        <span>Al Jazeera</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:ayms')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>AyM Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:bein')">
+        <img src="http:\/\/x.playerlatino.live\/beinsports.png" alt="Imagen">
+        <span>BeinSports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:bein')">
+        <img src="http:\/\/x.playerlatino.live\/beinsportsn.png" alt="Imagen">
+        <span>BeinSports Ñ</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:toro')">
+        <img src="http:\/\/x.playerlatino.live\/toros.png" alt="Imagen">
+        <span>Canal+ Toros</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:cdfc')">
+        <img src="http:\/\/x.playerlatino.live\/cdf.png" alt="Imagen">
+        <span>CDF Premium (TNT Sports Chile)</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:cdfp')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>CDO Premium</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:claro')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Claro Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsports')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsports+')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports  +</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsport2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsports2hd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports 2 HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsports2s')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports 2 Sur HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:dsportshd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>DSports HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:player2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>COLABORADORES</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:espn')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>ESPN</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:espn2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>ESPN 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:espn2mx')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>ESPN 2 MX</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:espnp')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>ESPN Plus</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:espanphd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>ESPN Premium HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:formula1')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Formula 1 TV (F1)</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxs')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxs2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxs2m')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports 2 MX</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxsm3')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports 3 MX</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxsm')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports MX</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxsms')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports MX Sur</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxss')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports Sur</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxss2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports Sur 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:foxss3')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Fox Sports Sur 3</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:golp')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Gol Peru</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:golchd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Golf Channel HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:ligac')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Liga de Campeones</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:ligac2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Liga de Campeones 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:morbtv')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Morbido TV</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:movidhd2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Movistar Deportes 2 HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:movidhd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Movistar Deportes HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:player2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Movistar Deportes Sur</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:nba')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>NBA</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:nbc')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>NBC Golf</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:nfl')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>NFL Network</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:pac12')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>PAC12 HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:pxtv')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>PX TV</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:skysmhd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>SKY Sports MX HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:skysphd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>SKY Sports Premier HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:teledehd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Teledeporte HD (ES)</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tigosg')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Tigo Sports Guatemala</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tigosb')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TigoSports Bolivia</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tnts')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TNT Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tntsc')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TNT Sports Chile</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tudn')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TUDN</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tudn3mb')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TUDN (3mb)</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tudn2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TUDN Op. 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tudnusahd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TUDN USA HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tvcd')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>TVC Deportes</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tycs')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Tyc Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:tycs2')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Tyc Sports Op. 2</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:ufcn')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>UFC Network</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:unide')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Univisión Deportes</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:unitdn')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Univisión TDN</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:vamos')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Vamos HD</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:wins')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Win Sports</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:wins+')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>Win Sports +</span>
+      </button>
+
+      <button class="button deporte" onclick="redirectTo('go:wwen')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>WWE Network</span>
+      </button>
+
+      
+
+
+      <button class="button infantil" onclick="redirectTo('go:babytv')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Baby TV</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:ctnw')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Cartoon Network</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:carton')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Cartoonito</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:player2')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>CBeebies</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:diskid')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Discovery Kids</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:disch')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Disney Channel</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:nickjr')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Nick JR</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:nickt')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Nick Toons</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:teccn')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>TeenNick</span>
+      </button>
+      <button class="button infantil" onclick="redirectTo('go:tooc')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Tooncast</span>
+      </button>
+     
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
