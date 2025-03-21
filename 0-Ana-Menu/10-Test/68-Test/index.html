@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>تطبيق محمد ستار كوم</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1 class="header">📡 محمد ستاركوم - مشغل القنوات الفضائية</h1>
+
+    <!-- أزرار اختيار الباقة -->
+    <div class="categories">
+        <div class="category-btn" onclick="loadCategory('sports')">🏆 باقة رياضية</div>
+        <div class="category-btn" onclick="loadCategory('entertainment')">🎭 باقة ترفيه</div>
+        <div class="category-btn" onclick="loadCategory('news')">📰 باقة إخبارية</div>
+        <div class="category-btn" onclick="loadCategory('kids')">👶 باقة أطفال</div>
+        <div class="category-btn" onclick="loadCategory('series')">📺 باقة مسلسلات</div>
+        <div class="category-btn" onclick="loadCategory('movies')">🎬 باقة أفلام</div>
+        <div class="category-btn" onclick="loadCategory('all')">🌐 جميع القنوات</div> <!-- باقة جميع القنوات -->
+    </div>
+
+    <div class="container">
+        <!-- قائمة القنوات -->
+        <div class="channel-list">
+            <h3>📺 القنوات</h3>
+            <ul id="channelList"></ul>
+        </div>
+
+        <!-- مشغل الفيديو -->
+        <div class="video-container">
+            <video id="videoPlayer" controls></video>
+        </div>
+    </div>
+
+    <script>
+        let video = document.getElementById("videoPlayer");
+        let channelList = document.getElementById("channelList");
+
+        // قوائم القنوات حسب الفئات
+        const channels = {
+            sports: [
+                { name: "📡 beIN Sports 1", url: "https://link-to-your-hls-sports1.m3u8" },
+                { name: "📡 beIN Sports 2", url: "https://link-to-your-hls-sports2.m3u8" },
+                { name: "📡 beIN Sports 3", url: "https://link-to-your-hls-sports3.m3u8" },
+                { name: "📡 beIN Sports 4", url: "https://link-to-your-hls-sports4.m3u8" },
+                { name: "⚽ Al Kass 1", url: "https://link-to-your-hls-sports5.m3u8" },
+                { name: "⚽ Al Kass 2", url: "https://link-to-your-hls-sports6.m3u8" },
+                { name: "⚽ Al Kass 3", url: "https://link-to-your-hls-sports7.m3u8" },
+                { name: "⚽ Al Kass 4", url: "https://link-to-your-hls-sports8.m3u8" },
+                { name: "⚽ Abu Dhabi Sports 1", url: "https://link-to-your-hls-sports9.m3u8" },
+                { name: "⚽ Abu Dhabi Sports 2", url: "https://link-to-your-hls-sports10.m3u8" },
+                { name: "⚽ Dubai Sports 1", url: "https://link-to-your-hls-sports11.m3u8" },
+                { name: "⚽ Dubai Sports 2", url: "https://link-to-your-hls-sports12.m3u8" },
+                { name: "⚽ Sport TV 1", url: "https://link-to-your-hls-sports13.m3u8" },
+                { name: "⚽ Sport TV 2", url: "https://link-to-your-hls-sports14.m3u8" },
+                { name: "⚽ Canal + Sports", url: "https://link-to-your-hls-sports15.m3u8" },
+                { name: "⚽ Eurosport 1", url: "https://link-to-your-hls-sports16.m3u8" },
+                { name: "⚽ Eurosport 2", url: "https://link-to-your-hls-sports17.m3u8" },
+                { name: "⚽ Fox Sports", url: "https://link-to-your-hls-sports18.m3u8" },
+                { name: "⚽ Sky Sports 1", url: "https://link-to-your-hls-sports19.m3u8" },
+                { name: "⚽ Sky Sports 2", url: "https://link-to-your-hls-sports20.m3u8" }
+            ],
+            entertainment: [
+                { name: "🎭 MBC 1", url: "https://link-to-your-hls-entertainment1.m3u8" },
+                { name: "🎭 MBC 2", url: "https://link-to-your-hls-entertainment2.m3u8" },
+                { name: "🎭 MBC 4", url: "https://link-to-your-hls-entertainment3.m3u8" },
+                { name: "🎭 MBC Action", url: "https://link-to-your-hls-entertainment4.m3u8" },
+                { name: "🎭 Al Hayat 1", url: "https://link-to-your-hls-entertainment5.m3u8" },
+                { name: "🎭 Al Hayat 2", url: "https://link-to-your-hls-entertainment6.m3u8" },
+                { name: "🎭 Rotana Cinema", url: "https://link-to-your-hls-entertainment7.m3u8" },
+                { name: "🎭 Rotana Khalijia", url: "https://link-to-your-hls-entertainment8.m3u8" },
+                { name: "🎭 LBC", url: "https://link-to-your-hls-entertainment9.m3u8" },
+                { name: "🎭 Art 1", url: "https://link-to-your-hls-entertainment10.m3u8" },
+                { name: "🎭 Art 2", url: "https://link-to-your-hls-entertainment11.m3u8" },
+                { name: "🎭 Zee Aflam", url: "https://link-to-your-hls-entertainment12.m3u8" },
+                { name: "🎭 Star Movies", url: "https://link-to-your-hls-entertainment13.m3u8" },
+                { name: "🎭 Fox Movies", url: "https://link-to-your-hls-entertainment14.m3u8" },
+                { name: "🎭 Sony Movies", url: "https://link-to-your-hls-entertainment15.m3u8" },
+                { name: "🎭 FilmBox", url: "https://link-to-your-hls-entertainment16.m3u8" },
+                { name: "🎭 True Movies", url: "https://link-to-your-hls-entertainment17.m3u8" },
+                { name: "🎭 TMC", url: "https://link-to-your-hls-entertainment18.m3u8" },
+                { name: "🎭 TNT", url: "https://link-to-your-hls-entertainment19.m3u8" },
+               
+              <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📡 محمد ستاركوم - مشغل القنوات الفضائية</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script> <!-- مكتبة HLS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff99;
+            margin-bottom: 15px;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+        .category-btn {
+            background: #222;
+            color: white;
+            border: 2px solid #007bff;
+            padding: 15px;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .category-btn:hover {
+            background: #007bff;
+            color: white;
+        }
+        .category-btn:active {
+            box-shadow: 0px 0px 20px #007bff;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+        .video-container {
+            width: 70%;
+            border: 3px solid #00ff99;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        video {
+            width: 100%;
+            display: block;
+        }
+        .channel-list {
+            width: 30%;
+            background: #222;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+            overflow-y: scroll;
+            max-height: 500px;
+        }
+        .channel-list h3 {
+            color: #00ff99;
+            text-align: center;
+        }
+        .channel-list ul {
+            list-style: decimal;
+            padding: 0;
+        }
+        .channel-list li {
+            background: #333;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-weight: bold;
+            color: white;
+        }
+        .channel-list li:hover {
+            background: #00ff99;
+            color: black;
+        }
+        .channel-list li.active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header">📡 محمد ستاركوم - مشغل القنوات الفضائية</h1>
+
+    <!-- أزرار اختيار الباقة -->
+    <div class="categories">
+        <div class="category-btn" onclick="loadCategory('sports')">🏆 باقة رياضية</div>
+        <div class="category-btn" onclick="loadCategory('entertainment')">🎭 باقة ترفيه</div>
+        <div class="category-btn" onclick="loadCategory('news')">📰 باقة إخبارية</div>
+        <div class="category-btn" onclick="loadCategory('kids')">👶 باقة أطفال</div>
+        <div class="category-btn" onclick="loadCategory('series')">📺 باقة مسلسلات</div>
+        <div class="category-btn" onclick="loadCategory('movies')">🎬 باقة أفلام</div>
+        <div class="category-btn" onclick="loadCategory('all')">🌐 جميع القنوات</div> <!-- باقة جميع القنوات -->
+    </div>
+
+    <div class="container">
+        <!-- قائمة القنوات -->
+        <div class="channel-list">
+            <h3>📺 القنوات</h3>
+            <ul id="channelList"></ul>
+        </div>
+
+        <!-- مشغل الفيديو -->
+        <div class="video-container">
+            <video id="videoPlayer" controls></video>
+        </div>
+    </div>
+
+    <script>
+        let video = document.getElementById("videoPlayer");
+        let channelList = document.getElementById("channelList");
+
+        // قوائم القنوات حسب الفئات
+        const channels = {
+            sports: [
+
+                { name: "📡 X desire", url: "http://62.210.123.134:98/live/an75d/75d/99.m3u8" },
+                { name: "📡 ttt", url: "http://62.210.123.134:98/live/an75d/75d/97.m3u8" },
+                { name: "📡 Review TV", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/reviewtv.m3u8" },
+                { name: "⚽ Teaser TV", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/teasertv.m3u8" },
+                { name: "⚽ PROMO TV", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/promotv.m3u8" },
+                { name: "⚽ MakanSutra", url: "http://vps-e8733d8d.vps.ovh.ca/mp4s/makan.m3u8" },
+                { name: "⚽ Musirotica", url: "http://vps-e8733d8d.vps.ovh.ca/mp4s/8musierotica.m3u8" },
+                { name: "⚽ Miami TV", url: "http://vps-e8733d8d.vps.ovh.ca/mp4s/14miami.m3u8" },
+                { name: "⚽ Mirchi TV", url: "http://vps-e8733d8d.vps.ovh.ca/mp4s/mirchi.m3u8" },
+                { name: "⚽ ShowTime", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/showtime.m3u8" },
+                { name: "⚽ ROUGE TV", url: "http://event.vedge.infomaniak.com/livecast/event.stream/playlist.m3u8" },
+                { name: "⚽ PHTV", url: "http://vps-e8733d8d.vps.ovh.ca/mp4s/phtv.m3u8" },
+                { name: "⚽ Natasha TV", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/natasha.m3u8" },
+                { name: "⚽ Brianna TV", url: "http://vps-e2e15dc8.vps.ovh.net/mp4s/brianna.m3u8" },
+                { name: "⚽ Anal", url: "http://cdn.adultiptv.net/anal.m3u8" },
+                { name: "⚽ asian", url: "http://cdn.adultiptv.net/asian.m3u8" },
+                { name: "⚽ Big Ass", url: "http://cdn.adultiptv.net/bigass.m3u8" },
+                { name: "⚽ Big Dick", url: "http://cdn.adultiptv.net/bigdick.m3u8" },
+                { name: "⚽ Big Tits", url: "http://cdn.adultiptv.net/bigtits.m3u8" },
+                { name: "⚽ BBlonde", url: "http://cdn.adultiptv.net/blonde.m3u8" }
+            ],
+
+
+
+
+
+
+
+
+
+
+
+            entertainment: [
+                { name: "🎭 MBC 1", url: "https://link-to-your-hls-entertainment1.m3u8" },
+                { name: "🎭 MBC 2", url: "https://link-to-your-hls-entertainment2.m3u8" },
+                { name: "🎭 MBC 4", url: "https://link-to-your-hls-entertainment3.m3u8" },
+                { name: "🎭 MBC Action", url: "https://link-to-your-hls-entertainment4.m3u8" },
+                { name: "🎭 Al Hayat 1", url: "https://link-to-your-hls-entertainment5.m3u8" },
+                { name: "🎭 Al Hayat 2", url: "https://link-to-your-hls-entertainment6.m3u8" },
+                { name: "🎭 Rotana Cinema", url: "https://link-to-your-hls-entertainment7.m3u8" },
+                { name: "🎭 Rotana Khalijia", url: "https://link-to-your-hls-entertainment8.m3u8" },
+                { name: "🎭 LBC", url: "https://link-to-your-hls-entertainment9.m3u8" },
+                { name: "🎭 Art 1", url: "https://link-to-your-hls-entertainment10.m3u8" },
+                { name: "🎭 Art 2", url: "https://link-to-your-hls-entertainment11.m3u8" },
+                { name: "🎭 Zee Aflam", url: "https://link-to-your-hls-entertainment12.m3u8" },
+                { name: "🎭 Star Movies", url: "https://link-to-your-hls-entertainment13.m3u8" },
+                { name: "🎭 Fox Movies", url: "https://link-to-your-hls-entertainment14.m3u8" },
+                { name: "🎭 Sony Movies", url: "https://link-to-your-hls-entertainment15.m3u8" },
+                { name: "🎭 FilmBox", url: "https://link-to-your-hls-entertainment16.m3u8" },
+                { name: "🎭 True Movies", url: "https://link-to-your-hls-entertainment17.m3u8" },
+                { name: "🎭 TMC", url: "https://link-to-your-hls-entertainment18.m3u8" },
+                { name: "🎭 TNT", url: "https://link-to-your-hls-entertainment19.m3u8" },
+                { name: "🎭 AXN", url: "https://link-to-your-hls-entertainment20.m3u8" }
+            ],
+            news: [
+                { name: "📰 قناة العربية", url: "https://link-to-your-hls-news1.m3u8" },
+                { name: "📰 قناة الجزيرة", url: "https://link-to-your-hls-news2.m3u8" },
+                { name: "📰 BBC Arabic", url: "https://link-to-your-hls-news3.m3u8" },
+                { name: "📰 France 24", url: "https://link-to-your-hls-news4.m3u8" },
+                { name: "📰 Al Jazeera English", url: "https://link-to-your-hls-news5.m3u8" },
+                { name: "📰 Sky News", url: "https://link-to-your-hls-news6.m3u8" },
+                { name: "📰 RT Arabic", url: "https://link-to-your-hls-news7.m3u8" },
+                { name: "📰 Al Arabiya", url: "https://link-to-your-hls-news8.m3u8" },
+                { name: "📰 Al Hurra", url: "https://link-to-your-hls-news9.m3u8" },
+                { name: "📰 Al Mayadeen", url: "https://link-to-your-hls-news10.m3u8" },
+                { name: "📰 CNN", url: "https://link-to-your-hls-news11.m3u8" },
+                { name: "📰 Al Akhbar", url: "https://link-to-your-hls-news12.m3u8" },
+                { name: "📰 Al Qahera Wal Nas", url: "https://link-to-your-hls-news13.m3u8" },
+                { name: "📰 BBC World", url: "https://link-to-your-hls-news14.m3u8" },
+                { name: "📰 CCTV News", url: "https://link-to-your-hls-news15.m3u8" },
+                { name: "📰 NHK World", url: "https://link-to-your-hls-news16.m3u8" },
+                { name: "📰 Al Sabeel", url: "https://link-to-your-hls-news17.m3u8" },
+                { name: "📰 MBC News", url: "https://link-to-your-hls-news18.m3u8" },
+                { name: "📰 Saudi TV", url: "https://link-to-your-hls-news19.m3u8" },
+                { name: "📰 Oman TV", url: "https://link-to-your-hls-news20.m3u8" }
+            ],
+            kids: [
+                { name: "👶 قناة سبيس تون", url: "https://link-to-your-hls-kids1.m3u8" },
+                { name: "👶 قناة MBC3", url: "https://link-to-your-hls-kids2.m3u8" },
+                { name: "👶 قناة الأطفال", url: "https://link-to-your-hls-kids3.m3u8" },
+                { name: "👶 قناة كرتون نتورك", url: "https://link-to-your-hls-kids4.m3u8" },
+                { name: "👶 قناة نكلوديون", url: "https://link-to-your-hls-kids5.m3u8" },
+                { name: "👶 قناة بايسكل", url: "https://link-to-your-hls-kids6.m3u8" },
+                { name: "👶 قناة ديزني", url: "https://link-to-your-hls-kids7.m3u8" },
+                { name: "👶 قناة جونيور", url: "https://link-to-your-hls-kids8.m3u8" },
+                { name: "👶 قناة يوتيوب كيدز", url: "https://link-to-your-hls-kids9.m3u8" },
+                { name: "👶 قناة كارتون", url: "https://link-to-your-hls-kids10.m3u8" },
+                { name: "👶 قناة توم وجيري", url: "https://link-to-your-hls-kids11.m3u8" },
+                { name: "👶 قناة ديناصور", url: "https://link-to-your-hls-kids12.m3u8" },
+                { name: "👶 قناة شوجر", url: "https://link-to-your-hls-kids13.m3u8" },
+                { name: "👶 قناة نيكلوديون", url: "https://link-to-your-hls-kids14.m3u8" },
+                { name: "👶 قناة بابا", url: "https://link-to-your-hls-kids15.m3u8" },
+                { name: "👶 قناة ألعاب", url: "https://link-to-your-hls-kids16.m3u8" },
+                { name: "👶 قناة لوني تونز", url: "https://link-to-your-hls-kids17.m3u8" },
+                { name: "👶 قناة زووم", url: "https://link-to-your-hls-kids18.m3u8" },
+                { name: "👶 قناة كريزي", url: "https://link-to-your-hls-kids19.m3u8" },
+                { name: "👶 قناة كيدز فيو", url: "https://link-to-your-hls-kids20.m3u8" }
+            ],
+            series: [
+                { name: "📺 مسلسل Game of Thrones", url: "https://link-to-your-hls-series1.m3u8" },
+                { name: "📺 مسلسل Breaking Bad", url: "https://link-to-your-hls-series2.m3u8" },
+                { name: "📺 مسلسل The Witcher", url: "https://link-to-your-hls-series3.m3u8" },
+                { name: "📺 مسلسل Money Heist", url: "https://link-to-your-hls-series4.m3u8" },
+                { name: "📺 مسلسل Stranger Things", url: "https://link-to-your-hls-series5.m3u8" },
+                { name: "📺 مسلسل The Crown", url: "https://link-to-your-hls-series6.m3u8" },
+                { name: "📺 مسلسل Narcos", url: "https://link-to-your-hls-series7.m3u8" },
+                { name: "📺 مسلسل Peaky Blinders", url: "https://link-to-your-hls-series8.m3u8" },
+                { name: "📺 مسلسل Westworld", url: "https://link-to-your-hls-series9.m3u8" },
+                { name: "📺 مسلسل The Mandalorian", url: "https://link-to-your-hls-series10.m3u8" },
+                { name: "📺 مسلسل The Office", url: "https://link-to-your-hls-series11.m3u8" },
+                { name: "📺 مسلسل The Handmaid's Tale", url: "https://link-to-your-hls-series12.m3u8" },
+                { name: "📺 مسلسل Friends", url: "https://link-to-your-hls-series13.m3u8" },
+                { name: "📺 مسلسل The Big Bang Theory", url: "https://link-to-your-hls-series14.m3u8" },
+                { name: "📺 مسلسل House of Cards", url: "https://link-to-your-hls-series15.m3u8" },
+                { name: "📺 مسلسل Dark", url: "https://link-to-your-hls-series16.m3u8" },
+                { name: "📺 مسلسل The Boys", url: "https://link-to-your-hls-series17.m3u8" },
+                { name: "📺 مسلسل Vikings", url: "https://link-to-your-hls-series18.m3u8" },
+                { name: "📺 مسلسل Dexter", url: "https://link-to-your-hls-series19.m3u8" },
+                { name: "📺 مسلسل Suits", url: "https://link-to-your-hls-series20.m3u8" }
+            ],
+            movies: [
+                { name: "🎬 فيلم Inception", url: "https://link-to-your-hls-movies1.m3u8" },
+                { name: "🎬 فيلم Titanic", url: "https://link-to-your-hls-movies2.m3u8" },
+                { name: "🎬 فيلم The Dark Knight", url: "https://link-to-your-hls-movies3.m3u8" },
+                { name: "🎬 فيلم The Godfather", url: "https://link-to-your-hls-movies4.m3u8" },
+                { name: "🎬 فيلم Avatar", url: "https://link-to-your-hls-movies5.m3u8" },
+                { name: "🎬 فيلم Interstellar", url: "https://link-to-your-hls-movies6.m3u8" },
+                { name: "🎬 فيلم Gladiator", url: "https://link-to-your-hls-movies7.m3u8" },
+                { name: "🎬 فيلم Fight Club", url: "https://link-to-your-hls-movies8.m3u8" },
+                { name: "🎬 فيلم The Matrix", url: "https://link-to-your-hls-movies9.m3u8" },
+                { name: "🎬 فيلم The Shawshank Redemption", url: "https://link-to-your-hls-movies10.m3u8" },
+                { name: "🎬 فيلم Forrest Gump", url: "https://link-to-your-hls-movies11.m3u8" },
+                { name: "🎬 فيلم Jurassic Park", url: "https://link-to-your-hls-movies12.m3u8" },
+                { name: "🎬 فيلم Gladiator", url: "https://link-to-your-hls-movies13.m3u8" },
+                { name: "🎬 فيلم Schindler's List", url: "https://link-to-your-hls-movies14.m3u8" },
+                { name: "🎬 فيلم The Silence of the Lambs", url: "https://link-to-your-hls-movies15.m3u8" },
+                { name: "🎬 فيلم The Green Mile", url: "https://link-to-your-hls-movies16.m3u8" },
+                { name: "🎬 فيلم The Lion King", url: "https://link-to-your-hls-movies17.m3u8" },
+                { name: "🎬 فيلم Shutter Island", url: "https://link-to-your-hls-movies18.m3u8" },
+                { name: "🎬 فيلم Pulp Fiction", url: "https://link-to-your-hls-movies19.m3u8" },
+                { name: "🎬 فيلم Memento", url: "https://link-to-your-hls-movies20.m3u8" }
+            ]
+        };
+
+        // تحميل القناة عند اختيارها
+        function loadCategory(category) {
+            const categoryChannels = channels[category] || channels.all;
+            channelList.innerHTML = "";
+            categoryChannels.forEach(channel => {
+                let li = document.createElement("li");
+                li.innerHTML = channel.name;
+                li.onclick = function() {
+                    loadVideo(channel.url);
+                    highlightActive(li);
+                };
+                channelList.appendChild(li);
+            });
+        }
+
+        // تشغيل الفيديو
+        function loadVideo(url) {
+            if (Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                });
+            }
+            else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', function () {
+                    video.play();
+                });
+            }
+        }
+
+        // تمييز القناة النشطة
+        function highlightActive(selectedLi) {
+            let allItems = document.querySelectorAll('.channel-list li');
+            allItems.forEach(item => item.classList.remove('active'));
+            selectedLi.classList.add('active');
+        }
+
+        // تحميل جميع القنوات عند بدء الصفحة
+        loadCategory('all');
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Practica</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interfaz con 9 botones e imágenes</title>
+  <style>
+    body {
+      background-color: #454545;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
+      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="Aramak ..." oninput="searchByName(this.value)">
+      </div>
+    <button class="filter-button active" onclick="filterSelection('all')">Tümü</button>
+    <button class="filter-button" onclick="filterSelection('spor')">SPOR</button>
+    <button class="filter-button" onclick="filterSelection('filmler')">FİLMLER</button>
+    <button class="filter-button" onclick="filterSelection('eglence')">EĞLENCE</button>
+    <button class="filter-button" onclick="filterSelection('cocuklar')">ÇOCUKLAR</button>
+    <button class="filter-button" onclick="filterSelection('kultur')">KÜLTÜR</button>
+    <button class="filter-button" onclick="filterSelection('muzik')">MÜZİK</button>
+    <button class="filter-button" onclick="filterSelection('noticias')">HABERLER</button>
+    <button class="filter-button" onclick="filterSelection('ulusal')">ULUSAL</button>
+    <button class="filter-button" onclick="filterSelection('dini')">DİNİ</button>
+    <button class="filter-button" onclick="filterSelection('cine-24/7')">CINE 24/7</button>
+    <button class="filter-button" onclick="filterSelection('24/7')">24/7</button>
+    
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+        
+        <button class="button eglence" onclick="redirectTo('go:a&e')">
+            <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+            <span>A&E</span>
+        </button>
+        <button class="button eglence" onclick="redirectTo('go:amc')">
+          <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+          <span>AMC</span>
+      </button>
+      <button class="button eglence" onclick="redirectTo('go:bitme')">
+        <img src="https://x.playerlatino.live/f1.png" alt="Imagen">
+        <span>BitMe</span>
+    </button>
+
+
+        
+
+
+
+        <button class="button cocuklar" onclick="redirectTo('go:caccion')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Cine Accion</span>
+        </button>
+        <button class="button cocuklar" onclick="redirectTo('go:caccionhd')">
+          <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+          <span>Cine Accion HD</span>
+      </button>
+      <button class="button cocuklar" onclick="redirectTo('go:caccions')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cine Accion Sagas</span>
+    </button>  
+    <button class="button cocuklar" onclick="redirectTo('go:caccionshd')">
+      <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+      <span>Cine Accion Sagas HD</span>
+  </button>
+
+
+
+
+
+        <button class="button dini" onclick="redirectTo('go:player')">
+            <img src="https://cielotv.do/wp-content/uploads/2023/06/CTV-500px-150x150.png" alt="Imagen">
+            <span>Cielo TV</span>
+        </button>
+
+
+        <button class="button ulusal" onclick="redirectTo('go:a+')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>A+</span>
+        </button>
+        <button class="button ulusal" onclick="redirectTo('go:ametv')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>America TV</span>
+        </button>
+        <button class="button ulusal" onclick="redirectTo('go:az7')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Azteca 7</span>
+        </button>
+        <button class="button ulusal" onclick="redirectTo('go:azuno')">
+            <img src="https://x.playerlatino.live/foxsportspremium.png" alt="Imagen">
+            <span>Azteca Uno</span>
+        </button>
+  
+
+
+
+        <button class="button noticias" onclick="redirectTo('go:adn40')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>ADN 40</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:adn402')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>ADN 40 opc2</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:forotv')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Foro TV</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:foxn')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Fox News</span>
+        </button>
+        <button class="button noticias" onclick="redirectTo('go:nbchd')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>NBC HD</span>
+        </button>
+
+
+
+        <button class="button 24/7" onclick="redirectTo('go:alf')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Alf 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:animania')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Animaniacs 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:bayblade')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Bayblade 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:bodes')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Bob Esponja 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:breaking')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Breaking Bad 24/7</span>
+        </button>
+        <button class="button 24/7" onclick="redirectTo('go:czodiaco')">
+            <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+            <span>Caballeros del Zodiaco 24/7</span>
+        </button>
+
+
+
+
+
+
+      <button class="button kultur" onclick="redirectTo('go:aplanet')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Animal Planet</span>
+      </button>
+      <button class="button kultur" onclick="redirectTo('go:azteca7')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Azteca 7</span>
+      </button>
+      <button class="button kultur" onclick="redirectTo('go:dchanel')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Channel</span>
+      </button>
+      <button class="button kultur" onclick="redirectTo('go:dchanels')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Discovery Channel Sur</span>
+      </button>
+  
+
+
+
+      <button class="button muzik" onclick="redirectTo('go:cmusica')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Canal de la Musica</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('go:dibiza')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Djing Ibiza</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('go:htv')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>HTV</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('go:mtv')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>MTV</span>
+    </button>
+  
+
+
+
+
+      <button class="button filmler" onclick="redirectTo('go:dpclasico')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>De Pelicula Clasico</span>
+    </button>
+    <button class="button filmler" onclick="redirectTo('go:azcine')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Az Cinema</span>
+    </button>
+    <button class="button filmler" onclick="redirectTo('go:cinel')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cine Latino</span>
+    </button>
+    <button class="button filmler" onclick="redirectTo('go:cinec')">
+        <img src="https://t4.ftcdn.net/jpg/00/72/71/15/360_F_72711585_7eiKcdeXcSpyzq9e4rvWC96uTywimcPk.jpg" alt="Imagen">
+        <span>Cinecanal</span>
+    </button>
+
+
+    
+
+
+      
+
+
+      <button class="button spor" onclick="redirectTo('go:afiz')">
+        <img src="https://x.playerlatino.live//afizzionados.png" alt="Imagen">
+        <span>Afizzionados</span>
+      </button>
+
+      <button class="button spor" onclick="redirectTo('go:afizhd')">
+        <img src="https://x.playerlatino.live//afizzionados.png" alt="Imagen">
+        <span>Afizzionados HD</span>
+      </button>
+
+      <button class="button spor" onclick="redirectTo('go:alja')">
+        <img src="http:\/\/x.playerlatino.live\/aljazeera.png" alt="Imagen">
+        <span>Al Jazeera</span>
+      </button>
+
+      <button class="button spor" onclick="redirectTo('go:ayms')">
+        <img src="https://st3.depositphotos.com/4285885/17922/i/450/depositphotos_179229910-stock-photo-gratis-written-text-on-green.jpg" alt="Imagen">
+        <span>AyM Sports</span>
+      </button>
+
+
+
+
+      <button class="button filmler" onclick="redirectTo('go:babytv')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Baby TV</span>
+      </button>
+      <button class="button filmler" onclick="redirectTo('go:ctnw')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Cartoon Network</span>
+      </button>
+      <button class="button filmler" onclick="redirectTo('go:carton')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>Cartoonito</span>
+      </button>
+      <button class="button filmler" onclick="redirectTo('go:player2')">
+        <img src="https://www.udrop.com/cache/plugins/filepreviewer/1346872/79dcd7bc4b567fb0aba00cad3f6092a5ecf35e73d99f0d4582278dcbe177a1f4/160x134_middle.jpg" alt="Imagen">
+        <span>CBeebies</span>
+      </button>
+  
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
