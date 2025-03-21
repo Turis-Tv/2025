@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLS Video Oynatıcı</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        video {
+            width: 80%;
+            max-width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" controls autoplay></video>
+
+    <script>
+        var video = document.getElementById('video');
+        var videoSrc = 'https://vavoo.to/play/1332310706/index.m3u8';
+
+        fetch(videoSrc, {
+            method: 'GET',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': '*/*',
+                'Connection': 'keep-alive'
+            },
+            credentials: 'include'  // Çerezleri dahil et
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.url;  // Yönlendirilmiş m3u8 dosyasını al
+            } else {
+                throw new Error('Akış yüklenemedi!');
+            }
+        })
+        .then(url => {
+            if (Hls.isSupported()) {
+                var hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', function() {
+                    video.play();
+                });
+            } else {
+                alert('Tarayıcınız HLS formatını desteklemiyor!');
+            }
+        })
+        .catch(error => {
+            console.error('Video yüklenemedi:', error);
+        });
+    </script>
+</body>
+</html>
