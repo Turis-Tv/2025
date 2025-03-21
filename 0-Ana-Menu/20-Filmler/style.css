@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i");
+body {
+  background: linear-gradient(to bottom right, #3a2d80, #0e101a);
+  color: #2b2c33;
+  font-size: 16px;
+  font-feature-settings: "kern", "liga", "pnum";
+  text-rendering: optimizelegibility;
+  font-family: "Space Mono", monospace;
+  font-feature-settings: "liga" 0;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.whatsapp {
+  position: fixed;
+  z-index: 1;
+  bottom: 90px;
+  right: 90px;
+}
+
+.whatsapp__status {
+  display: block;
+  position: absolute;
+  right: calc(100% + 16px);
+  bottom: 0;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  padding: 2px 8px;
+  border-radius: 50em;
+}
+
+.whatsapp__status--offline {
+  background: #e20000;
+  color: #ffffff;
+}
+.whatsapp__status--offline:after {
+  content: "offline";
+}
+
+.whatsapp__status--online {
+  background: #00e676;
+  color: #005c2f;
+}
+.whatsapp__status--online:after {
+  content: "online";
+}
+
+.whatsapp__button {
+  display: none;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: #00e676;
+  color: #ffffff;
+  border-radius: 50em;
+  font-size: 60px;
+  line-height: 60px;
+  width: 45px;
+  height: 45px;
+}
+.whatsapp__button:before {
+  content: "";
+  display: block;
+  background: #00e676;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+}
+.whatsapp__button i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

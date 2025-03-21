@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Practica</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interfaz con 9 botones e imágenes</title>
+  <style>
+    body {
+      background-color: #454545;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 80px;
+      height: 76px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
+      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="... Aramak ..." oninput="searchByName(this.value)">
+      </div>
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+        
+
+
+
+
+
+
+
+
+
+
+      <button class="button muzik" onclick="redirectTo('1-Filmler/index.html')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3vRn4ofOk8XPSxRYj_xEDJYBn8wKLyutVo_bshB2rHT-1SNUR8q7Yxg2nQrR5USdyrdA&usqp=CAU" alt="Imagen">
+        <span>Filmler Izle</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('https://www.hdfilmcehennemi.nl/')">
+        <img src="https://www.hdfilmcehennemi.nl/dist/images/logo.svg" alt="Imagen">
+        <span>HD Filmcehennemi</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('1-Bahar/index.html')">
+        <img src="https://filmhe.net/wp-content/uploads/2023/01/hdfilmhit190xlogo.png" alt="Imagen">
+        <span>Hd Film Hit</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('https://fullhdizle.one/kategori/turk-filmleri/')">
+        <img src="data:image/webp;base64,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" alt="Imagen">
+        <span>Film Izle</span>
+    </button>
+  
+    <button class="button muzik" onclick="redirectTo('https://www.filmizle5.org/turk-komedi-filmleri')">
+        <img src="https://www.filmizle5.org/wp-content/themes/turistjack/logo/logo.webp" alt="Imagen">
+        <span>IzleFilm</span>
+    </button>
+
+    <button class="button muzik" onclick="redirectTo('https://www.hdfilmcehennemi2.site/dhoom-3-izle')">
+        <img src="https://www.hdfilmcehennemi2.site/uploads/poster/dhoom-2-izle1_thumb.webp" alt="Imagen">
+        <span>Dhoom</span>
+    </button>
+
+
+
+
+
+ 
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+      
+
+
+  
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
