@@ -1,0 +1,62 @@
+@charset "UTF-8";
+body {
+  background-color: #222;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin: 20px;
+  padding: 10px;
+  background-color: #333;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.about {
+  display: flex;
+  margin-bottom: 5px;
+  background-color: #eee;
+}
+.about .cover img {
+  width: 120px;
+}
+.about .info {
+  padding: 10px 10px 0 10px;
+}
+.about .title {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.about .description {
+  margin-top: 10px;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+
+audio {
+  width: 100%;
+}
+
+#playlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#playlist li {
+  color: #eee;
+  background-color: #222;
+  padding: 10px 15px;
+  margin: 1px 0;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+#playlist li[playing=true] {
+  background-color: #444;
+  font-weight: bold;
+}
+#playlist li[playing=true]:before {
+  content: "► ";
+}
+#playlist li:hover {
+  background-color: #2f2f2f;
+}
