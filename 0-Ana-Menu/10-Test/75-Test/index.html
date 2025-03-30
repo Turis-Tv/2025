@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Working Music Player</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--// contact me on instagram if you found any bug on this player 
+// https://instagram.com/sahilverma.dev
+// some of the songs are not able to  play because codepen dosen't allow any non secure media links.
+-->
+
+<div class="container">
+  <div id="particles-js"></div>
+  <div class="spotify-player">
+    <div class="music-playlist">
+      <div class="playlist-header">
+        <div class="playlist-close-btn">
+          <i class="fa fa-angle-left playlist-back-icon"></i>
+        </div>
+        <div class="playlist-center-text">
+          <p>Your Playlist</p>
+        </div>
+        <div class="playlist-menu-btn">
+          <i class="fa fa-ellipsis-v playlist-menu-icon"></i>
+        </div>
+      </div>
+      <div class="playlist"></div>
+    </div>
+    <div class="music-player">
+      <img class="bg" />
+      <div class="player-header">
+        <div class="playlist-open-btn">
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <div class="library">
+          <p class="playing-from">playing from your library</p>
+          <p>Songs</p>
+        </div>
+        <div class="menu-btn">
+          <i class="fa fa-ellipsis-v menu-icon"></i>
+        </div>
+      </div>
+      <div class="player-center">
+        <div class="poster-container"></div>
+      </div>
+      <div class="player-footer">
+        <div class="music-info">
+          <div class="names">
+            <p class="music-name"></p>
+            <p class="artist-name"></p>
+          </div>
+          <div class="heart-btn">
+            <i class="fa fa-heart-o heart-icon"></i>
+          </div>
+        </div>
+        <div class="music-timebar">
+          <div class="timebar">
+            <div class="music-current-length"></div>
+            <div class="music-current-length-circle"></div>
+          </div>
+          <div class="music-time">
+            <div class="music-current-time">0:00</div>
+            <div class="music-duration-time">0:00</div>
+          </div>
+        </div>
+        <div class="music-controls">
+          <audio class="audio"></audio>
+          <div class="shuffle-btn">
+            <i class="fa fa-random shuffle-icon" title="Shuffle"></i>
+          </div>
+          <div class="main-control">
+            <i class="fa fa-step-backward back-btn"></i>
+            <i class="fa fa-play-circle play-btn"></i>
+            <i class="fa fa-step-forward forward-btn"></i>
+          </div>
+          <div class="loop-btn">
+            <i class="fa fa-repeat loop-icon" title="Repeat"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="music-info-window"></div>
+  </div>
+</div>
+
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+  particlesJS('particles-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+</script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
