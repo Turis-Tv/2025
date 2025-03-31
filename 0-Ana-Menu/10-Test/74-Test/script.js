@@ -441,11 +441,11 @@ musicInfo.forEach((item, index) => {
   playlistItemInfo.appendChild(playlistItemArtist);
 
   let playlistHeartBtn = document.createElement("div");
-  playlistHeartBtn.classList.add("playlist-heart-btn");
+ 
   playlistItem.appendChild(playlistHeartBtn);
 
   let playlistHeartIcon = document.createElement("i");
-  playlistHeartIcon.setAttribute("class", "fa fa-heart playlist-heart-icon");
+ 
   playlistHeartBtn.appendChild(playlistHeartIcon);
 
   let playlistMenuBtn = document.createElement("div");
