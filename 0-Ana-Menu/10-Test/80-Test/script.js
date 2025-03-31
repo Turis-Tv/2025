@@ -1,6 +1,6 @@
 const musicInfo = [
   {
-    musicName: "Эта женщина",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
@@ -8,7 +8,7 @@ const musicInfo = [
     liked: true
   },
   {
-    musicName: "Поздняя любовь",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
@@ -17,48 +17,48 @@ const musicInfo = [
     liked: false
   },
   {
-    musicName: "Бегут года",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Годы, как вас задержать",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Время покажет",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Мне другой такой не встретить",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Исповедь",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Моя любимая и нежная ",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc: "https://files.realrocks.ru/lofi/1392127/1392127.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Встреча",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
@@ -66,14 +66,14 @@ const musicInfo = [
       "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Ты один в моем сердце",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",
     musicPoster: "https://i.ytimg.com/vi/pzUlBiNefB8/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&rs=AOn4CLDvP1wQpfUnTkFsiUCYjGgNUI3f3Q"
   },
   {
-    musicName: "Я все еще тебя люблю",
+    musicName: "Yalanmis",
     artistName: "Bahar",
     musicSrc:
       "https://mp3semticdn.com/mp3_files/Bahar/Bahar-Gelsin-2021/Bahar-Yalanmis-Ufuk-Kaplan-Remix-43.mp3",

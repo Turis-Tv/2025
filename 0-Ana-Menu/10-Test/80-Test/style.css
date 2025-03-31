@@ -24,14 +24,14 @@ img {
 .container {
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 170vw;
   
 }
 #particles-js {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("https://www.yapfiles.ru/files/3144745/_techet..._1.jpg"); /*фоновая картинка или цвет*/
+  background-image: url("https://media.s-bol.com/qnZ9P6oRv7Qy/zpv0AEY/1200x1151.jpg"); /*фоновая картинка или цвет*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
