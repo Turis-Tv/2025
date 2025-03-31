@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Dynamic Playlist Player</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AmplitudeJS Testing</title>
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+  </head>
+  <body>
+    <div class="example-container">
+      <div class="left">
+        <div id="white-player">
+          <div class="white-player-top">
+            <div>
+              &nbsp;
+            </div>
+            
+            <div class="center">
+              <span class="now-playing">Turis</span>
+            </div>
+            
+            <div>
+                <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/show-playlist.svg" class="show-playlist"/>
+            </div>
+          </div>
+
+          <div id="white-player-center">
+            <img data-amplitude-song-info="cover_art_url" class="main-album-art"/>
+
+            <div class="song-meta-data">
+              <span data-amplitude-song-info="name" class="song-name"></span>
+              <span data-amplitude-song-info="artist" class="song-artist"></span>
+            </div>
+
+            <div class="time-progress">
+              <div id="progress-container">
+                <input type="range" class="amplitude-song-slider"/>
+                <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+                <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+              </div>
+
+              <div class="time-container">
+                <span class="current-time">
+                  <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+                </span>
+                <span class="duration">
+                    <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="white-player-controls">
+            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+            <div class="amplitude-prev" id="previous"></div>
+            <div class="amplitude-play-pause" id="play-pause"></div>
+            <div class="amplitude-next" id="next"></div>
+            <div class="amplitude-repeat" id="repeat"></div>
+          </div>
+
+          <div id="white-player-playlist-container">
+            <div class="white-player-playlist-top">
+              <div>
+
+              </div>
+              <div>
+                <span class="Liste">Mülayim Turis</span>
+              </div>
+              <div>
+                  <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/close.svg" class="close-playlist"/>
+              </div>
+             </div>
+
+            <div class="white-player-">
+             
+            </div>
+
+            <div class="white-player-playlist">
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Alemcisin</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Ara Beni Sor Beni</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Aşta Gel</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Bıktım</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Bilebilse</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              
+                <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="5">
+                <img src="https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ahmet-ayverdi-sikir-sikir-oyun-havalari-2016.jpg"/>
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">♫  Bilebilse</span>
+                  <span class="playlist-artist-album">Ahmet Ayverdi &bull; Ahmet Ayverdi</span>
+                </div>
+              </div>
+              
+              
+
+            
+            
+            
+            
+            
+            
+            
+            
+
+            <div class="white-player-playlist-controls">
+              <img data-amplitude-song-info="cover_art_url" class="playlist-album-art"/>
+
+              <div class="playlist-controls">
+                <div class="playlist-meta-data">
+                    <span data-amplitude-song-info="name" class="song-name"></span>
+                    <span data-amplitude-song-info="artist" class="song-artist"></span>
+                </div>
+
+                <div class="playlist-control-wrapper">
+                  <div class="amplitude-prev" id="playlist-previous"></div>
+                  <div class="amplitude-play-pause" id="playlist-play-pause"></div>
+                  <div class="amplitude-next" id="playlist-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ </a>
+      </div>
+      <div class="right">
+        <div class="song-to-add" song-to-add="0">
+
+        </div>
+            
+        <div class="song-to-add" song-to-add="1">
+
+        </div>
+
+        <div class="song-to-add" song-to-add="2">
+
+        </div>
+
+        <div class="song-to-add" song-to-add="3">
+
+        </div>
+
+        <div class="song-to-add" song-to-add="4">
+
+        </div>
+ 
+        <div class="song-to-add" song-to-add="5">
+
+        </div>
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
