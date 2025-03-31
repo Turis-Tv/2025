@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by RAFAEL BENEDICT TOMACAS</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Music</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music</title>
+
+    <!-- Include font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+
+		<!-- Include Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+  </head>
+  <body>
+   <div class="side-menu-overlay"></div>
+
+    <div class="example-container">
+      <div class="left">
+        <div id="white-player">
+          <div class="white-player-top">
+            <div>
+              &nbsp;
+            </div>
+            
+            <div class="center">
+              <span class="now-playing">Now Playing</span>
+            </div>
+            
+            <div>
+                <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/show-playlist.svg" class="show-playlist"/>
+            </div>
+          </div>
+
+          <div id="white-player-center">
+            <img data-amplitude-song-info="cover_art_url" class="main-album-art"/>
+
+            <div class="song-meta-data">
+              <span data-amplitude-song-info="name" class="song-name"></span>
+              <span data-amplitude-song-info="artist" class="song-artist"></span>
+            </div>
+
+            <div class="time-progress">
+              <div id="progress-container">
+                <input type="range" class="amplitude-song-slider"/>
+                <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
+                <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+              </div>
+
+              <div class="time-container">
+                <span class="current-time">
+                  <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span>
+                </span>
+                <span class="duration">
+                    <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+                  </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="white-player-controls">
+            <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+            <div class="amplitude-prev" id="previous"></div>
+            <div class="amplitude-play-pause" id="play-pause"></div>
+            <div class="amplitude-next" id="next"></div>
+            <div class="amplitude-repeat" id="repeat"></div>
+          </div>
+
+          <div id="white-player-playlist-container">
+            <div class="white-player-playlist-top">
+              <div>
+
+              </div>
+              <div>
+                <span class="queue">Queue</span>
+              </div>
+              <div>
+                  <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/dynamic-songs/close.svg" class="close-playlist"/>
+              </div>
+             </div>
+
+            <div class="white-player-up-next">
+              Up Next
+            </div>
+
+            <div class="white-player-playlist">
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
+                <img src="https://cdns-images.dzcdn.net/images/cover/68b4e986958b17f05b062ffa8d7ae114/350x350.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">Style</span>
+                  <span class="playlist-artist-album">Taylor Swift</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="1">
+                <img src="https://cdns-images.dzcdn.net/images/cover/68b4e986958b17f05b062ffa8d7ae114/350x350.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">Blank Space</span>
+                  <span class="playlist-artist-album">Taylor Swift</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="2">
+                <img src="https://media.newyorker.com/photos/599f41a4349dd46ec7f22efc/master/pass/Battan-Taylor-Swift-New-Single.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">Look what you made me do</span>
+                  <span class="playlist-artist-album">Taylor Swift</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="3">
+                <img src="https://cdns-images.dzcdn.net/images/cover/68b4e986958b17f05b062ffa8d7ae114/350x350.jpg"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">Shake it off</span>
+                  <span class="playlist-artist-album">Taylor Swift</span>
+                </div>
+              </div>
+              <div class="white-player-playlist-song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="4">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/de/Taylor_Swift_-_Wildest_Dreams_%28Official_Single_Cover%29.png/220px-Taylor_Swift_-_Wildest_Dreams_%28Official_Single_Cover%29.png"/>
+
+                <div class="playlist-song-meta">
+                  <span class="playlist-song-name">Wildest Dreams</span>
+                  <span class="playlist-artist-album">Taylor Swift</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="white-player-playlist-controls">
+              <img data-amplitude-song-info="cover_art_url" class="playlist-album-art"/>
+
+              <div class="playlist-controls">
+                <div class="playlist-meta-data">
+                    <span data-amplitude-song-info="name" class="song-name"></span>
+                    <span data-amplitude-song-info="artist" class="song-artist"></span>
+                </div>
+
+                <div class="playlist-control-wrapper">
+                  <div class="amplitude-prev" id="playlist-previous"></div>
+                  <div class="amplitude-play-pause" id="playlist-play-pause"></div>
+                  <div class="amplitude-next" id="playlist-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="right">
+        <div class="song-to-add" song-to-add="0">
+          <img src="https://i.scdn.co/image/ab67616d0000b2737b25c072237f29ee50025fdc"/>
+
+          <a class="add-to-playlist-button" song-to-add="0">
+            Add To Playlist
+          </a>
+        </div>
+            
+        <div class="song-to-add" song-to-add="1">
+          <img src="https://cdns-images.dzcdn.net/images/cover/6111c5ab9729c8eac47883e4e50e9cf8/500x500.jpg"/>
+
+          <a class="add-to-playlist-button" song-to-add="1">
+            Add To Playlist
+          </a>
+          
+        </div>
+
+        <div class="song-to-add" song-to-add="2">
+          <img src="https://cdns-images.dzcdn.net/images/cover/6111c5ab9729c8eac47883e4e50e9cf8/500x500.jpg"/>
+
+          <a class="add-to-playlist-button" song-to-add="2">
+            Add To Playlist
+          </a>
+        </div>
+
+        <div class="song-to-add" song-to-add="3">
+          <img src="https://i.scdn.co/image/ab67616d0000b2737b25c072237f29ee50025fdc"/>
+
+          <a class="add-to-playlist-button" song-to-add="3">
+            Add To Playlist
+          </a>
+        </div>
+
+        <div class="song-to-add" song-to-add="4">
+          <img src="https://i.scdn.co/image/ab67616d0000b27396384c98ac4f3e7c2440f5b5"/>
+
+          <a class="add-to-playlist-button" song-to-add="4">
+            Add To Playlist
+          </a>
+        </div>
+ 
+        <div class="song-to-add" song-to-add="5">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Taylor_Swift_Feat._Kendrick_Lamar_-_Bad_Blood_%28Official_Single_Cover%29.png/220px-Taylor_Swift_Feat._Kendrick_Lamar_-_Bad_Blood_%28Official_Single_Cover%29.png"/>
+
+          <a class="add-to-playlist-button" song-to-add="5">
+            Add To Playlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

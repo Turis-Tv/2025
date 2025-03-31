@@ -1,0 +1,800 @@
+ody {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div#flat-black-player-container {
+  position: relative;
+  height: 25%; /*высота блока с плеером*/
+  max-width: 340px; /*ширина блока плеера при изменении меняется расстояние между кнопок*/
+  margin: auto;
+  margin-left: 450px; /* сдвиг блока плеера */
+  border-style: solid;
+  border-color: #0000ff; /*цвет обводки блока плеера */
+  border-width: 5px; /*толщина обводки*/
+  border-radius:20px ; /* радиус ее обводки, если нужно скруглить */
+}
+div#flat-black-player-container div#list-screen {
+  background-color: #214192; /*фон под кнопками проигрывания открытого плейлиста*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+   border-radius:10px;/*скругление углов*/
+}
+div#flat-black-player-container div#list-screen div#list-screen-header {
+  background-color: #808080; /*цвет под фоном скрыть плейлист*/
+  padding: 15px;
+  text-align: center;
+  height: 20px; /* высота блока скрыть плейлист*/
+  position: relative;
+  color: #ffff00; /*текст скрыть плейлист*/
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+   border-top-left-radius:10px;/*скруглить углы у фона слева*/
+   border-top-right-radius:10px;/*справа*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-header
+  img#up-arrow {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  cursor: pointer;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-header
+  span.list-active-song-name {
+  color: #fff;
+  line-height: 25px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: scroll; /*прокрутка плейлиста*/
+}
+div#flat-black-player-container div#list-screen div#list div.song {
+  padding: 4px; /*поднять или опустить плейлист*/
+  background-color: #808080; /*цвет фона под плейлистом*/
+  margin-bottom: 0px;
+  cursor: pointer;
+  line-height: 24px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing
+  span.number {
+  opacity: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #ffffff; /*номер песни в плейлисте*/
+  letter-spacing: 0.5px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing
+  img.now-playing {
+  display: none;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container {
+  background-color: #a52a2a; /*цвет фона под активной песней плейлиста*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container
+  span.song-number-now-playing
+  img.now-playing {
+  display: inline-block;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container
+  span.song-number-now-playing
+  span.number {
+  display: none;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: calc(100% - 80px);
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container
+  span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  line-height: 14px;
+  color: #f9cfb8;/*название песни в плейлисте*/
+  letter-spacing: 0.47px;
+  display: block;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-duration {
+  display: inline-block;
+  opacity: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #fff; /*время окончания проигрывания*/
+  letter-spacing: 0.5px;
+  width: 30px;
+  text-align: center;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-artist-album  {
+  color: #ffffff; /* ?*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container
+  span.song-artist-album {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7fff00; /*цвет исполнителя в раскрытом плейлисте*/
+  letter-spacing: 0.47px;
+  display: block;
+   margin-top:3px;   
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer {
+  height: 80px;
+  padding: 6px;
+  margin-top:15px;/*?*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container {
+  width: calc(100% - 123px);
+  float: left;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container
+  span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #ffff00; /*название песни на плеере в плейлисте*/
+  letter-spacing: 0.5px;
+  line-height: 16px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container
+  div.song-artist-album {
+  opacity: 1; /*непрозрачность исполнителя в плеере на плейлисте*/
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #7fff00;/*исполнитель*/
+  letter-spacing: 0.5px;
+  line-height: 16px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls {
+  width: 90px;
+  float: right;
+  margin-top: 8px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-previous {
+  cursor: pointer;
+  width: 15px;
+  height: 17px; /*высота кнопки возврата на предыдуущую песню в плейлисте*/
+  background-image: url("https://img0.liveinternet.ru/images/attach/d/4/161/842/161842594_v_nachalo_vlevo_15h17.png");/*кнопка назад в плейлисте*/
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 15px;
+  margin-top: 4px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause {
+  cursor: pointer;
+  width: 24px; /*размер play pausa на плейлисте*/
+  height: 24px;
+  background-repeat: no-repeat;
+  float: left;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause.amplitude-playing {
+  background-image: url("https://img0.liveinternet.ru/images/attach/d/4/161/842/161842702_pauza_24h24.png");/*пауза в плейлисте */
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause.amplitude-paused {
+  background-image: url("https://img1.liveinternet.ru/images/attach/d/4/161/842/161842699_play_24h24.png");/*играть в плейлисте*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-next {
+  cursor: pointer;
+  width: 15px;
+  height: 17px;
+  background-image: url("https://img1.liveinternet.ru/images/attach/d/4/161/843/161843007_v_konec_vpravo_15h17.png");
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+div#flat-black-player-container div.player-header {
+  background-color: #b3b3b3; /* фон открыть плейлист*/
+  padding: 15px;
+  text-align: center;
+  height: 20px; /*высота блока открыть плейлист*/
+  position: relative;
+  margin-top: 0px; /*поднять вверх блок с текстом отк.плейлист*/
+  cursor: pointer;
+  color: #a52a2a; /*открыть плейлист*/
+  font-family: "Lato", sans-serif;
+  border-top-left-radius:10px;/*скруглить углы у фона слева вверху*/
+   border-top-right-radius:10px;/*справа*/
+}
+div#flat-black-player-container div.player-header img#down {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  cursor: pointer;
+}
+div#flat-black-player-container div#player-top {
+  position: relative;
+}
+div#flat-black-player-container
+  div#player-top
+  img[amplitude-main-song-info="true"] {
+  width: 100%;
+  height: 300px; /*высота блока плеера под картинкой*/
+}
+div#flat-black-player-container div#player-progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #fff; /*линия проигрывания в плейлисте */
+  position: relative;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  border: none;
+  cursor: pointer;
+  background: #ffff00;/*вся линия проигрывания на плеере и плейлисте*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-webkit-progress-bar {
+  background: none;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-webkit-progress-value {
+  background:#ff0000;/*линия проигрывания на плеере и плейлисте*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-moz-progress-bar {
+  background: #ff0000;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  border: none;
+  background: #ffff00; /*цвет всей линии проигрывания*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-webkit-progress-bar {
+  background: none;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-webkit-progress-value {
+  background-color: rgba(255, 255, 255, 1);
+  transition: width 0.1s ease; /*линия проигрывания*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-moz-progress-bar {
+  background: rgba(255, 255, 255, 1);
+}
+div#flat-black-player-container div#player-middle {
+  background-color: #808080; /*фон под названием песни и исполнителя на плеере*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  position: relative;
+}
+div#flat-black-player-container div#player-middle div#time-container {
+  color: #7fff00; /*время проигрывания музыки*/
+  width: 100%;
+  background-color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+div#flat-black-player-container
+  div#player-middle
+  div#time-container
+  span.amplitude-duration-time {
+  position: absolute;
+  top: 1px;
+  right: 6px;
+}
+div#flat-black-player-container
+  div#player-middle
+  div#time-container
+  span.amplitude-current-time {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+}
+div#flat-black-player-container div#player-middle span.song-name {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #7fff00; /*название песни на плеере*/
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  display: block;
+}
+div#flat-black-player-container div#player-middle div.song-artist-album {
+  /* Coldplay - Ghost Sto: */
+  opacity: 1; /*непрозрачность исполнителя*/
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  color: #ffffff; /*текст исполнителя на плеере*/
+  letter-spacing: 0.5px;
+  line-height: 16px;
+}
+div#flat-black-player-container div#player-bottom {
+  background-color: #ba55d3; /*фон под плеером*/
+  padding-left: 25px;
+  padding-right: 25px;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px; 
+}
+div#flat-black-player-container div#player-bottom div#control-container {
+  height: 60px; /*высота блока под кнопками плеера при увеличении динамик смещается*/
+  padding-top: 6px; /*поднять блок плеера*/
+  padding-bottom: 8px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container {
+  float: left;
+  width: 20%;
+  height: 40px;
+  padding-top: 19px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-off {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853603_shuffleperemeschat_2.png"); /*стрелки на плеере слева 24х24- перемещать*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-off:hover {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853357_shuffleperemeschat.png"); /*стрелки крест, слева кнопки перехода вперед 24х24*/
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-on {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853357_shuffleperemeschat.png"); /* стрелки крестом, слева кнопки перехода назад 24х24 */
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-on:hover {
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container {
+  width: 20%;
+  float: left;
+  height: 60px;
+  padding-top: 18px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container
+  div#previous {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/853/161853360_previousleft24h24.png"); /* 1-я кнопка перехода назад 24х24 */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container
+  div#previous:hover {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853743_previousleft24h242.png"); /*2-я кнопка-назад 24х24 нижняя*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container {
+  width: 20%;
+  float: left;
+  height: 60px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: auto;
+  /*кнопки play pause*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause.amplitude-playing {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/848/161848512_pauza_60h60.png"); /*кнопка стоп */
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause.amplitude-paused {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/848/161848503_play_60h60.png"); /*кнопка играть*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container {
+  width: 20%;
+  float: left;
+  height: 60px;
+  padding-top: 18px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container
+  div#next {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853361_previousvpravo24h24.png"); /*переход вперед вправо  24х24*/
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container
+  div#next:hover {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/853/161853931_previousvpravo24h242.png");/* 2-я кн 24х24-нижняя сменить цвет*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container {
+  float: left;
+  width: 20%;
+  height: 60px;
+  padding-top: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container
+  div#repeat {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/853/161853968_repeaton224h24.png"); /*стрелки справа от перехода вправо -сортировать-верхняя*/
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+  opacity: 0.7;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container
+  div#repeat:hover {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/853/161853946_repeaton24h24.png");
+  opacity: 0.8; /*стрелки справа от перехода вправо- сортировать-нижняя*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container
+  div#repeat.amplitude-repeat-on {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/853/161853968_repeaton224h24.png"); /*сотрировать, стрелки справа */
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container
+  div#repeat.amplitude-repeat-on:hover {
+  opacity: 1;
+}
+div#flat-black-player-container div#player-bottom div#control-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+div#flat-black-player-container div#player-bottom div#volume-container {
+  padding-bottom: 20px; /*звук*/
+  text-align: center;
+
+  /*
+   IE 11
+   */
+}
+div#flat-black-player-container div#player-bottom div#volume-container img {
+  display: block;
+  float: left;
+  margin-top: -9px; /*положение динамика*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider {
+  width: calc(100% - 30px);/*длина звуковой линии*/
+  -webkit-appearance: none;
+  display: block;
+  margin-left: 10px;
+  float: left;
+}
+@-moz-document url-prefix() {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+    margin-top: 0px;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+    margin-top: -4px;
+    height: 25px;/*высота линии проигрывания*/
+    background-color: #ffff00 !important;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    *::-ms-backdrop,
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+    margin-top: -8px;
+    background-color: #ffff00 !important;
+    background: #ffff00 !important;
+  }
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus {
+  outline: none;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-webkit-slider-runnable-track {
+  width: 75%;
+  height: 2px;
+
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ff0000; /*линия проигрывания*/
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-webkit-slider-thumb {
+  height: 18px; /*бегунок*/
+  width: 18px;
+  background-color: #ff0000; /*цвет бегунка*/
+  cursor: pointer;
+  margin-top: -8px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus::-webkit-slider-runnable-track {
+  background: #ffff00;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ffff00;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  cursor: pointer;
+  margin-top: -8px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ffff00;
+  border-width: 15px 0;
+  color: transparent;
+  border-color: #fffdd0;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-lower {
+  background: transparent;
+  border-radius: 2.6px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+  background: transparent;
+  border-radius: 2.6px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-thumb {
+  height: 18px;
+  width: 18px;
+  background-color: #ffc0cb;
+  cursor: pointer;
+  margin-top: 0px;
+  border: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus::-ms-fill-lower {
+  background: #ff0000;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+  background: #ff0000;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-tooltip {
+  display: none;
+}
+div#flat-black-player-container div#player-bottom div#volume-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  padding: 0px 0;
+  background-image: url("https://im.wampi.ru/2024/02/19/1-1.jpg"); /*фоновая картинка*/
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed:scroll; /* фон зафиксирован вместе с фоном */
+}
+::-webkit-scrollbar{display:none;}

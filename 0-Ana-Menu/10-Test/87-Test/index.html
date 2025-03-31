@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Плейлист &quot;слушаем  музыку&quot;</title>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel="stylesheet" href="./style.css">
+<script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="row">
+  <div class="large-4 medium-6 small-12 large-centered medium-centered columns">
+    <div id="flat-black-player-container">
+      <div id="list-screen" class="slide-in-top">
+
+        <div id="list-screen-header" class="hide-playlist">
+          <img id="up-arrow" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/up.svg" /> Скрыть Playlist
+        </div>
+
+        <div id="list">
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+            <span class="song-number-now-playing">
+              <span class="number">1</span>
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name">Когда весна прийдет</span>
+              <span class="song-artist-album">Николай Рыбников</span>
+            </div>
+
+            <span class="song-duration">
+              3:24
+              <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+            <span class="song-number-now-playing">
+              <span class="number">2</span>
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name">Весна</span>
+              <span class="song-artist-album">Лариса Долина</span>
+            </div>
+
+            <span class="song-duration">
+              3:45
+              <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+            <span class="song-number-now-playing">
+              <span class="number">3</span>
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name">Была весна</span>
+              <span class="song-artist-album">Ля Минор</span>
+            </div>
+
+            <span class="song-duration">
+              3:49
+              <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="3">
+            <span class="song-number-now-playing">
+              <span class="number">4</span>
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name">Привет, весна</span>
+              <span class="song-artist-album">Марина Александрова</span>
+            </div>
+
+            <span class="song-duration">
+              3:30
+              <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="4">
+            <span class="song-number-now-playing">
+              <span class="number">5</span>
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <div class="song-meta-container">
+              <span class="song-name">Как упоительны в России вечера</span>
+              <span class="song-artist-album">Белый орел</span>
+            </div>
+
+            <span class="song-duration">
+              4:09
+              <span>
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="5">
+            <span class="song-number-now-playing">
+
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="6">
+            <span class="song-number-now-playing">
+
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+          </div>
+          <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="10">
+            <span class="song-number-now-playing">
+
+              <img class="now-playing" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/now-playing.svg" />
+            </span>
+
+            <span>
+          </div>
+        </div>
+
+        <div id="list-screen-footer">
+          <div id="list-screen-meta-container">
+            <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+            </div>
+          </div>
+          <div class="list-controls">
+            <div class="list-previous amplitude-prev"></div>
+            <div class="list-play-pause amplitude-play-pause" amplitude-main-play-pause="true"></div>
+            <div class="list-next amplitude-next"></div>
+          </div>
+        </div>
+      </div>
+      <div id="player-screen">
+        <div class="player-header down-header">
+          <img id="down" src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/down.svg" /> Открыть Playlist
+        </div>
+        <div id="player-top">
+          <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true" />
+        </div>
+        <div id="player-progress-bar-container">
+          <progress id="song-played-progress" class="amplitude-song-played-progress" amplitude-main-song-played-progress="true"></progress>
+          <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
+        </div>
+        <div id="player-middle">
+          <div id="time-container">
+            <span class="amplitude-current-time time-container" amplitude-main-current-time="true"></span>
+            <span class="amplitude-duration-time time-container" amplitude-main-duration-time="true"></span>
+          </div>
+          <div id="meta-container">
+            <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name"></span>
+
+            <div class="song-artist-album">
+              <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+            </div>
+          </div>
+        </div>
+        <div id="player-bottom">
+          <div id="control-container">
+
+            <div id="shuffle-container">
+              <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+            </div>
+
+            <div id="prev-container">
+              <div class="amplitude-prev" id="previous"></div>
+            </div>
+
+            <div id="play-pause-container">
+              <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+            </div>
+
+            <div id="next-container">
+              <div class="amplitude-next" id="next"></div>
+            </div>
+
+            <div id="repeat-container">
+              <div class="amplitude-repeat" id="repeat"></div>
+            </div>
+
+          </div>
+
+          <div id="volume-container">
+            <img src="https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/volume.svg" /><input type="range" class="amplitude-volume-slider" step=".1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/amplitudejs/3.2.3-0/amplitude.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

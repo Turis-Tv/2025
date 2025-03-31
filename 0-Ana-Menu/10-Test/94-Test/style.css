@@ -1,0 +1,1074 @@
+::-webkit-scrollbar {
+ width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+ border-radius: 10px;
+ background: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  from(#ff8a00),
+  to(#da1b60)
+ );
+ box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
+  inset -2px -2px 2px rgba(255, 255, 255, 0.25);
+}
+
+::-webkit-scrollbar-track {
+ background-color: #10dee6;
+ background: linear-gradient(
+  to right,
+  #16782b,
+  #16782b 18px,
+  #360ec2 1px,
+  #360ec2
+ );
+}
+body {
+ margin: 0px;
+ padding: 0px;
+ background-color: #000000;
+ height: 550px;
+ width: 100%;
+}
+ody {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+div#flat-black-player-container {
+  position: relative;
+  height:81%;/*высота блока с плеером*/
+  max-width: 279px;/*ширина блока плеера*/
+  margin: auto;
+  margin-left:785px;/* сдвиг блока плеера */
+  border-style:solid;
+  border-color: #0000ff03; /*цвет обводки блока плеера */
+  border-width: 5px; /*толщина обводки*/
+  border-radius: ; /* радиус ее обводки, если нужно скруглить */
+  
+
+}
+div#flat-black-player-container div#list-screen {
+  background-color: #ff000000;/*фон под кнопками проигрывания открытого плейлиста*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+}
+div#flat-black-player-container div#list-screen div#list-screen-header {
+ /*цвет под фоном скрыть плейлист*/
+  padding: 15px;
+  text-align: center;
+  height: -1px;/* высота блока скрыть плейлист*/
+  position: relative;
+  color: #ffff00;/*  скрыть плейлист*/
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-header
+  img#up-arrow {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  cursor: pointer;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-header
+  span.list-active-song-name {
+  color: #fff;
+  line-height: 25px;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.5px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px; /*прокрутка плейлиста*/
+}  
+div#flat-black-player-container div#list-screen div#list div.song {
+  padding: 4px;/*поднять или опустить плейлист*/
+  background:url();/*цвет фона под плейлистом*/
+  margin-bottom: 0px;
+  cursor: pointer;
+  line-height: 24px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing
+  span.number {
+  opacity: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #ffffff;/*номер песни в плейлисте*/
+  letter-spacing: 0.5px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-number-now-playing
+  img.now-playing {
+  display: none;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container {
+ border-radius:0px 55px 0px 55px; background:url(https://galerey-room.ru/images/0_6a065_5ad3e38d_S.gif);/*цвет фона под активной песней плейлиста*/
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container
+  span.song-number-now-playing
+  img.now-playing {
+  display: inline-block;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song.amplitude-active-song-container
+  span.song-number-now-playing
+  span.number {
+  display: none;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container {
+  display: inline-block;
+  margin-left: 8px;
+  vertical-align: middle;
+  width: calc(100% - 80px);
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container
+  span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  line-height: 37px;
+  color: #a52a2a;
+  letter-spacing: -0.5px;
+  display: block;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-duration {
+  display: inline-block;
+  opacity: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #7fff00;/*время окончания проигрывания*/
+  letter-spacing: 0.5px;
+  width: 30px;
+  text-align: center;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  span.song-artist-album {
+  color:#0014ff;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list
+  div.song
+  div.song-meta-container
+  span.song-artist-album {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 17px;margin-top:-15px;
+  color:#ffff00;/*цвет исполнителя в раскрытом плейлисте*/
+  letter-spacing: 0.47px;
+  display: block;
+     margin-top:3px;
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer {
+  height: 80px;
+  padding: 6px;
+  margin-top:15px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container {
+  width: calc(100% - 123px);
+  float: left;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container
+  span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  color:#a52a2a;/*название песни на плеере в плейлисте*/
+  letter-spacing: -0.5px;
+  line-height: 37px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div#list-screen-meta-container
+  div.song-artist-album {
+  opacity: 1;/*непрозрачность исполнителя в плеере на плейлисте*/
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: #7fff00;;
+  letter-spacing: -0.5px;
+  line-height: 0px;
+   margin-left:5px;
+    margin-top:-2px;
+   
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls {
+  width: 93px;
+  float: right;
+  margin-top: -30px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-previous {
+  cursor: pointer;
+  width: 15px;
+  height: 17px;/*высота кнопки возврата на предыдущую песню*/
+  background-image: url("https://img0.liveinternet.ru/images/attach/d/4/161/828/161828998_RRRRRSRRS_PREV.png");
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: 15px;
+  margin-top: 4px;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  float: left;
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause.amplitude-playing {
+  background-image: url("https://img0.liveinternet.ru/images/attach/d/4/161/829/161829058_Malenkaya_pauza.png");
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-play-pause.amplitude-paused {
+  background-image: url("https://img0.liveinternet.ru/images/attach/d/4/161/37/161037106_knopka_rley.png");
+}
+div#flat-black-player-container
+  div#list-screen
+  div#list-screen-footer
+  div.list-controls
+  div.list-next {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url("https://img1.liveinternet.ru/images/attach/d/4/161/828/161828999_RRRRRSRRyoR_NEXT.png");
+  background-repeat: no-repeat;
+  float: left;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+div#flat-black-player-container div.player-header {
+  background-color: #b3b3b3;/* фон открыть плейлист*/
+  padding: 15px;
+  text-align: center;
+  height: 20px;/*высота блока открыть плейлист*/
+  position: relative;
+  margin-top: 0px;/*поднять вверх блок с текстом отк.плейлист*/
+  cursor: pointer;
+  color: #a52a2a;/*открыть плейлист*/
+  font-family: "Lato", sans-serif;
+}
+div#flat-black-player-container div.player-header img#down {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  cursor: pointer;
+}
+div#flat-black-player-container div#player-top {
+  position: relative;
+}
+div#flat-black-player-container
+  div#player-top
+  img[amplitude-main-song-info="true"] {
+  width: 100%;
+  height:300px ;/*высота блока плеера под картинкой*/
+}
+div#flat-black-player-container div#player-progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: #000;/*линия проигрывания*/
+  position: relative;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress {
+  width: 100%;
+ 
+  appearance: none;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-webkit-progress-bar {
+  background: none;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-webkit-progress-value {
+  background: white;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-played-progress[value]::-moz-progress-bar {
+  background: #fff;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  border: none;
+  background: #ba55d3;/*цвет линии проигрывания*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-webkit-progress-bar {
+  background: none;
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-webkit-progress-value {
+  background-color: rgba(255, 255, 255, 1);
+  transition: width 0.1s ease;/*линия проигрывания*/
+}
+div#flat-black-player-container
+  div#player-progress-bar-container
+  progress#song-buffered-progress[value]::-moz-progress-bar {
+  background: rgba(255, 255, 255, 1);
+}
+div#flat-black-player-container div#player-middle {
+  background-color: #808080;/*фон под названием песни и исполнителя на плеерн*/
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+div#flat-black-player-container div#player-middle div#time-container {
+  color: #0008ff;/*время проигрывания музыки*/
+  width: 100%;
+  background-color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+div#flat-black-player-container
+  div#player-middle
+  div#time-container
+  span.amplitude-duration-time {
+  position: absolute;
+  top: 1px;
+  right: 6px;
+}
+div#flat-black-player-container
+  div#player-middle
+  div#time-container
+  span.amplitude-current-time {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+}
+div#flat-black-player-container div#player-middle span.song-name {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #ff00ff;/*название песни на плеере*/
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  display: block;
+}
+div#flat-black-player-container div#player-middle div.song-artist-album {
+  /* Coldplay - Ghost Sto: */
+  opacity: 1;/*непрозрачность исполнителя*/
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  color: #153170;/*текст исполнителя на плеере*/
+  letter-spacing: 0.5px;
+  line-height: 16px;
+}
+div#flat-black-player-container div#player-bottom {
+  background-color: #155e8f;/*фон под плеером*/
+  padding-left: 61px;
+  padding-right: 0px;
+  border-radius:0 0 0 0;
+}
+div#flat-black-player-container div#player-bottom div#control-container {
+  height: 70px;/*высота блока под кнопками плеера при увеличении динамик смещается*/
+  padding-top: 16px;/*поднять блок плеера*/
+  padding-bottom: 9px;
+  
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container {
+  float: left;
+  width: 0px;
+  height: 0px;
+  padding-top: 21px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle {
+  width: 16px;
+  height: 17px;
+  cursor: pointer;
+  margin: auto;
+  opacity:0;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-off {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/833/161833056_RRRSRR_RRSRyoRRRyoSS.png");
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-off:hover {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/833/161833177_RRRRS_RRSRRRSRSS.png");
+  opacity: 0;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-on {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/833/161833177_RRRRS_RRSRRRSRSS.png");
+  opacity: 0;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#shuffle-container
+  div#shuffle.amplitude-shuffle-on:hover {
+  opacity: 1;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container {
+  width: 20%;
+  float: left;
+  height: 60px;
+  padding-top: 18px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container
+  div#previous {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/827/161827999_RRRSRRS_PREV1.png");/*кнопка перехода назад*/
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#prev-container
+  div#previous:hover {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/848/161848233_RRRRRRS_RRRRR_PREV.png");
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container {
+  width: 20%;
+  float: left;
+  height: 60px;
+  
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin:auto;
+    /*кнопки play pause*/
+    
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause.amplitude-playing {
+  background: url("https://img1.liveinternet.ru/images/attach/d/4/161/828/161828641_RRRRRR_RRSRR.png");
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#play-pause-container
+  div#play-pause.amplitude-paused {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/828/161828642_RRRRR_RRRR.png");
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container {
+  width: 38%;
+  float: left;
+  height: 60px;
+  padding-top: 18px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container
+  div#next {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/827/161827998_RRRSRRS_PREV.png");
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: auto;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#next-container
+  div#next:hover {
+  background: url("https://img0.liveinternet.ru/images/attach/d/4/161/848/161848232_RRRRRRS_RRRSRRNEXT1.png");
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#control-container
+  div#repeat-container {
+  float: left;
+  width: 20%;
+  height: 60px;
+  padding-top: 20px;
+}
+
+div#flat-black-player-container div#player-bottom div#volume-container {
+  padding-bottom: 12px;/*звук*/
+  text-align: center;
+  
+  /*
+   IE 11
+   */
+}
+div#flat-black-player-container div#player-bottom div#volume-container img {
+  display: block;
+  float: left;
+  margin-top: -9px;/*положение динамика*/
+ 
+  
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider {
+  width: calc(100% - 30px);
+  -webkit-appearance: none;
+  display: block;
+  margin-left: 10px;
+  float: left;
+ 
+  
+}
+@-moz-document url-prefix() {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+   margin-top: 0px;
+  }
+}
+@supports (-ms-ime-align: auto) {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+    margin-top: -4px;
+    height: 30px;
+    background-color: #ff0000 !important;
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    *::-ms-backdrop,
+  div#flat-black-player-container
+    div#player-bottom
+    div#volume-container
+    input[type="range"].amplitude-volume-slider {
+    margin-top: -8px;
+    background-color: #ff0000 !important;
+    background: #ff0000 !important;
+  }
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus {
+  outline: none;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-webkit-slider-runnable-track {
+  width: 75%;
+  height: 2px;
+   
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ff0000;/*линия проигрывания*/
+    
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-webkit-slider-thumb {
+  height: 18px;/*бегунок*/
+  width: 18px;
+  background-color: #ff0000;/*цвет бегунка*/
+  cursor: pointer;
+  margin-top: -8px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus::-webkit-slider-runnable-track {
+  background: #ffff00;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ffff00;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  cursor: pointer;
+  margin-top: -8px;
+  -webkit-appearance: none;
+  border-radius: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #ffff00;
+  border-width: 15px 0;
+  color: transparent;
+  border-color: #fffdd0;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-lower {
+  background: transparent;
+  border-radius: 2.6px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+  background: transparent;
+  border-radius: 2.6px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-thumb {
+  height: 18px;
+  width: 18px;
+  background-color:#ffc0cb;
+  cursor: pointer;
+  margin-top: 0px;
+  border: 20px;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider:focus::-ms-fill-lower {
+  background: #ff0000;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-fill-upper {
+  background: #ff0000;
+}
+div#flat-black-player-container
+  div#player-bottom
+  div#volume-container
+  input[type="range"].amplitude-volume-slider::-ms-tooltip {
+  display: none;
+}
+div#flat-black-player-container div#player-bottom div#volume-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  padding: 0px 0;
+  background-image: url("https://www.yapfiles.ru/files/3087370/_variant_telefon_u_morya.gif");/*фоновая картинка*/
+  background-repeat: no-repeat;
+  
+} 
+
+element.style {
+  height: 429px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: scroll;height:0px;}
+ 
+}
+element.style {
+}
+div#flat-black-player-container div#player-progress-bar-container progress#song-played-progress {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+  border: none;
+  cursor: pointer;
+  background: #117e28d9;
+}
+element.style {
+  inline-size: 10.6063%;
+  block-size: 100%;
+}
+div#flat-black-player-container div#player-progress-bar-container progress#song-played-progress[value]::-webkit-progress-value {
+  background: #ff0000;
+}
+div#flat-black-player-container div.player-header {
+  background-color: #fad648; 
+  border-radius:25px 25px 0 0 ;
+  padding: 15px;
+  text-align: center;
+  height: 20px;
+  position: relative;
+  margin-top: 0px;
+  cursor: pointer;
+  color: #a52a2a;
+  font-family: "Lato", sans-serif;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+div#flat-black-player-container div#player-middle {
+  background-color: #fad648;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+element.style {
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer div#list-screen-meta-container {
+  border-radius:0 0 55px 55px;
+  width: calc(100% - 123px);
+  float: left;
+  margin-top:-32px;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+element.style {
+}
+div#flat-black-player-container div#list-screen div#list div.song div.song-meta-container span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  color: #4acb66;
+  letter-spacing: 0.47px;
+  display: block;
+}
+}
+element.style {
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer div#list-screen-meta-container span.song-name {
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  color: #4acb66;
+  letter-spacing: -0.5px;
+  line-height: 37px;
+}
+
+element.style {
+  height: 435px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+}
+div#flat-black-player-container div#list-screen div#list {
+  overflow-y: 0px;
+  height:0px;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+element.style {
+}
+div#flat-black-player-container div.player-header {
+  background-color: #fad6480d;
+  padding: 15px;
+  border-radius:42px 42px 0 0;
+  text-align: center;
+  height: 20px;
+  position: relative;
+  margin-top: 71px;
+  cursor: pointer;
+  color: #a52a2a;
+  font-family: "Lato", sans-serif;
+}
+div#flat-black-player-container div#list-screen div#list-screen-header {
+  background:url(https://img0.liveinternet.ru/images/attach/d/4/162/43/162043278_Skrin1.png);
+  border-radius: 42px 42px 0 0;
+  padding: 25px;
+  text-align: center;
+  height: 14px;
+  position: relative;
+  color: #ffff00;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+div#flat-black-player-container div#list-screen {
+  background-color: #214192;
+  border-radius:55px 55px 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+}
+element.style {
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer {
+  border-radius:0 0 35px 35px;
+  height: 80px;
+  padding: 6px;
+  margin-top: 15px;
+}
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+
+
+таблица стилей агента пользователя
+div {
+  display: block;
+}
+element.style {
+}
+div#flat-black-player-container div#player-bottom div#control-container {
+  height: 70px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+}
+element.style {
+}
+div#flat-black-player-container div#player-bottom div#control-container div#shuffle-container div#shuffle.amplitude-shuffle-off {
+  background: url(https://521dimensions.com/img/open-source/amplitudejs/examples/flat-black/shuffle.svg);
+}
+div#flat-black-player-container div#player-bottom div#control-container div#shuffle-container div#shuffle {
+  width: 16px;
+  height: 17px;
+  cursor: pointer;
+  margin: auto;
+  opacity: 0;
+}
+
+
+div#flat-black-player-container {
+  position: relative;
+  height: 556px;
+  max-width: 279px;
+  margin: auto;
+  margin-left: 476px;
+  margin-top: -66px;
+  border-style: solid;
+  border-color: #0000ff03;
+  border-width: 5px;
+  border-radius: ;
+}
+div#flat-black-player-container div#list-screen {
+  background-color:#ff000008;
+  border-radius: 55px 55px 0 0;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+}}
+div#flat-black-player-container div#list-screen div#list div.song {
+  padding: 7px;
+  background-color: #299191;
+  margin-bottom: 0px;
+  cursor: pointer;
+  line-height: 24px;
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer {
+  border-radius: 0 0 35px 35px;
+  height: 17px;
+  padding: 6px;
+  margin-top: 15px;
+}
+
+ 
+
+}
+div#flat-black-player-container div#list-screen div#list div.song div.song-meta-container span.song-artist-album {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: -15px;
+  color: #ffff00;
+  letter-spacing: 0.47px;
+  display: block;
+  margin-top: 6px;
+}
+div#flat-black-player-container div#list-screen div#list-screen-footer div.list-controls {
+  width: 100px;
+  float: right;
+  margin-top: -14px;
+}
+element.style {
+  height: 421px;
+}
+div#flat-black-player-container div#list-screen div#list {background:url(https://i.pinimg.com/originals/45/90/67/4590676926a11158e2bb5b087d881f34.gif);
+  overflow-y: 0px;
+  height: 0px;
+}

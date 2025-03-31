@@ -1,0 +1,159 @@
+.ampli-play:before{content:"p"}
+.ampli-prev:before{content:"<"}
+.ampli-next:before{content:">"}
+.ampli-pause:before{content:"o"}
+
+.amplitude-muted .ampli-volume-up,.amplitude-not-muted .ampli-volume-off,.amplitude-paused .ampli-pause,.amplitude-playing .ampli-play,.amplitude-song-container.amplitude-paused .ampli-volume{
+display:none
+}
+.amplitude-song-container,.amplitude-zero__controls,.amplitude-zero__play-controls,.amplitude-zero__time{
+display:-webkit-box;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center
+}
+.amplitude-zero__metaInfo{
+position:absolute;
+bottom:0;
+padding:10px;
+right:0;
+left:0;
+color:#fff;
+background-image:-webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.90));
+background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.90))
+}
+.amplitude-zero__coverInfo{
+position:relative;
+min-height:100px;
+width:100px;
+}
+.amplitude-zero__metaInfo .song-name{
+font-size:1.2em;
+font-weight:500
+}
+.amplitude-zero__metaInfo .song-artist-album{
+opacity:.5
+}
+.amplitude-zero__time{
+-webkit-box-pack:justify;
+-ms-flex-pack:justify;
+justify-content:space-between;
+background-color:black;
+font-weight:700;color:white;
+font-size:12px;
+}
+.amplitude-zero__progress{
+height:5px;width:100%;margin:0 1em
+}
+.amplitude-zero .amplitude-song-played-progress{
+background-color:#CFD8Dc;
+width:100%;
+height:5px;
+display:block;
+border:none;
+cursor:pointer;
+}
+.amplitude-zero .amplitude-song-played-progress:not([value]){
+background-color:#0c0c0c
+}
+.amplitude-zero [value]::-webkit-progress-bar{
+background-color:#0c0c0c;
+}
+.amplitude-zero [value]::-moz-progress-bar{
+background-color:#0c0c0c;
+}
+.amplitude-zero [value]::-webkit-progress-value{
+background-color:#ff3333
+}
+.amplitude-zero__controls,.amplitude-zero__time{
+padding:10px 5px;
+border-bottom:px solid rgba(0,0,0,.05)
+}
+.amplitude-zero__controls ::before{
+display:block;
+position:relative;
+top:2px
+}
+.amplitude-zero__controls [class*=amplitude]{
+cursor:pointer;
+font-size:1.5em;
+margin-right:5px;
+-webkit-transition:.5s;
+transition:.5s
+}
+.amplitude-zero__controls [class*=amplitude]:hover{
+opacity:.75
+}
+.amplitude-zero__controls .amplitude-repeat,.amplitude-zero__controls .amplitude-shuffle{
+color:white;
+}
+.amplitude-zero__controls .amplitude-next,.amplitude-zero__controls .amplitude-play-pause,.amplitude-zero__controls .amplitude-prev{
+background:#0c0c0c;
+color:white;
+border-radius:50%;
+padding:5px
+}
+.amplitude-zero__controls .amplitude-repeat{
+margin-left:10px
+}
+.amplitude-zero{
+background-color:black;
+line-height:12px
+}
+.amplitude-zero__mainInfo img{
+width:100%;
+height:200px;
+}
+.amplitude-zero__controls{
+padding:10px 10px
+}
+.amplitude-song-container{
+background:black;
+border-top:1px solid #0c0c0c;
+color:white;
+padding:10px 10px;
+cursor:pointer;
+-webkit-transition:background .5s;
+transition:background .5s
+}
+.song-meta-data .song-title{
+display:block;
+font-weight:500;
+margin-bottom:2px
+}
+.song-meta-data{
+padding-left:1em
+}
+.song-meta-data .song-artist{
+font-weight:500;opacity:.5
+}
+.amplitude-song-container i::before{
+font-size:1.2em;
+opacity:.5;
+display:block
+}
+.amplitude-song-container.amplitude-playing,.amplitude-song-container:hover{
+color:#ff3333;
+transition:0.3s ease;
+}
+.amplitude-song-container.amplitude-playing,.amplitude-song-container:active{
+background-color:#ff3333;
+color:white;
+}
+.amplitude-zero__playlist{
+max-height:286px;
+overflow-y:auto;
+font-size:14px;
+}
+.amplitude-zero__playlist::-webkit-scrollbar{
+width:5px
+}
+.amplitude-zero__playlist::-webkit-scrollbar-track{
+width:5px
+}
+.amplitude-zero__playlist::-webkit-scrollbar-thumb{
+width:5px;
+background:#90A4AE
+}
