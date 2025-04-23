@@ -2,10 +2,19 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Turis Tv</title>
+  <title>Star Flix </title>
   
 
 </head>
+
+
+        <marquee scrollamount="5" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+            Turis Tv।
+        </marquee>
+
+
+
+
 <body>
 <!-- partial:index.partial.html -->
 <!DOCTYPE html>
@@ -13,810 +22,595 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turis Tv</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <title>M3U Channel List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
-            background: #1a1a1a;
-            color: #fff;
-            overflow-x: hidden;
+            background-color: #000;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
-        .app-container {
-            position: relative;
-            width: 100%;
-            min-height: 100vh;
-        }
-        .player-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            background: #000;
-            height: 35vh;
-        }
-        .video-container {
+
+        /* Announcement styles */
+        .announcement {
+            background-color: #000; /* Background color */
+            color: #fff; /* Text color */
+            padding: 3px;
+            text-align: center;
+            border: 2px solid #7d1c02; /* Border color */
+            font-size: 18px;
+            font-weight: bold;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            height: 100%;
-            position: relative;
+            position: fixed; /* Fix the position */
+            top: 0.2px; /* Position it at the top */
+            left: 0; /* Align it to the left */
+            width: 98%; /* Full width */
+            z-index: 1000; /* Ensure it's on top */
         }
-        video {
-            position: absolute !important;
-            top: 0;
+
+        .announcement .icon {
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .announcement marquee {
+            flex: 1;
+            white-space: nowrap;
+            font-size: 18px;
+        }
+
+        .category-tabs {
+            display: flex;
+            overflow-x: auto;
+            background-color: #000;
+            padding: 10px 0;
+            position: fixed;
+            top: 35px; /* Position below the announcement */
             left: 0;
-            width: 100% !important;
-            height: 100% !important;
-            background: #000;
-        }
-        #youtube-player {
             width: 100%;
-            max-width: 560px;
-            aspect-ratio: 16 / 9;
-            display: none;
+            z-index: 999;
         }
-        .channel-list-container {
-            margin-top: 35vh;
-            height: 65vh;
-            overflow-y: auto;
+
+        .category-tabs button {
+            background-color: #000;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid #7d1c02;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 30px;
+            font-size: 12px;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-tabs button.active, .category-tabs button:hover {
+            background-color: #00c853;
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Üç sütun */
+            gap: 10px;
             padding: 10px;
-            padding-bottom: 60px;
+            margin-top: 90px; /* Adjust based on category tabs height */
         }
-        .channel-list {
-            list-style: none;
+
+        .channel {
+            background-color: #000;
+            border: 2px solid #7d1c02;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            height: 135px; /* Fixed height for all channels */
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .channel-item {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .channel-item:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        .channel-item.active {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        .channel-content {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-        }
-        .channel-logo {
-            width: 48px;
-            height: 48px;
-            margin-right: 16px;
-            border-radius: 8px;
-            overflow: hidden;
-            flex-shrink: 0;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
         }
-        .channel-logo img {
+
+        .channel img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .channel-name {
+            color: white;
+            font-size: 14px;
+            margin-top: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            height: 40px; /* Adjust height as needed */
+        }
+
+        .channel-name span {
+            display: inline-block;
+            padding-left: 1%; /* initial position for scrolling effect */
+            animation: marquee 10s linear infinite;
+        }
+
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .channel:hover {
+            transform: scale(1.05);
+            border-color: #ff0000;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 36px; /* Position below the header and announcement */
+            left: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 235px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; /* Black background for the video container */
+            margin: 0;
+            border: none; /* Remove border */
+            border-radius: 0; /* Remove border radius */
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        video {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Changed from cover to contain */
-            background: #ffffff; /* Added dark background */
-            padding: 2px; /* Added small padding */
+            border: none; /* Remove border */
+            border-radius: 0; /* Remove border radius */
         }
-        .channel-info {
-            flex: 1;
-        }
-        .channel-name {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-        .channel-type {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.6);
-        }
-        .search-container {
-            position: sticky;
-            top: 0;
-            padding: 12px;
-            background: #1a1a1a;
-            z-index: 90;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .search-input {
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Black background for controls */
+            position: absolute;
+            bottom: 0;
             width: 100%;
-            padding: 12px 16px;
+            box-sizing: border-box;
+            transition: opacity 0.3s ease; /* Transition for hide/show */
+        }
+
+        .controls.hidden {
+            opacity: 0;
+        }
+
+        .controls .top-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            flex-direction: row;
+        }
+
+        .controls .bottom-controls {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .controls button {
+            background-color: transparent;
             border: none;
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 10px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .controls input[type="range"] {
+            width: 100%;
+            margin: 0 10px;
+        }
+
+        .controls i {
+            font-size: 30px;
+        }
+
+        .time {
+            color: white;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .settings-menu {
+            display: none;
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
             color: white;
             font-size: 14px;
         }
-        .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
+
+        .settings-menu .setting-group {
+            margin-bottom: 10px;
+        }
+
+        .settings-menu select {
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 5px;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
 </head>
 <body>
-    <div class="app-container">
-        <div class="player-container">
-            <div class="video-container">
-                <video id="player" controls></video>
-                <iframe id="youtube-player" frameborder="0" allowfullscreen></iframe>
+
+
+
+    <div class="video-container" id="videoContainer">
+        <video id="videoPlayer" class="video-js"></video>
+        <div class="controls" id="controls">
+            <div class="top-controls">
+                <button id="settings"><i class="fas fa-cog"></i></button>
+                <button id="prevChannel"><i class="fas fa-step-backward"></i></button>
+                <button id="rewind"><i class="fas fa-backward"></i></button>
+                <button id="playPause"><i class="fas fa-play"></i></button>
+                <button id="fastForward"><i class="fas fa-forward"></i></button>
+                <button id="nextChannel"><i class="fas fa-step-forward"></i></button>
+                <button id="fullscreen"><i class="fas fa-expand"></i></button>
+            </div>
+
+            <div class="bottom-controls">
+                <span class="time" id="currentTime">0:00</span>
+                <input type="range" id="progress" value="0" min="0" max="100">
+                <span class="time" id="duration">0:00</span>
             </div>
         </div>
-        <div class="channel-list-container">
-            <div class="search-container">
-                <input type="text" class="search-input" placeholder="Kanal Ara...">
+
+        <div class="settings-menu" id="settingsMenu">
+            <div class="setting-group">
+                <span>Quality</span>
+                <select id="qualitySelect">
+                    <option value="auto">Auto</option>
+                </select>
             </div>
-            <ul class="channel-list" id="channelList">
-                <!-- Kanal öğeleri JavaScript tarafından doldurulacak -->
-            </ul>
+            <div class="setting-group">
+                <span>Speed</span>
+                <select id="speedSelect">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>Normal</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+            </div>
         </div>
     </div>
+
+    <div class="category-tabs" id="categoryTabs"></div>
+
+    <div class="channel-grid" id="channelGrid"></div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", async () => {
-            const video = document.getElementById('player');
-            const youtubeEmbed = document.getElementById('youtube-player');
-            const searchInput = document.querySelector('.search-input');
-            const channelList = document.getElementById('channelList');
-            
-            let currentChannel = null;
-            let shakaPlayer = null;
-            let hlsPlayer = null;
+    const m3uUrl = 'https://raw.githubusercontent.com/Turis-Tv/2025/refs/heads/main/0-xxx/1-xxx.m3u';  // Replace with your M3U URL
+    let channels = [];
+    let controlTimeout;
+    let currentLoadIndex = 0;
+    const channelsPerLoad = 100;
+    let currentChannelsToDisplay = [];
 
-            // Initialize Shaka Player
-            shaka.polyfill.installAll();
-
-            function initializeShakaPlayer() {
-                if (shakaPlayer) {
-                    shakaPlayer.destroy();
-                }
-                shakaPlayer = new shaka.Player(video);
-                shakaPlayer.addEventListener('error', (error) => {
-                    console.error('Shaka Player Error:', error);
-                });
-                return shakaPlayer;
+    // Load M3U Playlist data
+    async function loadPlaylist(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
+            const data = await response.text();
+            return data.split('\n');
+        } catch (error) {
+            console.error('Error loading playlist:', error);
+        }
+    }
 
-            function initializeHLSPlayer() {
-                if (hlsPlayer) {
-                    hlsPlayer.destroy();
-                }
-                if (Hls.isSupported()) {
-                    hlsPlayer = new Hls({
-                        enableWorker: true,
-                        lowLatencyMode: true
-                    });
-                    hlsPlayer.attachMedia(video);
-                    hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
-                        console.error('HLS.js Error:', data);
-                    });
-                    return hlsPlayer;
-                }
-                return null;
-            }
+    // Parse M3U data
+    function parseM3U(m3uLines) {
+        const categories = { 'All': [] };
+        let currentCategory = 'All';
+        let currentLogo = '';
+        let currentUrl = '';
 
-            const channels = [
-{
-     
-        name: 'Big Ass',
-        url: 'http://1465.vod.adultiptv.net/ph596e4ad896499/play.m3u8',
-        type: 'hls',
-	logo: ' https://img.adultiptv.net/19876.jpg'
-},
-{
-          name: ' Anal',
-        url: 'http://13216.vod.redtraffic.xyz/ph587bc292b6861/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.redtraffic.xyz/19877.jpg'
-},
-{
-         name: 'Babe ',
-        url: 'http://1244.vod.redtraffic.xyz/ph5abbb78538287/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.redtraffic.xyz/19878.jpg'
-},
-{
-         name: 'Anal',
-        url: 'http://12204.vod.adultiptv.net/ph58657d939d860/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.adultiptv.net/19879.jpg '
-},
-{
-          name: 'Babe',
-        url: 'http://12156.vod.adultiptv.net/ph59fadc205bf2e/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.adultiptv.net/19880.jpg'
-},
-{
-          name: 'Ebony',
-        url: 'http://11216.vod.redtraffic.xyz/ph56b6f2376b1b5/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.redtraffic.xyz/19881.jpg'
-},
-{
-          name: 'Hot Sex ',
-        url: 'http://10238.vod.redtraffic.xyz/ph5b10502919688/play.m3u8',
-        type: 'hls',
-	logo: 'https://img.redtraffic.xyz/19882.jpg'
-},
-{
-         name: 'Anal ',
-        url: 'http://6122.vod.adultiptv.net/ph5af7314886727/play.m3u8',
-        type: 'hls',
-        logo: 'https://img.adultiptv.net/19883.jpg'
-},
-{
-        name: 'Amateur ',
-        url: 'http://60106.vod.adultiptv.net/ph560c3f0f140a8/play.m3u8',
-        type: 'hls',
-        logo: 'https://img.adultiptv.net/19885.jpg'
-},
-{
-         name: 'Babe ',
-        url: 'http://218158.vod.redtraffic.xyz/ph5ba13efca3600/play.m3u8',
-        type: 'hls',
-   logo: 'https://img.redtraffic.xyz/19886.jpg'
-},
-{
-          name: 'Babe',
-        url: 'http://218158.vod.redtraffic.xyz/ph5ba13efca3600/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19886.jpg'
-},
-{
-        name: ' Babe',
-        url: 'http://21470.vod.redtraffic.xyz/ph5b7ccfa0be096/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19887.jpg'
-},
-{
-        name: 'Blowjob ',
-        url: 'http://21470.vod.adultiptv.net/ph5bda14e3262bc/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19888.jpg' 
-},
-{
-        name: 'Anal',
-        url: 'http://218158.vod.adultiptv.net/ph5a7a49c1629c5/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19889.jpg' 
-},
-{
-         name: 'Babe ',
-        url: 'http://60106.vod.redtraffic.xyz/ph579187283fa81/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19890.jpg' 
-},
-{
-         name: ' Asian',
-        url: 'http://6122.vod.redtraffic.xyz/ph5c182af87b0bd/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19891.jpg'
-},
-{
-          name: 'Amateur',
-        url: 'http://10238.vod.adultiptv.net/ph5adcf6017ef38/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19894.jpg' 
-},
-{
-         name: 'Babe',
-        url: 'http://11216.vod.adultiptv.net/ph5aae6f6fbb2ed/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19895.jpg'
-},
-{
-         name: 'Anal ',
-        url: 'http://12156.vod.redtraffic.xyz/ph5bb7089f3ce40/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19896.jpg'
-},
-{
-         name: '60FPS ',
-        url: 'http://12204.vod.redtraffic.xyz/ph5bd8c23a56fac/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19898.jpg'
-},
-{
-        name: 'Blowjob',
-        url: 'http://1244.vod.adultiptv.net/ph58a4e60d94cc9/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19899.jpg' 
-},
-{
-        name: 'Big Dick',
-        url: 'http://13216.vod.adultiptv.net/ph584162f6c1217/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19900.jpg'
-},
-{
-        name: 'Brunette ',
-        url: 'http://1465.vod.redtraffic.xyz/ph58291ca6df7a6/play.m3u8',
-        type: 'hls',
-        url: 'http://1465.vod.redtraffic.xyz/ph58291ca6df7a6/play.m3u8',
-},
-{
-         name: 'Big Tits ',
-        url: 'http://1465.vod.redtraffic.xyz/ph598b90fa10056/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19902.jpg'
-},
-{
-          name: 'Brunette ',
-        url: 'http://13216.vod.adultiptv.net/ph5700a8bad43f6/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19903.jpg'
-},
-{
-        name: ' Big Tits',
-        url: 'http://1244.vod.adultiptv.net/ph5c06c6897bb43/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19904.jpg'
-},
-{
-        name: 'Amateur ',
-        url: 'http://12204.vod.redtraffic.xyz/ph5771223dda4e9/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19906.jpg' 
-},
-{
-        name: '60FPS',
-        url: 'http://12156.vod.redtraffic.xyz/ph5b5619ee94f31/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19907.jpg'
-},
-{
-         name: 'Anal ',
-        url: 'http://11216.vod.adultiptv.net/ph5c0539fdbe23f/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19909.jpg'  
-},
-{
-         name: 'Big Dick',
-        url: 'http://10238.vod.adultiptv.net/ph5b6aa4fba8d75/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19911.jpg'  
-},
-{
-        name: ' Brunette',
-        url: 'http://6122.vod.redtraffic.xyz/ph57a2429698395/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19912.jpg'
-},
-{
-        name: 'Blonde',
-        url: 'http://60106.vod.redtraffic.xyz/ph5a7213baad73d/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19913.jpg'
-},
-{
-        name: 'Big Tits ',
-        url: 'http://218158.vod.adultiptv.net/ph59cb9df08af3e/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19916.jpg'
-},
-{
-        name: 'Double Penetration ',
-        url: 'http://21470.vod.adultiptv.net/ph5721c23e000c9/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19917.jpg'
-},
-{
-        name: 'Babe ',
-        url: 'http://21470.vod.redtraffic.xyz/ph59650274d5886/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19918.jpg'
-},
-{
-        name: 'Big Tits',
-        url: 'http://218158.vod.redtraffic.xyz/ph5bf5b84c08439/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19919.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://60106.vod.adultiptv.net/ph573e240b30ec5/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19920.jpg' 
-
-
-},
-{
-        name: ' Anal',
-        url: 'http://6122.vod.adultiptv.net/ph5c0b5eee5a374/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19921.jpg' 
-},
-{
-        name: 'Arab ',
-       url: 'http://10238.vod.redtraffic.xyz/ph5b4e3ba32d3cf/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19922.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://11216.vod.redtraffic.xyz/ph56c6221d2faec/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19923.jpg'
-},
-{
-        name: 'Amateur',
-       url: 'http://12156.vod.adultiptv.net/ph59a3e904d1c89/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19924.jpg'
-},
-{
-        name: 'Babe ',
-        url: 'http://12204.vod.adultiptv.net/ph5be5182d0b3a1/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19925.jpg'
-},
-{
-        name: ' Blonde',
-        url: 'http://1244.vod.redtraffic.xyz/ph5ab70aa59525e/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19926.jpg' 
-},
-{
-        name: ' Big Dick',
-        url: 'http://13216.vod.redtraffic.xyz/ph5be53b984d414/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19927.jpg' 
-},
-{
-        name: 'Big Tits ',
-        url: 'http://1465.vod.adultiptv.net/ph5bc640b56b554/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19928.jpg' 
-},
-{
-        name: 'Babe ',
-        url: 'http://1465.vod.adultiptv.net/ph5c0922965e009/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19929.jpg'
-},
-{
-        name: 'Brunette ',
-        url: 'http://13216.vod.redtraffic.xyz/ph585c207c62fce/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19930.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://1244.vod.redtraffic.xyz/ph5bd016b1944fc/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19931.jpg' 
-},
-{
-        name: 'Bisexual Male ',
-        url: 'http://12204.vod.adultiptv.net/ph583a071fcc32e/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19932.jpg' 
-},
-{
-        name: 'Amateur ',
-        url: 'http://12156.vod.adultiptv.net/ph5599f0bc38ea0/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19933.jpg'
-},
-{
-        name: 'Babe ',
-        url: 'http://11216.vod.redtraffic.xyz/ph58935656f37eb/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19934.jpg' 
-},
-{
-        name: 'Big Ass ',
-        url: 'http://10238.vod.redtraffic.xyz/ph5b6deabf58b3a/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19935.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://6122.vod.adultiptv.net/ph57cdc491da210/play.m3u8',
-        type: 'hls',
-     logo: 'https://img.adultiptv.net/19936.jpg'
-},
-{
-        name: '60FPS ',
-        url: 'http://60106.vod.adultiptv.net/ph5a463c53776f2/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19937.jpg' 
-},
-{
-        name: 'Big Dick ',
-        url: 'http://218158.vod.redtraffic.xyz/ph5a0daf5e968f5/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19938.jpg'
-},
-{
-        name: 'Asian ',
-        url: 'http://21470.vod.redtraffic.xyz/ph5633ca4bad9d8/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19939.jpg'
-},
-{
-        name: '60FPS ',
-        url: 'http://21470.vod.adultiptv.net/ph5a59b8495f975/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19940.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://218158.vod.adultiptv.net/ph5bdff6ca165fc/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19942.jpg'
-},
-{
-        name: ' Blonde',
-        url: 'http://60106.vod.redtraffic.xyz/ph5a0a971bba32f/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19944.jpg'
-},
-{
-        name: 'Anal ',
-        url: 'http://6122.vod.redtraffic.xyz/ph589dd36b14b4a/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19945.jpg' 
-},
-{
-        name: ' Blonde ',
-        url: 'http://10238.vod.adultiptv.net/ph5a5887d35e615/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19946.jpg' 
-},
-{
-        name: 'Big Dick ',
-        url: 'http://11216.vod.adultiptv.net/ph5bf70f914cce4/play.m3u8',
-        type: 'hls',
-        logo: 'https://img.adultiptv.net/19949.jpg' 
-},
-{
-        name: 'Babe ',
-        url: 'http://12156.vod.redtraffic.xyz/ph563878dd9259a/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19951.jpg'
-},
-{
-        name: 'Amateur ',
-        url: 'http://12204.vod.redtraffic.xyz/ph58ee00f21fb70/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19952.jpg' 
-},
-{
-        name: 'Big Ass ',
-        url: 'http://1244.vod.adultiptv.net/ph57fbfbc07f983/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19953.jpg' 
-},
-{
-        name: 'Anal ',
-        url: 'http://13216.vod.adultiptv.net/ph568cac4e2639d/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19954.jpg' 
-},
-{
-        name: 'Asian ',
-        url: 'http://1465.vod.redtraffic.xyz/ph55b1c206299eb/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19955.jpg' 
-},
-{
-        name: 'Bisexual Male ',
-        url: 'http://1465.vod.redtraffic.xyz/ph5a2baf0777671/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19956.jpg'
-},
-{
-        name: 'Brunette ',
-        url: 'http://13216.vod.adultiptv.net/ph560bcd63d6402/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19957.jpg'
-},
-{
-        name: ' Babe',
-        url: 'http://1244.vod.adultiptv.net/ph5bac7f107a43a/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19958.jpg' 
-},
-{
-        name: '  Babe',
-        url: 'http://12204.vod.redtraffic.xyz/ph5b220a466ebeb/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19959.jpg' 
-},
-{
-        name: 'Big Tits ',
-        url: 'http://12156.vod.redtraffic.xyz/ph5bb18e85e9a4b/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19960.jpg' 
-},
-{
-        name: ' Big Dick',
-        url: 'http://11216.vod.adultiptv.net/ph5bcd6fd693e3c/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19961.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://10238.vod.adultiptv.net/ph5a941e46f035f/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19963.jpg' 
-},
-{
-        name: 'Blonde ',
-        url: 'http://6122.vod.redtraffic.xyz/ph56f5c6405ca5d/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19964.jpg' 
-},
-{
-        name: 'Blowjob ',
-       url: 'http://60106.vod.redtraffic.xyz/ph5b1136289b5c0/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19965.jpg'
-},
-{
-        name: 'Blowjob ',
-        url: 'http://218158.vod.adultiptv.net/ph5ae1995cf1e97/play.m3u8',
-        type: 'hls',
-     logo: 'https://img.adultiptv.net/19968.jpg'
-},
-{
-        name: 'Asian ',
-      url: 'http://21470.vod.adultiptv.net/ph55de2505e09de/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19969.jpg' 
-},	
-{
-        name: 'Babe ',
-        url: 'http://21470.vod.redtraffic.xyz/ph55b2adbb09d78/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19970.jpg' 
-},
-{
-        name: 'Big Tits ',
-        url: 'http://218158.vod.redtraffic.xyz/ph5a3d4a277e79f/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19971.jpg'
-},
-{
-        name: 'Big Dick ',
-        url: 'http://60106.vod.adultiptv.net/ph5b39da94dd412/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19972.jpg'
-},	 	
-{
-        name: 'Babe ',
-        url: 'http://6122.vod.adultiptv.net/ph5744b6fb186e6/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.adultiptv.net/19974.jpg'
-},	
-{
-        name: 'Asian ',
-        url: 'http://10238.vod.redtraffic.xyz/ph5b3fe2e82804f/play.m3u8',
-        type: 'hls',
-      logo: 'https://img.redtraffic.xyz/19975.jpg' 
-}
-            ];
-
-            async function cleanupPlayers() {
-                youtubeEmbed.src = '';
-                youtubeEmbed.style.display = 'none';
-
-                if (shakaPlayer) {
-                    await shakaPlayer.destroy();
-                    shakaPlayer = null;
+        m3uLines.forEach(line => {
+            if (line.startsWith('#EXTINF')) {
+                const categoryMatch = line.match(/group-title="([^"]+)"/);
+                if (categoryMatch) {
+                    currentCategory = categoryMatch[1];
                 }
 
-                if (hlsPlayer) {
-                    hlsPlayer.destroy();
-                    hlsPlayer = null;
+                const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                if (logoMatch) {
+                    currentLogo = logoMatch[1];
                 }
 
-                video.style.display = 'block';
-                video.src = '';
-                video.load();
-            }
+                const channelNameMatch = line.match(/,([^,]+)$/);
+                if (channelNameMatch) {
+                    const channelName = channelNameMatch[1];
+                    const channelData = {
+                        name: channelName,
+                        logo: currentLogo,
+                        url: '', 
+                    };
 
-            async function playStream(channel) {
-                try {
-                    await cleanupPlayers();
+                    categories['All'].push(channelData);
 
-                    if (channel.type === 'youtube') {
-                        video.style.display = 'none';
-                        youtubeEmbed.style.display = 'block';
-                        youtubeEmbed.src = `${channel.embedUrl}&autoplay=1`;
-                    } else if (channel.type === 'hls') {
-                        hlsPlayer = initializeHLSPlayer();
-                        if (hlsPlayer) {
-                            hlsPlayer.loadSource(channel.url);
-                            hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
-                                video.play();
-                            });
-                        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                            // Fallback for Safari
-                            video.src = channel.url;
-                            video.play();
-                        }
-                    } else if (channel.type === 'mpd') {
-                        shakaPlayer = initializeShakaPlayer();
-                        
-                        if (channel.keyId && channel.key) {
-                            shakaPlayer.configure({
-                                drm: {
-                                    clearKeys: {
-                                        [channel.keyId]: channel.key
-                                    }
-                                }
-                            });
-                        }
-
-                        await shakaPlayer.load(channel.url);
-                        video.play();
+                    if (!categories[currentCategory]) {
+                        categories[currentCategory] = [];
                     }
-                } catch (error) {
-                    console.error('Error playing stream:', error);
+                    categories[currentCategory].push(channelData);
+                }
+            } else if (line.startsWith('http')) {
+                currentUrl = line.trim();
+                if (categories[currentCategory] && categories[currentCategory].length > 0) {
+                    categories[currentCategory][categories[currentCategory].length - 1].url = currentUrl;
                 }
             }
-
-            function renderChannelList(channelsToRender) {
-                channelList.innerHTML = channelsToRender.map(channel => `
-                    <li class="channel-item ${channel === currentChannel ? 'active' : ''}" data-channel-index="${channels.indexOf(channel)}">
-                        <div class="channel-content">
-                            <div class="channel-logo">
-                                <img src="${channel.logo}" alt="${channel.name}" />
-                            </div>
-                            <div class="channel-info">
-                                <div class="channel-name">${channel.name}</div>
-                                <div class="channel-type">${channel.type.toUpperCase()}</div>
-                            </div>
-                        </div>
-                    </li>
-                `).join('');
-
-                document.querySelectorAll('.channel-item').forEach(item => {
-                    item.addEventListener('click', async () => {
-                        const channel = channels[parseInt(item.dataset.channelIndex)];
-                        currentChannel = channel;
-                        await playStream(channel);
-                        
-                        document.querySelectorAll('.channel-item').forEach(i => i.classList.remove('active'));
-                        item.classList.add('active');
-                    });
-                });
-            }
-
-            renderChannelList(channels);
-            if (channels.length > 0) {
-                currentChannel = channels[0];
-                await playStream(currentChannel);
-            }
-
-            searchInput.addEventListener('input', (e) => {
-                const searchTerm = e.target.value.toLowerCase();
-                const filteredChannels = channels.filter(channel =>
-                    channel.name.toLowerCase().includes(searchTerm)
-                );
-                renderChannelList(filteredChannels);
-            });
         });
-    </script>
+
+        return categories;
+    }
+
+    // Display categories and channels
+    function displayCategories(categories) {
+        const categoryTabs = document.getElementById('categoryTabs');
+        categoryTabs.innerHTML = '';
+
+        Object.keys(categories).forEach(category => {
+            const button = document.createElement('button');
+            button.innerText = category;
+            button.addEventListener('click', () => {
+                currentLoadIndex = 0;
+                currentChannelsToDisplay = categories[category];
+                displayChannels(currentChannelsToDisplay, true);
+                setActiveTab(button);
+            });
+
+            categoryTabs.appendChild(button);
+        });
+
+        if (Object.keys(categories).length > 0) {
+            const firstCategory = Object.keys(categories)[0];
+            currentChannelsToDisplay = categories[firstCategory];
+            displayChannels(currentChannelsToDisplay, true);
+            setActiveTab(categoryTabs.querySelector('button'));
+        }
+    }
+
+    // Display channels with lazy loading
+function displayChannels(channelsToDisplay, reset = false) {
+    const channelGrid = document.getElementById('channelGrid');
+    if (reset) {
+        channelGrid.innerHTML = '';  // Reset grid on new category selection
+    }
+
+    const totalChannels = channelsToDisplay.length;
+    const endIndex = Math.min(currentLoadIndex + channelsPerLoad, totalChannels);
+
+    for (let i = currentLoadIndex; i < endIndex; i++) {
+        const channel = channelsToDisplay[i];
+        const channelDiv = document.createElement('div');
+        channelDiv.className = 'channel';
+        
+        // Default logo URL
+        const defaultLogoUrl = 'https://od.lk/s/OTFfMjg1Mzk2NTVf/ArkaResimYok.png';
+        
+        // Use default logo if no logo is available
+        const logoUrl = channel.logo && channel.logo !== '' ? channel.logo : defaultLogoUrl;
+        
+        channelDiv.innerHTML = `
+            <img src="${logoUrl}" alt="${channel.name}" onerror="this.src='${defaultLogoUrl}';">
+            <div class="channel-name"><span>${channel.name}</span></div>
+        `;
+
+        channelDiv.addEventListener('click', () => {
+            playChannel(channel.url);
+        });
+
+        channelGrid.appendChild(channelDiv);
+    }
+
+    currentLoadIndex = endIndex;
+}
+    // Set active tab
+    function setActiveTab(activeButton) {
+        const buttons = document.querySelectorAll('.category-tabs button');
+        buttons.forEach(button => button.classList.remove('active'));
+        activeButton.classList.add('active');
+    }
+
+    function playChannel(url) {
+    const videoPlayerContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const categoryTabs = document.querySelector('.category-tabs');
+    const channelGrid = document.getElementById('channelGrid');
+
+    // Category tabs Kanal ızgarasının kenar boşluğunu gizleyerek ayarlayın
+    categoryTabs.style.display = 'none';
+    channelGrid.style.marginTop = '280px';
+
+    // Video URL'sini ayarlayın ve oynatın
+    videoPlayer.src = url;
+    videoPlayerContainer.style.display = 'flex';  // Engellemeye değil esnek olmaya ayarlayın
+    videoPlayer.play();
+
+    //Ekran kontrolleri
+    const controls = document.getElementById('controls');
+    controls.classList.remove('hidden');
+
+    clearTimeout(controlTimeout);
+    controlTimeout = setTimeout(() => {
+        controls.classList.add('hidden');
+    }, 3000);
+
+    //Fare hareketindeki kontrolleri göster/gizle
+    videoPlayerContainer.addEventListener('mousemove', () => {
+        clearTimeout(controlTimeout);
+        controls.classList.remove('hidden');
+        controlTimeout = setTimeout(() => {
+            controls.classList.add('hidden');
+        }, 3000);
+    });
+}
+    
+    let currentChannelIndex = 0;
+
+    // Play/Pause toggle function
+function togglePlayPause() {
+    const videoPlayer = document.getElementById('videoPlayer');
+    const playPauseButton = document.getElementById('playPause');
+    const playIcon = '<i class="fas fa-play"></i>';
+    const pauseIcon = '<i class="fas fa-pause"></i>';
+
+    if (videoPlayer.paused) {
+        videoPlayer.play();
+        playPauseButton.innerHTML = pauseIcon; // Change to pause icon
+    } else {
+        videoPlayer.pause();
+        playPauseButton.innerHTML = playIcon; // Change to play icon
+    }
+}
+
+// Attach event listener to the play/pause button
+document.getElementById('playPause').addEventListener('click', togglePlayPause);
+
+// Update play/pause button icon based on video state
+const videoPlayer = document.getElementById('videoPlayer');
+videoPlayer.addEventListener('play', () => {
+    document.getElementById('playPause').innerHTML = '<i class="fas fa-pause"></i>';
+});
+videoPlayer.addEventListener('pause', () => {
+    document.getElementById('playPause').innerHTML = '<i class="fas fa-play"></i>';
+});
+      
+      document.getElementById('settings').addEventListener('click', () => {
+    const settingsMenu = document.getElementById('settingsMenu');
+    settingsMenu.style.display = settingsMenu.style.display === 'none' ? 'block' : 'none';
+});
+
+document.getElementById('prevChannel').addEventListener('click', () => {
+    if (currentChannelIndex > 0) {
+        currentChannelIndex--;
+        playChannel(currentChannelsToDisplay[currentChannelIndex].url);
+    }
+});
+
+document.getElementById('rewind').addEventListener('click', () => {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
+});
+
+document.getElementById('fastForward').addEventListener('click', () => {
+    const videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.currentTime = Math.min(videoPlayer.duration, videoPlayer.currentTime + 10);
+});
+
+document.getElementById('nextChannel').addEventListener('click', () => {
+    if (currentChannelIndex < currentChannelsToDisplay.length - 1) {
+        currentChannelIndex++;
+        playChannel(currentChannelsToDisplay[currentChannelIndex].url);
+    }
+});
+
+// Progress bar functionality
+const progress = document.getElementById('progress');
+videoPlayer.addEventListener('timeupdate', () => {
+    const currentTime = videoPlayer.currentTime;
+    const duration = videoPlayer.duration;
+    progress.value = (currentTime / duration) * 100 || 0;
+
+    document.getElementById('currentTime').innerText = formatTime(currentTime);
+    document.getElementById('duration').innerText = formatTime(duration);
+});
+
+progress.addEventListener('input', () => {
+    const newTime = (progress.value / 100) * videoPlayer.duration;
+    videoPlayer.currentTime = newTime;
+});
+
+// Format time function
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const secondsRemaining = Math.floor(seconds % 60);
+    return `${minutes}:${secondsRemaining < 10 ? '0' : ''}${secondsRemaining}`;
+}
+
+
+
+    // Lazy load more channels when scrolling
+    window.addEventListener('scroll', () => {
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition >= scrollableHeight - 100) { // Added buffer for better performance
+            if (currentChannelsToDisplay.length > currentLoadIndex) {
+                displayChannels(currentChannelsToDisplay, false);
+            }
+        }
+    });
+
+    // Load playlist and initialize
+    loadPlaylist(m3uUrl).then(m3uLines => {
+        if (m3uLines) {
+            const categories = parseM3U(m3uLines);
+            displayCategories(categories);
+        }
+    });
+
+    // Fullscreen functionality
+function toggleFullscreen() {
+    const videoContainer = document.getElementById('videoContainer');
+
+    if (!document.fullscreenElement) {
+        videoContainer.requestFullscreen().catch(err => {
+            console.error('Error attempting to enable fullscreen mode:', err);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+// Event listener for fullscreen button
+document.getElementById('fullscreen').addEventListener('click', toggleFullscreen);
+
+// Update the fullscreen button icon based on fullscreen state
+document.addEventListener('fullscreenchange', () => {
+    const fullscreenButton = document.getElementById('fullscreen');
+    if (document.fullscreenElement) {
+        fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>'; // Change to fullscreen exit icon
+    } else {
+        fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>'; // Change to fullscreen enter icon
+    }
+});
+
+</script>
+
 </body>
 </html>
 <!-- partial -->
