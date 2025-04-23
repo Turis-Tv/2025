@@ -1,0 +1,161 @@
+#channels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 20%;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#channels button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #333;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#channels button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+#channels button:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+
+
+/* Styles pour l'accordéon */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+    overflow: hidden;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+
+/* Styles pour la modal d'erreur */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.channels-container {
+  width: 250px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  height: calc(112vh - 80px);
+  margin-top: -80px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+  width: 263px;
+  border-radius: 5px;
+  border: none;
+  font-size: 11px;
+  margin-left: 2px;
+  margin-top: 20px;
+}
+
+.inp {
+cursor: pointer;
+margin-left: 239px;
+margin-top: -44px;
+position: relative;
+height: 34px;
+width: 40px ;
+}
+* { margin:0; padding: 0; box-sizing: border-box; }
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #b8798f;
+	background:linear-gradient(to bottom, #ab63a4 5%, #645aa6 100%);
+	background-color:#ab63a4;
+	border:1px solid #314179;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #645aa6 5%, #ab63a4 100%);
+	background-color:#645aa6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+  https://raw.githubusercontent.com/Turis-Tv/Turis-2025/refs/heads/main/T_rkiye%20(1).m3u
+
+
+https://vsalema.github.io/tvpt4/css/movies.m3u
