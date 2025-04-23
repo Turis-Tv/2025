@@ -1,0 +1,473 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dark-mode {
+    background-color: #333; /* Karanlık arka plan rengi */
+    color: #fff; /* Beyaz renkli metin */
+}
+
+.login-container {
+    background-color: #555; /* Karanlık mod için ara katman rengi */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    text-align: center;
+    color: #fff; /* Beyaz renkli başlık metni */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #666; /* Karanlık mod için input alanı arka plan rengi */
+    color: #fff; /* Beyaz renkli metin */
+    transition: box-shadow 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    box-shadow: 0 0 5px #ff4d4d; /* Odaklandığında hafif gölgelendirme efekti */
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #ff3333; /* Butona tıklandığında renk değişimi */
+}
+
+.message-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #ccffcc;
+    border: 1px solid #66cc66;
+    color: #006600;
+}
+
+.error {
+    background-color: #ffcccc;
+    border: 1px solid #ff6666;
+    color: #cc0000;
+}
+
+.mode-switch-btn {
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.mode-switch-btn:hover {
+    color: #ff4d4d; /* Butona tıklandığında renk değişimi */
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc; /* Alt kısım metin rengi */
+    font-size: 12px;
+}
+
+/* Herhangi bir değişiklik gerekmiyor, sadece görünümü ayarladığımız stiller. */
+
+.announcement {
+    background-color: #ff4d4d; /* Duyuru arka plan rengi */
+    color: #fff; /* Duyuru metin rengi */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none; /* Başlangıçta gizli */
+    animation: blink 2s infinite alternate; /* Yanıp sönen animasyon */
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #ccc; /* Alt kısım metin rengi */
+    font-size: 12px;
+}
+
+.telegram-link {
+    color: #fff; /* Telegram link metin rengi */
+    text-decoration: none;
+    margin-left: 10px; /* Telegram link ile yapımcı bilgisi arasındaki boşluk */
+}
+
+.telegram-link:hover {
+    text-decoration: underline;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+body {
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODIyeW54aTBjNDVlYW1ybHMxMmN5MDhwNnBmaHJ4dm51cXJ1MWFqNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lwo2cfTZq6TtsxeeW8/giphy.webp'); /* Arkaplan GIF bağlantısı */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh; /* Ekran yüksekliği kadar genişletmek için */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Sayfa kenar boşluklarını kaldırma */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-form input:focus {
+    background-color: #f0f0f0; /* Odaklandığında arka plan rengi değiştirme */
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+.message-container {
+    margin-top: 10px;
+    text-align: center;
+    color: #cc0000;
+}
+
+.mode-switch-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mode-switch-btn:hover {
+    background-color: #005F6B;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #555;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.dark-mode .login-form input {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-color: #555;
+}
+
+.dark-mode .login-form input:focus {
+    background-color: #555;
+}
+
+.dark-mode .login-form button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.dark-mode .login-form button:hover {
+    background-color: #45a049;
+}
+
+.dark-mode .message-container {
+    color: #ffcccc;
+}
+
+.dark-mode .mode-switch-btn {
+    background-color: #008CBA;
+    color: #fff;
+}
+
+.dark-mode .mode-switch-btn:hover {
+    background-color: #005F6B;
+}
+
+.dark-mode .footer {
+    color: #ccc;
+}
+
+.dark-mode .footer a {
+    color: #ccc;
+}
+
+.dark-mode .footer a:hover {
+    color: #fff;
+}
+
+.register-container {         
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-container p {
+    color: #666;
+}
+
+.register-container a {
+    color: #008CBA;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-container a:hover {
+    color: #005F6B;
+}
+
+.register-form-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Arkaplanı daha koyu ve %80 opak yapar */
+    z-index: 1000; /* Diğer içeriklerin üzerinde olmasını sağlar */
+}
+
+.register-form {
+    background-color: #333; /* Form arka plan rengi */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: #fff; /* Başlık rengi */
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555; /* Input kenarlık rengi */
+    border-radius: 5px;
+    background-color: rgba(102, 102, 102, 0.8); /* Input arka plan rengi ve %80 opak */
+    color: #fff; /* Input metin rengi */
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.register-form input:focus {
+    background-color: rgba(136, 136, 136, 0.8); /* Odaklandığında input arka plan rengi ve %80 opak */
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA; /* Buton arka plan rengi */
+    color: white; /* Buton metin rengi */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #005F6B; /* Butona hover olduğunda arka plan rengi */
+}
+/* Diğer stiller buraya eklenecek */
+
+.close-btn-container {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#closeRegisterBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+#closeRegisterBtn:hover {
+    color: #ccc;
+}
+
+.register-form-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Arkaplanı daha koyu ve %80 opak yapar */
+    z-index: 1000; /* Diğer içeriklerin üzerinde olmasını sağlar */
+}
+
+.register-form {
+    background-color: #333; /* Form arka plan rengi */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: #fff; /* Başlık rengi */
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555; /* Input kenarlık rengi */
+    border-radius: 5px;
+    background-color: rgba(102, 102, 102, 0.8); /* Input arka plan rengi ve %80 opak */
+    color: #fff; /* Input metin rengi */
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.register-form input:focus {
+    background-color: rgba(136, 136, 136, 0.8); /* Odaklandığında input arka plan rengi ve %80 opak */
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA; /* Buton arka plan rengi */
+    color: white; /* Buton metin rengi */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #005F6B; /* Butona hover olduğunda arka plan rengi */
+
+}

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Turis Tv</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turis Tv</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .app-container {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .player-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: #000;
+            height: 35vh;
+        }
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        video {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            background: #000;
+        }
+        #youtube-player {
+            width: 100%;
+            max-width: 560px;
+            aspect-ratio: 16 / 9;
+            display: none;
+        }
+        .channel-list-container {
+            margin-top: 35vh;
+            height: 65vh;
+            overflow-y: auto;
+            padding: 10px;
+            padding-bottom: 60px;
+        }
+        .channel-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .channel-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .channel-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .channel-item.active {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .channel-content {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+        }
+        .channel-logo {
+            width: 48px;
+            height: 48px;
+            margin-right: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .channel-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed from cover to contain */
+            background: #ffffff; /* Added dark background */
+            padding: 2px; /* Added small padding */
+        }
+        .channel-info {
+            flex: 1;
+        }
+        .channel-name {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .channel-type {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .search-container {
+            position: sticky;
+            top: 0;
+            padding: 12px;
+            background: #1a1a1a;
+            z-index: 90;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 14px;
+        }
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.5/shaka-player.compiled.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.4.12/hls.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="player-container">
+            <div class="video-container">
+                <video id="player" controls></video>
+                <iframe id="youtube-player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="channel-list-container">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Kanal Ara...">
+            </div>
+            <ul class="channel-list" id="channelList">
+                <!-- Kanal öğeleri JavaScript tarafından doldurulacak -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const video = document.getElementById('player');
+            const youtubeEmbed = document.getElementById('youtube-player');
+            const searchInput = document.querySelector('.search-input');
+            const channelList = document.getElementById('channelList');
+            
+            let currentChannel = null;
+            let shakaPlayer = null;
+            let hlsPlayer = null;
+
+            // Initialize Shaka Player
+            shaka.polyfill.installAll();
+
+            function initializeShakaPlayer() {
+                if (shakaPlayer) {
+                    shakaPlayer.destroy();
+                }
+                shakaPlayer = new shaka.Player(video);
+                shakaPlayer.addEventListener('error', (error) => {
+                    console.error('Shaka Player Error:', error);
+                });
+                return shakaPlayer;
+            }
+
+            function initializeHLSPlayer() {
+                if (hlsPlayer) {
+                    hlsPlayer.destroy();
+                }
+                if (Hls.isSupported()) {
+                    hlsPlayer = new Hls({
+                        enableWorker: true,
+                        lowLatencyMode: true
+                    });
+                    hlsPlayer.attachMedia(video);
+                    hlsPlayer.on(Hls.Events.ERROR, (event, data) => {
+                        console.error('HLS.js Error:', data);
+                    });
+                    return hlsPlayer;
+                }
+                return null;
+            }
+
+            const channels = [
+{
+     
+        name: 'Big Ass',
+        url: 'http://1465.vod.adultiptv.net/ph596e4ad896499/play.m3u8',
+        type: 'hls',
+	logo: ' https://img.adultiptv.net/19876.jpg'
+},
+{
+          name: ' Anal',
+        url: 'http://13216.vod.redtraffic.xyz/ph587bc292b6861/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.redtraffic.xyz/19877.jpg'
+},
+{
+         name: 'Babe ',
+        url: 'http://1244.vod.redtraffic.xyz/ph5abbb78538287/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.redtraffic.xyz/19878.jpg'
+},
+{
+         name: 'Anal',
+        url: 'http://12204.vod.adultiptv.net/ph58657d939d860/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.adultiptv.net/19879.jpg '
+},
+{
+          name: 'Babe',
+        url: 'http://12156.vod.adultiptv.net/ph59fadc205bf2e/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.adultiptv.net/19880.jpg'
+},
+{
+          name: 'Ebony',
+        url: 'http://11216.vod.redtraffic.xyz/ph56b6f2376b1b5/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.redtraffic.xyz/19881.jpg'
+},
+{
+          name: 'Hot Sex ',
+        url: 'http://10238.vod.redtraffic.xyz/ph5b10502919688/play.m3u8',
+        type: 'hls',
+	logo: 'https://img.redtraffic.xyz/19882.jpg'
+},
+{
+         name: 'Anal ',
+        url: 'http://6122.vod.adultiptv.net/ph5af7314886727/play.m3u8',
+        type: 'hls',
+        logo: 'https://img.adultiptv.net/19883.jpg'
+},
+{
+        name: 'Amateur ',
+        url: 'http://60106.vod.adultiptv.net/ph560c3f0f140a8/play.m3u8',
+        type: 'hls',
+        logo: 'https://img.adultiptv.net/19885.jpg'
+},
+{
+         name: 'Babe ',
+        url: 'http://218158.vod.redtraffic.xyz/ph5ba13efca3600/play.m3u8',
+        type: 'hls',
+   logo: 'https://img.redtraffic.xyz/19886.jpg'
+},
+{
+          name: 'Babe',
+        url: 'http://218158.vod.redtraffic.xyz/ph5ba13efca3600/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19886.jpg'
+},
+{
+        name: ' Babe',
+        url: 'http://21470.vod.redtraffic.xyz/ph5b7ccfa0be096/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19887.jpg'
+},
+{
+        name: 'Blowjob ',
+        url: 'http://21470.vod.adultiptv.net/ph5bda14e3262bc/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19888.jpg' 
+},
+{
+        name: 'Anal',
+        url: 'http://218158.vod.adultiptv.net/ph5a7a49c1629c5/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19889.jpg' 
+},
+{
+         name: 'Babe ',
+        url: 'http://60106.vod.redtraffic.xyz/ph579187283fa81/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19890.jpg' 
+},
+{
+         name: ' Asian',
+        url: 'http://6122.vod.redtraffic.xyz/ph5c182af87b0bd/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19891.jpg'
+},
+{
+          name: 'Amateur',
+        url: 'http://10238.vod.adultiptv.net/ph5adcf6017ef38/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19894.jpg' 
+},
+{
+         name: 'Babe',
+        url: 'http://11216.vod.adultiptv.net/ph5aae6f6fbb2ed/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19895.jpg'
+},
+{
+         name: 'Anal ',
+        url: 'http://12156.vod.redtraffic.xyz/ph5bb7089f3ce40/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19896.jpg'
+},
+{
+         name: '60FPS ',
+        url: 'http://12204.vod.redtraffic.xyz/ph5bd8c23a56fac/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19898.jpg'
+},
+{
+        name: 'Blowjob',
+        url: 'http://1244.vod.adultiptv.net/ph58a4e60d94cc9/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19899.jpg' 
+},
+{
+        name: 'Big Dick',
+        url: 'http://13216.vod.adultiptv.net/ph584162f6c1217/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19900.jpg'
+},
+{
+        name: 'Brunette ',
+        url: 'http://1465.vod.redtraffic.xyz/ph58291ca6df7a6/play.m3u8',
+        type: 'hls',
+        url: 'http://1465.vod.redtraffic.xyz/ph58291ca6df7a6/play.m3u8',
+},
+{
+         name: 'Big Tits ',
+        url: 'http://1465.vod.redtraffic.xyz/ph598b90fa10056/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19902.jpg'
+},
+{
+          name: 'Brunette ',
+        url: 'http://13216.vod.adultiptv.net/ph5700a8bad43f6/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19903.jpg'
+},
+{
+        name: ' Big Tits',
+        url: 'http://1244.vod.adultiptv.net/ph5c06c6897bb43/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19904.jpg'
+},
+{
+        name: 'Amateur ',
+        url: 'http://12204.vod.redtraffic.xyz/ph5771223dda4e9/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19906.jpg' 
+},
+{
+        name: '60FPS',
+        url: 'http://12156.vod.redtraffic.xyz/ph5b5619ee94f31/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19907.jpg'
+},
+{
+         name: 'Anal ',
+        url: 'http://11216.vod.adultiptv.net/ph5c0539fdbe23f/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19909.jpg'  
+},
+{
+         name: 'Big Dick',
+        url: 'http://10238.vod.adultiptv.net/ph5b6aa4fba8d75/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19911.jpg'  
+},
+{
+        name: ' Brunette',
+        url: 'http://6122.vod.redtraffic.xyz/ph57a2429698395/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19912.jpg'
+},
+{
+        name: 'Blonde',
+        url: 'http://60106.vod.redtraffic.xyz/ph5a7213baad73d/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19913.jpg'
+},
+{
+        name: 'Big Tits ',
+        url: 'http://218158.vod.adultiptv.net/ph59cb9df08af3e/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19916.jpg'
+},
+{
+        name: 'Double Penetration ',
+        url: 'http://21470.vod.adultiptv.net/ph5721c23e000c9/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19917.jpg'
+},
+{
+        name: 'Babe ',
+        url: 'http://21470.vod.redtraffic.xyz/ph59650274d5886/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19918.jpg'
+},
+{
+        name: 'Big Tits',
+        url: 'http://218158.vod.redtraffic.xyz/ph5bf5b84c08439/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19919.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://60106.vod.adultiptv.net/ph573e240b30ec5/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19920.jpg' 
+
+
+},
+{
+        name: ' Anal',
+        url: 'http://6122.vod.adultiptv.net/ph5c0b5eee5a374/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19921.jpg' 
+},
+{
+        name: 'Arab ',
+       url: 'http://10238.vod.redtraffic.xyz/ph5b4e3ba32d3cf/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19922.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://11216.vod.redtraffic.xyz/ph56c6221d2faec/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19923.jpg'
+},
+{
+        name: 'Amateur',
+       url: 'http://12156.vod.adultiptv.net/ph59a3e904d1c89/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19924.jpg'
+},
+{
+        name: 'Babe ',
+        url: 'http://12204.vod.adultiptv.net/ph5be5182d0b3a1/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19925.jpg'
+},
+{
+        name: ' Blonde',
+        url: 'http://1244.vod.redtraffic.xyz/ph5ab70aa59525e/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19926.jpg' 
+},
+{
+        name: ' Big Dick',
+        url: 'http://13216.vod.redtraffic.xyz/ph5be53b984d414/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19927.jpg' 
+},
+{
+        name: 'Big Tits ',
+        url: 'http://1465.vod.adultiptv.net/ph5bc640b56b554/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19928.jpg' 
+},
+{
+        name: 'Babe ',
+        url: 'http://1465.vod.adultiptv.net/ph5c0922965e009/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19929.jpg'
+},
+{
+        name: 'Brunette ',
+        url: 'http://13216.vod.redtraffic.xyz/ph585c207c62fce/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19930.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://1244.vod.redtraffic.xyz/ph5bd016b1944fc/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19931.jpg' 
+},
+{
+        name: 'Bisexual Male ',
+        url: 'http://12204.vod.adultiptv.net/ph583a071fcc32e/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19932.jpg' 
+},
+{
+        name: 'Amateur ',
+        url: 'http://12156.vod.adultiptv.net/ph5599f0bc38ea0/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19933.jpg'
+},
+{
+        name: 'Babe ',
+        url: 'http://11216.vod.redtraffic.xyz/ph58935656f37eb/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19934.jpg' 
+},
+{
+        name: 'Big Ass ',
+        url: 'http://10238.vod.redtraffic.xyz/ph5b6deabf58b3a/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19935.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://6122.vod.adultiptv.net/ph57cdc491da210/play.m3u8',
+        type: 'hls',
+     logo: 'https://img.adultiptv.net/19936.jpg'
+},
+{
+        name: '60FPS ',
+        url: 'http://60106.vod.adultiptv.net/ph5a463c53776f2/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19937.jpg' 
+},
+{
+        name: 'Big Dick ',
+        url: 'http://218158.vod.redtraffic.xyz/ph5a0daf5e968f5/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19938.jpg'
+},
+{
+        name: 'Asian ',
+        url: 'http://21470.vod.redtraffic.xyz/ph5633ca4bad9d8/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19939.jpg'
+},
+{
+        name: '60FPS ',
+        url: 'http://21470.vod.adultiptv.net/ph5a59b8495f975/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19940.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://218158.vod.adultiptv.net/ph5bdff6ca165fc/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19942.jpg'
+},
+{
+        name: ' Blonde',
+        url: 'http://60106.vod.redtraffic.xyz/ph5a0a971bba32f/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19944.jpg'
+},
+{
+        name: 'Anal ',
+        url: 'http://6122.vod.redtraffic.xyz/ph589dd36b14b4a/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19945.jpg' 
+},
+{
+        name: ' Blonde ',
+        url: 'http://10238.vod.adultiptv.net/ph5a5887d35e615/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19946.jpg' 
+},
+{
+        name: 'Big Dick ',
+        url: 'http://11216.vod.adultiptv.net/ph5bf70f914cce4/play.m3u8',
+        type: 'hls',
+        logo: 'https://img.adultiptv.net/19949.jpg' 
+},
+{
+        name: 'Babe ',
+        url: 'http://12156.vod.redtraffic.xyz/ph563878dd9259a/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19951.jpg'
+},
+{
+        name: 'Amateur ',
+        url: 'http://12204.vod.redtraffic.xyz/ph58ee00f21fb70/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19952.jpg' 
+},
+{
+        name: 'Big Ass ',
+        url: 'http://1244.vod.adultiptv.net/ph57fbfbc07f983/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19953.jpg' 
+},
+{
+        name: 'Anal ',
+        url: 'http://13216.vod.adultiptv.net/ph568cac4e2639d/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19954.jpg' 
+},
+{
+        name: 'Asian ',
+        url: 'http://1465.vod.redtraffic.xyz/ph55b1c206299eb/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19955.jpg' 
+},
+{
+        name: 'Bisexual Male ',
+        url: 'http://1465.vod.redtraffic.xyz/ph5a2baf0777671/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19956.jpg'
+},
+{
+        name: 'Brunette ',
+        url: 'http://13216.vod.adultiptv.net/ph560bcd63d6402/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19957.jpg'
+},
+{
+        name: ' Babe',
+        url: 'http://1244.vod.adultiptv.net/ph5bac7f107a43a/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19958.jpg' 
+},
+{
+        name: '  Babe',
+        url: 'http://12204.vod.redtraffic.xyz/ph5b220a466ebeb/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19959.jpg' 
+},
+{
+        name: 'Big Tits ',
+        url: 'http://12156.vod.redtraffic.xyz/ph5bb18e85e9a4b/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19960.jpg' 
+},
+{
+        name: ' Big Dick',
+        url: 'http://11216.vod.adultiptv.net/ph5bcd6fd693e3c/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19961.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://10238.vod.adultiptv.net/ph5a941e46f035f/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19963.jpg' 
+},
+{
+        name: 'Blonde ',
+        url: 'http://6122.vod.redtraffic.xyz/ph56f5c6405ca5d/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19964.jpg' 
+},
+{
+        name: 'Blowjob ',
+       url: 'http://60106.vod.redtraffic.xyz/ph5b1136289b5c0/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19965.jpg'
+},
+{
+        name: 'Blowjob ',
+        url: 'http://218158.vod.adultiptv.net/ph5ae1995cf1e97/play.m3u8',
+        type: 'hls',
+     logo: 'https://img.adultiptv.net/19968.jpg'
+},
+{
+        name: 'Asian ',
+      url: 'http://21470.vod.adultiptv.net/ph55de2505e09de/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19969.jpg' 
+},	
+{
+        name: 'Babe ',
+        url: 'http://21470.vod.redtraffic.xyz/ph55b2adbb09d78/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19970.jpg' 
+},
+{
+        name: 'Big Tits ',
+        url: 'http://218158.vod.redtraffic.xyz/ph5a3d4a277e79f/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19971.jpg'
+},
+{
+        name: 'Big Dick ',
+        url: 'http://60106.vod.adultiptv.net/ph5b39da94dd412/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19972.jpg'
+},	 	
+{
+        name: 'Babe ',
+        url: 'http://6122.vod.adultiptv.net/ph5744b6fb186e6/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.adultiptv.net/19974.jpg'
+},	
+{
+        name: 'Asian ',
+        url: 'http://10238.vod.redtraffic.xyz/ph5b3fe2e82804f/play.m3u8',
+        type: 'hls',
+      logo: 'https://img.redtraffic.xyz/19975.jpg' 
+}
+            ];
+
+            async function cleanupPlayers() {
+                youtubeEmbed.src = '';
+                youtubeEmbed.style.display = 'none';
+
+                if (shakaPlayer) {
+                    await shakaPlayer.destroy();
+                    shakaPlayer = null;
+                }
+
+                if (hlsPlayer) {
+                    hlsPlayer.destroy();
+                    hlsPlayer = null;
+                }
+
+                video.style.display = 'block';
+                video.src = '';
+                video.load();
+            }
+
+            async function playStream(channel) {
+                try {
+                    await cleanupPlayers();
+
+                    if (channel.type === 'youtube') {
+                        video.style.display = 'none';
+                        youtubeEmbed.style.display = 'block';
+                        youtubeEmbed.src = `${channel.embedUrl}&autoplay=1`;
+                    } else if (channel.type === 'hls') {
+                        hlsPlayer = initializeHLSPlayer();
+                        if (hlsPlayer) {
+                            hlsPlayer.loadSource(channel.url);
+                            hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
+                                video.play();
+                            });
+                        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                            // Fallback for Safari
+                            video.src = channel.url;
+                            video.play();
+                        }
+                    } else if (channel.type === 'mpd') {
+                        shakaPlayer = initializeShakaPlayer();
+                        
+                        if (channel.keyId && channel.key) {
+                            shakaPlayer.configure({
+                                drm: {
+                                    clearKeys: {
+                                        [channel.keyId]: channel.key
+                                    }
+                                }
+                            });
+                        }
+
+                        await shakaPlayer.load(channel.url);
+                        video.play();
+                    }
+                } catch (error) {
+                    console.error('Error playing stream:', error);
+                }
+            }
+
+            function renderChannelList(channelsToRender) {
+                channelList.innerHTML = channelsToRender.map(channel => `
+                    <li class="channel-item ${channel === currentChannel ? 'active' : ''}" data-channel-index="${channels.indexOf(channel)}">
+                        <div class="channel-content">
+                            <div class="channel-logo">
+                                <img src="${channel.logo}" alt="${channel.name}" />
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name">${channel.name}</div>
+                                <div class="channel-type">${channel.type.toUpperCase()}</div>
+                            </div>
+                        </div>
+                    </li>
+                `).join('');
+
+                document.querySelectorAll('.channel-item').forEach(item => {
+                    item.addEventListener('click', async () => {
+                        const channel = channels[parseInt(item.dataset.channelIndex)];
+                        currentChannel = channel;
+                        await playStream(channel);
+                        
+                        document.querySelectorAll('.channel-item').forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
+                    });
+                });
+            }
+
+            renderChannelList(channels);
+            if (channels.length > 0) {
+                currentChannel = channels[0];
+                await playStream(currentChannel);
+            }
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const filteredChannels = channels.filter(channel =>
+                    channel.name.toLowerCase().includes(searchTerm)
+                );
+                renderChannelList(filteredChannels);
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
