@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELIPlayer</title>
+    <!-- Video.js for video playback -->
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-section">
+        <div class="container-login">
+            <h1>ELIPlayer</h1>
+            <div class="login-form">
+                <h2>Connect to Your IPTV</h2>
+                <div class="tab-buttons">
+                    <button id="m3u-tab" class="tab active" onclick="showTab('m3u')">M3U URL</button>
+                    <button id="xtream-tab" class="tab" onclick="showTab('xtream')">Xtream Codes</button>
+                </div>
+                <div id="m3u-form" class="tab-content">
+                    <label for="m3u-url">M3U URL:</label>
+                    <input type="text" id="m3u-url" placeholder="Enter your M3U URL">
+                    <button onclick="loginWithM3U()">Connect</button>
+                </div>
+                <div id="xtream-form" class="tab-content" style="display: none;">
+                    <label for="xtream-url">Server URL:</label>
+                    <input type="text" id="xtream-url" placeholder="http://yourserver.com">
+                    <label for="xtream-username">Username:</label>
+                    <input type="text" id="xtream-username" placeholder="Your username">
+                    <label for="xtream-password">Password:</label>
+                    <input type="text" id="xtream-password" placeholder="Your password">
+                    <button onclick="loginWithXtream()">Connect</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Page (After Login) -->
+    <div id="main-page" style="display: none;">
+        <header>
+            <div class="logo">ELIPlayer</div>
+            <div class="datetime">
+                <span id="current-time"></span>
+                <span id="current-date"></span>
+            </div>
+            <div class="header-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <i class="fas fa-cog"></i>
+            </div>
+        </header>
+        <div class="sections">
+            <div class="section" onclick="navigateToContent('live')">
+                <i class="fas fa-tv"></i>
+                <span>Live TV</span>
+            </div>
+            <div class="section" onclick="navigateToContent('movies')">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </div>
+            <div class="section" onclick="navigateToContent('series')">
+                <i class="fas fa-play-circle"></i>
+                <span>Series</span>
+            </div>
+            <div class="section" onclick="navigateToContent('catchup')">
+                <i class="fas fa-clock"></i>
+                <span>Catch Up</span>
+            </div>
+            <div class="section" onclick="navigateToContent('favorites')">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </div>
+            <div class="section" onclick="navigateToContent('playlists')">
+                <i class="fas fa-list"></i>
+                <span>Playlists</span>
+            </div>
+        </div>
+        <footer>
+            <span>Current Playlist: <span id="playlist-name">N/A</span></span>
+            <span>Expires: <span id="playlist-expires">N/A</span></span>
+            <div class="footer-icons">
+                <i class="fas fa-folder"></i>
+                <i class="fas fa-sync-alt" onclick="refreshPlaylist()"></i>
+                <i class="fas fa-arrow-left" onclick="goBackToLogin()"></i>
+            </div>
+        </footer>
+        <!-- Settings Button -->
+        <button class="settings-button" onclick="openSettings()"><i class="fas fa-cog"></i></button>
+    </div>
+
+    <!-- Content Page -->
+    <div id="content-page" style="display: none;">
+        <header>
+            <div class="tabs">
+                <button class="back-button" onclick="goBackToMain()"><i class="fas fa-arrow-left"></i></button>
+                <button class="tab active" onclick="showSection('live')">Live TV</button>
+                <button class="tab" onclick="showSection('movies')">Movies</button>
+                <button class="tab" onclick="showSection('series')">Series</button>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search" placeholder="Search" onkeyup="filterContent()">
+            </div>
+        </header>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="category-filter">
+                <input type="text" id="category-search" placeholder="Search Category" onkeyup="filterCategories()">
+            </div>
+            <div class="category-item" onclick="showCategory('all')" data-category="all">
+                <span>All</span>
+                <span id="all-count">0</span>
+            </div>
+            <div class="category-item" onclick="showCategory('favorites')" data-category="favorites">
+                <span>Favorite</span>
+                <span id="favorites-count">0</span>
+            </div>
+            <div class="category-item" onclick="showCategory('recently-viewed')" data-category="recently-viewed">
+                <span>Recently Viewed</span>
+                <span id="recently-viewed-count">0</span>
+            </div>
+            <div id="category-groups"></div>
+        </div>
+        <!-- Content Area -->
+        <div class="content">
+            <!-- Live TV Section -->
+            <div id="live-content">
+                <!-- Currently Playing -->
+                <div id="currently-playing" style="display: none;">
+                    <div class="channel-info">
+                        <h2 id="playing-title"></h2>
+                        <p id="playing-description">No description available.</p>
+                        <div id="epg-info"></div>
+                        <div id="catch-up-options" style="display: none;">
+                            <h3>Catch Up Programs</h3>
+                            <ul id="catch-up-list"></ul>
+                        </div>
+                        <div class="channel-actions">
+                            <button onclick="toggleCatchUp()"><i class="fas fa-clock"></i> Catch Up</button>
+                            <button onclick="toggleFavorite()"><i id="favorite-icon" class="far fa-heart"></i> Add to Favorite</button>
+                        </div>
+                    </div>
+                    <video id="video-player" class="video-js vjs-default-skin" controls width="640" height="360">
+                        <source src="" type="application/x-mpegURL">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <!-- Channel List -->
+                <div id="content-list">
+                    <ul id="live-items"></ul>
+                </div>
+            </div>
+            <!-- Movies/Series Section -->
+            <div id="movies-content" style="display: none;">
+                <div class="sort-bar">
+                    <label>Order by:</label>
+                    <select onchange="sortContent(this.value)">
+                        <option value="number">Number</option>
+                        <option value="rating">Rating</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <div id="movies-list" class="grid-content"></div>
+            </div>
+            <div id="series-content" style="display: none;">
+                <div class="sort-bar">
+                    <label>Order by:</label>
+                    <select onchange="sortContent(this.value)">
+                        <option value="number">Number</option>
+                        <option value="rating">Rating</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <div id="series-list" class="grid-content"></div>
+            </div>
+            <!-- Catch Up Section -->
+            <div id="catchup-content" style="display: none;">
+                <div class="sort-bar">
+                    <label>Order by:</label>
+                    <select onchange="sortContent(this.value)">
+                        <option value="number">Number</option>
+                        <option value="rating">Rating</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <div id="catchup-list" class="grid-content"></div>
+            </div>
+            <!-- Favorites Section -->
+            <div id="favorites-content" style="display: none;">
+                <div class="sort-bar">
+                    <label>Order by:</label>
+                    <select onchange="sortFavorites(this.value)">
+                        <option value="number">Number</option>
+                        <option value="rating">Rating</option>
+                        <option value="title">Title</option>
+                    </select>
+                </div>
+                <div id="favorites-list" class="grid-content"></div>
+            </div>
+            <!-- Playlists Section -->
+            <div id="playlists-content" style="display: none;">
+                <div class="playlists-header">
+                    <h2>Playlists</h2>
+                    <button onclick="showAddPlaylistForm()"><i class="fas fa-plus"></i> Add Playlist</button>
+                </div>
+                <div id="playlists-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Playlist Form -->
+    <div id="add-playlist-form" style="display: none;">
+        <div class="form-container">
+            <h2>Add New Playlist</h2>
+            <div class="tab-buttons">
+                <button id="new-m3u-tab" class="tab active" onclick="showNewTab('m3u')">M3U URL</button>
+                <button id="new-xtream-tab" class="tab" onclick="showNewTab('xtream')">Xtream Codes</button>
+            </div>
+            <div id="new-m3u-form" class="tab-content">
+                <label for="new-m3u-name">Playlist Name:</label>
+                <input type="text" id="new-m3u-name" placeholder="Enter playlist name">
+                <label for="new-m3u-url">M3U URL:</label>
+                <input type="text" id="new-m3u-url" placeholder="Enter your M3U URL">
+                <button onclick="addPlaylist('m3u')">Add</button>
+                <button onclick="cancelAddPlaylist()">Cancel</button>
+            </div>
+            <div id="new-xtream-form" class="tab-content" style="display: none;">
+                <label for="new-xtream-name">Playlist Name:</label>
+                <input type="text" id="new-xtream-name" placeholder="Enter playlist name">
+                <label for="new-xtream-url">Server URL:</label>
+                <input type="text" id="new-xtream-url" placeholder="http://yourserver.com">
+                <label for="new-xtream-username">Username:</label>
+                <input type="text" id="new-xtream-username" placeholder="Your username">
+                <label for="new-xtream-password">Password:</label>
+                <input type="text" id="new-xtream-password" placeholder="Your password">
+                <button onclick="addPlaylist('xtream')">Add</button>
+                <button onclick="cancelAddPlaylist()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel">
+        <div class="settings-header">
+            <h2>Settings</h2>
+            <button onclick="closeSettings()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="settings-content">
+            <div class="setting-item">
+                <label for="change-playlist">Change Playlist:</label>
+                <button onclick="goBackToLogin()">Change Playlist</button>
+            </div>
+            <div class="setting-item">
+                <label for="language">Change Language:</label>
+                <select id="language" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="fr">Français (French)</option>
+                    <option value="es">Español (Spanish)</option>
+                    <option value="de">Deutsch (German)</option>
+                    <option value="it">Italiano (Italian)</option>
+                    <option value="pt">Português (Portuguese)</option>
+                    <option value="ar">العربية (Arabic)</option>
+                    <option value="zh">中文 (Chinese)</option>
+                    <option value="ru">Русский (Russian)</option>
+                    <option value="ja">日本語 (Japanese)</option>
+                    <option value="ko">한국어 (Korean)</option>
+                    <option value="nl">Nederlands (Dutch)</option>
+                    <option value="tr">Türkçe (Turkish)</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="el">Ελληνικά (Greek)</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Refresh Playlist:</label>
+                <button onclick="refreshPlaylist()"><i class="fas fa-sync-alt"></i> Refresh</button>
+            </div>
+            <div class="setting-item">
+                <label>Clear History:</label>
+                <button onclick="clearHistory()"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+            <div class="setting-item">
+                <label>Contact Us:</label>
+                <a href="https://api.whatsapp.com/send/?phone=33666959488&text&type=phone_number&app_absent=0" target="_blank">
+                    <button><i class="fas fa-phone"></i> Contact via WhatsApp</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

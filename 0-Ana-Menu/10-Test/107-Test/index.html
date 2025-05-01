@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turis Tv</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --primary-dark: #b2070f;
+            --dark-bg: #0f0f0f;
+            --darker-bg: #080808;
+            --card-bg: #1a1a1a;
+            --card-hover: #252525;
+            --text-color: #ffffff;
+            --text-secondary: #aaaaaa;
+            --border-color: #333333;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --error-color: #e74c3c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+        }
+
+        /* Navigation */
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            color: var(--text-color);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-btn i {
+            font-size: 0.9rem;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Player section */
+        .player-section {
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+            background: #000;
+        }
+
+        #video-player {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+            background: #000;
+        }
+
+        #video-player video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            align-items: center;
+        }
+
+        .player-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .channel-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .program-name {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .control-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .control-btn i {
+            font-size: 1rem;
+        }
+
+        /* Channel list */
+        .section-title {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--primary-color);
+        }
+
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .channel-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .channel-card:hover {
+            background: var(--card-hover);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .channel-card.active {
+            border: 2px solid var(--primary-color);
+        }
+
+        .channel-logo {
+            width: 100%;
+            height: 90px;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+
+        .channel-info {
+            padding: 10px;
+        }
+
+        .channel-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .channel-category {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            margin-top: 3px;
+        }
+
+        .favorite-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .favorite-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .favorite-btn.active {
+            color: var(--primary-color);
+        }
+
+        /* Playlist manager */
+        .playlist-manager {
+            background: var(--darker-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .playlist-input-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .playlist-input {
+            flex-grow: 1;
+            padding: 10px 15px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .playlist-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .add-playlist-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-playlist-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .add-playlist-btn i {
+            font-size: 0.9rem;
+        }
+
+        .saved-playlists {
+            margin-top: 20px;
+        }
+
+        .playlist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: var(--card-bg);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+
+        .playlist-item:hover {
+            background: var(--card-hover);
+        }
+
+        .playlist-name {
+            font-weight: bold;
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-grow: 1;
+        }
+
+        .playlist-url {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 3px;
+        }
+
+        .playlist-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .playlist-action-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .playlist-action-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+        }
+
+        .playlist-action-btn.load {
+            color: var(--success-color);
+        }
+
+        .playlist-action-btn.delete {
+            color: var(--error-color);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Toast notifications */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--success-color);
+        }
+
+        .toast.error {
+            border-left: 4px solid var(--error-color);
+        }
+
+        .toast.warning {
+            border-left: 4px solid var(--warning-color);
+        }
+
+        .toast i {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .channel-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+
+            .playlist-input-container {
+                flex-direction: column;
+            }
+
+            .add-playlist-btn {
+                justify-content: center;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .channel-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+
+            .channel-logo {
+                height: 70px;
+            }
+
+            .channel-title {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-tv"></i>
+            <span data-lang="tr">Turis TV</span>
+            <span data-lang="en" style="display:none">Turis TV</span>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn" id="favorites-btn" data-lang="tr">
+                <i class="fas fa-heart"></i>
+                <span>Favoriler</span>
+            </button>
+            <button class="nav-btn" id="favorites-btn-en" data-lang="en" style="display:none">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </button>
+            <button class="nav-btn" id="settings-btn">
+                <i class="fas fa-cog"></i>
+                <span data-lang="tr">Ayarlar</span>
+                <span data-lang="en" style="display:none">Settings</span>
+            </button>
+            <div class="language-switcher">
+                <button class="nav-btn lang-btn active" data-lang="tr">TR</button>
+                <button class="nav-btn lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Player Section -->
+        <div class="player-section">
+            <div id="video-player">
+                <video id="video-element" controls></video>
+            </div>
+            <div class="player-controls">
+                <div class="player-info">
+                    <div class="channel-name" id="current-channel">—</div>
+                    <div class="program-name" id="current-program" data-lang="tr">Kanal seç</div>
+                    <div class="program-name" id="current-program-en" data-lang="en" style="display:none">Select a channel</div>
+                </div>
+                <div class="control-buttons">
+                    <button class="control-btn" id="fullscreen-btn" title="Fullscreen">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn" id="volume-btn" title="Volume">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Manager -->
+        <div class="playlist-manager">
+            <h3 data-lang="tr"><i class="fas fa-list"></i>Çalma listesi yönetimi</h3>
+            <h3 data-lang="en" style="display:none"><i class="fas fa-list"></i> Playlist Manager</h3>
+            
+            <div class="playlist-input-container">
+                <input type="text" class="playlist-input" id="playlist-url" placeholder="M3U çalma listesi URL'sini girin" data-lang="tr">
+                <input type="text" class="playlist-input" id="playlist-url-en" placeholder="Enter M3U playlist URL" data-lang="en" style="display:none">
+                <button class="add-playlist-btn" id="add-playlist">
+                    <i class="fas fa-plus"></i>
+                    <span data-lang="tr">Eklemek</span>
+                    <span data-lang="en" style="display:none">Add</span>
+                </button>
+            </div>
+            
+            <div class="saved-playlists">
+                <h4 data-lang="tr"><i class="fas fa-save"></i> Oynatma listelerim:</h4>
+                <h4 data-lang="en" style="display:none"><i class="fas fa-save"></i> My Playlists:</h4>
+                <div id="playlists-container"></div>
+            </div>
+        </div>
+
+        <!-- Channels Section -->
+        <div class="channels-section">
+            <h2 class="section-title" data-lang="tr">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>Tüm kanallar</span>
+            </h2>
+            <h2 class="section-title" data-lang="en" style="display:none">
+                <i class="fas fa-broadcast-tower"></i>
+                <span>All Channels</span>
+            </h2>
+            
+            <div class="channel-grid" id="channel-list">
+                <!-- Channels will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <div class="toast-message"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        // Enhanced TV Player Application
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const videoElement = document.getElementById('video-element');
+            const currentChannelElement = document.getElementById('current-channel');
+            const currentProgramElement = document.getElementById('current-program');
+            const currentProgramEnElement = document.getElementById('current-program-en');
+            const channelListElement = document.getElementById('channel-list');
+            const playlistsContainer = document.getElementById('playlists-container');
+            const addPlaylistBtn = document.getElementById('add-playlist');
+            const playlistUrlInput = document.getElementById('playlist-url');
+            const playlistUrlEnInput = document.getElementById('playlist-url-en');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const volumeBtn = document.getElementById('volume-btn');
+            const favoritesBtn = document.getElementById('favorites-btn');
+            const favoritesEnBtn = document.getElementById('favorites-btn-en');
+            const toastElement = document.getElementById('toast');
+            const toastMessage = document.querySelector('.toast-message');
+            
+            // Application State
+            let currentLanguage = 'ru';
+            let channels = [];
+            let favorites = JSON.parse(localStorage.getItem('tvFavorites')) || [];
+            let currentHls = null;
+            let isMuted = false;
+            let currentChannel = null;
+            
+            // Initialize the application
+            function init() {
+                loadDefaultChannels();
+                renderChannels();
+                renderPlaylists();
+                setupEventListeners();
+                checkForDefaultPlaylist();
+                
+                // Load last played channel if available
+                const lastChannelId = localStorage.getItem('lastChannel');
+                if (lastChannelId) {
+                    const channel = channels.find(c => c.id === lastChannelId);
+                    if (channel) {
+                        setTimeout(() => playChannel(channel), 500);
+                    }
+                }
+            }
+            
+            // Load some default channels
+            function loadDefaultChannels() {
+                channels = [
+                    {
+                        id: '1',
+                        name: "Birinci Kanal",
+                        name_en: "Channel One",
+                        url: "https://example.com/stream1.m3u8",
+                        logo: "https://via.placeholder.com/150/000000/FFFFFF/?text=1TV",
+                        category: "general",
+                        isFavorite: favorites.includes('1')
+                    },
+                    {
+                        id: '2',
+                        name: "National Geographic",
+                        name_en: "National Geographic",
+                        url: "https://example.com/stream2.m3u8",
+                        logo: "https://via.placeholder.com/150/000000/FFFFFF/?text=NatGeo",
+                        category: "documentary",
+                        isFavorite: favorites.includes('2')
+                    },
+                    {
+                        id: '3',
+                        name: "Eurosport",
+                        name_en: "Eurosport",
+                        url: "https://example.com/stream3.m3u8",
+                        logo: "https://via.placeholder.com/150/000000/FFFFFF/?text=Sport",
+                        category: "sport",
+                        isFavorite: favorites.includes('3')
+                    }
+                ];
+            }
+            
+            // Check if there are saved playlists and load the first one
+            function checkForDefaultPlaylist() {
+                const playlists = loadPlaylistsFromStorage();
+                if (playlists.length > 0) {
+                    loadPlaylist(playlists[0].url);
+                }
+            }
+            
+            // Event Listeners
+            function setupEventListeners() {
+                // Language switching
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        switchLanguage(btn.dataset.lang);
+                    });
+                });
+                
+                // Playlist management
+                addPlaylistBtn.addEventListener('click', addPlaylist);
+                
+                // Player controls
+                fullscreenBtn.addEventListener('click', toggleFullscreen);
+                volumeBtn.addEventListener('click', toggleMute);
+                
+                // Favorites
+                favoritesBtn.addEventListener('click', showFavorites);
+                favoritesEnBtn.addEventListener('click', showFavorites);
+                
+                // Allow pressing Enter in playlist URL input
+                playlistUrlInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') addPlaylist();
+                });
+                
+                playlistUrlEnInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') addPlaylist();
+                });
+                
+                // Handle fullscreen change events
+                document.addEventListener('fullscreenchange', updateFullscreenButton);
+                document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+                document.addEventListener('mozfullscreenchange', updateFullscreenButton);
+                document.addEventListener('MSFullscreenChange', updateFullscreenButton);
+                
+                // Handle video errors
+                videoElement.addEventListener('error', handleVideoError);
+            }
+            
+            function updateFullscreenButton() {
+                if (document.fullscreenElement || 
+                    document.webkitFullscreenElement || 
+                    document.mozFullScreenElement || 
+                    document.msFullscreenElement) {
+                    fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+                } else {
+                    fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            }
+            
+            function handleVideoError() {
+                console.error('Video error:', videoElement.error);
+                showToast(currentLanguage === 'tr' ? 
+                    'Video oynatma hatası' : 
+                    'Video playback error', 'error');
+            }
+            
+            // Language switching
+            function switchLanguage(lang) {
+                currentLanguage = lang;
+                
+                // Update UI elements
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    if (el.dataset.lang === lang) {
+                        el.style.display = '';
+                    } else {
+                        el.style.display = 'none';
+                    }
+                });
+                
+                // Update language buttons
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === lang);
+                });
+                
+                // Update channel names and info
+                updateCurrentChannelInfo();
+                renderChannels();
+                renderPlaylists();
+            }
+            
+            // Playlist management functions
+            function loadPlaylistsFromStorage() {
+                try {
+                    return JSON.parse(localStorage.getItem('tvPlaylists')) || [];
+                } catch (e) {
+                    console.error('Error parsing playlists from storage:', e);
+                    return [];
+                }
+            }
+            
+            function savePlaylistsToStorage(playlists) {
+                localStorage.setItem('tvPlaylists', JSON.stringify(playlists));
+            }
+            
+            function renderPlaylists() {
+                const playlists = loadPlaylistsFromStorage();
+                playlistsContainer.innerHTML = '';
+                
+                if (playlists.length === 0) {
+                    const emptyState = document.createElement('div');
+                    emptyState.className = 'empty-state';
+                    emptyState.innerHTML = `
+                        <i class="fas fa-list"></i>
+                        <p>${currentLanguage === 'tr' ? 
+                            'Нет сохранённых плейлистов' : 
+                            'No saved playlists'}</p>
+                    `;
+                    playlistsContainer.appendChild(emptyState);
+                    return;
+                }
+                
+                playlists.forEach((playlist, index) => {
+                    const playlistItem = document.createElement('div');
+                    playlistItem.className = 'playlist-item fade-in';
+                    
+                    playlistItem.innerHTML = `
+                        <div>
+                            <div class="playlist-name">${playlist.name || `${currentLanguage === 'tr' ? 'Çalma listesi' : 'Playlist'} ${index + 1}`}</div>
+                            <div class="playlist-url">${truncateUrl(playlist.url)}</div>
+                        </div>
+                        <div class="playlist-actions">
+                            <button class="playlist-action-btn load" title="${currentLanguage === 'tr' ? 'İndirmek' : 'Load'}">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="playlist-action-btn delete" title="${currentLanguage === 'tr' ? 'Silmek' : 'Delete'}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    `;
+                    
+                    // Add event listeners to action buttons
+                    const loadBtn = playlistItem.querySelector('.load');
+                    const deleteBtn = playlistItem.querySelector('.delete');
+                    
+                    loadBtn.addEventListener('click', () => {
+                        loadPlaylist(playlist.url);
+                        showToast(currentLanguage === 'tr' ? 
+                            'Oynatma listesi yükleniyor...' : 
+                            'Playlist loading...', 'success');
+                    });
+                    
+                    deleteBtn.addEventListener('click', () => {
+                        removePlaylist(index);
+                    });
+                    
+                    playlistsContainer.appendChild(playlistItem);
+                });
+            }
+            
+            function truncateUrl(url, maxLength = 30) {
+                if (!url) return '';
+                if (url.length > maxLength) {
+                    return url.substring(0, maxLength) + '...';
+                }
+                return url;
+            }
+            
+            async function loadPlaylist(url) {
+                try {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Oynatma listesi yükleniyor...' : 
+                        'Loading playlist...', 'info');
+                    
+                    // Validate URL
+                    if (!isValidUrl(url)) {
+                        throw new Error('Invalid URL');
+                    }
+                    
+                    const response = await fetchWithTimeout(url, {
+                        method: 'GET',
+                        timeout: 10000 // 10 seconds timeout
+                    });
+                    
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    
+                    const text = await response.text();
+                    if (!text.startsWith('#EXTM3U')) throw new Error('Invalid M3U format');
+                    
+                    const parsedChannels = parseM3U(text);
+                    channels = [...channels, ...parsedChannels];
+                    
+                    renderChannels();
+                    showToast(currentLanguage === 'tr' ? 
+                        'Çalma listesi başarıyla yüklendi!' : 
+                        'Playlist loaded successfully!', 'success');
+                } catch (error) {
+                    console.error('Error loading playlist:', error);
+                    showToast(currentLanguage === 'tr' ? 
+                        'Oynatma listesi yüklenirken hata oluştu' : 
+                        'Error loading playlist', 'error');
+                }
+            }
+            
+            function isValidUrl(string) {
+                try {
+                    new URL(string);
+                    return true;
+                } catch (_) {
+                    return false;
+                }
+            }
+            
+            async function fetchWithTimeout(resource, options = {}) {
+                const { timeout = 8000 } = options;
+                
+                const controller = new AbortController();
+                const id = setTimeout(() => controller.abort(), timeout);
+                
+                const response = await fetch(resource, {
+                    ...options,
+                    signal: controller.signal  
+                });
+                
+                clearTimeout(id);
+                
+                return response;
+            }
+            
+            function parseM3U(m3uText) {
+                const lines = m3uText.split('\n');
+                const parsedChannels = [];
+                let currentChannel = {};
+                
+                for (const line of lines) {
+                    if (line.startsWith('#EXTINF:')) {
+                        // Parse channel info
+                        const parts = line.split(',');
+                        currentChannel = {
+                            name: parts[1]?.trim() || 'Unknown Channel',
+                            name_en: parts[1]?.trim() || 'Unknown Channel',
+                            category: 'other',
+                            isFavorite: false
+                        };
+                        
+                        // Extract logo if available
+                        const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                        if (logoMatch) {
+                            currentChannel.logo = logoMatch[1];
+                        } else {
+                            currentChannel.logo = 'https://via.placeholder.com/150/000000/FFFFFF/?text=TV';
+                        }
+                        
+                        // Extract ID if available
+                        const idMatch = line.match(/tvg-id="([^"]+)"/);
+                        currentChannel.id = idMatch ? idMatch[1] : Date.now().toString() + Math.random().toString(36).substr(2, 5);
+                        
+                        // Check if channel is favorite
+                        currentChannel.isFavorite = favorites.includes(currentChannel.id);
+                    } else if (line.startsWith('http')) {
+                        // This is the stream URL
+                        currentChannel.url = line.trim();
+                        
+                        // Add to channels if valid
+                        if (currentChannel.name && currentChannel.url) {
+                            parsedChannels.push({...currentChannel});
+                        }
+                        
+                        currentChannel = {};
+                    }
+                }
+                
+                return parsedChannels;
+            }
+            
+            function addPlaylist() {
+                const urlInput = currentLanguage === 'tr' ? playlistUrlInput : playlistUrlEnInput;
+                const url = urlInput.value.trim();
+                
+                if (!url) {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Введите URL плейлиста' : 
+                        'Enter playlist URL', 'warning');
+                    return;
+                }
+                
+                if (!isValidUrl(url)) {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Некорректный URL' : 
+                        'Invalid URL', 'error');
+                    return;
+                }
+                
+                const playlists = loadPlaylistsFromStorage();
+                
+                // Check if playlist already exists
+                if (playlists.some(p => p.url === url)) {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Этот плейлист уже добавлен' : 
+                        'This playlist is already added', 'warning');
+                    return;
+                }
+                
+                // Add new playlist
+                playlists.push({
+                    url,
+                    name: `${currentLanguage === 'tr' ? 'Çalma listesi' : 'Playlist'} ${playlists.length + 1}`
+                });
+                
+                savePlaylistsToStorage(playlists);
+                renderPlaylists();
+                
+                // Clear input
+                urlInput.value = '';
+                
+                showToast(currentLanguage === 'tr' ? 
+                    'Oynatma listesi eklendi' : 
+                    'Playlist added', 'success');
+            }
+            
+            function removePlaylist(index) {
+                const playlists = loadPlaylistsFromStorage();
+                playlists.splice(index, 1);
+                savePlaylistsToStorage(playlists);
+                renderPlaylists();
+                
+                showToast(currentLanguage === 'tr' ? 
+                    'Oynatma listesi silindi' : 
+                    'Playlist removed', 'success');
+            }
+            
+            // Channel management
+            function renderChannels(filter = 'all') {
+                channelListElement.innerHTML = '';
+                
+                let channelsToDisplay = channels;
+                
+                // Apply filter
+                if (filter === 'favorites') {
+                    channelsToDisplay = channels.filter(ch => ch.isFavorite);
+                } else if (filter !== 'all') {
+                    channelsToDisplay = channels.filter(ch => ch.category === filter);
+                }
+                
+                if (channelsToDisplay.length === 0) {
+                    const emptyState = document.createElement('div');
+                    emptyState.className = 'empty-state';
+                    emptyState.innerHTML = `
+                        <i class="fas fa-tv"></i>
+                        <p>${currentLanguage === 'tr' ? 
+                            'Hiçbir kanal mevcut değil' : 
+                            'No channels available'}</p>
+                    `;
+                    channelListElement.appendChild(emptyState);
+                    return;
+                }
+                
+                channelsToDisplay.forEach(channel => {
+                    const channelCard = document.createElement('div');
+                    channelCard.className = 'channel-card fade-in';
+                    channelCard.dataset.id = channel.id;
+                    
+                    // Use a placeholder if logo fails to load
+                    const logo = document.createElement('img');
+                    logo.className = 'channel-logo';
+                    logo.alt = currentLanguage === 'tr' ? channel.name : channel.name_en;
+                    logo.src = channel.logo;
+                    logo.onerror = () => {
+                        logo.src = 'https://via.placeholder.com/150/000000/FFFFFF/?text=TV';
+                    };
+                    
+                    channelCard.innerHTML = `
+                        <div class="channel-info">
+                            <div class="channel-title">${currentLanguage === 'ru' ? channel.name : channel.name_en}</div>
+                            <div class="channel-category">${getCategoryName(channel.category)}</div>
+                        </div>
+                        <button class="favorite-btn ${channel.isFavorite ? 'active' : ''}">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    `;
+                    
+                    // Insert logo at the beginning
+                    channelCard.insertBefore(logo, channelCard.firstChild);
+                    
+                    // Add click event to play channel
+                    channelCard.addEventListener('click', (e) => {
+                        // Don't play if clicking on favorite button
+                        if (!e.target.closest('.favorite-btn')) {
+                            playChannel(channel);
+                        }
+                    });
+                    
+                    // Add favorite button event
+                    const favoriteBtn = channelCard.querySelector('.favorite-btn');
+                    favoriteBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        toggleFavorite(channel.id);
+                    });
+                    
+                    channelListElement.appendChild(channelCard);
+                });
+            }
+            
+            function getCategoryName(category) {
+                const categories = {
+                    'general': { tr: 'Genel', en: 'General' },
+                    'news': { tr: 'Haberler', en: 'News' },
+                    'sport': { tr: 'Spor', en: 'Sports' },
+                    'documentary': { tr: 'Belgesel', en: 'Documentary' },
+                    'movies': { tr: 'Film', en: 'Movies' },
+                    'kids': { tr: 'Çocuk', en: 'Kids' },
+                    'other': { tr: 'Diğer', en: 'Other' }
+                };
+                
+                return categories[category]?.[currentLanguage] || 
+                       (currentLanguage === 'tr' ? 'Diğer' : 'Other');
+            }
+            
+            function toggleFavorite(channelId) {
+                const index = favorites.indexOf(channelId);
+                if (index === -1) {
+                    favorites.push(channelId);
+                } else {
+                    favorites.splice(index, 1);
+                }
+                
+                // Update in channels array
+                const channelIndex = channels.findIndex(ch => ch.id === channelId);
+                if (channelIndex !== -1) {
+                    channels[channelIndex].isFavorite = !channels[channelIndex].isFavorite;
+                }
+                
+                // Save to localStorage
+                localStorage.setItem('tvFavorites', JSON.stringify(favorites));
+                
+                // Re-render if we're in favorites view
+                if (document.querySelector('.channel-grid').dataset.filter === 'favorites') {
+                    renderChannels('favorites');
+                } else {
+                    // Just update the favorite button
+                    const favoriteBtn = document.querySelector(`.channel-card[data-id="${channelId}"] .favorite-btn`);
+                    if (favoriteBtn) {
+                        favoriteBtn.classList.toggle('active');
+                    }
+                }
+                
+                showToast(currentLanguage === 'tr' ? 
+                    (favorites.includes(channelId) ? 'Favorilere eklendi' : 'Favorilerden kaldırıldı') : 
+                    (favorites.includes(channelId) ? 'Added to favorites' : 'Removed from favorites'), 
+                    'success');
+            }
+            
+            function showFavorites() {
+                renderChannels('favorites');
+                document.querySelector('.channel-grid').dataset.filter = 'favorites';
+                
+                // Update section title
+                document.querySelectorAll('.section-title span').forEach(el => {
+                    el.textContent = currentLanguage === 'tr' ? 'Favoriler' : 'Favorites';
+                });
+            }
+            
+            // Player functions
+            function playChannel(channel) {
+                if (!channel || !channel.url) {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Yanlış kanal' : 
+                        'Invalid channel', 'error');
+                    return;
+                }
+                
+                // Save last played channel
+                localStorage.setItem('lastChannel', channel.id);
+                currentChannel = channel;
+                
+                // Clean up previous HLS instance
+                if (currentHls) {
+                    currentHls.destroy();
+                    currentHls = null;
+                }
+                
+                // Update UI
+                currentChannelElement.textContent = currentLanguage === 'tr' ? channel.name : channel.name_en;
+                updateCurrentChannelInfo();
+                
+                // Highlight selected channel
+                document.querySelectorAll('.channel-card').forEach(card => {
+                    card.classList.remove('active');
+                });
+                document.querySelector(`.channel-card[data-id="${channel.id}"]`)?.classList.add('active');
+                
+                // Play the stream
+                if (Hls.isSupported()) {
+                    currentHls = new Hls({
+                        maxBufferLength: 30,
+                        maxMaxBufferLength: 600,
+                        maxBufferSize: 60 * 1000 * 1000,
+                        maxBufferHole: 0.5,
+                        lowLatencyMode: false,
+                        enableWorker: true
+                    });
+                    
+                    currentHls.loadSource(channel.url);
+                    currentHls.attachMedia(videoElement);
+                    
+                    currentHls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        videoElement.play().catch(e => {
+                            console.error('Autoplay prevented:', e);
+                            showToast(currentLanguage === 'tr' ? 
+                                'Oynamak için tıklayın' : 
+                                'Click to play', 'warning');
+                        });
+                    });
+                    
+                    currentHls.on(Hls.Events.ERROR, (event, data) => {
+                        if (data.fatal) {
+                            switch(data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    showToast(currentLanguage === 'tr' ? 
+                                        'Ağ hatası. Başka bir kanalı deneyin' : 
+                                        'Network error. Try another channel', 'error');
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    showToast(currentLanguage === 'tr' ? 
+                                        'Medya hatası. Başka bir kanalı deneyin' : 
+                                        'Media error. Try another channel', 'error');
+                                    break;
+                                default:
+                                    showToast(currentLanguage === 'tr' ? 
+                                        'Oynatma hatası' : 
+                                        'Playback error', 'error');
+                                    break;
+                            }
+                        }
+                    });
+                } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                    // For Safari
+                    videoElement.src = channel.url;
+                    videoElement.addEventListener('loadedmetadata', () => {
+                        videoElement.play().catch(e => {
+                            console.error('Autoplay prevented:', e);
+                            showToast(currentLanguage === 'tr' ? 
+                                'Oynamak için tıklayın' : 
+                                'Click to play', 'warning');
+                        });
+                    });
+                    
+                    videoElement.addEventListener('error', () => {
+                        showToast(currentLanguage === 'tr' ? 
+                            'Oynatma hatası' : 
+                            'Playback error', 'error');
+                    });
+                } else {
+                    showToast(currentLanguage === 'tr' ? 
+                        'Tarayıcınız bu formatı oynatmayı desteklemiyor.' : 
+                        'Your browser doesn\'t support this format', 'error');
+                }
+                
+                // Scroll to player
+                document.querySelector('.player-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            
+            function updateCurrentChannelInfo() {
+                if (currentLanguage === 'tr') {
+                    currentProgramElement.style.display = '';
+                    currentProgramEnElement.style.display = 'none';
+                } else {
+                    currentProgramElement.style.display = 'none';
+                    currentProgramEnElement.style.display = '';
+                }
+            }
+            
+            function toggleFullscreen() {
+                if (!document.fullscreenElement) {
+                    const player = document.querySelector('.player-section');
+                    
+                    if (player.requestFullscreen) {
+                        player.requestFullscreen();
+                    } else if (player.webkitRequestFullscreen) {
+                        player.webkitRequestFullscreen();
+                    } else if (player.mozRequestFullScreen) {
+                        player.mozRequestFullScreen();
+                    } else if (player.msRequestFullscreen) {
+                        player.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            }
+            
+            function toggleMute() {
+                isMuted = !isMuted;
+                videoElement.muted = isMuted;
+                volumeBtn.innerHTML = isMuted ? 
+                    '<i class="fas fa-volume-mute"></i>' : 
+                    '<i class="fas fa-volume-up"></i>';
+                
+                // Save mute state
+                localStorage.setItem('isMuted', isMuted);
+            }
+            
+            // Toast notifications
+            function showToast(message, type = 'info') {
+                if (!toastElement || !toastMessage) return;
+                
+                toastElement.className = `toast ${type}`;
+                
+                // Set icon based on type
+                let icon;
+                switch (type) {
+                    case 'success':
+                        icon = 'fa-check-circle';
+                        break;
+                    case 'error':
+                        icon = 'fa-exclamation-circle';
+                        break;
+                    case 'warning':
+                        icon = 'fa-exclamation-triangle';
+                        break;
+                    default:
+                        icon = 'fa-info-circle';
+                }
+                
+                toastElement.innerHTML = `
+                    <i class="fas ${icon}"></i>
+                    <div class="toast-message">${message}</div>
+                `;
+                
+                toastElement.classList.add('show');
+                
+                // Hide after 3 seconds
+                setTimeout(() => {
+                    toastElement.classList.remove('show');
+                }, 3000);
+            }
+            
+            // Initialize the app
+            init();
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
