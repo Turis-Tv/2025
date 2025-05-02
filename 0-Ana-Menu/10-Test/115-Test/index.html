@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بث مباشر - قنوات TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .menu-toggle {
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 60px);
+        }
+        
+        .sidebar {
+            width: 250px;
+            background-color: #16213e;
+            color: white;
+            transition: all 0.3s;
+            overflow-y: auto;
+        }
+        
+        .sidebar.closed {
+            margin-left: -250px;
+        }
+        
+        .sidebar-header {
+            padding: 15px;
+            background-color: #0f3460;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .close-btn {
+            cursor: pointer;
+        }
+        
+        .categories {
+            padding: 10px 0;
+        }
+        
+        .category-title {
+            padding: 10px 15px;
+            background-color: #0f3460;
+            font-weight: bold;
+        }
+        
+        .channel-list {
+            list-style: none;
+        }
+        
+        .channel-item {
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .channel-item:hover {
+            background-color: #0f3460;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .player-container {
+            background-color: #000;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        #video-player {
+            width: 100%;
+            height: auto;
+        }
+        
+        .ad-banner {
+            width: 468px;
+            height: 60px;
+            background-color: #ddd;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px dashed #999;
+        }
+        
+        .channel-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .channel-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .channel-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .channel-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+        
+        .channel-card h3 {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .sidebar {
+                position: fixed;
+                z-index: 100;
+                height: 100vh;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">بث مباشر TV</div>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+    
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span>القنوات</span>
+                <span class="close-btn" id="close-btn"><i class="fas fa-times"></i></span>
+            </div>
+            
+            <div class="categories">
+                <div class="category-title">DCIN SPORTS</div>
+                <ul class="channel-list">
+                    <li class="channel-item" data-stream="http://1465.vod.adultiptv.net/ph596e4ad896499/play.m3u8">Turis (720P)</li>
+                    <li class="channel-item" data-stream="http://13216.vod.redtraffic.xyz/ph587bc292b6861/play.m3u8">Turis 2</li>
+                    <li class="channel-item" data-stream="http://1244.vod.redtraffic.xyz/ph5abbb78538287/play.m3u8">Turis 3</li>
+                </ul>
+                
+                <div class="category-title">AMONG US</div>
+                <ul class="channel-list">
+                    <li class="channel-item" data-stream="http://finevids.xxx/get_file/1/0a0b117bc9a6a1ed64c0ced9cedc4f0c/81000/81667/81667.mp4/">Vid 1</li>
+                    <li class="channel-item" data-stream="http://anysex.com/get_file/1/7f1ab8fb692cdd03eceaa260c957393b/200000/200149/200149.mp4">Vid 2</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="player-container">
+                <video id="video-player" controls></video>
+            </div>
+            
+            <div class="ad-banner">
+                Test Ad<br>
+                Nice job! This is a 468x60 test ad.
+            </div>
+            
+            <h2>القنوات المتاحة</h2>
+            <div class="channel-groups">
+                <div class="channel-card" data-stream="http://12156.vod.adultiptv.net/ph59fadc205bf2e/play.m3u8">
+                    <img src="https://via.placeholder.com/200x120?text=BEIN+SPORT" alt="Turis 5">
+                    <h3>BEIN SPORT (720P)</h3>
+                </div>
+                
+                <div class="channel-card" data-stream="http://anysex.com/get_file/1/99441daeb374ea78124532d200b98c9d/204000/204522/204522.mp4">
+                    <img src="https://via.placeholder.com/200x120?text=Among+Us" alt="Anal">
+                    <h3>Among Us</h3>
+                </div>
+                
+                <!-- يمكن إضافة المزيد من القنوات هنا -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        // فتح وإغلاق القائمة الجانبية
+        const menuToggle = document.querySelector('.menu-toggle');
+        const closeBtn = document.querySelector('#close-btn');
+        const sidebar = document.querySelector('#sidebar');
+        
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('closed');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('closed');
+        });
+        
+        // تشغيل الفيديو
+        const videoPlayer = document.getElementById('video-player');
+        const channelItems = document.querySelectorAll('.channel-item, .channel-card');
+        
+        // دالة لتشغيل الفيديو
+        function playVideo(streamUrl) {
+            if (streamUrl.endsWith('.m3u8')) {
+                // تشغيل تيار HLS
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(streamUrl);
+                    hls.attachMedia(videoPlayer);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                        videoPlayer.play();
+                    });
+                } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+                    // دعم Safari
+                    videoPlayer.src = streamUrl;
+                    videoPlayer.addEventListener('loadedmetadata', function() {
+                        videoPlayer.play();
+                    });
+                }
+            } else {
+                // تشغيل ملف MP4 عادي
+                videoPlayer.src = streamUrl;
+                videoPlayer.play();
+            }
+        }
+        
+        // إضافة حدث النقر لعناصر القناة
+        channelItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const streamUrl = item.getAttribute('data-stream');
+                playVideo(streamUrl);
+            });
+        });
+        
+        // تشغيل أول قناة افتراضياً
+        if (channelItems.length > 0) {
+            const firstChannel = channelItems[0];
+            const defaultStream = firstChannel.getAttribute('data-stream');
+            playVideo(defaultStream);
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

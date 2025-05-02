@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tv-container {
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+  }
+  .logo {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  }
+  .logo span:first-child {
+    color: white;
+  }
+  .logo span:last-child {
+    color: #FF69B4;
+  }
+  .screen {
+    background-color: #000;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  #video-player {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .channel-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF5900;
+  }
+  .chromecast-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .chromecast-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+  .chromecast-button:hover svg {
+    fill: #FF5900;
+  }
+  .channel-menu {
+    background-color: #000000;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .country-selector {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .country-selector select {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    background-color: #FF5900;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .country-selector::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+  .country-selector[data-country="dominican"]::before {
+    background-image: url('https://flagcdn.com/w40/do.png');
+  }
+  .country-selector[data-country="spain"]::before {
+    background-image: url('https://flagcdn.com/w40/es.png');
+  }
+  .country-selector[data-country="usa"]::before {
+    background-image: url('https://flagcdn.com/w40/us.png');
+  }
+  .country-selector[data-country="Argentina"]::before {
+    background-image: url('https://flagcdn.com/w40/ar.png');
+  }
+  .country-selector[data-country="International"]::before {
+    background-image: url('https://flagcdn.com/w40/us.png');  
+  }
+  .country-selector select:hover {
+    background-color: #FF1493;
+  }
+  .country-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FF5900;
+  }
+  .channel-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .channel-list li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  .channel-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+  }
+  .channel-list li:hover .channel-list li:focus {
+    background-color: #3a3a3a;
+    outline: none;
+   outline: none; 
+  }
+  .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #FF69B4;
+    margin-right: 10px;
+  }
+  .search-container input {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  .search-container input:focus {
+    outline: none;
+  }
+
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .main-content {
+      flex-direction: row;
+    }
+    .tv-container {
+      flex: 2;
+    }
+    .channel-menu {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .main-content {
+      padding: 10px;
+    }
+    .tv-container, .channel-menu {
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .logo {
+      font-size: 1.2em;
+    }
+    .controls {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .channel-name {
+      font-size: 16px;
+    }
+    .country-selector select {
+      font-size: 14px;
+    }
+    .channel-list li {
+      padding: 8px;
+    }
+    .search-container input {
+      font-size: 14px;
+    }
+    
+    
+    #remote-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+    
+    
+    
+    
+    
+   #channel-list li {
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+  color: white;
+}
+
+#channel-list li img.channel-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#channel-list li.focused {
+  background: rgba(255, 0, 0, 0.4); /* أحمر زجاجي */
+  outline: 2px solid rgba(255, 0, 0, 0.7);
+  transform: scale(1.02);
+}
+
+#channel-list li.selected {
+  box-shadow: 0 0 20px 4px red;
+  animation: glow 0.8s ease-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px red;
+  }
+  50% {
+    box-shadow: 0 0 20px 6px red;
+  }
+  100% {
+    box-shadow: 0 0 0px red;
+  }
+}
+ 
+    
+    
+   #channel-list li.selected {
+  background-color: #FF5900 !important;
+  color: black;
+}
+
+    
+    
+    
+    
+    
+    
+    #channel-list li.selected {
+  background-color: #FF5900 !important;
+  color: black;
+  transform: scale(1.05);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 0 10px #FF5900;
+}
+
+    
+    .channel-menu {
+  max-height: 500px;
+  overflow-y: auto;
+}

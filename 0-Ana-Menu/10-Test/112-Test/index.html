@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>📡 محمد ستاركوم</title>
+    <link rel="stylesheet" href="style.css">
+  
+  
+  <!-- زر التسجيل -->
+</head><body><button id="recordBtn" class="btn" tabindex="0">⏺️ بدء التسجيل</button>
+
+<!-- مؤقت التسجيل -->
+<div id="recordTimer" class="hidden">00:00</div>
+
+  
+  
+  
+  
+  <!-- قائمة المنيو أعلى يمين الشاشة -->
+<div class="menu-container" tabindex="0">
+    <div class="menu-icon" tabindex="0">☰</div>
+    <ul class="menu-list">
+        <li class="menu-item" id="languageMenu" tabindex="0">🌐 اللغة
+    <ul class="language-dropdown hidden">
+        <li class="language-option" data-lang="ar" tabindex="0">🇸🇦 العربية</li>
+        <li class="language-option" data-lang="en" tabindex="0">🇬🇧 English</li>
+    </ul>
+</li>
+
+  <li class="menu-item" tabindex="0">ℹ️ حول التطبيق</li> <!-- نافذة حول التطبيق -->
+
+  
+  
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+  
+ 
+
+
+        <li class="menu-item" tabindex="0" onclick="window.open('mailto:example@email.com')">✉️ مراسلة</li>
+    </ul>
+</div>
+        
+  
+  
+
+ <!-- زر الخروج النهائي -->
+<button id="exitAppBtn" class="exit-btn">✖️ خروج</button>
+
+
+  
+  
+
+
+
+
+
+  
+    <div class="main-content">
+        <h1 class="header">📡 محمد ستاركوم - مشغل القنوات الفضائية</h1>
+
+        <div class="buttons">
+            <button class="btn" onclick="updateChannels()">🔄 تحديث القنوات</button>
+            <button id="update-btn" class="btn">⬇️ تحقق من الاصدار</button>
+        </div>
+
+        <div class="video-container" id="fullScreenContainer">
+            <h2 id="channelTitle" class="channel-title">اختر قناة للمشاهدة</h2>
+            <video id="videoPlayer"></video>
+            <div class="overlay-fullscreen-btn" id="fullscreenBtn" style="display: none;">⛶ للنقر المزدوج للتكبير</div>
+
+         
+            <div class="category-list" id="categoryList" style="display: none;"><button class="btn">⭐ المفضلة</button><button class="btn">📺 رياضة</button><button class="btn">📡 عربية</button><button class="btn">🎭 ترفيه</button><button class="btn">📺 منوعة</button><button class="btn">🌍 دول</button><button class="btn">📢 جميع القنوات</button></div>
+            <div class="channel-list" id="channelList" style="display: none;"><div class="channel-item">
+            <span class="channel-number">1. </span>
+            <span class="channel-name">beIN Sports 2</span>
+            <button class="fav-btn" onclick="toggleFavorite('http://11216.vod.redtraffic.xyz/ph56b6f2376b1b5/play.m3u8', this)">☆</button>
+        </div></div>
+        </div>
+    </div>
+   <script src="cordova.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body></html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

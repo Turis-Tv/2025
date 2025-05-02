@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="https://eilik-tv-max.com/" />
+  <title>CTARCOM</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    /* تقدر تضيف ستايل هنا */
+  </style>
+</head>
+<body>
+  <button id="update-btn" class="btn" >⬇️ تحقق من الاصدار</button>
+  <div class="main-content">
+    <div class="tv-container">
+      <div class="logo"><span>MOHAMMED</span> <span>CTARCOM TV</span></div>
+      <div id="clock"></div>
+      <div class="screen">
+        <video id="video-player" controls></video>
+      </div>
+      <div class="controls">
+        <div class="channel-name" id="current-channel">لم يتم اختيار قناة</div>
+        <button class="chromecast-button" onclick="startChromecast()">Chromecast</button>
+      </div>
+    </div>
+
+    <div class="channel-menu">
+      <div class="country-selector" data-country="arabic">
+        <select id="country-select" onchange="loadChannels()">
+          <option value="arabic">العربية</option>
+          <option value="sports">الرياضية</option>
+          <option value="entertainment"tabindex="0">الترفيهية</option>
+          <option value="variety">المنوعة</option>
+          <option value="all">جميع القنوات</option>
+        </select>
+      </div>
+
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="ابحث عن قناة..." oninput="searchChannels()">
+      </div>
+      <ul id="channel-list" class="channel-list"></ul>
+    </div>
+  </div>
+
+  <script>
+    const channels = {
+      arabic: [
+        { name: "1", url: "http://1465.vod.adultiptv.net/ph596e4ad896499/play.m3u8", logo: "https://img.adultiptv.net/19876.jpg" },
+        { name: "2", url: "http://13216.vod.redtraffic.xyz/ph587bc292b6861/play.m3u8", logo: "https://img.redtraffic.xyz/19877.jpg" }
+      ],
+      sports: [
+        { name: "Bein Sports 1", url: "http://1244.vod.redtraffic.xyz/ph5abbb78538287/play.m3u8", logo: "https://img.redtraffic.xyz/19878.jpg" },
+        { name: "KSA Sports", url: "http://12204.vod.adultiptv.net/ph58657d939d860/play.m3u8", logo: "https://img.adultiptv.net/19879.jpg" }
+      ],
+      entertainment: [
+        { name: "MBC Drama", url: "https://example.com/drama.m3u8", logo: "https://example.com/logo5.png" },
+        { name: "Rotana Cinema", url: "https://example.com/rotanacinema.m3u8", logo: "https://example.com/logo6.png" }
+      ],
+      variety: [
+        { name: "Al Aan TV", url: "https://example.com/alaantv.m3u8", logo: "https://example.com/logo7.png" },
+        { name: "Dubai TV", url: "https://example.com/dubaitv.m3u8", logo: "https://example.com/logo8.png" }
+      ],
+      all: [
+        { name: "MBC 1", 
+         url: "https://example.com/mbc1.m3u8", logo: "https://example.com/logo1.png" },
+        { name: "Al Arabiya", url: "https://example.com/alarabiya.m3u8"
+         , logo: "https://example.com/logo2.png" },
+        { name: "Bein Sports 1", url: "https://example.com/bein1.m3u8", logo: "https://example.com/logo3.png" },
+        { name: "KSA Sports", url: "https://example.com/ksasports.m3u8", logo: "https://example.com/logo4.png" },
+        { name: "MBC Drama", url: "https://example.com/drama.m3u8", logo: "https://example.com/logo5.png" },
+        { name: "Rotana Cinema", url: "https://example.com/rotanacinema.m3u8", logo: "https://example.com/logo6.png" },
+        { name: "Al Aan TV", url: "https://example.com/alaantv.m3u8", logo: "https://example.com/logo7.png" },
+        { name: "Dubai TV", url: "https://example.com/dubaitv.m3u8", logo: "https://example.com/logo8.png" }
+      ]
+    };
+
+    const video = document.getElementById('video-player');
+    const hls = new Hls();
+    const currentChannelElement = document.getElementById('current-channel');
+    const clockElement = document.getElementById('clock');
+
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      clockElement.textContent = time;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function loadChannels() {
+      const category = document.getElementById('country-select').value;
+      const channelList = document.getElementById('channel-list');
+      channelList.innerHTML = '';
+      channels[category].forEach(channel => {
+        const li = document.createElement('li');
+
+        const logo = document.createElement('img');
+        logo.src = channel.logo;
+        logo.alt = `${channel.name} logo`;
+        logo.className = 'channel-logo';
+
+        const name = document.createElement('span');
+        name.textContent = channel.name;
+
+        li.appendChild(logo);
+        li.appendChild(name);
+
+        li.onclick = () => changeChannel(channel.name, channel.url);
+        channelList.appendChild(li);
+      });
+    }
+
+    function changeChannel(name, url) {
+      currentChannelElement.textContent = name;
+      if (Hls.isSupported()) {
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.addEventListener('loadedmetadata', function () {
+          video.play();
+        });
+      }
+      localStorage.setItem('lastChannel', JSON.stringify({ name, url }));
+    }
+
+    function searchChannels() {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const category = document.getElementById('country-select').value;
+      const channelList = document.getElementById('channel-list');
+      channelList.innerHTML = '';
+      channels[category].forEach(channel => {
+        if (channel.name.toLowerCase().includes(searchTerm)) {
+          const li = document.createElement('li');
+          li.textContent = channel.name;
+          li.onclick = () => changeChannel(channel.name, channel.url);
+          channelList.appendChild(li);
+        }
+      });
+    }
+
+    function startChromecast() {
+      alert("Chromecast simulation - not available in this environment.");
+    }
+
+    window.addEventListener('load', () => {
+      const lastChannel = JSON.parse(localStorage.getItem('lastChannel'));
+      if (lastChannel) {
+        changeChannel(lastChannel.name, lastChannel.url);
+      }
+      loadChannels();
+    });
+  </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

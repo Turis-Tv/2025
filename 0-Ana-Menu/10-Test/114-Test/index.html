@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>beIN Sport Live</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- صفحة القنوات -->
+<div class="video-container" id="videoContainer">
+
+  <!-- مستطيل LIVE المطور -->
+  <div class="live-box">
+    <span class="red-dot"></span>
+    <span class="live-text">LIVE</span>
+  </div>
+
+  <!-- قائمة القنوات -->
+  <div class="channel-list" id="channelList">
+    <div class="channel" onclick="changeVideo('http://12156.vod.adultiptv.net/ph59fadc205bf2e/play.m3u8', 'ON Time Sports 1')">Turis 1</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=167', 'SSC Extra 1')">SSC Extra 1</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=68', 'beIN Sport 1')">beIN Sport 1</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=2', 'beIN Sport 2')">beIN Sport 2</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=1', 'beIN Sport 3')">beIN Sport 3</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=3', 'beIN Sport 4')">beIN Sport 4</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=73', 'beIN Sport 5')">beIN Sport 5</div>
+    <div class="channel" onclick="changeVideo('https://www.aflam4you.org/embed.php?vid=74', 'beIN Sport 6')">beIN Sport 6</div>
+  </div>
+
+  <!-- مشغل الفيديو -->
+  <div id="videoFrameContainer" class="video-frame-container">
+    <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- نوافذ الإعلانات -->
+<div id="popupAd" class="popup-ad">
+  <div class="popup-content">
+    <h2>📢 إعلان</h2>
+    <p>اضغط لتحصل على الرابط و ضعه في الإطار لإكمال المشاهدة</p>
+    <button class="get-link-button" onclick="openNewTab()">اضغط للحصول على الرابط</button>
+  </div>
+</div>
+
+<div id="popupLinkInput" class="popup-ad" style="display: none;">
+  <div class="popup-content">
+    <h2>أدخل الرابط</h2>
+    <!-- إضافة الإطار الفارغ لإدخال الكود -->
+    <input type="text" id="linkInput" placeholder="أدخل الكود هنا" class="link-input">
+    <button class="skip-button" onclick="submitLink()">إرسال</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

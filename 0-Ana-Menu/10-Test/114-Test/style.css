@@ -1,0 +1,144 @@
+/* عام */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* ✅ مستطيل LIVE */
+.live-box {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  width: 428px;
+  height: 50px;
+  background: #2c0032;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 0 20px #ff00ff80;
+  z-index: 9999;
+}
+
+/* النقطة الحمراء المتوهجة */
+.red-dot {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+/* نص LIVE */
+.live-text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px red;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* فيديو */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-frame-container {
+  width: 100%;
+  height: calc(100vh - 120px);
+}
+
+#videoPlayer {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* قائمة القنوات */
+.channel-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  position: relative;
+  z-index: 999;
+}
+
+.channel {
+  background-color: #4B0082;
+  padding: 10px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 5px;
+}
+
+.channel:hover {
+  background-color: #800080;
+}
+
+/* نوافذ الإعلانات */
+.popup-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  z-index: 9999;
+}
+
+.popup-content {
+  background: rgba(26, 0, 26, 0.85);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.popup-content h2 {
+  margin: 0 0 20px;
+  font-size: 30px;
+  color: #ff00ff;
+}
+
+.popup-content .skip-button,
+.get-link-button {
+  margin-top: 25px;
+  padding: 10px 30px;
+  font-size: 18px;
+  background-color: #ff00ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.link-input {
+  width: 80%;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  text-align: center;
+}
