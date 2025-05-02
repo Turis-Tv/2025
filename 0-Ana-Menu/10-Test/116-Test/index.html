@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="EN">
+<!-- 
+    la tele por Alplox
+    https://github.com/AkcaMvlt/Turis-Tv.io (v0.9)
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
+    <link rel="stylesheet" href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/canales-secundarios.js"></script>
+    <link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#051320" />
+    <!-- Primary Meta Tags -->
+    <title>Turis Tv</title>
+    <meta name="title" content="Turis Tv">
+    <meta name="description" content="Canales de Chile a un toque.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akcamvlt.github.io/Turis-Tv.io/">
+    <meta property="og:title" content="Turis Tv">
+    <meta property="og:description" content="Canales de Chile a un toque.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/AkcaMvlt/Turis-Tv.io/main/assets/img/v0.9.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://akcamvlt.github.io/Turis-Tv.io/">
+    <meta property="twitter:title" content="La tele">
+    <meta property="twitter:description" content="Canales de Chile a un toque.">
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/AkcaMvlt/Turis-Tv.io/main/assets/img/v0.9.jpg">
+
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        el.swpath= "pwabuilder-sw.js"
+        el.updatemessage = "Nueva versión disponible";
+        document.body.appendChild(el);
+    </script>
+
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+</head>
+
+<body>
+    <noscript>
+        <div class="no-js">
+            <p>El sitio <b>no</b> funciona sin <b>JavaScript</b>.</p>
+            <p>Si lo has deshabilitado, por favor <b>vuelve a activarlo</b>.</p>
+            <div class="wave"></div>
+        </div>
+    </noscript>
+
+    <header class="header-principal">
+     
+ 
+    </header>
+
+    <main>
+        <div class="grid">
+            <div class="video-container sombra">
+                <div class="overlay d-none">
+                    <div class="barra-nombre" id="barra-nombre"></div>
+                    <button role="button" class="btn btn-quitar-señal" id="btn-quitar-señal" title="Elimina señal activa">
+                        <span><i class="ai-cross"></i></span>
+                    </button>
+                </div>
+                <div class="container-transmision" id="container-transmision"></div>
+                <p class="recordatorio" id="recordatorio">
+                    Turis<svg xmlns="http://www.w3.org/2000/svg" width="calc(1.6rem + 1.7vw)" height="calc(1.6rem + 1.7vw)" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round" class="ai ai-CircleTriangleRight"><circle cx="12" cy="12" r="10"/><path d="M16 12l-6-4v8l6-4z"/></svg>Tv 
+                </p>
+            </div>
+
+            <aside class="canales-container sombra">
+                <header class="header-secundario">
+                    <h2>Kanallar</h2>
+                    <input class="filtro" id="filtro" type="search" title="Buscador" placeholder="Ara">
+                </header>
+
+                <div class="flip-container" id="flip-container">
+                    <div class="flipper" id="flipper">
+                        <div class="lista-botones front" id="lista-botones"></div>
+                        <div class="lista-botones back" id="lista-botones-m3u8"></div>
+                    </div>
+                </div>
+
+                <div class="opciones-container">
+                    <button role="button" class="btn btn-alternar" id="btn-alternar" title="Alternar entre lista IPTV">
+                       Liste Değiştir 
+
+
+
+
+                    </button>
+                    <button role="button" class="btn btn-overlay" id="btn-overlay" title="Nombre sobre transmisiones on/off">
+                        <span id="span-overlay"></span>
+                    </button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+     
+        <div>
+            <a href="#" rel="nofollow noreferrer noopener">Haber</a>
+            <span><i class="ai-heart"></i></span>
+            <a href="#" rel="nofollow noreferrer noopener">Belgesel</a>
+            <span><i class="ai-heart"></i></span>
+            <a href="#" rel="nofollow noreferrer noopener">Turis Tv</a>
+            <span><i class="ai-heart"></i></span>
+            <a href="#listado-canales-disponibles-junto-a-su-fuente"rel="nofollow noreferrer noopener">Mülayim</a>
+        </div>
+    </footer>
+
+   
+              
+          
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
