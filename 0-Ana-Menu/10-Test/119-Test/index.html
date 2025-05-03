@@ -1,0 +1,3063 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' name='viewport'/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>app</title>
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.tablink {
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;;
+  font-size: 15px;
+  margin-bottom:10px;
+  width: 100px;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+
+.tablink:hover {
+  background-color: black;
+  color: white;
+}
+.tablink-movies:hover {
+  background-color: black;
+  color: white;
+}
+.tablink-movies {
+  background-color: #dcdcdc;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;;
+  font-size: 15px;
+  margin-bottom:10px;
+  width: 80%;
+  transition: 0.4s;
+  border-radius: 15px;
+}
+.tablink-text-movies{
+  padding: 10px 16px !important;
+  font-size: 15px !important;
+  width: 100% !important;
+}
+
+.tabcontent {
+  padding: 20px 20px;
+  background-color: #d6d1d145;
+}
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  padding: 1px;
+  color: navy;
+  background-color: #d6d1d145;
+}
+
+.zoom{
+  transition: transform .2s;
+  display: inline-grid;
+  margin: 20px 20px;
+}
+.zoom:hover {
+  transform: scale(1.2);
+  
+}
+.text-center{
+  text-align: center;
+}
+
+/************************************/
+
+.mySearch {
+  width: 80%;
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+.myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.lia {
+  text-decoration: none;
+  display: block;
+}
+
+.padding{
+  padding:1px;
+}
+</style>
+
+
+</head>
+<script src='https://cdn.jsdelivr.net/gh/Abdo-Hegazi/yallagual@4620ae19441804afe10c9d0bc8649dcba8668ed9/jquery.min.js'></script>
+<script>
+  function vlcplay(b){if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){window.location=b}else{location.href="intent:"+b+"#Intent;package=com.instantbits.cast.webvideo;S.title=msftv ...;type=application/vnd.apple.mpegurl;end"}};
+  function maxplay(a){if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){window.location=b}else{location.href="intent:"+a+"#Intent;package=com.mxtech.videoplayer.ad;end"}};
+  function maxplay_pro(b){if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){window.location=b}else{location.href="intent:"+b+"#Intent;package=ru.iptvremote.android.iptv.core;end"}};
+  function extplay(a){if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){window.location=a}else{location.href="intent://"+a+"#Intent;action=android.intent.action.VIEW;scheme=http;type=video/*;end"}};
+  function intent(b){if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){window.location=b}else{location.href="intent:"+b+"#Intent;action=android.intent.action.VIEW;scheme=http;type=video/mp4;end"}};
+</script>
+<body>
+
+ 
+  <div class="scrollmenu" style="margin-top:20px">
+  <a class="tablink" onclick="openPage('Ulusal', this, 'black', 'white')" id="defaultOpen">Ulusal</a>
+    <a class="tablink" onclick="openPage('Haber', this, 'black', 'white')">Haber</a>
+    <a class="tablink" onclick="openPage('Belgesel', this, 'black', 'white')">Belgesel</a>
+    <a class="tablink" onclick="openPage('Muzik', this, 'black', 'white')">Muzik</a>
+    <a class="tablink" onclick="openPage('Spor', this, 'black', 'white')">Spor</a>
+  <a class="tablink" onclick="openPage('Dini', this, 'black', 'white')">Dini</a>
+  <a class="tablink" onclick="openPage('Çocuk', this, 'black', 'white')">Çocuk</a>
+  <a class="tablink" onclick="openPage('Film', this, 'black', 'white')">Film</a> 
+   <a class="tablink" onclick="openPage('Yerel', this, 'black', 'white')">Yedek</a>
+
+    <a class="tablink" onclick="openPage('Yedek', this, 'black', 'white')">Movie's</a>
+	<!--
+		1° package name:
+		Paketin adını değiştirin
+		<a class="tablink" onclick="openPage('EXAMPLE', this, 'black')">EXAMPLE</a>
+	-->
+  </div>
+  <div id="Ulusal" class="tabcontent text-center">
+  
+
+
+
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+
+<br>
+
+
+
+  <input  autocomplete="off" type="text" id="mySearch" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="beIN SPORTS HD" class="padding text-center myMenu">
+  
+   
+
+
+    <li class="zoom tablink-movies" onclick=maxplay_pro("13216.vod.redtraffic.xyz/ph587bc292b6861/play.m3u8")>
+      <a class=" lia tablink-text-movies"  id="defaultOpen">Anal Slut</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=maxplay_pro("12204.vod.adultiptv.net/ph58657d939d860/play.m3u8")>
+      <a class=" lia tablink-text-movies"  id="defaultOpen">BBC Anal</a>
+    </li>
+  
+
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5af7314886727/play.m3u8")>
+      <a class="lia tablink-text-movies">Cuckold 5</a>
+    </li>
+
+  
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5bb7089f3ce40/play.m3u8")>
+      <a class="lia tablink-text-movies">Kissa Sins Cant</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5a7a49c1629c5/play.m3u8")>
+      <a class="lia tablink-text-movies">HARD FUCKING</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5b2c90ee3ff2c/play.m3u8")>
+      <a class="lia tablink-text-movies">TUSHY Girl</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5c24bddbbf1af/play.m3u8")>
+      <a class="lia tablink-text-movies">Tiny Ass</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5bf61fee2f253/play.m3u8")>
+      <a class="lia tablink-text-movies">Itadaki! Seieki</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph5b92d96f67ee9/play.m3u8")>
+      <a class="lia tablink-text-movies">Riley Reid ass</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5705d949e04f9/play.m3u8")>
+      <a class="lia tablink-text-movies">Hardcore anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph584a808d500e3/play.m3u8")>
+      <a class="lia tablink-text-movies">My best friend</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5bbe69daa83f4/play.m3u8")>
+      <a class="lia tablink-text-movies">Cowgirl anal</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5a4c9805f315c/play.m3u8")>
+      <a class="lia tablink-text-movies">Hot Anal</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph568cac4e2639d/play.m3u8")>
+      <a class="lia tablink-text-movies">Cocu</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph589dd36b14b4a/play.m3u8")>
+      <a class="lia tablink-text-movies">Xy cuckold</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5c0b5eee5a374/play.m3u8")>
+      <a class="lia tablink-text-movies">Best amateur</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5c0539fdbe23f/play.m3u8")>
+      <a class="lia tablink-text-movies">C A C</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5ad62d409b6e9/play.m3u8")>
+      <a class="lia tablink-text-movies">Adriana and Megan anal</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5a0da3918c577/play.m3u8")>
+      <a class=" lia tablink-text-movies"  id="defaultOpen">TUSHY Hot Model</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph57148c2c48671/play.m3u8")>
+      <a class="lia tablink-text-movies">Chloe Amour Tries</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5afa0b462ce36/play.m3u8")>
+      <a class="lia tablink-text-movies">Whitney Wright</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5b8953f5c6863/play.m3u8")>
+      <a class="lia tablink-text-movies">18 year old </a>
+    </li>
+   
+  
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5844b0eca7e43/play.m3u8")>
+      <a class="lia tablink-text-movies">Ass roughly</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5bc4cb5e972f1/play.m3u8")>
+      <a class="lia tablink-text-movies">TRUE ANAL Ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph5ac29d4dac61b/play.m3u8")>
+      <a class="lia tablink-text-movies">My Ass</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph5912107e5b456/play.m3u8")>
+      <a class="lia tablink-text-movies">Gets Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph55e46259edeab/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal fucking </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5c20af64c0005/play.m3u8")>
+      <a class="lia tablink-text-movies">Gangbang </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph5bd5a47cbf513/play.m3u8")>
+      <a class="lia tablink-text-movies">Awesome fuck</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5a83715a96f9b/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Cumshot</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5c0c877e6e3e0/play.m3u8")>
+      <a class="lia tablink-text-movies">Brazilian Orgy</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5a661dcf2c013/play.m3u8")>
+      <a class="lia tablink-text-movies">Her husband</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph5b7585943bcad/play.m3u8")>
+      <a class="lia tablink-text-movies">Hard ass fucking</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.redtraffic.xyz/ph58ae397c9154a/play.m3u8")>
+      <a class="lia tablink-text-movies">Hendrix Trades Anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph570ab33330524/play.m3u8")>
+      <a class="lia tablink-text-movies">Ass Fucked </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph5acc0965643cf/play.m3u8")>
+      <a class="lia tablink-text-movies">Step Brother </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5c182ad50be2b/play.m3u8")>
+      <a class="lia tablink-text-movies">Pumping my ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5c0c353381630/play.m3u8")>
+      <a class="lia tablink-text-movies">ANAL SQUIRT </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph59a4e384643bf/play.m3u8")>
+      <a class="lia tablink-text-movies">For husband </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5bf5a8098acfc/play.m3u8")>
+      <a class="lia tablink-text-movies">anal DP threesome </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5982e7da7e1f8/play.m3u8")>
+      <a class="lia tablink-text-movies">fuck my wife </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph567a82a936f55/play.m3u8")>
+      <a class="lia tablink-text-movies">FakeTaxi Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5a4de3992ab0b/play.m3u8")>
+      <a class="lia tablink-text-movies">girlfriends ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5a94515ec879e/play.m3u8")>
+      <a class="lia tablink-text-movies">GIRLS CUMMING </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5b5738eb637c9/play.m3u8")>
+      <a class="lia tablink-text-movies">Filthy Mature </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.redtraffic.xyz/ph576b93cce25af/play.m3u8")>
+      <a class="lia tablink-text-movies">Karla Kush Try Anal Together </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph5c097b0805bf0/play.m3u8")>
+      <a class="lia tablink-text-movies">Angela White </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5c227e39e83b1/play.m3u8")>
+      <a class="lia tablink-text-movies">black dick </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5b8bbce452e06/play.m3u8")>
+      <a class="lia tablink-text-movies">Schoolgirl gangbanged</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.redtraffic.xyz/ph5aea671b10fec/play.m3u8")>
+      <a class="lia tablink-text-movies">cucklod in france </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph58a79acf90dc9/play.m3u8")>
+      <a class="lia tablink-text-movies">Cum Craving </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5c09807554682/play.m3u8")>
+      <a class="lia tablink-text-movies">Jessa Rhodes Anal Ever </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5b454bad1c1cc/play.m3u8")>
+      <a class="lia tablink-text-movies">Threesome </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph55bea469100a1/play.m3u8")>
+      <a class="lia tablink-text-movies">Francheska </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5beb20d4eff2a/play.m3u8")>
+      <a class="lia tablink-text-movies"> Anal Fucking</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph57dbfb963e75c/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Skinny Swinger </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5a0a971be8046/play.m3u8")>
+      <a class="lia tablink-text-movies">fucking my ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5add9897e3689/play.m3u8")>
+      <a class="lia tablink-text-movies">Trip With Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5b8eb4ea57bcc/play.m3u8")>
+      <a class="lia tablink-text-movies">Tiny Riley Reid </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph5a0da2c0bdd90/play.m3u8")>
+      <a class="lia tablink-text-movies">Eva Lovia </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph59676ca447530/play.m3u8")>
+      <a class="lia tablink-text-movies">Short Hair Wife </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5bca01f89145f/play.m3u8")>
+      <a class="lia tablink-text-movies">Samantha Rone First Anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5b05131287e0c/play.m3u8")>
+      <a class="lia tablink-text-movies">BLACKEDRAW Adriana </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph568f866bae2bb/play.m3u8")>
+      <a class="lia tablink-text-movies">Cassidy Klein </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph56cace316aa31/play.m3u8")>
+      <a class="lia tablink-text-movies">Cherie Deville Samantha Rone </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5b0523a619883/play.m3u8")>
+      <a class="lia tablink-text-movies">Mia Malkova Vicki Chase </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph59fad78864eb1/play.m3u8")>
+      <a class="lia tablink-text-movies">Eva  Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph586d1746296ea/play.m3u8")>
+      <a class="lia tablink-text-movies"> Cuckold sex </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph57d67a628a862/play.m3u8")>
+      <a class="lia tablink-text-movies">inside her asshole </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5bdc0a4320b98/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Model </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5ac1ed5458ffe/play.m3u8")>
+      <a class="lia tablink-text-movies">Lesbian and Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph5c04105f18691/play.m3u8")>
+      <a class="lia tablink-text-movies">Mandy muse anal gangbang </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph57e4dd4f887a5/play.m3u8")>
+      <a class="lia tablink-text-movies">Hot wife </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5bad5c0bd30ee/play.m3u8")>
+      <a class="lia tablink-text-movies">Her Panties </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph56581cde3f70c/play.m3u8")>
+      <a class="lia tablink-text-movies">Karla Kush and Zoey Monroe First Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5bd6c3b9b57d7/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Gets </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph561242ad828b9/play.m3u8")>
+      <a class="lia tablink-text-movies">Riley Reid First </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5581e158399fe/play.m3u8")>
+      <a class="lia tablink-text-movies">Stepdaughter Ass Fucked </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5b9bccba96ff3/play.m3u8")>
+      <a class="lia tablink-text-movies">STORIES WHILE </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph57ac32236b7ac/play.m3u8")>
+      <a class="lia tablink-text-movies">Gotti Gets Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5a29f2867a541/play.m3u8")>
+      <a class="lia tablink-text-movies">Hot Teenage Girl </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph57dbfac77bea8/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Threesome </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph559fdba3bf488/play.m3u8")>
+      <a class="lia tablink-text-movies">Moms Bang Teens </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5b7563a445edf/play.m3u8")>
+      <a class="lia tablink-text-movies">Brandy love </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5befb2829ab57/play.m3u8")>
+      <a class="lia tablink-text-movies">Russian Cutie </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5b0974d09e403/play.m3u8")>
+      <a class="lia tablink-text-movies">Gina Gerson </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph589da54f6171c/play.m3u8")>
+      <a class="lia tablink-text-movies"> Janice Griffith</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5b6c03babbcf0/play.m3u8")>
+      <a class="lia tablink-text-movies">Cuckold bi </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5bab34a4295fb/play.m3u8")>
+      <a class="lia tablink-text-movies">Bored Rich Girl </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph586a30a1c2770/play.m3u8")>
+      <a class="lia tablink-text-movies">Two Pretty Teens </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph57a462138c6c2/play.m3u8")>
+      <a class="lia tablink-text-movies">First Anal  Keisha Grey and Leah Gotti</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph56172fb158889/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen anal threesome </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5bedd3d5f22a5/play.m3u8")>
+      <a class="lia tablink-text-movies">the Ass while </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph571ad7319e0bb/play.m3u8")>
+      <a class="lia tablink-text-movies">hard anal fuck </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.redtraffic.xyz/ph5c0ffdb972419/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal fuck </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph5833175c9df75/play.m3u8")>
+      <a class="lia tablink-text-movies"> </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay(" m3u8")>
+      <a class="lia tablink-text-movies">Anal with </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph59e9fe45568de/play.m3u8")>
+      <a class="lia tablink-text-movies">Angela White </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph59a99d04c1dd3/play.m3u8")>
+      <a class="lia tablink-text-movies">WITH FRIEND </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5bf45e4c39ff5/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Threesome </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5bea6b3c51cb2/play.m3u8")>
+      <a class="lia tablink-text-movies">Swinging </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph57c606e26a99a/play.m3u8")>
+      <a class="lia tablink-text-movies">Petite Dakota for anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5719fd64bbb04/play.m3u8")>
+      <a class="lia tablink-text-movies">Rebel Lynn Do Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5a0da60550d61/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Has </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5a65954f6c022/play.m3u8")>
+      <a class="lia tablink-text-movies">Wannabe Lawyer </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5a0da755f0b40/play.m3u8")>
+      <a class="lia tablink-text-movies">Have Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5834b4c8858f2/play.m3u8")>
+      <a class="lia tablink-text-movies">Fucking Her Tight </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph55bb469a77d8d/play.m3u8")>
+      <a class="lia tablink-text-movies">Megan Rain Ass</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph5ba750e12192f/play.m3u8")>
+      <a class="lia tablink-text-movies">First Time Double Penetration </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph59c80396525e1/play.m3u8")>
+      <a class="lia tablink-text-movies">Riley Reid  Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph57cf71b97b35e/play.m3u8")>
+      <a class="lia tablink-text-movies">Big Natural </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5b6a246e83a48/play.m3u8")>
+      <a class="lia tablink-text-movies"> Best Porn </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph5b59803cb264f/play.m3u8")>
+      <a class="lia tablink-text-movies">Girl Wants </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5b3f29315b243/play.m3u8")>
+      <a class="lia tablink-text-movies"> Ibiza Model</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5a741f4e2967d/play.m3u8")>
+      <a class="lia tablink-text-movies">Housesitter Gets Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph5ab424cd24493/play.m3u8")>
+      <a class="lia tablink-text-movies"> Double Cuckold Facial</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5a43e168a11c7/play.m3u8")>
+      <a class="lia tablink-text-movies">Lana Rhodes Hot Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph5be5922ac9898/play.m3u8")>
+      <a class="lia tablink-text-movies">White MAID</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5adc5e5a8f44d/play.m3u8")>
+      <a class="lia tablink-text-movies">FIRST TIME PORN GIRLS </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5864f44354fc4/play.m3u8")>
+      <a class="lia tablink-text-movies">Carter Cruise and Adriana Chechik </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5722384eead4d/play.m3u8")>
+      <a class="lia tablink-text-movies">bbc cum </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph59969d395acd1/play.m3u8")>
+      <a class="lia tablink-text-movies">FUCK MY ASS </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph56c097100865c/play.m3u8")>
+      <a class="lia tablink-text-movies">Megan Rain </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5b4e95439577c/play.m3u8")>
+      <a class="lia tablink-text-movies">SEX SALON </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph5c035a0911614/play.m3u8")>
+      <a class="lia tablink-text-movies">romina </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5adc40a37fafa/play.m3u8")>
+      <a class="lia tablink-text-movies">Christi Cats teen </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph557f114383e2e/play.m3u8")>
+      <a class="lia tablink-text-movies">Interracial Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5a66f5856bccd/play.m3u8")>
+      <a class="lia tablink-text-movies">Naughty Teen </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph5bd34c47f19f9/play.m3u8")>
+      <a class="lia tablink-text-movies">Manuel Ferrara - Abella Danger Has Her Ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5742be2bf32e6/play.m3u8")>
+      <a class="lia tablink-text-movies">Alex Grey </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5c12aaa9aca3c/play.m3u8")>
+      <a class="lia tablink-text-movies"> IT DOUBLE</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph583ce4ff11dff/play.m3u8")>
+      <a class="lia tablink-text-movies">Brutal Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5900ee8e7e925/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Virgins </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph566ada3c967e3/play.m3u8")>
+      <a class="lia tablink-text-movies">fuck her ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph5b966e61a1846/play.m3u8")>
+      <a class="lia tablink-text-movies">Petite Angel </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5911ef1baadd9/play.m3u8")>
+      <a class="lia tablink-text-movies"> Tiny Petite</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5a1561790d9bd/play.m3u8")>
+      <a class="lia tablink-text-movies">The Best Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph55e97c05a5da1/play.m3u8")>
+      <a class="lia tablink-text-movies">Being Riley </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph58e12a3a76539/play.m3u8")>
+      <a class="lia tablink-text-movies">Kelsi Monroe Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5bbda9b6f263a/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Gapes  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph579861c153e30/play.m3u8")>
+      <a class="lia tablink-text-movies">Ariana Marie Marley Brinx Anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5b9b5a195ecda/play.m3u8")>
+      <a class="lia tablink-text-movies">Abigail </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph582e4f7bee5c5/play.m3u8")>
+      <a class="lia tablink-text-movies">hot wife takes it anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph5c0488d2ad78e/play.m3u8")>
+      <a class="lia tablink-text-movies">first time anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph57763054b21fc/play.m3u8")>
+      <a class="lia tablink-text-movies">First Double  Anya Olsen </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph59dccda08e829/play.m3u8")>
+      <a class="lia tablink-text-movies">Misha Cross anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph5900d8263c339/play.m3u8")>
+      <a class="lia tablink-text-movies">Denise Masino Leopard </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph58eebddf57085/play.m3u8")>
+      <a class="lia tablink-text-movies">The Overweight Angel </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5a3ea7b23750d/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Gets Her Asshole </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph59e4b40407f49/play.m3u8")>
+      <a class="lia tablink-text-movies">First Anal Threesome Experience </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5a41fca6017e8/play.m3u8")>
+      <a class="lia tablink-text-movies">PORN GIRLS </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5a9c571690266/play.m3u8")>
+      <a class="lia tablink-text-movies">Mel Fire </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph5977917a4e286/play.m3u8")>
+      <a class="lia tablink-text-movies">Molly Jane </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5a2b8fc1b776f/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal - TEEN </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph55e015cec941c/play.m3u8")>
+      <a class="lia tablink-text-movies">Kimberly Brix First Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph58727e2ecfd3b/play.m3u8")>
+      <a class="lia tablink-text-movies">teen chubby  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5bd014cfa94fa/play.m3u8")>
+      <a class="lia tablink-text-movies">Natalie Mars in the Ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5b4ec37784fa8/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Fucking </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.redtraffic.xyz/ph59adbae51f0ee/play.m3u8")>
+      <a class="lia tablink-text-movies">Stepmom stepson </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph570a90c096b79/play.m3u8")>
+      <a class="lia tablink-text-movies">FakeTaxi </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph55d80b4e58104/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal Country </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph59d112a735d00/play.m3u8")>
+      <a class="lia tablink-text-movies">Christy mack </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph595eb20133bd3/play.m3u8")>
+      <a class="lia tablink-text-movies">Lucie Wilde Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5665ffc7ea5d1/play.m3u8")>
+      <a class="lia tablink-text-movies">Fake Cop </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5ab3cb81e6864/play.m3u8")>
+      <a class="lia tablink-text-movies">lesbian anal dildo </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5a7654303d779/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal in Bondage </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph58c024e4dbb8e/play.m3u8")>
+      <a class="lia tablink-text-movies">Soccer Mom wants </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph56d3fc6ae89b0/play.m3u8")> 
+      <a class="lia tablink-text-movies">Nerd Maya Grand </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph59d22a31ea574/play.m3u8")>
+      <a class="lia tablink-text-movies">Rooms Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph565c1bce4b444/play.m3u8")>
+      <a class="lia tablink-text-movies">Megan Rains First </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph57326d52af225/play.m3u8")>
+      <a class="lia tablink-text-movies">Deep In Her Ass </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("60106.vod.adultiptv.net/ph55a510bef3c38/play.m3u8")>
+      <a class="lia tablink-text-movies">Karla Kush First Time Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph562a56d630d1c/play.m3u8")>
+      <a class="lia tablink-text-movies">Asian Mila Jade  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph56d634fd551d3/play.m3u8")>
+      <a class="lia tablink-text-movies">Old Mom Loves Cock </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5a492cdab2fb5/play.m3u8")>
+      <a class="lia tablink-text-movies"> Mirela Mansur Adora</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph59f883fb24f33/play.m3u8")>
+      <a class="lia tablink-text-movies">ambeu  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph5ac9787d399b9/play.m3u8")>
+      <a class="lia tablink-text-movies">sara belmont </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph592bee1b10c61/play.m3u8")>
+      <a class="lia tablink-text-movies">Blonde Teen First Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph570216e9a4234/play.m3u8")>
+      <a class="lia tablink-text-movies">Alexa Tomas Loves Anal</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph5881dfb2b0e16/play.m3u8")>
+      <a class="lia tablink-text-movies">Dora-Teach My Asshole </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph5b38781d844db/play.m3u8")>
+      <a class="lia tablink-text-movies">angel anne </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.redtraffic.xyz/ph5aad26f8bde56/play.m3u8")>
+      <a class="lia tablink-text-movies">Mia Khalifa </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.redtraffic.xyz/ph5718aa91b10ab/play.m3u8")>
+      <a class="lia tablink-text-movies">Adida My18Teens </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph5816058b6b4cc/play.m3u8")>
+      <a class="lia tablink-text-movies">Virgin butt sex </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5b9ab0c24662c/play.m3u8")>
+      <a class="lia tablink-text-movies">Gets Anal Fucked </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph5ba7e3e6421ee/play.m3u8")>
+      <a class="lia tablink-text-movies">Sasha Swan First Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph58eeb9b7b59f0/play.m3u8")>
+      <a class="lia tablink-text-movies">BIG BOOTY STEP </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.adultiptv.net/ph56948e238d18d/play.m3u8")>
+      <a class="lia tablink-text-movies">Karina Grand aka Lana Roberts </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph591e08c1a861e/play.m3u8")>
+      <a class="lia tablink-text-movies">cfnm Europe </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5c13e25079e2f/play.m3u8")>
+      <a class="lia tablink-text-movies">Brazilian Big Whores </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.redtraffic.xyz/ph594d6abed1996/play.m3u8")>
+      <a class="lia tablink-text-movies">Jessie Rogers </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph58efc43e980bd/play.m3u8")>
+      <a class="lia tablink-text-movies">Teen Holly Hendrix swallows </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph57076405dbe05/play.m3u8")>
+      <a class="lia tablink-text-movies">First Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.adultiptv.net/ph55eaadf56dd6f/play.m3u8")>
+      <a class="lia tablink-text-movies">ass and finished in her mouth </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph598d345d21c90/play.m3u8")>
+      <a class="lia tablink-text-movies">Mandy Muse - Lovely Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5ae2d98dd27a5/play.m3u8")>
+      <a class="lia tablink-text-movies">Anal With Groom </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph57bddddd3e201/play.m3u8")>
+      <a class="lia tablink-text-movies">Teens Biley </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12156.vod.redtraffic.xyz/ph5a7a17c2c3c9e/play.m3u8")>
+      <a class="lia tablink-text-movies">How To Fuck A Woman </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.adultiptv.net/ph59c8eed2d4d0f/play.m3u8")>
+      <a class="lia tablink-text-movies">Evelina Darling anal sex</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph583e0be103c05/play.m3u8")>
+      <a class="lia tablink-text-movies">Fucking </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.redtraffic.xyz/ph59d6f00eca05f/play.m3u8")>
+      <a class="lia tablink-text-movies">Gozou dentro </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph58939263d2373/play.m3u8")> 
+      <a class="lia tablink-text-movies">Mea Melone anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph5acf502366138/play.m3u8")>
+      <a class="lia tablink-text-movies">ass fuck </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph55ba863e53fb4/play.m3u8")>
+      <a class="lia tablink-text-movies">Dakota want </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("11216.vod.redtraffic.xyz/ph57e812dca0de4/play.m3u8")> 
+      <a class="lia tablink-text-movies">Mila Yul Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.redtraffic.xyz/ph575629da8bde3/play.m3u8")>
+      <a class="lia tablink-text-movies">teen doll anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("21470.vod.adultiptv.net/ph59106cfda9cae/play.m3u8")>
+      <a class="lia tablink-text-movies">Rebecca Volpetti </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("10238.vod.adultiptv.net/ph59e64dd013453/play.m3u8")>
+      <a class="lia tablink-text-movies"> Anal Brasil Lola </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph56e9b42652dcb/play.m3u8")>
+      <a class="lia tablink-text-movies">FakeTaxi </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.redtraffic.xyz/ph5a4bdc3c62122/play.m3u8")>
+      <a class="lia tablink-text-movies">ABELLA DANGER&#039;S  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.redtraffic.xyz/ph5b6c9962074b3/play.m3u8")>
+      <a class="lia tablink-text-movies">Alessandra Marques, Mayara Shelson, Melissa Ramos </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("6122.vod.adultiptv.net/ph569ee1ef39947/play.m3u8")>
+      <a class="lia tablink-text-movies"> Asian Dream</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("218158.vod.adultiptv.net/ph55d35f5a82803/play.m3u8")>
+      <a class="lia tablink-text-movies">Brandy Aniston  Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1244.vod.adultiptv.net/ph5addf21f6db50/play.m3u8")>
+      <a class="lia tablink-text-movies">Holly Hendrix Has Anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("13216.vod.redtraffic.xyz/ph5aa336bae3c68/play.m3u8")>
+      <a class="lia tablink-text-movies">Cute Law Student And Anal Sex </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("1465.vod.adultiptv.net/ph5631f2d064b4a/play.m3u8")>
+      <a class="lia tablink-text-movies">FakeTaxi anal </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("12204.vod.adultiptv.net/ph586546c76a9bb/play.m3u8")>
+      <a class="lia tablink-text-movies">Fucks Famous Arab </a>
+    </li>
+
+
+
+
+    
+  </ul>
+  </div>
+
+
+  
+  <div id="Haber" class=" tabcontent text-center">
+
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch4" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="AD SPORTS" class="padding text-center myMenu">
+    
+
+  
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-cnnturk/tracks-v1a1/mono.m3u8")>
+      <a class="lia tablink-text-movies">CNN</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/cnnturk.stream/sec-f5-v1-a1.m3u8")>
+      <a class="lia tablink-text-movies">CNN (1)</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gt-ulketv/tracks-v1a1/mono.m3u8")>
+      <a class="lia tablink-text-movies">ÜLKE TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8")>
+      <a class="lia tablink-text-movies">24 TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8")>
+      <a class="lia tablink-text-movies">NTV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLW50dnR2L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo1Nn0%3D/fast")>
+      <a class="lia tablink-text-movies">NTV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLW50dnR2L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo1Nn0%3D/fast")>
+      <a class="lia tablink-text-movies">BENGÜ TÜRK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/benguturk-tv.m3u8")>
+      <a class="lia tablink-text-movies">BENGÜ TÜRK (1)</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9PbGF5VHVya19UVi9pbmRleC5tM3U4IiwiaWQiOjI3MX0%3D/fast")>
+      <a class="lia tablink-text-movies">OLAY TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/halk-tv.m3u8")>
+      <a class="lia tablink-text-movies">HALK TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/akit-tv.m3u8")>
+      <a class="lia tablink-text-movies">AKIT TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/tvnet.m3u8")>
+      <a class="lia tablink-text-movies">TVNET</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfYW5hZG9sdW5ldC9hbmFkb2x1bmV0L3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzU2fQ%3D%3D/fast")>
+      <a class="lia tablink-text-movies">ANADOLU TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("szctvdvr.blutv.com/blutv_szctv_dvr/live.m3u8")>
+      <a class="lia tablink-text-movies">SÖZCÜ TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/sozcu-tv.m3u8")>
+      <a class="tablink-text-movies">SÖZCÜ TV (1)</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("helga.iptv2022.com/tv_100/index.m3u8")>
+      <a class="lia tablink-text-movies">TV 100</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/tv-100.m3u8")>
+      <a class="lia tablink-text-movies">TV 100 (1)</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8")>
+      <a class="lia tablink-text-movies">TRT 1</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-flashtv/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">FLASH HABER</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("halktv.daioncdn.net/halktv/halktv.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609")>
+      <a class="tablink-text-movies">HALK TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/fox/index.m3u8")>
+      <a class="tablink-text-movies">NOW TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/ulusalkanal.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">ULUSAL KANAL</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tv-trthaber.medya.trt.com.tr/master.m3u8")>
+      <a class="tablink-text-movies">TRT HABER</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("tv-trtavaz.medya.trt.com.tr/master_720.m3u8")>
+      <a class="tablink-text-movies">TRT AVAZ</a>
+    </li>
+    
+      <li class="zoom tablink-movies" onclick=extplay("ciner-live.daioncdn.net/haberturktv/haberturktv.m3u8")>
+      <a class="tablink-text-movies">HABER TÜRK</a>
+      </li>
+    
+     <li class="zoom tablink-movies" onclick=extplay("tv-trtturk.medya.trt.com.tr/master.m3u8")>
+      <a class="tablink-text-movies">HABER TÜRK</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-tele1/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">TELE 1</a>
+    </li>
+    
+    <li class="zoom tablink-movies" onclick=extplay("beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8")>
+      <a class="tablink-text-movies">BEYAZ TV</a>
+    </li>
+        
+    <li class="zoom tablink-movies" onclick=extplay("akittv-live.ercdn.net/akittv/akittv_720p.m3u8")>
+      <a class="tablink-text-movies">AKIT TV</a>
+    </li>
+    
+      <li class="zoom tablink-movies" onclick=extplay("ensonhaber-live.ercdn.net/benguturk/benguturk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">BENGÜ TÜRK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-dunya/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DÜNYA TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-atva2/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">A2</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("helga.iptv2022.com/haber_global/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">HABER GLOBAL</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-tgrteu/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TGRT EU</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("ciner-live.daioncdn.net/bloomberght/bloomberght.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">BLOOMBERG HT</a>
+    </li>
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TGRT HABER</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/akit-tv.m3u8")>
+      <a class="tablink-text-movies">AKIT TV</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/tvnet.m3u8")>
+      <a class="tablink-text-movies">TVNET</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/tbmm-tv.m3u8")>
+      <a class="tablink-text-movies">TBMM TV</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/dha-canli-1.m3u8")>
+      <a class="tablink-text-movies">DHA 1</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/tv5.stream/sec-f5-v1-a1.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TV 5</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("helga.iptv2022.com/OlayTurk_TV/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">OLAY TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("edge1.socialsmart.tv/turkhaber/bant1/chunks.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TÜRK HABER</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/haberturk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">HABER TÜRK </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/flashtv.stream/sec-f5-v1-a1.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">FLASH HABER</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-flashtv/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">FLASH HABER (1)</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWFoYWJlci9wbGF5bGlzdC5tM3U4IiwiaWQiOjN9/fast")>
+      <a class=" tablink-text-movies"  id="defaultOpen">A HABER</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/ahaber.stream/sec-f5-v1-a1.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">A HABER (1)</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8t")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TRT TÛRK</a>
+    </li>
+
+
+
+
+
+  </ul>
+  </div>
+  
+  <div id="Belgesel" class=" tabcontent text-center">
+
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch5" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="EGYPT SPORT TV" class="padding text-center myMenu">
+    
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/teve2.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Teve 2</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/dmax.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Dmax</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/tlc.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Tlc</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/belgesel-tv.m3u8")>
+      <a class="tablink-text-movies">Belgesel </a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/belgesel/tgrt-belgesel.m3u8")>
+      <a class="tablink-text-movies">Tgrt Belgesel</a>
+    </li>
+    
+        <li class="zoom tablink-movies" onclick=extplay("75.119.144.48/SUPERTURK_MAX_HD/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Süper Türk</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8")>
+      <a class="tablink-text-movies">FORTUNA TÜRK TV</a>
+    </li> 
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/dha-canli-1.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DHA </a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ekonomi/bloomberg-ht.m3u8")>
+      <a class="tablink-text-movies">BLOOMBERG</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/saglikli-gunler-tv.m3u8")>
+      <a class="tablink-text-movies">SAGLIK TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/tarih-tv.m3u8")>
+      <a class="tablink-text-movies">TARIH TV</a>
+    </li>
+   
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/belgesel-tv.m3u8")>
+      <a class="tablink-text-movies">BELGESEL TV</a>
+    </li>
+
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/tlc.m3u8")>
+      <a class="tablink-text-movies">TLC</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/tarih-tv.m3u8")>
+      <a class="tablink-text-movies">TARIH TV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/kultur-sanat-tv.m3u8")>
+      <a class="tablink-text-movies">SANAT TV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/belgesel/yaban-tv.m3u8")>
+      <a class="tablink-text-movies">YABAN </a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/belgesel/ciftci-tv.m3u8")>
+      <a class="tablink-text-movies">CIFCI</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/belgesel/tarim-tv.m3u8")>
+      <a class="tablink-text-movies">TARIMI</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/belgesel/koy-tv.m3u8")>
+      <a class="tablink-text-movies">KÖY TV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/chill-tv.m3u8")>
+      <a class="tablink-text-movies">CHILI TV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/cansuyu-tv.m3u8")>
+      <a class="tablink-text-movies">CANSUYU TV</a>
+    </li>
+
+
+
+
+    </li>
+  </ul>
+  </div>
+  
+  <div id="Muzik" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch6" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="ARABIC SPORT TV" class="padding text-center myMenu">  
+
+
+  <li class="zoom tablink-movies" onclick=extplay("cdn1-ercistv.yayin.com.tr/ercistv/amlst:ercistv/chunklist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">ERCIS TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPWFyYWJlc2t5ZW5pJmZpbGU9Lm0zdTgiLCJpZCI6MzU4fQ%3D%3D/fast")>
+      <a class=" tablink-text-movies"  id="defaultOpen">ARABESK TV</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("media.finest.tv/hls/live.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">FINEST TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("http://stream.tvcdn.net/diger-muzik/sila-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">SILA TV</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("66.160.192.241/trtmuzik/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TRT MÜZIK</a>
+    </li>
+
+   <li class="zoom tablink-movies" onclick=extplay("tvsms.club/tv.php?kanal=zeynotv&file=.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">ZEYNO</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tvsms.club/tvz.php?kanal=toppop&file=.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TOP POP</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TATLISES TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/tatlises-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TATLISES TV (1)</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TEMPO TV</a>
+    </li>
+    <li class="zoom tablink-movies" onclick=extplay("livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER TÜRK</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("listen.powerapp.com.tr/pturkakustik/akustik.smil/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen"> POWER AKUSTIK</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("listen.powerapp.com.tr/pturkslow/slow.smil/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER SLOW</a>
+    </li>
+
+      <li class="zoom tablink-movies" onclick=extplay("listen.powerapp.com.tr/pturktaptaze/taptaze.smil/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER TAPTAZE</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-powerhd/tracks-v1a1/mono.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER TV</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/power-dance.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER DANCE</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/power-love.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">POWER LOVE</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e17cd59e8b.smil/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 AŞK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=ss2")>
+      <a class=" tablink-text-movies"  id="defaultOpen">SUPER Sport 2</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/number-one-turk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 TÛRK</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/number-1-damar.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 DAMAR</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 DAMAR (1)</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/number-1-dance.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 DANCE</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e2aa8acf44_1/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">NR 1 DANCE (1)</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("dogus-live.daioncdn.net/kralpoptv/kralpoptv_720p.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">KRAL POP</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("cdn-cine5tv.yayin.com.tr/cine5tv/cine5tv/.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">CINE 5</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("75.119.144.48/SUPERTURK_MAX_HD/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">SUPER TÜRK MAX</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DREAM TÜRK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("muzzik-live.morescreens.com/mts-a4/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">MÜZIK HIP HOP</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPWRhbWFyJmZpbGU9Lm0zdTgiLCJpZCI6MzgxfQ%3D%3D/fast")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DAMAR TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("cdn-duguntvmedya.yayin.com.tr/duguntvmedya/duguntvmedya/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DÜGÜN TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("yayin.slowkaradeniztv.com:3390/hybrid/play.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">SLOW KARADENIZ</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("rpn3.bozztv.com/dvrfl07/ushba-t4/tracks-v1a1/mono.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMy8yMDI0IDEwOjUzOjMzIFBNJmhhc2hfdmFsdWU9UXFmOWJPNEhZazNPZDlGVzJKbVNHdz09JnZhbGlkbWludXRlcz0xNDQwJnN0cm1fbGVuPTI4")>
+      <a class=" tablink-text-movies"  id="defaultOpen">HINT MUZIGI</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("911play.ru:3456/live/VostokSite/cdnVostaoc911tv123456/489.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">VOSTOK TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/cansuyu-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Cansuyu </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/tmb.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Tmb</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/muzik-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Muzik Tv</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tvsms.club/tv.php?kanal=damar&file=.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Damar Tv</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("cdn1-ercistv.yayin.com.tr/ercistv/amlst:ercistv/chunklist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Erciyes</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tvsms.club/tv.php?kanal=zeynotv&file=.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Zeyno Tv</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("tvsms.club/tvz.php?kanal=toppop&file=.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Top Pop</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Tempo</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/muzik/trt-muzik.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TRT MÛZIK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/dost-web-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DOST TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/ezo-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">EZO TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/arma-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">ARMA TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/genc-sms-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">GENC SMS</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/aviva.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">AVIVA </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/fora-muzik.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">FORA TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/mega-tv-iskenderun.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">MEGA TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/demo-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DEMO TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/ceyhan-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">CEYHAN TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/yagmurlu-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">YAGMURLU TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/kardes-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">KARDES TV</a>
+    </li>
+
+
+
+
+
+
+
+
+    
+  </ul>
+  </div>
+  
+  <div id="Spor" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch7" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="OSN" class="padding text-center myMenu">
+    
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/sports-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TV SPOR</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/beinsporthaber.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">BEIN-SPOR</a>
+    </li>
+  
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/tivibu-spor.m3u8")>
+      <a class="tablink-text-movies">TIVU-BU</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/fb-tv.m3u8")>
+      <a class="tablink-text-movies">FB</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/bric-ve-satranc-tv.m3u8")>
+      <a class="tablink-text-movies">SATRANC</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/fit-yasa-tv.m3u8")>
+      <a class="tablink-text-movies">FIT YASA</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/spor/ziraat-turkiye-kupasi-tv.m3u8")>
+      <a class="tablink-text-movies">A SPOR</a>
+    </li> 
+
+    <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/aspor.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">A SPOR (1)</a>
+    </li> 
+
+
+    <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/111412")>
+      <a class="tablink-text-movies">SMART SPOR</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/19182")>
+      <a class="tablink-text-movies">EURO SPORT 2</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/19181")>
+      <a class="tablink-text-movies">EURO SPORT 1</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/16955")>
+      <a class="tablink-text-movies">YILDIZ SPOR</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/687")>
+      <a class="tablink-text-movies">NMBA</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/690")>
+      <a class="tablink-text-movies">FB</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/111411")>
+      <a class="tablink-text-movies">SMARTS 2</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/111410")>
+      <a class="tablink-text-movies">SMARTS</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/111409")>
+      <a class="tablink-text-movies">SMARTS 1</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/696")>
+      <a class="tablink-text-movies">SPORTS TV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/6296")>
+      <a class="tablink-text-movies">A SPORTS</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/115204")>
+      <a class="tablink-text-movies">TRT SPORT</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/697")>
+      <a class="tablink-text-movies">TRT SPORT 1</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/115207")>
+      <a class="tablink-text-movies">SPORT 2</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/700")>
+      <a class="tablink-text-movies">SPORT 1</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/707")>
+      <a class="tablink-text-movies">TIVUBU 3</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/708")>
+      <a class="tablink-text-movies">TIVUBU 2</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("http://tv.xtremetv.eu:8000/RAMBOfoundedoninternetsoIchangedTheFuckinguSERNAMelol123/5caU9cN5jFjZ/709")>
+      <a class="tablink-text-movies">TIVUBU 1</a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+
+  </ul>
+  </div>
+  
+  <div id="Dini" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch8" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="ARABIC" class="padding text-center myMenu">
+    
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/semerkand-way.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">SEMERKANT</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/dost-tv.m3u8")>
+      <a class="tablink-text-movies">DOST TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/tv-5.m3u8")>
+      <a class="tablink-text-movies">TV 5</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/gonca-tv.m3u8")>
+      <a class="tablink-text-movies">GONCA TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kudus-tv.m3u8")>
+      <a class="tablink-text-movies">KUDUS TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/lalegul-tv.m3u8")>
+      <a class="tablink-text-movies">LALEGÛL</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/on4-tv.m3u8")>
+      <a class="tablink-text-movies">ONE 4</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/mihrap-tv.m3u8")>
+      <a class="tablink-text-movies">MIHRAB</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kuran-i-kerim-dersleri.m3u8")>
+      <a class="tablink-text-movies">KURAN-I-KERIM</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/superturk-tv.m3u8")>
+      <a class="tablink-text-movies">SÜPER TÜRK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/dost-tv.m3u8")>
+      <a class="tablink-text-movies">Dost TV  </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/meltem-tv.m3u8")>
+      <a class="tablink-text-movies">Meltem TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/tv-5.m3u8")>
+      <a class="tablink-text-movies">TV 5</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/diyar-tv.m3u8")>
+      <a class="tablink-text-movies">Diyar TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/gonca-tv.m3u8")>
+      <a class="tablink-text-movies">Gonca TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/ilk-tv.m3u8")>
+      <a class="tablink-text-movies">İLK TV </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kudus-tv.m3u8 ")>
+      <a class="tablink-text-movies">Kudüs TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/lalegul-tv.m3u8")>
+      <a class="tablink-text-movies">Lalegül TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/on4-tv.m3u8")>
+      <a class="tablink-text-movies">On4 TV </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kanal-12.m3u8")>
+      <a class="tablink-text-movies">Kanal 12</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/aile-tv.m3u8")>
+      <a class="tablink-text-movies">Aile TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/asr-i-serif-tv.m3u8")>
+      <a class="tablink-text-movies">Aşr-ı Şerif TV </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kuran-i-kerim-dersleri.m3u8")>
+      <a class="tablink-text-movies">Kuran-ı Kerim Dersleri</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/islam-tv.m3u8")>
+      <a class="tablink-text-movies">İslam TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/ilmihal-tv.m3u8")>
+      <a class="tablink-text-movies">İlmihal TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/asr-i-saadet-tv.m3u8")>
+      <a class="tablink-text-movies">Asr-ı Saadet TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/ilahiler-tv.m3u8")>
+      <a class="tablink-text-movies">İlahiler TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/vaaz-tv.m3u8")>
+      <a class="tablink-text-movies">Vaaz TV </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/sat-7-turk.m3u8")>
+      <a class="tablink-text-movies">Sat 7 Türk</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kanal-hayat.m3u8")>
+      <a class="tablink-text-movies">Kanal Hayat</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/abn-turkey.m3u8")>
+      <a class="tablink-text-movies">ABN Turkey</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/mukabele-tv.m3u8")>
+      <a class="tablink-text-movies">Mukabele TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("75.119.144.48/SUPERTURK_TV_STREAM/index.m3u8")>
+      <a class="tablink-text-movies">SÜPER TÜRK TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/dizi-film-tv.m3u8")>
+      <a class="tablink-text-movies">Dizi Film TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/semerkand-way.m3u8")>
+      <a class="tablink-text-movies">Semerkand Way</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/dost-tv.m3u8")>
+      <a class="tablink-text-movies">Dost TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/meltem-tv.m3u8")>
+      <a class="tablink-text-movies">Meltem TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/diyar-tv.m3u8")>
+      <a class="tablink-text-movies">Diyar TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/ilk-tv.m3u8")>
+      <a class="tablink-text-movies">İLK TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kudus-tv.m3u8")>
+      <a class="tablink-text-movies">Kudüs TV </a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/mihrap-tv.m3u8")>
+      <a class="tablink-text-movies">Mihrap TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/sat-7-turk.m3u8")>
+      <a class="tablink-text-movies">Sat 7 Türk</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/dini/kanal-hayat.m3u8")>
+      <a class="tablink-text-movies">Kanal Hayat</a>
+    </li>
+
+
+
+  </ul>
+  </div>
+  
+  <div id="Çocuk" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch9" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="ITALY" class="padding text-center myMenu">
+    
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/trt-cocuk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Trt Cocuk</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/trt-eba.m3u8")>
+      <a class="tablink-text-movies">Trt Eba</a>
+    </li>
+
+ <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/trt-diyanet-cocuk.m3u8")>
+      <a class="tablink-text-movies">Trt Cocuk Diyanet</a>
+    </li>
+  
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/cartoon-network.m3u8")>
+      <a class="tablink-text-movies">Cartoon</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("http://stream.tvcdn.net/cocuk-egitim/cizgi-film-tv.m3u8")>
+      <a class="tablink-text-movies">Cizgi Film</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/trt-cocuk.m3u8")>
+      <a class="tablink-text-movies">Trt CocuK</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/cocuklara-ozel-tv.m3u8")>
+      <a class="tablink-text-movies">CocuK ÔZEL</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/trt-diyanet-cocuk.m3u8")>
+      <a class="tablink-text-movies">CocuK 3</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/cartoon-network.m3u8")>
+      <a class="tablink-text-movies">CARTOON</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/cocuk-egitim/cizgi-film-tv.m3u8")>
+      <a class="tablink-text-movies">cizgi-film</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-muzik/ceyhan-tv.m3u8")>
+      <a class="tablink-text-movies">CEYHAN TV</a>
+    </li>
+
+
+
+  </ul>
+  </div>
+  
+  <div id="Film" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch10" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="UK" class="padding text-center myMenu">
+    
+
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/tv-4.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TV 4</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("live.euromediacenter.com/kanal19/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">KANAL 19</a>
+    </li>
+
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/360-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">360</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/dizi-film-tv.m3u8")>
+      <a class="tablink-text-movies">Dizi Film TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/yerel/tivi6.m3u8")>
+      <a class="tablink-text-movies">Tivi 6</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/cine-1.m3u8")>
+      <a class="tablink-text-movies">Cine 1</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/tivi-turk.m3u8")>
+      <a class="tablink-text-movies">Tivi Türk</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/viyana-tv.m3u8")>
+      <a class="tablink-text-movies">VIYANA TV</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/dizi-film-tv.m3u8")>
+      <a class="tablink-text-movies">DIZI FILM</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TRT TÛRK</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/deniz-postasi-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">DENIZ POSTASI</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/gopsen-tv.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">GÖBSEN TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/isvicre-tv.m3u8")>
+      <a class="tablink-text-movies">ISVICRE TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/lugat-tv.m3u8")>
+      <a class="tablink-text-movies">LUGAT TV</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/diger-eglence/tivi-turk.m3u8")>
+      <a class="tablink-text-movies">TIVI TÜRK</a>
+    </li>
+
+
+
+
+    
+  </ul>
+  </div>  <div id="Yerel" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch11" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="USA" class="padding text-center myMenu">
+    
+    <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Trt 1 </a>
+    </li> 
+
+      <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/aytv/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">ATV</a>
+    </li>
+
+     <li class="zoom tablink-movies" onclick=extplay("116.202.238.88/ATV_TR/index.m3u8")>
+      <a class="tablink-text-movies">ATV | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/atv.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">ATV | c</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("yayin2.canlitv.fun/livetv/atv.stream/master.m3u8")>
+      <a class="tablink-text-movies">ATV | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/aytv/index.m3u8")>
+      <a class="tablink-text-movies">ATV | E</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-atvavrupa/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Atv eu</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("trn03.tulix.tv/gt-atvavrupa/index.m3u8")>
+      <a class="tablink-text-movies">Atv eu | a</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("116.202.238.88/KANALD_TR/index.m3u8")>
+      <a class="tablink-text-movies">Kanal D | a</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/kanald.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">Kanal D | b </a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("yayin2.canlitv.fun/livetv/kanald.stream/master.m3u8")>
+      <a class="tablink-text-movies">Kanal D | c</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/kanald/index.m3u8")>
+      <a class="tablink-text-movies">Kanal D | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-eurod/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Euro D </a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("116.202.238.88/SHOWTV_TR/index.m3u8")>
+      <a class="tablink-text-movies">Show Tv | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("yayin2.canlitv.fun/livetv/showtv.stream/master.m3u8")>
+      <a class="tablink-text-movies">Show Tv | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/show/index.m3u8")>
+      <a class="tablink-text-movies">Show Tv | e</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("ciner-live.daioncdn.net/showtv/showtv.m3u8")>
+      <a class="tablink-text-movies">Show Tv | f</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("66.160.192.241/showtv/index.m3u8")>
+      <a class="tablink-text-movies">Show Tv | g</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-showtvturk/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Show Türk</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/tur/shmax.m3u8")>
+      <a class="tablink-text-movies">Show Max</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("trn03.tulix.tv/gt-startv/index.m3u8")>
+      <a class="tablink-text-movies">Star </a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("116.202.238.88/STARTV_TR/index.m3u8")>
+      <a class="tablink-text-movies">Star | a</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/startv.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">Star | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("yayin2.canlitv.fun/livetv/startv.stream/master.m3u8")>
+      <a class="tablink-text-movies">Star | c</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/star/index.m3u8")>
+      <a class="tablink-text-movies">Star | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("dogus-live.daioncdn.net/startv/startv.m3u8")>
+      <a class="tablink-text-movies">Star | e</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tna6.tulix.tv/live/83a4128e87fca734c959aa37b03c8a4d/6737a153/ovair1-starttv.m3u8")>
+      <a class="tablink-text-movies">Star | f</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("live-fi.tvkaista.net/star-channel/live.m3u8?src=opengraph")>
+      <a class="tablink-text-movies">Star | g</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("66.160.192.241/startvturk/index.m3u8")>
+      <a class="tablink-text-movies">Star | h</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/trn03/gt-eurostar/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Euro Star</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("beyaztv-live.daioncdn.net/beyaztv/beyaztv.m3u8")>
+      <a class="tablink-text-movies">Beyaztv</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("helga.iptv2022.com/beyaz_tv/index.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | a</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("yayin2.canlitv.fun/livetv/beyaztv.stream/master.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/beyaztv.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("116.202.238.88/BEYAZTV_TR/index.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | c</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("trn03.tulix.tv/gt-beyaztv/index.m3u8")>
+      <a class="tablink-text-movies">Beyaztv | e</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("trn03.tulix.tv/gt-kanal7/index.m3u8")>
+      <a class="tablink-text-movies">Kanal7</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | a</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("kanal7-live.daioncdn.net/kanal7/kanal7.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | b</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("149.13.0.66:4003/kanal7")>
+      <a class="tablink-text-movies">Kanal7 | c</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("kanal7-live.daioncdn.net/kanal7/kanal7.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | d</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("c.fulltvizle.com/kanal7/index.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | f</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-kanal7/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | g</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("trn03.tulix.tv/gt-kanal7/index.m3u8")>
+      <a class="tablink-text-movies">Kanal7 | h</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8")>
+      <a class="tablink-text-movies">Kanal 7 Eu</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("50.7.144.122:1935/livetv/tv8-5.stream/sec-f5-v1-a1.m3u8")>
+      <a class="tablink-text-movies">TV 8,5</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tv8-live.daioncdn.net/tv8/tv8.m3u8")>
+      <a class="tablink-text-movies">TV 8 </a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-tv8int/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">TV 8 Int</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/trt-1.m3u8")>
+      <a class="tablink-text-movies">Trt 1</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">Trt 1</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/kanal-d.m3u8")>
+      <a class="tablink-text-movies">Kanal D</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/now-tv.m3u8")>
+      <a class="tablink-text-movies">Now TV</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/show-tv.m3u8")>
+      <a class="tablink-text-movies">Show TV</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/beyaz-tv.m3u8")>
+      <a class="tablink-text-movies">Beyaz TV</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/tv8.m3u8")>
+      <a class="tablink-text-movies">Kanal 7</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8")>
+      <a class="tablink-text-movies">TV 8</a>
+    </li>
+
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/tv8.m3u8")>
+      <a class="tablink-text-movies">TV 8</a>
+    </li>
+                                     
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/star-tv.m3u8")>
+      <a class="tablink-text-movies">Star TV</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/360-tv.m3u8")>
+      <a class="tablink-text-movies">360 TV</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/tv-100.m3u8")>
+      <a class="tablink-text-movies">TV 100</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8")>
+      <a class="tablink-text-movies">TRT Türk</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/euro-d.m3u8")>
+      <a class="tablink-text-movies">Euro D</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/tgrt-eu.m3u8 ")>
+      <a class="tablink-text-movies">TGRT EU</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8")>
+      <a class="tablink-text-movies">Show Türk</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/beyaz-tv.m3u8")>
+      <a class="tablink-text-movies">Beyaz TV </a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal/360-tv.m3u8 ")>
+      <a class="tablink-text-movies">360 TV</a>
+    </li>
+        
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/trt-turk.m3u8")>
+      <a class="tablink-text-movies">TRT TürK</a>
+    </li>
+                                              
+     </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/trt-avaz.m3u8")>
+      <a class="tablink-text-movies">TRT Avaz</a>
+    </li>
+                                              
+          </li>
+     <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/eglence/show-max.m3u8")>
+      <a class="tablink-text-movies">Show Max</a>
+    </li>
+                                              
+                                              
+   
+
+  </ul>
+  </div>
+   </div> 
+
+   <div id="Yedek" class=" tabcontent text-center">
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+
+    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="KIDS" class="padding text-center myMenu">
+    
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277935_08f6/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Yeniden Başlamak</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277929_08ea/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Çetin Ceviz 2</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277909_08c2/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Aşkın 5 Hali</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277916_08d0/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Boşu Bir Yerde</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278077_0a12/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Muhbir</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277937_08fa/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Siyah ya da Beyaz</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277913_08ca/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Beceriksiz Katil</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277930_08ec/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Deli Saçması</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277914_08cc/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Uyuyana Kadar</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277990_0964/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Suçlu</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277936_08f8/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Mahrumlar</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277931_08ee/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Elimiz Mahkum</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277942_0904/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Şimdi Aşk</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277945_090a/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Zengin Kısmet</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278080_0a18/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Ölümcül Takip</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277902_08b4/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Son Vurgun</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/277979_094e/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Sahte Cennet</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278349_0c32/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Çete Savaşları</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278495_0d56/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Hudut</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278467_0d1e/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Aşk Bilmecesi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278525_0d92/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Vikingler</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278526_0d94/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Yaz Aşkım</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278505_0d6a/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Katil Deniz Kızı</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278527_0d96/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Vatikan Kayıtları</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278523_0d8e/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Yüzde Yüz Kaşmir</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278454_0d04/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Burada mısın?</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278506_0d6c/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Ekim Fırtınası</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/278528_0d98/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Gerilim Odası</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279152_1278/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">88 Numaralı Oda</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279156_1280/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Sevimli Kukla</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279157_1282/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Podyumdaki Kül Kedisi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279154_127c/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Agorafobi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/MP4/KANALD/HDP1A_-279180_12b0-_1500.mp4")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Karartma</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279158_1284/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Sevgili Kardeşim</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279186_12bc/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Kirli Oyun</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279187_12be/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Yansıma</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279171_129e/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">French Dolls</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279173_12a2/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Şeytan Tepesi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279192_12c8/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Büyük Aşk</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279172_12a0/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Elveda Dünya</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279189_12c2/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Karanlık Kutu</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279205_12e2/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Jane'in İntikamı</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279204_12e0/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Katil Joe</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279214_12f4/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Kanlı Dövüş</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279217_12fa/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Vasiyet</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279221_1302/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Bayan Meadows</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279220_1300/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Zıt Kardeşler</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279277_1372/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Cinayet Planı</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279324_13d0/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Balerin ve Afacan Mucit</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279312_13b8/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Bodybuilder</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279313_13ba/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Downer's Grove Laneti</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279331_13de/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Büyümek ve Diğer Yalanlar</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279318_13c4/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Şifacı</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279320_13c8/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Dört Psikopat</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279346_13fc/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Kanunun Kuvveti</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279299_139e/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Ölüm Kalım Evi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279317_13c2/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Dehşet Gecesi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279351_1406/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Dehşet Gemisi</a>
+    </li>
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279319_13c6/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Kurtuluş</a>
+    </li>
+
+
+  </ul>
+  </div>
+  
+  <div id="Yedek" class=" tabcontent text-center">
+
+<!--dikey yazı aplet başlangıcı-->
+<marquee onmouseover="this.stop();"  onmouseout="this.start();" behavior="scroll" id="kaykay" name="kaykay" height="50" width="120" scrollamount="1.5" scrolldelay="2" direction="up">
+<font color="#FF0000"><strong>Önerilen PLAYERLER</strong></font>
+<p style="font-size:70%;"><b>VLC PLAYER.
+<br><b>MX PLAYER.
+<br><b>PERFECT PLAYER.<b>
+<p>indirin.
+<a href="#" class="siyah">👉 bura tıkla 👈</a>
+</marquee>
+<!--dikey yazı aplet Sonu-->
+<br>
+    <input  autocomplete="off" type="text" id="mySearch2" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="TURKEY" class="padding text-center myMenu">
+    
+    <li class="zoom tablink-movies" onclick=extplay("http://stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TRT 1</a>
+    </li>
+  
+
+    <li class="zoom tablink-movies" onclick=extplay("kanaldvod.duhnet.tv/S11/HLS_VOD/279319_13c6/index.m3u8")>
+      <a class=" tablink-text-movies"  id="defaultOpen">Kurtuluş</a>
+    </li>
+
+
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/show-turk.m3u8")>
+      <a class="tablink-text-movies">TRT1-2</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/ulusal-yurt-disi/tv8-int.m3u8")>
+      <a class="tablink-text-movies">TRT2-2</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/cnn-turk.m3u8")>
+      <a class="tablink-text-movies">TRT Cocuk</a>
+    </li>
+  
+  <li class="zoom tablink-movies" onclick=extplay("stream.tvcdn.net/haber/24-tv.m3u8")>
+      <a class="tablink-text-movies">TRT SPORT</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=TRTWorld")>
+      <a class="tablink-text-movies">TRT World</a>
+    </li>
+  
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=foxtr")>
+      <a class="tablink-text-movies">FOX</a>
+    </li>
+       <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=bein1tr")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TURIS TV</a>
+    </li>
+        <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=bein2tr")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TURIS TV</a>
+    </li>   
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=ssport")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TURIS TV</a>
+    </li>   
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=smartsport")>
+      <a class=" tablink-text-movies"  id="defaultOpen">TURIS TV</a>
+    </li>
+  </ul>
+  </div>
+  
+<!--
+	2° channel:
+	id="mySearch12"Kanalların ve bağlantıların adını değiştirme
+	<div id="Yedek1" class=" tabcontent text-center">
+    <input  autocomplete="off" type="text" id="mySearch12" value="" onkeyup="search()" placeholder="Ara" title="Type in a category" class="text-center mySearch">
+  <ul id="KIDS" class="padding text-center myMenu">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=nbcsn")>
+      <a class="tablink-text-movies">TURIS TV</a>
+    </li> 
+      <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=tnt")>
+      <a class="tablink-text-movies">TURIS TV</a>
+    </li>
+     <li class="zoom tablink-movies" onclick=extplay("msftv.ga/MSFtv.m3u8?ch=usa")>
+      <a class="tablink-text-movies">TURIS TV</a>
+    </li>
+  </ul>
+  </div>
+-->
+
+<script>
+//3°: input filter ul li ekleyeceksin
+//Daha önce kullandığınızın dışında bir ad ekleyin
+var input, input2, input3, input4, input5, input6, input7, input8, input9, input10, input11, input12;
+var filter, filter2, filter3, filter4, filter5, filter6, filter7, filter8, filter9, filter10, filter11, filter12;
+var ul, al, bl, cl, dl, el, fl, gl, il, jl, tl, kl; 
+var li, la, lb, lc, ld, le, lf, lg, lii, lj ,lt, lk;
+function search() {
+  var a, i;
+  input = document.getElementById("mySearch");
+  input2 = document.getElementById("mySearch2");
+  input4 = document.getElementById("mySearch4");
+  input5 = document.getElementById("mySearch5");
+  input6 = document.getElementById("mySearch6");
+  input7 = document.getElementById("mySearch7");
+  input8 = document.getElementById("mySearch8");
+  input9 = document.getElementById("mySearch9");
+  input10 = document.getElementById("mySearch10");
+  input11 = document.getElementById("mySearch11");
+  input12 = document.getElementById("mySearch12");
+  
+  // 4°: input12 = document.getElementById("mySearch12"); Yeni aramanın adı ile oluşturduğunuz yeni robotu ekleyeceksiniz.
+  
+  filter = input.value.toUpperCase();
+  filter2 = input2.value.toUpperCase();
+  filter4 = input4.value.toUpperCase();
+  filter5 = input5.value.toUpperCase();
+  filter6 = input6.value.toUpperCase();
+  filter7 = input7.value.toUpperCase();
+  filter8 = input8.value.toUpperCase();
+  filter9 = input9.value.toUpperCase();
+  filter10 = input10.value.toUpperCase();
+  filter11 = input11.value.toUpperCase();
+  filter12 = input12.value.toUpperCase();
+  
+  // 5° filter12 = input12.value.toUpperCase();
+
+  ul = document.getElementById("beIN SPORTS HD");
+  cl = document.getElementById("AD SPORTS");
+  dl = document.getElementById("EGYPT SPORT TV");
+  el = document.getElementById("ARABIC SPORT TV");
+  fl = document.getElementById("OSN");
+  gl = document.getElementById("ARABIC");
+  il = document.getElementById("ITALY");
+  jl = document.getElementById("UK");
+  tl = document.getElementById("USA");
+  kl = document.getElementById("KIDS");
+  al = document.getElementById("TURKEY");
+  
+  // 6° al = document.getElementById("TURKEY");
+  
+  li = ul.getElementsByTagName("li");
+  lc = cl.getElementsByTagName("li");
+  ld = dl.getElementsByTagName("li");
+  le = el.getElementsByTagName("li");
+  lf = fl.getElementsByTagName("li");
+  lg = gl.getElementsByTagName("li");
+  lii = il.getElementsByTagName("li");
+  lt = tl.getElementsByTagName("li");
+  lj = jl.getElementsByTagName("li");
+  la = al.getElementsByTagName("li");
+  lk = kl.getElementsByTagName("li");
+  
+  // 7° lk = kl.getElementsByTagName("li");
+  
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  
+  }
+ 
+  for (i = 0; i < lc.length; i++) {
+    a = lc[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter4) > -1) {
+      lc[i].style.display = "";
+    } else {
+      lc[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < ld.length; i++) {
+    a = ld[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter5) > -1) {
+      ld[i].style.display = "";
+    } else {
+      ld[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < le.length; i++) {
+    a = le[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter6) > -1) {
+      le[i].style.display = "";
+    } else {
+      le[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < lf.length; i++) {
+    a = lf[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter7) > -1) {
+      lf[i].style.display = "";
+    } else {
+      lf[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < lg.length; i++) {
+    a = lg[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter8) > -1) {
+      lg[i].style.display = "";
+    } else {
+      lg[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < lii.length; i++) {
+    a = lii[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter9) > -1) {
+      lii[i].style.display = "";
+    } else {
+      lii[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < lj.length; i++) {
+    a = lj[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter10) > -1) {
+      lj[i].style.display = "";
+    } else {
+      lj[i].style.display = "none";
+    }
+  
+  }for (i = 0; i < lt.length; i++) {
+    a = lt[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter11) > -1) {
+      lt[i].style.display = "";
+    } else {
+      lt[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < la.length; i++) {
+    a = la[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter2) > -1) {
+      la[i].style.display = "";
+    } else {
+      la[i].style.display = "none";
+    }
+  
+  }
+  for (i = 0; i < lk.length; i++) {
+    a = lk[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter12) > -1) {
+      lk[i].style.display = "";
+    } else {
+      lk[i].style.display = "none";
+    }
+  
+  }
+  
+  /* 8°:
+  for (i = 0; i < lk.length; i++) {
+    a = lk[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter12) > -1) {
+      lk[i].style.display = "";
+    } else {
+      lk[i].style.display = "none";
+    }
+  
+  }
+  */
+}
+function getElementAgain(){
+  document.getElementById("mySearch").value = "";
+  document.getElementById("mySearch4").value = "";
+  document.getElementById("mySearch5").value = "";
+  document.getElementById("mySearch6").value = "";
+  document.getElementById("mySearch7").value = "";
+  document.getElementById("mySearch8").value = "";
+  document.getElementById("mySearch9").value = "";
+  document.getElementById("mySearch10").value = "";
+  document.getElementById("mySearch11").value = "";
+  document.getElementById("mySearch12").value = "";
+  
+  //document.getElementById("mySearch12").value = "";
+  search();
+} 
+function openPage(pageName,elmnt,groundColor, color) {
+  var i, tabcontent, tablinks;
+  
+  getElementAgain();
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+	 tablinks[i].style.color = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = groundColor;
+  elmnt.style.color = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
