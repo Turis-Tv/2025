@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+body {
+  background-color: #ffffff;
+  display: table;
+}
+
+.div1 {
+  height: 100%;
+  width: 100%;
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.div2 {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: VT323;
+  font-size: 25px;
+  color: #FAF9F9;
+}
+
+.box {
+  text-align: center;
+  font-size: 20px;
+  font-family: VT323;
+  outline: none;
+  width: 250px;
+  height: 35px;
+  border: none;
+  border-bottom: 2px solid #656262;
+}
+
+.confirm {
+  border: none;
+  font-size: 20px;
+  font-family: VT323;
+  margin-top: 10px;
+  color: #FAF9F9;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:5px;
+	right:5px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a{
+  text-decoration:none;
+}
+.floating_btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+  z-index: 1000;
+}

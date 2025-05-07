@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by hasan</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,shrink-to-fit=no"
+    />
+    <title>m3u8 player</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="https://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <ul id="channels-list">
+        <li class="channel-item turn-off">
+          <p class="channel-name" data-src="">Durdur</p>
+        </li>
+        <li class="channel-item">
+          <p class="bbc-arabic" data-src="bbc-arabic">YouTube</p>
+        </li>
+      </ul>
+
+      <div id="content">
+        <p class="show-hide-sidebar">⇵</p>
+        <p class="show-hide-input">⇵</p>
+        <div id="input-wrapper">
+          <input
+            type="text"
+            id="player-src"
+            placeholder="m3u8 URL"
+            required=""
+          />
+          <button id="play-button">Play</button>
+        </div>
+
+        <div id="player-wrapper">
+          <div id="jwplayer-wrapper"></div>
+          <iframe
+            id="bbc-iframe"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/qaxtyajdjmc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

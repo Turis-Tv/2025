@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>dataTables percentage bar renderer plugin v1.1</title>
+  <title>demo percentbar</title><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div> <a href="https://datatables.net/plug-ins/dataRender/percentageBars"></a></div>
+<br/>
+<a class="btn btn-success" style="float:left;margin-right:20px;" href="# target="_blank">Turis Tv </a>
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	<thead>
+		<tr>
+			<th>Isim </th>
+			<th>Site</th>
+			<th>Sene</th>
+			<th>Status</th>
+      			<th>%</th>
+			<th>Bilgi</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Turis Tv</td>
+			<td>https://akcamvlt.github.io/iptv/</td>
+			<td>2025</td>
+			<td></td>
+      <td>1 %</td>
+			<td data-order=" "></td>
+		</tr>
+		<tr>
+			<td>Turis XXX</td>
+			<td>https://turis-tv.github.io/Samsung-Tv/AnaDosya/200-XXX/index.html</td>
+			<td>2025</td>
+			<td>xxx</td>
+      <td>1  %</td>
+			<td data-order=" "> </td>
+		</tr>
+		<tr>
+			<td>Turis Tv</td>
+			<td> https://turis-tv.github.io/Turis-2025/</td>
+			<td>2025</td>
+			<td>Acildi</td>
+      <td>1  %</td>
+			<td data-order=" "> </td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>2 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>1  %</td>
+			<td data-order="1200"> </td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>3 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>1  %</td>
+			<td data-order="2100"> </td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>4 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="899"> </td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>5 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>1%</td>
+			<td data-order="2499"> </td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>6 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>1%</td>
+			<td data-order="1099"> </td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>6</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1750"> </td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>7 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>10%</td>
+			<td data-order="400"> </td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>8 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>45%</td>
+			<td data-order="299"> </td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>9 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="149"> </td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>10 </td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="199"> </td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>11</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="4999"> </td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>12</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1399"> </td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>13</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>100%</td>
+			<td data-order="1000"> </td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>14</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>10%</td>
+			<td data-order="1834"> </td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>15</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1550"> </td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>16</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>100%</td>
+			<td data-order="1220"> </td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>17</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>10%</td>
+			<td data-order="2100"> </td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>18</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="899"> </td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>19</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="2799"> </td>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td>20</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1299"> </td>
+		</tr>
+		<tr>
+			<td>24</td>
+			<td>21</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1650"> </td>
+		</tr>
+		<tr>
+			<td>25</td>
+			<td>22</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>10%</td>
+			<td data-order="510"> </td>
+		</tr>
+		<tr>
+			<td>26</td>
+			<td>23</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="399"> </td>
+		</tr>
+		<tr>
+			<td>27</td>
+			<td>24</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="249"> </td>
+		</tr>
+		<tr>
+			<td>28</td>
+			<td>25</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="199"> </td>
+		</tr>
+		<tr>
+			<td>29</td>
+			<td>26</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1999"> </td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>27</td>
+			<td>2025</td>
+			<td>bos</td>
+      <td>0%</td>
+			<td data-order="1369"> </td>
+		</tr>
+	</tbody>
+</table>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script>
+<script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+<script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+<script src='https://cdn.datatables.net/plug-ins/1.10.15/dataRender/percentageBars.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
