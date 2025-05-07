@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+
+
+        <meta itemprop="description" content=""/>
+        <style type="text/css">
+
+
+    
+
+
+
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 45;
+    background: transparent !important;
+}
+
+.header .u-wrap {
+    max-width: 10%;
+}
+
+.logo {
+    float: left;
+    margin: 0;
+    margin-left: 20px !important;
+    width: auto !important;
+}
+
+
+
+.user-menu {
+    float: right;
+    margin: 17px 0px 0 0;
+    font-family: "open sans";
+    font-size: 12px;
+}
+
+.user-menu > li {
+    float: right;
+}
+
+.loginActivateFB,
+.loginActivateTW {
+    position: absolute;
+    top: 50%;
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, .15);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17px;
+    transform: translateY(-50%);
+
+
+
+#login {
+    margin-right: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    position: relative;
+    padding-right: 67px;
+}
+
+#signup {
+    margin-right: 1px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.user-menu-help {
+    margin-right: 10px;
+}
+
+.mobile .user-menu-help {
+    display: none;
+}
+
+#login,
+#signup,
+.user-menu-help {
+    max-width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Media queries
+========================================================================== */
+
+
+
+
+
+
+
+
+    scroll: function() {
+        if (this.div) {
+            if (window.scrollY > this.threshold) {
+                this.div.classList.add('swapAd');
+            } else {
+                this.div.classList.remove('swapAd');
+            }
+        }
+    },
+
+    debounce: function(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    },
+
+    events: function() {
+        if (this.div) {
+            var debouncedScroll = this.debounce(this.scroll.bind(this), 50);
+            window.addEventListener('scroll', debouncedScroll);
+        }
+    }
+};
+
+document.addEventListener("DOMContentLoaded", sticky.init.bind(sticky));
+
+            </figcaption>
+        </figure>
+    </div>
+                
+<style type="text/css">
+    html, body {
+        height: 100%;
+        background-attachment: fixed;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #04010D;
+        background-image: radial-gradient(circle at 35% center, #1302AC 15%, #0E004A 65%, #04010D 100%);
+        background-repeat: no-repeat;
+    }
+
+    .page {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        padding: 0 35px;
+        width: 100%;
+        min-height: 100%;
+        background: transparent;
+    }
+
+    .content {
+        max-width: unset;
+        min-width: auto;
+        background: transparent;
+        order: 1;
+        padding: 0 35px;
+        box-sizing: border-box;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .page:not(.mobile) .dl-btn-cont {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        margin-bottom: 0;
+        box-shadow: 0 5px 20px 0 rgba(0,0,0,.03), 0 3px 8px rgba(0,0,0,.06);
+    }
+
+    .dl-btn-label {
+        color: #222835;
+    }
+
+    .download_link {
+        height: auto;
+        line-height: normal;
+    }
+
+    .page:not(.mobile) .download_link a {
+        height: auto !important;
+        padding: 21px 45px !important;
+        border-radius: 4px !important;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    #footer {
+        position: relative !important;
+        overflow: unset !important;
+        width: 100% !important;
+        margin-top: 0;
+        min-height: 0;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    .Avast {
+        padding: 0 35px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Avast-MF {
+        height: 70px;
+        margin: 0 -70px;
+    }
+
+    .Avast-MF a {
+        display: block;
+        height: 70px;
+        width: 180px;
+
+        margin-left: 15px;
+        text-indent: -9999px;
+    }
+
+    .Avast-content {
+        margin: auto;
+        padding: 30px 0;
+        text-align: center;
+        font-family: "Avenir", "Helvetica Neue", "Arial", sans-serif;
+    }
+
+    .Avast-cta {
+        margin-bottom: 50px;
+    }
+
+    .Avast-banner {
+        margin-bottom: 35px;
+    }
+
+    .Avast-heading {
+        color: #fff;
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .Avast-heading span {
+        display: inline-block;
+        background-color: #006CFA;
+        border-radius: 12px;
+        padding: 0 15px;
+    }
+
+    .Avast-price {
+        font-size: 50px;
+        color: #fff;
+        line-height: 1.4;
+    }
+
+    .Avast-price-compare {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .Avast-price-original {
+        opacity: .5;
+        text-decoration: line-through;
+    }
+
+    .Avast-price-discount {
+        font-weight: 900;
+        color: #FFD762;
+    }
+
+    .Avast-price-per-month {
+        font-size: 24px;
+    }
+
+    .Avast-price-three-years {
+        font-size: 20px;
+    }
+
+    .Avast-price-three-years span {
+        opacity: .5;
+        text-decoration: line-through;
+    }
+
+    .Avast-features {
+        color: #fff;
+        font-size: 20px;
+        padding: 20px 0;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .Avast-features li span {
+        height: 24px;
+        width: 24px;
+
+    }
+
+    .Avast-features li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Avast-cta a {
+        position: relative;
+        display: inline-block;
+        background: #FFD762;
+        border-radius: 15px !important;
+        text-align: center;
+        text-transform: none;
+        padding: 17px 70px;
+        color: #000;
+        font-size: 24px;
+        font-weight: 700;
+        box-shadow: 0 8px 32px -8px rgba(255,215,98,0.0), 0 16px 32px -16px rgba(255,215,98,0.0);
+        box-sizing: border-box;
+        transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    }
+
+    .Avast-cta a:not(:focus):hover {
+        background-color: #FFD762;
+        box-shadow: 0 8px 32px -8px rgba(255,215,98,0.72), 0 16px 32px -16px rgba(255,215,98,0.24);
+        outline: none;
+    }
+
+    .Avast-cta a:not(:focus):before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+        z-index: -1;
+        transition: all ease-out .2s;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #FFD762;
+        box-shadow: 0 0 0 0 #FFD762;
+    }
+
+    .Avast-cta a:hover:before {
+        background-color: #FFD762;
+        box-shadow: 0 0 0 4px #FFD762;
+    }
+
+    @media (max-width: 1400px) {
+        .Avast-heading {
+            font-size: 52px;
+        }
+
+        .Avast-banner {
+            margin-bottom: 20px;
+            width: 150px;
+        }
+    }
+
+    @media (max-width: 1300px) {
+        .Avast-heading {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .Avast-heading span {
+            padding: 0 5px;
+            border-radius: 5px
+        }
+
+        .Avast-price-compare span {
+            font-size: 28px;
+        }
+
+        .Avast-price-three-years {
+            font-size: 16px;
+        }
+
+        .Avast-features {
+            font-size: 16px;
+            padding: 10px 0;
+        }
+    }
+
+    @media (max-width: 1150px) {
+        .Avast-heading {
+            font-size: 28px;
+        }
+
+        .Avast-cta a {
+            padding: 10px 30px;
+            font-size: 16px
+        }
+    }
+
+
+
+        .page {
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 0;
+            min-height: auto;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .page:not(.mobile) .dl-btn-cont {
+            width: auto;
+            max-width: 430px;
+            margin: 0 auto 30px;
+            padding: 20px 30px;
+        }
+
+        .dl-utility-nav ul li {
+            margin: 5px 20px 5px 0;
+        }
+
+        .Avast {
+            height: auto;
+            width: 100%;
+            padding: 0 30px;
+        }
+
+        .Avast-MF {
+            margin: 0 -30px;
+            background-color: rgba(255,255,255,.07);
+        }
+
+        .Avast-cta {
+            margin-top: 0;
+        }
+
+        .Avast-cta a {
+            width: 100%;
+        }
+
+        .Avast-banner {
+            width: 100px;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .content {
+            padding: 0;
+        }
+
+        .page:not(.mobile) .dl-btn-cont {
+            max-width: 100%;
+            margin: 0;
+            border-radius: 0;
+            box-shadow: 0 -1px 0 0 rgba(0,0,0,.07);
+        }
+    }
+
+    @media (max-width: 530px) and (max-height: 875px) {
+        .Avast-cta {
+            margin-bottom: 20px;
+        }
+
+        .Avast-cta a {
+            font-size: 14px;
+        }
+    }
+
+    /* Adjustments for mobile download button container */
+    .mobile .content {
+        min-width: 0;
+        flex-shrink: 0;
+    }
+
+    .mobile .dl-btn-cont {
+        margin: auto;
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        min-width: 350px;
+    }
+
+    .mobile .dl-btn-labelWrap {
+        top: 28px;
+    }
+
+    .mobile .promoDownloadName {
+        margin-bottom: 8px;
+    }
+
+    .mobile .dl-btn-label {
+        color: #fff;
+    }
+
+    .mobile .dl-btn-form {
+        margin-bottom: 0;
+    }
+
+    .mobile .download_link {
+        height: auto;
+        line-height: normal;
+    }
+
+    .mobile .download_link a.input,
+    .mobile .download_link input {
+        height: 60px;
+        line-height: 84px;
+    }
+
+    .mobile .download_link a:not(.input) {
+        height: auto !important;
+        padding: 21px 20px !important;
+        border-radius: 4px !important;
+        box-sizing: border-box;
+        white-space: normal;
+    }
+
+    @media (max-width: 900px) {
+        .mobile .dl-btn-cont {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .mobile .dl-btn-cont {
+            margin-bottom: 0;
+            max-width: none;
+            border-radius: 0;
+            min-width: 280px;
+        }
+    }
+</style>
+
+
+    </h1>
+    <div class="Avast-content">
+        <img class="Avast-banner" src="https://od.lk/s/OTFfMzE0ODA3Mzlf/Turis1.jpg" width="214" alt="Black Friday limited time sale" height="">
+        <div class="Avast-cta">
+            <div class="Avast-heading">
+
+            </div>
+            <div class="Avast-price">
+                <div class="Avast-price-compare">
+
+                    <span class="Avast-price-discount">Turis Tv</span>
+   
+                </div>
+                <div class="Avast-price-three-years">
+
+                </div>
+            </div>
+            <div class="Avast-features">
+                <ul>
+                    <li><span></span>* Ulusal Kanallar </li>
+                    <li><span></span>* Spor Kanallar </li>
+                    <li><span></span>* Film Kanallar </li>
+                    <li><span></span>* Muzik Dinle </li>
+                    <li><span></span>* Turkiye Radyolar</li>
+                    <li><span></span>* + 18 Kanallar </li>
+                </ul>
+            </div>
+            <a href="https://dosya.co/biqn43p9442l/Turis_Tv.apk.html" target="_blank">1*   Burdan Indir  !!!!</a><br><br> 
+            <a href="https://www.dosya.tc/server2/onglmf/Turis_Tv.apk.html" target="_blank">2*   Burdan Indir  !!!!</a><br><br>
+            <a href="https://www.dosyaupload.com/9jo/Turis_Tv.apk" target="_blank">3*   Burdan Indir  !!!!</a><b<r><br><br>
+            <a href="https://uploadnow.io/f/sDRLC9Y" target="_blank">4*   Burdan Indir  !!!!</a> <br><br>
+            <a href="https://2nns.f8.re" target="_blank">5*   Burdan Indir  !!!!</a>     
+        </div>
+    </div>
+</div>
+        </main>
+<style>
+    #subFooterWrap {
+        padding: 0 10px;
+    }
+    #subFooter {
+        padding: 0;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .subFooterLinks {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 15px auto 15px 0;
+    }
+    .subFooterLinks li {
+        margin: 5px 10px !important;
+    }
+    .subFooterSocialWrap {
+        margin: 15px 0;
+    }
+    #subFooterSocial {
+        float: none;
+        position: static;
+        display: flex;
+        width: auto;
+        margin: 5px;
+        padding: 0;
+    }
+    #subFooterSocial li {
+        float: none;
+        margin: 5px;
+    }
+</style>
+<footer role="contentinfo" id="footer" class="footer">
+    <!-- SUBFOOTER -->
+    <div id="subFooterWrap">
+        <div id="subFooter" class="u-wrap">
+            <ul class="subFooterLinks">
+
+  
+            </ul>
+            <div class="subFooterSocialWrap">
+                <ul id="subFooterSocial">
+                    <li class="footerIcn">
+                        <a href="#" class="footerIcnBlog" target="_blank" title=" ">
+                            <span class="footerIcnBlog"></span>
+                        </a>
+                    </li>
+                    <li class="footerIcn">
+                        <a href="#" class="footerIcnTw" target="_blank" rel="noreferrer" title="MediaFire's Twitter page">
+                            <span class="footerIcnTw"></span>
+                        </a>
+                    </li>
+             
+
+    </div>
+</div>
+
+    <div id="status">
+        <div id="status-message"></div>
+  
+    </div>
+    <iframe name="iframe_worker" id="iframe_worker" src="" style="display:none;height:0;width:0;"></iframe>
+    <script type="text/javascript">(function(){
+(function() {
+  // Options
+  var optThemeClass = "defaultTheme";
+
+  // Interface
+  var uiButtonLogout = document.getElementById('logout');
+  var uiStatusContainer = document.getElementById('status');
+  var uiStatusMessage = document.getElementById('status-message');
+  var uiIframeWorker = document.getElementById('iframe_worker');
+  var uiDropdowns = document.getElementsByClassName('dropdown');
+  var uiGoogleLang = document.getElementsByClassName('goog-te-combo');
+
+  // State
+  var stateTimerStatus;
+
+  // Legacy
+  try {document.domain = '#'} catch(e) {};
+  window.reloadPage = function() { window.location.reload(); };
+  window.noop = function() {};
+  window.ClearStatusMessages = reloadPage;
+  window.setCookieSeconds = noop;
+  window.Re = reloadPage;
+  window.aU = noop;
+
+  // Globals
+  window.setCookie = function(name, value, expireDays) {
+    var date = new Date();
+    date.setDate(date.getDate() + expireDays);
+    document.cookie = name + "=" + escape(value)
+      + ((expireDays == null) ? "" : ";expires="
+      + date.toGMTString()) + ";path=/";
+  }
+
+  window.getCookie = function(name) {
+    if (document.cookie.length > 0) {
+      var start = document.cookie.indexOf(name + "=");
+      if (start !== -1) {
+        start = start + name.length + 1;
+        var end = document.cookie.indexOf(";",start);
+        if (end === -1) end = document.cookie.length;
+        return unescape(document.cookie.substring(start, end));
+      }
+    }
+    return '';
+  }
+
+  window.loadHotjar = function() {
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:1232118,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  }
+
+  window.registerGoogleLang = function() {
+    var updateLanguage = function(e) {
+      document.body.className = (e.target.value || 'en') + ' ' + optThemeClass;
+    };
+    if (uiGoogleLang) {
+      for (var i = 0; i < uiGoogleLang.length; i++) {
+        uiGoogleLang[i].onchange = updateLanguage;
+      }
+    }
+  }
+
+  // Locals
+  function clickOutside() {
+    document.removeEventListener('click', clickOutside);
+    if (uiDropdowns) {
+      for (var i = 0; i < uiDropdowns.length; i++) {
+        uiDropdowns[i].classList.remove('show_dropdown');
+      }
+    }
+  }
+
+  function toggleDropdown(dropdown) {
+    return function(e) {
+      if (dropdown.classList.contains('show_dropdown')) {
+        dropdown.classList.remove('show_dropdown');
+      } else {
+        e.preventDefault();
+        dropdown.classList.add('show_dropdown');
+        setTimeout(function() {
+          document.addEventListener('click', clickOutside);
+        }, 0);
+      }
+    };
+  }
+
+  // Send the event to  
+  window.trackDownloadEvent = function(event) {
+    (function() {
+    })();
+  }
+
+  // Events
+  if (uiButtonLogout) {
+    uiButtonLogout.onclick = function(e) {
+      e.preventDefault();
+      if (uiIframeWorker)
+        uiIframeWorker.src = e.target.href;
+      return false;
+    }
+  }
+
+  if (uiDropdowns) {
+    for (var i = 0; i < uiDropdowns.length; i++) {
+      uiDropdowns[i].onclick = toggleDropdown(uiDropdowns[i]);
+    }
+  }
+
+  if (uiStatusContainer) {
+    window.closeStatusMessage = function() {
+      if (stateTimerStatus) {
+        clearTimeout(stateTimerStatus);
+        stateTimerStatus = null;
+      }
+      uiStatusMessage.innerText = '';
+      uiStatusMessage.textContent = '';
+      uiStatusContainer.style.display = 'none';
+    }
+
+    window.showStatusMessage = function(message) {
+      uiStatusMessage.innerText = message;
+      uiStatusMessage.textContent = message;
+      uiStatusContainer.style.display = 'block';
+      setTimeout(closeStatusMessage, 3500);
+    }
+
+    uiStatusContainer.onclick = function(e) {
+      e.preventDefault();
+      closeStatusMessage();
+    };
+  }
+
+  // Keyboard focus styling
+  try {
+    document.addEventListener('keydown', function(e) {
+      if (e.keyCode === 9) {
+        document.body.classList.add('show-focus-outlines');
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      document.body.classList.remove('show-focus-outlines');
+    });
+  } catch (e) {}
+})();
+
+(function() {
+  // Options
+  var optFileKey = "du6g5ehq7r28w31";
+  var optFileName = " ";
+  var optFileURL = "#";
+  var optLoggedIn = "false" === "true";
+  var optReportTurboDL = "false" === "true";
+  var optSecurityToken = "#";
+  var optJsDirectLink = "false" === "true";
+  var optTurboDownload = "false" === "true";
+
+  // Elements
+  var elWrapperAd = document.getElementById('non-dl-content');
+  var elWrapperShare = document.getElementById('share');
+  var elCloseShare = document.getElementById('share-close');
+  var elIframeShare = document.getElementById('share-iframe');
+  var elShare = document.getElementById('shareButton');
+  var elShareMobile = document.getElementById('shareButtonMobile');
+  var elSave = document.getElementById('saveButton');
+  var elSaveMobile = document.getElementById('saveButtonMobile');
+  var elSaveParallel = document.getElementById('saveButtonParallel');
+  var elCopyLink = document.getElementById('copyShareURL');
+  var elCopyLinkMobile = document.getElementById('copyShareURLMobile');
+  var elCloseMobileTD = document.getElementById('mobile-turbo-dl-btn-close');
+  var elEnableMobileTD = document.getElementById('mobile-turbo-dl-btn-enable');
+  var elCancelMobileTD = document.getElementById('mobile-turbo-dl-btn-cancel');
+
+  // State
+  var alwaysReloadShareBox = true;
+  var stateShareBoxLoaded = false;
+  elIframeShare.style.display = '';
+
+  // Globals
+  window.downloadOptIn = function() {
+    document.cookie = "=1; path=/";
+    window.trackTurboDownload('opt_in');
+    window.location.reload();
+  }
+
+  window.showTDOptInDialog = function() {
+    document.body.classList.add('modal-open');
+    document.getElementById('mobile-turbo-dl-enable').style = 'display:block !important';
+  }
+
+  window.closeMobileTD = function(src) {
+	  src && src.preventDefault();
+	  try {
+		  document.body.classList.remove('modal-open');
+		  document.getElementById('mobile-turbo-dl-enable').style = '';
+	  } catch(e) { }
+  }
+
+  window.addEventListener("message", function(e) {
+    if (e && e.data === 'mf-close-dialogs') {
+      closeShareDialog();
+    }
+  });
+
+  window.trackTurboDownload = function(event, details) {
+    if (!optReportTurboDL) return;
+    try {
+      var xhr = new XMLHttpRequest();
+      var query = 'security=' + optSecurityToken + '&event=' + event;
+      if (details) {
+        query += '&connections=' + details.connections
+          + '&speed_kbps=' + details.speed
+          + '&duration=' + details.duration
+          + '&filesize=' + details.filesize
+          + '&go_experiment=' + (window.go_experiment || '');
+      }
+      xhr.open('POST', '/dynamic/track_turbo_download.php', true);
+      xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+      xhr.send(query);
+    } catch(e) {}
+    try {
+      gtag('event', event, {
+        'event_category': 'turbo_download'
+      });
+    } catch (e) {}
+  };
+
+  window.showDesktopDownloadArrow = function() {
+    try {
+      if (navigator.userAgent.match(/Mobi/)) return;
+      var div = document.createElement("div");
+      div.id = 'download-arrow';
+      document.body.appendChild(div);
+      setTimeout(function() {div.style.opacity = 1}, 100);
+    } catch(e) {}
+  };
+
+  window.hideDesktopDownloadArrow = function() {
+    try {
+      var div = document.getElementById('download-arrow');
+      div.parentNode.removeChild(div);
+    } catch(e) {}
+  };
+
+  window.onLegacyCopyLink = function(legacyLink) {
+    copyShareLink(null, legacyLink);
+  };
+
+  window.openShareDialog = function(src) {
+    src && src.preventDefault();
+    document.body.classList.add('modal-open');
+    elWrapperShare.style = 'display:block !important';
+    if (alwaysReloadShareBox || !stateShareBoxLoaded) {
+      elIframeShare.onload = function() {
+        stateShareBoxLoaded = true;
+      }
+      elIframeShare.src = elIframeShare.getAttribute('data-src');
+    }
+  }
+
+  window.saveToMyfiles = function(src) {
+    src && src.preventDefault();
+    if (!optLoggedIn) {
+      window.location.href = '/login?l=1';
+      return;
+    }
+    var success = false;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/dynamic/save_to_myfiles.php', true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.onload = function() {
+      try {
+        success = JSON.parse(this.responseText).success;
+      } catch (e) {
+        success = false;
+      }
+      showStatusMessage(success
+        ? 'Saved ' + optFileName + ' to your account!'
+        : 'You do not have access to save ' + optFileName + ' to your account.');
+    };
+    xhr.send('security=' + optSecurityToken + '&quick_key=' + optFileKey);
+    return false;
+  }
+
+  window.copyShareLink = function(src, altLink) {
+    src && src.preventDefault();
+    var targetLink = altLink || optFileURL;
+    try {
+      var iosCopyToClipboard = function(el) {
+        var oldContentEditable = el.contentEditable,
+          oldReadOnly = el.readOnly,
+          range = document.createRange();
+        el.contentEditable = true;
+        el.readOnly = false;
+        range.selectNodeContents(el);
+        var s = window.getSelection();
+        s.removeAllRanges();
+        s.addRange(range);
+        el.setSelectionRange(0, 999999);
+        el.contentEditable = oldContentEditable;
+        el.readOnly = oldReadOnly;
+        document.execCommand('copy');
+        document.activeElement.blur();
+      };
+      var copyListener = function(event) {
+        document.removeEventListener('copy', copyListener, true);
+        event.preventDefault();
+        var clipboardData = event.clipboardData;
+        clipboardData.clearData();
+        clipboardData.setData('text/plain', targetLink);
+        clipboardData.setData('text/html', targetLink);
+      };
+      iosCopyToClipboard(document.getElementById('copy')); // iOS workaround
+      document.addEventListener('copy', copyListener, true);
+      document.execCommand('copy');
+      showStatusMessage('Share Link copied to the clipboard!');
+    } catch(e) {
+      window.prompt('Press CTRL+C to copy share link:', targetLink);
+    }
+    return false;
+  }
+
+  // Locals
+  function closeShareDialog(src) {
+    src && src.preventDefault();
+    try {
+      document.body.classList.remove('modal-open');
+      elWrapperShare.style = '';
+    } catch(e) { }
+  }
+
+  // Ad viewport events
+  if (elWrapperAd) {
+      function onScrollResizeChange() {
+          var boundingRect = elWrapperAd.getBoundingClientRect();
+	      window.checkQueuedAdUnitViews && window.checkQueuedAdUnitViews({
+              windowPageXOffset: - boundingRect.left,
+              windowPageYOffset: - boundingRect.top,
+              windowInnerWidth: window.innerWidth,
+              windowInnerHeight: window.innerHeight
+          });
+      }
+      window.addEventListener("scroll", onScrollResizeChange);
+      window.addEventListener("resize", onScrollResizeChange);
+      setTimeout(onScrollResizeChange, 1000);
+      setTimeout(onScrollResizeChange, 3000);
+  }
+
+  // Lazy-loading
+  window.startLazyLoad = function() {
+    try {
+      var observer;
+      function setupObserver() {
+        observer = new IntersectionObserver(function(obsList) {
+          handleIntersection(obsList);
+        }, {rootMargin: "10px 0px"});
+        findLazyLoadElements();
+      }
+      function findLazyLoadElements() {
+        var elements = document.getElementsByClassName('lazyload');
+        for (var el of elements) {
+          observer.observe(el);
+        }
+      }
+      function handleIntersection(obsList) {
+        for (var obs of obsList) {
+          var el = obs.target;
+          if (obs.isIntersecting) {
+            var lazyClass = el.getAttribute('data-lazyclass');
+            if (lazyClass) el.classList.add(lazyClass);
+            var lazySource = el.getAttribute('data-lazysrc');
+            if (lazySource && el.src !== lazySource) el.src = lazySource;
+          }
+        }
+      }
+      setupObserver();
+    } catch(e) {
+      var elements = document.getElementsByClassName('lazyload');
+      for (var i = 0; i < elements.length; i++) {
+        var el = elements[i];
+        el.className += ' ' + el.getAttribute('data-lazyclass');
+        var lazySource = el.getAttribute('data-lazysrc');
+        if (lazySource && el.src !== lazySource) el.src = lazySource;
+      }
+    }
+  };
+
+  if (window.gtag) {
+    gtag('event', 'optimize.callback', {
+      callback: function(sVariants, sExperimentId) {
+        window.go_experiment = sExperimentId + ':' + sVariants;
+      }
+    });
+  }
+
+  window.addEventListener('load',  function() {
+    var dlButton;
+    if (optTurboDownload) {
+      dlButton = document.getElementsByClassName('mftd-download').item(0);
+      if (!dlButton) {
+	    dlButton = document.getElementsByClassName('mftd-mobile').item(0);
+      }
+    } else {
+  	  dlButton = document.getElementById('downloadButton');
+    }
+
+    if (dlButton) {
+      // Auto click the download button for the user
+	  if (optJsDirectLink) {
+        dlButton.click();
+      }
+
+      // Store the most recent downloaded file after an actual button click so it can be using to prevent the adsupply
+      // popup from showing
+      if (dlButton) {
+        dlButton.addEventListener('click', function() {
+          document.cookie = "click_download=" + optFileKey + ";path=/";
+  	    });
+      }
+    }
+  });
+
+  /** Set a callbacks so Adsupply notify us every step of the pop under **/
+  // Trigered when onclick event handler is attached by adsupply code
+  window.callbackEvent = null;
+  window.InfPreInterstitialProcessCallback = function() {
+    window.trackDownloadEvent && window.trackDownloadEvent('onclick');
+  }
+  // Trigered when pop-trigering element is clicked
+  var clickedEventSent = false;
+  window.InfClickEventCallback = function(event) {
+    if (clickedEventSent) return;
+    if (!event.target.classList.contains('popsok')) return;
+    clickedEventSent = true;
+    window.trackDownloadEvent && window.trackDownloadEvent('clicked');
+  };
+  // trigered when pop ad is opened
+  window.InfCustomerPopLoadedCallback = function() {
+    window.trackDownloadEvent && window.trackDownloadEvent('completed');
+  };
+
+  // Events
+  if (elShare) elShare.onclick = openShareDialog;
+  if (elShareMobile) elShareMobile.onclick = openShareDialog;
+  if (elWrapperShare) elWrapperShare.onclick = closeShareDialog;
+  if (elCloseShare) elCloseShare.onclick = closeShareDialog;
+  if (elSave) elSave.onclick = saveToMyfiles;
+  if (elSaveMobile) elSaveMobile.onclick = saveToMyfiles;
+  if (elSaveParallel) elSaveParallel.onclick = saveToMyfiles;
+  if (elCopyLink) elCopyLink.onclick = copyShareLink;
+  if (elCopyLinkMobile) elCopyLinkMobile.onclick = copyShareLink;
+  if (elCloseMobileTD) elCloseMobileTD.onclick = closeMobileTD;
+  if (elEnableMobileTD) elEnableMobileTD.onclick = downloadOptIn;
+  if (elCancelMobileTD) elCancelMobileTD.onclick = closeMobileTD;
+})();
+
+})();</script>
+        <script type="text/javascript">
+        window.startLazyLoad && window.startLazyLoad();  // No lazy ad positioning, fine to start lazy loader.
+    </script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8ede4071582783c4","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2024.10.5","token":"8e4f9484d8b840b28e4e0cc92b90ce0c"}' crossorigin="anonymous"></script>
+</body>
+</html>

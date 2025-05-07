@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+:root {
+  --primary-color: #00a8ff;
+  --secondary-color: #ff6b6b;
+  --background-color: #0f0f1e;
+  --text-color: #e0e0e0;
+  --card-background: rgba(30, 30, 50, 0.7);
+  --scrollbar-thumb: #4a4a6a;
+  --scrollbar-track: #2a2a3a;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon::before {
+  content: "▶";
+  color: white;
+  font-size: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 1em auto;
+  padding: 0 2em;
+  gap: 1em;
+}
+
+.channel-list {
+  width: 220px;
+  height: calc(100vh - 50px);
+  background-color: var(--card-background);
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transition: box-shadow 0.3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.channel-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.channel-list::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+.channel-list::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+.channel-list:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.channel-item {
+  padding: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.channel-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.channel-item.active {
+  background-color: rgba(0, 168, 255, 0.2);
+  border-left: 4px solid var(--primary-color);
+}
+
+.channel-name {
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.channel-category {
+  color: #aaa;
+  font-size: 0.6em;
+}
+
+.player-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+#videoPlayer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+#videoPlayer:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: all 0.5s ease;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+#loading {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 2em;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .channel-list {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}
