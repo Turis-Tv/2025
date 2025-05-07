@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3U Player</title>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+<link href="https://vsalema.github.io/tvpt4/css/tresmin.css" rel="stylesheet" />
+    
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/scss/_root.scss
+  " rel="stylesheet" />
+  
+  <style>
+  body {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+    #player {
+    height: 100vh;
+    width: 80%;
+    background-color: #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+    
+    
+    .modal-content {
+  background-color: #000000;
+  margin: 0% auto;
+    margin-left: auto;
+  padding: 20px;
+  border: 1px solid black;
+  width: 27%;
+  border-radius: 10px;
+  margin-left: 50%;
+}
+  </style>
+  <style>
+  .channel-item {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.1);
+    
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .channel-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .channel-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .channel-item .details {
+            display: flex;
+            align-items: center;
+        }
+
+        .channel-item .details span {
+            font-size: 16px;
+            color: #fff;
+        }
+
+  
+  .but {
+padding: 0px 6px;
+  background-color: #008cba;
+  color: #fcf7f7;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 218px;
+  top: -28.5px;
+  position: relative;
+  height: 23.5px;
+  width: 40px;
+  text-decoration: none;
+  display: inline-block;
+    }
+
+.but:hover {
+    background-color: #005f5f;
+}
+
+  </style>
+  
+  
+  
+  
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-WND5TJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GTM-WND5TJ');
+</script>
+
+  
+  </head>
+<body>
+    
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+  
+  
+  <div id="channels">
+    <div id="input-section">
+  <a href="https://turis-tv.github.io/Turis-2025/Ana-Dosya/20-Test-Sayfasi/12-Test/index.html" target="_blank" class="myButton">Ana Sayfa</a>
+      <input type="text" id="live-url-input" placeholder="Ara ...">
+        
+      <a onclick="playLive()" href="#/" class="but">▶</a>
+      
+      
+  </div>
+    
+  
+  
+  <button><span style="margin-left: 0%;background-color: #000000;width: 100%;border-radius: 5px;">Film Kanallari
+      
+      
+      
+      </span></button>
+  
+  
+  
+  
+  
+  </div>
+     <video autoplay id="player"   class="js-video video-js  vjs-big-play-centered" controls preload="auto" poster="" data-setup="{}">
+          <source src="https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/master.m3u8" type="application/x-mpegURL" />
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+              >supports HTML5 video</a
+            >
+          </p>
+        </video>
+      
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalErrorMessage"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.3/video.min.js"></script>
+
+ <script src=""></script> 
+  
+  
+ <script>
+            var x=document.URL;
+	        var res=x.split("?");
+	        //alert(res.length);
+	        if ( res.length==1 )
+	        {
+		        //alert("no video url!");
+	        }
+	        else
+	        {
+		        var videourl=decodeURIComponent(res[1]);
+		        if ( videourl.length === 0 )
+		        {
+			        //alert("no video url!");
+		        }
+                else
+                {
+                    // alert(videourl);
+                }
+	        }
+            function setupVideo() {
+                
+                var player = videojs('Player');
+                $("#geturl").attr("href", videourl);
+                $("#geturl").text(videourl);
+                player.src({
+                    src: videourl                    
+                });
+                player.responsive(true);
+                player.play();
+            }
+
+        </script>
+   </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

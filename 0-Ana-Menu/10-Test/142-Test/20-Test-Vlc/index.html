@@ -1,0 +1,311 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shout Bein - 9 Chaînes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+        
+
+
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Menu with Filling Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #383838;
+        }
+
+        :root {
+            --MidnightBlue: #191970;
+            --Maroon:#800000;
+            --red: #FF0000;
+            --green: #32a250;
+            --purple: #8F3FAF;
+            --gray: #2b2b2b;
+            --white: #fff;
+	    --Goldenrod: #DAA520;	
+	    --Teal: #008080;
+            --SlateGray:#708090; 
+	    --gray: #2b2b2b;       
+
+     --blue: #4185f3;
+            --Yellow: #f1b504;
+            --red: #e44134;
+            --green: #32a250;
+            --purple: #8F3FAF;
+            --gray: #2b2b2b;
+            --white: #fff;
+
+            --transWhite: rgba(255,255,255, 0.1);
+        }
+
+        section#mainArea {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+        }
+
+        section#mainArea nav {
+            width: 800px;
+        }
+
+        ul#menuList {
+            list-style: none;
+        }
+
+        ul#menuList li {
+            margin: 8px 0;
+            position: relative;
+            background-color: var(--gray);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        ul#menuList li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            transition: 0.3s all ease-in-out;
+        }
+
+        ul#menuList li:nth-child(-n+1)::before {
+            left: 0;
+        }
+
+        ul#menuList li:nth-child(n+61)::before {
+            right: 0;
+        }
+
+
+
+
+        ul#menuList li a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        section#contentArea {
+            background-color: var(--transWhite);
+            width: calc(100% - 5000px);
+        }
+    </style>
+</head>
+<body>
+    <section id="mainArea">
+        <nav>
+<br>
+<marquee>Bu Sayfa &nbsp&nbsp  <strong>VLC</strong> &nbsp&nbsp&nbsp  veya &nbsp &nbsp&nbsp  <strong>OPlayer</strong> &nbsp&nbsp   Ile Çalışır</marquee><br><br><br>
+            <ul id="menuList">
+
+
+
+            <button class="channel-button" data-url="116.202.238.88/TRT1_TR/index.m3u8">🇹🇷 TRT 1<h6>Gec Aciliyor<h6></button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-trt1eu/tracks-v1a1/mono.m3u8">TRT 1</button>
+<div>
+            <button class="channel-button" data-url="tgn.bozztv.com/trn03/gt-atv-tv/tracks-v1a1/mono.m3u8">🇹🇷 ATV</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-atvavrupa/tracks-v1a1/mono.m3u8">🇹🇷 ATV Avrupa</button>
+<div>
+            <button class="channel-button" data-url="ciner.daioncdn.net/showtv/showtv_1080p.m3u8?ex=1664766175&st=RBzhSuGauna0OGld-DJUVA&tv=1&sid=5c5vr8y2q331&app=4bc856ef-4c68-4a94-bc87-37dfaaa66558&ce=3&e=1664766175">🇹🇷 SHOW TV</button>
+            <button class="channel-button" data-url="edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8">🇹🇷 Türk Haber</button>
+<div>
+            <button class="channel-button" data-url="demiroren-live.daioncdn.net/kanald/kanald_720p.m3u8">🇹🇷  KANAL D</button>
+            <button class="channel-button" data-url="live.duhnet.tv/S2/HLS_LIVE/eurodnp/track_3_750/playlist.m3u8">🇹🇷  Euro D</button>
+<div>
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-dmax/index.m3u8">🇹🇷  D MAX</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/trn03/gt-foxturktv/tracks-v1a1/mono.m3u8">🇹🇷  NOW TV HD</button>
+<div>
+            <button class="channel-button" data-url="50.7.144.122:1935/livetv/foxtv.stream/sec-f5-v1-a1.m3u8">🇹🇷  NOw TV-2</button>
+            <button class="channel-button" data-url="tv8-live.daioncdn.net/tv8/tv8.m3u8">🇹🇷  TV8 HD</button>
+ 
+            <button class="channel-button" data-url="50.7.144.122:1935/livetv/tv8-5.stream/sec-f5-v1-a1.m3u8">🇹🇷 TV8.5</button>
+            <button class="channel-button" data-url="kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8">🇹🇷  KANAL 7</button>
+ 
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-sky360/tracks-v1a1/mono.m3u8">🇹🇷  360 TV HD</button>
+            <button class="channel-button" data-url="dogus-live.daioncdn.net/startv/startv_360p.m3u8">🇹🇷  Star TV</button>
+ 
+            <button class="channel-button" data-url="tgn.bozztv.com/trn03/gt-eurostar/tracks-v1a1/mono.m3u8">🇹🇷  EURO STAR</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-ntvtv/tracks-v1a1/mono.m3u8">🇹🇷  NTV</button>
+ 
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-beyaztv/tracks-v1a1/mono.m3u8">🇹🇷  BEYAZ TV HD</button>
+            <button class="channel-button" data-url="turkmedya-live.ercdn.net/tv24/tv24_360p.m3u8">🇹🇷  24 TV HD</button>
+ 
+            <button class="channel-button" data-url="teve2.duhnet.tv/S2/HLS_LIVE/teve2np/playlist.m3u8">🇹🇷  TEVE 2</button>
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-trtdiyanet/index.m3u8">🇹🇷  DİYANET TV HD</button>
+ 
+            <button class="channel-button" data-url="akittv-live.ercdn.net/akittv/akittv_360p.m3u8">Dream Turk</button>
+            <button class="channel-button" data-url="stream.tvcdn.net/muzik/kral-pop-tv.m3u8">🇹🇷  AKIT TV HD</button>
+ 
+            <button class="channel-button" data-url="stream.tiviturk.de/live/tiviturk.m3u8">🇹🇷  TİVİ TÜRK</button>
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-tv4/index.m3u8">🇹🇷  TV4 FHD</button>
+ 
+            <button class="channel-button" data-url="cdn-haber61tv.yayin.com.tr/haber61tv/smil:haber61tv.smil/playlist.m3u8">🇹🇷  HABER 61 TV</button>
+            <button class="channel-button" data-url="50.7.144.122:1935/livetv/flashtv.stream/sec-f5-v1-a1.m3u8">🇹🇷  FLASH HABER</button>
+ 
+            <button class="channel-button" data-url="tv-trthaber.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT HABER HD</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-haberturk/tracks-v1a1/mono.m3u8">🇹🇷  HABERTURK TV</button>
+ 
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-tgrteu/tracks-v1a1/mono.m3u8">🇹🇷  TGRT EU</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-tgrthaber/tracks-v1a1/mono.m3u8">🇹🇷  TGRT HABER</button>
+ 
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-haberglobal/index.m3u8">🇹🇷  HABER GLOBAL</button>
+            <button class="channel-button" data-url="edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8">🇹🇷  TÜRK HABER</button>
+ 
+            <button class="channel-button" data-url="tv-trtavaz.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT AVAZ</button>
+            <button class="channel-button" data-url="tv-trtturk.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT-TURK</button>
+ 
+            <button class="channel-button" data-url="tv-trtarabi.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT ARABI</button>
+            <button class="channel-button" data-url="tv-trtworld.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT WORLD</button>
+ 
+            <button class="channel-button" data-url="tv-e-okul04.medya.trt.com.tr/master_720.m3u8">🇷  TRT okul</button>
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-benguturk/index.m3u8">🇹🇷  BENGÜTÜRK TV </button>
+ 
+            <button class="channel-button" data-url="turkmedya-live.ercdn.net/tv24/tv24.m3u8">🇹🇷  DOST HD</button>
+            <button class="channel-button" data-url="stream.tvcdn.net/muzik/kral-pop-tv.m3u8">🇹🇷  TR24 TV</button>
+ 
+            <button class="channel-button" data-url="media.finest.tv/hls/live.m3u8">🇹🇷  FiNEST TV</button>
+            <button class="channel-button" data-url="tv-trtturk.medya.trt.com.tr/master_360.m3u8">🇹🇷  TRT TÜRK</button>
+ 
+            <button class="channel-button" data-url="rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_1660.m3u8">🇹🇷  FORTUNA TÜRK TV</button>
+            <button class="channel-button" data-url="dogus-live.daioncdn.net/tlc/tlc_360p.m3u8">🇹🇷  TLC</button>
+ 
+            <button class="channel-button" data-url="meclistv-live.ercdn.net/meclistv/meclistv.m3u8">🇹🇷  MECLİS TV</button>
+            <button class="channel-button" data-url="trn03.tulix.tv/gt-tv100/index.m3u8">🇹🇷  TV100</button>
+ 
+            <button class="channel-button" data-url="livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8">🇹🇷  ÜLKE TV</button>
+            <button class="channel-button" data-url="50.7.144.122:1935/livetv/ulusalkanal.stream/sec-f5-v1-a1.m3u8">🇹🇷  ULUSAL KANAL</button>
+ 
+            <button class="channel-button" data-url="mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8">🇹🇷  TVNET</button>
+            <button class="channel-button" data-url="akittv-live.ercdn.net/akittv/akittv.m3u8">🇹🇷  AKİT TV</button>
+ 
+            <button class="channel-button" data-url="bloomberght-live.daioncdn.net/bloomberght/bloomberght.m3u8">🇹🇷  BLOOMBERG</button>
+            <button class="channel-button" data-url="nrttn172.kesintisizyayin.com:29010/nrttn/nrttn/playlist.m3u8">🇹🇷  ViYANA TV HD</button>
+ 
+            <button class="channel-button" data-url="edge1.socialsmart.tv/caytv/bant1/playlist.m3u8">🇹🇷  ÇAY TV</button>
+            <button class="channel-button" data-url="edge1.socialsmart.tv/tv1/bant1/playlist.m3u8">🇹🇷  TV1</button>
+ 
+            <button class="channel-button" data-url="canli.tvden.com.tr/hls/live.m3u8">🇹🇷  TVDEN</button>
+            <button class="channel-button" data-url="content.tvkur.com/l/c7e1da7mm25p552d9u9g/index-360p.m3u8">🇹🇷  TARIM TV</button>
+ 
+            <button class="channel-button" data-url="owifavo5.rocketcdn.com/gstv/gstv/chunklist.m3u8">⚽ GsTV</button>
+            <button class="channel-button" data-url="live.artidijitalmedya.com/artidijital_tatlisestv/tatlisestv/playlist.m3u8">🎼 Tatlıses Tv</button>
+ 
+            <button class="channel-button" data-url="dogus-live.daioncdn.net/kralpoptv/kralpoptv_360p.m3u8">🎼 KRALPOP TV</button>
+            <button class="channel-button" data-url="dogus-live.daioncdn.net/kralpoptv/kralpoptv_720p.m3u8">🎼 KralPOP</button>
+ 
+            <button class="channel-button" data-url="tv-trtmuzik.medya.trt.com.tr/master_360.m3u8">🎼 TRT MUZiK</button>
+            <button class="channel-button" data-url="tgn.bozztv.com/dvrfl05/gin-powerhd/tracks-v1a1/mono.m3u8">🎼 POWER TURK</button>
+ 
+            <button class="channel-button" data-url="listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8">🎼 POWER TURK SLOW</button>
+            <button class="channel-button" data-url="listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8">🎼 POWER TURK TAPTAZE</button>
+ 
+            <button class="channel-button" data-url="live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8">🎼 DREAM TURK HD</button>
+            <button class="channel-button" data-url="live.m2.tv/hls3/720/stream.m3u8">М2 HD</button>
+ 
+            <button class="channel-button" data-url="ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist/cze/live_hq.m3u8">🎼 Dream Turk</button>
+            <button class="channel-button" data-url="stream.tvcdn.net/muzik/kral-pop-tv.m3u8">Ocko Expres</button>
+ 
+            <button class="channel-button" data-url="ocko-live.ssl.cdn.cra.cz/channels/ocko_gold/playlist/cze/live_hq.m3u8">🎼 Ocko Star</button>
+            <button class="channel-button" data-url="ocko-live.ssl.cdn.cra.cz/channels/ocko/playlist/cze/live_hq.m3u8">🎼 Ocko TV</button>
+ 
+            <button class="channel-button" data-url="cm.hostlagarto.com:8081/hits360tv/hits360HD.myStream/playlist.m3u8">🎼 Ocko Gold</button>
+            <button class="channel-button" data-url="muzzik-live.morescreens.com/mts-3/playlist.m3u8">Muzzik Cafe</button>
+ 
+            <button class="channel-button" data-url="muzzik-live.morescreens.com/mts-a4/playlist.m3u8">🎼 MUZZIK HIP-HOP</button>
+            <button class="channel-button" data-url="178.33.224.197:1935/euroindiemusic/euroindiemusic/playlist.m3u8">Music Chart TV</button>
+ 
+            <button class="channel-button" data-url="edge15.vedge.infomaniak.com/livecast/tvm3/chunklist_w678388921.m3u8">🎼 TVM 3</button>
+            <button class="channel-button" data-url="lightning-now70s-samsungnz.amagi.tv/playlist.m3u8">🎼 Now 70's</button>
+ 
+            <button class="channel-button" data-url="lightning-now80s-samsungnz.amagi.tv/playlist.m3u8">🎼 Now 80's</button>
+            <button class="channel-button" data-url="lightning-now90s-samsungnz.amagi.tv/playlist.m3u8">🎼 Now 90's</button>
+ 
+            <button class="channel-button" data-url="k3.usastreams.com/CableLatino/88stereo/playlist.m3u8">🎼 88 STEREO TV</button>
+            <button class="channel-button" data-url="56b50ada2d659.streamlock.net/LoveFM/livestream/playlist.m3u8">🎼 Radio Love FM</button>
+ 
+            <button class="channel-button" data-url="5929b138b139d.streamlock.net/RadioIbizaTV/livestream/chunklist_w1014685428.m3u8">🎼 Radio Ibiza TV</button>
+            <button class="channel-button" data-url="livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8">🎼 Power TV</button>
+ 
+            <button class="channel-button" data-url="livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8">🎼 PowerTürk TV</button>
+            <button class="channel-button" data-url="listen.powerapp.com.tr/dance/dance.smil/playlist.m3u8">🎼 Power Dance</button>
+ 
+            <button class="channel-button" data-url="listen.powerapp.com.tr/plove/love.smil/playlist.m3u8">🎼 Power Love</button>
+            <button class="channel-button" data-url="listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8">🎼 PowerTürk Slow</button>
+ 
+            <button class="channel-button" data-url="listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8">🎼 PowerTürk Taptaze</button>
+            <button class="channel-button" data-url="listen.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8">🎼 PowerTürk Akustik</button>
+ 
+            <button class="channel-button" data-url="cdnlive.myspirit.tv/LS-ATL-43240-2/index.m3u8">🎼 Spirit TV</button>
+            <button class="channel-button" data-url="bitcdn-kronehit.bitmovin.com/v2/hls/chunklist_b3128000.m3u8">🎼 Kronehit TV</button>
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </nav>
+        <section id="contentArea">
+
+        </section>
+    </section>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

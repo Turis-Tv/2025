@@ -1,0 +1,139 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark background for the TV app */
+    color: #fff; /* White text for contrast */
+}
+
+/* Splash Screen */
+#splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+}
+
+#splash-screen h1 {
+    font-size: 3em;
+}
+
+/* Main App Container */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 10px;
+    border-bottom: 2px solid #444;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.0em;
+    padding: 10px 20px;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Content Area */
+#content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+#channel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Channel Styles */
+.channel {
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.channel img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.channel p {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.channel:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #444;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    #channel-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}

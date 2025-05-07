@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  font-family: "Rubik", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#app {
+  display: flex;
+}
+
+#channels-list {
+  background: #000;
+  color: #fff;
+  width: 300px;
+  min-width: 300px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: flex-start;
+  overflow-y: scroll;
+}
+
+.bbc-arabic {
+  border: 2px solid #ccc9c985;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+#bbc-iframe {
+  display: none;
+}
+
+.channel-item {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-weight: 300;
+}
+
+.channel-name {
+  border: 2px solid #ccc9c985;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+.channel-name:hover {
+  background: #5d5d5d4f;
+  cursor: pointer;
+}
+
+#selected-channel-indicator {
+  background: linear-gradient(180deg, #d6d6d6, #f3f3f3);
+  box-shadow: 0px 2px 7px -5px #fff, 0px -5px 8px -2px inset #000;
+  color: #000;
+  border: 0;
+  font-weight: 500;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  position: relative;
+}
+
+.show-hide-sidebar,
+.show-hide-input {
+  position: absolute;
+  font-size: 32px;
+  padding-left: 8px;
+  color: #eaeaea;
+  text-shadow: 3px 2px #000;
+  z-index: 1;
+}
+.show-hide-sidebar {
+  transform: rotate(90deg);
+}
+.show-hide-input {
+  right: 8px;
+}
+.show-hide-sidebar:hover,
+.show-hide-input:hover {
+  cursor: pointer;
+}
+
+#input-wrapper {
+  height: 26px;
+  margin: 15px;
+  justify-content: center;
+  display: none;
+}
+
+#player-src {
+  height: 100%;
+  width: 350px;
+  margin-right: 8px;
+}
+#play-button {
+  height: 100%;
+  width: 55px;
+}
+
+#content,
+#player-wrapper,
+#video-player {
+  width: 100%;
+}
+
+#player-wrapper {
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  #channels-list {
+    width: 50px;
+    min-width: 135px;
+  }
+  .channel-item {
+    width: 100%;
+  }
+}
