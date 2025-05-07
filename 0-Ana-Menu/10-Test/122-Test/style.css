@@ -1,0 +1,48 @@
+.cxiv-container {
+  border: #c0c0c0 solid 1px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-family: arial, helvetica, sans-serif; 
+  overflow: auto;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+  box-shadow: 0px 0px 5px #cccccc;
+} 
+
+.cxiv-title {
+  padding-bottom: 15px
+}
+
+.cxiv-container iframe {
+  width: 300px;
+  border: #c0c0c0 solid 1px;
+  margin-right: 10px;
+  background-color: #000000;
+  float: left;
+}
+
+.cxiv-menu {
+  width: 300px;
+  height: 250px;
+  border: #c0c0c0 solid 1px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+.cxiv-menu a {
+  min-height: 40px; 
+  padding: 3px;
+  border-bottom: #c0c0c0 solid 1px;
+  display: block;
+  overflow: hidden;
+  background-color: #ff9933;   /* Orange */
+  color: #235F7F; /* Link Color */
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.cxiv-menu a:hover {
+  background-color: #6699CC; /* Hover Blue */
+  color: #000000;
+}
