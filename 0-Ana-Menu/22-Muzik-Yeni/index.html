@@ -1,458 +1,362 @@
-<!DOCTYPE HTML>
-<html xmlns:og="http://ogp.me/ns#" lang="tr-TR">
+<!DOCTYPE html>
+<html lang="en" >
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>yabancıdizi | yabancı dizi izle, yabancı diziler ve filmler izle</title>
-		<base href="#">
-		<meta name="description" content="Son çıkan yabancı dizi ve filmleri yabancidizi' de izle. En yeni yabancı film ve diziler, türkçe altyazılı yada dublaj olarak 1080p kalitesinde hd izle.">
-	<meta name="keywords" content="yabancı dizi izle, en iyi yabancı diziler, türkçe dublaj yabancı dizi izle, altyazılı yabancı dizi izle">
-	<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1, maximum-scale=1, initial-scale=1, shrink-to-fit=no">
-		<meta name="google-site-verification" content="T1MpfqliUAivQ8aI8ArWfS_UWnWQ-ThxCX_XV4-__R0" />
-	<meta name="google" content="notranslate" />
-	<link rel="manifest" href="https://yabancidizi.tv/manifest.json">
-	<link rel="dns-prefetch" href="#">
-	<link rel="dns-prefetch" href="//www.google-analytics.com">
-	<link rel="dns-prefetch" href="//www.googletagmanager.com">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="#">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<link href="/mofy/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-	<link href="/mofy/img/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-	<link rel="apple-touch-icon" sizes="128x128" href="/mofy/img/128x128_.png">
-	<link rel="apple-touch-icon-precomposed" sizes="128x128" href="#">
-	<link rel="icon" sizes="192x192" href="#">
-	<link rel="icon" sizes="128x128" href="#">
-	<meta name="theme-color" content="#42e3d0" />
+  <meta charset="UTF-8">
+  <title>Practica</title>
+  
 
-	<meta property="og:locale" content="tr_TR">
-		<meta property="og:title" content="Turis Tv">
-	<meta property="og:site_name" content="#">
-	<meta property="og:url" content="#">
-	<meta property="og:image" content="https://yabancidizi.tv/mofy/img/128x128_.png">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
 
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="#" />
-			<link rel="canonical" href="#">
-		<link rel="icon" href="https://yabancidizi.tv/favicon.ico" type="image/x-icon">
-		<link rel="preload" href="https://yabancidizi.tv/mofy/css.esdynamo/swiper.css?v1.4" as="style">
-	<link defer rel="stylesheet" href="https://yabancidizi.tv/mofy/css.esdynamo/swiper.css?v1.4">
-	<link defer rel="stylesheet" href="https://yabancidizi.tv/mofy/css.esdynamo/main.css?2.21">
-		<link defer rel="stylesheet" href="https://yabancidizi.tv/mofy/yds/yds.min.css?v=1.6">
-	<link defer rel="stylesheet" href="https://yabancidizi.tv/mofy/yds/yds-theme.min.css?v=1.6">
-	
-	
+<head>
+  <title>Interfaz con 9 botones e imágenes</title>
+  <style>
+    body {
+      background-color: #454545;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 80px;
+      height: 76px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
+      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
 </head>
 
-<body class="fluid">
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="... Aramak ..." oninput="searchByName(this.value)">
+      </div>
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+        
 
 
-<div data-gets data-type="pgskin"></div>
-<main id="wrapper">
-
-	
-
-	<header id="header">
-		
-		<button class="mobile-menu-trigger"><span> </span></button>
-		
-		<div id="logo">
-			 
-		 
-		</div>
-
-	 
-
-		 
 
 
-	</header>
 
-	<div id="wrapper-inner">
-		<div class="triggered-overlay"></div>
-		<aside id="primary-sidebar">
-			<div id="sidebar-inner" class="scrollbar-macosx">
-				<section class="guide-menu fluid">
-					<h5 class="section-heading">Menü</h5>
-					<ul class="guide-icon-menu">
-						<li>
-							<a href="/" data-navigo>
-								<span>
-									<svg class="mofycon"><use xlink:href="#icon-home-new"></use></svg>
-								</span>Anasayfa							</a>
-						</li>
-						<li>
-							<a href="kesfet" data-navigo>
-								<span>
-									<svg class="mofycon"><use xlink:href="#icon-discover-new"></use></svg>
-								</span>Keşfet							</a>
-						</li>
-						<li>
-							<a href="trends" data-navigo>
-								<span>
-								<svg class="mofycon"><use xlink:href="#icon-trending-new"></use></svg>
-							</span>Trendler							</a>
-						</li>
-						<li>
-							<a href="takvim" data-navigo>
-								<span>
-								<svg class="mofycon"><use xlink:href="#icon-calendar-new"></use></svg>
-							</span>Takvim							</a>
-						</li>
-						<li>
-							<a href="dizi-izle" data-navigo>
-								<span>
-									<svg class="mofycon"><use xlink:href="#icon-tv-new"></use></svg>
-								</span> Turis 
-							</a>
-						</li>
-						<li>
-							<a href="film-izle" data-navigo>
-								<span>
-									<svg class="mofycon"><use xlink:href="#icon-film-new"></use></svg>
-								</span> Turis 1
-							</a>
-						</li>
-						<li>
-							<a href="forums" data-navigo>
-								<span>
-								<svg class="mofycon"><use xlink:href="#icon-comment-new"></use></svg>
-							</span>Tartışmalar							</a>
-						</li>
-						<li>
-							<a href="koleksiyons" data-navigo>
-								<span>
-								<svg class="mofycon"><use xlink:href="#icon-collections-new"></use></svg>
-							</span>Koleksiyonlar							</a>
-						</li>
-						<li>
-							<a href="birlikte-izleyin" data-navigo>
-								<span>
-								<svg class="mofycon"><use xlink:href="#icon-users-new"></use></svg>
-							</span>Birlikte İzle							</a>
-						</li>
-																	</ul>
+
+
+
+      <button class="button muzik" onclick="redirectTo('1-Ibrahim Tatlises/index.html')">
+        <img src="https://mp3indirdur.life/detayresim/100/100/mp3resimler/Siyami-Yaman-Uvey-Ana-1998.jpg" alt="Imagen">
+        <span>Ibrahim Tatlises</span>
+    </button>
+
+
+      <button class="button muzik" onclick="redirectTo('2-Rahmi Aydin/index.html')">
+        <img src="https://mp3indirdur.life/detayresim/100/100/mp3resimler/Siyami-Yaman-Uvey-Ana-1998.jpg" alt="Imagen">
+        <span>Rahmi Aydin</span>
+    </button>
+
+
+
   
-		
-	</div></div>
-<div class="dark-segment">
- <ul id="latest_trailers">
- <li class="" data-yt="ghOPtWYz8rc" >
- <a href="Mustafa İpekçioğlu" title="Mustafa İpekçioğlu">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://yt3.ggpht.com/ytc/AIdro_mn0u9z1uU4zhkIIIX6KVqe20EoShK87wS4OF_2sHgor6c=s48-c-k-c0x00ffffff-no-rj" 
-alt="Turis Tv" data-src="https://yt3.ggpht.com/ytc/AIdro_mn0u9z1uU4zhkIIIX6KVqe20EoShK87wS4OF_2sHgor6c=s48-c-k-c0x00ffffff-no-rj">
-	 </div>
- <h6>Mustafa İpekçioğlu</h6>
- <small class="desktop-only">İpekçioğlu</small>
- <small class="mobile-only">Bırakın da</small>
- </a>
+
+ 
+    
+
+ 
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+
+     
 
 
 
 
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
 
 
 
- </li>
- <li class="" data-yt="c1h68yMxb3I" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Makaram Sarı </small>
- </a>
 
 
 
- </li>
- <li class="" data-yt="MqV55hD0Sv4" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">O Yar Gelir</small>
- </a>
-
- </li>
- <li class="" data-yt="lvBzN8BsWtE" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Canım Eminem</small>
- </a>
-
-
- </li>
- <li class="" data-yt="1O00V1XmxXw" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Ne Güzel</small>
- </a>
-
-
- </li>
- <li class="" data-yt="Mwu43X40PgE" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Lorke Lorke</small>
- </a>
-
-
- </li>
- <li class="" data-yt="yb5a43Xn4KQ" >
- <a href="Samet Özbakır" title="Samet Özbakır">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Samet Özbakır</h6>
- <small class="desktop-only">Samet Özbakır</small>
- <small class="mobile-only">Akbaba İkilisi</small>
- </a>
-
- </li>
- <li class=" " data-yt="A5DVVKglP2Q" >
- <a href="Samet Özbakır" title="Samet Özbakır">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- <span class="watch-now">Yayınlandı</span>
- </div>
- <h6>Darıldım Darıldım</h6>
- <small class="desktop-only">Samet Özbakır</small>
- <small class="mobile-only">Darıldım Darıldım</small>
- </a>
 
 
 
- </li>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+      
+
+
+  
+
+
+    </div>
+  
 </div>
 
-<div data-gets data-type="ssf"></div>
-
-<div class="dark-segment">
-	 
- <ul id="latest_trailers">
- <li class="" data-yt="ghOPtWYz8rc" >
- <a href="Mustafa İpekçioğlu" title="Mustafa İpekçioğlu">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://yt3.ggpht.com/ytc/AIdro_mn0u9z1uU4zhkIIIX6KVqe20EoShK87wS4OF_2sHgor6c=s48-c-k-c0x00ffffff-no-rj" 
-alt="Turis Tv" data-src="https://yt3.ggpht.com/ytc/AIdro_mn0u9z1uU4zhkIIIX6KVqe20EoShK87wS4OF_2sHgor6c=s48-c-k-c0x00ffffff-no-rj">
-	 </div>
- <h6>Mustafa İpekçioğlu</h6>
- <small class="desktop-only">İpekçioğlu</small>
- <small class="mobile-only">Bırakın da</small>
- </a>
-
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="" data-yt="JjTeViaVdoI" >
- <a href="Zeynep Şimşek" title="Zeynep Şimşek">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- </div>
- <h6>Zeynep Şimşek</h6>
- <small class="desktop-only">Zeynep Şimşek</small>
- <small class="mobile-only">Evlerinin Önü</small>
- </a>
-
- </li>
- <li class="watched" data-yt="A5DVVKglP2Q" data-link="dizi/doctor-who-izle-1/sezon-15/bolum-1" >
- <a href="Samet Özbakır" title="Samet Özbakır">
- <div class="trailer_simg">
- <img class="lazy-wide" src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg" alt="Turis Tv" 
-data-src="https://cdn-images.dzcdn.net/images/artist/251be3d18785ab5b5d84ebcc11135eba/500x500.jpg">
- <span class="watch-now">Yayınlandı</span>
- </div>
- <h6>Darıldım Darıldım</h6>
- <small class="desktop-only">Samet Özbakır</small>
- <small class="mobile-only">Darıldım Darıldım</small>
- </a>
- </li>
-
-
-
-
-
-	</ul>
-</div>
-
-<div class="dark-segment">
  
- <ul class="clearfix" id="result_lastEpisodes">
- <li class="segment-poster-sm tv-season-final">
- <div class="poster poster-xs">
- 
- 
- </span>
-								
-										
-										 
-						 
-						 
-					 
-						 
-						 
-						 
-						</div>
-					</li>	</ul>
-	 
-	 
-		<ul class="clearfix new-tvseries">
-		<li class="segment-poster-sm">
-					
-					</div>
-				 
-				 
-			 
-			 
-					</div>
-				</li>	
-		</ul>
-	</div>
-	
-	 
-	 
+    
 
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
 
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
 
-                            </div>
-                            <div class="mb30">
-                                <br>
-<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1474501078&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe><br>
-<br>
-<br>
-<br>
-<br>
-					         
-						
-	
-            		
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
 
-	
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/jquery-3.3.1.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/jquery-ui.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/semantic.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/navigo.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/jquery.scrollbar.min.js?v=1"></script>
-<script src="https://yabancidizi.tv/mofy/js/lazyload.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/sweetalert2.min.js"></script>
-<script src="https://yabancidizi.tv/mofy/js/humane.min.js?v=2"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-274501025-1"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-274501025-1');</script>
-<script src="https://yabancidizi.tv/mofy/yds/yds.min.js?v=1.1"></script>
-<script src="https://yabancidizi.tv/mofy/js/main.min.js?v19.32"></script>
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
 
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
 </body>
 </html>
