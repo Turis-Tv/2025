@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Practica</title>
+  <title>Turis Tv</title>
   
 
 </head>
@@ -12,10 +12,10 @@
 <html>
 
 <head>
-  <title>Interfaz con 9 botones e imágenes</title>
+  <title>Interface met 9 knoppen en afbeeldingen</title>
   <style>
     body {
-      background-color: #454545;
+      background-color: #000000;
       margin: 0;
       padding: 20px;
       position: relative;
@@ -42,7 +42,7 @@
     }
     
     .button-wrapper {
-  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  max-height: calc(100vh - 200px); /* Pas aan als dat nodig is */
   overflow-y: hedden;
 }
 
@@ -68,8 +68,8 @@
     }
 
     .button img {
-      width: 80px;
-      height: 76px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       margin-right: 10px;
     }
@@ -82,9 +82,9 @@
 
     .filter-menu {
       display: flex;
-      overflow-x: auto; /* Permitir desplazamiento horizontal */
-      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
-      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      overflow-x: auto; /* Horizontaal scrollen toestaan */
+      scrollbar-width: none; /* Verberg de schuifbalk in browsers die deze weergeven */
+      -ms-overflow-style: none; /* De schuifbalk verbergen in Internet Explorer */
       -justify-content: center;
       align-items: center;
       position: fixed;
@@ -104,9 +104,9 @@
       background-color: transparent;
       color: white;
       border: none;
-      margin: 0 10px;
+      margin: 2 5px;
       cursor: pointer;
-      font-size: 12px;
+      font-size: 15px;
       border-radius: 20px;
       padding: 5px 10px;
     }
@@ -178,8 +178,21 @@
         <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
       </label>
       <div class="search-box" id="search-box">
-        <input type="text" id="search" placeholder="... Aramak ..." oninput="searchByName(this.value)">
+        <input type="text" id="search" placeholder="Aramak" oninput="searchByName(this.value)">
       </div>
+    <button class="filter-button active" onclick="filterSelection('all')">All</button>
+    <button class="filter-button" onclick="filterSelection('1')">1</button>
+    <button class="filter-button" onclick="filterSelection('2')">2</button>
+    <button class="filter-button" onclick="filterSelection('3')">3</button>
+    <button class="filter-button" onclick="filterSelection('4')">4</button>
+    <button class="filter-button" onclick="filterSelection('5')">5</button>
+    <button class="filter-button" onclick="filterSelection('6')">6</button>
+    <button class="filter-button" onclick="filterSelection('7')">7</button>
+    <button class="filter-button" onclick="filterSelection('remix')">Remix</button>
+    <button class="filter-button" onclick="filterSelection('yedek')">Yedek</button>
+    <button class="filter-button" onclick="filterSelection('yedek')">Yedek</button>
+    <button class="filter-button" onclick="filterSelection('yedek')">Yedek</button>
+    
     
   </div>
    </div>
@@ -187,88 +200,61 @@
   <!-- Aquí van tus botones -->
     <div class="button-container" id="button-container">
 
-        
 
 
 
 
 
 
-
-
-      <button class="button muzik" onclick="redirectTo('1-Ibrahim Tatlises/index.html')">
-        <img src="https://mp3indirdur.life/detayresim/100/100/mp3resimler/Siyami-Yaman-Uvey-Ana-1998.jpg" alt="Imagen">
+       <button class="button 2" onclick="redirectTo('1-Ibrahim Tatlises/index.html')">
+        <img src="https://media.s-bol.com/x2BYvQjVOALP/550x550.jpg" alt="Imagen">
         <span>Ibrahim Tatlises</span>
     </button>
 
 
-      <button class="button muzik" onclick="redirectTo('2-Rahmi Aydin/index.html')">
-        <img src="https://mp3indirdur.life/detayresim/100/100/mp3resimler/Siyami-Yaman-Uvey-Ana-1998.jpg" alt="Imagen">
+      <button class="button 3" onclick="redirectTo('2-Rahmi Aydin/index.html')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/d01893bcb8f6314c8be224f124b4f834/1900x1900-000000-80-0-0.jpg" alt="Imagen">
         <span>Rahmi Aydin</span>
+    </button>
+
+      <button class="button 4" onclick="redirectTo('3-Ceylan/index.html')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/efc1ad0b62c1968a782cfb9626b0b491/0x1900-000000-80-0-0.jpg" alt="Imagen">
+        <span> Ceylan</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('4-Songül Karli/index.html')">
+        <img src="https://ideacdn.net/shop/bf/47/myassets/products/323/pr_01_28323.jpg?revision=1697143329" alt="Imagen">
+        <span>Songül Karlı</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('5-Mustafa Er/index.html')">
+        <img src="https://mp3semticdn.com/mp3_images/Mustafa-Er-Bu-Cayir-Sulu-Cayir-2024-19.jpg" alt="Imagen">
+        <span>Mustafa Er</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('6-Sedat Uçan/index.html')">
+        <img src="https://i.scdn.co/image/ab67616d0000b27387254c1adec46d04c1af9ab4" alt="Imagen">
+        <span> Sedat Uçan</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('7-Emrah/index.html')">
+        <img src="https://img.piri.net/mnresize/900/-/resim/upload/2017/05/24/04/14/06891b03genc01.jpg" alt="Imagen">
+        <span>Emrah</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('8-Emrah Mahzuni/index.html')">
+        <img src="https://i.ytimg.com/vi/Czsp_nWJzSM/hqdefault.jpg" alt="Imagen">
+        <span>Emrah Mahzuni</span>
     </button>
 
 
 
-  
-
- 
-    
-
- 
- 
-
- 
-
-
-
- 
-
- 
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     
 
-
-      
-
-
-  
 
 
     </div>
