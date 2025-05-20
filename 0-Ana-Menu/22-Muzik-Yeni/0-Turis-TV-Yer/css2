@@ -1,0 +1,14 @@
+﻿@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(s/hindsiliguri/v13/ijwOs5juQtsyLLR5jN4cxBEoRDf44uE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(s/hindsiliguri/v13/ijwOs5juQtsyLLR5jN4cxBEoRCf_4uE.ttf) format('truetype');
+}
