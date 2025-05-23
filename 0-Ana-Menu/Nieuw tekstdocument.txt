@@ -1,0 +1,281 @@
+Oğul",
+Eyvah Oğul ",
+https://mp3kulisi.mobi/indir/seyda-karadeniz/vefa-2011/seyda-karadeniz-eyvah-ogul.mp3",
+
+
+
+ id:2,
+Oğul",
+ Mustafa Küçük",
+https://mp3kulisi.mobi/indir/Mustafa-Kucuk/Klasikleri/Mustafa-Kucuk-Yandim-Ogul.mp3",
+
+
+
+ id:3,
+Oğul",
+ Nuray Hafiftaş",
+https://mp3kulisi.mobi/indir/Nuray-Hafiftas/Eyvah-Gonul-1999/Nuray-Hafiftas-Sen-Kucuksun.mp3",
+
+
+
+ id:4,
+Oğul",
+İzzet Yıldızhan ",
+https://mp3kulisi.mobi/indir/Izzet-Yildizhan/Birisi-1999/Izzet-Yildizhan-Ogul.mp3",
+
+
+
+ id:5,
+Oğul",
+Ferhat Tunç ",
+https://mp3kulisi.mobi/indir/Ferhat-Tunc/Ferhat-Tunc-Secmeler/Ferhat-Tunc-Ogul.mp3",
+
+
+
+ id:6,
+Oğul",
+Erdal Erzincan ",
+https://mp3kulisi.mobi/indir/Erdal-Erzincan/Turkuler-Sevdamiz-Serisi/Erdal-Erzincan-Ismail-Ozden-Ogul.mp3",
+
+
+
+ id:7,
+Oğul",
+Nazlı Öksüz ",
+https://mp3kulisi.mobi/indir/nazli-oksuz/yar-benimle-gelir-misin-2020/nazli-oksuz-ogul-gomdum-ogul-seni-topraga-gomdum.mp3",
+
+
+
+ id:8,
+Oğul",
+Aydın Ağyer ",
+https://mp3kulisi.mobi/indir/Aydin-Agyer/Oy-Daglar-2018/Aydin-Agyer-Ogul.mp3",
+
+
+
+ id:9,
+Oğul",
+Ferhat Tunç ",
+https://mp3kulisi.mobi/indir/Ferhat-Tunc/Kavgamin-Cicegi-1999/Ferhat-Tunc-Gulmene-Ogul.mp3",
+
+
+
+ id:10,
+Oğul",
+Mustafa Uğur ",
+https://mp3kulisi.mobi/indir/Mustafa-Ugur/Bir-Tek-Canim-2011/Mustafa-Ugur-Ogul.mp3",
+
+
+
+ id:11,
+Oğul",
+Elif Altıntaş ",
+https://mp3kulisi.mobi/indir/Elif-Altintas/Unut-Beni-Senin-Hallerin-2013/Elif-Altintas-Ogul.mp3",
+
+
+
+ id:12,
+Oğul",
+Hakkı Bulut ",
+https://mp3kulisi.mobi/indir/Hakki-Bulut/Senden-Vazgecmem-2012/Hakki-Bulut-Ogul.mp3",
+
+ papular:15,
+
+
+ id:13,
+Oğul",
+Osman Öztunç ",
+https://mp3kulisi.mobi/indir/Osman-Oztunc/Durmusun-Turkusu-1999/Osman-Oztunc-Ogul.mp3",
+
+
+
+ id:14,
+Oğul",
+Tülay Maciran ",
+https://mp3kulisi.mobi/indir/Tulay-Maciran/Nerdesin-2014/Tulay-Maciran-Ogul.mp3",
+
+
+
+ id:15,
+Oğul",
+Murat Çobanoğlu ",
+https://mp3kulisi.mobi/indir/Murat-Cobanoglu/Ozan-Murat-Sarkilari/Murat-Cobanoglu-Ogul-Babayi-Tanimaz.mp3",
+
+
+
+ id:16,
+Oğul",
+Derinsu ",
+https://mp3kulisi.mobi/indir/derinsu/derin-turkuler-2010/derinsu-can-ogul.mp3",
+
+
+
+ id:17,
+Oğul",
+Murat Güler ",
+https://mp3kulisi.mobi/indir/murat-guler/kilit-2009/murat-guler-ogul.mp3",
+
+
+
+ id:18,
+Oğul",
+Sevda Gül ",
+https://mp3kulisi.mobi/indir/sevda-gul/sevdali-turkuler-2002/sevda-gul-ogul.mp3",
+
+
+
+id:19,
+category:"Oğul",
+name:"Aşık Hayrani ",
+src:"https://mp3kulisi.mobi/indir/asik-hayrani/hisse-alsana-1987/asik-hayrani-ogul.mp3",
+image:"https://1k-cdn.com/resimler//kitaplar/42674_1439927696.jpg",
+
+
+ id:20,
+Oğul",
+Abdullah Bektaş ",
+https://mp3kulisi.mobi/indir/abdullah-bektas/ogul-2016/abdullah-bektas-ogul.mp3",
+
+
+
+ id:21,
+Oğul",
+Şahin Yücebaş ",
+https://mp3kulisi.mobi/indir/Sahin-Yucebas/Yoruldum-Anam-2017/Sahin-Yucebas-Ogul.mp3",
+
+
+{
+id:22,
+category:"Oğul",
+name:"Naki Yoksuli ",
+src:"https://mp3kulisi.mobi/indir/naki-yoksuli/dogma-bebek-2006/naki-yoksuli-ogul.mp3",
+image:"https://1k-cdn.com/resimler//kitaplar/42674_1439927696.jpg",
+},
+
+ id:23,
+Oğul",
+ Cemali Kaya",
+https://mp3kulisi.mobi/indir/cemali-kaya/yolcum-2016/cemali-kaya-ogul.mp3",
+
+
+
+ id:24,
+Oğul",
+Ruşen Aydeniz",
+https://mp3kulisi.mobi/indir/Rusen-Aydeniz/Kara-Kiz-2019/Rusen-Aydeniz-Ogul.mp3",
+
+
+
+ id:25,
+Oğul",
+Çimen Yalçın",
+https://mp3kulisi.mobi/indir/Cimen-Yalcin/Ogul-2020/Cimen-Yalcin-Ogul.mp3",
+
+
+
+ id:26,
+Oğul",
+Arzu Şahin",
+https://mp3kulisi.mobi/indir/Arzu-Sahin/Ceylanim-1999/Arzu-Sahin-Sen-Kucuksun-Olemezsin.mp3",
+
+
+
+ id:27,
+Sibel Can",
+Yetim-Yavrum",
+https://mp3kulisi.mobi/indir/sibel-can/canim-benim-2001/sibel-can-yetim-yavrum.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/sibel-can-canim-benim-2001.jpg",
+
+
+ id:28,
+Ali Turaç",
+Hele Yavrum",
+https://mp3kulisi.mobi/indir/Ali-Turac/Ali-Turac-Klasikleri/Ali-Turac-Hele-Yavrum.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/ali-turac-ali-turac-klasikleri.jpg",
+
+
+ id:29,
+Seyfettin Sucu",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Seyfettin-Sucu/Anilarim-1980/Seyfettin-Sucu-Evlat-Acisi.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/seyfettin-sucu-anilarim-1980.jpg",
+
+
+ id:30,
+Ayhan Keser",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ayhan-Keser/Kavak-Yelleri-2018/Ayhan-Keser-Evlat-Acisi.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Ayhan-Keser-Kavak-Yelleri-2018.jpg",
+
+
+ id:31,
+Ali Ercan",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ali-Ercan/Ali-Ercan-Uzelli-Arsiv/Ali-Ercan-Evlat-Acisi.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Ali-Ercan-Ali-Ercan-Uzelli-Arsiv.jpg",
+
+
+ id:32,
+Gönül Maraşlı",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ali-Ercan/Ali-Ercan-Uzelli-Arsiv/Ali-Ercan-Evlat-Acisi.mp3",
+ image:"https://s3.cloud.ngn.com.tr/kitantik/images/2024-10-24/1br9qfwm2m7docu1khc.jpg",
+
+
+ id:33,
+İsmail Özden",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ismail-Ozden/Gonul-Ezgilerimiz-1998/Ismail-Ozden-Sen-Kucuksun.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Ismail-Ozden-Gonul-Ezgilerimiz-1998.jpg",
+
+
+ id:34,
+Recebim",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Recebim/Vatan-2018/Recebim-Uyu-Bebegim.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/recebim-vatan-2018.jpg",
+
+
+ id:35,
+Ali Haydar Yıldız",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ali-Haydar-Yildiz/Dinle-Ahvalimi-2019/Ali-Haydar-Yildiz-Emek-Cektim.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Ali-Haydar-Yildiz-Dinle-Ahvalimi-2019.jpg",
+
+
+ id:36,
+Çimen Yalçın",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Cimen-Yalcin/Ogul-2020/Cimen-Yalcin-Ogul.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/cimen-yalcin-ogul-2020.jpg",
+
+
+ id:37,
+Çılgın Sedat",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Cilgin-Sedat/Sirac-Bebegime-2007/Cilgin-Sedat-Sirac-Bebegim.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Cilgin-Sedat-Sirac-Bebegime-2007.jpg",
+
+
+ id:38,
+Metin Çiftlik",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Metin-Ciftlik/Gunun-Birinde-2003/Metin-Ciftlik-Vur-Mezarci-Kazmayi.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Metin-Ciftlik-Gunun-Birinde-2003.jpg",
+
+
+ id:39,
+Bedirhan Gökçe",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Bedirhan-Gokce/Adam-Kavgada-Belli-Olur-2007/Bedirhan-Gokce-Ogluma.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Bedirhan-Gokce-Adam-Kavgada-Belli-Olur-2007.jpg",
+
+
+ id:40,
+Bedirhan Gökçe",
+Evlat Acısı",
+https://mp3kulisi.mobi/indir/Ferhat-Tunc/Vurgunum-Hasretine-1986/Ferhat-Tunc-Uyu-Yavrum.mp3",
+ image:"https://cdn.statically.io/img/mp3kulisi.mobi/h=164,w=164,q=50/detayresim/164/164/mp3resimler/Ferhat-Tunc-Vurgunum-Hasretine-1986.jpg",
+
+
+
