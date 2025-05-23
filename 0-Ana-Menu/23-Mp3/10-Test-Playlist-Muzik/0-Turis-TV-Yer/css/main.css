@@ -1,0 +1,747 @@
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+   background-image: url("../design/dark_exa.png");
+   font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+
+#main {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+#main #p1 {
+    height: 100vh;
+    /*border: #FF0004 solid 3px;*/
+}
+#main #p2 {
+    height: 100vh;
+    background-color: #090909;
+    position: relative;
+    overflow: hidden;
+}
+#main #p1 #enGenel #ic {
+    border-radius: 20px;
+    background-image: url(url), -webkit-linear-gradient(314deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: url(url), -moz-linear-gradient(314deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: url(url), -o-linear-gradient(314deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: url(url), linear-gradient(136deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1px;
+    align-items: stretch;
+    -webkit-box-shadow: 0px 0px 9px #A8A8A8;
+    box-shadow: 0px 0px 9px #A8A8A8;
+    position: relative;
+}
+#main #p1 #enGenel {
+
+}
+
+
+#main #p1 #socialPlay {
+    height: 70px;
+    background-color: #FFFFFF;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#yayinda {
+    width: 98%;
+    border-radius: 10px;
+    background-color: #25172E;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+ #yayinda #kup {
+    width: 164px;
+    height: 170px;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(296deg,rgba(245,252,252,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: -moz-linear-gradient(296deg,rgba(245,252,252,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: -o-linear-gradient(296deg,rgba(245,252,252,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: linear-gradient(154deg,rgba(245,252,252,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    border: 1px solid #000000;
+    position: relative;
+}
+#p1 #yayinda #sensor {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 3px;
+}
+	.anipar{
+		
+	animation-duration: 2s;
+	animation-direction: alternate-reverse;
+	animation-iteration-count: infinite	
+		
+		
+	}#op1 {
+    width: 30px;
+    height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EB0485;
+    position: absolute;
+    animation-name: kar1;
+}
+#op2   {
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EB0485;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    animation-name: kar2;
+	animation-delay: 100ms;
+}
+#op3   {
+    width: 10px;
+    height: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EB0485;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    animation-name: kar3;
+    padding-left: 0px;
+	animation-delay: 200ms;
+}
+#p1 #yayinda .yayinda {
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    height: 25px;
+}
+
+
+	@keyframes kar1 {
+		0%{opacity: 0.1}
+		100% {opacity: 0.4;}
+		
+	}	
+		@keyframes kar2 {
+		0%{opacity: 0.1}
+		100% {opacity: 0.7}
+		
+	}	@keyframes kar3 {
+		0%{opacity: 0.1}
+		100% {opacity:1}
+		
+	}
+
+#p1 #yayinda .yProgram {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 8px;
+    margin-left: 3px;
+    display: block;
+    width: 250px;
+    height: 25px;
+
+
+}
+#p1 #yayinda #pAyrinti {
+    font-size: 14px;
+    color: #E4E4E4;
+    width: 300px;
+    margin-left: 12px;
+
+}
+#p1 #yayinda #yayindaKapsa {
+    display: flex;
+    max-width: 400px;
+    flex-wrap: wrap;
+    height: 150px;
+
+}
+
+#yayinda #kup .fm {
+    border-radius: 6px;
+    color: #FFFFFF;
+    background-color: #000000;
+    width: 60px;
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    margin-left: 8px;
+    border: 2px solid #000000;
+}
+#yayinda #kup .konya {
+    border-radius: 6px;
+    color: #000000;
+    width: 60px;
+    padding-top: 5px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    margin-left: 8px;
+    border: 2px solid #000000;
+}
+#kup .fm .nokta {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#yayinda #kup .frek1 {
+    position: absolute;
+    bottom: 5px;
+    font-size: 40px;
+    left: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+#kup .frek1 .frek2 {
+    font-size: 16px;
+}
+#ic #logoPro #prSlayt {
+    width: 315px;
+    height: 200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#logoPro #prSlayt #prK {
+    width: 315px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+#prSlayt #prK #prR {
+    width: 315px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+#prSlayt #prK #prG {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 315px;
+    height: 200px;
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.21) 62.18%,rgba(0,0,0,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(0,0,0,0.21) 62.18%,rgba(0,0,0,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(0,0,0,0.21) 62.18%,rgba(0,0,0,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.21) 62.18%,rgba(0,0,0,1.00) 100%);
+    z-index: 2;
+}
+#prSlayt #prK #prT {
+    width: 315px;
+    bottom: 27px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 0px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    color: #F1F1F1;
+    z-index: 3;
+}
+#enGenel #ic #logoPro {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    background-image: -webkit-linear-gradient(44deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: -moz-linear-gradient(44deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: -o-linear-gradient(44deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    background-image: linear-gradient(46deg,rgba(255,255,255,1.00) 0%,rgba(185,224,239,1.00) 100%);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    display: flex;
+}
+#logoPro #prSlayt #pGun {
+    padding-top: 20px;
+    padding-right: 12px;
+    padding-bottom: 20px;
+    padding-left: 12px;
+    background-color: #FFB715;
+    color: #000000;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 280px;
+    position: absolute;
+    bottom: -17px;
+    right: 0px;
+    z-index: 20;
+    font-weight: bold;
+}
+#logoPro #prSlayt #pSunucu {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    font-size: 14px;
+    width: 215px;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -40px;
+    right: 21px;
+    z-index: 21;
+}
+
+#ic #logoPro #logo {
+    margin-right: 15px;
+}
+.socialW {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.mail {
+    background-image: url(../design/mail.png);
+}
+.instagram {
+    background-image: url(../design/instagram_.png);
+}
+.twitter {
+    background-image: url(../design/twitter.png);
+}
+.facebook {
+    background-image: url(../design/facebook.png);
+}
+#socialPlay #social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+#p1 #socialPlay #whatsapp {
+    width: 239px;
+    background-color: #FFCB80;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 41px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-image: url(../design/whatsapp.png);
+    border-radius: 12px;
+    font-size: 14px;
+}
+#p1 #socialPlay #social {
+    display: flex;
+	align-items: flex-end;
+}#p1 #socialPlay #volumeControl {
+    padding-left: 10px;
+margin-right: auto;
+}
+
+#p1 #socialPlay #dinleBtn {
+    width: 200px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-image: url(../design/play.png);
+    padding-left: 80px;
+    margin-right: auto; 
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 5px;
+    line-height: 80px;
+    cursor: pointer;
+ 
+
+}
+#iletisimBilgileri   {
+    padding-top: 60px;
+}
+#enGenel #ic #crop {
+    width: 236px;
+    bottom: 0px;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 26px;
+}
+
+
+.iletisim {
+    max-width: 510px;
+    padding-left: 50px;
+    margin-bottom: 12px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    font-size: 18px;
+    margin-left: 27px;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.adres {
+    background-image: url(../design/1x/konum.png);
+}
+.telefon {
+    background-image: url(../design/1x/tel.png);
+}
+.uydu {
+    background-image: url(../design/1x/uydu.png);
+}
+.ramu   {
+    background-image: url(../design/reklam_yap.png);
+
+}
+.p2 {
+    width: 100px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    cursor: pointer;
+    position: relative;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: block;
+}
+#menuKapsa #p2Menu #anasayfa {
+    background-color: #FFCDC5;
+    background-image: url(../design/1x/anasayfa.png);
+    color: #A5270A;
+}
+#menuKapsa #p2Menu #programlar {
+    background-color: #F9A898;
+    background-image: url(../design/1x/programlar2.png);
+    color: #C93A14;
+}
+ #menuKapsa #p2Menu #yayinAkisi {
+    background-color: #ED8A72;
+    background-image: url(../design/1x/yayinakisi.png);
+ 
+}
+#menuKapsa #p2Menu #hakkimizda {
+    background-color: #C93A14;
+    background-image: url(../design/1x/hakkimizda.png);
+    color: #F9A898;
+}
+#menuKapsa #p2Menu #iletisim {
+    background-color: #A5270A;
+    background-image: url(../design/1x/iletisim.png);
+    color: #FFCDC5;
+}
+
+#menuKapsa #p2Menu #Turis {
+    background-color: #FFCDC5;
+    background-image: url(../design/1x/iletisim.png);
+    color: #FFCDC5;
+}
+#menuKapsa #p2Menu #Turis_1 {
+    background-color: #F9A898;
+    background-image: url(../design/1x/iletisim.png);
+    color: #FFCDC5;
+}
+
+
+
+#menuKapsa #p2Menu  {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+
+#menuKapsa{
+    z-index: 300;
+    position: fixed;
+    top: 0px;
+    width: 50%;
+    
+    
+    
+}
+
+
+.p2s {
+    color: #FFFFFF;
+    top: 0px;
+}
+#main #p2sFull #s_yayinakisi {
+    padding-top: 100px;
+}
+
+#p2sFull #s_hakkimizda #h_image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../images/radyoen-hakkimizda2.jpg);
+    height: 632px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+#s_hakkimizda #h_image #iKapla {
+    width: 700px;
+    height: 632px;
+    background-color: rgba(97,132,203,0.55);
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+.hMetin   {
+    font-size: 18px;
+    color: #000000;
+    width: 378px;
+    display: block;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+#mTab .tabEl ul li .psaat {
+    color: #E3E3E3;
+    font-size: 30px;
+    display: inline-block;
+    font-weight: bold;
+}
+#mTab .tabEl ul li .pad {
+    font-size: 12px;
+    color: #B3ABA5;
+}
+#tabMenu > ul  li {
+    display: block;
+    padding: 5px;
+    border: 1px solid #D5D5D5;
+    float: left;
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: -1px;
+    text-align: center;
+    font-weight: 300;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+	#tabMenu > ul li:hover {
+background-color: #C93A14;
+color: aliceblue;
+transition:  all 300ms;		
+}.clear {
+    clear: both;
+}
+#p2sFull #s_yayinakisi #tabMenu {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+
+}
+.seciliTab {
+    background-color: #C93A14!important;
+    color: #FFFFFF;
+}#p2sFull #s_programlar .pr {
+    width: 270px;
+    height: 200px;
+    position: relative;
+    background-color: rgba(235,229,226,1.00);
+    overflow: hidden;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#s_programlar .pr .pr_image {
+    width: 270px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#s_programlar .pr .pr_golge {
+    width: 315px;
+    height: 200px;
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 35.23%,rgba(13,13,13,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(0,0,0,0.00) 35.23%,rgba(13,13,13,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(0,0,0,0.00) 35.23%,rgba(13,13,13,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 35.23%,rgba(13,13,13,1.00) 100%);
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+}
+#s_programlar .pr .prName {
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    position: absolute;
+    bottom: 24px;
+    left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(236,236,236,1.00);
+    text-align: left;
+    z-index: 3;
+    text-shadow: 1px 1px 0px #000000;
+}
+#s_programlar .pr .prDetay {
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    background-color: #010101;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    z-index: 5;
+    font-size: 12px;
+    cursor: pointer;
+    bottom: 10px;
+    left: 10px;
+    border: 1px solid #575757;
+  
+
+}
+#s_programlar .pr .prDetay:hover {
+    background-color: #ED8A72;
+}
+
+#p2sFull #s_programlar {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    align-content: flex-start
+
+
+}
+#s_programlar .pr .prAyrinti {
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    background-color: #C93A14;
+    color: #FFFFFF;
+    font-size: 14px;
+    width: 270px;
+    height: 200px;
+    position: absolute;
+    top: 200px;
+    z-index: 6;
+}
+.koyu {
+    color: #FBEEEE;
+}
+.prClose   {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-color: #4A2000;
+    top: 5px;
+    right: -25px;
+    z-index: 7;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../design/close.png);
+    cursor: pointer;
+}
+#p2Menu .p2 .mName  {
+    display: block;
+    color: #151515;
+    font-size: 14px;
+    font-weight:bold;
+    position: absolute;
+    bottom: 8px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+}
+#main #menuTole {
+    height: 100px;
+    width: 98%;
+    background-color: #861900;
+    margin-right: auto;
+    margin-left: auto;
+}
+#s_hakkimizda #h_image h2 {
+    color: #000000;
+}
+#p2sFull #s_iletisim #iletisimKapla {
+    background-image: url(../images/iletisimBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 500px;
+}
+#ic #logoPro #ahsapradyo {
+    margin-left: 20px;
+}
+#s_iletisim {
+    height: 100vh;
+    padding-top: 100px;
+
+}
+
+#s_hakkimizda {
+    height: 100vh;
+    margin-top: 0px;
+    padding-top: 100px;
+
+}
+.tabEl {
+    padding-left: 20px;
+}
+
+
+
+
+
+@media (max-width:1200px){
+#main {
+    display: block;
+}
+#main #p1 {
+    width: 100%;
+}
+#main #p2 {
+    width: 100%;
+}
+#main #p2sFull , #p2s,#h_image {
+    width: 100%;
+}
+#ic #logoPro #logo {
+    display: none;
+}
+    #ic #logoPro #ahsapradyo {
+    display: none;
+}
+
+
+}

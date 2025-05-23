@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="">
+	<style id="vamtam-theme-options">:root {--vamtam-default-bg-color:#fff;
+--vamtam-default-line-color:rgba( var( --vamtam-accent-color-7-rgb ), 1 );
+--vamtam-small-padding:20px;
+--vamtam-horizontal-padding:50px;
+--vamtam-vertical-padding:30px;
+--vamtam-horizontal-padding-large:60px;
+--vamtam-vertical-padding-large:60px;
+--vamtam-no-border-link:none;
+--vamtam-border-radius:0px;
+--vamtam-border-radius-oval:0px;
+--vamtam-border-radius-small:0px;
+--vamtam-overlay-color:#000000;
+--vamtam-overlay-color-hc:#ffffff;
+--vamtam-box-outer-padding:60px;
+--vamtam-body-link-regular:#000000;
+--vamtam-body-link-visited:#000000;
+--vamtam-body-link-hover:#6754E9;
+--vamtam-body-link-active:#6754E9;
+--vamtam-body-background-color:#FFFFFF00;
+--vamtam-input-border-radius:18px 18px 18px 18px;
+--vamtam-input-border-color:#E2E2E2;
+--vamtam-btn-text-color:#FFFFFF;
+--vamtam-btn-hover-text-color:#FFFFFF;
+--vamtam-btn-bg-color:#000000;
+--vamtam-btn-hover-bg-color:#6754E9;
+--vamtam-site-max-width:1280px;
+--vamtam-primary-font-color:#000000B3;
+--vamtam-h1-color:#000000;
+--vamtam-h2-color:#000000;
+--vamtam-h3-color:#000000;
+--vamtam-h4-color:#000000;
+--vamtam-h5-color:#000000;
+--vamtam-h6-color:#000000;
+--vamtam-accent-color-1:#DF0423;
+--vamtam-accent-color-1-hc:#FFFFFF;
+--vamtam-accent-color-1-rgb:223,4,35;
+--vamtam-accent-color-2:#F7F7FA;
+--vamtam-accent-color-2-hc:#000000;
+--vamtam-accent-color-2-rgb:247,247,250;
+--vamtam-accent-color-3:#000000B3;
+--vamtam-accent-color-3-hc:#FFFFFF;
+--vamtam-accent-color-3-rgb:0,0,0;
+--vamtam-accent-color-4:#E9E5FF;
+--vamtam-accent-color-4-hc:#000000;
+--vamtam-accent-color-4-rgb:233,229,255;
+--vamtam-accent-color-5:#FFFFFF;
+--vamtam-accent-color-5-hc:#000000;
+--vamtam-accent-color-5-rgb:255,255,255;
+--vamtam-accent-color-6:#000000;
+--vamtam-accent-color-6-hc:#FFFFFF;
+--vamtam-accent-color-6-rgb:0,0,0;
+--vamtam-accent-color-7:#E2E2E2;
+--vamtam-accent-color-7-hc:#000000;
+--vamtam-accent-color-7-rgb:226,226,226;
+--vamtam-accent-color-8:#FFBE11;
+--vamtam-accent-color-8-hc:#000000;
+--vamtam-accent-color-8-rgb:255,190,17;
+--vamtam-sticky-header-bg-color:#FFFFFF;
+--vamtam-primary-font-font-family:'Kanit';
+--vamtam-primary-font-font-weight:300;
+--vamtam-primary-font-font-style:normal;
+--vamtam-primary-font-transform:none;
+--vamtam-primary-font-font-size-desktop:16px;
+--vamtam-primary-font-font-size-tablet:16px;
+--vamtam-primary-font-font-size-phone:16px;
+--vamtam-primary-font-line-height-desktop:1.5em;
+--vamtam-primary-font-line-height-tablet:1.5em;
+--vamtam-primary-font-line-height-phone:1.5em;
+--vamtam-primary-font-letter-spacing-tablet:0px;
+--vamtam-primary-font-letter-spacing-phone:0px;
+--vamtam-h1-font-family:'Syne';
+--vamtam-h1-font-weight:700;
+--vamtam-h1-font-style:normal;
+--vamtam-h1-transform:none;
+--vamtam-h1-font-size-desktop:66px;
+--vamtam-h1-font-size-tablet:40px;
+--vamtam-h1-font-size-phone:32px;
+--vamtam-h1-line-height-desktop:1.1em;
+--vamtam-h1-line-height-tablet:1.1em;
+--vamtam-h1-line-height-phone:1.1em;
+--vamtam-h1-letter-spacing-desktop:-1px;
+--vamtam-h1-letter-spacing-tablet:-1px;
+--vamtam-h1-letter-spacing-phone:-1px;
+--vamtam-h2-font-family:'Syne';
+--vamtam-h2-font-weight:700;
+--vamtam-h2-font-style:normal;
+--vamtam-h2-transform:none;
+--vamtam-h2-font-size-desktop:48px;
+--vamtam-h2-font-size-tablet:35px;
+--vamtam-h2-font-size-phone:28px;
+--vamtam-h2-line-height-desktop:1.1em;
+--vamtam-h2-line-height-tablet:1.1em;
+--vamtam-h2-line-height-phone:1.1em;
+--vamtam-h2-letter-spacing-desktop:-2px;
+--vamtam-h2-letter-spacing-tablet:-2px;
+--vamtam-h2-letter-spacing-phone:-2px;
+--vamtam-h3-font-family:'Syne';
+--vamtam-h3-font-weight:700;
+--vamtam-h3-font-style:normal;
+--vamtam-h3-transform:none;
+--vamtam-h3-font-size-desktop:40px;
+--vamtam-h3-font-size-tablet:30px;
+--vamtam-h3-font-size-phone:26px;
+--vamtam-h3-line-height-desktop:1em;
+--vamtam-h3-line-height-tablet:1.1em;
+--vamtam-h3-line-height-phone:1.1em;
+--vamtam-h3-letter-spacing-desktop:-2px;
+--vamtam-h3-letter-spacing-tablet:-2px;
+--vamtam-h3-letter-spacing-phone:-2px;
+--vamtam-h4-font-family:'Syne';
+--vamtam-h4-font-weight:bold;
+--vamtam-h4-transform:none;
+--vamtam-h4-font-size-desktop:28px;
+--vamtam-h4-font-size-tablet:24px;
+--vamtam-h4-font-size-phone:19px;
+--vamtam-h4-line-height-desktop:1.2em;
+--vamtam-h4-line-height-tablet:1.2em;
+--vamtam-h4-line-height-phone:1.4em;
+--vamtam-h4-letter-spacing-desktop:-0.6px;
+--vamtam-h4-letter-spacing-tablet:-0.6px;
+--vamtam-h4-letter-spacing-phone:-0.6px;
+--vamtam-h5-font-family:'Syne';
+--vamtam-h5-font-weight:bold;
+--vamtam-h5-font-style:normal;
+--vamtam-h5-transform:none;
+--vamtam-h5-font-size-desktop:20px;
+--vamtam-h5-font-size-tablet:19px;
+--vamtam-h5-font-size-phone:18px;
+--vamtam-h5-line-height-desktop:1.2em;
+--vamtam-h5-line-height-tablet:1.1em;
+--vamtam-h5-line-height-phone:1.1em;
+--vamtam-h5-letter-spacing-desktop:-0.6px;
+--vamtam-h5-letter-spacing-tablet:-0.6px;
+--vamtam-h5-letter-spacing-phone:-0.6px;
+--vamtam-h6-font-family:'Syne';
+--vamtam-h6-font-weight:700;
+--vamtam-h6-font-style:normal;
+--vamtam-h6-transform:uppercase;
+--vamtam-h6-font-size-desktop:16px;
+--vamtam-h6-font-size-tablet:16px;
+--vamtam-h6-font-size-phone:16px;
+--vamtam-h6-line-height-desktop:1.4em;
+--vamtam-h6-line-height-tablet:1.2em;
+--vamtam-h6-line-height-phone:1.1em;
+--vamtam-h6-letter-spacing-desktop:-1px;
+--vamtam-h6-letter-spacing-tablet:-1px;
+--vamtam-h6-letter-spacing-phone:-1px;
+--vamtam-icon-close:'\e918';
+--vamtam-icon-campaigns:'\e916';
+--vamtam-icon-chart:'\e917';
+--vamtam-icon-amazon:'\e90b';
+--vamtam-icon-check:'\e90c';
+--vamtam-icon-idea:'\e90e';
+--vamtam-icon-influencer:'\e90f';
+--vamtam-icon-minus:'\e910';
+--vamtam-icon-pin:'\e911';
+--vamtam-icon-plus:'\e912';
+--vamtam-icon-puzzle:'\e913';
+--vamtam-icon-search:'\e914';
+--vamtam-icon-social-media:'\e915';
+--vamtam-icon-arrow-left:'\e900';
+--vamtam-icon-arrow-right:'\e901';
+--vamtam-icon-arrow-up:'\e902';
+--vamtam-icon-coin:'\e903';
+--vamtam-icon-email:'\e904';
+--vamtam-icon-goal:'\e905';
+--vamtam-icon-growth:'\e906';
+--vamtam-icon-marketing:'\e907';
+--vamtam-icon-quote:'\e908';
+--vamtam-icon-rocket:'\e909';
+--vamtam-icon-search-marketing:'\e90a';
+--vamtam-loading-animation:url('https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/images/loader-ring.gif');
+}</style><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v25.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Anasayfa &#8211; Radyo Seymen</title>
+	<link rel="canonical" href="#" />
+	<meta property="og:locale" content="tr_TR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Anasayfa &#8211; Radyo Seymen" />
+	 
+	<meta property="og:url" content="#" />
+	<meta property="og:site_name" content="Radyo Seymen" />
+	<meta property="article:publisher" content="https://www.facebook.com/radyoseymenresmi/" />
+	<meta property="article:modified_time" content="2025-04-23T09:29:09+00:00" />
+	<meta property="og:image" content="https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1.png" />
+	<meta property="og:image:width" content="1216" />
+	<meta property="og:image:height" content="1115" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"#","url":"#","name":"Anasayfa &#8211; Radyo Seymen","isPartOf":{"@id":"#/#website"},"about":{"@id":"#/#organization"},"primaryImageOfPage":{"@id":"#/#primaryimage"},"image":{"@id":"#/#primaryimage"},"thumbnailUrl":"https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1-1024x939.png","datePublished":"2023-05-05T12:20:26+00:00","dateModified":"2025-04-23T09:29:09+00:00","breadcrumb":{"@id":"#/#breadcrumb"},"inLanguage":"tr","potentialAction":[{"@type":"ReadAction","target":["#/"]}]},{"@type":"ImageObject","inLanguage":"tr","@id":"#/#primaryimage","url":"https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1.png","contentUrl":"https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1.png","width":1216,"height":1115,"caption":"Radyo Seymen - Dewart AI(1)"},{"@type":"BreadcrumbList","@id":"#/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Anasayfa"}]},{"@type":"WebSite","@id":"#/#website","url":"#","name":"Radyo Seymen","description":"Türkiye&#039;yi Oynatan Radyo","publisher":{"@id":"#/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"#/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"tr"},{"@type":"Organization","@id":"#/#organization","name":"Radyo Seymen","url":"#","logo":{"@type":"ImageObject","inLanguage":"tr","@id":"#/#/schema/logo/image/","url":"https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png","contentUrl":"https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png","width":800,"height":386,"caption":"Radyo Seymen"},"image":{"@id":"https://radyoseymen.com.tr/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/radyoseymenresmi/","https://www.instagram.com/radyoseymenresmi"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Radyo Seymen &raquo; akışı" href="https://radyoseymen.com.tr/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Radyo Seymen &raquo; yorum akışı" href="https://radyoseymen.com.tr/index.php/comments/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/radyoseymen.com.tr\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover{text-align:center}.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='e-animation-shrink-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-shrink.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=3.28.3' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-icon-box-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-spacer-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animation-fadeIn-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-popup-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css?ver=3.28.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.36.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2104-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-2104.css?ver=1745400511' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-theme-icons-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/custom-icons/theme-icons/style.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-animation-float-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-float.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.28.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-21-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-21.css?ver=1745400561' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1350-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-1350.css?ver=1745400519' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1332-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-1332.css?ver=1745400519' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2720-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-2720.css?ver=1745400511' type='text/css' media='all' />
+<link rel='stylesheet' id='ekit-widget-styles-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ekit-responsive-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=3.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vamtam-front-all-css' href='https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/css/dist/elementor/elementor-all.css?ver=1705608157' type='text/css' media='all' />
+<style id='vamtam-front-all-inline-css' type='text/css'>
+
+			@font-face {
+				font-family: 'icomoon';
+				src: url(https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/fonts/icons/icomoon.woff2) format('woff2'),
+					 url( https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/fonts/icons/icomoon.woff) format('woff'),
+					 url(https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/fonts/icons/icomoon.ttf) format('ttf');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		
+				@font-face {
+					font-family: 'vamtam-theme';
+					src: url(https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/fonts/theme-icons/theme-icons.woff2) format('woff2'),
+						url(https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/fonts/theme-icons/theme-icons.woff) format('woff');
+					font-weight: normal;
+					font-style: normal;
+					font-display: swap;
+				}
+			
+</style>
+<link rel='stylesheet' id='vamtam-theme-elementor-max-css' href='https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/css/dist/elementor/responsive/elementor-max.css?ver=1705608157' type='text/css' media='(min-width: 1025px)' />
+<link rel='stylesheet' id='vamtam-theme-elementor-below-max-css' href='https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/css/dist/elementor/responsive/elementor-below-max.css?ver=1705608157' type='text/css' media='(max-width: 1024px)' />
+<link rel='stylesheet' id='vamtam-theme-elementor-small-css' href='https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/css/dist/elementor/responsive/elementor-small.css?ver=1705608157' type='text/css' media='(max-width: 767px)' />
+<link rel='stylesheet' id='elementor-gf-local-kanit-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/kanit.css?ver=1742253786' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-syne-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/syne.css?ver=1742253787' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-manrope-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/manrope.css?ver=1742253789' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-outfit-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/outfit.css?ver=1742254174' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-figtree-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/figtree.css?ver=1742254139' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-intertight-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/google-fonts/css/intertight.css?ver=1742254146' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=3.5.1' type='text/css' media='all' />
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.28.4" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://radyoseymen.com.tr/index.php/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://radyoseymen.com.tr/index.php/wp-json/wp/v2/pages/21" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://radyoseymen.com.tr/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.1" />
+<link rel='shortlink' href='https://radyoseymen.com.tr/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://radyoseymen.com.tr/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fradyoseymen.com.tr%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://radyoseymen.com.tr/index.php/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fradyoseymen.com.tr%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.152.1" /><meta name="google-site-verification" content="7d5v88-NjVRVe4TeV8ZJksvDcsOIBvHaktFqGUfCmac"><meta name="generator" content="Elementor 3.28.4; features: e_local_google_fonts; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+						<meta name="theme-color" content="#FFFFFF00">
+			<link rel="icon" href="https://radyoseymen.com.tr/wp-content/uploads/2023/04/Radyo-Seymen-Icon-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://radyoseymen.com.tr/wp-content/uploads/2023/04/Radyo-Seymen-Icon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://radyoseymen.com.tr/wp-content/uploads/2023/04/Radyo-Seymen-Icon-300x300.png" />
+<meta name="msapplication-TileImage" content="https://radyoseymen.com.tr/wp-content/uploads/2023/04/Radyo-Seymen-Icon-300x300.png" />
+		<style type="text/css" id="wp-custom-css">
+			.current_song_name.compact-song-name {
+  font-size: 16px;
+  font-weight: 400;
+  max-width: unset;
+}
+
+.compact-album-name {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+
+.compact-controls i, .compact-promo-links i, .compact-playback-speed {
+  margin-left: 25px;
+  font-size: 0px;
+  cursor: pointer;
+}
+
+.elementor-21 .elementor-element.elementor-element-8ca29fe .album_right_overlay {
+	background-color: #222222fa;
+  border-radius: 0px 8px 8px 0px;
+}
+
+.elementor *, .elementor ::after, .elementor ::before {
+  box-sizing: border-box;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.compact-album-name, .compact-controls i, .compact-song-name, .compact-timeline {
+  color: #ffffff;
+  line-height: 1.5em;
+}
+
+.lc_swp_overlay {
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+
+body:not(.elementor-editor-active) .vamtam-sticky-header.vamtam-sticky-header--fixed-shown.vamtam-sticky-header--transparent-header {
+  background-color: #FFFFFFF7 !important;
+}
+
+.elementor-86 .elementor-element.elementor-global-5352 img {
+  width: 420px;
+  height: 420px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 50px 50px 50px 50px;
+}
+
+
+.radio-player.radio-player-1.shortcode.skin3 {
+  --radio-player-width: 920px;
+  --radio-player-border-radius: 12px !important;
+  --radio-player-bg-color: #fffffff7 !important;
+  --radio-player-text-color: #000 !important;
+  --radio-player-box-shadow: 0px 10px 22px 5px #87878730 !important;
+}
+
+
+.radio-player.skin3.shortcode {
+  flex-flow: row;
+  padding: 15px 25px !important;
+  border: none;
+  min-height: 72px !important;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.radio-player button svg {
+  height: 32px !important;
+  width: 32px !important;
+}
+
+div.radio-player .radio-player-volume .volume-slider .volume-slider-handle {
+  position: absolute;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--radio-player-bg-color);
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 4px 4px rgba(0,9,27,.36),0 0 0 4px #e8000e inset !important;
+}
+
+		</style></head>
+<body class="home wp-singular page-template-default page page-id-21 wp-custom-logo wp-embed-responsive wp-theme-numerique full header-layout-logo-menu has-page-header no-middle-header responsive-layout vamtam-is-elementor elementor-active elementor-pro-active vamtam-wc-cart-empty wc-product-gallery-slider-active vamtam-font-smoothing layout-full elementor-default elementor-kit-2104 elementor-page elementor-page-21">
+	<div id="top"></div>
+	<div data-elementor-type="header" data-elementor-id="1350" class="elementor elementor-1350 elementor-location-header" data-elementor-post-type="elementor_library">
+	<section class="elementor-section elementor-top-section elementor-element elementor-element-a51dd12 elementor-hidden-tablet elementor-hidden-mobile elementor-section-items-stretch elementor-section-content-middle vamtam-sticky-header vamtam-sticky-header--transparent-header elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-id="a51dd12" data-element_type="section">
+	<div class="elementor-container elementor-column-gap-no">
+	<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-be8cc84" data-id="be8cc84" data-element_type="column">
+	<div class="elementor-widget-wrap elementor-element-populated">
+	<div class="elementor-element elementor-element-5318970 elementor-widget__width-auto elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="5318970" data-element_type="widget" data-widget_type="theme-site-logo.default">
+	<div class="elementor-widget-container">
+<a href="#">
+			<img width="800" height="386" src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" 
+class="elementor-animation-shrink attachment-full size-full wp-image-987661" alt="Radyo Seymen" 
+srcset="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 800w, 
+https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 300w, 
+https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+	</div></div></div></div>
+		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-20bec3f" data-id="20bec3f" data-element_type="column">
+		<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="vamtam-has-theme-widget-styles elementor-element elementor-element-d6e4a7b elementor-widget__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger vamtam-has-mobile-disable-scroll elementor-widget elementor-widget-nav-menu" data-id="d6e4a7b" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+		<div class="elementor-widget-container">
+								
+		</nav></nav></div></div></div></div>
+		<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-44aae19" data-id="44aae19" data-element_type="column">
+		<div class="elementor-widget-wrap elementor-element-populated">
+		<div class="vamtam-has-theme-widget-styles elementor-element elementor-element-04a764a elementor-align-right elementor-mobile-align-center vamtam-has-underline-anim elementor-widget elementor-widget-button" data-id="04a764a" data-element_type="widget" data-widget_type="button.default">
+		<div class="elementor-widget-container">
+						
+                 <div class="elementor-button-wrapper">
+		 <a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/+32486790423" target="_blank">
+		 <span class="elementor-button-content-wrapper">
+		 <span class="elementor-button-icon">
+		 <i aria-hidden="true" class="icon icon-whatsapp-1"></i>			</span>
+		 <span class="elementor-button-text">Whatsapp Hattı</span>
+					</span></a>
+				</div></div></div></div></div></div>
+		</section>
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-a51dd12 elementor-hidden-tablet elementor-hidden-mobile elementor-section-items-stretch elementor-section-content-middle vamtam-sticky-header vamtam-sticky-header--spacer vamtam-sticky-header--transparent-header elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-id="a51dd12" data-element_type="section">
+ <div class="elementor-container elementor-column-gap-no">
+ <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-be8cc84" data-id="be8cc84" data-element_type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-5318970 elementor-widget__width-auto elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="5318970" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+				<a href="#">
+<img width="800" height="386" src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" 
+class="elementor-animation-shrink attachment-full size-full wp-image-987661" alt="Radyo Seymen" 
+srcset="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 800w, 
+https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 300w, 
+https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png 768w" sizes="(max-width: 800px) 100vw, 800px" />				</a>
+											</div>
+				</div></div></div>
+		 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-20bec3f" data-id="20bec3f" data-element_type="column">
+		 <div class="elementor-widget-wrap elementor-element-populated">
+		 <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-d6e4a7b elementor-widget__width-auto elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger vamtam-has-mobile-disable-scroll elementor-widget elementor-widget-nav-menu" data-id="d6e4a7b" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+		 <div class="elementor-widget-container">
+		 <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+		 <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+		 </nav>
+		 </div></div></div></div>
+		 <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-44aae19" data-id="44aae19" data-element_type="column">
+		 <div class="elementor-widget-wrap elementor-element-populated">
+		 <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-04a764a elementor-align-right elementor-mobile-align-center vamtam-has-underline-anim elementor-widget elementor-widget-button" data-id="04a764a" data-element_type="widget" data-widget_type="button.default">
+		 <div class="elementor-widget-container">
+		 <div class="elementor-button-wrapper">
+		 <a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/+32486790423" target="_blank">
+			 <span class="elementor-button-content-wrapper">
+			 <span class="elementor-button-icon">
+			 <i aria-hidden="true" class="icon icon-whatsapp-1"></i>			</span>
+			 <span class="elementor-button-text">Whatsapp Hattı</span>
+					</span>
+					</a>
+
+		 </div></div></div></div></div></div>
+		</section>
+		 <section class="elementor-section elementor-top-section elementor-element elementor-element-9dbee37 elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-hidden-desktop elementor-section-full_width elementor-section-height-default" data-id="9dbee37" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		 <div class="elementor-container elementor-column-gap-no">
+		 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0c975be" data-id="0c975be" data-element_type="column">
+		 <div class="elementor-widget-wrap elementor-element-populated">
+		 <div class="vamtam-has-theme-widget-styles elementor-element elementor-element-5e63b87 elementor-align-right elementor-tablet-align-justify vamtam-has-underline-anim elementor-widget elementor-widget-button" data-id="5e63b87" data-element_type="widget" data-widget_type="button.default">
+		 <div class="elementor-widget-container">
+		 <div class="elementor-button-wrapper">
+		 <a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/+32486790423" target="_blank">
+		 </span>
+		 <span class="elementor-button-text">Whatsapp İstek Hattı</span>
+		 </span></a></div></div></div>
+		 <section class="elementor-section elementor-inner-section elementor-element elementor-element-3ec1ab5 elementor-section-content-middle elementor-section-height-min-height elementor-section-boxed elementor-section-height-default" data-id="3ec1ab5" data-element_type="section">
+		 <div class="elementor-background-overlay"></div>
+		 <div class="elementor-container elementor-column-gap-no">
+		 <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-88e2cc2" data-id="88e2cc2" data-element_type="column">
+		 <div class="elementor-widget-wrap elementor-element-populated">
+		 <div class="elementor-element elementor-element-d0f870c elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="d0f870c" data-element_type="widget" data-widget_type="theme-site-logo.default">
+		 <div class="elementor-widget-container">
+		 </div></div></div></div></div></div></div>
+		</section>
+		</div></div></div>
+		</section></div>
+
+	<div id="page" class="main-container">
+		<div id="main-content">
+			
+<div id="sub-header" class="layout-full elementor-page-title">
+	<div class="meta-header" >		
+		<!-- Elementor `page-title` location -->
+	</div></div>
+
+<div id="main" role="main" class="vamtam-main layout-full" >				
+
+				<div class="page-wrapper">
+		<article id="post-21" class="full post-21 page type-page status-publish hentry">
+					<div class="page-content clearfix the-content-parent">
+						<div data-elementor-type="wp-page" data-elementor-id="21" class="elementor elementor-21" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-7520f469 e-flex e-con-boxed e-con e-parent" data-id="7520f469" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-5226e723 elementor-widget__width-initial elementor-widget-tablet__width-inherit elementor-widget elementor-widget-image" data-id="5226e723" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="1024" height="939" src="https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1-1024x939.png" class="attachment-large size-large wp-image-988608" alt="Radyo Seymen - Dewart AI(1)" srcset="https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1-1024x939.png 1024w, https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1-300x275.png 300w, https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1-768x704.png 768w, https://radyoseymen.com.tr/wp-content/uploads/2024/01/Radyo-Seymen-Dewart-AI1.png 1216w" sizes="(max-width: 1024px) 100vw, 1024px" />															</div>
+				</div>
+		<div class="elementor-element elementor-element-77c11ba1 e-con-full e-flex e-con e-child" data-id="77c11ba1" data-element_type="container">
+				<div class="elementor-element elementor-element-c39704a elementor-hidden-mobile elementor-widget elementor-widget-elementskit-heading" data-id="c39704a" data-element_type="widget" data-widget_type="elementskit-heading.default">
+				<div class="elementor-widget-container">
+					 				</div>
+				</div>
+				<div class="elementor-element elementor-element-ed52d4a elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-elementskit-heading" data-id="ed52d4a" data-element_type="widget" data-widget_type="elementskit-heading.default">
+				<div class="elementor-widget-container">
+		 				</div>
+				</div>
+				<div class="elementor-element elementor-element-3747a0da elementor-widget elementor-widget-text-editor" data-id="3747a0da" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									 								</div>
+				</div>
+				<div class="vamtam-has-theme-widget-styles elementor-element elementor-element-1084ef7f elementor-align-left elementor-mobile-align-left elementor-tablet-align-center elementor-widget elementor-widget-button" data-id="1084ef7f" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+						 </span></span>
+					</a>
+				</div></div></div></div>
+		 
+		</ul></div></div></div></div></div></div></div>
+		</section>
+		<div class="elementor-element elementor-element-2ac3bbe e-flex e-con-boxed e-con e-parent" data-id="2ac3bbe" data-element_type="container" data-settings="{&quot;position&quot;:&quot;fixed&quot;}">
+					<div class="e-con-inner"><div class="elementor-element elementor-element-deb7a89 elementor-fixed elementor-widget elementor-widget-elementskit-back-to-top" data-id="deb7a89" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="elementskit-back-to-top.default">
+				<div class="elementor-widget-container"><div class="ekit-wid-con" >			<div class="ekit-back-to-top-container ekit-btt progress_indicator" data-settings="{&quot;offset_top&quot;:0,&quot;show_after&quot;:400,&quot;show_scroll&quot;:&quot;yes&quot;,&quot;style&quot;:&quot;progress_indicator&quot;,&quot;foreground&quot;:&quot;#FF5050&quot;,&quot;background&quot;:&quot;#eee&quot;}"> <span class="ekit-btt__button yes"> <div class="progress_indicator" ><canvas id="canvas-deb7a89" class="canvas" data-canvas="deb7a89"></canvas><span><i aria-hidden="true" class="icon icon-up-arrow1"></i></span></div></span></div></div></div></div></div></div><div class="elementor-element elementor-element-1e7f279 e-con-full e-flex e-con e-parent" data-id="1e7f279" data-element_type="container" data-settings="{&quot;position&quot;:&quot;fixed&quot;}"></div></div></div></article>
+		
+
+</div> <!-- End of .page-wrapper -->
+</div><!-- #main -->
+</div><!-- #main-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451916&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2022550299&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451898&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451898&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="footer-wrapper" style="">
+				<footer id="main-footer" class="main-footer">
+							<div data-elementor-type="footer" data-elementor-id="1332" class="elementor elementor-1332 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-a252478 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a252478" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d01652e" data-id="d01652e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-3508c85 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3508c85" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b327f8f" data-id="b327f8f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0c69f54 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="0c69f54" data-element_type="widget" data-settings="{&quot;_animation_tablet&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+				 			</div>
+				</div>
+				<div class="elementor-element elementor-element-92453fd elementor-widget elementor-widget-image" data-id="92453fd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="#">
+
+				</div>
+
+
+
+				
+					</span>
+					</a>
+		
+		</section>
+					</div>
+		</div>
+					</div>
+
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-96e5687 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="96e5687" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5b460d7" data-id="5b460d7" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7fed48c elementor-widget__width-auto elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="7fed48c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">© 2025 </div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-87af29e elementor-widget__width-auto elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="87af29e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-heading-title elementor-size-default">Turis Tv</div>				</div>
+				</div>
+				<div class="vamtam-has-theme-widget-styles elementor-element elementor-element-fcec2a3 elementor-widget__width-auto elementor-nav-menu--dropdown-none elementor-widget-mobile__width-auto vamtam-has-mobile-disable-scroll elementor-widget elementor-widget-nav-menu" data-id="fcec2a3" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menü" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-fcec2a3" class="elementor-nav-menu">
+
+
+</li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+			 </li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-449007f elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="449007f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															
+				</div>
+					</div>
+		</div>
+
+		</div>
+					</div>
+		</section>
+		<div class="elementor-element elementor-element-5dbcf54 e-flex e-con-boxed e-con e-parent" data-id="5dbcf54" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-e12e30c elementor-widget__width-inherit elementor-fixed elementor-widget elementor-widget-radio_player" data-id="e12e30c" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="radio_player.default">
+				<div class="elementor-widget-container">
+					<div class="aligncenter"><div class="radio_player" data-player-type="shortcode" data-data="eyJpZCI6MSwidGl0bGUiOiJSYWR5byBTZXltZW4iLCJzdGlja3kiOmZhbHNlLCJzdGF0dXMiOnRydWUsInNraW4iOiJza2luMyIsInN0YXRpb25zIjpbeyJ0aXRsZSI6IlJhZHlvIFNleW1lbiIsInN0cmVhbSI6Imh0dHBzOlwvXC95YXlpbi5yYWR5b3NleW1lbi5jb20udHI6MTA3MFwvc3RyZWFtIiwidGh1bWJuYWlsIjoiaHR0cHM6XC9cL3JhZHlvc2V5bWVuLmNvbS50clwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyM1wvMDRcL3JhZHlvLXNleW1lbi1sb2dvMS5wbmciLCJzb3VyY2VfdHlwZSI6InN0cmVhbSJ9XSwicG9wdXBfaWNvbiI6ZmFsc2UsInBsYXlsaXN0X2ljb24iOmZhbHNlLCJoaXN0b3J5X2ljb24iOmZhbHNlLCJ2b2x1bWVfY29udHJvbCI6dHJ1ZSwicGxheWVyX3N0YXR1cyI6dHJ1ZSwic2hvd19hcnRpc3QiOmZhbHNlLCJzaG93X2FydHdvcmsiOmZhbHNlLCJwbGF5ZXJfdGV4dCI6Ikxpc3RlbiBMaXZlIiwid2lkdGgiOjc4MCwid2lkdGhfbW9iaWxlIjozMDAsImJvcmRlcl9yYWRpdXMiOjUsImJnX2NvbG9yIjoiI2Y0ZjdmOSIsImJnX2ltYWdlIjoiaHR0cHM6XC9cL3JhZHlvc2V5bWVuLmNvbS50clwvd3AtY29udGVudFwvcGx1Z2luc1wvcmFkaW8tcGxheWVyXC9hc3NldHNcL2ltYWdlc1wvcGxheWVyLWJnLnBuZyIsImJnX3R5cGUiOiJjb2xvciIsImNvbG9yX3R5cGUiOiJzb2xpZCIsInRleHRfY29sb3IiOiIjNUM2MzdFIiwiYm94X3NoYWRvdyI6dHJ1ZSwiYm94X3NoYWRvd19oIjowLCJib3hfc2hhZG93X3YiOjAsImJveF9zaGFkb3dfYmx1ciI6MCwiYm94X3NoYWRvd19zcHJlYWQiOjEsImJveF9zaGFkb3dfY29sb3IiOiIjODc4Nzg3ODAiLCJib3hfc2hhZG93X3R5cGUiOiIiLCJ3aWR0aF9kZXZpY2UiOiJkZXNrdG9wIiwic2hvd190aXRsZSI6ZmFsc2V9"></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5f93e0d elementor-widget__width-inherit elementor-fixed elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="5f93e0d" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			 			</div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</footer>
+			</div>
+		
+</div><!-- / #page -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="scroll-to-top" class="vamtam-scroll-to-top">
+    <div id="scroll-to-top-text">top</div>
+</div>
+
+
+
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div data-elementor-type="popup" data-elementor-id="2720" class="elementor elementor-2720 elementor-location-popup" data-elementor-settings="{&quot;open_selector&quot;:&quot;.mega-menu-solutions&quot;,&quot;vamtam_open_on_selector_hover&quot;:&quot;yes&quot;,&quot;vamtam_close_on_hover_lost&quot;:&quot;yes&quot;,&quot;classes&quot;:&quot;vamtam-header-mega-menu&quot;,&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.3,&quot;sizes&quot;:[]},&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-553af6bd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="553af6bd" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2ab32f0c" data-id="2ab32f0c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-7df46be7 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7df46be7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-41320ea9" data-id="41320ea9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-7d913208 elementor-view-stacked elementor-position-left elementor-vertical-align-middle elementor-mobile-position-left elementor-shape-circle elementor-widget elementor-widget-icon-box" data-id="7d913208" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-box-wrapper">
+
+						<div class="elementor-icon-box-icon">
+				<span  class="elementor-icon">
+				<i aria-hidden="true" class="vamtamtheme- vamtam-theme-search-marketing"></i>				</span>
+			</div>
+			
+						<div class="elementor-icon-box-content">
+
+									<h5 class="elementor-icon-box-title">
+						<span  >
+							Paid Search Marketing  						</span>
+					</h5>
+				
+		
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+					<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='radio-player-css' href='https://radyoseymen.com.tr/wp-content/plugins/radio-player/assets/css/frontend.css?ver=2.0.88' type='text/css' media='all' />
+<style id='radio-player-inline-css' type='text/css'>
+div.radio-player .radio-player-song-title span.track-title { animation-duration: 10s; }
+div.radio-player .radio-player-song-title span.track-title { animation-duration: 10s; }
+</style>
+<link rel='stylesheet' id='elementor-post-1012-css' href='https://radyoseymen.com.tr/wp-content/uploads/elementor/css/post-1012.css?ver=1745400519' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-search-form-css' href='https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/css/widget-search-form.min.css?ver=3.28.3' type='text/css' media='all' />
+<script type="text/javascript" id="vamtam-all-js-extra">
+/* <![CDATA[ */
+var VAMTAM_FRONT = {"ajaxurl":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","jspath":"https:\/\/radyoseymen.com.tr\/wp-content\/themes\/numerique\/vamtam\/assets\/js\/","max_breakpoint":"1025","medium_breakpoint":"768","content_width":"1280","enable_ajax_add_to_cart":"","widget_mods_list":{"button":{"label":"Button"},"form":{"label":"Form"},"tabs":{"label":"Tabs"},"testimonial-carousel":{"label":"Testimonial Carousel"},"toggle":{"label":"Toggle"},"nav-menu":{"label":"Nav Menu"},"section":{"label":"Section"},"archive-posts":{"label":"Archive Posts"},"loop-carousel":{"label":"Loop Carousel"},"loop-grid":{"label":"Loop Grid"},"posts":{"label":"Posts"},"post-comments":{"label":"Post Comments"},"image-carousel":{"label":"Image Carousel"},"popup":{"label":"Popup"}}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/themes/numerique/vamtam/assets/js/all.min.js?ver=1705608157" id="vamtam-all-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.28.4" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.28.4" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Facebook\u2019ta payla\u015f","shareOnTwitter":"Twitter\u2019da payla\u015f\u0131n","pinIt":"Sabitle","download":"\u0130ndir","downloadImage":"G\u00f6rseli indir","fullscreen":"Tam Ekran","zoom":"Yak\u0131nla\u015ft\u0131r","share":"Payla\u015f","playVideo":"Videoyu Oynat","previous":"\u00d6nceki","next":"Sonraki","close":"Kapat","a11yCarouselPrevSlideMessage":"\u00d6nceki Slayt","a11yCarouselNextSlideMessage":"Sonraki Slayt","a11yCarouselFirstSlideMessage":"Bu ilk slayt","a11yCarouselLastSlideMessage":"Bu son slayt","a11yCarouselPaginationBulletMessage":"Slayta Git"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobil Portre","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobil G\u00f6r\u00fcn\u00fcm\u00fc","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portresi","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet G\u00f6r\u00fcn\u00fcm\u00fc","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Diz\u00fcst\u00fc bilgisayar","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Geni\u015f ekran","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.28.4","is_static":false,"experimentalFeatures":{"container":true,"e_local_google_fonts":true,"theme_builder_v2":true,"home_screen":true},"urls":{"assets":"https:\/\/radyoseymen.com.tr\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/radyoseymen.com.tr\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"32910292da"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"gradient","active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","vamtam_theme_button":"yes","vamtam_theme_form":"yes","vamtam_theme_tabs":"yes","vamtam_theme_testimonial-carousel":"yes","vamtam_theme_toggle":"yes","vamtam_theme_nav-menu":"yes","vamtam_theme_section":"yes","vamtam_theme_archive-posts":"yes","vamtam_theme_loop-carousel":"yes","vamtam_theme_loop-grid":"yes","vamtam_theme_posts":"yes","vamtam_theme_post-comments":"yes","vamtam_theme_image-carousel":"yes","vamtam_theme_popup":"yes"},"post":{"id":21,"title":"Anasayfa%20%E2%80%93%20Radyo%20Seymen","excerpt":"","featuredImage":false}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.28.4" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/vamtam-elementor-integration-numerique//assets/js/widgets/button/vamtam-button.min.js?ver=1.0.4" id="vamtam-button-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/vamtam-elementor-integration-numerique//assets/js/widgets/nav-menu/vamtam-nav-menu.min.js?ver=1.0.4" id="vamtam-nav-menu-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.5.1" id="elementskit-framework-js-frontend-js"></script>
+<script type="text/javascript" id="elementskit-framework-js-frontend-js-after">
+/* <![CDATA[ */
+		var elementskit = {
+			resturl: 'https://radyoseymen.com.tr/index.php/wp-json/elementskit/v1/',
+		}
+
+		
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.5.1" id="ekit-widget-scripts-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
+<script type="text/javascript" id="wp-util-js-extra">
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-includes/js/wp-util.min.js?ver=6.8.1" id="wp-util-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/radio-player/assets/vendor/hls.min.js?ver=6.8.1" id="radio-player-hls-js"></script>
+<script type="text/javascript" id="radio-player-js-extra">
+/* <![CDATA[ */
+var radioPlayer = {"plugin_url":"https:\/\/radyoseymen.com.tr\/wp-content\/plugins\/radio-player","admin_url":"https:\/\/radyoseymen.com.tr\/wp-admin\/","ajax_url":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","site_url":"https:\/\/radyoseymen.com.tr","popup_url":"http:\/\/radyoseymen.com.tr","nonce":"9fe10b68c2","isPro":"","settings":{"httpPlayer":false,"volume":80,"customPopupSize":false,"popupWidth":420,"popupHeight":330,"proxyURL":"","excludeAll":false,"excludePages":[],"stickyStyle":"fullwidth","excludeExceptPages":[],"enableStats":false,"ads_report_recipients":"aytug@dewart.com.tr"},"can_ads_player":"","can_proxy_player_addon":""};
+var radioPlayer = {"plugin_url":"https:\/\/radyoseymen.com.tr\/wp-content\/plugins\/radio-player","admin_url":"https:\/\/radyoseymen.com.tr\/wp-admin\/","ajax_url":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","site_url":"https:\/\/radyoseymen.com.tr","popup_url":"http:\/\/radyoseymen.com.tr","nonce":"9fe10b68c2","isPro":"","settings":{"httpPlayer":false,"volume":80,"customPopupSize":false,"popupWidth":420,"popupHeight":330,"proxyURL":"","excludeAll":false,"excludePages":[],"stickyStyle":"fullwidth","excludeExceptPages":[],"enableStats":false,"ads_report_recipients":"aytug@dewart.com.tr"},"can_ads_player":"","can_proxy_player_addon":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/radio-player/assets/js/frontend.js?ver=2.0.88" id="radio-player-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.28.3" id="elementor-pro-webpack-runtime-js"></script>
+<script type="text/javascript" id="elementor-pro-frontend-js-before">
+/* <![CDATA[ */
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","nonce":"06c40655fd","urls":{"assets":"https:\/\/radyoseymen.com.tr\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/radyoseymen.com.tr\/index.php\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"tr_TR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/radyoseymen.com.tr\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.28.3" id="elementor-pro-frontend-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.28.3" id="pro-elements-handlers-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3" id="elementor-dialog-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/vamtam-elementor-integration-numerique/assets/js/vamtam-elementor-frontend.min.js?ver=1.0.4" id="vamtam-elementor-frontend-js"></script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.5.1" id="animate-circle-js"></script>
+<script type="text/javascript" id="elementskit-elementor-js-extra">
+/* <![CDATA[ */
+var ekit_config = {"ajaxurl":"https:\/\/radyoseymen.com.tr\/wp-admin\/admin-ajax.php","nonce":"7c3f299243"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://radyoseymen.com.tr/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.5.1" id="elementskit-elementor-js"></script>
+</body>
+</html>

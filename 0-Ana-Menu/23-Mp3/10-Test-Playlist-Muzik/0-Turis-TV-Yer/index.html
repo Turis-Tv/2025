@@ -1,0 +1,655 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Radyo EN</title>
+<meta name="description" content="konya radyo en ">
+<meta name="keywords" content="islami radyo, konya radyo en , en radyo , radyo dinle, konya en radyo dinle, en dinle">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="css2?family=Hind+Siliguri:wght@300;700&display=swap" rel="stylesheet">
+	
+<link href="css/main.css?v=33" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$("document").ready(function(){
+
+	var loghe = parseInt($("#socialPlay").css("height"))+parseInt($("#yayinda").css("height"))
+	loghe = ( (window.screen.height - 140)  - loghe)
+	document.addEventListener("visibilitychange", function() {
+  console.log(document.visibilityState);
+});
+	//$("#enGenel #ic").css("height",loghe)
+	
+        
+    let unshuffled = []
+    //var unshuffled = Array();
+    for (var i = 0;i<$(".pr").length;i++){
+        unshuffled[i]=i
+    }
+
+        
+let shuffled = unshuffled
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+   
+console.log(shuffled)
+  var shufNum = 0
+    
+    var sec,res
+    
+    
+	function prSlayt(){
+        sec = $(".pr").eq(shuffled[shufNum]);
+        res = $(".pr_image",sec).data("res")
+        shufNum++
+        if(shufNum==shuffled.length){
+            shufNum = 0;
+        }
+		if(document.visibilityState=="visible"){
+			$("#prK").toggle({effect:"scale",direction:"left"})
+			setTimeout(function(){$("#pGun").toggle({effect:"scale",direction:"left"});$("#prK #prT").text($(".prName",sec).text())},100)
+			setTimeout(function(){$("#pSunucu").toggle({effect:"scale",direction:"left"})},200)
+			setTimeout(function(){$("#prK").toggle({effect:"scale",direction:"left"}); $("#prK #prR img").attr("src","images/programlar/"+res)},1000)
+			setTimeout(function(){$("#pGun").toggle({effect:"scale",direction:"left"});$("#pGun").text($(".prAyrinti .prHer .prHer2",sec).text())},1100)
+			setTimeout(function(){$("#pSunucu").toggle({effect:"scale",direction:"left"});$("#pSunucu").text($(".prAyrinti .koyu .sunum",sec).text())},1200)
+		} else {
+	
+			
+		}
+		}
+	
+	//alert(window.innerHeight)
+	setInterval(prSlayt,10000)
+    
+    
+/*    $(".p2").click(function(){
+        var ins = $(this).index()
+       // alert(ins)
+       $("#p2sFull").stop().animate({marginTop:(0-(parseInt(window.innerHeight*ins)))+"px"},1000 )
+    })
+    */
+    
+    $("#tabMenu > ul li").click(function(){
+
+		$(this).addClass("seciliTab");
+		var bu = $("#tabMenu ul li").index($(this))
+		$("#tabMenu ul li:not(:eq("+bu+"))").removeClass("seciliTab")
+		$("#mTab .tabEl:not(:eq("+bu+"))").hide()
+		$("#mTab .tabEl:eq("+bu+")").fadeIn("slow")
+		//alert($(this).index("li"))
+	})
+		$("#tabMenu ul li:eq(0)").trigger("click");
+		
+    
+    
+    
+
+    
+    
+    
+    
+    
+  var ayr ,clos
+    $(".prDetay, .prClose").click(function(){
+     // alert("*")
+        ayr =  $(".prAyrinti",$(this).parent());
+        $(this).parent().animate({"height":"200px"},"slow")
+     clos = $(".prClose",$(this).parent());
+        if(ayr.css("top")=="200px"){
+       ayr.animate({top:"0px"},500)
+      clos.animate({right:"5px"})        
+        } else if (ayr.css("top")=="0px"){
+          clos.animate({right:"-25px"})            
+         ayr.animate({top:"200px"},500) 
+       // $(this).parent().animate({"height":"100px"},"slow")    
+                   }
+    })
+    
+
+    	$('a[href*="#"]').on('click', function (e) {
+  e.preventDefault()
+  $('html, body').animate(
+    {
+      scrollTop: $($(this).attr('href')).offset().top,
+    },
+    750,
+    'linear'
+  )
+			if($("#bar").css("display")=="block"){
+				$("#sabitMenu").animate({left:"-90px"},500)
+			}
+})
+    
+
+  var yayinSaat,tamsaat,suan   
+
+    var tab = $(".tabEl").eq(6)
+      $("#tabMenu ul li").eq(6).trigger("click");
+    
+   
+
+        
+        
+    function yayinda (){
+//        setTimeout(function(){var dd = 15},3000)
+        for (var i = 0;i<$("ul li",$(tab)).length;i++ ){
+            yayinSaat = $("ul li:eq('"+i+"') .psaat",$(tab)).text() 
+            tamsaat = parseFloat(yayinSaat.split(":")[0]+yayinSaat.split(":")[1])
+            if (tamsaat>suan ){
+               $(".yProgram:eq(0)").text($("ul li:eq('"+(i-1)+"') .pad",$(tab)).text() )
+                break
+            }
+            
+        }
+        
+    //alert("suan " + suan)
+        
+        
+    }
+    
+    function sunucuSaati(){
+        
+       $.post("_sunucuSaati.php",{val:"77"},function(ss){
+         suan = ss  
+         yayinda()
+       }) 
+   
+        
+    }
+    
+sunucuSaati() 
+    
+ setInterval(sunucuSaati,60000)   
+    
+    
+$("#dinleBtn").click(function(){
+ 
+    if($(this).attr("data-action")=="stop"){
+     $("audio")[0].play() 
+     $(this).attr("data-action","play").text("Kapat")
+     $(this).css('background-image', 'url("design/pauze.png")');
+    }else if($(this).attr("data-action")=="play"){
+     $(this).attr("data-action","stop").text("Play")
+    $(this).css('background-image', 'url("design/play.png")');    
+        $("audio")[0].pause() 
+    }
+
+    
+    
+    
+})    
+ const audio = document.getElementById("stream");
+const volumeControl = document.getElementById("volumeControl");
+
+volumeControl.addEventListener("input", function() {
+  audio.volume = volumeControl.value / 100;
+});
+
+})	
+	
+	
+	</script>	
+</head>
+
+<body><audio style="width: 220px;display: none" id="stream" controls="" preload="none" src="https://yayin2.canliyayin.org:7222/;" type="audio/mpeg"></audio>
+    <div id="menuKapsa">
+	<div id="p2Menu">
+		<a href="#main" class="p2" id="anasayfa"><span class="mName">Anasayfa</span></a>	
+		<a href="#s_programlar" class="p2" id="programlar"><span class="mName">Programlar</span></a>	
+		<a href="#s_yayinakisi" class="p2" id="yayinAkisi"><span class="mName">Yayın Akışı</span></a>	
+		<a href="#s_hakkimizda" class="p2" id="hakkimizda"><span class="mName">Hakkımızda</span></a>	
+		<a href="#s_iletisim" class="p2" id="iletisim"><span class="mName">İletişim</span></a>	
+		<a href="#s_Turis" class="p2" id="Turis"><span class="mName">Turis</span></a>
+		<a href="#s_Turis_1" class="p2" id="Turis_1"><span class="mName">Turis 1</span></a>
+		</div>
+    </div>
+        
+	<div id="main">
+        <div id="menuTole"></div>
+<section id="p1">
+	<div id="socialPlay">
+	<div data-action="stop" id="dinleBtn"> Dinle</div>
+	<input type="range" id="volumeControl" min="0" max="100" value="100">	<!--	<div id="dinle">Dinle</div>-->
+	
+	
+
+	</div>
+	
+	
+	
+	</div>
+	
+	
+
+
+	
+	
+	
+	  </section>
+
+        
+            </div>
+        <div class="p2s" id="s_programlar"><br><br><br><br><br><br><br><br>
+      
+            <div id="h_image">       
+ <a href="https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html">
+   <center><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" alt="Girl in a jacket" style="width:250px;height:250px;">
+  </center>
+
+   </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1230406576&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+      
+       
+ 
+
+
+
+
+</a> </div>
+            
+            
+             </div>
+
+            
+                          
+            
+       <div class="p2s" id="s_yayinakisi">
+           <br>
+           <br>
+           <br> 
+            
+            <div id="tabMenu">
+<ul><br><br> <br>  
+	<li class="seciliTab">Turis Tv </li>
+	<li> Turis Tv 1</li>
+	<li> Turis Tv 2</li>
+	<li> Turis Tv 3</li>
+	<li> Turis Tv 4</li>
+	<li> Turis Tv 5</li>
+	<li> Turis Tv 6 </li>
+	<div class="clear"></div>
+</ul>	
+<div id="mTab">
+<div class="tabEl" style="display: block;">
+	<br>
+	 Yayın Akışı <br>
+<br><br>
+	<ul>
+				
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>	
+		</ul>
+	
+	
+	</div>	
+<div class="tabEl" style="display: none;">
+	<br>
+	 Yayın Akışı<br><br>
+
+	<ul>
+				
+					
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+					</ul>
+	</div>		
+	<div class="tabEl" style="display: none;">
+	<br>
+	 Yayın Akışı<br><br>
+
+	<ul>
+				
+				
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+
+					</ul>
+	
+	</div>	
+	<div class="tabEl" style="display: none;">
+	<br>
+	 Yayını Akışı<br><br>
+
+	<ul>
+				
+				
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+
+					</ul>
+	
+	</div>
+<div class="tabEl" style="display: none;">
+	<br>
+	 Yayın Akışı<br><br>
+
+
+	<ul>
+				
+			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+
+					</ul>
+	
+	</div>
+<div class="tabEl" style="display: none;">
+	<br>
+	 Yayın Akışı<br><br>
+
+	<ul>
+			
+		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+					</ul>
+	
+	</div>	
+<div class="tabEl" style="display: none;">
+	<br>
+	Yayın Akışı<br><br>
+
+	<ul>
+			
+		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>		
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>			
+		<li><span class="psaat">Müzikler</span><span class="pad">&nbsp;&nbsp; </span><a href="https://turis-tv.github.io/2025/0-Ana-Menu/22-Muzik-Yeni/index.html">Giriş</a></li>
+		<br>
+					</ul>
+	
+	</div>		
+	</div>
+	
+	
+</div>
+            
+            
+            
+
+            
+            
+
+            
+	
+     
+            
+            
+
+            
+            
+
+        <div class="p2s" id="s_hakkimizda">  
+            
+            <div id="iletisimKapla">
+          <div id="iletisimBilgileri">
+       
+
+   <div class="pr">
+ <a href="https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html">
+   <center><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" alt="Girl in a jacket" style="width:250px;height:250px;">
+  </center>
+</a>  
+       
+
+
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451898&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+
+
+
+
+        <div class="p2s" id="s_iletisim">  
+            
+            <div id="iletisimKapla">
+          <div id="iletisimBilgileri">
+       
+
+   <div class="pr">
+ <a href="https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html">
+   <center><img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" alt="Girl in a jacket" style="width:250px;height:250px;">
+  </center>
+</a> 
+       
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2022550299&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+
+
+
+
+
+        <div class="p2s" id="s_Turis">  
+            
+            <div id="iletisimKapla">
+          <div id="iletisimBilgileri">
+       
+
+   <div class="pr">
+ <a href="https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html">
+   <center>  <img src="https://od.lk/s/NzJfNDYwMjg4NDRf/istockphoto-847192060-612x612-removebg-preview.png" alt="Girl in a jacket" style="width:250px;height:250px;">
+  </center>
+</a> 
+       
+
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1217866576&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+
+
+
+
+
+
+
+        <div class="p2s" id="s_Turis_1">  
+            
+            <div id="iletisimKapla">
+          <div id="iletisimBilgileri">
+       
+
+   <div class="pr">
+ <a href="https://turis-tv.github.io/2025/0-Ana-Sayfa/index.html">
+   <center><br><br><br><br><br><br>  <img src="https://od.lk/s/NzJfNDYxNDY1NThf/mula.jpg" alt="Girl in a jacket" style="width:250px;height:250px;">
+  </center>
+</a> 
+       
+ </div><div class="mb30">
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1217877442&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe>
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+ <body> <div id='fifteenth3' style="width:320px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp <b>Listen in Browser<b> <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+<div style="background-color:GreenYellow;width:320px;height:7px;"></div>
+
+
+
+
+ 
+
+
+
+
+
+        <div class="iletisim adres"> </div>
+        <div class="iletisim telefon"><br> </div>
+        <div class="iletisim telefon"> </div>
+        <div class="iletisim ramu"> <br> </div>
+        
+        
+        
+        
+        </div>
+            </div>
+            
+            
+            </div>
+        </div>
+        
+
+	
+	
+</div>
+</body>
+</html>

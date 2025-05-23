@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Turis Tv</title>
+  
+
+</head>
+<body>
+
+
+
+
+ 
+
+
+  </div><div class="mb30"><br>
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451916&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe><br>
+ <body> <div id='fifteenth3' style="width:310x; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp Listen in Browser <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+
+
+ 
+
+ </div><div class="mb30"><br>
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2022550299&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe><br>
+ <body> <div id='fifteenth3' style="width:310px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp Listen in Browser <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+
+ 
+
+
+ </div><div class="mb30"><br>
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451898&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe><br>
+ <body> <div id='fifteenth3' style="width:310px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp Listen in Browser <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+
+ 
+
+ </div><div class="mb30"><br>
+<iframe width="100%" height="450" scrolling="no" frameborder="no" 
+src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1849451898&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false" id="sc-widget"></iframe><br>
+ <body> <div id='fifteenth3' style="width:310px; font-family: 'arialbold', Courier, mono; font-size: 7.5pt; color: red; Filter:Alpha(Opacity=0,FinishOpacity=0,style=5); background-color: white; layer-background-color: White; border: 10px none #000000;">&nbsp Listen in Browser <mark><b>(TIKLAYIN)</b></mark> </div> </body></html>	
+
+
+ 
+
+
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>

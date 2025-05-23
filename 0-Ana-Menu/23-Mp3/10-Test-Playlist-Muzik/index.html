@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Turis Tv</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interface met 9 knoppen en afbeeldingen</title>
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* Pas aan als dat nodig is */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Horizontaal scrollen toestaan */
+      scrollbar-width: none; /* Verberg de schuifbalk in browsers die deze weergeven */
+      -ms-overflow-style: none; /* De schuifbalk verbergen in Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 2 5px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+   
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="Aramak" oninput="searchByName(this.value)">
+      </div>
+ 
+    <button class="filter-button" onclick="filterSelection('1')">1</button>
+    <button class="filter-button" onclick="filterSelection('2')">2</button>
+    <button class="filter-button" onclick="filterSelection('3')">3</button>
+    <button class="filter-button" onclick="filterSelection('4')">4</button>
+    <button class="filter-button" onclick="filterSelection('5')">5</button>
+    <button class="filter-button" onclick="filterSelection('6')">6</button>
+    <button class="filter-button" onclick="filterSelection('7')">7</button>
+ 
+    
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+
+
+      <button class="button 3" onclick="redirectTo('0-Turis-TV-Yer/index.html ')">
+        <img src="https://www.donanimhaber.com/images/images/haber/157023/1400x1050yeni-media-player-windows-10-kullanicilarina-sunuldu.jpg" alt="Imagen">
+        <span>Yeni Player</span>
+    </button>
+
+ 
+
+
+      <button class="button 3" onclick="redirectTo('2-Rahmi Aydin/index.html')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/d01893bcb8f6314c8be224f124b4f834/1900x1900-000000-80-0-0.jpg" alt="Imagen">
+        <span>Rahmi Aydin</span>
+    </button>
+
+      <button class="button 3" onclick="redirectTo('2-Rahmi Aydin/index.htm')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/d01893bcb8f6314c8be224f124b4f834/1900x1900-000000-80-0-0.jpg" alt="Imagen">
+        <span>Rahmi Aydin</span>
+    </button>
+
+
+      <button class="button 4" onclick="redirectTo('3-Ceylan/index.html')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/efc1ad0b62c1968a782cfb9626b0b491/0x1900-000000-80-0-0.jpg" alt="Imagen">
+        <span> Ceylan</span>
+    </button>
+
+      <button class="button 4" onclick="redirectTo('3-Ceylan/index.htm')">
+        <img src="https://cdn-images.dzcdn.net/images/cover/efc1ad0b62c1968a782cfb9626b0b491/0x1900-000000-80-0-0.jpg" alt="Imagen">
+        <span> Ceylan</span>
+    </button>
+
+
+
+      <button class="button 5" onclick="redirectTo('4-Songül Karli/index.html')">
+        <img src="https://ideacdn.net/shop/bf/47/myassets/products/323/pr_01_28323.jpg?revision=1697143329" alt="Imagen">
+        <span>Songül Karlı</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('4-Songül Karli/index.htm')">
+        <img src="https://ideacdn.net/shop/bf/47/myassets/products/323/pr_01_28323.jpg?revision=1697143329" alt="Imagen">
+        <span>Songül Karlı</span>
+    </button>
+
+
+
+      <button class="button 5" onclick="redirectTo('5-Mustafa Er/index.html')">
+        <img src="https://mp3semticdn.com/mp3_images/Mustafa-Er-Bu-Cayir-Sulu-Cayir-2024-19.jpg" alt="Imagen">
+        <span>Mustafa Er</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('5-Mustafa Er/index.htm')">
+        <img src="https://mp3semticdn.com/mp3_images/Mustafa-Er-Bu-Cayir-Sulu-Cayir-2024-19.jpg" alt="Imagen">
+        <span>Mustafa Er</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('6-Sedat Uçan/index.html')">
+        <img src="https://i.scdn.co/image/ab67616d0000b27387254c1adec46d04c1af9ab4" alt="Imagen">
+        <span> Sedat Uçan</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('6-Sedat Uçan/index.htm')">
+        <img src="https://i.scdn.co/image/ab67616d0000b27387254c1adec46d04c1af9ab4" alt="Imagen">
+        <span> Sedat Uçan</span>
+    </button>
+
+
+
+      <button class="button 5" onclick="redirectTo('7-Emrah/index.html')">
+        <img src="https://img.piri.net/mnresize/900/-/resim/upload/2017/05/24/04/14/06891b03genc01.jpg" alt="Imagen">
+        <span>Emrah</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('7-Emrah/index.htm')">
+        <img src="https://img.piri.net/mnresize/900/-/resim/upload/2017/05/24/04/14/06891b03genc01.jpg" alt="Imagen">
+        <span>Emrah</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('8-Emrah Mahzuni/index.html')">
+        <img src="https://i.ytimg.com/vi/Czsp_nWJzSM/hqdefault.jpg" alt="Imagen">
+        <span>Emrah Mahzuni</span>
+    </button>
+
+
+
+      <button class="button 5" onclick="redirectTo('8-Emrah Mahzuni/index.htm')">
+        <img src="https://i.ytimg.com/vi/Czsp_nWJzSM/hqdefault.jpg" alt="Imagen">
+        <span>Emrah Mahzuni</span>
+    </button>
+
+
+      <button class="button 5" onclick="redirectTo('9-Seyfi Doğanay/index.html')">
+        <img src="https://i.scdn.co/image/ab67616d0000b273d29a235e5ffe2ca7998d488f" alt="Imagen">
+        <span>Seyfi Doğanay</span>
+    </button>
+
+      <button class="button 5" onclick="redirectTo('9-Seyfi Doğanay/index.htm')">
+        <img src="https://i.scdn.co/image/ab67616d0000b273d29a235e5ffe2ca7998d488f" alt="Imagen">
+        <span>Seyfi Doğanay</span>
+    </button>
+
+
+       <button class="button 2" onclick="redirectTo('1-Ibrahim Tatlises/index.html')">
+        <img src="https://media.s-bol.com/x2BYvQjVOALP/550x550.jpg" alt="Imagen">
+        <span>Ibrahim Tatlises</span>
+    </button>
+ 
+       <button class="button 2" onclick="redirectTo('1-Ibrahim Tatlises/index.htm')">
+        <img src="https://media.s-bol.com/x2BYvQjVOALP/550x550.jpg" alt="Imagen">
+        <span>Ibrahim Tatlises</span>
+    </button>
+
+
+         <button class="button 2" onclick="redirectTo('110-Bos/index.htm')">
+        <img src="https://sseasideflowers.trustywebsites.com/wp-content/uploads/2018/11/test-product-test.png" alt="Imagen">
+        <span>Test</span>
+    </button>  
+
+         <button class="button 2" onclick="redirectTo('110-Bos/index.html')">
+        <img src="https://sseasideflowers.trustywebsites.com/wp-content/uploads/2018/11/test-product-test.png" alt="Imagen">
+        <span>Test</span>
+    </button>  
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
