@@ -1,0 +1,960 @@
+#EXTINF:0 tvg-logo="https://i.ibb.co/Bt6frts/trthaber.png" group-title="|TR|🇹🇷 HABER-1",TRT HABER
+https://tv-trthaber.medya.trt.com.tr/master.m3u8
+
+
+#EXTINF:0 CUID="3705" tvg-chno="null" tvg-name="Atv | c" group-title="Ulusal",Atv | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LWF0di10di90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MzcwNX0%3D/fast
+
+
+#EXTINF:0 CUID="3708" tvg-chno="null" tvg-name="Atv | f" group-title="Ulusal",Atv | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYXR2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozNzA4fQ%3D%3D/fast
+#EXTINF:0 CUID="3709" tvg-chno="null" tvg-name="Atv | g" group-title="Ulusal",Atv | g
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYXl0di9pbmRleC5tM3U4IiwiaWQiOjM3MDl9/fast
+
+
+#EXTINF:0 CUID="3712" tvg-chno="null" tvg-name="Fox | c" group-title="Ulusal",Fox | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LWZveHR1cmt0di90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MzcxMn0%3D/fast
+
+
+#EXTINF:0 CUID="3715" tvg-chno="null" tvg-name="Fox | f" group-title="Ulusal",Fox | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvZm94dHYuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjM3MTV9/fast
+#EXTINF:0 CUID="3716" tvg-chno="null" tvg-name="Fox | g" group-title="Ulusal",Fox | g
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vZm94L2luZGV4Lm0zdTgiLCJpZCI6MzcxNn0%3D/fast
+
+
+
+#EXTINF:0 CUID="3720" tvg-chno="null" tvg-name="Kanal7 | c" group-title="Ulusal",Kanal7 | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWthbmFsNy90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MzcyMH0%3D/fast
+#EXTINF:0 CUID="3721" tvg-chno="null" tvg-name="Kanal7 | d" group-title="Ulusal",Kanal7 | d
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsN2R2ci5ibHV0di5jb20vYmx1dHZfa2FuYWw3X2R2cjIvbGl2ZS5tM3U4IiwiaWQiOjM3MjF9/fast
+#EXTINF:0 CUID="3722" tvg-chno="null" tvg-name="Kanal7 | e" group-title="Ulusal",Kanal7 | e
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsNy1saXZlLmRhaW9uY2RuLm5ldC9rYW5hbDcva2FuYWw3Lm0zdTgiLCJpZCI6MzcyMn0%3D/fast
+
+
+
+
+
+#EXTINF:0 CUID="3728" tvg-chno="null" tvg-name="Kanald | e" group-title="Ulusal",Kanald | e
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYva2FuYWxkLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozNzI4fQ%3D%3D/fast
+#EXTINF:0 CUID="3729" tvg-chno="null" tvg-name="Kanald | f" group-title="Ulusal",Kanald | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWxkL2luZGV4Lm0zdTgiLCJpZCI6MzcyOX0%3D/fast
+#EXTINF:0 CUID="3730" tvg-chno="null" tvg-name="Kanald | g" group-title="Ulusal",Kanald | g
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9rYW5hbF9kL2luZGV4Lm0zdTgiLCJpZCI6MzczMH0%3D/fast
+#EXTINF:0 CUID="3731" tvg-chno="null" tvg-name="Kanald | h" group-title="Ulusal",Kanald | h
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuZHVobmV0LnR2L1MyL0hMU19MSVZFL2thbmFsZGRhaW5wL3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzczMX0%3D/fast
+
+
+#EXTINF:0 CUID="3734" tvg-chno="null" tvg-name="Showtv | c" group-title="Ulusal",Showtv | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LXNob3ctdHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjM3MzR9/fast
+
+
+#EXTINF:0 CUID="3737" tvg-chno="null" tvg-name="Showtv | f" group-title="Ulusal",Showtv | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvc2hvd3R2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozNzM3fQ%3D%3D/fast
+
+#EXTINF:0 CUID="3739" tvg-chno="null" tvg-name="Showtv | h" group-title="Ulusal",Showtv | h
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NpbmVyLWxpdmUuZGFpb25jZG4ubmV0L3Nob3d0di9zaG93dHYubTN1OCIsImlkIjozNzM5fQ%3D%3D/fast
+
+
+
+
+#EXTINF:0 CUID="3744" tvg-chno="null" tvg-name="Star | e" group-title="Ulusal",Star | e
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvc3RhcnR2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozNzQ0fQ%3D%3D/fast
+#EXTINF:0 CUID="3745" tvg-chno="null" tvg-name="Star | f" group-title="Ulusal",Star | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vc3Rhci9pbmRleC5tM3U4IiwiaWQiOjM3NDV9/fast
+#EXTINF:0 CUID="3746" tvg-chno="null" tvg-name="Star | g" group-title="Ulusal",Star | g
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RvZ3VzLWxpdmUuZGFpb25jZG4ubmV0L3N0YXJ0di9zdGFydHYubTN1OCIsImlkIjozNzQ2fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="3749" tvg-chno="null" tvg-name="Trt1 | c" group-title="Ulusal",Trt1 | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydDFldS90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6Mzc0OX0%3D/fast
+
+
+#EXTINF:0 CUID="3752" tvg-chno="null" tvg-name="Trt1 | f" group-title="Ulusal",Trt1 | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHJ0MS5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mzc1Mn0%3D/fast
+#EXTINF:0 CUID="3753" tvg-chno="null" tvg-name="Trt1 | g" group-title="Ulusal",Trt1 | g
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vdHJ0MS9pbmRleC5tM3U4IiwiaWQiOjM3NTN9/fast
+#EXTINF:0 CUID="3754" tvg-chno="null" tvg-name="Trt1 | h" group-title="Ulusal",Trt1 | h
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfMS9pbmRleC5tM3U4IiwiaWQiOjM3NTR9/fast
+#EXTINF:0 CUID="3755" tvg-chno="null" tvg-name="Trt1 | i" group-title="Ulusal",Trt1 | i
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydDEubWVkeWEudHJ0LmNvbS50ci9tYXN0ZXIubTN1OCIsImlkIjozNzU1fQ%3D%3D/fast
+
+
+
+
+#EXTINF:0 CUID="3760" tvg-chno="null" tvg-name="Tv8 | e" group-title="Ulusal",Tv8 | e
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHY4LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozNzYwfQ%3D%3D/fast
+#EXTINF:0 CUID="3761" tvg-chno="null" tvg-name="Tv8 | f" group-title="Ulusal",Tv8 | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWw4L2luZGV4Lm0zdTgiLCJpZCI6Mzc2MX0%3D/fast
+
+
+
+#EXTINF:0 CUID="3765" tvg-chno="null" tvg-name="360 | c" group-title="Ulusal",360 | c
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXNreTM2MC90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6Mzc2NX0%3D/fast
+
+
+#EXTINF:0 CUID="3768" tvg-chno="null" tvg-name="360 | f" group-title="Ulusal",360 | f
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R1cmttZWR5YS1saXZlLmVyY2RuLm5ldC90djM2MC90djM2MC5tM3U4IiwiaWQiOjM3Njh9/fast
+
+
+
+
+
+
+
+
+#EXTINF:0 CUID="120" tvg-name="Az tv" group-title="UyanıkTv",Az tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2h3Mi5qZW10di5jb20vYXBwL2F6dHYxL3BsYXlsaXN0Lm0zdTgiLCJpZCI6MTIwfQ%3D%3D/fast
+#EXTINF:0 CUID="121" tvg-name="Azad az" group-title="UyanıkTv",Azad az
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2h3Mi5qZW10di5jb20vYXBwL2F6YWQvcGxheWxpc3QubTN1OCIsImlkIjoxMjF9/fast
+#EXTINF:0 CUID="122" tvg-name="Azeri" group-title="UyanıkTv",Azeri
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2h3Mi5qZW10di5jb20vYXBwL2F6ZXJpL3BsYXlsaXN0Lm0zdTgiLCJpZCI6MTIyfQ%3D%3D/fast
+
+
+
+
+
+
+
+
+
+
+#EXTINF:0 CUID="133" tvg-name="İctimai az" group-title="UyanıkTv",İctimai az
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2h3Mi5qZW10di5jb20vYXBwL2ljdC9wbGF5bGlzdC5tM3U4IiwiaWQiOjEzM30%3D/fast
+
+
+
+
+
+
+
+
+
+
+
+#EXTINF:0 CUID="2" tvg-name="A2 yedek" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7RrFU73imLmT37YEFTog1FdmkE_pcnJwurw&s" group-title="GinikoTv",A2 yedek
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWF0dmEyL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjoyfQ%3D%3D/fast
+#EXTINF:0 CUID="3" tvg-name="Ahaber" tvg-logo="https://pbs.twimg.com/profile_images/1626885016901808132/iXrZylss_400x400.jpg" group-title="GinikoTv",Ahaber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWFoYWJlci9wbGF5bGlzdC5tM3U4IiwiaWQiOjN9/fast
+
+#EXTINF:0 CUID="5" tvg-name="Altastv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzEjUGglvw1QvcQYEJDJGzLiTT5WWWZk0EZg&s" group-title="GinikoTv",Altastv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWFsdGFzdHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjV9/fast
+
+
+
+#EXTINF:0 CUID="10" tvg-name="Aspor" tvg-logo="https://cdn6.aptoide.com/imgs/7/f/d/7fd636ea06646d1a9aaefe27a11dfb58_icon.png" group-title="GinikoTv",Aspor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWFzcG9yL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjoxMH0%3D/fast
+
+#EXTINF:0 CUID="12" tvg-name="Atv" tvg-logo="https://seeklogo.com/images/A/atv-logo-35C825BDBB-seeklogo.com.png" group-title="GinikoTv",Atv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LWF0di10di90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTJ9/fast
+#EXTINF:0 CUID="13" tvg-name="Atv eu" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUk0AdkpKqBSM6b7cfk05DZo4evBHDjjBbQ&s" group-title="GinikoTv",Atv eu
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWF0dmF2cnVwYS90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTN9/fast
+
+
+
+
+#EXTINF:0 CUID="18" tvg-name="Az tv" tvg-logo="https://abc.az/storage/abc/2020/december/25/aztv-logo.jpg" group-title="GinikoTv",Az tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWF6dHZoZC90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTh9/fast
+#EXTINF:0 CUID="19" tvg-name="Beinsport haber" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbntdIv_BGoXSoyyys6F8QqPYm_57z6-LJgA&s" group-title="GinikoTv",Beinsport haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWJlaW5zcG9ydHNoYWJlci90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTl9/fast
+
+
+#EXTINF:0 CUID="22" tvg-name="Beyaz tv" tvg-logo="https://play-lh.googleusercontent.com/OYyWb0CbV7moC0vMYSWR-IPv2m1qckuV8uYFhACjomW9lDj-h1LJb6lqIzAbJDlR4KY" group-title="GinikoTv",Beyaz tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWJleWF6dHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjIyfQ%3D%3D/fast
+
+
+
+
+#EXTINF:0 CUID="27" tvg-name="Cnn türk" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWRjQpazuGWaFtKTt4hu-N1BJkdtH3sl6jEQ&usqp=CAU" group-title="GinikoTv",Cnn türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWNubnR1cmsvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjI3fQ%3D%3D/fast
+
+
+
+#EXTINF:0 CUID="31" tvg-name="Dünya" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnucl_sS2Xbia0veAQ8KiXescVI-6qBVqMQ&usqp=CAU16851593598?e=2147483647&v=beta&t=aqrexl0C3-fjegSM46MIuKwcS8JuoY4zztPAzcfmKB0" group-title="GinikoTv",Dünya
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWR1bnlhL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjozMX0%3D/fast
+#EXTINF:0 CUID="32" tvg-name="Euro D" group-title="GinikoTv",Euro D
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWV1cm9kL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjozMn0%3D/fast
+#EXTINF:0 CUID="33" tvg-name="Euro Star" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR68Cmp7VbjledIRHpyA3haRpvrCOcE-_AlJQ&usqp=CAU" group-title="GinikoTv",Euro Star
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LWV1cm9zdGFyL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjozM30%3D/fast
+
+#EXTINF:0 CUID="35" tvg-name="Flash tv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCX5EuAGq3pZ8obo9bQiCWsdYK7PHWt4CwVA&s" group-title="GinikoTv",Flash tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWZsYXNodHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjM1fQ%3D%3D/fast
+#EXTINF:0 CUID="36" tvg-name="Fox tv" tvg-logo="https://i.turkiyegazetesi.com.tr/images/Resources/2015/5/8/700x266415_fox-tv_1.jpg" group-title="GinikoTv",Fox tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LWZveHR1cmt0di90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MzZ9/fast
+
+
+
+#EXTINF:0 CUID="40" tvg-name="Haber türk" tvg-logo="https://store-images.s-microsoft.com/image/apps.17853.9007199266556213.66164210-aa51-4852-a838-11ba237eb590.be81052b-3dbb-4aa1-9179-ba040e7bc7a9?h=210" group-title="GinikoTv",Haber türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWhhYmVydHVyay90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NDB9/fast
+
+#EXTINF:0 CUID="42" tvg-name="Halk tv" tvg-logo="https://pbs.twimg.com/profile_images/1664239311494033408/szCkhgAv_400x400.jpg?h=210" group-title="GinikoTv",Halk tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWhhbGt0di90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NDJ9/fast
+
+
+#EXTINF:0 CUID="45" tvg-name="Idman tv" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgVYFMducHmLHn2s_T5ZLb9qLoSe7pX16lDA&s" group-title="GinikoTv",Idman tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWlkbWFudHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjQ1fQ%3D%3D/fast
+#EXTINF:0 CUID="46" tvg-name="Kanal 7" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Kanal_7_2002-%3F_logosu.webp/300px-Kanal_7_2002-%3F_logosu.webp.png" group-title="GinikoTv",Kanal 7
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWthbmFsNy90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NDZ9/fast
+
+
+
+
+
+
+#EXTINF:0 CUID="53" tvg-name="Kral pop" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpKM2eqzr8gbcHydPlwkyy334C_hxz1nFyQ&sffff-no-rj" group-title="GinikoTv",Kral pop
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLWtyYWxwb3AvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjUzfQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="56" tvg-name="Ntv" tvg-logo="https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.youtube.com&client=VFE&size=64&type=FAVICON&fallback_opts=TYPE,SIZE,URL&nfrp=2fffff-no-rj" group-title="GinikoTv",Ntv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLW50dnR2L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo1Nn0%3D/fast
+
+
+#EXTINF:0 CUID="53" tvg-name="Kral pop" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVpKM2eqzr8gbcHydPlwkyy334C_hxz1nFyQ&sffff-no-rj" group-title="Power hd",Power hd
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXBvd2VyaGQvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjU4fQ%3D%3D/fast
+#EXTINF:0 CUID="58" tvg-name="Power hd" tvg-logo="https://cdn.powergroup.com.tr/image/500x500/powerapp/channels/v3/logo_44.png?v=1IZE,URL&nfrp=2fffff-no-rj" group-title="Power hd",Power hd
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXBvd2VyaGQvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjU4fQ%3D%3D/fast
+#EXTINF:0 CUID="59" tvg-name="Power türk" tvg-logo="https://cdn.powergroup.com.tr/image/500x500/powerapp/channels/v3/logo_44.png?v=1IZE,URL&nfrp=2fffff-no-rj" group-title="GinikoTv",Power türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXBvd2VydHVyay90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NTl9/fast
+
+#EXTINF:0 CUID="61" tvg-name="Mekke tv" group-title="GinikoTv",Mekke tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RybjAzLnR1bGl4LnR2L2dpbi1zYXVkaXF1cmFuL2luZGV4Lm0zdTgiLCJpZCI6NjF9/fast
+#EXTINF:0 CUID="62" tvg-name="Show türk" tvg-logo="https://tutusmedia.com/wp-content/uploads/2019/02/show_turk.png" group-title="GinikoTv",Show türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXNob3d0dnR1cmsvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjYyfQ%3D%3D/fast
+#EXTINF:0 CUID="63" tvg-name="Showtv" tvg-logo="https://i.ytimg.com/vi/rPpOXVk2tQs/sddefault.jpg" group-title="GinikoTv",Showtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LXNob3ctdHYvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjYzfQ%3D%3D/fast
+
+
+
+
+
+
+#EXTINF:0 CUID="70" tvg-name="Tele1" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXViGyxWfrWCk0GY0-c17ikUc67f_wUg6Lw&s" group-title="GinikoTv",Tele1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRlbGUxL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo3MH0%3D/fast
+#EXTINF:0 CUID="71" tvg-name="Teve2" tvg-logo="https://pbs.twimg.com/profile_images/1717135101102882816/0kzCiy_7_400x400.jpg" group-title="GinikoTv",Teve2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXR2MnR2L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo3MX0%3D/fast
+#EXTINF:0 CUID="72" tvg-name="Tgrt belgesel" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs8oBAb8rqHEL10nes5FCEkPCeUUKRTWG1ow&s" group-title="GinikoTv",Tgrt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRncnRiZWxnZXNlbC90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NzJ9/fast
+#EXTINF:0 CUID="73" tvg-name="Tgrt eu" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3lABEz__rNNQssvdLnudafoVyBNQTDhwuuA&s" group-title="GinikoTv",Tgrt eu
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRncnRldS90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NzN9/fast
+#EXTINF:0 CUID="74" tvg-name="Tgrt haber" tvg-logo="https://www.haber365.com.tr/img/tv/tv/tgrthaber.jpg" group-title="GinikoTv",Tgrt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRncnRoYWJlci90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6NzR9/fast
+
+
+#EXTINF:0 CUID="77" tvg-name="Tlc yedek" tvg-logo="https://yt3.googleusercontent.com/7-fGBxX6cWaBrdjk32N77kEm5dMWFVyKNyt3q5s9MW6xP_zbMTi7BoKzp8eLAatn7SL4G3LS=s900-c-k-c0x00ffffff-no-rj" group-title="GinikoTv",Tlc yedek
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL3RybjAzL2d0LXRsYy90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6Nzd9/fast
+
+
+#EXTINF:0 CUID="80" tvg-name="Trt 1 yedek" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMrU5IkSf2tzU4Zu_8_CfZ6wXxf3to6Tvy8Q&s" group-title="GinikoTv",Trt 1 yedek
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RybjAzLnR1bGl4LnR2L2d0LXRydDFldS9pbmRleC5tM3U4IiwiaWQiOjgwfQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="83" tvg-name="Trt 4k" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1u4_CmorMFW8qDzOznFisy7JknFMr0dBkYg&s" group-title="GinikoTv",Trt 4k
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RybjAzLnR1bGl4LnR2L2d0LXRydDRrL2luZGV4Lm0zdTgiLCJpZCI6ODN9/fast
+#EXTINF:0 CUID="84" tvg-name="Trt arapça" tvg-logo="https://play-lh.googleusercontent.com/c1R5fTWwQYs-ojv5yL301sh46B6srULQ0TlpGkKHeOKpA_997NG4vAVrGSF1xftGd-E7" group-title="GinikoTv",Trt arapça
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydGFyYXBjYS90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6ODR9/fast
+
+#EXTINF:0 CUID="86" tvg-name="Trt belgesel" tvg-logo="https://isbh.tmgrup.com.tr/sbh/2015/03/31/GenelBuyuk/1427785267498.jpg" group-title="GinikoTv",Trt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydGJlbGdlc2VsL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo4Nn0%3D/fast
+
+#EXTINF:0 CUID="88" tvg-name="Trt haber" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv6P6-9HOe5uHR9ZiNvxlgDfn28M2bXAJjPg&s" group-title="GinikoTv",Trt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydGhhYmVyL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo4OH0%3D/fast
+
+
+
+#EXTINF:0 CUID="92" tvg-name="Trt spor" tvg-logo="https://i.pinimg.com/474x/5e/25/f7/5e25f7166d15e40f73df3dde9af37fb9.jpg" group-title="GinikoTv",Trt spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydHNwb3IvdHJhY2tzLXYxYTEvbW9uby5tM3U4IiwiaWQiOjkyfQ%3D%3D/fast
+#EXTINF:0 CUID="93" tvg-name="Trt spor 2" tvg-logo="https://i.pinimg.com/474x/5e/25/f7/5e25f7166d15e40f73df3dde9af37fb9.jpg" group-title="GinikoTv",Trt spor 2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydHNwb3IyL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo5M30%3D/fast
+
+#EXTINF:0 CUID="95" tvg-name="Trt spor 3" tvg-logo="https://i.pinimg.com/474x/5e/25/f7/5e25f7166d15e40f73df3dde9af37fb9.jpg" group-title="GinikoTv",Trt spor 3
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXRydHNwb3IzL3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo5NX0%3D/fast
+
+
+#EXTINF:0 CUID="98" tvg-name="Trt türk yedek" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbISfP85gqwH9kC4-gIxRz25YMZSvR8GnwA&s" group-title="GinikoTv",Trt türk yedek
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RybjAzLnR1bGl4LnR2L2d0LXRydHR1cmsvaW5kZXgubTN1OCIsImlkIjo5OH0%3D/fast
+
+
+
+#EXTINF:0 CUID="102" tvg-name="Tv8 int" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyn_0Vpa5fLt_Ctq6KwTxkUaohGSIjfDf4tQ&suto=format&dpr=1&w=1000" group-title="GinikoTv",Tv8 int
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXR2OGludC90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTAyfQ%3D%3D/fast
+
+
+
+
+#EXTINF:0 CUID="107" tvg-name="Ülke tv" tvg-logo="https://egitim.tossfed.gov.tr/storage/2017/07/indir.png" group-title="GinikoTv",Ülke tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ3QtdWxrZXR2L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjoxMDd9/fast
+
+
+#EXTINF:0 CUID="110" tvg-name="360" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/7/78/Skyturk360_logosu.png" group-title="GinikoTv",360
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Rnbi5ib3p6dHYuY29tL2R2cmZsMDUvZ2luLXNreTM2MC90cmFja3MtdjFhMS9tb25vLm0zdTgiLCJpZCI6MTEwfQ%3D%3D/fast
+
+#EXTINF:0 CUID="179" tvg-name="Agro tv" group-title="BluTv",Agro tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Fncm90di5ibHV0di5jb20vYmx1dHZfYWdyb3R2L2JsdXR2X2Fncm90di9wbGF5bGlzdC5tM3U4IiwiaWQiOjE3OX0%3D/fast
+
+#EXTINF:0 CUID="181" tvg-name="Bloomberg ht" group-title="BluTv",Bloomberg ht
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Jsb29tYmVyZ2h0MmR2ci5ibHV0di5jb20vYmx1dHZfYmxvb21iZXJnaHRfZHZyL2xpdmUubTN1OCIsImlkIjoxODF9/fast
+
+#EXTINF:0 CUID="183" tvg-name="CN" group-title="BluTv",CN
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NhcnRvb25uZXR3b3JrLmJsdXR2LmNvbS9ibHV0dl9jYXJ0b29ubmV0d29yay9saXZlLm0zdTgiLCJpZCI6MTgzfQ%3D%3D/fast
+#EXTINF:0 CUID="184" tvg-name="Cnn int" group-title="BluTv",Cnn int
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NubmludC5ibHV0di5jb20vYmx1dHZfY25uaW50L3NtaWw6Y25uaW50LnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoxODR9/fast
+#EXTINF:0 CUID="185" tvg-name="Discovery" group-title="BluTv",Discovery
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Rpc2NvdmVyeS5ibHV0di5jb20vYmx1dHZfZGlzY292ZXJ5L3NtaWw6ZGlzY292ZXJ5LnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoxODV9/fast
+
+#EXTINF:0 CUID="187" tvg-name="Dmax" group-title="BluTv",Dmax
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RtYXhkdnIuYmx1dHYuY29tL2JsdXR2X2RtYXhfZHZyL2xpdmUubTN1OCIsImlkIjoxODd9/fast
+#EXTINF:0 CUID="188" tvg-name="Eko türk" group-title="BluTv",Eko türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Vrb3R1cmtkdnIuYmx1dHYuY29tL2JsdXR2X2Vrb3R1cmtfZHZyL2xpdmUubTN1OCIsImlkIjoxODh9/fast
+
+#EXTINF:0 CUID="190" tvg-name="Eurosport1" group-title="BluTv",Eurosport1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2V1cm9zcG9ydDEuYmx1dHYuY29tL2JsdXR2X2V1cm9zcG9ydDEvc21pbDpldXJvc3BvcnQxLnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoxOTB9/fast
+#EXTINF:0 CUID="191" tvg-name="Eurosport2" group-title="BluTv",Eurosport2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2V1cm9zcG9ydDIuYmx1dHYuY29tL2JsdXR2X2V1cm9zcG9ydDIvc21pbDpldXJvc3BvcnQyLnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoxOTF9/fast
+#EXTINF:0 CUID="192" tvg-name="Flash tv" group-title="BluTv",Flash tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2ZsYXNodHZkdnIuYmx1dHYuY29tL2JsdXR2X2ZsYXNodHZfZHZyL2xpdmUubTN1OCIsImlkIjoxOTJ9/fast
+#EXTINF:0 CUID="193" tvg-name="Haber global" group-title="BluTv",Haber global
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hhYmVyZ2xvYmFsZHZyLmJsdXR2LmNvbS9ibHV0dl9oYWJlcmdsb2JhbF9kdnIvbGl2ZS5tM3U4IiwiaWQiOjE5M30%3D/fast
+#EXTINF:0 CUID="194" tvg-name="Haber türk" group-title="BluTv",Haber türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hhYmVydHVya2R2ci5ibHV0di5jb20vYmx1dHZfaGFiZXJ0dXJrX2R2cjIvbGl2ZS5tM3U4IiwiaWQiOjE5NH0%3D/fast
+#EXTINF:0 CUID="195" tvg-name="Haber türk (test)" group-title="BluTv",Haber türk (test)
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL21ub3JpZ2luLWNtbi01Lm1uY2RuLmNvbS9oYWJlcnR1cmtfdGVzdHRfZHZyL2xpdmUubTN1OCIsImlkIjoxOTV9/fast
+#EXTINF:0 CUID="196" tvg-name="Halk tv" group-title="BluTv",Halk tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hhbGt0dmR2ci5ibHV0di5jb20vYmx1dHZfaGFsa3R2Ml9kdnIvbGl2ZS5tM3U4IiwiaWQiOjE5Nn0%3D/fast
+
+#EXTINF:0 CUID="198" tvg-name="Kanal7" group-title="BluTv",Kanal7
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsN2R2ci5ibHV0di5jb20vYmx1dHZfa2FuYWw3X2R2cjIvbGl2ZS5tM3U4IiwiaWQiOjE5OH0%3D/fast
+
+#EXTINF:0 CUID="200" tvg-name="Krt tv" group-title="BluTv",Krt tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2tydGR2ci5ibHV0di5jb20vYmx1dHZfa3J0X2xpdmVfZHZyL2xpdmUubTN1OCIsImlkIjoyMDB9/fast
+#EXTINF:0 CUID="201" tvg-name="Nr1" group-title="BluTv",Nr1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL25yMS5ibHV0di5jb20vYmx1dHZfbjEvYmx1dHZfbjEvcGxheWxpc3QubTN1OCIsImlkIjoyMDF9/fast
+#EXTINF:0 CUID="202" tvg-name="Nr1 türk" group-title="BluTv",Nr1 türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL25yMXR1cmsuYmx1dHYuY29tL2JsdXR2X24xdHVyay9saXZlLm0zdTgiLCJpZCI6MjAyfQ%3D%3D/fast
+#EXTINF:0 CUID="203" tvg-name="Play1" group-title="BluTv",Play1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3BsYXkxLmJsdXR2LmNvbS9ibHV0dl9wbGF5MS9zbWlsOmJsdXR2X3BsYXkxLnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoyMDN9/fast
+#EXTINF:0 CUID="204" tvg-name="Play2" group-title="BluTv",Play2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3BsYXkyLmJsdXR2LmNvbS9ibHV0dl9wbGF5Mi9zbWlsOmJsdXR2X3BsYXkyLnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoyMDR9/fast
+
+
+#EXTINF:0 CUID="207" tvg-name="Sözcü tv" group-title="BluTv",Sözcü tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3N6Y3R2ZHZyLmJsdXR2LmNvbS9ibHV0dl9zemN0dl9kdnIvbGl2ZS5tM3U4IiwiaWQiOjIwN30%3D/fast
+#EXTINF:0 CUID="208" tvg-name="Sports tv" group-title="BluTv",Sports tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Nwb3J0c3R2LmJsdXR2LmNvbS9ibHV0dl9zcG9ydHN0djIvbGl2ZS5tM3U4IiwiaWQiOjIwOH0%3D/fast
+#EXTINF:0 CUID="209" tvg-name="Tele1" group-title="BluTv",Tele1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RlbGUxZHZyLmJsdXR2LmNvbS9ibHV0dl90ZWxlMV9kdnIyL2xpdmUubTN1OCIsImlkIjoyMDl9/fast
+#EXTINF:0 CUID="210" tvg-name="Tgrt haber" group-title="BluTv",Tgrt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RncnRoYWJlcmR2ci5ibHV0di5jb20vYmx1dHZfdGdydGhhYmVyMl9kdnIvbGl2ZS5tM3U4IiwiaWQiOjIxMH0%3D/fast
+#EXTINF:0 CUID="211" tvg-name="Tlc" group-title="BluTv",Tlc
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RsY2R2ci5ibHV0di5jb20vYmx1dHZfdGxjX2R2cjIvbGl2ZS5tM3U4IiwiaWQiOjIxMX0%3D/fast
+#EXTINF:0 CUID="212" tvg-name="Tv4" group-title="BluTv",Tv4
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2NGR2ci5ibHV0di5jb20vYmx1dHZfdHY0X2R2ci9saXZlLm0zdTgiLCJpZCI6MjEyfQ%3D%3D/fast
+#EXTINF:0 CUID="213" tvg-name="Tv100" group-title="BluTv",Tv100
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2MTAwZHZyLmJsdXR2LmNvbS9ibHV0dl90djEwMDJfZHZyL2xpdmUubTN1OCIsImlkIjoyMTN9/fast
+#EXTINF:0 CUID="214" tvg-name="Ülke tv" group-title="BluTv",Ülke tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Vsa2V0di5ibHV0di5jb20vYmx1dHZfdWxrZXR2Mi9saXZlLm0zdTgiLCJpZCI6MjE0fQ%3D%3D/fast
+#EXTINF:0 CUID="215" tvg-name="Vuslat tv" group-title="BluTv",Vuslat tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Z1c2xhdHR2LmJsdXR2LmNvbS9ibHV0dl92dXNsYXR0djIvbGl2ZS5tM3U4IiwiaWQiOjIxNX0%3D/fast
+#EXTINF:0 CUID="216" tvg-name="Woman tv" group-title="BluTv",Woman tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3dvbWFudHYuYmx1dHYuY29tL2JsdXR2X3dvbWFudHYvc21pbDpibHV0dl93b21hbnR2LnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjoyMTZ9/fast
+#EXTINF:0 CUID="217" tvg-name="24" group-title="BluTv",24
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsMjRkdnIuYmx1dHYuY29tL2JsdXR2X2thbmFsMjRfZHZyL2xpdmUubTN1OCIsImlkIjoyMTd9/fast
+
+
+
+
+
+
+
+
+#EXTINF:0 CUID="283" tvg-name="A haber" group-title="CanliTvFun",A haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYWhhYmVyLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyODN9/fast
+#EXTINF:0 CUID="284" tvg-name="A spor" group-title="CanliTvFun",A spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYXNwb3Iuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjI4NH0%3D/fast
+#EXTINF:0 CUID="285" tvg-name="Atv" group-title="CanliTvFun",Atv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYXR2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyODV9/fast
+#EXTINF:0 CUID="286" tvg-name="Az tv" group-title="CanliTvFun",Az tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYXp0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mjg2fQ%3D%3D/fast
+#EXTINF:0 CUID="287" tvg-name="Beinsport haber" group-title="CanliTvFun",Beinsport haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYmVpbnNwb3J0aGFiZXIuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjI4N30%3D/fast
+#EXTINF:0 CUID="288" tvg-name="Bengü türk" group-title="CanliTvFun",Bengü türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYmVuZ3V0dXJrLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyODh9/fast
+#EXTINF:0 CUID="289" tvg-name="Beyaz tv" group-title="CanliTvFun",Beyaz tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvYmV5YXp0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mjg5fQ%3D%3D/fast
+
+#EXTINF:0 CUID="291" tvg-name="Cbc" group-title="CanliTvFun",Cbc
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvY2JjLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyOTF9/fast
+#EXTINF:0 CUID="292" tvg-name="Cbc sport" group-title="CanliTvFun",Cbc sport
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvY2Jjc3BvcnQuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjI5Mn0%3D/fast
+#EXTINF:0 CUID="293" tvg-name="Cnn türk" group-title="CanliTvFun",Cnn türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvY25udHVyay5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MjkzfQ%3D%3D/fast
+#EXTINF:0 CUID="294" tvg-name="Dmax" group-title="CanliTvFun",Dmax
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvZG1heC5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mjk0fQ%3D%3D/fast
+#EXTINF:0 CUID="295" tvg-name="FbTv" group-title="CanliTvFun",FbTv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvZmJ0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mjk1fQ%3D%3D/fast
+#EXTINF:0 CUID="296" tvg-name="Flash tv" group-title="CanliTvFun",Flash tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvZmxhc2h0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6Mjk2fQ%3D%3D/fast
+
+#EXTINF:0 CUID="298" tvg-name="Haber türk" group-title="CanliTvFun",Haber türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvaGFiZXJ0dXJrLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyOTh9/fast
+#EXTINF:0 CUID="299" tvg-name="Halk tv" group-title="CanliTvFun",Halk tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvaGFsa3R2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjoyOTl9/fast
+#EXTINF:0 CUID="300" tvg-name="Kanal s" group-title="CanliTvFun",Kanal s
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYva2FuYWxzLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMDB9/fast
+#EXTINF:0 CUID="301" tvg-name="KanalD" group-title="CanliTvFun",KanalD
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYva2FuYWxkLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMDF9/fast
+#EXTINF:0 CUID="302" tvg-name="Medeniyet tv" group-title="CanliTvFun",Medeniyet tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvbWVkZW5peWV0dHYuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMwMn0%3D/fast
+#EXTINF:0 CUID="303" tvg-name="Now tv" group-title="CanliTvFun",Now tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvZm94dHYuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMwM30%3D/fast
+#EXTINF:0 CUID="304" tvg-name="Ntv" group-title="CanliTvFun",Ntv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvbnR2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMDR9/fast
+#EXTINF:0 CUID="305" tvg-name="Show tv" group-title="CanliTvFun",Show tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvc2hvd3R2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMDV9/fast
+#EXTINF:0 CUID="306" tvg-name="Sözcü tv" group-title="CanliTvFun",Sözcü tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvc296Y3V0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MzA2fQ%3D%3D/fast
+#EXTINF:0 CUID="307" tvg-name="Star tv" group-title="CanliTvFun",Star tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvc3RhcnR2LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMDd9/fast
+#EXTINF:0 CUID="308" tvg-name="Tele1" group-title="CanliTvFun",Tele1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGVsZTEuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMwOH0%3D/fast
+#EXTINF:0 CUID="309" tvg-name="Teve2" group-title="CanliTvFun",Teve2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGV2ZTIuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMwOX0%3D/fast
+#EXTINF:0 CUID="310" tvg-name="Tgrt belgesel" group-title="CanliTvFun",Tgrt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGdydGJlbGdlc2VsLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMTB9/fast
+#EXTINF:0 CUID="311" tvg-name="Tgrt haber" group-title="CanliTvFun",Tgrt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGdydGhhYmVyLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMTF9/fast
+#EXTINF:0 CUID="312" tvg-name="Tivibu spor" group-title="CanliTvFun",Tivibu spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGl2aWJ1c3Bvci5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MzEyfQ%3D%3D/fast
+#EXTINF:0 CUID="313" tvg-name="Tlc" group-title="CanliTvFun",Tlc
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdGxjLnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMTN9/fast
+#EXTINF:0 CUID="314" tvg-name="Trt 1" group-title="CanliTvFun",Trt 1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHJ0MS5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MzE0fQ%3D%3D/fast
+#EXTINF:0 CUID="315" tvg-name="Trt spor" group-title="CanliTvFun",Trt spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHJ0c3Bvci5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MzE1fQ%3D%3D/fast
+#EXTINF:0 CUID="316" tvg-name="Tv5" group-title="CanliTvFun",Tv5
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHY1LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMTZ9/fast
+#EXTINF:0 CUID="317" tvg-name="Tv8" group-title="CanliTvFun",Tv8
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHY4LnN0cmVhbS9tYXN0ZXIubTN1OCIsImlkIjozMTd9/fast
+#EXTINF:0 CUID="318" tvg-name="Tv8bucuk" group-title="CanliTvFun",Tv8bucuk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHY4LTUuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMxOH0%3D/fast
+#EXTINF:0 CUID="319" tvg-name="Tv100" group-title="CanliTvFun",Tv100
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYvdHYxMDAuc3RyZWFtL21hc3Rlci5tM3U4IiwiaWQiOjMxOX0%3D/fast
+
+#EXTINF:0 CUID="321" tvg-name="Xezer tv" group-title="CanliTvFun",Xezer tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMi5jYW5saXR2LmZ1bi9saXZldHYveGV6ZXJ0di5zdHJlYW0vbWFzdGVyLm0zdTgiLCJpZCI6MzIxfQ%3D%3D/fast
+#EXTINF:0 CUID="322" tvg-name="A haber" group-title="FullTv",A haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYWhhYmVyL2luZGV4Lm0zdTgiLCJpZCI6MzIyfQ%3D%3D/fast
+#EXTINF:0 CUID="323" tvg-name="A spor" group-title="FullTv",A spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYXNwb3IvaW5kZXgubTN1OCIsImlkIjozMjN9/fast
+#EXTINF:0 CUID="324" tvg-name="A2" group-title="FullTv",A2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYTIvaW5kZXgubTN1OCIsImlkIjozMjR9/fast
+#EXTINF:0 CUID="325" tvg-name="Atv" group-title="FullTv",Atv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYXl0di9pbmRleC5tM3U4IiwiaWQiOjMyNX0%3D/fast
+#EXTINF:0 CUID="326" tvg-name="Beinsport haber" group-title="FullTv",Beinsport haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vYmVpbmhhYmVyL2luZGV4Lm0zdTgiLCJpZCI6MzI2fQ%3D%3D/fast
+
+#EXTINF:0 CUID="328" tvg-name="Cnn türk" group-title="FullTv",Cnn türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vY25uL2luZGV4Lm0zdTgiLCJpZCI6MzI4fQ%3D%3D/fast
+#EXTINF:0 CUID="329" tvg-name="Flash tv" group-title="FullTv",Flash tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vZmxhc2gvaW5kZXgubTN1OCIsImlkIjozMjl9/fast
+
+
+#EXTINF:0 CUID="332" tvg-name="Halk tv" group-title="FullTv",Halk tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vaGFsay9pbmRleC5tM3U4IiwiaWQiOjMzMn0%3D/fast
+#EXTINF:0 CUID="333" tvg-name="Kanal 7" group-title="FullTv",Kanal 7
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWw3L2luZGV4Lm0zdTgiLCJpZCI6MzMzfQ%3D%3D/fast
+
+#EXTINF:0 CUID="335" tvg-name="Kanal D" group-title="FullTv",Kanal D
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWxkL2luZGV4Lm0zdTgiLCJpZCI6MzM1fQ%3D%3D/fast
+
+
+
+#EXTINF:0 CUID="339" tvg-name="Star" group-title="FullTv",Star
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vc3Rhci9pbmRleC5tM3U4IiwiaWQiOjMzOX0%3D/fast
+
+
+#EXTINF:0 CUID="342" tvg-name="Trt 1" group-title="FullTv",Trt 1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20vdHJ0MS9pbmRleC5tM3U4IiwiaWQiOjM0Mn0%3D/fast
+
+#EXTINF:0 CUID="344" tvg-name="Tv8" group-title="FullTv",Tv8
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWw4L2luZGV4Lm0zdTgiLCJpZCI6MzQ0fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="347" tvg-name="24" group-title="FullTv",24
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2MuZnVsbHR2aXpsZS5jb20va2FuYWwyNC9pbmRleC5tM3U4IiwiaWQiOjM0N30%3D/fast
+
+#EXTINF:0 CUID="263" tvg-name="Aksu tv" group-title="HelgaIpTv",Aksu tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9ha3N1X3R2L2luZGV4Lm0zdTgiLCJpZCI6MjYzfQ%3D%3D/fast
+#EXTINF:0 CUID="264" tvg-name="Beyaz tv" group-title="HelgaIpTv",Beyaz tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9iZXlhel90di9pbmRleC5tM3U4IiwiaWQiOjI2NH0%3D/fast
+#EXTINF:0 CUID="265" tvg-name="Bir tv" group-title="HelgaIpTv",Bir tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9iaXJfdHYvaW5kZXgubTN1OCIsImlkIjoyNjV9/fast
+#EXTINF:0 CUID="266" tvg-name="Cnn türk" group-title="HelgaIpTv",Cnn türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9jbm5fdHVyay9pbmRleC5tM3U4IiwiaWQiOjI2Nn0%3D/fast
+#EXTINF:0 CUID="267" tvg-name="Haber global" group-title="HelgaIpTv",Haber global
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9oYWJlcl9nbG9iYWwvaW5kZXgubTN1OCIsImlkIjoyNjd9/fast
+#EXTINF:0 CUID="268" tvg-name="Haber türk" group-title="HelgaIpTv",Haber türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9oYWJlcl90dXJrL2luZGV4Lm0zdTgiLCJpZCI6MjY4fQ%3D%3D/fast
+#EXTINF:0 CUID="269" tvg-name="Kanal D" group-title="HelgaIpTv",Kanal D
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9rYW5hbF9kL2luZGV4Lm0zdTgiLCJpZCI6MjY5fQ%3D%3D/fast
+#EXTINF:0 CUID="270" tvg-name="Kanal v" group-title="HelgaIpTv",Kanal v
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9rYW5hbF92L2luZGV4Lm0zdTgiLCJpZCI6MjcwfQ%3D%3D/fast
+#EXTINF:0 CUID="271" tvg-name="Olay türk" group-title="HelgaIpTv",Olay türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9PbGF5VHVya19UVi9pbmRleC5tM3U4IiwiaWQiOjI3MX0%3D/fast
+#EXTINF:0 CUID="272" tvg-name="Show türk" group-title="HelgaIpTv",Show türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS9zaG93X3R1cmsvaW5kZXgubTN1OCIsImlkIjoyNzJ9/fast
+#EXTINF:0 CUID="273" tvg-name="Tempo tv" group-title="HelgaIpTv",Tempo tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90ZW1wb190di9pbmRleC5tM3U4IiwiaWQiOjI3M30%3D/fast
+#EXTINF:0 CUID="274" tvg-name="Teve2" group-title="HelgaIpTv",Teve2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90ZXZlXzIvaW5kZXgubTN1OCIsImlkIjoyNzR9/fast
+#EXTINF:0 CUID="275" tvg-name="Tivi 6" group-title="HelgaIpTv",Tivi 6
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90aXZpXzYvaW5kZXgubTN1OCIsImlkIjoyNzV9/fast
+#EXTINF:0 CUID="276" tvg-name="Trt 1" group-title="HelgaIpTv",Trt 1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfMS9pbmRleC5tM3U4IiwiaWQiOjI3Nn0%3D/fast
+#EXTINF:0 CUID="277" tvg-name="Trt belgesel" group-title="HelgaIpTv",Trt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfYmVsZ2VzZWwvaW5kZXgubTN1OCIsImlkIjoyNzd9/fast
+#EXTINF:0 CUID="278" tvg-name="Trt çocuk" group-title="HelgaIpTv",Trt çocuk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfY29jdWsvaW5kZXgubTN1OCIsImlkIjoyNzh9/fast
+#EXTINF:0 CUID="279" tvg-name="Trt haber" group-title="HelgaIpTv",Trt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfaGFiZXIvaW5kZXgubTN1OCIsImlkIjoyNzl9/fast
+#EXTINF:0 CUID="280" tvg-name="Trt müzik" group-title="HelgaIpTv",Trt müzik
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfbXV6aWsvaW5kZXgubTN1OCIsImlkIjoyODB9/fast
+#EXTINF:0 CUID="281" tvg-name="Trt spor" group-title="HelgaIpTv",Trt spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90cnRfc3Bvci9pbmRleC5tM3U4IiwiaWQiOjI4MX0%3D/fast
+#EXTINF:0 CUID="282" tvg-name="Tv100" group-title="HelgaIpTv",Tv100
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2hlbGdhLmlwdHYyMDIyLmNvbS90dl8xMDAvaW5kZXgubTN1OCIsImlkIjoyODJ9/fast
+#EXTINF:0 CUID="349" tvg-name="Agrotv" group-title="Karışık kaynaklar",Agrotv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMzAuaGFiZXIxMDAuY29tL2xpdmUvYWdyb3R2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzQ5fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="352" tvg-name="Akittv" group-title="Karışık kaynaklar",Akittv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2FraXR0di1saXZlLmVyY2RuLm5ldC9ha2l0dHYvYWtpdHR2Lm0zdTgiLCJpZCI6MzUyfQ%3D%3D/fast
+#EXTINF:0 CUID="353" tvg-name="Aksutv" group-title="Karışık kaynaklar",Aksutv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfYWtzdXR2L2Frc3V0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjM1M30%3D/fast
+
+#EXTINF:0 CUID="355" tvg-name="Alzahratürk" group-title="Karışık kaynaklar",Alzahratürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYWwtemFocmF0di5jb20vbGl2ZS9wbGF5bGlzdC5tM3U4IiwiaWQiOjM1NX0%3D/fast
+#EXTINF:0 CUID="356" tvg-name="Anadolutv" group-title="Karışık kaynaklar",Anadolutv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfYW5hZG9sdW5ldC9hbmFkb2x1bmV0L3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzU2fQ%3D%3D/fast
+#EXTINF:0 CUID="357" tvg-name="Angaratv" group-title="Karışık kaynaklar",Angaratv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2FuZ3IucmFkeW90dm9ubGluZS5uZXQvd2VidHYvc21pbDprZWNpb3Jlbi5zbWlsL2NodW5rbGlzdF93OTc2MzY4MzAwX2IzMjY4MDAwX3NsdHVyLm0zdTgiLCJpZCI6MzU3fQ%3D%3D/fast
+#EXTINF:0 CUID="358" tvg-name="Arabesktv" group-title="Karışık kaynaklar",Arabesktv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPWFyYWJlc2t5ZW5pJmZpbGU9Lm0zdTgiLCJpZCI6MzU4fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="361" tvg-name="Armatv" group-title="Karışık kaynaklar",Armatv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHZ6LnBocD9rYW5hbD1hcm1hJmZpbGU9Lm0zdTgiLCJpZCI6MzYxfQ%3D%3D/fast
+#EXTINF:0 CUID="362" tvg-name="Avivatv" group-title="Karışık kaynaklar",Avivatv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPXZpdmF0diZmaWxlPS5tM3U4IiwiaWQiOjM2Mn0%3D/fast
+#EXTINF:0 CUID="363" tvg-name="Bengü türk" group-title="Karışık kaynaklar",Bengü türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Vuc29uaGFiZXItbGl2ZS5lcmNkbi5uZXQvYmVuZ3V0dXJrL2Jlbmd1dHVyay5tM3U4IiwiaWQiOjM2M30%3D/fast
+#EXTINF:0 CUID="364" tvg-name="Beyaztv" group-title="Karışık kaynaklar",Beyaztv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2JleWF6dHYtbGl2ZS5kYWlvbmNkbi5uZXQvYmV5YXp0di9iZXlhenR2Lm0zdTgiLCJpZCI6MzY0fQ%3D%3D/fast
+
+#EXTINF:0 CUID="366" tvg-name="Bloomberg ht" group-title="Karışık kaynaklar",Bloomberg ht
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NpbmVyLmRhaW9uY2RuLm5ldC9ibG9vbWJlcmdodC9ibG9vbWJlcmdodC5tM3U4IiwiaWQiOjM2Nn0%3D/fast
+
+#EXTINF:0 CUID="368" tvg-name="Brt1" group-title="Karışık kaynaklar",Brt1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQvYnJ0MWhkL2JhbnQxL2NodW5rbGlzdC5tM3U4IiwiaWQiOjM2OH0%3D/fast
+#EXTINF:0 CUID="369" tvg-name="Brt2" group-title="Karışık kaynaklar",Brt2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQvYnJ0MmhkL2JhbnQxL2NodW5rbGlzdC5tM3U4IiwiaWQiOjM2OX0%3D/fast
+#EXTINF:0 CUID="370" tvg-name="Brtv" group-title="Karışık kaynaklar",Brtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfYnJ0di9icnR2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzcwfQ%3D%3D/fast
+#EXTINF:0 CUID="371" tvg-name="Bursalinetv" group-title="Karışık kaynaklar",Bursalinetv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2xpbmV0di9iYW50MS9jaHVua3MubTN1OCIsImlkIjozNzF9/fast
+#EXTINF:0 CUID="372" tvg-name="Bursaon6tv" group-title="Karışık kaynaklar",Bursaon6tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwxNi9rYW5hbDE2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzcyfQ%3D%3D/fast
+
+#EXTINF:0 CUID="374" tvg-name="Çaytv" group-title="Karışık kaynaklar",Çaytv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2NheXR2L2JhbnQxL3BsYXlsaXN0Lm0zdTgiLCJpZCI6Mzc0fQ%3D%3D/fast
+#EXTINF:0 CUID="375" tvg-name="Çiftçitv" group-title="Karışık kaynaklar",Çiftçitv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfY2lmdGNpdHYvY2lmdGNpdHYvY2h1bmtzLm0zdTgiLCJpZCI6Mzc1fQ%3D%3D/fast
+#EXTINF:0 CUID="376" tvg-name="Cine1" group-title="Karışık kaynaklar",Cine1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfY2luZTEvY2luZTEvcGxheWxpc3QubTN1OCIsImlkIjozNzZ9/fast
+#EXTINF:0 CUID="377" tvg-name="Cine5" group-title="Karışık kaynaklar",Cine5
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Nkbi1jaW5lNXR2LnlheWluLmNvbS50ci9jaW5lNXR2L2NpbmU1dHYvcGxheWxpc3QubTN1OCIsImlkIjozNzd9/fast
+
+
+
+#EXTINF:0 CUID="381" tvg-name="Damartv" group-title="Karışık kaynaklar",Damartv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPWRhbWFyJmZpbGU9Lm0zdTgiLCJpZCI6MzgxfQ%3D%3D/fast
+#EXTINF:0 CUID="382" tvg-name="Dehatv" group-title="Karışık kaynaklar",Dehatv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZGVoYXR2L2RlaGF0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjM4Mn0%3D/fast
+#EXTINF:0 CUID="383" tvg-name="Denizpostası" group-title="Karışık kaynaklar",Denizpostası
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZGVuaXpwb3N0YXNpL2Rlbml6cG9zdGFzaS9wbGF5bGlzdC5tM3U4IiwiaWQiOjM4M30%3D/fast
+#EXTINF:0 CUID="384" tvg-name="Derintv" group-title="Karışık kaynaklar",Derintv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NkbjEtZGVyaW50di55YXlpbi5jb20udHIvZGVyaW50di9kZXJpbnR2L2NodW5rbGlzdF93MTQ4NjM5NDE0MV9iMTc5NjAwMC5tM3U4IiwiaWQiOjM4NH0%3D/fast
+#EXTINF:0 CUID="385" tvg-name="Dimtv" group-title="Karışık kaynaklar",Dimtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZGltdHYvZGltdHYvY2h1bmtzLm0zdTgiLCJpZCI6Mzg1fQ%3D%3D/fast
+#EXTINF:0 CUID="386" tvg-name="Diyanettv" group-title="Karışık kaynaklar",Diyanettv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2V1c3RyNzMubWVkaWF0cmlwbGUubmV0L3ZpZGVvb25seWxpdmUvbXRpa29pbXhuenR4bGl2ZS9icm9hZGNhc3RfNWUzYmY5NWE0N2UwNy5zbWlsL3BsYXlsaXN0Lm0zdTgiLCJpZCI6Mzg2fQ%3D%3D/fast
+#EXTINF:0 CUID="387" tvg-name="Dizi tv" group-title="Karışık kaynaklar",Dizi tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3BsYXlsaXN0LmZhc3R0dmNkbi5jb20vcGwvcmZyazk4MjFoZHk5ZGF5bzh3ZnloYS9kaXppLXR2L3BsYXlsaXN0LzAubTN1OCIsImlkIjozODd9/fast
+#EXTINF:0 CUID="388" tvg-name="Dmax" group-title="Karışık kaynaklar",Dmax
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RvZ3VzLWxpdmUuZGFpb25jZG4ubmV0L2RtYXgvZG1heC5tM3U4IiwiaWQiOjM4OH0%3D/fast
+
+#EXTINF:0 CUID="390" tvg-name="Dosttv" group-title="Karışık kaynaklar",Dosttv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHZ6LnBocD9rYW5hbD1kb3N0JmZpbGU9Lm0zdTgiLCJpZCI6MzkwfQ%3D%3D/fast
+#EXTINF:0 CUID="391" tvg-name="Dosttv" group-title="Karışık kaynaklar",Dosttv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Rvc3Quc3RyZWFtLmVtc2FsLmltL3R2L2xpdmUubTN1OCIsImlkIjozOTF9/fast
+#EXTINF:0 CUID="392" tvg-name="Dream türk" group-title="Karışık kaynaklar",Dream türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuZHVobmV0LnR2L1MyL0hMU19MSVZFL2RyZWFtdHVya25wL3BsYXlsaXN0Lm0zdTgiLCJpZCI6MzkyfQ%3D%3D/fast
+
+#EXTINF:0 CUID="394" tvg-name="Edessatvurfa" group-title="Karışık kaynaklar",Edessatvurfa
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2MTcwLnJhZHlvdGVsZWtvbS5jb20udHI6MjE3NjQvZWRlc3NhdHYvZWRlc3NhdHYvY2h1bmtsaXN0Lm0zdTgiLCJpZCI6Mzk0fQ%3D%3D/fast
+#EXTINF:0 CUID="395" tvg-name="Edirnetv" group-title="Karışık kaynaklar",Edirnetv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluLmVkaXJuZXR2LmNvbTo4MDg4L2hscy9ldHZjYW5saXlheWluLm0zdTgiLCJpZCI6Mzk1fQ%3D%3D/fast
+#EXTINF:0 CUID="396" tvg-name="Ekoltv" group-title="Karışık kaynaklar",Ekoltv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Vrb2x0di1saXZlLmVyY2RuLm5ldC9la29sdHYvZWtvbHR2Lm0zdTgiLCJpZCI6Mzk2fQ%3D%3D/fast
+#EXTINF:0 CUID="397" tvg-name="Ercistv" group-title="Karışık kaynaklar",Ercistv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NkbjEtZXJjaXN0di55YXlpbi5jb20udHIvZXJjaXN0di9hbWxzdDplcmNpc3R2L2NodW5rbGlzdC5tM3U4IiwiaWQiOjM5N30%3D/fast
+
+#EXTINF:0 CUID="399" tvg-name="Erciyestv" group-title="Karışık kaynaklar",Erciyestv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZXJjaXllc3R2L2VyY2l5ZXN0di9jaHVua3MubTN1OCIsImlkIjozOTl9/fast
+#EXTINF:0 CUID="400" tvg-name="Ertv" group-title="Karışık kaynaklar",Ertv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZXJ0dl9uZXcvZXJ0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjQwMH0%3D/fast
+
+#EXTINF:0 CUID="402" tvg-name="Estv" group-title="Karışık kaynaklar",Estv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZXN0di9lc3R2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDAyfQ%3D%3D/fast
+#EXTINF:0 CUID="403" tvg-name="Etvkayseri" group-title="Karışık kaynaklar",Etvkayseri
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZXR2L2V0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjQwM30%3D/fast
+#EXTINF:0 CUID="404" tvg-name="Etvmanisa" group-title="Karışık kaynaklar",Etvmanisa
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L21hbmlzYWV0di9iYW50MS9wbGF5bGlzdC5tM3U4IiwiaWQiOjQwNH0%3D/fast
+#EXTINF:0 CUID="405" tvg-name="Euro D" group-title="Karışık kaynaklar",Euro D
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuZHVobmV0LnR2L1MyL0hMU19MSVZFL2V1cm9kbnAvcGxheWxpc3QubTN1OCIsImlkIjo0MDV9/fast
+
+#EXTINF:0 CUID="407" tvg-name="Ezotv" group-title="Karışık kaynaklar",Ezotv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHZ6LnBocD9rYW5hbD1lem8mZmlsZT0ubTN1OCIsImlkIjo0MDd9/fast
+#EXTINF:0 CUID="408" tvg-name="Fb Tv" group-title="Karışık kaynaklar",Fb Tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovLzFoc2tyZHRvLnJvY2tldGNkbi5jb20vZmVuZXJiYWhjZXR2LnNtaWwvY2h1bmtsaXN0X2I5OTYwMDBfc2x0dXIubTN1OCIsImlkIjo0MDh9/fast
+#EXTINF:0 CUID="409" tvg-name="Fbtv" group-title="Karışık kaynaklar",Fbtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovLzFoc2tyZHRvLnJvY2tldGNkbi5jb20vZmVuZXJiYWhjZXR2LnNtaWwvcGxheWxpc3QubTN1OCIsImlkIjo0MDl9/fast
+#EXTINF:0 CUID="410" tvg-name="Finesttv" group-title="Karışık kaynaklar",Finesttv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL21lZGlhLmZpbmVzdC50di9obHMvbGl2ZS5tM3U4IiwiaWQiOjQxMH0%3D/fast
+
+
+#EXTINF:0 CUID="413" tvg-name="Frttv" group-title="Karışık kaynaklar",Frttv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2ZydHR2L2JhbnQxL2NodW5rcy5tM3U4IiwiaWQiOjQxM30%3D/fast
+#EXTINF:0 CUID="414" tvg-name="Gençtv" group-title="Karışık kaynaklar",Gençtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPWdlbmN0diZmaWxlPS5tM3U4IiwiaWQiOjQxNH0%3D/fast
+#EXTINF:0 CUID="415" tvg-name="Goncatv" group-title="Karışık kaynaklar",Goncatv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2dvbmNhdHYvYmFudDEvcGxheWxpc3QubTN1OCIsImlkIjo0MTV9/fast
+
+
+#EXTINF:0 CUID="418" tvg-name="Grtgaziantep" group-title="Karışık kaynaklar",Grtgaziantep
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZ3J0L2dydC9jaHVua3MubTN1OCIsImlkIjo0MTh9/fast
+#EXTINF:0 CUID="419" tvg-name="Güneydogutv" group-title="Karışık kaynaklar",Güneydogutv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2d0di9iYW50MS9wbGF5bGlzdC5tM3U4IiwiaWQiOjQxOX0%3D/fast
+#EXTINF:0 CUID="420" tvg-name="Güneytv" group-title="Karışık kaynaklar",Güneytv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2d1bmV5dHYvYmFudDEvY2h1bmtzLm0zdTgiLCJpZCI6NDIwfQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="423" tvg-name="Haber global" group-title="Karışık kaynaklar",Haber global
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LmVuc29uaGFiZXIuY29tL2hhYmVyZ2xvYmFsL2hhYmVyZ2xvYmFsLm0zdTgiLCJpZCI6NDIzfQ%3D%3D/fast
+#EXTINF:0 CUID="424" tvg-name="Haber türk" group-title="Karışık kaynaklar",Haber türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NpbmVyLWxpdmUuZGFpb25jZG4ubmV0L2hhYmVydHVya3R2L2hhYmVydHVya3R2Lm0zdTgiLCJpZCI6NDI0fQ%3D%3D/fast
+#EXTINF:0 CUID="425" tvg-name="Haber61" group-title="Karışık kaynaklar",Haber61
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3dpbjgueWF5aW4uY29tLnRyL2hhYmVyNjF0di9zbWlsOmhhYmVyNjF0di5zbWlsL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDI1fQ%3D%3D/fast
+#EXTINF:0 CUID="426" tvg-name="Haditv" group-title="Karışık kaynaklar",Haditv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuaXNoaWFjbG91ZC5jb20vaGxzLzM3MTY2Yjc3LTEyOGQtNDI1Yy05MWJmLTgxOTUwNzFjMjE3ZF83MjBwLm0zdTgiLCJpZCI6NDI2fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="429" tvg-name="Hrtakdeniz" group-title="Karışık kaynaklar",Hrtakdeniz
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3ZvZDAyLmNkbi53ZWIudHYvY24vb3YvY25vdnZ1OTdscXdfLDI0MCwzNjAsNDgwLC5tcDQudXJsc2V0L3BsYXlsaXN0LWYzLXYxLWExLm0zdTgiLCJpZCI6NDI5fQ%3D%3D/fast
+#EXTINF:0 CUID="430" tvg-name="Ht spor" group-title="Karışık kaynaklar",Ht spor
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NpbmVyLWxpdmUuZXJjZG4ubmV0L2h0c3Bvci9odHNwb3IubTN1OCIsImlkIjo0MzB9/fast
+#EXTINF:0 CUID="431" tvg-name="Hunattv" group-title="Karışık kaynaklar",Hunattv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfaHVuYXR0di9odW5hdHR2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDMxfQ%3D%3D/fast
+#EXTINF:0 CUID="432" tvg-name="Iceltv" group-title="Karışık kaynaklar",Iceltv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2ljZWx0di9iYW50MS9wbGF5bGlzdC5tM3U4IiwiaWQiOjQzMn0%3D/fast
+#EXTINF:0 CUID="433" tvg-name="Ikratv" group-title="Karışık kaynaklar",Ikratv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfZGl5YXJ0di9kaXlhcnR2L2NodW5rcy5tM3U4IiwiaWQiOjQzM30%3D/fast
+#EXTINF:0 CUID="434" tvg-name="Ilktv" group-title="Karışık kaynaklar",Ilktv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovLzU5MmYxODgxYjNkNWYuc3RyZWFtbG9jay5uZXQ6MTQ0My9zYW50cmFsdHZfMjk0L3NhbnRyYWx0dl8yOTQvcGxheWxpc3QubTN1OCIsImlkIjo0MzR9/fast
+
+#EXTINF:0 CUID="436" tvg-name="Isviçre tv" group-title="Karışık kaynaklar",Isviçre tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2k0MS5vemVsaXAuY29tOjMyNjkvaHlicmlkL3BsYXkubTN1OCIsImlkIjo0MzZ9/fast
+#EXTINF:0 CUID="437" tvg-name="Izmirtime35" group-title="Karışık kaynaklar",Izmirtime35
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Nkbi10aW1lMzV0di55YXlpbi5jb20udHIvdGltZTM1dHYvdGltZTM1dHYvcGxheWxpc3QubTN1OCIsImlkIjo0Mzd9/fast
+#EXTINF:0 CUID="438" tvg-name="Kabe canlı" group-title="Karışık kaynaklar",Kabe canlı
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2FsLWVraGJhcmlhLXByb2QtZHViLnNoYWhpZC5uZXQvb3V0L3YxLzk4ODVjYWIwYTNlYzQwMDhiNTNiYWU1N2EyN2NhNzZiL2luZGV4Lm0zdTgiLCJpZCI6NDM4fQ%3D%3D/fast
+#EXTINF:0 CUID="439" tvg-name="kanal 7" group-title="Karışık kaynaklar",kanal 7
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsNy1saXZlLmRhaW9uY2RuLm5ldC9rYW5hbDcva2FuYWw3Lm0zdTgiLCJpZCI6NDM5fQ%3D%3D/fast
+#EXTINF:0 CUID="440" tvg-name="Kanal 7 eu" group-title="Karışık kaynaklar",Kanal 7 eu
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmV0di5yYWR5b3R2b25saW5lLm5ldC9rYW5hbDdsaXZlL2thbmFsN2F2ci9jaHVua2xpc3QubTN1OCIsImlkIjo0NDB9/fast
+
+#EXTINF:0 CUID="442" tvg-name="Kanal D" group-title="Karışık kaynaklar",Kanal D
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuZHVobmV0LnR2L1MyL0hMU19MSVZFL2thbmFsZGRhaW5wL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDQyfQ%3D%3D/fast
+#EXTINF:0 CUID="443" tvg-name="Kanal3" group-title="Karışık kaynaklar",Kanal3
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwzL2thbmFsMy9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ0M30%3D/fast
+
+#EXTINF:0 CUID="445" tvg-name="Kanal12" group-title="Karışık kaynaklar",Kanal12
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwxMi9rYW5hbDEyL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDQ1fQ%3D%3D/fast
+#EXTINF:0 CUID="446" tvg-name="Kanal15" group-title="Karışık kaynaklar",Kanal15
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwxNS9rYW5hbDE1L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDQ2fQ%3D%3D/fast
+#EXTINF:0 CUID="447" tvg-name="Kanal23" group-title="Karışık kaynaklar",Kanal23
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwyMy9rYW5hbDIzL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDQ3fQ%3D%3D/fast
+#EXTINF:0 CUID="448" tvg-name="Kanal23" group-title="Karışık kaynaklar",Kanal23
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwyMy9rYW5hbDIzL2NodW5rcy5tM3U4IiwiaWQiOjQ0OH0%3D/fast
+#EXTINF:0 CUID="449" tvg-name="Kanal26" group-title="Karışık kaynaklar",Kanal26
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwyNi9rYW5hbDI2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDQ5fQ%3D%3D/fast
+#EXTINF:0 CUID="450" tvg-name="Kanal26" group-title="Karışık kaynaklar",Kanal26
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWwyNi9rYW5hbDI2L2NodW5rcy5tM3U4IiwiaWQiOjQ1MH0%3D/fast
+#EXTINF:0 CUID="451" tvg-name="Kanal28" group-title="Karışık kaynaklar",Kanal28
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2lwMjUyLm96ZWxpcC5jb206MjI1MjQva2FuYWxnL2thbmFsZy9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ1MX0%3D/fast
+#EXTINF:0 CUID="452" tvg-name="Kanal32" group-title="Karışık kaynaklar",Kanal32
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2thbmFsMzIvYmFudDEvY2h1bmtzLm0zdTgiLCJpZCI6NDUyfQ%3D%3D/fast
+#EXTINF:0 CUID="453" tvg-name="Kanal34" group-title="Karışık kaynaklar",Kanal34
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuZXVyb21lZGlhY2VudGVyLmNvbS9rYW5hbDM0L3RyYWNrcy12MWExL21vbm8ubTN1OCIsImlkIjo0NTN9/fast
+#EXTINF:0 CUID="454" tvg-name="Kanal53" group-title="Karışık kaynaklar",Kanal53
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsNTMub3plbGlwLmNvbTozNDQ4L2h5YnJpZC9wbGF5Lm0zdTgiLCJpZCI6NDU0fQ%3D%3D/fast
+#EXTINF:0 CUID="455" tvg-name="Kanal53" group-title="Karışık kaynaklar",Kanal53
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2thbmFsNTMub3plbGlwLmNvbTozNDQ4L2h5YnJpZC9wbGF5Lm0zdTgiLCJpZCI6NDU1fQ%3D%3D/fast
+
+#EXTINF:0 CUID="457" tvg-name="Kanal58" group-title="Karışık kaynaklar",Kanal58
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWw1OC9rYW5hbDU4L2NodW5rcy5tM3U4IiwiaWQiOjQ1N30%3D/fast
+#EXTINF:0 CUID="458" tvg-name="Kanal58" group-title="Karışık kaynaklar",Kanal58
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWw1OC9rYW5hbDU4L2NodW5rcy5tM3U4IiwiaWQiOjQ1OH0%3D/fast
+#EXTINF:0 CUID="459" tvg-name="Kanal68" group-title="Karışık kaynaklar",Kanal68
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWw2OC9rYW5hbDY4L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDU5fQ%3D%3D/fast
+#EXTINF:0 CUID="460" tvg-name="Kanal68" group-title="Karışık kaynaklar",Kanal68
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWw2OC9rYW5hbDY4L2NodW5rcy5tM3U4IiwiaWQiOjQ2MH0%3D/fast
+
+#EXTINF:0 CUID="462" tvg-name="Kanalavrupa" group-title="Karışık kaynaklar",Kanalavrupa
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2FwaS10djI3LnlheWluLmNvbS50ci9rYW5hbGF2cnVwYS9pbmRleC5tM3U4IiwiaWQiOjQ2Mn0%3D/fast
+#EXTINF:0 CUID="463" tvg-name="Kanalfırat" group-title="Karışık kaynaklar",Kanalfırat
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWxmaXJhdC9rYW5hbGZpcmF0L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDYzfQ%3D%3D/fast
+#EXTINF:0 CUID="464" tvg-name="Kanalon4" group-title="Karışık kaynaklar",Kanalon4
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L29uNC9iYW50MS9jaHVua3MubTN1OCIsImlkIjo0NjR9/fast
+#EXTINF:0 CUID="465" tvg-name="Kanals" group-title="Karışık kaynaklar",Kanals
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Nkbi1rYW5hbHMueWF5aW4uY29tLnRyL2thbmFscy9rYW5hbHMvcGxheWxpc3QubTN1OCIsImlkIjo0NjV9/fast
+#EXTINF:0 CUID="466" tvg-name="Kanalt" group-title="Karışık kaynaklar",Kanalt
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQva2FuYWx0L2JhbnRwMS9jaHVua2xpc3QubTN1OCIsImlkIjo0NjZ9/fast
+#EXTINF:0 CUID="467" tvg-name="Kanalurfa" group-title="Karışık kaynaklar",Kanalurfa
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2thbmFsdXJmYS9iYW50MS9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ2N30%3D/fast
+#EXTINF:0 CUID="468" tvg-name="Kanalv" group-title="Karışık kaynaklar",Kanalv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3dhdzEuYXJ0aXllcmVsbWVkeWEubmV0L2thbmFsdi9iYW50MS9jaHVua3MubTN1OCIsImlkIjo0Njh9/fast
+#EXTINF:0 CUID="469" tvg-name="Kanalz" group-title="Karışık kaynaklar",Kanalz
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2FuYWx6L2thbmFsei9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ2OX0%3D/fast
+#EXTINF:0 CUID="470" tvg-name="Kardelentv" group-title="Karışık kaynaklar",Kardelentv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2thcmRlbGVudHYvYmFudDEvcGxheWxpc3QubTN1OCIsImlkIjo0NzB9/fast
+#EXTINF:0 CUID="471" tvg-name="Kardeştv" group-title="Karışık kaynaklar",Kardeştv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMzAuaGFiZXIxMDAuY29tL2xpdmUva2FyZGVzdHYvY2h1bmtsaXN0Lm0zdTgiLCJpZCI6NDcxfQ%3D%3D/fast
+
+#EXTINF:0 CUID="473" tvg-name="Kaytv" group-title="Karışık kaynaklar",Kaytv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfa2F5dHYva2F5dHYxL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDczfQ%3D%3D/fast
+#EXTINF:0 CUID="474" tvg-name="Kıbrıs genç" group-title="Karışık kaynaklar",Kıbrıs genç
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQva2licmlzZ2VuY3R2L2JhbnQxL2NodW5rbGlzdF93MjQ4MTM2MTY1Lm0zdTgiLCJpZCI6NDc0fQ%3D%3D/fast
+#EXTINF:0 CUID="475" tvg-name="Kocaelitv" group-title="Karışık kaynaklar",Kocaelitv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L2tvY2FlbGl0di9iYW50MS9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ3NX0%3D/fast
+#EXTINF:0 CUID="476" tvg-name="Kral pop" group-title="Karışık kaynaklar",Kral pop
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RvZ3VzLWxpdmUuZGFpb25jZG4ubmV0L2tyYWxwb3B0di9rcmFscG9wdHYubTN1OCIsImlkIjo0NzZ9/fast
+#EXTINF:0 CUID="477" tvg-name="Kudustv" group-title="Karışık kaynaklar",Kudustv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluMzAuaGFiZXIxMDAuY29tL2xpdmUva3VkdXN0di9jaHVua2xpc3QubTN1OCIsImlkIjo0Nzd9/fast
+#EXTINF:0 CUID="478" tvg-name="Kuzey kıbrıs" group-title="Karışık kaynaklar",Kuzey kıbrıs
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2t1emV5a2licmlzLnR2L20zdTgva2t0di5tM3U4IiwiaWQiOjQ3OH0%3D/fast
+#EXTINF:0 CUID="479" tvg-name="Lalegül" group-title="Karışık kaynaklar",Lalegül
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xibC5uZXRtZWR5YS5uZXQvaGxzL2xhbGVndWx0di5tM3U4IiwiaWQiOjQ3OX0%3D/fast
+#EXTINF:0 CUID="480" tvg-name="Lifetv" group-title="Karışık kaynaklar",Lifetv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfbGlmZXR2L2xpZmV0di9jaHVua3MubTN1OCIsImlkIjo0ODB9/fast
+#EXTINF:0 CUID="481" tvg-name="Lifetv" group-title="Karışık kaynaklar",Lifetv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfbGlmZXR2L2xpZmV0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ4MX0%3D/fast
+#EXTINF:0 CUID="482" tvg-name="Mavikaradeniz" group-title="Karışık kaynaklar",Mavikaradeniz
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfbWF2aWthcmFkZW5pei9tYXZpa2FyYWRlbml6L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDgyfQ%3D%3D/fast
+#EXTINF:0 CUID="483" tvg-name="Mceu" group-title="Karışık kaynaklar",Mceu
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3Jyci5zei54bGNkbi5jb20vP2FjY291bnQ9bWNldXR2JmZpbGU9bWMyJnR5cGU9bGl2ZSZzZXJ2aWNlPXdvd3phJnByb3RvY29sPWh0dHBzJm91dHB1dD1wbGF5bGlzdC5tM3U4IiwiaWQiOjQ4M30%3D/fast
+
+
+
+#EXTINF:0 CUID="487" tvg-name="Meltemtv" group-title="Karışık kaynaklar",Meltemtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3ZoeHlyc2x5LnJvY2tldGNkbi5jb20vbWVsdGVtdHYvY2h1bmtsaXN0Lm0zdTgiLCJpZCI6NDg3fQ%3D%3D/fast
+#EXTINF:0 CUID="488" tvg-name="Mercantv" group-title="Karışık kaynaklar",Mercantv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfbWVyY2FudHYvbWVyY2FudHYvY2h1bmtzLm0zdTgiLCJpZCI6NDg4fQ%3D%3D/fast
+#EXTINF:0 CUID="489" tvg-name="Metropoltv" group-title="Karışık kaynaklar",Metropoltv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L21ldHJvcG9sdHYvc21pbC9tZXRyb3BvbHR2L2JhbnQxL2NodW5rcy5tM3U4P2FwcD1zdXBlcnNhdGZvcnVtIiwiaWQiOjQ4OX0%3D/fast
+
+#EXTINF:0 CUID="491" tvg-name="Muğlatürk" group-title="Karışık kaynaklar",Muğlatürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L211Z2xhdHVyay9iYW50MS9jaHVua3MubTN1OCIsImlkIjo0OTF9/fast
+
+#EXTINF:0 CUID="493" tvg-name="Nr1" group-title="Karışık kaynaklar",Nr1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2IwMWMwMm5sLm1lZGlhdHJpcGxlLm5ldC92aWRlb29ubHlsaXZlL210a2dldWlocmxmd2xpdmUvYnJvYWRjYXN0XzVjOWUxN2NkNTllOGIuc21pbC9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ5M30%3D/fast
+#EXTINF:0 CUID="494" tvg-name="Nr1aşk" group-title="Karışık kaynaklar",Nr1aşk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2IwMWMwMm5sLm1lZGlhdHJpcGxlLm5ldC92aWRlb29ubHlsaXZlL210a2dldWlocmxmd2xpdmUvdV9zdHJlYW1fNWM5ZTE4ZjljZWExNV8xL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDk0fQ%3D%3D/fast
+#EXTINF:0 CUID="495" tvg-name="Nr1damar" group-title="Karışık kaynaklar",Nr1damar
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2IwMWMwMm5sLm1lZGlhdHJpcGxlLm5ldC92aWRlb29ubHlsaXZlL210a2dldWlocmxmd2xpdmUvdV9zdHJlYW1fNWM5ZTE5ODc4NGJkY18xL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDk1fQ%3D%3D/fast
+#EXTINF:0 CUID="496" tvg-name="Nr1dance" group-title="Karışık kaynaklar",Nr1dance
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2IwMWMwMm5sLm1lZGlhdHJpcGxlLm5ldC92aWRlb29ubHlsaXZlL210a2dldWlocmxmd2xpdmUvdV9zdHJlYW1fNWM5ZTJhYThhY2Y0NF8xL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NDk2fQ%3D%3D/fast
+#EXTINF:0 CUID="497" tvg-name="Nr1türk" group-title="Karışık kaynaklar",Nr1türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2IwMWMwMm5sLm1lZGlhdHJpcGxlLm5ldC92aWRlb29ubHlsaXZlL210a2dldWlocmxmd2xpdmUvYnJvYWRjYXN0XzVjOWUxODc3NzAxNDMuc21pbC9wbGF5bGlzdC5tM3U4IiwiaWQiOjQ5N30%3D/fast
+
+
+#EXTINF:0 CUID="500" tvg-name="Ordubeltv" group-title="Karışık kaynaklar",Ordubeltv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NkbjEtb3JkdWJlbHR2LnlheWluLmNvbS50ci9vcmR1YmVsdHYvb3JkdWJlbHR2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTAwfQ%3D%3D/fast
+#EXTINF:0 CUID="501" tvg-name="Pazarcık" group-title="Karışık kaynaklar",Pazarcık
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3BhemFyY2lrdHYub3plbGlwLm5ldDozOTYyL2h5YnJpZC9wbGF5Lm0zdTgiLCJpZCI6NTAxfQ%3D%3D/fast
+#EXTINF:0 CUID="502" tvg-name="Powerakustik" group-title="Karışık kaynaklar",Powerakustik
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpc3Rlbi5wb3dlcmFwcC5jb20udHIvcHR1cmtha3VzdGlrL2FrdXN0aWsuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDJ9/fast
+#EXTINF:0 CUID="503" tvg-name="Powerdance" group-title="Karışık kaynaklar",Powerdance
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpc3Rlbi5wb3dlcmFwcC5jb20udHIvZGFuY2UvZGFuY2Uuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDN9/fast
+#EXTINF:0 CUID="504" tvg-name="Powerlove" group-title="Karışık kaynaklar",Powerlove
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpc3Rlbi5wb3dlcmFwcC5jb20udHIvcGxvdmUvbG92ZS5zbWlsL21hc3Rlci5tM3U4IiwiaWQiOjUwNH0%3D/fast
+#EXTINF:0 CUID="505" tvg-name="Powerslow" group-title="Karışık kaynaklar",Powerslow
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpc3Rlbi5wb3dlcmFwcC5jb20udHIvcHR1cmtzbG93L3Nsb3cuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDV9/fast
+#EXTINF:0 CUID="506" tvg-name="Powertaptaze" group-title="Karışık kaynaklar",Powertaptaze
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpc3Rlbi5wb3dlcmFwcC5jb20udHIvcHR1cmt0YXB0YXplL3RhcHRhemUuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDZ9/fast
+#EXTINF:0 CUID="507" tvg-name="Powertürk" group-title="Karışık kaynaklar",Powertürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmV0di5wb3dlcmFwcC5jb20udHIvcG93ZXJ0dXJrVFYvcG93ZXJ0dXJraGQuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDd9/fast
+#EXTINF:0 CUID="508" tvg-name="Powertürktv" group-title="Karışık kaynaklar",Powertürktv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmV0di5wb3dlcmFwcC5jb20udHIvcG93ZXJ0dXJrVFYvcG93ZXJ0dXJraGQuc21pbC9tYXN0ZXIubTN1OCIsImlkIjo1MDh9/fast
+#EXTINF:0 CUID="509" tvg-name="Powertv" group-title="Karışık kaynaklar",Powertv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmV0di5wb3dlcmFwcC5jb20udHIvcG93ZXJUVi9wb3dlcmhkLnNtaWwvbWFzdGVyLm0zdTgiLCJpZCI6NTA5fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="512" tvg-name="Rize türk" group-title="Karışık kaynaklar",Rize türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluLnJpemV0dXJrLmNvbTozNzc3L211bHRpX3dlYi9wbGF5Lm0zdTgiLCJpZCI6NTEyfQ%3D%3D/fast
+#EXTINF:0 CUID="513" tvg-name="Rizetürk" group-title="Karışık kaynaklar",Rizetürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3lheWluLnJpemV0dXJrLmNvbTozNzc3L211bHRpX3dlYi9wbGF5Lm0zdTgiLCJpZCI6NTEzfQ%3D%3D/fast
+
+#EXTINF:0 CUID="515" tvg-name="Serhattv" group-title="Karışık kaynaklar",Serhattv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Nkbi1rYW5hbHR2by55YXlpbi5jb20udHIva2FuYWx0dm8va2FuYWx0dm8vcGxheWxpc3QubTN1OCIsImlkIjo1MTV9/fast
+
+#EXTINF:0 CUID="517" tvg-name="Showtv" group-title="Karışık kaynaklar",Showtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NpbmVyLWxpdmUuZGFpb25jZG4ubmV0L3Nob3d0di9zaG93dHYubTN1OCIsImlkIjo1MTd9/fast
+#EXTINF:0 CUID="518" tvg-name="Simtv" group-title="Karışık kaynaklar",Simtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQvc2ltdHYvYmFudHAxL2NodW5rbGlzLm0zdTgiLCJpZCI6NTE4fQ%3D%3D/fast
+
+#EXTINF:0 CUID="520" tvg-name="Sılatv" group-title="Karışık kaynaklar",Sılatv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPXNpbGF0diZmaWxlPS5tM3U4IiwiaWQiOjUyMH0%3D/fast
+
+#EXTINF:0 CUID="522" tvg-name="Sports tv" group-title="Karışık kaynaklar",Sports tv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuc3BvcnRzdHYuY29tLnRyL2hscy9sb3cvc3BvcnRzdHZfZmhkL2luZGV4Lm0zdTgiLCJpZCI6NTIyfQ%3D%3D/fast
+#EXTINF:0 CUID="523" tvg-name="Star" group-title="Karışık kaynaklar",Star
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RvZ3VzLWxpdmUuZGFpb25jZG4ubmV0L3N0YXJ0di9zdGFydHYubTN1OCIsImlkIjo1MjN9/fast
+#EXTINF:0 CUID="524" tvg-name="Suntv" group-title="Karışık kaynaklar",Suntv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfc3VucnR2L3N1bnJ0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjUyNH0%3D/fast
+
+#EXTINF:0 CUID="527" tvg-name="Tarımtv" group-title="Karışık kaynaklar",Tarımtv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NvbnRlbnQudHZrdXIuY29tL2wvYzdlMWRhN21tMjVwNTUyZDl1OWcvaW5kZXgtMTA4MHAubTN1OCIsImlkIjo1Mjd9/fast
+#EXTINF:0 CUID="528" tvg-name="Tatlısestv" group-title="Karışık kaynaklar",Tatlısestv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdGF0bGlzZXN0di90YXRsaXNlc3R2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTI4fQ%3D%3D/fast
+
+#EXTINF:0 CUID="533" tvg-name="Tempotv" group-title="Karışık kaynaklar",Tempotv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdGVtcG90di90ZW1wb3R2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTMzfQ%3D%3D/fast
+#EXTINF:0 CUID="534" tvg-name="Tempotv" group-title="Karışık kaynaklar",Tempotv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdGVtcG90di90ZW1wb3R2L2NodW5rcy5tM3U4IiwiaWQiOjUzNH0%3D/fast
+#EXTINF:0 CUID="535" tvg-name="Teve2" group-title="Karışık kaynaklar",Teve2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RlbWlyb3Jlbi1saXZlLmRhaW9uY2RuLm5ldC90ZXZlMi90ZXZlMi5tM3U4IiwiaWQiOjUzNX0%3D/fast
+#EXTINF:0 CUID="536" tvg-name="Tgrt belgesel" group-title="Karışık kaynaklar",Tgrt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NhbmxpLmlobGFzZGlnaXRhbGFzc2V0cy5jb20vdGdydGJlbGdlc2VsLm0zdTgiLCJpZCI6NTM2fQ%3D%3D/fast
+#EXTINF:0 CUID="537" tvg-name="Tgrt eu" group-title="Karışık kaynaklar",Tgrt eu
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NhbmxpLnRncnRldS5jb20vdGdydGV1Lm0zdTgiLCJpZCI6NTM3fQ%3D%3D/fast
+#EXTINF:0 CUID="538" tvg-name="Tgrt haber" group-title="Karışık kaynaklar",Tgrt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3RncnRoYWJlci1saXZlLmRhaW9uY2RuLm5ldC90Z3J0aGFiZXIvdGdydGhhYmVyLm0zdTgiLCJpZCI6NTM4fQ%3D%3D/fast
+#EXTINF:0 CUID="539" tvg-name="Tgrt haber" group-title="Karışık kaynaklar",Tgrt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NhbmxpLnRncnRoYWJlci5jb20vdGdydC5tM3U4IiwiaWQiOjUzOX0%3D/fast
+#EXTINF:0 CUID="540" tvg-name="Th türkhaber" group-title="Karışık kaynaklar",Th türkhaber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L3R1cmtoYWJlci9iYW50MS9jaHVua3MubTN1OCIsImlkIjo1NDB9/fast
+#EXTINF:0 CUID="541" tvg-name="Tivi6" group-title="Karışık kaynaklar",Tivi6
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdGl2aTYvdGl2aTYvcGxheWxpc3QubTN1OCIsImlkIjo1NDF9/fast
+#EXTINF:0 CUID="542" tvg-name="Tlc" group-title="Karışık kaynaklar",Tlc
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2RvZ3VzLWxpdmUuZGFpb25jZG4ubmV0L3RsYy90bGMubTN1OCIsImlkIjo1NDJ9/fast
+#EXTINF:0 CUID="543" tvg-name="Tontv" group-title="Karışık kaynaklar",Tontv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdG9udHYvdG9udHYvcGxheWxpc3QubTN1OCIsImlkIjo1NDN9/fast
+#EXTINF:0 CUID="544" tvg-name="Top pop" group-title="Karışık kaynaklar",Top pop
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHZ6LnBocD9rYW5hbD10b3Bwb3AmZmlsZT0ubTN1OCIsImlkIjo1NDR9/fast
+#EXTINF:0 CUID="545" tvg-name="Trakyatürk" group-title="Karışık kaynaklar",Trakyatürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdHJha3lhdHVyay90cmFreWF0dXJrL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTQ1fQ%3D%3D/fast
+#EXTINF:0 CUID="546" tvg-name="Trt 1" group-title="Karışık kaynaklar",Trt 1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydDEubWVkeWEudHJ0LmNvbS50ci9tYXN0ZXIubTN1OCIsImlkIjo1NDZ9/fast
+
+#EXTINF:0 CUID="548" tvg-name="Trt arabia" group-title="Karışık kaynaklar",Trt arabia
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydGFyYWJpLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTQ4fQ%3D%3D/fast
+#EXTINF:0 CUID="549" tvg-name="Trt avaz" group-title="Karışık kaynaklar",Trt avaz
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydGF2YXoubWVkeWEudHJ0LmNvbS50ci9tYXN0ZXJfNzIwLm0zdTgiLCJpZCI6NTQ5fQ%3D%3D/fast
+#EXTINF:0 CUID="550" tvg-name="Trt belgesel" group-title="Karışık kaynaklar",Trt belgesel
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydGJlbGdlc2VsLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTUwfQ%3D%3D/fast
+#EXTINF:0 CUID="551" tvg-name="Trt çocuk" group-title="Karışık kaynaklar",Trt çocuk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydGNvY3VrLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTUxfQ%3D%3D/fast
+#EXTINF:0 CUID="552" tvg-name="trt eba 1" group-title="Karışık kaynaklar",trt eba 1
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LWUtb2t1bDAxLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTUyfQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="555" tvg-name="Trt eba 4" group-title="Karışık kaynaklar",Trt eba 4
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LWUtb2t1bDA0Lm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTU1fQ%3D%3D/fast
+#EXTINF:0 CUID="556" tvg-name="Trt haber" group-title="Karışık kaynaklar",Trt haber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydGhhYmVyLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTU2fQ%3D%3D/fast
+
+#EXTINF:0 CUID="558" tvg-name="Trt müzik" group-title="Karışık kaynaklar",Trt müzik
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydG11emlrLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTU4fQ%3D%3D/fast
+
+
+#EXTINF:0 CUID="561" tvg-name="Trt türk" group-title="Karışık kaynaklar",Trt türk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydHR1cmsubWVkeWEudHJ0LmNvbS50ci9tYXN0ZXIubTN1OCIsImlkIjo1NjF9/fast
+#EXTINF:0 CUID="562" tvg-name="Trt world" group-title="Karışık kaynaklar",Trt world
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2LXRydHdvcmxkLm1lZHlhLnRydC5jb20udHIvbWFzdGVyLm0zdTgiLCJpZCI6NTYyfQ%3D%3D/fast
+
+#EXTINF:0 CUID="564" tvg-name="Türk klinikleri" group-title="Karışık kaynaklar",Türk klinikleri
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL21uLW5sLm1uY2RuLmNvbS90dXJraXlla2xpbmlrbGVyaS9zbWlsOnR1cmtpeWVrbGluaWtsZXJpL2NodW5rbGlzdF9iMzEyODAwMC5tM3U4IiwiaWQiOjU2NH0%3D/fast
+#EXTINF:0 CUID="565" tvg-name="Tv3" group-title="Karışık kaynaklar",Tv3
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdHYzL3R2My9wbGF5bGlzdC5tM3U4IiwiaWQiOjU2NX0%3D/fast
+#EXTINF:0 CUID="566" tvg-name="Tv4" group-title="Karışık kaynaklar",Tv4
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R1cmttZWR5YS1saXZlLmVyY2RuLm5ldC90djQvdHY0Lm0zdTgiLCJpZCI6NTY2fQ%3D%3D/fast
+#EXTINF:0 CUID="567" tvg-name="Tv8" group-title="Karışık kaynaklar",Tv8
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2OC1saXZlLmRhaW9uY2RuLm5ldC90djgvdHY4Lm0zdTgiLCJpZCI6NTY3fQ%3D%3D/fast
+
+#EXTINF:0 CUID="569" tvg-name="Tv25" group-title="Karışık kaynaklar",Tv25
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2Nkbi10djI1LnlheWluLmNvbS50ci90djI1L3R2MjUvY2h1bmtsaXN0Lm0zdTgiLCJpZCI6NTY5fQ%3D%3D/fast
+#EXTINF:0 CUID="570" tvg-name="Tv41" group-title="Karışık kaynaklar",Tv41
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdHY0MS90djQxL3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTcwfQ%3D%3D/fast
+#EXTINF:0 CUID="571" tvg-name="Tv48" group-title="Karışık kaynaklar",Tv48
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2FqYW5zcGxheS5jb206NTQ0My9MaXZlQXBwL3N0cmVhbXMvdHY0OC5tM3U4IiwiaWQiOjU3MX0%3D/fast
+#EXTINF:0 CUID="572" tvg-name="Tv52" group-title="Karışık kaynaklar",Tv52
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2VkZ2UxLnNvY2lhbHNtYXJ0LnR2L3R2NTIvYmFudDEvcGxheWxpc3QubTN1OCIsImlkIjo1NzJ9/fast
+
+#EXTINF:0 CUID="574" tvg-name="Tv2020" group-title="Karışık kaynaklar",Tv2020
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NjLWt1emV5a2licmlzc21hcnR0di5lcmNkbi5uZXQvdHYyMDIwL2JhbnRwMS9jaHVua2xpc3QubTN1OCIsImlkIjo1NzR9/fast
+#EXTINF:0 CUID="575" tvg-name="Tva" group-title="Karışık kaynaklar",Tva
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdHZhL3R2YS9jaHVua3MubTN1OCIsImlkIjo1NzV9/fast
+#EXTINF:0 CUID="576" tvg-name="Tvnet" group-title="Karışık kaynaklar",Tvnet
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL21uLW5sLm1uY2RuLmNvbS90dm5ldC90dm5ldC9jaHVua2xpc3QubTN1OCIsImlkIjo1NzZ9/fast
+#EXTINF:0 CUID="577" tvg-name="Tvnet | 2" group-title="Karışık kaynaklar",Tvnet | 2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NhbmxpdHZ1bHVzYWwueHl6L2xpdmUvdHZuZXQvaW5kZXgubTN1OCIsImlkIjo1Nzd9/fast
+
+#EXTINF:0 CUID="579" tvg-name="Ülketv" group-title="Karışık kaynaklar",Ülketv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmV0di5yYWR5b3R2b25saW5lLm5ldC9rYW5hbDdsaXZlL3Vsa2V0di9wbGF5bGlzdC5tM3U4IiwiaWQiOjU3OX0%3D/fast
+
+#EXTINF:0 CUID="581" tvg-name="Urfahaber" group-title="Karışık kaynaklar",Urfahaber
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3J1aGF0di5vemVsaXAuY29tOjM0ODMvc3RyZWFtL3BsYXkubTN1OCIsImlkIjo1ODF9/fast
+#EXTINF:0 CUID="582" tvg-name="Urfanatik" group-title="Karışık kaynaklar",Urfanatik
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdXJmYW5hdGlrdHYvdXJmYW5hdGlrdHYvcGxheWxpc3QubTN1OCIsImlkIjo1ODJ9/fast
+
+#EXTINF:0 CUID="584" tvg-name="Vangölü" group-title="Karışık kaynaklar",Vangölü
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2NkbjEtdmFuZ29sdXR2LnlheWluLmNvbS50ci92YW5nb2x1dHYvYW1sc3Q6dmFuZ29sdXR2L3BsYXlsaXN0Lm0zdTgiLCJpZCI6NTg0fQ%3D%3D/fast
+
+#EXTINF:0 CUID="586" tvg-name="Vrt" group-title="Karışık kaynaklar",Vrt
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3ZydHR2Lm96ZWxpcC5jb206MzY0NC9tdWx0aV93ZWIvcGxheV83MjAubTN1OCIsImlkIjo1ODZ9/fast
+#EXTINF:0 CUID="587" tvg-name="Vuslattv" group-title="Karışık kaynaklar",Vuslattv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfdnVzbGF0dHYvdnVzbGF0dHYvcGxheWxpc3QubTN1OCIsImlkIjo1ODd9/fast
+#EXTINF:0 CUID="588" tvg-name="Womankadın" group-title="Karışık kaynaklar",Womankadın
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3MwMS53ZWJjYXN0ZXIuY2xvdWQvd210di9saXZlXzEwODBwLm0zdTgiLCJpZCI6NTg4fQ%3D%3D/fast
+#EXTINF:0 CUID="589" tvg-name="Womantv" group-title="Karışık kaynaklar",Womantv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3MwMS53ZWJjYXN0ZXIuY2xvdWQvd210di9saXZlXzEwODBwLm0zdTgiLCJpZCI6NTg5fQ%3D%3D/fast
+#EXTINF:0 CUID="590" tvg-name="Worldtürk" group-title="Karışık kaynaklar",Worldtürk
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL2xpdmUuYXJ0aWRpaml0YWxtZWR5YS5jb20vYXJ0aWRpaml0YWxfd29ybGR0dXJrL3dvcmxkdHVyay9wbGF5bGlzdC5tM3U4IiwiaWQiOjU5MH0%3D/fast
+
+#EXTINF:0 CUID="592" tvg-name="Zeynotv" group-title="Karışık kaynaklar",Zeynotv
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R2c21zLmNsdWIvdHYucGhwP2thbmFsPXpleW5vdHYmZmlsZT0ubTN1OCIsImlkIjo1OTJ9/fast
+
+#EXTINF:0 CUID="594" tvg-name="24" group-title="Karışık kaynaklar",24
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R1cmttZWR5YS1saXZlLmVyY2RuLm5ldC90djI0L3R2MjQubTN1OCIsImlkIjo1OTR9/fast
+#EXTINF:0 CUID="595" tvg-name="24 | 2" group-title="Karışık kaynaklar",24 | 2
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL21uLW5sLm1uY2RuLmNvbS9rYW5hbDI0L2thbmFsMjQuc21pbC9jaHVua2xpc3QubTN1OCIsImlkIjo1OTV9/fast
+#EXTINF:0 CUID="596" tvg-name="360" group-title="Karışık kaynaklar",360
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3R1cmttZWR5YS1saXZlLmVyY2RuLm5ldC90djM2MC90djM2MC5tM3U4IiwiaWQiOjU5Nn0%3D/fast
+
+
+
+
+
+
+#EXTINF:0 CUID="686" tvg-chno="null" tvg-name="B***1 wuffy player" group-title="Premium tr",B***1 wuffy player
+https://alt.xtream-ie.org/r8E7WzEjY/LLJwdV9mB/7eyJ1cmwiOiJodHRwczovL3NldHRlLjUyMzUwNmUwYTg2ZDM5YzAuY2xpY2svaS9rb3BydWx1dTU1LmdpdGh1Yi5pby82MDEvcGxheWxpc3QubTN1OCIsImlkIjo2ODZ9/fast
+
