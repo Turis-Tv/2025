@@ -33,10 +33,7 @@ font-family: 'Open Sans', sans-serif;
 font-size:0.6rem;
 background:#000;
 }
-body.dark {
- --white:#000;
- --grey:#fff;
-}
+ 
 a,a:hover {
 text-decoration:none;
 }
@@ -118,9 +115,7 @@ button{
 .header button:hover {
  opacity:0.7;
 }
-body.dark .header button {
- background:#fff;
-}
+ 
 .music-list {
  padding-bottom:70px;
 }
@@ -262,7 +257,7 @@ body.dark .header button {
 .content {
  flex:1;
  padding:0 15px;
- color:var(--white);
+ color:var(--black);
 }
 .btn-group .material-icons {
  font-size:40px;
@@ -296,19 +291,14 @@ body.dark .header button {
 .back-btn .material-icons {
   font-size:40px;
 }
-body.dark .players .material-icons {
- color:#fff;
-}
-body.dark .players .material-icons.active  {
- color:var(--primary);
-}
-.prevBtn, .nextBtn, .tools , .progress-box, .back-btn, .dark-mode-btn {
- display:none;
+ 
+ 
+ 
 }
 .players.active .nextBtn,
 .players.active .prevBtn,
 .players.active .back-btn,
-.players.active .dark-mode-btn {
+.players.active .  {
  display:inline-block;
 }
 .players.active .progress-box,
@@ -422,7 +412,7 @@ body.dark .players .material-icons.active  {
  <audio src="" id="audio" ></audio>
  <div class="players" id="players">
    <button class="back-btn" onclick="showplayer()"><i class="material-icons" >expand_more</i></button>
-   <button class="dark-mode-btn" onclick="darkMood()"><i class="material-icons" >invert_colors</i></button>
+   <button class=" " onclick=" "><i class="material-icons" >invert_colors</i></button>
    
    <div class="bottom" >
      <div class="thumbnail" >
@@ -658,9 +648,7 @@ const showMusicList = () => {
  document.querySelector(".sec-1").classList.add("hide");
  document.querySelector(".sec-2").classList.remove("hide");
 }
-const darkMood = () => {
- body.classList.toggle("dark");
-}
+ 
 
 const setActive = (i) => {
   setEqualizer()
@@ -680,8 +668,8 @@ const setData = data => {
 
 const playMusic = async (i) => {
   if(i == 18 || i == 10 ) {
-   body.classList.toggle("dark");
-   setTimeout(() => body.classList.toggle("dark"),7000);
+   body.classList.toggle(" ");
+   setTimeout(() => body.classList.toggle(" "),7000);
   }
   let data = musicData.find(m => m.id === i) || musicData[1];
   setActive(i)
