@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Turis Tv</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interface met 9 knoppen en afbeeldingen</title>
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* Pas aan als dat nodig is */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Horizontaal scrollen toestaan */
+      scrollbar-width: none; /* Verberg de schuifbalk in browsers die deze weergeven */
+      -ms-overflow-style: none; /* De schuifbalk verbergen in Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 2 5px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="Aramak" oninput="searchByName(this.value)">
+      </div>&nbsp;&nbsp;&nbsp; &nbsp;
+    <button class="filter-button active" onclick="filterSelection('all')">All</button>&nbsp;&nbsp;&nbsp;
+
+    <button class="filter-button" onclick="filterSelection('1')">1</button>
+    <button class="filter-button" onclick="filterSelection('2')">2</button>
+    <button class="filter-button" onclick="filterSelection('3')">3</button>
+    <button class="filter-button" onclick="filterSelection('4')">4</button>
+    <button class="filter-button" onclick="filterSelection('5')">5</button>
+    <button class="filter-button" onclick="filterSelection('6')">6</button>
+    <button class="filter-button" onclick="filterSelection('7')">7</button>
+    <button class="filter-button" onclick="filterSelection('8')">8</button>
+    <button class="filter-button" onclick="filterSelection('9')">9</button>
+    <button class="filter-button" onclick="filterSelection('10')">10</button>
+
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+
+
+
+
+
+     <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1ZjWRLcBisMGur8WqsJ7hpJxEF1FoS-Ib/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şuur ve Şuursuzluk</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1JU3BRxaM_c71kPusGdz8gZQAHlskHeu6/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şevval Ayı ve Önemi</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1kOctnJzWQ83gee9B6-pzRs4P3_wKMD_g/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şeriat ve İslam </span>
+    </button>
+  
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1tAuD3it__1b2Xz5CRYEV_HE6h7MoNTZd/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şeriat nedir, İslam nedir </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1Lng9rAGdlYw0nZXqOPYusQy_iNoARJD8/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şeriat Allah ın Hükümleridir</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1ILkS84HyzQKu1yWO0gV7JR9XvsafqVMU/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şehy Ahmet Vasiyetnamesi</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1KjwsUPbyP4LkhIRdAylJ3r6RIRQADTE0/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Şans oyunları Kumar ve Zina </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1RlbB1kkOlOauhg9ElDBzEtfHPzAA3FxH/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Üç Ayların Önemi ve Zekat </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1Tj0a0Pm1CI5Ra1jKFM8oyM7_towbRNM7/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ümraniye Sohbeti</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1WC4jx4-h94GXWC4-KiFuA5ri3o6bQdV-/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span> Ümmetlerin En Hayırlısı</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1ie--XOnf668-YSkt4UcbY-xXOwtqrMx4/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ümmet Olma Vasfı</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1BaGQO2f62N7WnDCW3geTfzb2TKTtkqDH/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>örtünen KADIN sereflidir ! </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1RjJoR4SXgrKInDtKqogIHxMOu1ZDOE_J/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>ÖMRÜNDE HİÇ NAMAZ KILMAMIŞ</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1uTqJp-OSagjwNIxYgvexJ8W6oekjCkFP/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ömrümüz Tükeniyor</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1cD_nO_R633fx94LSlZ6ZW3oUtMpyCle5/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ömrümüz Sayılı ve Sınırlı</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1KAbaGDa_lqkngfhEnEH91tXznlmJGM5d/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ölüm ve Ötesi</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1hARPsYAAunOY5IAaOu7wWn3MJEccCEdt/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Ölen İnsanın Kabir Hali </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1K8_-JSmaop-Z5FM2LswbL-K0pzWV-1Lh/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>ZULMÜ ALKISLAYANLAR </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo(' https://drive.google.com/file/d/1xSoJKW_ZlG115DQF6c2uh85DRW_mTYor/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Zinayı Önlemenin Yolu </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1T02vg3wv3TnQqlDnkXrwS4MljI5h94Go/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Zamanın Fitnesi </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1bwqhTQxaXKeHvh37Umq-nqaJebq0Wp_L/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Zamanın Fitne ve Fesadları 1 </span>
+    </button>
+
+    <button class="button 1k" onclick="redirectTo('https://drive.google.com/file/d/1MMBMmy_jol-jKDM726sDoBwQuDppgdJD/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Zamanın Fitne ve Fesadları 2 </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/16XjJ4PjjL2n4werSyti1D34KUkv8fIGF/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>zaman size uymazsa </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1sNcW6X2a-VIH1BK8WSckWccCqzoTATKd/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Zalimlerin Akıbeti </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/14VSbYUsFaC_jSLy2Dj48mt4L2Lgx2xpb/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>zalim gazeteler </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1QGmZdCn3DCkaO1CPy3OQtPhLjfgNm3xL/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yılbaşı Rezaleti Takliti </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1UM2M9OLT6bxhdWQmR60ql_IqH1_X3qQk/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yılbaşı Faciası</span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1hFkw1XUnOAyTqvvGtMXnNBd-veixSyRx/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yılbaşı Belası </span>
+    </button>
+
+    <button class="button 1" onclick="redirectTo('https://drive.google.com/file/d/1fkLx7zClrktOKyXDjp9WdbrtkoFcdWF9/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yönetimsiz İnsan Olmaz</span>
+    </button>
+
+    <button class="button 1k" onclick="redirectTo('https://drive.google.com/file/d/1N4L0ZzdAUptq_xIAu2XlMuhTQBdT6yZP/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yolsuzluk, Faiz ve Rüşvet </span>
+    </button>
+
+  
+
+
+
+
+
+
+
+     <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1tv4gP41FSiuq1k3sSk9Daxr0NN8etpHE/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yolsuzluk ve Yolsuzluklar </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1WAfRR71uU4uQczxgk2oqqX_LB1xqUXSz/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yeniden Diriliş </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/11P066_Wiyy83SxLNAzBjSthI4jj-kLro/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>yeni dünya düzeni ve yeni firavunlar </span>
+    </button>
+  
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1JNDDMwmegnLEpGD9ssFugUzfK5OfWw8_/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yavuz Sultan Selim Han</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1wZ2m8SVtne9I-9kSOqCi1GeVxp7xz9px/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yaratmak Allah (C.C.) na Mahsustur </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/12W9L6BZt4igoCuzUJAJWDnVqSEa-qM1g/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>yarasa ve haydutlar </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1dZwihMbb7g1HylaJF1rKwMED51W-2EDR/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yaptıklarımızdan Hesaba Çekileceğiz</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1-RhINwZ3m4FNNQtKyS8DqoehQDNNdGMD/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yapamayacağınız Şeyi Söz Vermeyin</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1X6GKaynTOfyEyQNzF6eMapVHm8YloyDP/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Yanlış Yoldayız</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1uYQ9CbivhqFvNFiBwImGdFcFAVGcKdAP/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>yalanci sistem</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1KwLLIvr7jOQjn41Eys_wyjOSQDbxLewl/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Vatan Memleket Hainleri</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1Mkb3DAHEZPJAdZlLPTgoabdEh1kSF1D8/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Vatan Hainleri </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1YWlogWIOGXPbpd-xRphuLe8QwE6NWZ_-/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Uyan Ey Müslüman (Sikayetciyim ya Rabbi ) Cennete Davet Et</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1OplyEluUUScwNGxUXwi9KDo8wJI7CXHc/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Uhud Savaşı</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1kBVmO8J6XCT4sky3nS4ObCT26wbhf8_J/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>BEN ŞİKAYETÇİYİM (ŞİİR )</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1xx320qEztAVq4LQ7MdIKk0DjbeKHm-28/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Türkiye Nereye Gidiyor</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/17xPNTbFULsrDQFcy8gMkXFc5emLqyPv0/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Türkiye Gibi Baska Ülke Gösterin, Alninizdan Öpecegim</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1WHquRjA1UEBORNoMf_wFYnjzc8FCA9jv/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Türk askerini aptal yerine koyuyorlar</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1XdM7Iv5iH_tfybPv0414NSFu_ce-sV3F/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tükenen Ömür Sermayemiz</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1B4s0DM3nwTbnyyMpR6zDjT1hWGs_i2r3/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>rad.han</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1OJXutJD_Ud8B83KX2k1iwSK-Y_yD_waB/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>İçki Satan Adam İle Diyaloğu</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1CHakMSC8BXCveT3x5aTBwdwfUD2H4E2b/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Hücre Günlerini anlatıyor</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1fjCyIqvFSWuhRHG8O6_vd6eqDPUi-gjN/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>HARIKA Bir SIIR DAHA !!!</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1msmGUFvveESa9iQeBpKCsSvlsyeduTGL/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tevhid Bilincinde Değiliz </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1oruWJlIZSdYBrlHKiTXrq4QrLXDtyXJ1/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tesettür, HAREMLiK ve SELAMLIK </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/19XVT-VIYSrNZyLOiLSGuY32iK95IU-Qv/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Temiz Toplum</span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1W00Xdg8AwAsB6x_X1eFacgU7U-M7NqDp/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Temiz Toplum Konusu </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1DuJJ3dwrZ_G_oRFGZ4VMuqKG0PNqY6nf/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Temiz Toplum Anlayışı </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1A5pVpiPSKHJlUwFQkGPoWXB7a9AxntdF/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Televizyon ve İletişim </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1DK8Q1MxCxEkBsnlm3RAhI5Gn3xoyEDYH/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tek Yol İslamdır Şüphesiz </span>
+    </button>
+
+      <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1Lci2Mq301hu_7YjzqQRKU_FR2lK1hTv1/preview ')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tek Davamız İslamdır </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1EcnnaEmdHFsXcTXyhF_qWMjtSrLMEfUY/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tebbet Suresi Tefsiri </span>
+    </button>
+
+    <button class="button 2" onclick="redirectTo('https://drive.google.com/file/d/1XmQjekGdhOhWcL-feql1vjXbKsBS6XBr/preview')">
+        <img src="https://i.pinimg.com/236x/2e/a6/60/2ea6601b4ffc3f4fd151f8a6dee7b2d8.jpg" alt="Imagen">
+        <span>Tarihin ve Günümüzün Firavunları </span>
+    </button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
