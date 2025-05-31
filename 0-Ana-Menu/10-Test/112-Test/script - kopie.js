@@ -151,7 +151,7 @@ function showUI() {
 }
 
 
-// Uzaktan kumanda - oklarla gezinin
+// ريموت كنترول - تنقل بالأسهم
 let currentFocusIndex = 0;
 function focusChannel(index) {
     const items = document.querySelectorAll(".channel-item");
@@ -185,7 +185,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 
-// Menüleri yeniden göstermek için kullanıcı hareketini izleyin
+// تعقب حركة المستخدم لإظهار القوائم مجددًا
 function setupUserInteractionEvents() {
     const resetUI = () => showUI();
     ["mousemove", "touchstart", "keydown"].forEach(evt => {
@@ -194,7 +194,7 @@ function setupUserInteractionEvents() {
 }
 
 
-// Videoya tıklandığında Oynat/Duraklat
+// التشغيل/الإيقاف عند النقر على الفيديو
 function setupVideoClick() {
     video.addEventListener("click", function () {
         if (video.paused) {
@@ -205,7 +205,7 @@ function setupVideoClick() {
     });
 }
 
-// Çift tıklamayla tüm oynatıcıyı büyüt.
+// تكبير المشغل بالكامل عند النقر المزدوج
 function setupDoubleClickFullscreen() {
     const container = document.getElementById("fullScreenContainer");
     video.addEventListener("dblclick", function () {
@@ -219,7 +219,7 @@ function setupDoubleClickFullscreen() {
 
 
 
-// Tam ekran moduna girerken/çıkarken gövde stilini değiştir
+// تغيير نمط الجسم عند دخول/الخروج من وضع ملء الشاشة
 function setupFullscreenClassToggle() {
     document.addEventListener("fullscreenchange", () => {
         document.body.classList.toggle("fullscreen-mode", !!document.fullscreenElement);
@@ -229,7 +229,7 @@ function setupFullscreenClassToggle() {
 
 
 const versionFileUrl = "https://raw.githubusercontent.com/mohammedxp2024/tv-channels/main/version.json";
-const currentVersion = "1.1.2"; // Bu uygulamanın güncel sürümüdür.
+const currentVersion = "1.1.2"; // هذا هو إصدار التطبيق الحالي
 
 async function checkForUpdate(manualCheck = false) {
     try {
@@ -238,42 +238,42 @@ async function checkForUpdate(manualCheck = false) {
         const latestVersion = data.version;
 
         if (latestVersion !== currentVersion) {
-            if (confirm(`🔔 Yeni bir güncelleme mevcut (${latestVersion})! Şimdi indirmek ister misiniz?؟`)) {
-                // Aşağıdaki bağlantıyı dosya bağlantısına değiştirin. APK içinde GitHub Releases
+            if (confirm(`🔔 يتوفر تحديث جديد (${latestVersion})! هل تريد تحميله الآن؟`)) {
+                // غير الرابط أدناه إلى رابط ملف APK في GitHub Releases
                 window.location.href = "https://github.com/mohammedxp2024/tv-channels/releases/latest/download/app-debug.apk";
             }
         } else if (manualCheck) {
-            alert("✅ Uygulamanın en son sürümüne sahipsiniz.!");
+            alert("✅ لديك أحدث إصدار من التطبيق!");
         }
     } catch (error) {
-        alert("❌Güncelleme kontrol edilirken bir hata oluştu. Daha sonra tekrar deneyin..");
-        console.error("hata:", error);
+        alert("❌ حدث خطأ أثناء التحقق من التحديث، حاول مرة أخرى لاحقًا.");
+        console.error("خطأ:", error);
     }
 }
 
 
-// Güncellemeleri kontrol etmek için butona tıklayın.
+// ربط الزر بالتحقق من التحديث
 document.getElementById("update-btn").addEventListener("click", function (e) {
     e.preventDefault();
     checkForUpdate(true);
 });
 
-// Tıklandığında güncelleme yapmak için düğmeyi bağlayın
+// ربط الزر بالتحديث عند النقر عليه
 document.getElementById("update-btn").addEventListener("click", function (event) {
-    event.preventDefault(); // Bağlantının başka bir sayfaya gitmesini önle
-    console.log("Yenileme butonuna basıldı."); // إKayıt eklemek için düğmeye tıklayarak onaylayınإ
-    checkForUpdate(true); // Bir bağlantıya tıklandığında doğrulamayı manuel olarak çalıştır
+    event.preventDefault(); // منع الرابط من الانتقال إلى صفحة أخرى
+    console.log("تم الضغط على زر التحديث"); // إضافة سجل لتأكيد النقر على الزر
+    checkForUpdate(true); // تشغيل التحقق يدويًا عند النقر على الرابط
 });
 
-// Uygulamaya girdiğinizde yalnızca bir güncelleme varsa güncellemeyi kontrol edin
+// تحقق من التحديث عند دخول التطبيق فقط إذا كان هناك تحديث
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("Sayfa yüklendi"); // إSayfanın yüklenmesini onaylamak için bir kayıt ekleyin.إ
-    checkForUpdate(); // Yalnızca yeni bir güncelleme varsa sayfa yüklendiğinde doğrulamayı otomatik olarak çalıştır
+    console.log("تم تحميل الصفحة"); // إضافة سجل لتأكيد تحميل الصفحة
+    checkForUpdate(); // تشغيل التحقق تلقائيًا عند تحميل الصفحة فقط إذا كان هناك تحديث جديد
 });
 
-// ✅ Uygulamayı çalıştırırken kanalları yükle
+// ✅ تحميل القنوات عند تشغيل التطبيق
 updateChannels();
-// Sayfa yüklendiğinde
+// عند تحميل الصفحة
 document.addEventListener("DOMContentLoaded", function () {
     updateChannels();
     setupUserInteractionEvents();
@@ -322,22 +322,22 @@ document.getElementById("fullscreenBtn").addEventListener("click", function () {
 document.addEventListener("keydown", function(e) {
     switch(e.keyCode) {
         case 37: // Left arrow
-            console.log("sol");
+            console.log("يسار");
             break;
         case 38: // Up arrow
-            console.log("Odak noktası");
+            console.log("فوك");
             break;
         case 39: // Right arrow
-            console.log("Sağ");
+            console.log("يمين");
             break;
         case 40: // Down arrow
-            console.log("İçeri");
+            console.log("جوه");
             break;
         case 13: // OK or Enter
-            console.log("seçmek");
+            console.log("اختيار");
             break;
         default:
-            console.log("Bilinmeyen düğme: " + e.keyCode);
+            console.log("زر غير معروف: " + e.keyCode);
     }
 });
 
@@ -351,17 +351,17 @@ document.addEventListener("keydown", function(e) {
 
 
 
-// 🔧 Üst kontrol menüsü
+// 🔧 منيو التحكم العلوي
 const menuIcon = document.querySelector(".menu-icon");
 const menuList = document.querySelector(".menu-list");
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Simgeye tıklandığında menü görüntüsünü değiştir
+// تبديل عرض المنيو عند الضغط على الأيقونة
 menuIcon.addEventListener("click", () => {
     menuList.classList.toggle("hidden");
 });
 
-// Menü için klavye kontrol desteği
+// دعم التحكم بالكيبورد للمنيو
 menuIcon.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === "ArrowDown") {
         menuList.classList.remove("hidden");
@@ -392,7 +392,7 @@ menuItems.forEach((item, index) => {
 
 
 
-// 🔄 Dil menüsünü değiştir
+// 🔄 تبديل قائمة اللغة
 const languageMenu = document.getElementById("languageMenu");
 const languageDropdown = languageMenu.querySelector(".language-dropdown");
 const languageOptions = languageDropdown.querySelectorAll(".language-option");
@@ -434,10 +434,10 @@ languageOptions.forEach((opt, index) => {
         document.querySelector("#fullscreenBtn").textContent = "⛶ Double-click to toggle fullscreen";
         document.getElementById("channelTitle").textContent = "Choose a channel to watch";
 
-        // Paket etiketlerini düzenle
+        // تعديل تسميات الباقات
         const categories = {
             "sports": "🏟️ Sports",
-            "arabic": "📡 Turkish",
+            "arabic": "📡 Arabic",
             "entertainment": "🎭 Entertainment",
             "variety": "📺 Variety",
             "world": "🌍 International",
@@ -446,26 +446,26 @@ languageOptions.forEach((opt, index) => {
 
         updateCategoryLabels(categories);
     } else {
-        document.querySelector(".header").textContent = "📡 Turis Tv, uydu kanalı operatörü";
-        document.querySelector("#update-btn").textContent = "⬇️ Sürümü kontrol edin";
-        document.querySelector(".btn[onclick='updateChannels()']").textContent = "🔄 Kanalları güncelle";
-        document.querySelector("#fullscreenBtn").textContent = "⛶   Yakınlaştırmak veya uzaklaştırmak için çift tıklayın.";
-        document.getElementById("channelTitle").textContent = "İzlemek için bir kanal seçin";
+        document.querySelector(".header").textContent = "📡 محمد ستاركوم   مشغل القنوات الفضائية";
+        document.querySelector("#update-btn").textContent = "⬇️ تحقق من الاصدار";
+        document.querySelector(".btn[onclick='updateChannels()']").textContent = "🔄 تحديث القنوات";
+        document.querySelector("#fullscreenBtn").textContent = "⛶   للتكبير والتصغير النقر مزدوج";
+        document.getElementById("channelTitle").textContent = "اختر قناة للمشاهدة";
 
         const categories = {
-            "sports": "📺 spor",
-            "arabic": "📡 Türkçe",
-            "entertainment": "🎭 eğlence",
-            "variety": "📺 Çeşitli",
-            "world": "🌍 Ülkeler",
-            "all": "📢 Tüm kanallar"
+            "sports": "📺 رياضة",
+            "arabic": "📡 عربية",
+            "entertainment": "🎭 ترفيه",
+            "variety": "📺 منوعة",
+            "world": "🌍 دول",
+            "all": "📢 جميع القنوات"
         };
 
         updateCategoryLabels(categories);
     }
 }
 
-// Paket düğmelerinin adlarını güncelle
+// تحديث أسماء أزرار الباقات
 function updateCategoryLabels(newLabels) {
     const categoryButtons = document.querySelectorAll("#categoryList .btn");
     const keys = Object.keys(newLabels);
@@ -480,9 +480,9 @@ function updateCategoryLabels(newLabels) {
 });
 
 
-//Menüden Hakkında uygulama penceresini açın.
+// فتح نافذة حول التطبيق من المنيو
 document.querySelectorAll(".menu-item").forEach((item) => {
-    if (item.textContent.includes("etrafında") || item.textContent.includes("About")) {
+    if (item.textContent.includes("حول") || item.textContent.includes("About")) {
         item.addEventListener("click", () => {
             document.getElementById("aboutModal").classList.remove("hidden");
             document.getElementById("aboutModal").focus();
@@ -499,7 +499,7 @@ document.querySelectorAll(".menu-item").forEach((item) => {
 
 
 
-// إÇıkış düğmesiyle pencereyi kapatın veyaإ Escape
+// إغلاق النافذة بزر الخروج أو Escape
 const aboutModal = document.getElementById("aboutModal");
 const closeAbout = document.getElementById("closeAbout");
 
@@ -522,7 +522,7 @@ aboutModal.addEventListener("keydown", (e) => {
 
 
 
-        // Video kaydı
+        // تسجيل الفيديو
 
 let mediaRecorder;
 let recordedChunks = [];
@@ -566,17 +566,17 @@ function startRecording() {
             mediaRecorder.start();
             isRecording = true;
 
-            recordBtn.textContent = "⏹️ Kaydı durdur";
+            recordBtn.textContent = "⏹️ إيقاف التسجيل";
             recordBtn.classList.add("recording");
 
-            // إZamanlayıcıyı gösterإ
+            // إظهار المؤقت
             recordStartTime = Date.now();
             recordTimer.classList.remove("hidden");
             updateTimer();
             timerInterval = setInterval(updateTimer, 1000);
         })
         .catch(err => {
-            alert("⚠️ Mikrofona erişilemedi.");
+            alert("⚠️ تعذر الوصول إلى المايكروفون.");
             console.error(err);
         });
 }
@@ -585,10 +585,10 @@ function stopRecording() {
     mediaRecorder.stop();
     isRecording = false;
 
-    recordBtn.textContent = "⏺️ Kaydı başlat";
+    recordBtn.textContent = "⏺️ بدء التسجيل";
     recordBtn.classList.remove("recording");
 
-    // إGeçici görünmezlikإ
+    // إخفاء المؤقت
     clearInterval(timerInterval);
     recordTimer.classList.add("hidden");
 }
@@ -608,12 +608,12 @@ function saveRecording(blob) {
             dir.getFile(filename, { create: true }, function (file) {
                 file.createWriter(function (writer) {
                     writer.write(blob);
-                    alert("✅ Videoyu cihaz hafızasına kaydedin.");
+                    alert("✅ تم حفظ الفيديو في ذاكرة الجهاز.");
                 });
             });
         });
     } else {
-        // Tarayıcıya yerel kaydetme
+        // حفظ محلي للمتصفح
         const a = document.createElement("a");
         a.href = URL.createObjectURL(blob);
         a.download = `channel_${Date.now()}.webm`;
@@ -637,24 +637,24 @@ function saveRecording(blob) {
 
 
   function handleExit() {
-    if (confirm("Uygulamadan çıkmak istiyor musunuz  ?")) {
+    if (confirm("هل تريد الخروج من التطبيق؟")) {
       if (window.cordova && navigator.app) {
         navigator.app.exitApp();
       } else if (navigator.device && navigator.device.exitApp) {
         navigator.device.exitApp();
       } else {
-        alert("🚫 Tarayıcıdan çıkılamıyor. Sekmeyi manuel olarak kapatın.");
+        alert("🚫 لا يمكن الخروج من المتصفح. أغلق التبويب يدويًا.");
       }
     }
   }
 
-  // destekler Cordova
+  // يدعم Cordova
   if (window.cordova) {
     document.addEventListener("deviceready", function () {
       document.getElementById("exitAppBtn").addEventListener("click", handleExit);
     }, false);
   } else {
-    // Normal tarayıcı
+    // متصفح عادي
     document.getElementById("exitAppBtn").addEventListener("click", handleExit);
   }
 
@@ -671,14 +671,14 @@ function saveRecording(blob) {
 
 
 
-// ✅ Kayıt yapmadan önce Android'de mikrofonun geçerliliğini kontrol edin
+// ✅ التحقق من صلاحية المايك على أندرويد قبل التسجيل
 function checkMicPermissionAndRecord() {
     if (window.cordova && cordova.plugins && cordova.plugins.diagnostic) {
         cordova.plugins.diagnostic.requestMicrophoneAuthorization(status => {
             if (status === cordova.plugins.diagnostic.permissionStatus.GRANTED) {
                 startRecording();
             } else {
-                alert("🔒 Mikrofona izin verilmiyor. Lütfen ayarlardan izin verin.");
+                alert("🔒 لم يتم السماح بالمايكروفون. يرجى منحه الإذن من الإعدادات.");
             }
         });
     } else {

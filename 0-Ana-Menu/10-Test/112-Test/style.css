@@ -1,4 +1,4 @@
-/* تصميم أساسي متناسق */
+/* Koordineli temel tasarım */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
@@ -155,13 +155,13 @@ video {
     color: white;
 }
 
-/* إخفاء القوائم مؤقتًا */
+/* Menüleri geçici olarak gizle */
 .hidden-ui {
     opacity: 0;
     pointer-events: none;
 }
 
-/* وضع ملء الشاشة - تغطية كاملة بدون فراغات */
+/* Tam ekran modu - boşluksuz tam kapsama */
 body.fullscreen-mode video {
     width: 100vw !important;
     height: 100vh !important;
@@ -240,18 +240,18 @@ body.fullscreen-mode .video-container {
     }
 }
 
-/* تنسيق الترقيم في أقصى اليسار */
+/* En soldaki format numaralandırması */
 .channel-number {
     position: absolute;
     left: 10px;
     font-weight: bold;
 }
 
-/* إخفاء اسم القناة عند ملء الشاشة */
+/* Tam ekran olduğunda kanal adını gizle */
 :fullscreen .channel-title {
     display: none;
 }
-/* إعدادات اسم القناة */
+/* Kanal adı ayarları */
 .channel-title {
     position: absolute;
     top: 30px;
@@ -268,25 +268,25 @@ body.fullscreen-mode .video-container {
 
 
 
-/*فعلي تنسيق القناة داخل القائمة */
+/*Liste içindeki gerçek kanal biçimlendirmesi */
 
 .channel-item {
     display: flex;
-    justify-content: center; /* يجعل الاسم في المنتصف */
-    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: center; /* İsmi ortada yapar */
+    align-items: center; /* Öğeleri dikey olarak hizala */
     padding: 2px;
-    border-bottom: 1px solid #ccc; /* خط فاصل بين القنوات */
-    position: relative; /* تمكين التحكم في موضع العناصر */
+    border-bottom: 1px solid #ccc; /* kanallar arasındaki ayırıcı çizgi */
+    position: relative; /* Öğelerin konumu üzerinde denetim sağlayın */
 }
 
-/* تنسيق اسم القناة في المنتصف */
+/* Merkezi kanal adı */
 .channel-name {
     flex-grow: 1;
     text-align: center;
-    font-weight: bold; /* جعل الخط عريض */
+    font-weight: bold; /* Yazı tipini kalın yapın */
 }
 
-/* تنسيق الترقيم في أقصى اليسار */
+/* En soldaki format numaralandırması */
 .channel-number {
     position: absolute;
     left: 10px;
@@ -296,35 +296,35 @@ body.fullscreen-mode .video-container {
 
 
 
-/* تكبير وتصغير القنوات بناءً على حجم الشاشة */
+/* Ekran boyutuna göre kanalları yakınlaştırın ve uzaklaştırın */
 @media screen and (max-width: 1024px) {
     .channel-item {
-        flex: 1 1 25%; /* تعديل حجم القنوات للشاشات المتوسطة */
-        font-size: 14px; /* تقليص حجم النص */
+        flex: 1 1 25%; /* Orta ekranlar için kanal yeniden boyutlandırma */
+        font-size: 14px; /* Metin boyutunu azaltın*/
     }
 }
 
 @media screen and (max-width: 768px) {
     .channel-item {
-        flex: 1 1 40%; /* تعديل حجم القنوات للشاشات الصغيرة */
-        font-size: 12px; /* تقليص حجم النص أكثر */
+        flex: 1 1 40%; /* Küçük ekranlar için kanalları yeniden boyutlandırın */
+        font-size: 12px; /* Metin boyutunu daha da küçült */
     }
 }
 
 @media screen and (max-width: 480px) {
     .channel-item {
-        flex: 1 1 100%; /* عرض القناة بشكل كامل في الشاشات الصغيرة جدًا */
-        font-size: 10px; /* تقليص حجم النص بشكل أكبر */
+        flex: 1 1 100%; /* Kanalı çok küçük ekranlarda tam olarak göster */
+        font-size: 10px; /* Metin boyutunu daha da küçült */
     }
 }
-/* تخصيص شريط التمرير ليكون شفافًا */
+/* Kaydırma çubuğunu şeffaf olacak şekilde özelleştirin*/
 ::-webkit-scrollbar {
-    width: 8px; /* عرض شريط التمرير */
+    width: 8px; /* Kaydırma çubuğunu göster */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1); /* لون شبه شفاف */
-    border-radius: 4px; /* تدوير الزوايا */
+    background: rgba(255, 255, 255, 0.1); /* Yarı saydam renk */
+    border-radius: 4px; /* Köşeleri yuvarlayın */
 }
 
 
@@ -341,7 +341,7 @@ body {
 
 
 
-font-family: 'Tajawal', sans-serif; /* ← إضافة الخط هنا */
+font-family: 'Tajawal', sans-serif; /* ← Yazı tipini buraya ekleyin */
 
 
 
@@ -720,7 +720,7 @@ body {
 
 
 
-/* تصميم أساسي متناسق */
+/* Kordineli temel tasarım */
 body {
     font-family: Arial, sans-serif;
     background-color: #111;
@@ -877,13 +877,13 @@ video {
     color: white;
 }
 
-/* إخفاء القوائم مؤقتًا */
+/* Menüleri geçici olarak gizle */
 .hidden-ui {
     opacity: 0;
     pointer-events: none;
 }
 
-/* وضع ملء الشاشة - تغطية كاملة بدون فراغات */
+/* Tam ekran modu - boşluksuz tam kapsama */
 body.fullscreen-mode video {
     width: 100vw !important;
     height: 100vh !important;
@@ -962,18 +962,18 @@ body.fullscreen-mode .video-container {
     }
 }
 
-/* تنسيق الترقيم في أقصى اليسار */
+/* En soldaki format numaralandırması */
 .channel-number {
     position: absolute;
     left: 10px;
     font-weight: bold;
 }
 
-/* إخفاء اسم القناة عند ملء الشاشة */
+/* Tam ekran olduğunda kanal adını gizle */
 :fullscreen .channel-title {
     display: none;
 }
-/* إعدادات اسم القناة */
+/* Kanal adı ayarları */
 .channel-title {
     position: absolute;
     top: 30px;
@@ -990,25 +990,25 @@ body.fullscreen-mode .video-container {
 
 
 
-/*فعلي تنسيق القناة داخل القائمة */
+/*Liste içindeki gerçek kanal biçimlendirmesi */
 
 .channel-item {
     display: flex;
-    justify-content: center; /* يجعل الاسم في المنتصف */
-    align-items: center; /* محاذاة العناصر عموديًا */
+    justify-content: center; /* İsmi ortada yapar */
+    align-items: center; /* Öğeleri dikey olarak hizala */
     padding: 2px;
-    border-bottom: 1px solid #ccc; /* خط فاصل بين القنوات */
-    position: relative; /* تمكين التحكم في موضع العناصر */
+    border-bottom: 1px solid #ccc; /* kanallar arasındaki ayırma çizgisi */
+    position: relative; /* Öğelerin konumu üzerinde denetim sağlayın */
 }
 
-/* تنسيق اسم القناة في المنتصف */
+/* Merkezi kanal adı */
 .channel-name {
     flex-grow: 1;
     text-align: center;
-    font-weight: bold; /* جعل الخط عريض */
+    font-weight: bold; /* Yazı tipini kalın yapın */
 }
 
-/* تنسيق الترقيم في أقصى اليسار */
+/* En soldaki format numaralandırması */
 .channel-number {
     position: absolute;
     left: 10px;
@@ -1018,35 +1018,35 @@ body.fullscreen-mode .video-container {
 
 
 
-/* تكبير وتصغير القنوات بناءً على حجم الشاشة */
+/* Ekran boyutuna göre kanalları yakınlaştırın ve uzaklaştırın */
 @media screen and (max-width: 1024px) {
     .channel-item {
-        flex: 1 1 25%; /* تعديل حجم القنوات للشاشات المتوسطة */
-        font-size: 14px; /* تقليص حجم النص */
+        flex: 1 1 25%; /* Orta ekranlar için kanal yeniden boyutlandırma */
+        font-size: 14px; /* Metin boyutunu küçült */
     }
 }
 
 @media screen and (max-width: 768px) {
     .channel-item {
-        flex: 1 1 40%; /* تعديل حجم القنوات للشاشات الصغيرة */
-        font-size: 12px; /* تقليص حجم النص أكثر */
+        flex: 1 1 40%; /* Küçük ekranlar için kanalları yeniden boyutlandırın */
+        font-size: 12px; /* Metin boyutunu daha da küçült */
     }
 }
 
 @media screen and (max-width: 480px) {
     .channel-item {
-        flex: 1 1 100%; /* عرض القناة بشكل كامل في الشاشات الصغيرة جدًا */
-        font-size: 10px; /* تقليص حجم النص بشكل أكبر */
+        flex: 1 1 100%; /* Kanalı çok küçük ekranlarda tam olarak göster */
+        font-size: 10px; /* Metin boyutunu daha da küçült */
     }
 }
-/* تخصيص شريط التمرير ليكون شفافًا */
+/* Kaydırma çubuğunu şeffaf olacak şekilde özelleştirin */
 ::-webkit-scrollbar {
-    width: 8px; /* عرض شريط التمرير */
+    width: 8px; /* Kaydırma çubuğunu göster */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1); /* لون شبه شفاف */
-    border-radius: 4px; /* تدوير الزوايا */
+    background: rgba(255, 255, 255, 0.1); /* Yarı saydam renk */
+    border-radius: 4px; /* Köşeleri yuvarlayın */
 }
 
 
@@ -1063,7 +1063,7 @@ body {
 
 
 
-font-family: 'Tajawal', sans-serif; /* ← إضافة الخط هنا */
+font-family: 'Tajawal', sans-serif; /* ← Yazı tipini buraya ekleyin */
 
 
 
@@ -1478,7 +1478,7 @@ body {
 
 
 
-/* نافذة حول التطبيق */
+/* Uygulama penceresi hakkında */
 .modal {
     position: fixed;
     top: 0;
@@ -1523,7 +1523,7 @@ body {
 
 
 
-/* زر تسجيل نابض */
+/* Titreşen kayıt düğmesi */
 .recording {
     background: red !important;
     color: white;
@@ -1536,7 +1536,7 @@ body {
     100% { box-shadow: 0 0 5px red; }
 }
 
-/* مؤقت التسجيل */
+/* Kayıt zamanlayıcısı */
 #recordTimer {
     position: absolute;
     top: 40px;
@@ -1553,7 +1553,7 @@ body {
 
 
 
-/* المفضلة */
+/* Favoriler */
 ..fav-btn {
     float: right;
     background: transparent;
@@ -1583,7 +1583,7 @@ body {
 
 
 
-/* تحسين مظهر العنصر المحدد بالريموت */
+/* Uzaktan kumandayla seçilen öğenin görünümünü iyileştirin */
 .channel-item.focused {
     border: 2px solid yellow;
     background-color: rgba(255, 255, 0, 0.2);
@@ -1592,13 +1592,13 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-/* للمزيد من الوضوح عند التركيز بالكيبورد */
+/* Klavyeye odaklanırken daha fazla netlik için */
 :focus {
     outline: 3px solid yellow;
     outline-offset: 3px;
 }
 
-/* 🎯 تحسين للتلفزيون والشاشات الكبيرة */
+/* 🎯 TV ve büyük ekranlar için optimize edildi */
 @media screen and (min-width: 1200px) {
     .channel-item {
         font-size: 24px;
