@@ -1,0 +1,6 @@
+﻿@font-face {
+  font-family: 'Nosifer Caps';
+  font-style: normal;
+  font-weight: 400;
+  src: url(s/nosifercaps/v27/_6_4EDnqTuC2UfVkXB6TEtM1vwg3.ttf) format('truetype');
+}

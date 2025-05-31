@@ -1,0 +1,308 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    width: 1280px;
+    margin: 5px auto;
+}
+
+header {
+    height: 130px;
+    padding-top: 0px;
+    background-color: black;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    border: #084B8A 6px outset;
+}
+
+header iframe {
+    height: 125px;
+    padding-top: 0px;
+    padding-left: 50px;
+}
+
+header div {
+    float: right; 35px;
+    padding-right: 30px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+header img {
+    float: left; 
+    height: 110px;
+    padding-left: 30px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+nav {
+	background-color: #000000;
+	border: 0px solid black;
+	height: 2em;
+	padding: 0.1em;
+}
+		
+nav:after {
+	clear: left;
+	content: "";
+}
+		
+nav ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+		
+nav li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+/* Unternavigation ausblenden */
+		
+nav ul ul {
+	font: 0/0 serif;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 2.5em;
+	z-index: -1;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+
+/*  Unternavigation einblenden */
+		
+	nav ul li:hover ul {
+	font: inherit;
+	z-index: auto;
+}
+		
+nav ul ul li {
+	float: none;
+	margin-bottom: 0.2em;
+}
+		
+nav a,
+nav span {
+	background-color: #0B3861;
+	background-image: repeating-linear-gradient(135deg, transparent, transparent 9px, black 9px, black 10px);
+	border: 1px solid blue;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0px 5px 10px white inset;
+	color: #FFFFFF;
+	display: block;
+	font-weight: bold;
+	margin: 0.6em 0 0 0;
+	padding: 0.4em;
+	text-decoration: none;
+
+/* Breite den in li enthaltenen Elementen zuweisen */			
+	width: 5.1em;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+		
+nav ul ul a,
+nav ul ul span {
+	border-radius: 10px;
+}
+
+/* aktuelle Unterseite kennzeichnen */		
+nav a:focus,
+nav a:hover,
+nav span {
+	color: #FFFFFF;
+	background-color: blue;
+}
+		
+nav a:focus,
+nav a:hover {
+	margin-top: 0;
+	padding: 1em 0.4em 0.4em;
+}
+		
+nav ul ul a:hover {
+	margin: 0.6em 0 0 0;
+	padding: 0.4em;
+}
+
+/* aktuelle Unterseite kennzeichnen */
+		
+nav ul ul span {
+	background-color: moroon;
+	color: #FFFFFF;
+}
+
+article {
+    border: gray 1px groove;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+article h1 {
+    font-style: normal;
+    font-family: Verdana;
+    color: #6E6E6E;
+    background-color: #0b3861;
+    font-size: 22pt;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-shadow: black 6px 6px 6px;
+    border-radius: 4px;
+    border: #666666 6px outset;
+}
+
+section {
+    align: center;
+    width: 1100px;
+    float: right;
+}
+
+aside {
+    width: 175px;
+    text-align: left;
+    padding-right: 0px;
+    float: left;
+    color: white;
+    padding-bottom: 3px;
+    background-color: #000000;
+    border: 1px solid groove;
+    border-radius: 5px;
+}
+
+aside nav {
+	background-color: #000000;
+	border: 0px solid black;
+	height: 2em;
+	padding: 0.1em;
+}
+		
+
+aside nav:after {
+	clear: left;
+	content: "";
+}
+		
+
+aside nav ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+		
+aside nav li {
+	float: left;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+/* Unternavigation ausblenden */
+		
+aside nav ul ul {
+	font: 0/0 serif;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 2.5em;
+	z-index: -1;
+	-webkit-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+
+/*  Unternavigation einblenden */
+		
+aside nav ul li:hover ul {
+		font: inherit;
+		z-index: auto;
+}
+		
+aside nav ul ul li {
+		float: none;
+		margin-bottom: 0.2em;
+}
+		
+aside nav a,
+
+aside nav span {
+		background-color: #0B3861;
+		background-image: repeating-linear-gradient(135deg, transparent, transparent 9px, black 9px, black 10px);
+		border: 1px solid blue;
+		border-radius: 10px 10px 0 0;
+		box-shadow: 0px 5px 10px white inset;
+		color: #FFFFFF;
+		display: block;
+		font-weight: bold;
+		margin: 0.6em 0 0 0;
+		padding: 0.4em;
+		text-decoration: none;
+/* Breite den in li enthaltenen Elementen zuweisen */
+			
+		width: 10.0em;
+		-webkit-transition: all 0.5s ease-in;
+		transition: all 0.5s ease-in;
+}
+		
+
+aside nav ul ul a,
+
+aside nav ul ul span {
+		border-radius: 10px;
+}
+
+/* aktuelle Unterseite kennzeichnen */
+		
+aside nav a:focus,
+aside nav a:hover,
+aside nav span {
+		color: #FFFFFF;
+		background-color: blue;
+}
+		
+aside nav a:focus,
+aside nav a:hover {
+		margin-top: 0;
+		padding: 1em 0.4em 0.4em;
+}
+		
+aside nav ul ul a:hover {
+		margin: 0.6em 0 0 0;
+		padding: 0.4em;
+}
+
+/* aktuelle Unterseite kennzeichnen */
+		
+aside nav ul ul span {
+		background-color: maroon;
+		color: #FFFFFF;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 0px;
+    background-color: #000000;
+    color: white;
+    border-radius: 0px;
+}
+
+footer p {
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: gray 0px 0px 0px;
+}
