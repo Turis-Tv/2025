@@ -34,8 +34,7 @@ function loadCategories() {
         "entertainment": "🎭 eğlence",
         "variety": "📺 Çeşitli",
         "world": "🌍 Ülkeler",
-        "all": "📢 Tüm kanallar"
- 
+        "all": "📢  Tümü "
     };
 
     Object.entries(categories).forEach(([key, value]) => {
@@ -440,11 +439,9 @@ languageOptions.forEach((opt, index) => {
             "sports": "🏟️ Sports",
             "arabic": "📡 Turkish",
             "entertainment": "🎭 Entertainment",
-            "variety": "📺 Variety",
+            "variety": "📺 Iptv",
             "world": "🌍 International",
             "all": "📢 All Channels"
-  
-
         };
 
         updateCategoryLabels(categories);
@@ -459,10 +456,9 @@ languageOptions.forEach((opt, index) => {
             "sports": "📺 spor",
             "arabic": "📡 Türkçe",
             "entertainment": "🎭 eğlence",
-            "variety": "📺 Çeşitli",
+            "variety": "📺 Iptv",
             "world": "🌍 Ülkeler",
-            "all": "📢 Tüm kanallar"
- 
+            "all": "📢  Tümü "
         };
 
         updateCategoryLabels(categories);

@@ -8,15 +8,14 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<html lang="ar"><head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>📡 Turis Tv</title>
     <link rel="stylesheet" href="style.css">
   
   
-  <!-- Kayıt düğmesi -->
-</head><body><button id="recordBtn" class="btn" tabindex="0">⏺️ Kayıtlar başlıyor</button>
+
 
 <!-- Kayıt zamanlayıcısı -->
 <div id="recordTimer" class="hidden">00:00</div>
@@ -25,18 +24,10 @@
   
   
   
-  <!-- Ekranın sağ üst kısmındaki menü listesi -->
-<div class="menu-container" tabindex="0">
-    <div class="menu-icon" tabindex="0">☰</div>
-    <ul class="menu-list">
-        <li class="menu-item" id="languageMenu" tabindex="0">🌐 Dil
-    <ul class="language-dropdown hidden">
-        <li class="language-option" data-lang="ar" tabindex="0">🇹🇷 Turkçe</li>
-        <li class="language-option" data-lang="en" tabindex="0">🇬🇧 English</li>
-    </ul>
+
 </li>
 
-  <li class="menu-item" tabindex="0">ℹ️ Uygulama hakkında</li> <!-- Uygulama penceresi hakkında -->
+
 
   
   
@@ -50,7 +41,6 @@
  
 
 
-        <li class="menu-item" tabindex="0" onclick="window.open('mulayim_2@hotmail.com')">✉️ Yazışmalar</li>
     </ul>
 </div>
         
@@ -70,7 +60,7 @@
 
   
     <div class="main-content">
-        <h1 class="header">📡 Turis Tv - Uydu Kanalı Operatörü</h1>
+        <h1 class="header">📡 Turis Tv</h1>
 
         <div class="buttons">
             <button class="btn" onclick="updateChannels()">🔄 Kanalları Güncell</button>
@@ -83,10 +73,19 @@
             <div class="overlay-fullscreen-btn" id="fullscreenBtn" style="display: none;">⛶ Yakınlaştırmak için iki kez dokunun</div>
 
          
-            <div class="category-list" id="categoryList" style="display: none;"><button class="btn">⭐ Favoriler</button><button class="btn">📺 Sporlar</button><button class="btn">📡 Türkçe</button><button class="btn">🎭 Eğlence</button><button class="btn">📺 Çeşitli</button><button class="btn">🌍 Ülkeler</button><button class="btn">📢 Tüm kanallar</button></div>
+            <div class="category-list" id="categoryList" style="display: none;">
+<button class="btn">⭐ Favoriler</button>
+<button class="btn">📺 Sporlar</button
+><button class="btn">📡 Türkçe</button>
+<button class="btn">🎭 Eğlence</button>
+<button class="btn">📺 Çeşitli</button>
+<button class="btn">🌍 Ülkeler</button>
+<button class="btn">📢 Tüm kanallar</button>
+ 
+</div>
             <div class="channel-list" id="channelList" style="display: none;"><div class="channel-item">
             <span class="channel-number">1. </span>
-            <span class="channel-name">beIN Sports 2</span>
+            <span class="channel-name">Tursi</span>
             <button class="fav-btn" onclick="toggleFavorite('https://cdn-cine5tv.yayin.com.tr/cine5tv/cine5tv/playlist.m3u8', this)">☆</button>
         </div></div>
         </div>
