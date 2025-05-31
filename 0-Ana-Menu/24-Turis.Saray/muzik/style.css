@@ -1,0 +1,66 @@
+* {
+
+    padding: 0px;
+
+    margin: 0px;
+    font-family: Arial, Verdana, sans-serif;
+
+}
+
+
+
+body {
+
+    background-color: black;
+
+    width: 960px;
+
+    margin: 0px auto;
+
+
+}
+
+header {
+    height: 40px;
+    background-color: #000000;
+    border: #C0C0C0 5px outset;
+    padding-bottom: 10px;
+    border-radius: 0px;
+}
+
+header h1 {
+    font-style: normal;
+    font-family: Verdana;
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+    padding-top: 5px;
+    text-shadow: blue 2px 4px 4px;
+}
+
+
+article {
+    background-color: #000000;
+    margin-right: 0px;
+
+    padding-right: 0px;
+
+    padding-left: 0px;
+
+    padding-top: 0px;
+
+    padding-bottom: 0px;
+
+}
+
+
+
+section {
+
+    background-color: black;
+
+    width: 1050px;
+
+    float: center;
+
+}

@@ -1,0 +1,617 @@
+﻿<!DOCTYPE HTML>
+<html oncontextmenu="return false">
+<head>
+<meta name="Description" content="En yeni Türkçe ve Almanca Sinema Filmleri HD Kalite Turis Tv  Sinema da.">
+<meta name="keywords" content="Sinema, Sinema izle, Film izle, Sinema seyret, Online Sinema izle, Sinema türk filmleri, Türkçe Yerli Filmler, Yeşilçam türk filmleri, En yeni Filmler, Kemal Sunal Filmleri, Saban izle, Komik Film izle, Komedi Film izle, Tek parça Film izle, Film den sonra Film izle, HD Kalite, En yeni Sinema Filmleri , Bedava sinema izle, Almanca Film izle, Sinemalarda oynayan en yeni Filmleri izle">
+<meta name="author" content="Turis Tv  Sinema| www.Turis.Tv /sinema">
+<meta name="googlebot" content="index,follow">
+<meta name="expires" content="0"> 
+    <title>TURIS SİNEMA TV| FİLM İZLE </title>
+<link href="../favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link rel="stylesheet" href="../style.css">
+<meta name="google-site-verification" content="WWtVwwEZ8YM5VuAvl0UZrnSp3ikQ1_kIZoYgiak-cls">
+    <meta charset="UTF-8">
+    
+<style>
+left{
+float:left;
+}
+.right{
+float:right;
+}
+.sol{
+float:right;
+}
+.sag{
+float:left;
+}
+.rts{
+position:relative;
+height:100%;
+background:#111111;
+}
+.rtsl{
+margin-left:330px;
+height:100%;
+}
+.rtsg{
+height:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+width:330px;
+position:absolute;
+left:10px;
+top:0px;
+bottom:0px;
+}
+.ch-liste ul{
+padding:5;
+padding-left:0px;
+margin:7px 0px;
+margin-left:15px;
+color:#fff000;
+font-size:14px;
+}
+.ch-liste ul li{
+clear:both;
+list-style-type:none;
+margin-bottom:5px;
+}
+.ch-liste ul li a{
+color:#2ECCFA;
+font-size:16px;
+}
+.ch-liste ul li a:hover{
+color:#E7E7E7;
+}
+ul#yayin{
+padding:0;
+padding-left:1px;
+margin-left:10px;
+color:#000000;
+font-size:16px;
+}
+ul#yayin li{
+list-style:none;
+float:left;
+margin:5px;
+font-size:14px;
+background-color:#fff;
+padding:1px 5px;
+border-radius:5px;
+}
+ul#yayin li a{
+color:#000;
+}
+ul#yayin li a:hover{
+color:#333;
+background-color:#E4E4E4;
+display:block;
+}
+p{
+padding:0;
+padding-left:1px;
+margin-left:1px;
+color:#000000;
+font-size:16px;
+}
+}
+h1{
+color:#fff;
+margin:5px;
+padding:0px;
+}
+.filterinput{
+width:80%;
+margin:5px 0;
+border:solid 1px #f4f4f4;
+padding:5px 3%;
+border-radius:10px;
+outline:none;
+}
+a{
+text-decoration: none;
+}
+</style>
+   <style>
+article a{
+padding-bottom: 5px;
+outset;padding-top: 5px; 
+text-decoration: none;
+}
+
+
+
+
+
+
+    </style>
+</head>                
+
+<body oncontextmenu="return false"> 
+ 
+<main role="main">
+
+<nav>
+<ul>
+<li><a title="Turis Tv " href="../index.html">Turis Tv </a></li>
+<li><a title="Haber" href="../haber/index.html">Haber</a></li>
+<li><a title="Spor" href="../spor/index.html">Spor</a></li>
+<li><a title="TV" href="../tv/index.html">TV</a></li>
+<li><a title="Dizi" href="../dizi/index.html">Dizi</a></li>
+<li><span>Sinema</span></li>
+<li><a title="Müzik" href="../muzik/index.html">Müzik</a></li>
+ 
+</ul>
+</nav>
+	</main>
+
+<section>
+<article>
+<h1>TURIS TV YERLİ SİNEMA FİLMLERİ 2</h1>
+</article>
+<article>
+<div class="rts">
+<div class="rtsl">
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<iframe width="100%" height="600" src="sinema/logosia.htm" name="orta6" scrolling="no" allowfullscreen="" webkitallowfullscreen="" frameborder="0" style="border: 0 none transparent;"></iframe></td>
+</tr>
+</table>
+<div class="rtsg">
+<script src="js/jquery.min.js"></script>
+  <script>
+(function ($) {
+  jQuery.expr[':'].Contains = function(a,i,m){
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+  };
+
+
+  function listFilter(header, list) { // header is any element, list is an unordered list
+    // create and add the filter form to the header
+    var form = $("<form>").attr({"class":"filterform","action":"#"}),
+        input = $("<input>").attr({"class":"filterinput","type":"text","placeholder":"Film Ara.."});
+    $(form).append(input).appendTo(header);
+
+    $(input)
+      .change( function () {
+        var filter = $(this).val();
+        if(filter) {
+          // this finds all links in a list that contain the input,
+          // and hide the ones not containing the input while showing the ones that do
+          $(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();
+          $(list).find("a:Contains(" + filter + ")").parent().slideDown();
+        } else {
+          $(list).find("li").slideDown();
+        }
+        return false;
+      })
+    .keyup( function () {
+        // fire the above change event after every letter
+        $(this).change();
+    });
+  }
+
+
+  //ondomready
+  $(function () {
+    listFilter($("#header"), $("#list"));
+  });
+}(jQuery));
+
+  </script>
+
+<div class="ch-liste">
+  <h2 id="header"></h2>
+
+
+
+
+
+
+<ul id="list">
+<li><a href="javascript:;" onclick="window.open('http://online.hdgo.site/player30/playerjs.html?file=http://video.az/embed/movie/19474', 'orta6');return(false);">Dayı: Bir Adamın Hikâyesi (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/19473', 'orta6');return(false);">Aykut Enişte 2 (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/19269', 'orta6');return(false);">Seni Bulacam Oğlum! (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/19154', 'orta6');return(false);">Sen Yaşamaya Bak (2022)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/18957', 'orta6');return(false);">Babamın Kemanı (2022)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/18886', 'orta6');return(false);">Cem Yilmaz: Diamond Elite (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/18161', 'orta6');return(false);">Geçen Yaz (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/18155', 'orta6');return(false);">Acı Kiraz (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/18007', 'orta6');return(false);">Gelincik (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17984', 'orta6');return(false);">Sen Hiç Ateşböceği Gördün Mü? (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17983', 'orta6');return(false);">Nasipse Adayız (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17891', 'orta6');return(false);">Kovan (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17844', 'orta6');return(false);">Kağıttan Hayatlar (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17615', 'orta6');return(false);">Azizler (2021)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17536', 'orta6');return(false);">Ağır Romantik (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17486', 'orta6');return(false);">9 Kere Leyla (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17447', 'orta6');return(false);">Aman Reis Duymasın (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17406', 'orta6');return(false);">Kırk Yalan (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17358', 'orta6');return(false);">Hemen Döneriz (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17355', 'orta6');return(false);">Nuh Tepesi (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17336', 'orta6');return(false);">Aşk Tesadüfleri Sever 2 (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17267', 'orta6');return(false);">Konuşan Hayvanlar (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17240', 'orta6');return(false);">Yalan Dolan (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17239', 'orta6');return(false);">Zengo (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17238', 'orta6');return(false);">Döndüm Ben (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17182', 'orta6');return(false);">Feride (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17170', 'orta6');return(false);">Kasada Para Var! (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17167', 'orta6');return(false);">Baba Parası (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17147', 'orta6');return(false);">Cep Herkülü  (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17132', 'orta6');return(false);">Masallardan Geriye Kalan (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/17097', 'orta6');return(false);">Bayi Toplantısı (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16997', 'orta6');return(false);">Deli (2020) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16996', 'orta6');return(false);">Emanet (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16969', 'orta6');return(false);">Yarına Tek Bilet (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16968', 'orta6');return(false);">Hayaller Ülkesi: Gamonya (2020)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16847', 'orta6');return(false);">Cinnet (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16840', 'orta6');return(false);">Güzelliğin Portresi (2020) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16805', 'orta6');return(false);">Mucize 2 Aşk (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16790', 'orta6');return(false);">Cinayet Süsü (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16703', 'orta6');return(false);">Recep İvedik 6 (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16698', 'orta6');return(false);">Kral Şakir: Korsanlar Diyarı (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16662', 'orta6');return(false);">Merhaba Güzel Vatanım (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16622', 'orta6');return(false);">Karakomik Filmler: Kaçamak (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16621', 'orta6');return(false);">Karakomik Filmler: 2 Arada (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16570', 'orta6');return(false);">7. Koğuştaki Mucize  (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16539', 'orta6');return(false);">Annem (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16495', 'orta6');return(false);">Hareket Sekiz (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16356', 'orta6');return(false);">Sesinde Aşk Var (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16355', 'orta6');return(false);">Astral Seyahat (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16314', 'orta6');return(false);">Geniş Aile: Komşu Kızı (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16313', 'orta6');return(false);">Fırıncının Karısı (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16144', 'orta6');return(false);">Bozkır: Kuşlara Bak Kuşlara (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16113', 'orta6');return(false);">Siccin 6 (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16053', 'orta6');return(false);">Aykut Enişte (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16052', 'orta6');return(false);">Sar Başa (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16046', 'orta6');return(false);">Kim Daha Mutlu? (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16027', 'orta6');return(false);">Suç Unsuru (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16007', 'orta6');return(false);">Türk İşi Dondurma (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15989', 'orta6');return(false);">Kapı (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15954', 'orta6');return(false);">Enes Batur: Gerçek Kahraman (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15927', 'orta6');return(false);">Bana Bir Soygun Yaz 2 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15920', 'orta6');return(false);">Üç Harfliler: Adak (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15881', 'orta6');return(false);">Öldür Beni Sevgilim (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15870', 'orta6');return(false);">Ali (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15800', 'orta6');return(false);">Aşk Bu Mu? (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15788', 'orta6');return(false);">Aslı Gibidir (2019) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15724', 'orta6');return(false);">Borç Harç (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15720', 'orta6');return(false);">Hababam Sınıfı Yeniden (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15658', 'orta6');return(false);">Bir Aşk İki Hayat (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15926', 'orta6');return(false);">Cin Deresi: Müsfer (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/16006', 'orta6');return(false);">Dünya Hali (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15977', 'orta6');return(false);">Sibel (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15909', 'orta6');return(false);">Nebula (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15879', 'orta6');return(false);">Çakallarla Dans 5 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15823', 'orta6');return(false);">Bizi Hatırla (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15813', 'orta6');return(false);">Siccin 5 (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15799', 'orta6');return(false);">Yanımda Kal (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15760', 'orta6');return(false);">Kafir (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15737', 'orta6');return(false);">Deniz ve Güneş (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15731', 'orta6');return(false);">4N1K 2 (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15692', 'orta6');return(false);">Yol Arkadaşım 2 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15630', 'orta6');return(false);">Arada (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15910', 'orta6');return(false);">Yalan Dolan (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15613', 'orta6');return(false);">Müslüm (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15606', 'orta6');return(false);">Deliler: Fatih'in Fermanı (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15539', 'orta6');return(false);">Bebek Geliyorum Demez (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15530', 'orta6');return(false);">Bizim için Şampiyon: Bold Pilot (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15465', 'orta6');return(false);">Zor Oyun: Kapanmayan Bir Hesap (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15403', 'orta6');return(false);">Hep Yek 3 (2019)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15479', 'orta6');return(false);">Her Şey Seninle Güzel (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15406', 'orta6');return(false);">İyi Oyun (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15447', 'orta6');return(false);">Göktaşı (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15457', 'orta6');return(false);">Hedefim Sensin (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15478', 'orta6');return(false);">Börü (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15343', 'orta6');return(false);">Gürbüz: Hadi Allah'a Emanet (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15313', 'orta6');return(false);">Bücür (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15280', 'orta6');return(false);">Üç Harfliler: Beddua (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15258', 'orta6');return(false);">Trileçe (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15245', 'orta6');return(false);">Güvercin (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15200', 'orta6');return(false);">Gerçek Kesit: Manyak (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15150', 'orta6');return(false);">Canavar Gibi: Türk İşi Frankeştayn (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15131', 'orta6');return(false);">Ahlat Ağacı (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15130', 'orta6');return(false);">Sükut Evi (2018)  </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15072', 'orta6');return(false);">Daha (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15043', 'orta6');return(false);">Arapsaçı (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14902', 'orta6');return(false);">Eyvah Karım (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14847', 'orta6');return(false);">Cici Babam (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14827', 'orta6');return(false);">Kayhan (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14801', 'orta6');return(false);">Ailecek Şaşkınız (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14800', 'orta6');return(false);">Oflu Hoca'nın Şifresi 3 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14785', 'orta6');return(false);">Bizim Köyün Şarkısı (2018) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14753', 'orta6');return(false);">Kelebekler (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14751', 'orta6');return(false);">Görevimiz Tatil (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14657', 'orta6');return(false);">Düğüm Salonu (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14631', 'orta6');return(false);">Can Feda (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14615', 'orta6');return(false);">Ev Kira Semt Bizim (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14589', 'orta6');return(false);">Cebimdeki Yabancı (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14567', 'orta6');return(false);">Ölümlü Dünya (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14566', 'orta6');return(false);">Sofra Sırları (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14545', 'orta6');return(false);">Direniş Karatay (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14538', 'orta6');return(false);">Arif v 216 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14527', 'orta6');return(false);">Aşkın Gören Gözlere İhtiyacı Yok (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14441', 'orta6');return(false);">Çocuklar Sana Emanet (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14398', 'orta6');return(false);">Enes Batur Hayal mi Gerçek mi? (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14396', 'orta6');return(false);">Aile Arasında (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14391', 'orta6');return(false);">Hadi Be Oğlum (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14390', 'orta6');return(false);">Dünyanin En Güzel Kokusu 2 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14350', 'orta6');return(false);">Deliha 2 (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14120', 'orta6');return(false);">Rüzgar (2018)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15295', 'orta6');return(false);">Zengin Kısmet (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15015', 'orta6');return(false);">Çetrefilli (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/15005', 'orta6');return(false);">Kar (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14750', 'orta6');return(false);">Kaygı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14669', 'orta6');return(false);">Yanlış Anlama (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14458', 'orta6');return(false);">Siccin 4 (2017) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14405', 'orta6');return(false);">Sen Kiminle Dans Ediyorsun? (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14349', 'orta6');return(false);">Organik Aşk Hikayeleri (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14346', 'orta6');return(false);">Martıların Efendisi (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14345', 'orta6');return(false);">Körfez (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14322', 'orta6');return(false);">Ayla (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14311', 'orta6');return(false);">Maide'nin Altın Günü (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14290', 'orta6');return(false);">Acı Tatlı Ekşi (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14258', 'orta6');return(false);">Kardeşim Benim 2 (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14234', 'orta6');return(false);">Yol Ayrımı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14215', 'orta6');return(false);">İlk Öpücük (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14214', 'orta6');return(false);">Kurtlar Vadisi: Vatan (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14150', 'orta6');return(false);">Mutluluk Zamanı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14149', 'orta6');return(false);">Çam Yarması (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14121', 'orta6');return(false);">Bölük (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/14037', 'orta6');return(false);">Yeni Başlayanlar İçin Hayatta Kalma Sanatı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13969', 'orta6');return(false);">Yol Arkadaşım (2017) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13967', 'orta6');return(false);">Salur Kazan: Zoraki Kahraman (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13950', 'orta6');return(false);">Öteki Taraf (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13915', 'orta6');return(false);">Aşk Uykusu (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13879', 'orta6');return(false);">Şansımı Seveyim (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13856', 'orta6');return(false);">Göçebe (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13846', 'orta6');return(false);">Mezarcı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13845', 'orta6');return(false);">Cenaze İşleri (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13734', 'orta6');return(false);">Poyraz Karayel(2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13731', 'orta6');return(false);">Ufak Tefek Cinayetler  (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13795', 'orta6');return(false);">4N1K (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13768', 'orta6');return(false);">Cingöz Recai (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13727', 'orta6');return(false);">Sinsiran: Yasak Aşk (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13613', 'orta6');return(false);">Deli Dumrul (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13608', 'orta6');return(false);">Ketenpere (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13517', 'orta6');return(false);">Dört Köşe (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13475', 'orta6');return(false);">Ver Kaç (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13218', 'orta6');return(false);">Tatlı Şeyler (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13001', 'orta6');return(false);">Eski Sevgili (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13187', 'orta6');return(false);">Recep İvedik 5 (2017) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13218', 'orta6');return(false);">Tatlı Şeyler (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12871', 'orta6');return(false);">Kolonya Cumhuriyeti (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12855', 'orta6');return(false);">Deli Aşk (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12842', 'orta6');return(false);">Sonsuz Aşk (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12767', 'orta6');return(false);">Yaşamak Güzel Şey (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12746', 'orta6');return(false);">Tatlım Tatlım (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12677', 'orta6');return(false);">Cereyan (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12591', 'orta6');return(false);">Istanbul Kırmızısı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12510', 'orta6');return(false);">Çalgı Çengi İkimiz (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12510', 'orta6');return(false);">Fırıldak Ailesi (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12429', 'orta6');return(false);">Hep Yek 2 (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12417', 'orta6');return(false);">Vezir Parmağı (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12406', 'orta6');return(false);">Kötü Çocuk (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12368', 'orta6');return(false);">Olanlar Oldu (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12346', 'orta6');return(false);">Rus'un Oyunu (2017)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12161', 'orta6');return(false);">Benim Adım Feridun (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13735', 'orta6');return(false);">Sekerat: Son (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13688', 'orta6');return(false);">Ifrit’in Diyeti: Cinnia (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12196', 'orta6');return(false);">Dağ 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12210', 'orta6');return(false);">Ve Panayır Köyden Gider (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12243', 'orta6');return(false);">İkimizin Yerine (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12314', 'orta6');return(false);">İkinci Şans (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('https://ok.ru/videoembed/368092711558', 'orta6');return(false);">Çetin Ceviz (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12319', 'orta6');return(false);">Çetin Ceviz 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12375', 'orta6');return(false);">Dönerse Senindir (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12383', 'orta6');return(false);">Tereddüt (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12560', 'orta6');return(false);">Psişik (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12484', 'orta6');return(false);">Alamet-i Kıyamet: Tarikat (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12559', 'orta6');return(false);">Azazil 2: Büyü (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12670', 'orta6');return(false);">Rauf (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12558', 'orta6');return(false);">Kedi (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12495', 'orta6');return(false);">Korku Komedi: Bana Normal Aktiviteler (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12125', 'orta6');return(false);">Görümce (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12083', 'orta6');return(false);">1 Kezban 1 Mahmut: Adana Yollarında (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12067', 'orta6');return(false);">Dadaş (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12051', 'orta6');return(false);">Aşık (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12049', 'orta6');return(false);">Bi O Kalmıştı (B. O. K.) (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12032', 'orta6');return(false);">Çok Uzak Fazla Yakın (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12028', 'orta6');return(false);">Ekşi Elmalar (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12022', 'orta6');return(false);">Hasret Bitti (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12003', 'orta6');return(false);">Kor (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11940', 'orta6');return(false);">Koca Dünya (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11907', 'orta6');return(false);">Yolculuk (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11906', 'orta6');return(false);">Emanet (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11875', 'orta6');return(false);">Seni Seven Ölsün (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11872', 'orta6');return(false);">Geniş Aile 2: Her Türlü (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11853', 'orta6');return(false);">Dünyanın En Güzel Kokusu (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11842', 'orta6');return(false);">Çakallarla Dans 4 (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11838', 'orta6');return(false);">El Değmemiş Aşk (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11810', 'orta6');return(false);">Siccin 3: Cürmü Aşk (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11753', 'orta6');return(false);">Yok Artık 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11749', 'orta6');return(false);">Bir Baba Hindu (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11578', 'orta6');return(false);">İftarlık Gazoz (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11473', 'orta6');return(false);">Ammar 2: Cin İstilası (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11469', 'orta6');return(false);">Annemin Yarası (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11447', 'orta6');return(false);">Babaların Babası (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11417', 'orta6');return(false);">Kabr-i Cin: Mühür (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11391', 'orta6');return(false);">Oflu Hoca'nın Şifresi 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11289', 'orta6');return(false);">Hayat Çizgisi Suriye (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11272', 'orta6');return(false);">Ankara Yazı: Veda Mektubu (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11198', 'orta6');return(false);">Kızkaçıran (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11187', 'orta6');return(false);">Ya Nasip Ya Kısmet (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11178', 'orta6');return(false);">Umut Apartmanı (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11166', 'orta6');return(false);">Magi (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11165', 'orta6');return(false);">Senarist (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11062', 'orta6');return(false);">Kaçma Birader (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11026', 'orta6');return(false);">Çağrılan (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10915', 'orta6');return(false);">Azem 3: Cin Tohumu (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10907', 'orta6');return(false);">Siccin 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10874', 'orta6');return(false);">Somuncu Baba: Aşkın Sırrı (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10838', 'orta6');return(false);">Sol Şerit (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10833', 'orta6');return(false);">Memleket (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10733', 'orta6');return(false);">Ali Kundilli 2 (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10695', 'orta6');return(false);">Küçük Esnaf (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10595', 'orta6');return(false);">Kolpaçino 3. Devre (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10428', 'orta6');return(false);">Leblebi Tozu (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10351', 'orta6');return(false);">Kötü Kedi Şerafettin (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10328', 'orta6');return(false);">Osman Pazarlama (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10119', 'orta6');return(false);">Hep Yek (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10118', 'orta6');return(false);">Dedemin Fişi (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9955', 'orta6');return(false);">Bizans Oyunları (2016) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9911', 'orta6');return(false);">Kocan Kadar Konuş: Diriliş (2016)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/13692', 'orta6');return(false);">Sihirbazlık Okulunda Bir Türk (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12004', 'orta6');return(false);">Yav He He: Sabri ile Medeni (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11852', 'orta6');return(false);">Madımak: Carina'nın Günlüğü (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11186', 'orta6');return(false);">Çelo (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11181', 'orta6');return(false);">Tabula Rosa (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/11180', 'orta6');return(false);">Makas (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10961', 'orta6');return(false);">Aşkopat (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10957', 'orta6');return(false);">Abluka (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10835', 'orta6');return(false);">Helak: Kayıp Köy (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10813', 'orta6');return(false);">Ertuğrul 1890 - Kainan 1890 (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10732', 'orta6');return(false);">Ali Kundilli (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10427', 'orta6');return(false);">Yaktın Beni (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10165', 'orta6');return(false);">Delibal (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10087', 'orta6');return(false);">Bulantı (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10086', 'orta6');return(false);">Baskın: Karabasan (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10009', 'orta6');return(false);">Dabbe 6 - Dab6e (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10008', 'orta6');return(false);">Nadide Hayat (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9954', 'orta6');return(false);">Çekmeköy Underground (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9810', 'orta6');return(false);">Dügün Dernek 2: Sünnet (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9748', 'orta6');return(false);">Uzaklarda Arama (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9715', 'orta6');return(false);">8 Seconds (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9640', 'orta6');return(false);">Git Başımdan (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9611', 'orta6');return(false);">Mavi Gece (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9421', 'orta6');return(false);">Kırmızı (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9379', 'orta6');return(false);">Geniş Aile: Yapıştır (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9378', 'orta6');return(false);">En Güzeli (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9377', 'orta6');return(false);">Piyasadan Büyük Alacağımız Var (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9375', 'orta6');return(false);">Merdiven Baba (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9325', 'orta6');return(false);">Kafes (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9324', 'orta6');return(false);">Can Tertip (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9205', 'orta6');return(false);">Son Mektup (2015) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9201', 'orta6');return(false);">Çekmeceler (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8117', 'orta6');return(false);">Limonata (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8716', 'orta6');return(false);">Bana Adını Sor (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8358', 'orta6');return(false);">Mutlu Kuzular (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8338', 'orta6');return(false);">Bir Gece (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8287', 'orta6');return(false);">Kocan Kadar Konuş (2015)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10913', 'orta6');return(false);">Azem: Cin Karası (2014)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9714', 'orta6');return(false);">Neden Tarkovski Olamıyorum (2014) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8219', 'orta6');return(false);">Şipşak Anadolu (2014)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/6565', 'orta6');return(false);">Mutlak Adalet (2014)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8108', 'orta6');return(false);">Yağmur: Kıyamet Çiceği (2014) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/8100', 'orta6');return(false);">Dabbe 5: Zehri Cin (2014) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/7940', 'orta6');return(false);">Mucize (2014)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10004', 'orta6');return(false);">Dabbe 4: Cin Çarpması (2013)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/5587', 'orta6');return(false);">Dügün Dernek (2013)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9868', 'orta6');return(false);">Ses (2010)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9865', 'orta6');return(false);">Gölgeler ve Suretler (2010)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10901', 'orta6');return(false);">Uzak İhtimal (2009)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10815', 'orta6');return(false);">Vali (2009)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10797', 'orta6');return(false);">Ulak (2008)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9863', 'orta6');return(false);">Sonbahar (2008)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9867', 'orta6');return(false);">Küçük Kıyamet (2006)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9838', 'orta6');return(false);">Vizontele (2001)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9440', 'orta6');return(false);">Yazgı (2001)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10805', 'orta6');return(false);">Üçüncü Sayfa (1999) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9439', 'orta6');return(false);">Gemide (1998) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9191', 'orta6');return(false);">Masumiyet (1997) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/9441', 'orta6');return(false);">Eşkıya (1996)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12876', 'orta6');return(false);">İstanbul Kanatlarımın Altında (1996)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/10899', 'orta6');return(false);">Otobüs (1976)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12824', 'orta6');return(false);">Postacı (1984)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12823', 'orta6');return(false);">Deli Deli Küpeli (1986)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12822', 'orta6');return(false);">Katma Değer Şaban (1985)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12821', 'orta6');return(false);">Yakışıklı (1987)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12820', 'orta6');return(false);">Bıçkın (1988) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12819', 'orta6');return(false);">Kanlı Nigar (1981)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12818', 'orta6');return(false);">Doktor Civanım (1982)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12817', 'orta6');return(false);">Gol Kralı (1981)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12816', 'orta6');return(false);">Garip (1986) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12815', 'orta6');return(false);">Köyden İndim Şehire (1974) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12802', 'orta6');return(false);">Ortadirek Şaban (1984)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12801', 'orta6');return(false);">Oh Olsun (1973)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12800', 'orta6');return(false);">Zehir Hafiye (1989)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12799', 'orta6');return(false);">Mavi Boncuk (1974)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12798', 'orta6');return(false);">Kiracı (1987)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12797', 'orta6');return(false);">Çöpçüler Kralı (1977)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12796', 'orta6');return(false);">Dokunmayın Şabanıma (1979) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12795', 'orta6');return(false);">İnek Şaban (1978)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12794', 'orta6');return(false);">Umudumuz Şaban (1979)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12793', 'orta6');return(false);">Bekçiler Kralı (1979)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12666', 'orta6');return(false);">Hababam Sınıfı (1974) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12665', 'orta6');return(false);">Hababam Sınıfı Sınıfta Kaldı (1975) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12664', 'orta6');return(false);">Hababam Sınıfı Tatilde (1977)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12663', 'orta6');return(false);">Hababam Sınıfı Uyanıyor (1976) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12662', 'orta6');return(false);">Hababam Sınıfı Dokuz Doğuruyor (1978)</a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12661', 'orta6');return(false);">Hababam Sınıfı Güle Güle (1981) </a></li>
+<li><a href="javascript:;" onclick="window.open('http://video.az/embed/movie/12660', 'orta6');return(false);">Hababam Sınıfı Üç Buçuk (2005)</a></li>
+
+
+</ul>
+</div>
+</div>
+</div>
+
+</div></article>
+</section>
+<aside>
+<main role="main">
+
+<nav>
+<ul>
+<li><a class="buton" href="index.html">Anasayfa</a></li>
+<li><a class="buton" href="cinema.html">Sinema TV</a></li>
+<li><a class="buton" href="cinema1.html">Sinema TV 1</a></li>
+<li><a class="buton" href="cinema2.html">Sinema TV 2</a></li>
+<li><a class="buton" href="cinema3.html">Sinema TV 3</a></li>
+<li><a class="buton" href="sinema-salonu-1.html">Salon Yerli TR 1</a></li>
+<li><a class="buton" href="sinema-salonu-1a.html">Salon Yerli TR 2</a></li>
+<li><a class="buton" href="sinema-salonu-2.html">Salon Yabancı-TR 1</a></li>
+<li><a class="buton" href="sinema-salonu-2a.html">Salon Yabancı-TR 2</a></li>
+<li><a class="buton" href="yesilcam.html">Yeşilçam TV</a></li>
+<li><span>Sinema Web Link</span>
+<ul>
+
+<li><a class="buton" href="https://www.kool.to/web-vod/browse?id=movie.trending" target="_blank">Sinema</a></li>
+<li><a class="buton" href="http://video.az/movie/lang/tr" target="_blank">TR Sinema</a></li>
+<li><a class="buton" href="https://jetfilmizle.watch/yerli-film-izle-full-hd" target="_blank">JetFilmizle</a></li>
+<li><a class="buton" href="sinema-18.html">XXX-18++</a>
+</li></ul>
+</li>
+</ul>
+</nav>
+	</main>
+</aside>
+
+    <footer>
+
+ 
+
+
+
+
+
+
+<article>
+    
+<div style="background-color: #0b3861;"><br></div>
+<div style="background-color: #0b3861; align=" center"="" style="color: #ffffff;">Copyright &copy; 2025 &middot; Turis Tv  
+<div style="background-color: #0b3861;"><br></div>
+ 
+
+</div></article>
+   </footer>
+
+
+
+
+</body>
+
+</html>
