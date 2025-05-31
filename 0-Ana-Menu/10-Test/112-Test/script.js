@@ -33,7 +33,7 @@ function loadCategories() {
         "arabic": "📡 Türkçe",
         "entertainment": "🎭 eğlence",
         "variety": "📺 Çeşitli",
-        "world": "🌍 Ülkeler",
+        "Ülkeler": "🌍 Ülkeler",
         "all": "📢 Tüm kanallar"
  
     };
@@ -441,7 +441,7 @@ languageOptions.forEach((opt, index) => {
             "arabic": "📡 Turkish",
             "entertainment": "🎭 Entertainment",
             "variety": "📺 Variety",
-            "world": "🌍 International",
+            "Ülkeler": "🌍 International",
             "all": "📢 All Channels"
   
 
@@ -460,7 +460,7 @@ languageOptions.forEach((opt, index) => {
             "arabic": "📡 Türkçe",
             "entertainment": "🎭 eğlence",
             "variety": "📺 Çeşitli",
-            "world": "🌍 Ülkeler",
+            "Ülkeler": "🌍 Ülkeler",
             "all": "📢 Tüm kanallar"
  
         };
