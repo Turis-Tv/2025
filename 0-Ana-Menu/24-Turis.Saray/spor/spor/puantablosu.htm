@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html oncontextmenu="return false">
+<head>
+<script>
+$(document).bind("contextmenu",function(e) {
+ e.preventDefault();
+});
+$(document).keydown(function(e){
+    if(e.which === 123){
+       return false;
+    }
+});
+</script>
+</head>
+<body oncontextmenu="return false">
+<div align="center" background="white">
+<iframe id="Puantablosu" src="https://haberciniz.biz/service/sport/league_standing_table.php?color=1&select=TUR1,TUR2,SPA1,ENG1,GER1" style="width:100%; height:800px; background:white;*border:1px solid red;" frameborder="0"></iframe>
+</body>
+</html>
