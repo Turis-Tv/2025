@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html oncontextmenu="return false">
+<head>
+  <script src="js/debug.js"></script>
+  <script src="js/hls.js"></script>
+  <script src="js/mousetrap.min.js" charset="utf-8"></script>
+  <style>
+    body{
+      background-color:black;
+    }
+    #video{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  </style>
+<title>M3U8 Player running...</title></head>
+<body oncontextmenu="return false">
+<img src="https://i.hizliresim.com/k9GlL9.png" style="position:absolute;left:0px;top:0px;z-index:5;cursor:pointer;" onclick="location.reload();" alt="" />
+  <video id="video" style="width: 100%; height: 100%;" controls=""></video>
+  <script src="js/player.js"></script>
+</body>
+</html>
