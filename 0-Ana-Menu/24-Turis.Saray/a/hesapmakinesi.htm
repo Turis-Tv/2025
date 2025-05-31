@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<body style="background:#000000;">
+<p><font style="color:#FFFFFF; font-size:28px;">&nbsp;&nbsp;&nbsp;&nbsp;Hesap Makinesi</font></p>
+
+<form name="myform"><table width="210" border="1" cellspacing="1" cellpadding="1" bgcolor="#003366">
+      <tr>
+        <td align="center"> 
+          <table width="173" border="0" cellspacing="0" cellpadding="0" height="130">
+            <tr> 
+              
+            </tr>
+            <tr> 
+              <td colspan="3"> 
+                <input type="text" name="display" size="20">
+              </td>
+              <td width="53" height="0"> <font color="#FFFFFF"> 
+                <input type="button" name="clear" value="   c   "
+            onClick="myform.display.value=''" onMouseover="window.status='Clear numbers'" onMouseout="window.status=''">
+                </font></td>
+            </tr>
+            <tr> 
+              <td width="53" height="0"> 
+                <input type="button" name="seven" value="   7   "
+            onClick="myform.display.value+='7'">
+              </td>
+              <td width="53" height="0"> 
+                <input type="button" name="eight" value="   8   "
+            onClick="myform.display.value+='8'">
+              </td>
+              <td width="53" height="0"> 
+                <input type="button" name="nine" value="   9   "
+            onClick="myform.display.value+='9'">
+              </td>
+              <td width="53" height="0"> <font color="#FFFFFF"> 
+                <input type="button" name="divide" value="   /    "
+            onClick="myform.display.value+='/'">
+                </font></td>
+            </tr>
+            <tr> 
+              <td width="53" height="0"> 
+                <input type="button" name="four" value="   4   "
+            onClick="myform.display.value+='4'">
+              </td>
+              <td width="53" height="0"> 
+                <input type="button" name="five" value="   5   "
+            onClick="myform.display.value+='5'">
+              </td>
+              <td width="53" height="0"> 
+                <input type="button" name="six" value="   6   "
+            onClick="myform.display.value+='6'">
+              </td>
+              <td width="53" height="0"> <font color="#FFFFFF"> 
+                <input type="button" name="times" value="   x   "
+            onClick="myform.display.value+='*'">
+                </font></td>
+            </tr>
+            <tr> 
+              <td width="53" height="0"> 
+                <input type="button" name="one" value="   1   "
+            onClick="myform.display.value +='1'">
+              </td>
+              <td width="53" height="0"> 
+                <input type="button" name="two" value="   2   "
+            onClick="myform.display.value +='2'">
+              </td>
+              <td width="54" height="0"> 
+                <input type="button" name="three" value="   3   "
+            onClick="myform.display.value +='3'">
+              </td>
+              <td width="72" height="0"> <font color="#FFFFFF"> 
+                <input type="button" name="minus" value="    -   "
+            onClick="myform.display.value+='-'">
+                </font></td>
+            </tr>
+            <tr> 
+              <td width="53" height="0"> 
+                <input type="button" name="zero" value="   0   "
+            onClick="myform.display.value+='0'">
+              </td>
+              <td width="53" height="0"> </td>
+              <td width="54" height="0"> 
+                <input type="button" name="plus" value="   +   "
+            onClick="myform.display.value +='+'">
+              </td>
+              <td width="72" height="0"> <font color="#FFFFFF"> 
+                <input type="button" name="calculate" value="   =   "
+            onClick="myform.display.value=eval(myform.display.value)">
+                </font></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+
+</body>
+</html>

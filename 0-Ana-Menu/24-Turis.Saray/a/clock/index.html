@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html oncontextmenu="return false">
+
+<head>
+	<link rel="styleseheet" href="standard.css" type="text/css">
+	<link href='../../css?family=Nosifer+Caps' rel='stylesheet' type='text/css'>	<script type="text/javascript" src="clock.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	var leadingZeroHour = 'true';
+	var dateFormat = 'dd.month.yyyy';
+
+	if(dateFormat == "dd.mm" || dateFormat == "dd.month" || dateFormat == "dd.mon") {
+		$(".cl_year").addClass("hidden");
+	}
+	
+	if(dateFormat == "month.yyyy" || dateFormat == "mon.yyyy") {
+		$(".cl_day").addClass("hidden");;
+	}	
+	
+	function printClock(std, min, sec) {
+		
+			var seconds = (sec < 10 ? "0":"") + sec;
+			var minutes = (min<10?"0":"") + min;
+			if(leadingZeroHour) {
+				var hours = (std<10?"0":"") + std;
+			} else {
+				var hours = std;
+			}
+			$(".cl_seconds").html(":"+ seconds);
+			$(".cl_minutes").html(":"+minutes);
+			$(".cl_hours").html(hours);
+			//$(".the_clock").html(Zeit);
+	}
+
+	function printDate(day, month, year) {
+		
+		switch(dateFormat) {
+			case "dd.mm.yyyy":
+				$(".cl_day").html(day);
+				$(".cl_month").html("."+month);
+				$(".cl_year").html("."+year);
+				break;
+			case "dd.mm.yy":
+				$(".cl_day").html(day);
+				$(".cl_month").html("."+month);
+				//make it a string
+				year +="";
+				year = year.substring(2,4);
+				$(".cl_year").html("."+year);	
+				break;
+			case "dd.month.yyyy":
+				$(".cl_day").html(day);
+				$(".cl_month").html(". "+getFullNameMonth(month));
+				$(".cl_year").html(" "+year);
+				break;
+			case "dd.mon.yyyy":
+				$(".cl_day").html(day);
+				$(".cl_month").html(". "+getShortNameMonth(month));
+				$(".cl_year").html(" "+year);
+				break;
+			case "month.yyyy":
+				$(".cl_month").html(getFullNameMonth(month));
+				$(".cl_year").html(" "+year);
+				break;
+			case "mon.yyyy":
+				$(".cl_month").html(getShortNameMonth(month));
+				$(".cl_year").html(". "+year);
+				break;
+			case "dd.month":
+				$(".cl_day").html(day);
+				$(".cl_month").html(". " +getFullNameMonth(month));
+				break;
+			case "dd.mon":
+				$(".cl_day").html(day);
+				$(".cl_month").html(". " +getShortNameMonth(month) + ".");
+				break;
+			case "dd.mm":
+				$(".cl_day").html(day);
+				$(".cl_month").html(". " + month + ".");
+				break;		
+			default:
+				break;
+		}
+	}
+
+	function getFullNameMonth(month) {
+		months = new Array();
+		months = ["Ocak", "&#350;ubat", "Mart", "Nisan", "May&#305;s", "Haziran", "Temmuz", "A&#287;ustos", "Eylül", "Ekim", "Kas&#305;m", "Aral&#305;k"];
+		return months[month-1];
+	}
+	function getShortNameMonth(month) {
+		months = new Array();
+		months = ["Ocak", "&#350;ubat", "Mart", "Nisan", "May&#305;s", "Haziran", "Temmuz", "A&#287;ustos", "Eylül", "Ekim", "Kas&#305;m", "Aral&#305;k"];
+		return months[month-1];
+	}
+
+	
+</script>
+
+
+	<style>
+		.rounded {
+			-moz-border-radius:8px;
+			-webkit-border-radius:8px;
+			-o-border-radius:8px;
+			-khtml-border-radius:8px;
+			border-radius:8px;
+			behavior:url(PIE.php);
+		}
+		
+		.box {
+			border:none;
+		}
+		.clear {
+			clear: both;
+		}
+		.clear_right {
+			clear: right;
+		}
+		.clear_left {
+			clear: left;
+		}
+		.clear:after {
+		  clear: both;
+			visibility: hidden;
+			display: block;
+			height: 0;
+			content: ".";
+		}
+		body {
+			margin:0;
+			padding:0;
+			background: transparent !important;
+		}
+		* html {
+			margin:0;
+			padding:0;
+		}
+	</style>
+</head>
+
+	<body onload="startClock(true)" oncontextmenu="return false">
+
+        <div class="clear box" id="clock" style="font-family:Nosifer Caps,sans-serif;float:left;padding:20px;background:#000000;color:#0a61af;width:200px;height:90px;">
+							<div class="dateTop">
+											<span style="font-size:15px;line-height:15px;text-align:left;display:block;" class="the_date">
+							<span class='cl_day'></span><span class='cl_month'></span><span class='cl_year'></span>
+						</span><hr color="#0a61af">
+																<span style="font-size:30px;line-height:40px;" class="the_clock">
+							<span class='cl_hours'></span><span class='cl_minutes'></span><span class='cl_seconds'></span>						</span>
+									</div>
+					</div> <!-- end clock -->
+	</body>
+</html>

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta name="expires" content="0"> 
+<script type="text/javascript">
+<!--
+
+var Geschwindigkeit = 10000 , aktuell = 1;
+
+if (document.images) {
+ link = new Array();
+
+
+ bild1 = new Image();
+ bild1.src = "pix1.jpg";
+ link[1] = "http://www.saraydorf.de/a/banner/pix1.jpg";
+
+ bild2 = new Image();
+ bild2.src = "pix2.jpg";
+ link[2] = "http://www.saraydorf.de/a/banner/pix2.jpg";
+
+ bild3 = new Image();
+ bild3.src = "pix3.jpg";
+ link[3] = "http://www.saraydorf.de/a/banner/pix3.jpg";
+
+ bild4 = new Image();
+ bild4.src = "pix4.jpg";
+ link[4] = "http://www.saraydorf.de/a/banner/pix4.jpg";
+
+ bild5 = new Image();
+ bild5.src = "pix5.jpg";
+ link[5] = "http://www.saraydorf.de/a/banner/pix5.jpg";
+
+ bild6 = new Image();
+ bild6.src = "pix6.jpg";
+ link[6] = "http://www.saraydorf.de/a/banner/pix6.jpg";
+
+ bild7 = new Image();
+ bild7.src = "pix7.jpg";
+ link[7] = "http://www.saraydorf.de/a/banner/pix7.jpg";
+
+}
+var anzahl = link.length-1;
+
+function Bilderwechsel(){
+ if (aktuell == anzahl)
+  aktuell = 0; aktuell++;
+  document.images['Banner'].src = window['bild' + aktuell].src;
+  setTimeout ('Bilderwechsel()', Geschwindigkeit)
+}
+
+function neueSeite(){
+ if (document.images)
+ top.location.href = link[aktuell]
+}
+//-->
+</script>
+</head>
+<body onLoad="setTimeout ('Bilderwechsel()', Geschwindigkeit)" oncontextmenu="return false">
+
+<div align="center">
+
+  <img name="Banner" src="pix1.jpg" title="Saraydorf.de" width="596" height="130"></a>
+</div>
+</body></html>

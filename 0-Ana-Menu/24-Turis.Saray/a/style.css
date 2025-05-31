@@ -1,0 +1,362 @@
+* {
+
+
+    padding: 0px;
+
+
+    margin: 0px;
+
+
+    font-family: Arial, Verdana, sans-serif;
+}
+
+
+
+
+
+body {
+
+
+    background-color: #000000;
+
+    width: 1090px;
+
+
+    margin: 0px auto;
+
+
+}
+
+
+
+
+
+header {
+
+
+    height: 80px;
+
+
+    background-color: #000000;
+
+
+    padding-bottom: 0px;
+
+
+    border-radius: 0px;
+
+
+    margin-top: 5px;
+
+
+}
+
+
+
+
+
+nav {
+
+
+    text-align: center;
+
+
+    margin-top: 2px;
+
+
+    margin-bottom: 10px;
+
+
+    border-radius: 1px;
+
+
+    background-color: #000000;
+
+
+    padding-bottom: 1px;
+
+
+    padding-top: 10px;
+
+
+}
+
+
+
+
+
+nav ul {
+
+
+    list-style-type: none;
+
+
+}
+
+
+
+
+
+nav li {
+
+
+    display: inline;
+
+
+    margin-right: 2px;
+
+
+    padding-right: 2px;
+
+
+    padding-left: 2px;
+
+
+    padding-top: 3px;
+
+
+    padding-bottom: 3px;
+
+
+    border-radius: 3px;
+
+
+    font-weight: bold;
+
+
+    cursor: default;
+
+
+    background-color: black;
+
+
+    border: #C0C0C0 3px outset;
+
+
+}
+
+
+
+
+
+nav li:hover {
+
+
+    border: cyan 2px inset;
+
+
+}
+
+
+
+
+
+nav a {
+
+
+    text-decoration: none;
+
+
+    color: white;
+
+
+    text-shadow: gray 0px 0px 2px;
+
+
+}
+
+
+
+
+
+nav a:hover {
+
+
+    color: cyan;
+
+
+    text-shadow: none;
+
+
+}
+
+
+
+
+
+section {
+
+
+    background-color: #ECCEF5;
+
+
+    width: 670px;
+
+
+    float: left;
+
+
+
+}
+
+
+
+
+
+article {
+
+
+    border: gray 1px groove;
+
+
+    padding: 0px;
+
+
+    text-align: center;
+    color: white;
+    overflow: auto;
+
+
+    margin-bottom: 0px;
+
+
+    margin-right: 0px;
+
+
+    margin-left: 0px;
+
+
+    background-color: #000000;
+
+
+}
+
+Div h3 {
+
+
+    text-decoration: none;
+
+    color: #FFFFFF;
+
+
+    text-shadow: black 0px 4px 0px;
+
+    background-color: #0B3861;
+
+    padding: 1px;
+
+
+}
+
+
+
+
+
+Div h3:hover {
+
+
+    color: white;
+
+
+    text-shadow: none;
+
+
+    background-color: blue;
+
+}
+
+
+
+
+
+Div h1 {
+
+
+    text-decoration: none;
+
+    color: red;
+
+
+    text-shadow: black 0px 4px 0px;
+
+    background-color: #0B3861;
+
+    padding: 1px;
+
+
+}
+
+
+
+
+
+Div h1:hover {
+
+
+    color: white;
+
+
+    text-shadow: none;
+
+
+    background-color: blue;
+
+}
+
+
+
+
+
+a {
+
+  text-decoration: none;
+
+}
+
+
+
+
+
+
+
+a:hover {
+
+	text-decoration: none;
+
+    	color: #2E64FE;
+
+
+    	background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+aside {
+
+
+    text-align: center;
+
+
+    width: 420px;
+
+
+    float: right;
+
+
+    color: black;
+
+
+    background-color: #ECCEF5;
+
+
+    border-radius: 0px;
+
+
+}

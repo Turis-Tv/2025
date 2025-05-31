@@ -1,0 +1,88 @@
+﻿*, html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, hr,
+article, aside, audio, bb, canvas, datagrid, datalist,
+details, dialog, eventsource, figure, footer, header, mark,
+menu, meter, nav, output, progress, section, time, video {
+	margin: 0px;
+	padding: 0px;
+}
+
+article, aside, audio, bb, canvas, datagrid, datalist,
+details, dialog, eventsource, figure, footer, header, mark,
+menu, meter, nav, output, progress, section, time, video {
+  display: block;
+}
+.article, .aside, .audio, .bb, .canvas, .datagrid, .datalist,
+.details, .dialog, .eventsource, .figure, .footer, .header, .mark,
+.menu, .meter, .nav, .output, .progress, .section, .time, .video {
+  display: block;
+}
+body {
+	background-color: transparent;
+	font-family: Arial, Tahoma, Verdana, sans-serif;
+	line-height: 18px;
+	font-size: 12px;
+	color: #666666;
+}
+html {
+	height:101%;
+}
+input:focus{outline:0; -moz-outline:0;}
+input[type="submit"] {
+	cursor:pointer;	
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:focus{outline:0; -moz-outline:0; }
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+*:focus { outline: none; }
+
+*:-moz-focus-inner { border: none; }
+
+ul, ol {
+	list-style-type: none;
+}
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+.hidden {
+	display:none;	
+}
+.clear {
+	clear: both;
+}
+.clear_right {
+	clear: right;
+}
+.clear_left {
+	clear: left;
+}
+.clear:after {
+  clear: both;
+	visibility: hidden;
+	display: block;
+	height: 0;
+	content: ".";
+}
+*+html .clear {zoom: 1;}* html .clear {height: 1%;}

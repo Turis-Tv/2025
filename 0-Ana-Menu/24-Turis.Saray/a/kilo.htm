@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="language" content="TR">
+<meta http-equiv="language" content="DE">
+<meta http-equiv="language" content="EN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<SCRIPT language=JavaScript>
+
+function kontrol()
+{
+	if (diyet.boy.value == "TR-tr" )
+	{
+		alert("Boyunuzu giriniz.");
+		diyet.boy.focus();
+		return(false);
+  	}
+
+
+	if (diyet.kilo.value == "" )
+	{
+		alert("Kilonuzu giriniz.");
+		diyet.kilo.focus();
+		return(false);
+  	}
+
+	if (diyet.yas.value == "" )
+	{
+		alert("Yaşınızı giriniz.");
+		diyet.yas.focus();
+		return(false);
+  	}
+check()
+}
+	
+	
+function check()
+{
+var c1=0 ; var d1=0
+var c2=0 ; var d2=0
+var c3=0 ; var d3=0
+
+if (document.diyet.boy.value >= 120)  {var c1=1}
+if (document.diyet.boy.value <= 210)  {var d1=1}
+if (document.diyet.kilo.value >= 25)  {var c2=2}
+if (document.diyet.kilo.value <= 350)  {var d2=2}
+if (document.diyet.yas.value >= 12)  {var c3=4}
+if (document.diyet.yas.value <= 80)  {var d3=4}
+
+var c=c1+c2+c3
+var d=d1+d2+d3
+
+alarm=new Array()
+alarm[0]="Boy, kilo ve yaş "
+alarm[1]="kilo ve yaş "
+alarm[2]="boy ve yaş "
+alarm[3]="yaş "
+alarm[4]="boy ve kilo "
+alarm[5]="kilo "
+alarm[6]="boy "
+
+if (c==7) 
+		{if (d==7){i_kilo()}
+		else {alert(alarm[d] + "uygun değil !")}
+		}
+	else {alert(alarm[c] + "uygun değil !")}
+	}
+
+function i_kilo()
+{
+	var temp1 = Math.round(document.diyet.yas.value/49);
+	var temp2 = Math.round(document.diyet.yas.value/71);
+	var temp3 = Math.round(document.diyet.yas.value/91);
+	var tem = document.diyet.cinsiyet.value
+	var neki = 0
+	
+	if (tem == 0) 
+	{
+	if (temp1 != 0)  {neki = 21}
+	if (temp1 == 0)  {neki = 20}
+	}
+
+	if (tem != 0) 
+	{
+	 if (temp1 != 0)  
+		{
+		if (temp2 != 0) 
+			{
+			if (temp3 != 0)  {neki = 24}
+			if (temp3 == 0)  {neki = 23}
+			}
+		if (temp2 == 0)  {neki = 22}
+		}
+	if (temp1 == 0)  {neki = 21}
+	}
+ 		
+document.diyet.ideal.value = Math.round(neki * Math.pow(document.diyet.boy.value,2)/10000)
+
+document.diyet.fark.value = document.diyet.kilo.value - document.diyet.ideal.value
+
+if (document.diyet.fark.value > 0 )
+	{alert(document.diyet.fark.value + " kilo vermelisiniz.")}
+if (document.diyet.fark.value < 0 )
+	{alert(document.diyet.fark.value*(-1) + " kilo almalısınız.")}
+if (document.diyet.fark.value == 0 )
+	{alert("Bravo. İdeal kilonuzdasınız.")}
+
+}
+// end hiding -->
+</SCRIPT>
+</head><body style="background:#000000; color:#ffffff;" topmargin="0" leftmargin="3">
+<FORM name=diyet>
+<img src="image/ikh.png" border="0">
+<TABLE cellSpacing= cellPadding=20 width=160 border=0>
+  <TR >
+<TD><font face="Tahoma" size="2">Boyunuz</TD>
+    <TD>: <INPUT style="font-family: MS Sans Serif; color: blue; font-size:9pt" maxLength=5 size=3 name=boy><font face="Tahoma" size="1">Cm</TD></TR>
+ 
+  <TR >
+      <TD><font face="Tahoma" size="2">Kilonuz</font></TD>
+    <TD>: <INPUT style="font-family: MS Sans Serif; color: blue; font-size:9pt" maxLength=5 size=3 name=kilo>  <font face="Tahoma" size="1">Kg</font></TD></TR>
+ 
+
+  <TR >
+   <TD><font face="Tahoma" size="2">Yaşınız</font></TD>
+    <TD>: <INPUT style="font-family: MS Sans Serif; color: blue; font-size:9pt"size=3 name=yas></TD></TR>
+  <TR > <TD><font face="Tahoma" size="2">Cinsiyetiniz</font></TD>
+    <TD>: <SELECT style="font-family: MS Sans Serif; color: blue; font-size:9pt" name=cinsiyet> <OPTION value=0 selected>Kadın</OPTION> 
+        <OPTION value=1>Erkek</OPTION></SELECT> 
+ 
+ <TR >
+   <TD><font face="Tahoma" size="2">
+</font></TD>
+    <TD><font color=#ffffff>:</font> <INPUT style="font-family: MS Sans Serif; color: #c22817; font-size: 8pt" onclick=kontrol() style="background-color:#eeeeee " type=button value="Hesapla"></TD></TR>
+<TR >
+    <TD><font face="Tahoma" size="2">İdeal Kilonuz</font> </TD>
+    <TD>: <INPUT style="font-family: MS Sans Serif; color: red ; font-size: 8pt" type=list size=3 name=ideal>  <font face="Tahoma" size="1">Kg</font></TD></TR>
+
+     
+
+  <TR >
+    <TD><font face="Tahoma" size="2">Fark</font></TD>
+    <TD>: <INPUT style="font-family: MS Sans Serif; color: red; font-size: 8pt" type=list size=3 name=fark>  <font face="Tahoma" size="1">Kg</font></TD></TR>
+<TR >
+    <TD colspan="2"><font face="Tahoma" size="1">Kilo vermek için <b>Diyet</b></a> yapınız.</font></TD></TR>
+
+
+ </TABLE></FORM>
+
+
+</body>
+
+
+
+
+</html>
