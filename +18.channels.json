@@ -25,8 +25,13 @@
         "name": "📺 Kanal D",
         "url": "http://116.202.238.88/KANALD_TR/index.m3u8 "
          },
+    {  
+        "name": "📺 Kanal D Hd",
+        "url": "https://demiroren-live.daioncdn.net/kanald/kanald_1080p.m3u8"
+         },
 
  
+
 
     {   
         "name": "📺 Tv8",
@@ -41,6 +46,14 @@
     "name": "📺 Trt 1",
     "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8"
      },
+  {
+    "name": "📺 Trt 2",
+    "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-TRT2/tracks-v1a1/mono.m3u8"
+     },
+
+
+
+
   {
     "name": "📺 Trt Turk",
     "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"
@@ -341,24 +354,62 @@
     "Spor": [
 
 
-{
-        
-        "name": "Bos",
-    "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8"
-  },
+       {
+        "name": "BeInSport 1",
+        "url": "https://gitlatte-a.hf.space/watch/aHR0cHM6Ly96ZWtvbmV3Lm5ld2tzby5ydS96ZWtvL3ByZW1pdW02Mi9tb25vLm0zdTg=.m3u8"
+       },
+       {
+        "name": "BeInSport 1",
+        "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-BEINSPORT1/tracks-v1a1/mono.m3u8"
+       },
  
+        {
+        "name": "BeInSport 2",
+        "url": "https://gitlatte-a.hf.space/watch/aHR0cHM6Ly96ZWtvbmV3Lm5ld2tzby5ydS96ZWtvL3ByZW1pdW02My9tb25vLm0zdTg=.m3u8"
+       },
+        {
+        "name": "BeInSport 2",
+        "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-BEINSPORT2/tracks-v1a1/mono.m3u8"
+       },
+
+
+
+         {
+        "name": "BeInSport 3",
+        "url": "https://gitlatte-a.hf.space/watch/aHR0cHM6Ly96ZWtvbmV3Lm5ld2tzby5ydS96ZWtvL3ByZW1pdW02NC9tb25vLm0zdTg=.m3u8"
+       },
+         {
+        "name": "BeInSport 3",
+        "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-BEINSPORT3/tracks-v1a1/mono.m3u8"
+       },
+
+
+         {
+        "name": "BeInSport 4",
+        "url": "https://gitlatte-a.hf.space/watch/aHR0cHM6Ly96ZWtvbmV3Lm5ld2tzby5ydS96ZWtvL3ByZW1pdW02Ny9tb25vLm0zdTg=.m3u8"
+       },
+         {
+        "name": "BeInSport 4",
+        "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-BEINSPORT4/tracks-v1a1/mono.m3u8"
+       },
+
+         {
+        "name": "BeInSport 4",
+        "url": "https://p2zgpjpzhpu30th994bn1bknnekjv0.top/cek2.m3u8?u=https://nxn4.xyz/cdn/bein-sports-5.css&bas=https://nxn4.xyz/cdn/"
+       },
+
+
+
+
  
-
-
-
 
 
 
 
 
         {
-            "name": "Bos",
-            "url": "https://your-saudi-channel-url.com/stream.m3u8"
+            "name": "A Spor",
+            "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-A-SPOR/tracks-v1a1/mono.m3u8"
         }
     ],     
 "Film": [
