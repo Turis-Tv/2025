@@ -1,0 +1,16 @@
+arabic
+sports
+entertainment
+variety
+countries
+Global  : [
+countries
+iq
+
+
+Ulusal
+Haber
+Belgesel
+Muzik
+Spor
+Test

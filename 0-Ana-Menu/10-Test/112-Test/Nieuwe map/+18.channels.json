@@ -1,5 +1,5 @@
 {
-    "Ulusal": [
+    "arabic": [
         {
             
         "name": "BANGBROS",
@@ -2959,7 +2959,7 @@
         "url": "https://your-saudi-channel-url.com/stream.m3u8"
        }
     ],
-    "Haber": [
+    "sports": [
         {
             "name": "beIN Sports 2",
             "url": "https://your-bein2-channel-url.com/stream.m3u8"
@@ -2974,19 +2974,19 @@
 
 
     ],
-    "Belgesel": [
+    "entertainment": [
         {
             "name": "MBC Bollllywood",
             "url": "https://your-mbcbollywood-channel-url.com/stream.m3u8"
         }
     ],
-    "Muzik": [
+    "variety": [
         {
             "name": "National Geographic",
             "url": "https://your-natgeo-channel-url.com/stream.m3u8"
         }
     ],
-    "Spor": [
+    "countries": [
 
 
 {
@@ -11612,7 +11612,7 @@
             "url": "https://your-saudi-channel-url.com/stream.m3u8"
         }
     ],     
-"Test": [
+"Global": [
 
          {
             "name": "Vintage TV",
@@ -12037,7 +12037,7 @@
             }
     ],
 
-   "countries": {
+"countries": {
     "iq": [
       {
         "name": "1 - قناة العراقية",

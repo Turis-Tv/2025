@@ -31,8 +31,8 @@ function loadCategories() {
         "favorite": "⭐ Favoriler",
         "sports": "📺 spor",
         "arabic": "📡 Türkçe",
-        "Belgesel": "🎭 eğlence",
-        "Muzik": "📺 Müzik",
+        "entertainment": "🎭 eğlence",
+        "variety": "📺 Çeşitli",
         "world": "🌍 Ülkeler",
         "all": "📢 Tüm kanallar"
  
