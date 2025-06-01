@@ -19,15 +19,31 @@
     "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"
   },
   {
-    "name": "Abalfadhl TV (720p)",
-    "url": "https://t.northtelecom.org/ABALFADHLTV.m3u8"
+    "name": "Star Tv",
+    "url": "https://dogus-live.daioncdn.net/startv/playlist.m3u8"
+  },
+  {
+    "name": "kanal 7",
+    "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8"
+  },
+  {
+    "name": "Kanal 7 eu",
+    "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8"
+  },
+  {
+    "name": "360 Tv",
+    "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
   },
 
-    
- 
+
+
+
+
+
+
     {
-        "name": "القناة السعودية",
-        "url": "https://your-saudi-channel-url.com/stream.m3u8"
+        "name": "Show Tv",
+        "url": "https://ciner-live.daioncdn.net/showtv/showtv.m3u8"
        }
     ],
     "Haber": [
@@ -35,10 +51,31 @@
             "name": "Trt Haber",
             "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8"
         },
+        {
+            "name": "Beyaz Tv ",
+            "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8"
+        },
+        {
+            "name": "24 Tv",
+            "url": "https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8"
+        },
+        {
+            "name": "Akit Tv ",
+            "url": "https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8"
+        },
+        {
+            "name": "Bengu Turk",
+            "url": "https://ensonhaber-live.ercdn.net/benguturk/benguturk.m3u8"
+        },
+
+
+
+
+
 
 
     {
-        "name": "Turis Spor",
+        "name": "Bos",
         "url": "https://your-bein2-channel-url.com/stream.m3u8"
     }
 
@@ -46,6 +83,28 @@
 
     ],
     "Belgesel": [
+
+
+        {
+            "name": "Tv 4",
+            "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8"
+        },
+        {
+            "name": "Teve 2",
+            "url": "https://demiroren-live.daioncdn.net/teve2/teve2.m3u8"
+        },
+         {
+            "name": "Tlc ",
+            "url": "https://dogus-live.daioncdn.net/tlc/tlc_720p.m3u8"
+        },  
+         {
+            "name": "Tv 6",
+            "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
+        }, 
+
+
+
+
         {
             "name": "Trt belgesel",
             "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8"
@@ -76,17 +135,24 @@
 
 
         {
-            "name": "القناة السعودية",
+            "name": "Bos",
             "url": "https://your-saudi-channel-url.com/stream.m3u8"
         }
     ],     
 "Global": [
 
          {
+            "name": "Vivi Turk",
+         "url": "https://stream.tiviturk.de/live/tiviturk.m3u8"
+         },
+         {
             "name": "Vintage TV",
-    "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
-  },
-
+         "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
+         },
+         {
+            "name": "Vintage TV",
+         "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
+         },
 
 
 
@@ -133,38 +199,38 @@
    "countries": {
     "iq": [
       {
-        "name": "1 - قناة العراقية",
+        "name": "1 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/901.m3u8"
       },
 
 
       {
-        "name": "2 - قناة السومرية",
+        "name": "2 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/902.m3u8"
       }
     ],
     "sa": [
       {
-        "name": "1 - السعودية الأولى",
+        "name": "1 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/911.m3u8"
       },
 
 
       {
-        "name": "2 - الإخبارية",
+        "name": "2 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/912.m3u8"
       }
     ],
     "eg": [
       {
-        "name": "1 - النيل دراما",
+        "name": "1 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/921.m3u8"
       },
 
 
 
       {
-        "name": "2 - الحياة",
+        "name": "Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/922.m3u8"
       }
     ],
@@ -182,11 +248,11 @@
     ],
     "ae": [
       {
-        "name": "1 - قناة دبي",
+        "name": "1 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/951.m3u8"
       },
       {
-        "name": "2 - سما دبي",
+        "name": "2 - Bos",
         "url": "https://tv.chachatv.tk/live/direct/direct/952.m3u8"
       }
     ]
