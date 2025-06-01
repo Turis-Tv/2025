@@ -121,7 +121,7 @@
 
 {
         
-        "name": "2GB Sydney (1080p)",
+        "name": "Bos",
     "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8"
   },
  
@@ -139,18 +139,18 @@
             "url": "https://your-saudi-channel-url.com/stream.m3u8"
         }
     ],     
-"Global": [
+"Film": [
 
          {
             "name": "Vivi Turk",
          "url": "https://stream.tiviturk.de/live/tiviturk.m3u8"
          },
          {
-            "name": "Vintage TV",
-         "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
+            "name": "Tv 4",
+         "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8"
          },
          {
-            "name": "Vintage TV",
+            "name": "Turis TV",
          "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
          },
 
