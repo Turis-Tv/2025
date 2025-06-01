@@ -29,11 +29,12 @@ function loadCategories() {
     categoryList.innerHTML = "";
     const categories = {
         "favorite": "⭐ Favoriler",
-        "Ulusal": "📺 Ulusal",
+        "Ulusal": "🏟️ Ulusal",
         "Haber": "📡 Haber",
         "Belgesel": "🎭 Belgesel",
-        "Muzik": "📺 Muzik",
+        "Muzik": "🎵 Muzik",
         "Spor": "🌍 Spor",
+        "Film": "📺 Film",
         "all": "📢 Tüm kanallar"
  
     };
@@ -440,8 +441,9 @@ languageOptions.forEach((opt, index) => {
             "Ulusal": "🏟️ Ulusal",
             "Haber": "📡 Haber",
             "Belgesel": "🎭 Belgesel",
-            "Muzik": "📺 Muzik",
+            "Muzik": "🎵 Muzik",
             "Spor": "🌍 Spor",
+            "Film": "📺 Film",
             "all": "📢 All Channels"
   
 
@@ -456,11 +458,12 @@ languageOptions.forEach((opt, index) => {
         document.getElementById("channelTitle").textContent = "İzlemek için bir kanal seçin";
 
         const categories = {
-            "Ulusal": "📺 Ulusal",
+            "Ulusal": "🏟️ Ulusal",
             "Haber": "📡 Haber",
             "Belgesel": "🎭 Belgesel",
-            "Muzik": "📺 Muzik",
+            "Muzik": "🎵 Muzik",
             "Spor": "🌍 Spor",
+            "Film": "📺 Film",
             "all": "📢 Tümü"
  
 
