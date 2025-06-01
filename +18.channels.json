@@ -1,97 +1,171 @@
 {
     "Ulusal": [
        
-        
-                    {  
+
+ 
+    {  
         "name": " Atv",
-        "url": "http://origi-jw-5.ravenclaw-house.com:80/TR-ATV/tracks-v1a1/mono.m3u8"
-    },  
-               {  
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_720p.m3u8 "
+         },
+    {  
+        "name": " Atv Hd",
+        "url": "https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8 "
+         },
+
+
+
+
+
+    {  
         "name": " Atv",
         "url": "http://116.202.238.88/ATV_TR/index.m3u8 "
-    },
+         },
+
+    {  
+        "name": "📺 Kanal D",
+        "url": "http://116.202.238.88/KANALD_TR/index.m3u8 "
+         },
+
  
-        {  
-        "name": "⚽ Tv8",
+
+    {   
+        "name": "📺 Tv8",
         "url": "https://tv8-live.daioncdn.net/tv8/tv8.m3u8"
-    },
+         },
 
-
-
-
-        
     {
-
-    "name": "Trt 1",
+    "name": "📺 Trt 1",
     "url": "https://tv-trt1.medya.trt.com.tr/master_720.m3u8"
-  },
+     },
   {
-    "name": "Trt 1",
+    "name": "📺 Trt 1",
     "url": "https://tv-trt1.medya.trt.com.tr/master.m3u8"
-  },
+     },
   {
-    "name": "Trt Turk",
+    "name": "📺 Trt Turk",
     "url": "https://tv-trtturk.medya.trt.com.tr/master_720.m3u8"
-  },
+     },
   {
-    "name": "Star Tv",
+    "name": "📺 Star Tv",
     "url": "https://dogus-live.daioncdn.net/startv/playlist.m3u8"
-  },
+     },
   {
-    "name": "kanal 7",
+    "name": "📺 kanal 7",
     "url": "https://kanal7-live.daioncdn.net/kanal7/kanal7_1080p.m3u8"
-  },
+     },
   {
-    "name": "Kanal 7 eu",
+    "name": "📺 Kanal 7 eu",
     "url": "https://livetv.radyotvonline.net/kanal7live/kanal7avr/chunklist.m3u8"
-  },
+     },
   {
-    "name": "360 Tv",
+    "name": "📺 360 Tv",
     "url": "https://turkmedya-live.ercdn.net/tv360/tv360.m3u8"
   },
+  {
+    "name": "📺 Show Max",
+    "url": "https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/tur/shmax.m3u8"
+  },
 
-
-
-
-
-
+  {
+    "name": "📺 Show Tv",
+    "url": "http://116.202.238.88/SHOWTV_TR/index.m3u8"
+  },
 
     {
-        "name": "Show Tv",
+        "name": "📺 Show Tv",
         "url": "https://ciner-live.daioncdn.net/showtv/showtv.m3u8"
        }
     ],
-    "Haber": [
+    "Haber": [  
+
+
+
         {
-            "name": "Trt Haber",
+            "name": " 24 Tv",
+            "url": "https://turkmedya-live.ercdn.net/tv24/tv24_360p.m3u8"
+        },   
+        {
+            "name": "Ülke Tv",
+            "url": "https://livetv.radyotvonline.net/kanal7live/ulketv/playlist.m3u8"
+        },
+        {
+            "name": "Ntv",
+            "url": "http://api.ntv.com.tr/rss/LiveStream?start=LIVE&end=END"
+        },
+
+        {
+            "name": "Haber global",
+            "url": "https://tv.ensonhaber.com/haberglobal/haberglobal.m3u8"
+        },
+
+
+        {
+            "name": " Trt Haber",
             "url": "https://tv-trthaber.medya.trt.com.tr/master.m3u8"
         },
         {
-            "name": "Beyaz Tv ",
+            "name": " Beyaz Tv ",
             "url": "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8"
         },
         {
-            "name": "24 Tv",
+            "name": " 24 Tv",
             "url": "https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8"
         },
         {
-            "name": "Akit Tv ",
+            "name": " Akit Tv ",
             "url": "https://akittv-live.ercdn.net/akittv/akittv_720p.m3u8"
         },
         {
-            "name": "Bengu Turk",
+            "name": " Bengu Türk",
             "url": "https://ensonhaber-live.ercdn.net/benguturk/benguturk.m3u8"
         },
+        {
+            "name": "Haber Türk",
+            "url": "https://edge1.socialsmart.tv/turkhaber/bant1/playlist.m3u8"
+        },
+        {
+            "name": "Tbmm",
+            "url": "https://meclistv-live.ercdn.net/meclistv/meclistv.m3u8"
+        },
+        {
+            "name": "Tv Net",
+            "url": "https://mn-nl.mncdn.com/tvnet/tvnet/playlist.m3u8"
+        },
+        {
+            "name": "BloomBerg",
+            "url": "https://bloomberght-live.daioncdn.net/bloomberght/bloomberght.m3u8"
+        },
+        {
+            "name": "Flash Tv",
+            "url": "http://116.202.238.88/FLASHTV_TR/index.m3u8"
+        },
+        {
+            "name": "Tgrt Haber",
+            "url": "https://tgrthaber-live.daioncdn.net/tgrthaber/tgrthaber.m3u8"
+        },
+        {
+            "name": "Halk tv",
+            "url": "http://116.202.238.88/HALKTV_TR/index.m3u8"
+        },
+        {
+            "name": "Brt https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u81",
+            "url": "https://sc-kuzeykibrissmarttv.ercdn.net/brt1hd/bant1/chunklist.m3u8"
+        },
+        {
+            "name": "Brt 2",
+            "url": "https://trn03.tulix.tv/gt-brt2/index.m3u8"
+        },
 
-
-
-
+        {
+            "name": "Anadolu Tv",
+            "url": "https://live.artidijitalmedya.com/artidijital_anadolunet/anadolunet/playlist.m3u8"
+        },
 
 
 
     {
-        "name": "Bos",
-        "url": "https://your-bein2-channel-url.com/stream.m3u8"
+        "name": "Tv 100",
+        "url": "https://trn03.tulix.tv/gt-tv100/index.m3u8"
     }
 
 
@@ -101,19 +175,19 @@
 
 
         {
-            "name": "Tv 4",
+            "name": "📺 Tv 4",
             "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8"
         },
         {
-            "name": "Teve 2",
+            "name": "📺 Teve 2",
             "url": "https://demiroren-live.daioncdn.net/teve2/teve2.m3u8"
         },
          {
-            "name": "Tlc ",
+            "name": "📺 Tlc ",
             "url": "https://dogus-live.daioncdn.net/tlc/tlc_720p.m3u8"
         },  
          {
-            "name": "Tv 6",
+            "name": "📺 Tv 6",
             "url": "https://live.artidijitalmedya.com/artidijital_tivi6/tivi6/playlist.m3u8"
         }, 
 
@@ -121,13 +195,139 @@
 
 
         {
-            "name": "Trt belgesel",
+            "name": "📺 Trt belgesel",
             "url": "https://tv-trtbelgesel.medya.trt.com.tr/master.m3u8"
         }
     ],
     "Muzik": [
+
+
+         {
+            "name": "🎧 Finest",
+            "url": "http://media.finest.tv/hls/live.m3u8"
+        }, 
+         {
+            "name": "🎧 Sila Tv",
+            "url": "https://tvsms.club/tv.php?kanal=silatv&file=.m3u8"
+        }, 
+         {
+            "name": "🎧 Dügün Tv",
+            "url": "https://cdn-duguntvmedya.yayin.com.tr/duguntvmedya/duguntvmedya/playlist.m3u8"
+        }, 
+         {
+            "name": "🎧 Damar Tv",
+            "url": "https://tvsms.club/tv.php?kanal=damar&file=.m3u8"
+        }, 
+
+         {
+            "name": "🎧 Zeyno Tv",
+            "url": "https://tvsms.club/tv.php?kanal=zeynotv&file=.m3u8"
+        }, 
+
+
+
+
+
+         {
+            "name": "🎧 Erciyez Tv",
+            "url": "https://cdn1-ercistv.yayin.com.tr/ercistv/amlst:ercistv/chunklist.m3u8"
+        }, 
+
+
+
+
+
+ 
+         {
+            "name": "🎧 KralPop",
+            "url": "https://dogus-live.daioncdn.net/kralpoptv/kralpoptv_360p.m3u8"
+        }, 
+
+         {
+            "name": "🎧 Power Slow",
+            "url": "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8"
+        },
+
+         {
+            "name": "🎧 Power Türk Taptaze",
+            "url": "https://listen.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8"
+          },
+         {
+            "name": "🎧 Power Türk Akustik",
+            "url": "https://listen.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8"
+          },
+         {
+            "name": "🎧 Tempo Tv",
+            "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8"
+          },
+
+         {
+            "name": "🎧 DreamTürk",
+            "url": "https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/playlist.m3u8"
+        },
+         {
+            "name": "🎧 M 2",
+            "url": "http://live.m2.tv/hls3/720/stream.m3u8"
+        },
+
+
+         {
+            "name": "🎧 Nr 1 Damar",
+            "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8"
+        },
+
+         {
+            "name": "🎧 Nr 1 Ask",
+            "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8"
+        },
+
+         {
+            "name": "🎧 Nr1 Türk",
+            "url": "https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/broadcast_5c9e187770143.smil/playlist.m3u8"
+        },
+
+
+
+
+         {
+            "name": "🎧 Power Türk",
+            "url": "https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/playlist.m3u8"
+        },
+         {
+            "name": "🎧 Power",
+            "url": "https://livetv.powerapp.com.tr/powerTV/powerhd.smil/playlist.m3u8"
+        },
+         {
+            "name": "🎧 PowerDance",
+            "url": "https://listen.powerapp.com.tr/dance/dance.smil/playlist.m3u8"
+        },
+         {
+            "name": "🎧 PowerLove",
+            "url": "https://listen.powerapp.com.tr/plove/love.smil/playlist.m3u8"
+        },
+         {
+            "name": "🎧 PowerSlow",
+            "url": "https://listen.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8"
+        },
+         {
+            "name": "🎧 Cine 5",
+            "url": "https://cdn-cine5tv.yayin.com.tr/cine5tv/cine5tv/.m3u8"
+        },
+         {
+            "name": "🎧 Top Pop",
+            "url": "https://tvsms.club/tvz.php?kanal=toppop&file=.m3u8"
+        },
+         {
+            "name": "🎧 Tempo Tv",
+            "url": "https://live.artidijitalmedya.com/artidijital_tempotv/tempotv/playlist.m3u8"
+        },
+
+ 
+
+
+
         {
-            "name": "Trt müzik",
+            "name": "🎧 Trt müzik",
             "url": "https://tv-trtmuzik.medya.trt.com.tr/master.m3u8"
         }
     ],
@@ -136,8 +336,8 @@
 
 {
         
-        "name": "⚽ BeinSpor 1",
-    "url": "https://alpha.cf-worker-7df90b083f9d09.workers.dev/live/bein-sports-1/playlist.m3u8"
+        "name": "Bos",
+    "url": "https://2gblive.akamaized.net/hls/live/2033805/2GB/index.m3u8"
   },
  
  
@@ -157,16 +357,20 @@
 "Film": [
 
          {
-            "name": "Vivi Turk",
+            "name": " 🎥 Vivi Turk",
          "url": "https://stream.tiviturk.de/live/tiviturk.m3u8"
          },
          {
-            "name": "Tv 4",
+            "name": "🎥 Tv 4",
          "url": "https://turkmedya-live.ercdn.net/tv4/tv4_720p.m3u8"
          },
          {
-            "name": "Turis TV",
-         "url": "https://chestnut-vintagetv-1-us.freemoviesplus.wurl.tv/playlist.m3u8"
+            "name": " 🎥 Rize Türk",
+         "url": "https://yayin.rizeturk.com:3777/hybrid/play.m3u8"
+         },
+         {
+            "name": " 🎥 Süper Türk",
+         "url": "http://75.119.144.48/SUPERTURK_TV_STREAM/index.m3u8"
          },
 
 
@@ -273,4 +477,5 @@
     ]
   }
 }
+
 
