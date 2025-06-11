@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="initial-scale=1,width=device-width" name="viewport">
+    <link href="npm/bootstrap%405.3.3/dist/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <style>
+      #player, body, html {
+        background-color: black !important;
+        height: 100% !important;
+        left: 0 !important;
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+      }
+      video {
+        object-fit: fill !important;
+      }
+      .media-control-background {
+        max-height: 5vh !important;
+        transition: opacity 0.1s ease-out !important;
+      }
+      [data-seekbar] {
+        display: none !important;
+      }
+      [data-hd-indicator] {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player"></div>
+    <!-- <script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+    <!-- <script charset="UTF-8" src="https://cdn.jsdelivr.net/npm/clappr/dist/clappr.min.js"></script> -->
+    <script src="npm/hls.js%401.5.18/dist/hls.min.js"></script>
+    <script src="npm/%40clappr/player%400.11.3/dist/clappr.min.js"></script>
+    <script src="npm/%40clappr/hlsjs-playback%401.7.3/dist/hlsjs-playback.min.js"></script>
+    <script>
+      window.skipCounter,
+      window.skipInterval,
+      window.skipOffset,
+      window.skipText;
+      window.app = {
+        clappr: {
+          currentTime: function() {
+            return window.Math.round(window.app.clappr.instance.getCurrentTime(), 0);
+          },
+          instance: new Clappr.Player({}),
+          isBuffering: function() {
+            return window.app.clappr.instance.core.mediaControl.container.buffering;
+          },
+          options: {
+            allowUserInteraction: Clappr.Browser.isiOS,
+            autoPlay: true,
+            chromeless: Clappr.Browser.isiOS,
+            disableErrorScreen: false,
+            disableKeyboardShortcuts: true,
+            disableVideoTagContextMenu: true,
+            autoSeekFromUrl: false,
+            events: {
+              onReady: function() {
+                var e = this;
+                return window.Clappr.$.when(
+                  this.core.activePlayback.$el.attr("autobuffer", "true"),
+                  this.core.activePlayback.$el.attr("controlslist", "nodownload"),
+                  this.core.activePlayback.$el.attr("x-webkit-airplay", "deny"),
+                  this.core.activePlayback.$el.attr("disablepictureinpicture", "true"),
+                  this.core.activePlayback.$el.attr("playinfullscreen", "true"),
+                  window.Clappr.$.each(
+                    [
+                      "click_to_pause", "closed_captions", "dvr_controls",
+                      "google_analytics", "seek_time", "stats"
+                    ],
+                    function(t, n) {
+                      let i = e.getPlugin(n);
+                      void 0 !== i && i.disable()
+                }))
+              }
+            },
+            exitFullscreenOnEnd: false,
+            language: 'tr',
+            height: '100%',
+            playback: {
+              hlsjsConfig: {
+                // liveSyncDurationCount: 4,
+                progressive: true
+              },
+              recycleVideo: Clappr.Browser.isMobile,
+              controls: Clappr.Browser.isiOS,
+              playInline: true
+            },
+            persistConfig: false,
+            hlsMinimumDvrSize: 3e4,
+            hlsRecoverAttempts: 8,
+            plugins: [],
+            muted: false,
+            width: '100%'
+          }
+        },
+        extend: function(defaults, options) {
+          return $.extend({}, defaults, options);
+        },
+        init: function() {
+          window.config = window.app.extend({
+              adv: {
+                enabled: false
+              }
+            },
+            window.config
+          );
+          if (window.config.adv.enabled) {
+            window.app.initAdv();
+          } else {
+            window.app.initMatch();
+          }
+        },
+        initAdv: function() {
+          window.app.initContainer(window.config.adv.parentId);
+          window.config.adv = window.app.extend({
+              link: "",
+              skipOffset: 5,
+         
+       
+            },
+            window.config.adv
+          );
+          window.app.clappr.instance = new Clappr.Player(
+            window.app.extend(window.app.clappr.options, window.app.extend(window.config.adv, {
+                chromeless: Clappr.Browser.isiOS,
+                events: {
+                  onError: function(e) {
+                    window.app.skip()
+                  }
+                }
+            }))
+          );
+          window.app.initAdvEvents();
+        },
+        initAdvEvents: function() {
+          window.app.clappr.instance.once(Clappr.Events.PLAYER_ENDED, window.app.skip);
+          window.app.clappr.instance.once(Clappr.Events.PLAYER_PLAY, window.app.initSkipButton);
+          window.app.clappr.instance.on(Clappr.Events.PLAYER_TIMEUPDATE, window.app.skipButton);
+          window.app.clappr.instance.setVolume(100);
+        },
+        initContainer: function(selector) {
+          if ($(selector).length > 0) {
+            $(selector).remove();
+          }
+          $(window.document.body).prepend($("<div />").attr("id", selector.match(/\#(.*)/)[1]));
+        },
+        initMatch: function() {
+          window.app.initContainer(window.config.match.parentId);
+          window.app.clappr.instance = new Clappr.Player(window.app.extend(window.app.clappr.options, window.config.match));
+          window.app.initMatchEvents();
+        },
+        initMatchCleanup: function() {
+          window.app.clappr.instance.setVolume(100);
+          if (Clappr.Browser.isMobile) {
+            $("[data-watermark-top-left]").css({ left: "37px", top: "37px" });
+            $("[data-watermark-top-right]").css({ top: "37px" });
+            $("[data-watermark-bottom-right]").css({ bottom: "50px" });
+          }
+        },
+        initMatchEvents: function() {
+          window.app.clappr.instance.once(Clappr.Events.PLAYER_PLAY, window.app.initMatchCleanup);
+        },
+        initSkipButton: function() {
+          skipOffset = window.config.adv.skipOffset;
+          if (Clappr.Browser.isMobile) {
+            $("[data-playpause]").css({ display: "none" });
+          }
+          $(window.document.body).prepend(
+            $(" ").css({
+              height: "100%",
+              left: 0,
+              position: "absolute",
+              top: 0,
+              "z-index": 9998,
+              width: "100%"
+            })
+          );
+          $("[data-4dV-link]").append(
+            $("<a />")
+            .attr({
+              href: window.config.adv.link,
+              target: "_blank"
+            })
+            .css({
+              display: "inline-block",
+              height: "100%",
+              width: "100%"
+            })
+          );
+          $(window.document.body).prepend(
+            $("<div data-4dV />").css({
+              bottom: "25%",
+              position: "absolute",
+              right: 0,
+              "z-index": 9999
+            })
+          );
+          skipText = window.config.adv.skipTextN.replace("%d", window.config.adv.skipOffset).toUpperCase();
+          $("[data-4dV]").append(
+            $("<button />")
+            .attr("type", "button")
+            .css({
+              "background-color": "#000",
+              border: "3px solid #333",
+              "border-right": 0,
+              color: "#f8f8f8",
+              "font-family": "sans-serif",
+              "font-size": "68%",
+              "font-weight": "bold",
+              padding: "5px 10px"
+            })
+            .text(skipText)
+          );
+        },
+        skip: function() {
+          $("[data-4dV]").remove();
+          $("[data-4dV-link]").remove();
+          window.app.initMatch();
+          window.app.clappr.instance.play();
+        },
+        skipButton: function() {
+          if (window.app.clappr.currentTime() > 0) {
+            skipCounter = 1;
+            skipInterval = setInterval(window.app.skipButtonHandler, 1000);
+            window.app.clappr.instance.off(Clappr.Events.PLAYER_TIMEUPDATE, window.app.skipButton);
+          }
+        },
+        skipButtonHandler: function() {
+          if (window.app.clappr.isBuffering()) {
+            return false;
+          } else if (skipCounter == skipOffset) {
+            skipText = window.config.adv.skipText;
+            $("[data-4dV] > button").css({
+              cursor: "pointer"
+            });
+            $("[data-4dV] > button").on("click", window.app.skip);
+            clearInterval(skipInterval);
+          } else {
+            skipText = window.config.adv.skipTextN.replace("%d", skipOffset - skipCounter);
+            skipCounter++;
+          }
+          $("[data-4dV] > button").text(skipText.toUpperCase());
+        }
+      };
+      (function ($) {
+    const url = new URL(window.location.href);
+    const _1 = url.searchParams.has("_1") ? url.searchParams.get("_1") : "-"
+    const _2 = url.searchParams.has("_2") ? url.searchParams.get("_2") : "-"
+    const _3 = url.searchParams.has("_3") ? url.searchParams.get("_3") : "-"
+
+    // Video ve link arrayleri
+    const videoSources = [
+        "http://origi-jw-5.ravenclaw-house.com:80/TR-ATV/tracks-v1a1/mono.m3u8?variant_version=1&tag=16",
+        "http://origi-jw-5.ravenclaw-house.com:80/TR-TRT1/tracks-v1a1/mono.m3u8?variant_version=1&tag=12"
+    ];
+    const links = [
+        "https://t.ly/meritkingbossstream",
+        "https://t.ly/bosssportskingroyalyayinici" // buraya yeni linkini koy
+    ];
+
+    // Random index
+    const randomIndex = Math.floor(Math.random() * videoSources.length);
+    const selectedVideoSource = videoSources[randomIndex];
+    const selectedLink = links[randomIndex];
+
+    window.config = {
+      adv: {
+        enabled: true,
+        link: selectedLink,
+        parentId: "div#player",
+        skipOffset: 7,
+        source: selectedVideoSource,
+      },
+      match: {
+        mimeType: "application/vnd.apple.mpegurl",
+        parentId: "div#player",
+        position: "top-right",
+        poster: "",
+        source: `https://${_1}/${_2}/-/${_3}/playlist.m3u8`,
+        watermark: "",
+        watermarkLink: selectedLink,
+      }
+    }
+    window.app.init();
+})(Clappr.$);
+    </script>
+<script>
+window.aupixell=[],window.aupixeli=0,window.aupixelc=function(){if(window.aupixell=window.document.body.querySelectorAll("img[alt=b34c0n]"),window.aupixell.length>0){for(window.aupixeli=0;window.aupixeli>window.aupixell.length;window.aupixeli++)window.console.log(window.aupixell,window.aupixell[window.aupixeli]);window.aupixell[window.aupixeli].parentNode.removeChild(window.aupixell[window.aupixeli]);window.aupixell=[],window.aupixeli=0}window.aupixel=new window.Image(1,1),window.aupixel.alt="b34c0n",window.aupixel.src="https://whos.amung.us/swidget/5tbkz4lcmm.png?"+Math.random().toString().substring(2),window.aupixel.style="display:none",window.document.body.append(window.aupixel)},window.setInterval(window.aupixelc,12e5),window.aupixelc()
+</script>
+  </body>
+</html>
