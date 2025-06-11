@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Practica</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Interfaz con 9 botones e imágenes</title>
+  <style>
+    body {
+      background-color: #454545;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    
+    
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      -flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 65px;
+      gap: 20px;
+    }
+    
+    .button-wrapper {
+  max-height: calc(100vh - 200px); /* ajusta según sea necesario */
+  overflow-y: hedden;
+}
+
+
+    .button {
+      -width: 400px;
+      height: 70px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      border-radius: 10px;
+      transition: box-shadow 0.3s;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      box-shadow: 0 0 5px 5px white;
+      background-color: #333;
+    }
+
+    .button img {
+      width: 80px;
+      height: 76px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .button span {
+      flex: 1;
+      text-align: left;
+    }
+      
+
+    .filter-menu {
+      display: flex;
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      scrollbar-width: none; /* Ocultar la barra de desplazamiento en navegadores que la muestren */
+      -ms-overflow-style: none; /* Ocultar la barra de desplazamiento en Internet Explorer */
+      -justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+     - border-radius: 20px;
+    }
+
+    .filter-menu button:hover{ background-color: #333;}
+
+    .filter-menu button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .filter-menu button.active {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .footer-menu {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 20px;
+      transition: bottom 0.3s;
+    }
+
+    .footer-menu.hidden {
+      bottom: -60px;
+    }
+
+    .search-icon {
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .search-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .search-box {
+      position: fixed;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+
+    .search-box input[type="text"] {
+      padding: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #333;
+      color: white;
+      font-size: 14px;
+      width: 145px;
+      box-shadow: none;
+    }
+
+    .search-icon:hover+.search-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+ 
+ <div class="menu-container">
+ <div class="filter-menu">
+     <label for="search" class="search-icon">
+        <img src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png" alt="Lupa">
+      </label>
+      <div class="search-box" id="search-box">
+        <input type="text" id="search" placeholder="Aramak ..." oninput="searchByName(this.value)">
+      </div>
+    
+  </div>
+   </div>
+  <div class="button-wrapper" id="button-container">
+  <!-- Aquí van tus botones -->
+    <div class="button-container" id="button-container">
+
+        
+
+
+
+
+
+
+
+
+
+
+      <button class="button muzik" onclick="redirectTo('1-Dini-Kurani-Kerim/index.html')">
+        <img src="https://t4.ftcdn.net/jpg/04/92/04/57/360_F_492045786_ST6dYZiSDVywTu3BMqH0dJOZNKVFTpaf.jpg" alt="Imagen">
+        <span> Kuran Full Dinle</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('https://archive.org/embed/turkce_kuran_suat_yildirim_meali&playlist=1')">
+        <img src="https://cdn.kobo.com/book-images/c5c34fb9-3162-4183-b1d1-bcea25727963/1200/1200/False/kuran-kerim-turkce-meali-elmall-m-hamdi-yazr.jpg" alt="Imagen">
+        <span> Kuran Türkçe Meal</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('2-Kurani-Kerim-Abdull-Samed/index.html  ')">
+        <img src="https://i1.sndcdn.com/artworks-000535580220-34cx42-t500x500.jpg" alt="Imagen">
+        <span>Abdull Samed</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('3-Cevsen-Meal/index.html ')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFa1_XHAT_m9AlSezcbDxRkIqaEdPWf5wUbuXGHEXfGKCKABTt9PUZ1-bsToKh6cqs_HQ&usqp=CAU" alt="Imagen">
+        <span>Cevsen-Meal</span>
+    </button>
+      <button class="button muzik" onclick="redirectTo('4-Timur-Tas-Hoca/index.html ')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSNUKmqHfYlIfy3IXl6rZPEn7kj3suKu60lA&s" alt="Imagen">
+        <span>Timur Tas-Hoca </span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('5-Namaz/index.html')">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/036/156/568/small_2x/muslim-prayer-positions-namaz-body-poses-minimal-character-vector.jpg" alt="Imagen">
+        <span> Namaz</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('6-Dini-Sohbet/index.html ')">
+        <img src="https://i.ytimg.com/vi/-IoVqbtC3pI/hqdefault.jpg" alt="Imagen">
+        <span>Dini Sohbet</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('7-Dini-Sohbet-1/index.html ')">
+        <img src="https://i.ytimg.com/vi/La0cZ-OlYV0/hqdefault.jpg" alt="Imagen">
+        <span> Dini Sohbet 1</span>
+    </button>
+
+    <button class="button muzik" onclick="redirectTo('8-Dini-Sohbet-2/index.html ')">
+        <img src="https://i.ytimg.com/vi/Yv0n2v75JqI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCcRFae3BD0uvsyq4D4OEVSt47OEQ" alt="Imagen">
+        <span>Dini Sohbet 2</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('9-Dini-Sohbet-3/index.html ')">
+        <img src="https://i.ytimg.com/vi/dsLImpD-7OM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmZaHKFtFH1SCgTfLXUwuNUmVYJw" alt="Imagen">
+        <span>Dini Sohbet 3</span>
+    </button>
+    <button class="button muzik" onclick="redirectTo('10-Dini-Sohbet-4/index.html ')">
+        <img src="https://i.ytimg.com/vi/2U-3oYWck1M/hqdefault.jpg" alt="Imagen">
+        <span>Dini Sohbet 4</span>
+    </button>
+
+
+
+
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+ 
+
+ 
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+      
+
+
+  
+
+
+    </div>
+  
+</div>
+
+ 
+    
+
+  <script>
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    function searchByName(name) {
+      var buttons = document.getElementsByClassName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        var buttonName = buttons[i].querySelector('span').innerText.toLowerCase();
+        if (buttonName.includes(name.toLowerCase())) {
+          buttons[i].style.display = 'flex';
+        } else {
+          buttons[i].style.display = 'none';
+        }
+      }
+    }
+
+    function filterSelection(category) {
+      var buttons = document.getElementsByClassName('button');
+      if (category === 'all') {
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].style.display = 'flex';
+        }
+      } else {
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].classList.contains(category)) {
+            buttons[i].style.display = 'flex';
+          } else {
+            buttons[i].style.display = 'none';
+          }
+        }
+      }
+      setActiveButton(category);
+    }
+
+    function setActiveButton(category) {
+      var buttons = document.getElementsByClassName('filter-button');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].classList.contains('active')) {
+          buttons[i].classList.remove('active');
+        }
+      }
+      var activeButton = document.querySelector('.filter-button.' + category);
+      activeButton.classList.add('active');
+    }
+
+    window.addEventListener('resize', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    window.addEventListener('load', function() {
+      var container = document.getElementById('button-container');
+      var windowHeight = window.innerHeight;
+      var titleHeight = 0;
+      container.style.maxHeight = (windowHeight - titleHeight - 40) + 'px';
+    });
+
+    var lastScrollTop = 0;
+    window.addEventListener("scroll", function() {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        document.getElementById("footer-menu").classList.add("hidden");
+      } else {
+        document.getElementById("footer-menu").classList.remove("hidden");
+      }
+      lastScrollTop = currentScroll;
+    }, false);
+
+    document.getElementById('search-box').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
