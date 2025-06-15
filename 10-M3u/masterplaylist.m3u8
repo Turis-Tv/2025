@@ -290,7 +290,8 @@ https://xmltv.tvkaista.net/guides/zuragt.mn.xml"
  
 
  
-
+#EXTINF:-1 tvg-name="Armenia 1" tvg-logo="https://i.imgur.com/HIwJ4lc.png" tvg-id="Armenia1.am" group-title="AAATuris",Kanal T
+https://amtv1.livestreamingcdn.com/am2abr/index.m3u8  
  
 #EXTINF:-1 tvg-name="Armenia 1" tvg-logo="https://i.imgur.com/HIwJ4lc.png" tvg-id="Armenia1.am" group-title="Albania",Kanal T
 https://amtv1.livestreamingcdn.com/am2abr/index.m3u8   
