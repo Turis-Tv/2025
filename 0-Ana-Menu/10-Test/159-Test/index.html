@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>📡 Turis Tv</title>
+    <link rel="stylesheet" href="style.css">
+  
+  
+
+ 
+
+  
+  
+  
+ 
+
+
+  
+  
+  
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+  
+ 
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+        <div class="buttons">
+            <button class="btn" onclick="updateChannels()">🔄 Kanalları Güncell</button>
+            <button id="update-btn" class="btn">⬇️ Sürümü kontrol edin</button>
+        </div>
+
+        <div class="video-container" id="fullScreenContainer">
+            <h2 id="channelTitle" class="channel-title">İzlemek için bir kanal seçin</h2>
+            <video id="videoPlayer"></video>
+            <div class="overlay-fullscreen-btn" id="fullscreenBtn" style="display: none;">⛶ Menu Gizlenmesi 5 Saniye Ekrana Dokunma</div>
+
+         
+            <div class="category-list" id="categoryList" style="display: none;">
+<button class="btn">⭐ Favoriler</button>
+<button class="btn">📺 Sporlar</button
+><button class="btn">📡 Türkçe</button>
+<button class="btn">🎭 Belgesel</button>
+<button class="btn">📺 Müzik</button>
+<button class="btn">🌍 Haber</button>
+<button class="btn">📢 Tüm kanallar</button>
+<button class="btn">📢 Film</button>
+ 
+</div>
+            <div class="channel-list" id="channelList" style="display: none;"><div class="channel-item">
+            <span class="channel-number">1. </span>
+            <span class="channel-name">Turis</span>
+            <button class="fav-btn" onclick="toggleFavorite('https://cdn-cine5tv.yayin.com.tr/cine5tv/cine5tv/playlist.m3u8', this)">☆</button>
+        </div></div>
+        </div>
+    </div>
+   <script src="cordova.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body></html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
