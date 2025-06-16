@@ -1,0 +1,128 @@
+Uri: https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\1.0.0\widget.prod.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\css\all.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-brands-400.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-brands-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-brands-400.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-brands-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-regular-400.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-regular-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-regular-400.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-regular-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-solid-900.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-solid-900.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-solid-900.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-v4compatibility.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-v4compatibility.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/webfonts/fa-v4compatibility.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\ajax\libs\font-awesome\6.0.0-beta3\webfonts\fa-v4compatibility.woff2
+Content Type: application/octet-stream
+
+Uri: https://dailymatch-apk.blogspot.com/
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\index.htm
+Content Type: text/html
+
+Uri: https://dailymatch-apk.blogspot.com/favicon.ico
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://dailymatch-apk.blogspot.com/feeds/posts/default
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\feeds\posts\default
+Content Type: application/atom+xml
+
+Uri: https://dailymatch-apk.blogspot.com/feeds/posts/default?alt=rss
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\feeds\posts\default-1
+Content Type: application/rss+xml
+
+Uri: https://dailymatch-apk.blogspot.com/js/cookienotice.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\js\cookienotice.js
+Content Type: text/javascript
+
+Uri: https://fonts.cdnfonts.com/css/arabic
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\css\arabic
+Content Type: text/css
+
+Uri: https://fonts.cdnfonts.com/s/102083/Arabic-BF64d249f7c782a.woff
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\102083\Arabic-BF64d249f7c782a.woff
+Content Type: font/woff
+
+Uri: https://fonts.googleapis.com/css2?family=Amiri&display=swap
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\css2-1
+Content Type: text/css
+
+Uri: https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/amiri/v27/J7aRnpd8CGxBHqUp.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\amiri\v27\J7aRnpd8CGxBHqUp.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLCz7V1s.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiByp8kv8JHgFVrLCz7V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLDz8V1s.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiByp8kv8JHgFVrLDz8V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLEj6V1s.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiByp8kv8JHgFVrLEj6V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLFj_V1s.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiByp8kv8JHgFVrLFj_V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiByp8kv8JHgFVrLGT9V1s.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiByp8kv8JHgFVrLGT9V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiEyp8kv8JHgFVrFJA.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiEyp8kv8JHgFVrFJA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v23/pxiGyp8kv8JHgFVrLPTedw.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\s\poppins\v23\pxiGyp8kv8JHgFVrLPTedw.ttf
+Content Type: font/ttf
+
+Uri: https://i.postimg.cc/zvdRs5Kz/new-daily-m-logo.jpg
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\zvdRs5Kz\new-daily-m-logo.jpg
+Content Type: image/jpeg
+
+Uri: https://www.blogger.com/feeds/1480531450934704500/posts/default
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\feeds\1480531450934704500\posts\default
+Content Type: application/atom+xml
+
+Uri: https://www.blogger.com/static/v1/widgets/2271878333-widgets.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\static\v1\widgets\2271878333-widgets.js
+Content Type: text/javascript
+
+Uri: https://www.blogger.com/static/v1/widgets/2838643729-widgets.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\static\v1\widgets\2838643729-widgets.js
+Content Type: text/javascript
+
+Uri: https://www.livescore.bz/api.livescore.0.1.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (90)\dailymatch-apk.blogspot.com\api.livescore.0.1.js
+Content Type: application/javascript
+

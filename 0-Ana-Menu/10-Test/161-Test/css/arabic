@@ -1,0 +1,8 @@
+﻿@font-face {
+    font-family: 'Arabic';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arabic'), url('../s/102083/Arabic-BF64d249f7c782a.woff') format('woff');
+}
+
+
