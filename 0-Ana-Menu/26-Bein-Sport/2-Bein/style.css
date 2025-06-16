@@ -49,7 +49,7 @@ header{
   border-radius:50%
 }
 .logo span{
-  font-size:24px;
+  font-size:12px;
   font-weight:700
 }
 .nav-links{
@@ -139,7 +139,7 @@ header{
   background-color:#202937
 }
 .channel-title{
-  font-size:22px;
+  font-size:12px;
   font-weight:700
 }
 .channel-status-container{
@@ -156,8 +156,8 @@ header{
   color:#2d3748;
   padding:0 6px;
   border-radius:6px;
-  font-size:.8em;
-  margin-left:10px
+  font-size:.4em;
+  margin-left:5px
 }
 .video-container{
   background-color:#101827;
@@ -395,7 +395,7 @@ footer{
 }
 .footer-left{
   color:var(--text-muted);
-  font-size:14px
+  font-size:12px
 }
 .footer-links{
   display:flex;
@@ -403,7 +403,7 @@ footer{
 }
 .footer-links a{
   color:var(--text-muted);
-  font-size:14px;
+  font-size:12px;
   transition:color .2s
 }
 .footer-links a:hover{
@@ -450,11 +450,11 @@ footer{
   background:none;
   border:none;
   color:var(--text-color);
-  padding:8px 15px;
+  padding:2px 5px;
   cursor:pointer;
   transition:background-color .2s;
   border-radius:4px;
-  margin-right:5px
+  margin-right:3px
 }
 .tab-button.active{
   background-color:#4B5563
