@@ -1,0 +1,228 @@
+Uri: https://cdn.jsdelivr.net/clappr/latest/clappr.min.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\clappr\latest\clappr.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\css\all.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-brands-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-brands-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-regular-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-regular-400.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-regular-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-solid-900.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-solid-900.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-v4compatibility.ttf
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-v4compatibility.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-v4compatibility.woff2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\font-awesome\6.5.1\webfonts\fa-v4compatibility.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\ajax\libs\jquery\3.2.1\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://waust.at/c.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\c.js
+Content Type: application/x-javascript
+
+Uri: https://www.bosstv4.com/
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\index.htm
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/30;
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\30;.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/assets/js/clappr.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\assets\js\clappr.js
+Content Type: text/javascript
+
+Uri: https://www.bosstv4.com/betplay.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\betplay.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/betplay1000x90.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\betplay1000x90.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\cdn-cgi\scripts\5c5dd728\cloudflare-static\email-decode.min.js
+Content Type: application/javascript
+
+Uri: https://www.bosstv4.com/channel?id=yayinas
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-18.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinatv
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-19.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinb2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-5.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinb3
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-6.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinb4
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-7.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinb5
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-8.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinbm1
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-9.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinbm2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-10.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayineu1
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-24.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayineu2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-25.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinf1
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-23.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinnbatv
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-22.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinsmarts
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-1.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinsms2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-12.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinss
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-3.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinss2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-11.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayint1
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-13.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayint2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-14.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayint3
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-15.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayint4
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-16.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayintrt1
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-17.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayintrtspor
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-2.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayintrtspor2
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayintv8
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-20.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayintv85
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-21.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/channel?id=yayinzirve
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\channel-4.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/favicon.ico
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://www.bosstv4.com/logo.png
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\logo.png
+Content Type: image/png
+
+Uri: https://www.bosstv4.com/millibahis.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\millibahis.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/millibahis1000x90.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\millibahis1000x90.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/pageskin.jpg
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\pageskin.jpg
+Content Type: image/jpeg
+
+Uri: https://www.bosstv4.com/sayac
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\sayac.html
+Content Type: text/html
+
+Uri: https://www.bosstv4.com/style.css
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\style.css
+Content Type: text/css
+
+Uri: https://www.bosstv4.com/theme.js
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\theme.js
+Content Type: text/javascript
+
+Uri: https://www.bosstv4.com/vipslot.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\vipslot.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/vipslot1000x90.gif
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\vipslot1000x90.gif
+Content Type: image/gif
+
+Uri: https://www.bosstv4.com/yayinonu.png
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\yayinonu.png
+Content Type: image/png
+
+Uri: https://www.googletagmanager.com/gtag/js?id=G-0DXBW86FZY
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\gtag\js
+Content Type: application/javascript
+
+Uri: https://www.googletagmanager.com/gtag/js?id=G-XHB89N426X
+File Name: C:\Users\M.T\Pictures\Site-Kopya\Nieuwe map (89)\www.bosstv4.com\gtag\js-1
+Content Type: application/javascript
+
