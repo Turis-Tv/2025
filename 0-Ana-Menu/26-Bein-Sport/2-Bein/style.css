@@ -49,7 +49,7 @@ header{
   border-radius:50%
 }
 .logo span{
-  font-size:12px;
+  font-size:24px;
   font-weight:700
 }
 .nav-links{
@@ -86,7 +86,7 @@ header{
   justify-content:center
 }
 .search-input{
-  padding:10px 15px;
+  padding:2px 2px;
   border:none;
   background-color:#374151;
   color:var(--text-color);
@@ -139,7 +139,7 @@ header{
   background-color:#202937
 }
 .channel-title{
-  font-size:12px;
+  font-size:22px;
   font-weight:700
 }
 .channel-status-container{
@@ -156,8 +156,8 @@ header{
   color:#2d3748;
   padding:0 6px;
   border-radius:6px;
-  font-size:.4em;
-  margin-left:5px
+  font-size:.8em;
+  margin-left:10px
 }
 .video-container{
   background-color:#101827;
@@ -337,17 +337,17 @@ header{
   background-color:##202937
 }
 .sidebar-title{
-  font-size:18px;
+  font-size:12px;
   font-weight:700
 }
 .channel-list{
-  padding:5px;
-  max-height:386px;
+  padding:2px;
+  max-height:300px;
   overflow-y:auto;
   scrollbar-width:thin;
   scrollbar-color:#fff3 #ffffff1a;
   background-color:#202937;
-  border-radius:6px
+  border-radius:2px
 }
 .channel-list::-webkit-scrollbar{
   width:8px
@@ -365,7 +365,7 @@ header{
 }
 .channel-item{
   display:block;
-  padding:6px;
+  padding:4px;
   border-radius:6px;
   margin-bottom:8px;
   background-color:#2D3748;
@@ -375,12 +375,12 @@ header{
   background-color:#374151
 }
 .channel-name{
-  font-weight:500;
+  font-weight:100;
   margin-bottom:-5px
 }
 .channel-status{
   color:var(--text-muted);
-  font-size:12px
+  font-size:10px
 }
 footer{
   border-top:1px solid var(--border);
@@ -395,7 +395,7 @@ footer{
 }
 .footer-left{
   color:var(--text-muted);
-  font-size:12px
+  font-size:14px
 }
 .footer-links{
   display:flex;
@@ -403,7 +403,7 @@ footer{
 }
 .footer-links a{
   color:var(--text-muted);
-  font-size:12px;
+  font-size:14px;
   transition:color .2s
 }
 .footer-links a:hover{
@@ -450,11 +450,11 @@ footer{
   background:none;
   border:none;
   color:var(--text-color);
-  padding:2px 5px;
+  padding:8px 3px;
   cursor:pointer;
   transition:background-color .2s;
   border-radius:4px;
-  margin-right:3px
+  margin-right:5px
 }
 .tab-button.active{
   background-color:#4B5563
